@@ -1,33 +1,16 @@
-﻿import { promises as fs } from "node:fs";
-import path from "node:path";
 import type { Notice } from "@/types/notice";
+import { getStorageFileCandidates, readJsonFile, writeJsonFile } from "@/features/notices/server/storagePath";
 
-const STORAGE_FILE_PATH = path.join(process.cwd(), "data", "stored-notices.json");
-
-async function ensureStorageDirectory() {
-  await fs.mkdir(path.dirname(STORAGE_FILE_PATH), { recursive: true });
-}
+const STORAGE_FILE_NAME = "stored-notices.json";
 
 export async function loadStoredNotices(): Promise<Notice[]> {
-  try {
-    const file = await fs.readFile(STORAGE_FILE_PATH, "utf-8");
-    return JSON.parse(file) as Notice[];
-  } catch (error) {
-    const nodeError = error as NodeJS.ErrnoException;
-
-    if (nodeError.code === "ENOENT") {
-      return [];
-    }
-
-    throw error;
-  }
+  return (await readJsonFile<Notice[]>(STORAGE_FILE_NAME)) ?? [];
 }
 
 export async function saveNotices(notices: Notice[]) {
-  await ensureStorageDirectory();
-  await fs.writeFile(STORAGE_FILE_PATH, JSON.stringify(notices, null, 2), "utf-8");
+  await writeJsonFile(STORAGE_FILE_NAME, notices);
 }
 
 export function getStorageFilePath() {
-  return STORAGE_FILE_PATH;
+  return getStorageFileCandidates(STORAGE_FILE_NAME)[0];
 }
