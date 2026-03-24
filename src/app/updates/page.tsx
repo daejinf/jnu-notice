@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import { AuthLanding } from "@/features/auth/components/AuthLanding";
 import { loadNoticeUpdateHistory } from "@/features/notices/server/noticeUpdateHistory";
-import { formatNoticeDate, formatViews } from "@/features/notices/utils/format";
+import { formatNoticeDate, formatViewsLabel } from "@/features/notices/utils/format";
 
 function formatCheckedAt(value: string) {
   const date = new Date(value);
@@ -70,7 +70,7 @@ export default async function UpdatesPage() {
                       <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
                         <span>작성자 {notice.author}</span>
                         <span>작성일 {formatNoticeDate(notice.date)}</span>
-                        <span>조회 {formatViews(notice.views)}</span>
+                        <span>{formatViewsLabel(notice)}</span>
                       </div>
                     </article>
                   ))}

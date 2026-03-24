@@ -1,11 +1,11 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
-import { auth, signOut } from "@/auth";
+import { auth, signIn, signOut } from "@/auth";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "전남대 공지 통합 알림",
-  description: "전남대학교 공지를 한곳에서 모아보는 개인 맞춤형 알림 서비스",
+  description: "전남대학교 공지사항을 한곳에서 모아보는 개인 맞춤형 알림 서비스",
 };
 
 const navItems = [
@@ -82,9 +82,19 @@ export default async function RootLayout({
                     </form>
                   </>
                 ) : (
-                  <div className="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 md:block">
-                    로그인 후 이용 가능
-                  </div>
+                  <form
+                    action={async () => {
+                      "use server";
+                      await signIn("google", { redirectTo: "/" });
+                    }}
+                  >
+                    <button
+                      type="submit"
+                      className="inline-flex h-11 items-center justify-center rounded-full bg-[#3182F6] px-4 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(49,130,246,0.24)] transition hover:bg-[#1B64DA]"
+                    >
+                      Google 로그인
+                    </button>
+                  </form>
                 )}
               </div>
             </div>

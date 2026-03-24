@@ -20,7 +20,7 @@ import {
 } from "@/features/notices/constants/storageKeys";
 import { useSelectedCategories } from "@/features/notices/hooks/useSelectedCategories";
 import { getNoticeClientId } from "@/features/notices/utils/noticeClientState";
-import { formatNoticeDate, formatViews, joinCategoryQuery } from "@/features/notices/utils/format";
+import { formatNoticeDate, formatViewsLabel, joinCategoryQuery } from "@/features/notices/utils/format";
 import type { Notice } from "@/types/notice";
 
 const PROJECT_CENTER_KEYS = [
@@ -645,7 +645,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                           <span className="text-slate-300">•</span>
                           <span>{formatNoticeDate(notice.date)}</span>
                           <span className="text-slate-300">•</span>
-                          <span>조회 {formatViews(notice.views)}</span>
+                          <span>{formatViewsLabel(notice)}</span>
                         </div>
                       </div>
 

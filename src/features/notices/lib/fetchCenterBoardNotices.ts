@@ -14,6 +14,7 @@ const MIN_TITLE_LENGTH = 6;
 const MOVE_PAGE_VIEW_PATTERN = /movePageView\((\d+)\)/;
 const TITLE_SHORT_DATE_PATTERN = /\((\d{2})\.\s*(\d{2})\.\s*(\d{2})\.?\)/;
 const TITLE_FULL_DATE_PATTERN = /\((\d{4})\.\s*(\d{2})\.\s*(\d{2})\.?\)/;
+const REQUEST_TIMEOUT_MS = 8000;
 
 type FetchCenterBoardNoticesOptions = {
   page?: number;
@@ -28,7 +29,7 @@ type GenericParserOptions = {
   author?: string;
 };
 
-function requestHtmlViaNode(url: string, redirectCount = 0): Promise<string> {
+function requestHtmlViaNode(url: string, redirectCount = 0, timeoutMs = REQUEST_TIMEOUT_MS): Promise<string> {
   return new Promise((resolve, reject) => {
     const target = new URL(url);
     const requester = target.protocol === "https:" ? httpsRequest : httpRequest;
@@ -48,7 +49,7 @@ function requestHtmlViaNode(url: string, redirectCount = 0): Promise<string> {
 
         if (location && statusCode >= 300 && statusCode < 400 && redirectCount < 5) {
           response.resume();
-          requestHtmlViaNode(new URL(location, target).toString(), redirectCount + 1)
+          requestHtmlViaNode(new URL(location, target).toString(), redirectCount + 1, timeoutMs)
             .then(resolve)
             .catch(reject);
           return;
@@ -70,6 +71,10 @@ function requestHtmlViaNode(url: string, redirectCount = 0): Promise<string> {
       },
     );
 
+    req.setTimeout(timeoutMs, () => {
+      req.destroy(new Error("request timed out"));
+    });
+
     req.on("error", reject);
     req.end();
   });
@@ -78,6 +83,7 @@ function requestHtmlViaNode(url: string, redirectCount = 0): Promise<string> {
 async function fetchHtml(pageUrl: string, fetchImpl: typeof fetch) {
   try {
     const response = await fetchImpl(pageUrl, {
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
       headers: {
         "User-Agent": "Mozilla/5.0",
       },
@@ -106,6 +112,22 @@ function normalizeDate(value: string) {
 function parseViews(value: string) {
   const parsed = Number(cleanText(value).replaceAll(",", ""));
   return Number.isNaN(parsed) ? 0 : parsed;
+}
+
+function findColumnIndexByHeader(row: Cheerio<AnyNode>, matcher: (text: string, className: string) => boolean) {
+  const headers = row.find("th").toArray();
+
+  for (let index = 0; index < headers.length; index += 1) {
+    const header = row.find("th").eq(index);
+    const text = cleanText(header.text());
+    const className = header.attr("class") ?? "";
+
+    if (matcher(text, className)) {
+      return index;
+    }
+  }
+
+  return -1;
 }
 
 function buildNoticeUrl(center: CenterBoardConfig, rawHref: string) {
@@ -283,6 +305,39 @@ function parseSojoongEducationHtml(html: string, center: CenterBoardConfig) {
   return sortNoticesByDate(dedupeNotices(notices));
 }
 
+function parseSojoongDetailViews(html: string) {
+  const $ = load(html);
+  const detailText =
+    cleanText($(".detail-attr.detail-view .detail-value").first().text()) ||
+    cleanText($(".detail-view .detail-value").first().text());
+
+  return parseViews(detailText);
+}
+
+async function enrichNoticeViews(
+  notices: Notice[],
+  fetchImpl: typeof fetch,
+  parseDetailViews: (html: string) => number,
+) {
+  const enriched = await Promise.all(
+    notices.map(async (notice) => {
+      try {
+        const html = await fetchHtml(notice.url, fetchImpl);
+        const views = parseDetailViews(html);
+
+        return {
+          ...notice,
+          views: views || notice.views,
+        };
+      } catch {
+        return notice;
+      }
+    }),
+  );
+
+  return sortNoticesByDate(dedupeNotices(enriched));
+}
+
 function findDateInNearbyText($: CheerioAPI, link: Cheerio<AnyNode>) {
   const candidateTexts = [
     cleanText(link.parent().text()),
@@ -404,6 +459,10 @@ function parseAspNetBoardHtml(html: string, center: CenterBoardConfig) {
   const $ = load(html);
   const notices: Notice[] = [];
   const seen = new Set<string>();
+  const headerRow = $("table tr").filter((_, element) => $(element).find("th").length > 0).first();
+  const viewsColumnIndex = headerRow.length
+    ? findColumnIndexByHeader(headerRow, (text, className) => text.includes("조회수") || className.includes("hit"))
+    : -1;
 
   $("table tr").each((index, element) => {
     const row = $(element);
@@ -434,7 +493,12 @@ function parseAspNetBoardHtml(html: string, center: CenterBoardConfig) {
 
     const rawNo = cleanText(cells.eq(0).text());
     const author = cells.length >= 4 ? cleanText(cells.eq(2).text()) || center.sourceName : center.sourceName;
-    const views = cells.length >= 5 ? parseViews(cells.eq(cells.length - 1).text()) : 0;
+    const views =
+      viewsColumnIndex >= 0 && cells.length > viewsColumnIndex
+        ? parseViews(cells.eq(viewsColumnIndex).text())
+        : cells.length >= 5
+          ? parseViews(cells.eq(4).text())
+          : 0;
 
     notices.push({
       id: extractIdFromUrl(noticeUrl, `${center.key}-${index}`),
@@ -667,7 +731,6 @@ async function enrichCapdHomeNotices(notices: Notice[], fetchImpl: typeof fetch)
   return sortNoticesByDate(dedupeNotices(enriched));
 }
 
-
 function parseGrowNoticeHtml(html: string, center: CenterBoardConfig) {
   const $ = load(html);
   const notices: Notice[] = [];
@@ -759,6 +822,62 @@ function parseIleNoticeHtml(html: string, center: CenterBoardConfig) {
   return sortNoticesByDate(dedupeNotices(notices));
 }
 
+function parseLibraryNoticeHtml(html: string, center: CenterBoardConfig) {
+  const $ = load(html);
+  const notices: Notice[] = [];
+  const seen = new Set<string>();
+  const viewsColumnIndex = findColumnIndexByHeader(
+    $("table.mobileTable thead tr").first(),
+    (text, className) => text.includes("조회") || className.includes("hit"),
+  );
+
+  $("table.mobileTable tbody tr").each((index, element) => {
+    const row = $(element);
+    const cells = row.find("td");
+    const link = row.find('a[href]').first();
+    const rawHref = link.attr("href")?.trim() ?? "";
+    const title = cleanText(link.text());
+
+    if (!rawHref || !title || cells.length === 0) {
+      return;
+    }
+
+    const date = normalizeDate(cleanText(cells.eq(Math.max(0, viewsColumnIndex - 1)).text()));
+    const views =
+      viewsColumnIndex >= 0 && cells.length > viewsColumnIndex
+        ? parseViews(cells.eq(viewsColumnIndex).text())
+        : 0;
+
+    if (!date) {
+      return;
+    }
+
+    const noticeUrl = buildNoticeUrl(center, rawHref);
+    const seenKey = `${title}::${date}`;
+
+    if (seen.has(seenKey)) {
+      return;
+    }
+
+    seen.add(seenKey);
+
+    notices.push({
+      id: extractIdFromUrl(noticeUrl, `${center.key}-${index}`),
+      title,
+      url: noticeUrl,
+      author: center.sourceName,
+      date,
+      views,
+      sourceType: center.sourceType,
+      sourceName: center.sourceName,
+      category: center.category,
+      isPinned: cleanText(cells.eq(1).text()).includes("공지"),
+    });
+  });
+
+  return sortNoticesByDate(dedupeNotices(notices));
+}
+
 function parseGenericDatedLinks(
   html: string,
   center: CenterBoardConfig,
@@ -837,10 +956,7 @@ function parseCenterHtml(html: string, center: CenterBoardConfig) {
     case "ile-notice":
       return parseIleNoticeHtml(html, center);
     case "library-bbs":
-      return parseGenericDatedLinks(html, center, {
-        scopeSelector: "main, .container, body",
-        author: center.sourceName,
-      });
+      return parseLibraryNoticeHtml(html, center);
     case "capd-program":
       return parseGenericDatedLinks(html, center, {
         scopeSelector: "main, .container, body",
@@ -889,6 +1005,14 @@ async function fetchCenterByCustomEngine(
     if (!buildCenterPageUrl(center, page + 1)) {
       break;
     }
+  }
+
+  if (center.engine === "sojoong-notice") {
+    return enrichNoticeViews(allNotices, fetchImpl, parseSojoongDetailViews);
+  }
+
+  if (center.engine === "sojoong-education" && options.maxPages === undefined) {
+    return enrichNoticeViews(allNotices, fetchImpl, parseSojoongDetailViews);
   }
 
   return sortNoticesByDate(dedupeNotices(allNotices));

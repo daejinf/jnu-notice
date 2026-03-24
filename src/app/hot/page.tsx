@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import { AuthLanding } from "@/features/auth/components/AuthLanding";
 import { fetchRecentHotNotices } from "@/features/notices/server/fetchTodayHotNotices";
-import { formatNoticeDate, formatViews } from "@/features/notices/utils/format";
+import { formatNoticeDate, formatViewsLabel } from "@/features/notices/utils/format";
 import type { Notice } from "@/types/notice";
 
 const PROJECT_CENTER_NAMES = [
@@ -57,7 +57,7 @@ export default async function HotPage() {
                     <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">#{index + 1}</span>
                     <span className={`rounded-full px-3 py-1 text-xs font-semibold ${getSourceBadgeClass(notice)}`}>{notice.sourceName}</span>
                     <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">{notice.category}</span>
-                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">조회 {formatViews(notice.views)}</span>
+                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">{formatViewsLabel(notice)}</span>
                   </div>
 
                   <a href={notice.url} target="_blank" rel="noreferrer" className="mt-4 block text-lg font-bold leading-8 tracking-tight text-slate-950 hover:text-[#1B64DA]">
@@ -67,7 +67,7 @@ export default async function HotPage() {
                   <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
                     <span>작성자 {notice.author}</span>
                     <span>작성일 {formatNoticeDate(notice.date)}</span>
-                    <span>조회 {formatViews(notice.views)}</span>
+                    <span>{formatViewsLabel(notice)}</span>
                   </div>
                 </article>
               ))}

@@ -1,7 +1,7 @@
-import type { Notice } from "@/types/notice";
+﻿import type { Notice } from "@/types/notice";
 import type { DepartmentConfig } from "@/features/notices/config/departments";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
-import { getDepartmentParser } from "@/features/notices/lib/parsers/parserFactory";
+import { getDepartmentParser } from "@/features/notices/lib/parserFactory";
 
 type FetchDepartmentNoticesOptions = {
   fetchImpl?: typeof fetch;

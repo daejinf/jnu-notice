@@ -1,8 +1,8 @@
-import { load } from "cheerio";
+﻿import { load } from "cheerio";
 import type { Notice } from "@/types/notice";
 import type { CollegeBoardConfig } from "@/features/notices/config/collegeBoards";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
-import { buildSubviewNoticeUrl } from "@/features/notices/lib/parsers/subviewUrl";
+import { buildSubviewNoticeUrl } from "@/features/notices/lib/subviewUrl";
 
 const COLLEGE_BOARD_DEFAULT_MAX_PAGES = 5;
 
@@ -13,7 +13,7 @@ type FetchCollegeBoardNoticesOptions = {
 };
 
 function cleanCellText(value: string) {
-  return value.replace(/\s+/g, " ").replace("새글", "").trim();
+  return value.replace(/\s+/g, " ").replace("?덇?", "").trim();
 }
 
 function parseViews(value: string) {
@@ -92,7 +92,7 @@ function parseCollegeNoticeRow(
   }
 
   const [rawId, rawTitle, author, date, rawViews] = cells;
-  const isPinned = rawId.includes("공지");
+  const isPinned = rawId.includes("怨듭?");
   const noticeUrl = buildNoticeUrl(college, rawHref);
 
   return {
@@ -149,7 +149,7 @@ export async function fetchCollegeBoardNotices(
     });
 
     if (!response.ok) {
-      throw new Error(`${college.sourceName} 공지 페이지 요청 실패: ${response.status}`);
+      throw new Error(`${college.sourceName} 怨듭? ?섏씠吏 ?붿껌 ?ㅽ뙣: ${response.status}`);
     }
 
     const html = await response.text();

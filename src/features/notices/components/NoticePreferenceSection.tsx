@@ -11,7 +11,7 @@ import { selectableDepartments, selectableDepartmentKeys } from "@/data/selectab
 import { useSelectedCategories } from "@/features/notices/hooks/useSelectedCategories";
 import {
   formatNoticeDate,
-  formatViews,
+  formatViewsLabel,
   joinCategoryQuery,
 } from "@/features/notices/utils/format";
 
@@ -322,7 +322,7 @@ export function NoticePreferenceSection() {
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
                   <span>작성자 {notice.author}</span>
                   <span>작성일 {formatNoticeDate(notice.date)}</span>
-                  <span>조회 {formatViews(notice.views)}</span>
+                  <span>{formatViewsLabel(notice)}</span>
                 </div>
               </article>
             )) : null}

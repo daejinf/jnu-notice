@@ -6,6 +6,11 @@ type UseSelectedCategoriesOptions = {
   storageKey: string;
 };
 
+function getLegacyStorageKey(storageKey: string) {
+  const separatorIndex = storageKey.indexOf("::");
+  return separatorIndex >= 0 ? storageKey.slice(0, separatorIndex) : null;
+}
+
 export function useSelectedCategories(
   allCategoryKeys: string[],
   options: UseSelectedCategoriesOptions,
@@ -14,17 +19,30 @@ export function useSelectedCategories(
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    const savedValue = window.localStorage.getItem(options.storageKey);
+    const currentStorageKey = options.storageKey;
+    const legacyStorageKey = getLegacyStorageKey(currentStorageKey);
+    const savedValue = window.localStorage.getItem(currentStorageKey);
+    const fallbackValue = !savedValue && legacyStorageKey
+      ? window.localStorage.getItem(legacyStorageKey)
+      : null;
+    const valueToLoad = savedValue ?? fallbackValue;
 
-    if (!savedValue) {
+    if (!valueToLoad) {
       setIsReady(true);
       return;
     }
 
     try {
-      const parsedValue = JSON.parse(savedValue) as string[];
+      const parsedValue = JSON.parse(valueToLoad) as string[];
       const validValues = parsedValue.filter((value) => allCategoryKeys.includes(value));
-      setSelectedCategories(validValues.length > 0 ? validValues : []);
+      const nextValues = validValues.length > 0 ? validValues : [];
+
+      setSelectedCategories(nextValues);
+
+      // One-time migration from the old shared key to the per-account scoped key.
+      if (!savedValue && fallbackValue) {
+        window.localStorage.setItem(currentStorageKey, JSON.stringify(nextValues));
+      }
     } catch {
       setSelectedCategories(allCategoryKeys);
     } finally {
