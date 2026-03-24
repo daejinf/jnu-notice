@@ -1,7 +1,8 @@
-﻿import { load } from "cheerio";
+import { load } from "cheerio";
 import type { Notice } from "@/types/notice";
 import type { DepartmentConfig } from "@/features/notices/config/departments";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
+import { buildSubviewNoticeUrl } from "@/features/notices/lib/parsers/subviewUrl";
 
 function cleanCellText(value: string) {
   return value.replace(/\s+/g, " ").replace("새글", "").trim();
@@ -19,19 +20,7 @@ function buildPageUrl(department: DepartmentConfig, page: number) {
 }
 
 function buildNoticeUrl(department: DepartmentConfig, rawHref: string) {
-  if (!rawHref) {
-    return department.noticeUrl;
-  }
-
-  if (rawHref.startsWith("http://") || rawHref.startsWith("https://")) {
-    return rawHref;
-  }
-
-  if (rawHref.startsWith("/")) {
-    return new URL(rawHref, new URL(department.noticeUrl).origin).toString();
-  }
-
-  return new URL(rawHref, department.noticeUrl).toString();
+  return buildSubviewNoticeUrl(department.siteUrl, rawHref);
 }
 
 function extractNoticeId(rawId: string, noticeUrl: string, fallbackKey: string, index: number) {

@@ -1,9 +1,9 @@
-﻿name: Check JNU Notices
+name: Check JNU Notices
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "0 * * * *"
 
 jobs:
   check-notices:
@@ -33,6 +33,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/stored-notices.json
+          git add data/stored-notices.json data/notice-updates.json
           git diff --cached --quiet || git commit -m "chore: update stored notices"
           git push

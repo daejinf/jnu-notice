@@ -15,4 +15,9 @@ export type Notice = {
   statusKind?: "deadline" | "closed";
 };
 
+export type NoticeUpdateSnapshot = {
+  checkedAt: string;
+  notices: Notice[];
+};
+
 export type DepartmentParserType = "subview-bbs" | "xboard";

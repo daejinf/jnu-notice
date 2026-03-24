@@ -1,7 +1,8 @@
-﻿import { load } from "cheerio";
+import { load } from "cheerio";
 import type { Notice } from "@/types/notice";
 import type { CollegeBoardConfig } from "@/features/notices/config/collegeBoards";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
+import { buildSubviewNoticeUrl } from "@/features/notices/lib/parsers/subviewUrl";
 
 const COLLEGE_BOARD_DEFAULT_MAX_PAGES = 5;
 
@@ -29,6 +30,10 @@ function buildCollegePageUrl(college: CollegeBoardConfig, page: number) {
 function buildNoticeUrl(college: CollegeBoardConfig, rawHref: string) {
   if (!rawHref) {
     return college.listUrl;
+  }
+
+  if (college.engine === "subview") {
+    return buildSubviewNoticeUrl(college.listUrl, rawHref);
   }
 
   if (rawHref.startsWith("http://") || rawHref.startsWith("https://")) {
