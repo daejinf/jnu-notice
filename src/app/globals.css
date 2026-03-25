@@ -2,9 +2,11 @@
 
 :root {
   color-scheme: light;
-  --bg: #f3f5f7;
+  --bg: #f4f6f8;
+  --bg-elevated: #ffffff;
   --surface: #ffffff;
-  --surface-muted: #f7f9fb;
+  --surface-muted: #f8fafc;
+  --surface-soft: #f2f4f6;
   --line: #e5e8eb;
   --line-strong: #d7dbe0;
   --text: #191f28;
@@ -12,6 +14,9 @@
   --text-soft: #8b95a1;
   --brand: #3182f6;
   --brand-strong: #1b64da;
+  --brand-soft: #e8f3ff;
+  --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.04);
+  --shadow-card-strong: 0 18px 40px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -24,8 +29,8 @@ body {
   padding: 0;
   min-height: 100%;
   background:
-    radial-gradient(circle at top left, rgba(49, 130, 246, 0.05), transparent 28%),
-    linear-gradient(180deg, #f8fafc 0%, #f3f5f7 100%);
+    radial-gradient(circle at top, rgba(49, 130, 246, 0.08), transparent 24%),
+    linear-gradient(180deg, #fbfcfd 0%, #f4f6f8 100%);
   color: var(--text);
   font-family: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,7 +42,7 @@ body {
 }
 
 ::selection {
-  background: rgba(49, 130, 246, 0.18);
+  background: rgba(49, 130, 246, 0.16);
 }
 
 button,
@@ -48,6 +53,12 @@ textarea {
 }
 
 button {
+  letter-spacing: -0.01em;
+}
+
+input,
+select,
+textarea {
   letter-spacing: -0.01em;
 }
 

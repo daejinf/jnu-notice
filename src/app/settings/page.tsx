@@ -12,7 +12,7 @@ export default async function SettingsPage() {
   const storageScope = session.user?.email ?? session.user?.name ?? "default";
 
   return (
-    <main className="min-h-screen bg-slate-100">
+    <main className="min-h-screen bg-transparent">
       <NoticeSettingsForm storageScope={storageScope} />
     </main>
   );

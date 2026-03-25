@@ -30,7 +30,7 @@ export default async function HotPage() {
   return (
     <main className="min-h-screen bg-transparent">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
-        <section className="rounded-[32px] border border-rose-200 bg-rose-50/80 p-6 shadow-[0_16px_40px_rgba(15,23,42,0.05)] sm:p-7">
+        <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
           <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold text-rose-700">HOT 알림</span>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">최근 7일 조회수 상위 공지</h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
@@ -44,7 +44,7 @@ export default async function HotPage() {
             최근 7일 기준으로 집계된 HOT 공지가 아직 없습니다.
           </section>
         ) : (
-          <section className="rounded-[32px] border border-white/70 bg-white/92 p-5 shadow-[0_16px_40px_rgba(15,23,42,0.05)] sm:p-6">
+          <section className="rounded-[36px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-6">
             <div className="flex items-center justify-between border-b border-slate-100 pb-4">
               <h2 className="text-xl font-bold tracking-tight text-slate-950">조회수 기준 TOP 공지</h2>
               <span className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700">총 {hotNotices.length}건</span>
@@ -52,7 +52,7 @@ export default async function HotPage() {
 
             <div className="mt-5 grid gap-4">
               {hotNotices.map((notice, index) => (
-                <article key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`} className="rounded-[28px] border border-slate-200 bg-white p-5 transition hover:border-slate-300 hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)]">
+                <article key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`} className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-5 transition hover:border-slate-300 hover:bg-white hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)]">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">#{index + 1}</span>
                     <span className={`rounded-full px-3 py-1 text-xs font-semibold ${getSourceBadgeClass(notice)}`}>{notice.sourceName}</span>

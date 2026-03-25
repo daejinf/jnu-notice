@@ -21,6 +21,7 @@ import {
 import { useSelectedCategories } from "@/features/notices/hooks/useSelectedCategories";
 import { getNoticeClientId } from "@/features/notices/utils/noticeClientState";
 import { formatNoticeDate, formatViewsLabel, joinCategoryQuery } from "@/features/notices/utils/format";
+import type { SchoolBoardCategory } from "@/features/notices/config/schoolBoardCategories";
 import type { Notice } from "@/types/notice";
 
 const PROJECT_CENTER_KEYS = [
@@ -38,6 +39,52 @@ const PROJECT_CENTER_NAME_SET = new Set(
     .map((center) => center.name),
 );
 const NOTICES_PER_PAGE = 30;
+const SCHOOL_BOARD_BASE_URL = "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx";
+
+function buildSchoolCategoryLink(category: Pick<SchoolBoardCategory, "cate">) {
+  const url = new URL(SCHOOL_BOARD_BASE_URL);
+  url.searchParams.set("boardID", "5");
+  url.searchParams.set("cate", category.cate);
+  url.searchParams.set("page", "1");
+  return url.toString();
+}
+
+function getNoticeSourceLink(notice: Notice) {
+  if (notice.sourceType === "school") {
+    const matchedCategory = selectableSchoolCategories.find((category) => category.name === notice.category);
+    return buildSchoolCategoryLink(matchedCategory ?? { cate: "0" });
+  }
+
+  if (notice.sourceType === "college") {
+    return selectableColleges.find((college) => college.name === notice.sourceName)?.listUrl ?? null;
+  }
+
+  if (notice.sourceType === "department") {
+    const department = selectableDepartments.find((item) => item.department === notice.sourceName);
+    return department?.noticeUrl ?? department?.siteUrl ?? null;
+  }
+
+  return selectableCenters.find((center) => center.name === notice.sourceName)?.listUrl ?? null;
+}
+
+function getSelectedChipLink(tone: "school" | "college" | "department" | "institution" | "project", name: string) {
+  if (tone === "school") {
+    const matchedCategory = selectableSchoolCategories.find((category) => category.name === name);
+    return buildSchoolCategoryLink(matchedCategory ?? { cate: "0" });
+  }
+
+  if (tone === "college") {
+    return selectableColleges.find((college) => college.name === name)?.listUrl ?? null;
+  }
+
+  if (tone === "department") {
+    const department = selectableDepartments.find((item) => name.endsWith(item.department) || item.department === name);
+    return department?.noticeUrl ?? department?.siteUrl ?? null;
+  }
+
+  return selectableCenters.find((center) => center.name === name)?.listUrl ?? null;
+}
+
 
 type NoticeApiResponse = {
   notices: Notice[];
@@ -157,9 +204,11 @@ function dedupeNotices(notices: Notice[]) {
 function SectionChip({
   label,
   tone,
+  href,
 }: {
   label: string;
   tone: "school" | "college" | "department" | "institution" | "project";
+  href?: string | null;
 }) {
   const toneClass = {
     school: "border border-sky-100 bg-sky-50 text-sky-700",
@@ -168,6 +217,19 @@ function SectionChip({
     institution: "border border-amber-100 bg-amber-50 text-amber-700",
     project: "border border-orange-100 bg-orange-50 text-orange-700",
   }[tone];
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className={`rounded-full px-3 py-1 text-xs font-semibold transition hover:brightness-95 ${toneClass}`}
+      >
+        {label}
+      </a>
+    );
+  }
 
   return <span className={`rounded-full px-3 py-1 text-xs font-semibold ${toneClass}`}>{label}</span>;
 }
@@ -191,7 +253,7 @@ function CompactActionButton({
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex h-9 items-center justify-center rounded-full px-3 text-xs font-semibold transition ${active ? activeClass : idleClass}`}
+      className={`inline-flex h-10 items-center justify-center rounded-2xl px-3.5 text-xs font-semibold transition ${active ? activeClass : idleClass}`}
     >
       {active ? activeLabel : idleLabel}
     </button>
@@ -212,7 +274,7 @@ function PageArrowButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
+      className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
       aria-label={direction === "prev" ? "이전 페이지" : "다음 페이지"}
     >
       <span className="text-base font-bold">{direction === "prev" ? "‹" : "›"}</span>
@@ -483,228 +545,275 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
   const bookmarkCount = uniqueNotices.filter((notice) => bookmarkNoticeIdSet.has(getNoticeClientId(notice))).length;
 
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-6 sm:px-6 lg:px-8">
-      <section className="overflow-hidden rounded-[32px] border border-white/70 bg-white/95 p-6 shadow-[0_16px_40px_rgba(15,23,42,0.06)] backdrop-blur sm:p-7">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+    <div className="mx-auto w-full max-w-[1240px] px-4 py-6 sm:px-6 lg:px-8">
+      <section className="rounded-[32px] border border-slate-200 bg-white px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:px-7 sm:py-8">
+        <div className="flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
           <div className="max-w-3xl">
-            <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">공지 피드</span>
-            <h1 className="mt-3 text-[30px] font-black tracking-tight text-[#191F28] sm:text-[36px]">필요한 공지만 빠르게 확인하세요</h1>
+            <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">{"\uACF5\uC9C0 \uD53C\uB4DC"}</span>
+            <h1 className="mt-3 text-[30px] font-black tracking-tight text-[#191F28] sm:text-[38px]">
+              {"\uD544\uC694\uD55C \uACF5\uC9C0\uB9CC \uBE60\uB974\uAC8C \uD655\uC778\uD558\uC138\uC694"}
+            </h1>
             <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
-              본부, 단과대, 학과, 기관, 사업단 공지를 한곳에서 확인할 수 있습니다.
-              읽은 공지와 저장한 공지도 자연스럽게 정리됩니다.
+              {"\uBCF8\uBD80, \uB2E8\uACFC\uB300, \uD559\uACFC, \uAE30\uAD00, \uC0AC\uC5C5\uB2E8 \uACF5\uC9C0\uB97C \uD55C \uD654\uBA74\uC5D0\uC11C \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."}
+              {" \uC77D\uC740 \uACF5\uC9C0\uC640 \uC800\uC7A5\uD55C \uACF5\uC9C0\uB3C4 \uC790\uC5F0\uC2A4\uB7FD\uAC8C \uC815\uB9AC\uB429\uB2C8\uB2E4."}
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-3 sm:min-w-[360px]">
-            <div className="rounded-[22px] bg-[#F7F9FB] p-4">
-              <p className="text-xs font-semibold text-slate-500">내 공지</p>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 xl:min-w-[520px]">
+            <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
+              <p className="text-xs font-semibold text-slate-500">{"\uB0B4 \uACF5\uC9C0"}</p>
               <p className="mt-2 text-[28px] font-black tracking-tight text-[#191F28]">{joinedAfterNotices.length}</p>
             </div>
-            <div className="rounded-[22px] bg-sky-50 p-4">
-              <p className="text-xs font-semibold text-sky-700">안 읽은 공지</p>
-              <p className="mt-2 text-[28px] font-black tracking-tight text-sky-700">{unreadCount}</p>
+            <div className="rounded-[24px] border border-blue-100 bg-blue-50 p-4">
+              <p className="text-xs font-semibold text-blue-700">{"\uC548 \uC77D\uC740 \uACF5\uC9C0"}</p>
+              <p className="mt-2 text-[28px] font-black tracking-tight text-[#1B64DA]">{unreadCount}</p>
             </div>
-            <div className="rounded-[22px] bg-amber-50 p-4">
-              <p className="text-xs font-semibold text-amber-700">북마크</p>
+            <div className="rounded-[24px] border border-amber-100 bg-amber-50 p-4">
+              <p className="text-xs font-semibold text-amber-700">{"\uBD81\uB9C8\uD06C"}</p>
               <p className="mt-2 text-[28px] font-black tracking-tight text-amber-700">{bookmarkCount}</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="rounded-[32px] border border-white/70 bg-white/95 p-5 shadow-[0_16px_40px_rgba(15,23,42,0.06)] backdrop-blur sm:p-6">
-        <div className="flex flex-col gap-4 border-b border-slate-100 pb-5">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <h2 className="text-[24px] font-black tracking-tight text-[#191F28]">공지 목록</h2>
-              <p className="mt-1 text-sm leading-6 text-slate-500">
-                제목을 누르면 읽음 처리와 함께 원문 페이지로 이동합니다. 탭과 검색으로 필요한 공지만 좁혀보세요.
+            <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
+              <p className="text-xs font-semibold text-slate-500">{"\uC120\uD0DD \uCD9C\uCC98"}</p>
+              <p className="mt-2 text-[28px] font-black tracking-tight text-[#191F28]">
+                {schoolSelection.selectedCategories.length + collegeSelection.selectedCategories.length + departmentSelection.selectedCategories.length + centerSelection.selectedCategories.length}
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <PageArrowButton
-                direction="prev"
-                disabled={safeCurrentPage === 1}
-                onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
-              />
-              <div className="rounded-full bg-[#F2F4F6] px-4 py-2 text-sm font-semibold text-slate-600">
-                {isLoading ? "불러오는 중" : `${filteredNotices.length}개 · ${safeCurrentPage}/${totalPages}페이지`}
-              </div>
-              <PageArrowButton
-                direction="next"
-                disabled={safeCurrentPage === totalPages}
-                onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
-              />
-            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="rounded-[22px] bg-[#F7F9FB] p-4">
-            <div className="flex flex-wrap gap-2">
+      <div className="mt-5 grid gap-5 xl:grid-cols-[300px_minmax(0,1fr)]">
+        <aside className="space-y-4 xl:sticky xl:top-[108px] xl:self-start">
+          <section className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-[0_12px_28px_rgba(15,23,42,0.04)]">
+            <div className="border-b border-slate-100 pb-4">
+              <p className="text-sm font-semibold text-slate-500">{"\uC120\uD0DD\uD55C \uCD9C\uCC98"}</p>
+              <h2 className="mt-1 text-xl font-bold tracking-tight text-slate-950">{"\uD604\uC7AC \uBC1B\uC544\uBCF4\uB294 \uACF5\uC9C0 \uBC94\uC704"}</h2>
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
               {selectedSchoolNames.map((name) => (
-                <SectionChip key={`school-${name}`} label={`본부 ${name}`} tone="school" />
+                <SectionChip key={`school-${name}`} label={`${"\uBCF8\uBD80"} ${name}`} tone="school" href={getSelectedChipLink("school", name)} />
               ))}
               {selectedCollegeNames.map((name) => (
-                <SectionChip key={`college-${name}`} label={`단과대 ${name}`} tone="college" />
+                <SectionChip key={`college-${name}`} label={`${"\uB2E8\uACFC\uB300"} ${name}`} tone="college" href={getSelectedChipLink("college", name)} />
               ))}
               {selectedDepartmentNames.map((name) => (
-                <SectionChip key={`department-${name}`} label={`학과 ${name}`} tone="department" />
+                <SectionChip key={`department-${name}`} label={`${"\uD559\uACFC"} ${name}`} tone="department" href={getSelectedChipLink("department", name)} />
               ))}
               {selectedInstitutionCenterNames.map((name) => (
-                <SectionChip key={`institution-${name}`} label={`기관 ${name}`} tone="institution" />
+                <SectionChip key={`institution-${name}`} label={`${"\uAE30\uAD00"} ${name}`} tone="institution" href={getSelectedChipLink("institution", name)} />
               ))}
               {selectedProjectCenterNames.map((name) => (
-                <SectionChip key={`project-${name}`} label={`사업단 ${name}`} tone="project" />
+                <SectionChip key={`project-${name}`} label={`${"\uC0AC\uC5C5\uB2E8"} ${name}`} tone="project" href={getSelectedChipLink("project", name)} />
               ))}
             </div>
+
+            {selectedSchoolNames.length === 0 &&
+            selectedCollegeNames.length === 0 &&
+            selectedDepartmentNames.length === 0 &&
+            selectedInstitutionCenterNames.length === 0 &&
+            selectedProjectCenterNames.length === 0 ? (
+              <div className="mt-4 rounded-[20px] bg-[#FBFCFD] px-4 py-4 text-sm leading-6 text-slate-500">
+                {"\uC544\uC9C1 \uC120\uD0DD\uD55C \uCD9C\uCC98\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4. \uC124\uC815\uC5D0\uC11C \uC6D0\uD558\uB294 \uACF5\uC9C0\uB97C \uACE8\uB77C\uBCF4\uC138\uC694."}
+              </div>
+            ) : null}
+          </section>
+
+        </aside>
+
+        <section className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:p-6">
+          <div className="flex flex-col gap-4 border-b border-slate-100 pb-5">
+            <section className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-slate-500">{"\uBE60\uB978 \uBCF4\uAE30"}</p>
+                  <h2 className="mt-1 text-lg font-bold tracking-tight text-slate-950">{"\uD544\uD130\uC640 \uC815\uB82C"}</h2>
+                </div>
+
+                <div className="grid gap-2 sm:grid-cols-3">
+                  <button type="button" onClick={() => setViewMode("all")} className={`rounded-[18px] px-4 py-3 text-left text-sm font-semibold transition ${getSegmentClass(viewMode === "all", "neutral")}`}>
+                    {"\uC804\uCCB4 \uACF5\uC9C0"}
+                  </button>
+                  <button type="button" onClick={() => setViewMode("unread")} className={`rounded-[18px] px-4 py-3 text-left text-sm font-semibold transition ${getSegmentClass(viewMode === "unread", "brand")}`}>
+                    {"\uC548 \uC77D\uC740 \uACF5\uC9C0"}
+                  </button>
+                  <button type="button" onClick={() => setViewMode("bookmarks")} className={`rounded-[18px] px-4 py-3 text-left text-sm font-semibold transition ${getSegmentClass(viewMode === "bookmarks", "bookmark")}`}>
+                    {"\uBD81\uB9C8\uD06C"}
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <h2 className="text-[24px] font-black tracking-tight text-[#191F28]">{"\uACF5\uC9C0 \uBAA9\uB85D"}</h2>
+                <p className="mt-1 text-sm leading-6 text-slate-500">
+                  {"\uC81C\uBAA9, \uC791\uC131\uC790 \uAE30\uC900\uC73C\uB85C \uBE60\uB974\uAC8C \uCC3E\uACE0 \uD544\uC694\uD55C \uACF5\uC9C0\uB9CC \uACE8\uB77C\uBCF4\uC138\uC694."}
+                </p>
+              </div>
+
+              <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto lg:items-center">
+                <div className="relative w-full sm:w-[280px]">
+                  <input
+                    type="search"
+                    value={searchInput}
+                    onChange={(event) => setSearchInput(event.target.value)}
+                    placeholder={"\uC81C\uBAA9, \uC791\uC131\uC790"}
+                    className="h-12 w-full rounded-[18px] border border-slate-200 bg-[#F7F9FB] px-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#3182F6] focus:bg-white focus:ring-4 focus:ring-blue-100"
+                  />
+                  {searchInput ? (
+                    <button
+                      type="button"
+                      onClick={() => setSearchInput("")}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 rounded-xl px-3 py-1 text-xs font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700"
+                    >
+                      {"\uCD08\uAE30\uD654"}
+                    </button>
+                  ) : null}
+                </div>
+
+                <div className="flex items-center gap-2 self-end sm:self-auto">
+                  <PageArrowButton
+                    direction="prev"
+                    disabled={safeCurrentPage === 1}
+                    onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+                  />
+                  <div className="rounded-[18px] border border-slate-200 bg-[#FBFCFD] px-4 py-2 text-sm font-semibold text-slate-600">
+                    {isLoading ? "\uBD88\uB7EC\uC624\uB294 \uC911" : `${filteredNotices.length}\uAC1C | ${safeCurrentPage}/${totalPages}\uD398\uC774\uC9C0`}
+                  </div>
+                  <PageArrowButton
+                    direction="next"
+                    disabled={safeCurrentPage === totalPages}
+                    onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
-            <div className="inline-flex w-fit rounded-full bg-[#F2F4F6] p-1">
-              <button type="button" onClick={() => setViewMode("all")} className={`rounded-full px-4 py-2 text-sm font-semibold transition ${getSegmentClass(viewMode === "all", "neutral")}`}>
-                전체 공지
-              </button>
-              <button type="button" onClick={() => setViewMode("unread")} className={`rounded-full px-4 py-2 text-sm font-semibold transition ${getSegmentClass(viewMode === "unread", "brand")}`}>
-                안 읽은 공지
-              </button>
-              <button type="button" onClick={() => setViewMode("bookmarks")} className={`rounded-full px-4 py-2 text-sm font-semibold transition ${getSegmentClass(viewMode === "bookmarks", "bookmark")}`}>
-                북마크
-              </button>
-            </div>
+          {error ? <div className="mt-5 rounded-[20px] border border-rose-200 bg-rose-50 px-4 py-4 text-sm text-rose-700">{error}</div> : null}
 
-            <div className="relative w-full xl:max-w-[360px]">
-              <input
-                type="search"
-                value={searchInput}
-                onChange={(event) => setSearchInput(event.target.value)}
-                placeholder="제목, 작성자, 출처로 검색"
-                className="h-12 w-full rounded-full border border-slate-200 bg-[#F7F9FB] px-5 pr-20 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#3182F6] focus:bg-white focus:ring-4 focus:ring-blue-100"
-              />
-              {searchInput ? (
-                <button
-                  type="button"
-                  onClick={() => setSearchInput("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full px-3 py-1 text-xs font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700"
-                >
-                  초기화
-                </button>
-              ) : (
-                <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-sm text-slate-400">검색</span>
-              )}
-            </div>
+          <div className="mt-5 grid gap-3">
+            {isLoading ? (
+              <div className="rounded-[24px] border border-dashed border-slate-300 bg-[#FBFCFD] px-4 py-16 text-center text-sm text-slate-500">
+                {"\uACF5\uC9C0 \uBAA9\uB85D\uC744 \uBD88\uB7EC\uC624\uACE0 \uC788\uC2B5\uB2C8\uB2E4."}
+              </div>
+            ) : null}
+
+            {!isLoading && filteredNotices.length === 0 && !error ? (
+              <div className="rounded-[24px] border border-dashed border-slate-300 bg-[#FBFCFD] px-4 py-16 text-center text-sm text-slate-500">
+                {"\uC9C0\uAE08 \uC870\uAC74\uC5D0 \uB9DE\uB294 \uACF5\uC9C0\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4."}
+              </div>
+            ) : null}
+
+            {!isLoading
+              ? paginatedNotices.map((notice) => {
+                  const noticeId = getNoticeClientId(notice);
+                  const isRead = readNoticeIdSet.has(noticeId);
+                  const isBookmarked = bookmarkNoticeIdSet.has(noticeId);
+
+                  return (
+                    <article
+                      key={noticeId}
+                      className={`rounded-[24px] border px-5 py-5 shadow-[0_8px_20px_rgba(15,23,42,0.03)] transition ${getCardClass(notice, isRead)}`}
+                    >
+                      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex flex-wrap items-center gap-2">
+                            {getNoticeSourceLink(notice) ? (
+                              <a
+                                href={getNoticeSourceLink(notice) ?? undefined}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={`rounded-2xl px-3 py-1.5 text-[11px] font-semibold transition hover:brightness-95 ${getSourceBadgeClass(notice)}`}
+                              >
+                                {notice.sourceName}
+                              </a>
+                            ) : (
+                              <span className={`rounded-2xl px-3 py-1.5 text-[11px] font-semibold ${getSourceBadgeClass(notice)}`}>{notice.sourceName}</span>
+                            )}
+                            <span className="rounded-2xl bg-slate-100 px-3 py-1.5 text-[11px] font-semibold text-slate-500">{notice.category}</span>
+                            {notice.isPinned ? <span className="rounded-2xl bg-amber-50 px-3 py-1.5 text-[11px] font-semibold text-amber-700">{"\uC911\uC694"}</span> : null}
+                            {notice.statusLabel ? <span className={`rounded-2xl px-3 py-1.5 text-[11px] font-semibold ${getStatusBadgeClass(notice)}`}>{notice.statusLabel}</span> : null}
+                            <span className={`rounded-2xl px-3 py-1.5 text-[11px] font-semibold ${isRead ? "bg-emerald-600 text-white" : "bg-blue-50 text-blue-700"}`}>{isRead ? "\uC77D\uC74C" : "\uC548 \uC77D\uC74C"}</span>
+                          </div>
+
+                          <a
+                            href={notice.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            onClick={() => markAsRead(notice)}
+                            className={`mt-3 block text-[19px] font-bold leading-8 tracking-tight ${notice.statusKind === "closed" ? "text-slate-500 hover:text-slate-600" : isRead ? "text-slate-700 hover:text-slate-900" : "text-[#191F28] hover:text-[#1B64DA]"}`}
+                          >
+                            {notice.title}
+                          </a>
+
+                          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-slate-500">
+                            <span>{notice.author}</span>
+                            <span className="text-slate-300">|</span>
+                            <span>{formatNoticeDate(notice.date)}</span>
+                            <span className="text-slate-300">|</span>
+                            <span>{formatViewsLabel(notice)}</span>
+                          </div>
+                        </div>
+
+                        <div className="flex shrink-0 items-center gap-2 lg:pl-4">
+                          <CompactActionButton
+                            active={isRead}
+                            onClick={() => markAsRead(notice)}
+                            activeLabel={"\uC77D\uC74C"}
+                            idleLabel={"\uC77D\uAE30"}
+                            activeClass="bg-emerald-600 text-white"
+                            idleClass="bg-[#F2F4F6] text-slate-700 hover:bg-slate-200"
+                          />
+                          <CompactActionButton
+                            active={isBookmarked}
+                            onClick={() => toggleBookmark(notice)}
+                            activeLabel={"\uC800\uC7A5\uB428"}
+                            idleLabel={"\uC800\uC7A5"}
+                            activeClass="bg-amber-500 text-white hover:bg-amber-600"
+                            idleClass="bg-amber-50 text-amber-700 hover:bg-amber-100"
+                          />
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })
+              : null}
           </div>
-        </div>
 
-        {error ? <div className="mt-5 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-4 text-sm text-rose-700">{error}</div> : null}
-
-        <div className="mt-5 grid gap-3">
-          {isLoading ? (
-            <div className="rounded-[28px] border border-dashed border-slate-300 bg-[#FAFBFC] px-4 py-16 text-center text-sm text-slate-500">
-              공지 목록을 불러오고 있습니다.
-            </div>
-          ) : null}
-
-          {!isLoading && filteredNotices.length === 0 && !error ? (
-            <div className="rounded-[28px] border border-dashed border-slate-300 bg-[#FAFBFC] px-4 py-16 text-center text-sm text-slate-500">
-              지금 조건에 맞는 공지가 없습니다.
-            </div>
-          ) : null}
-
-          {!isLoading
-            ? paginatedNotices.map((notice) => {
-                const noticeId = getNoticeClientId(notice);
-                const isRead = readNoticeIdSet.has(noticeId);
-                const isBookmarked = bookmarkNoticeIdSet.has(noticeId);
-
-                return (
-                  <article
-                    key={noticeId}
-                    className={`rounded-[26px] border px-5 py-4 transition ${getCardClass(notice, isRead)}`}
-                  >
-                    <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
-                      <div className="min-w-0 flex-1">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <span className={`rounded-full px-3 py-1 text-[11px] font-semibold ${getSourceBadgeClass(notice)}`}>{notice.sourceName}</span>
-                          <span className="rounded-full bg-slate-50 px-3 py-1 text-[11px] font-semibold text-slate-500">{notice.category}</span>
-                          {notice.isPinned ? <span className="rounded-full bg-amber-50 px-3 py-1 text-[11px] font-semibold text-amber-700">중요</span> : null}
-                          {notice.statusLabel ? <span className={`rounded-full px-3 py-1 text-[11px] font-semibold ${getStatusBadgeClass(notice)}`}>{notice.statusLabel}</span> : null}
-                          <span className={`rounded-full px-3 py-1 text-[11px] font-semibold ${isRead ? "bg-emerald-600 text-white" : "bg-blue-50 text-blue-700"}`}>{isRead ? "읽음" : "안 읽음"}</span>
-                        </div>
-
-                        <a
-                          href={notice.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={() => markAsRead(notice)}
-                          className={`mt-3 block text-[18px] font-bold leading-7 tracking-tight ${notice.statusKind === "closed" ? "text-slate-500 hover:text-slate-600" : isRead ? "text-slate-700 hover:text-slate-900" : "text-[#191F28] hover:text-[#1B64DA]"}`}
-                        >
-                          {notice.title}
-                        </a>
-
-                        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-slate-500">
-                          <span>{notice.author}</span>
-                          <span className="text-slate-300">•</span>
-                          <span>{formatNoticeDate(notice.date)}</span>
-                          <span className="text-slate-300">•</span>
-                          <span>{formatViewsLabel(notice)}</span>
-                        </div>
-                      </div>
-
-                      <div className="flex shrink-0 items-center gap-2 lg:pl-4">
-                        <CompactActionButton
-                          active={isRead}
-                          onClick={() => markAsRead(notice)}
-                          activeLabel="읽음"
-                          idleLabel="읽기"
-                          activeClass="bg-emerald-600 text-white"
-                          idleClass="bg-[#F2F4F6] text-slate-700 hover:bg-slate-200"
-                        />
-                        <CompactActionButton
-                          active={isBookmarked}
-                          onClick={() => toggleBookmark(notice)}
-                          activeLabel="저장됨"
-                          idleLabel="저장"
-                          activeClass="bg-amber-500 text-white hover:bg-amber-600"
-                          idleClass="bg-amber-50 text-amber-700 hover:bg-amber-100"
-                        />
-                      </div>
-                    </div>
-                  </article>
-                );
-              })
-            : null}
-        </div>
-
-        {!isLoading && totalPages > 1 ? (
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2 border-t border-slate-100 pt-5">
-            <button
-              type="button"
-              onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
-              disabled={safeCurrentPage === 1}
-              className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              이전
-            </button>
-            {pageNumbers.map((pageNumber) => (
+          {!isLoading && totalPages > 1 ? (
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2 border-t border-slate-100 pt-5">
               <button
-                key={pageNumber}
                 type="button"
-                onClick={() => setCurrentPage(pageNumber)}
-                className={`h-10 min-w-10 rounded-full px-3 text-sm font-semibold ${pageNumber === safeCurrentPage ? "bg-[#191F28] text-white" : "border border-slate-200 bg-white text-slate-700"}`}
+                onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+                disabled={safeCurrentPage === 1}
+                className="rounded-[18px] border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 disabled:cursor-not-allowed disabled:opacity-40"
               >
-                {pageNumber}
+                {"\uC774\uC804"}
               </button>
-            ))}
-            <button
-              type="button"
-              onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
-              disabled={safeCurrentPage === totalPages}
-              className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              다음
-            </button>
-          </div>
-        ) : null}
-      </section>
+              {pageNumbers.map((pageNumber) => (
+                <button
+                  key={pageNumber}
+                  type="button"
+                  onClick={() => setCurrentPage(pageNumber)}
+                  className={`h-10 min-w-10 rounded-[16px] px-3 text-sm font-semibold ${pageNumber === safeCurrentPage ? "bg-[#191F28] text-white" : "border border-slate-200 bg-white text-slate-700"}`}
+                >
+                  {pageNumber}
+                </button>
+              ))}
+              <button
+                type="button"
+                onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+                disabled={safeCurrentPage === totalPages}
+                className="rounded-[18px] border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                {"\uB2E4\uC74C"}
+              </button>
+            </div>
+          ) : null}
+        </section>
+      </div>
     </div>
   );
 }

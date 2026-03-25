@@ -19,7 +19,7 @@ import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNot
 export const revalidate = 1800;
 export const dynamic = "force-dynamic";
 
-const PREVIEW_MAX_PAGES = 10;
+const PREVIEW_MAX_PAGES = 2;
 
 export async function GET(request: Request) {
   const session = await auth();

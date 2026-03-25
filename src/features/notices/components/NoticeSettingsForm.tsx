@@ -43,7 +43,7 @@ function SelectionSection({
   onClear: () => void;
 }) {
   return (
-    <section className={`rounded-[28px] border p-5 shadow-[0_12px_32px_rgba(15,23,42,0.04)] sm:p-6 ${sectionTone}`}>
+    <section className={`rounded-[32px] border p-5 shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:p-6 ${sectionTone}`}>
       <div className="flex flex-col gap-4 border-b border-black/5 pb-4">
         <div>
           <h2 className="text-xl font-bold tracking-tight text-slate-950">{title}</h2>
@@ -60,7 +60,7 @@ function SelectionSection({
           <button
             type="button"
             onClick={onClear}
-            className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-white"
+            className="rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
           >
             선택 해제
           </button>
@@ -74,7 +74,7 @@ function SelectionSection({
           return (
             <label
               key={item.key}
-              className={`flex cursor-pointer items-start gap-3 rounded-[24px] border px-4 py-4 transition ${checked ? accentClass : "border-slate-200 bg-white/88 hover:bg-white"}`}
+              className={`flex cursor-pointer items-start gap-3 rounded-[24px] border px-4 py-4 transition shadow-[0_6px_16px_rgba(15,23,42,0.03)] ${checked ? accentClass : "border-slate-200 bg-white/88 hover:bg-white"}`}
             >
               <input type="checkbox" checked={checked} onChange={() => onToggle(item.key)} className="mt-1 h-4 w-4" />
               <div>
@@ -123,7 +123,7 @@ function DepartmentSelectionSection({
   }, [searchKeyword]);
 
   return (
-    <section className="rounded-[28px] border border-violet-200 bg-violet-50/70 p-5 shadow-[0_12px_32px_rgba(15,23,42,0.04)] sm:p-6">
+    <section className="rounded-[32px] border border-slate-200 bg-white p-5 shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:p-6">
       <div className="flex flex-col gap-4 border-b border-violet-200/70 pb-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <h2 className="text-xl font-bold tracking-tight text-slate-950">학과 알림</h2>
@@ -132,10 +132,10 @@ function DepartmentSelectionSection({
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <button type="button" onClick={onSelectAll} className="rounded-full bg-violet-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">
+          <button type="button" onClick={onSelectAll} className="rounded-2xl bg-[#3182F6] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1B64DA]">
             전체 선택
           </button>
-          <button type="button" onClick={onClear} className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-white">
+          <button type="button" onClick={onClear} className="rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">
             선택 해제
           </button>
         </div>
@@ -148,13 +148,13 @@ function DepartmentSelectionSection({
           value={searchKeyword}
           onChange={(event) => setSearchKeyword(event.target.value)}
           placeholder="예: 경영학과, 전자공학과, 인공지능학부"
-          className="mt-2 h-13 w-full rounded-2xl border border-violet-200 bg-white px-4 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-violet-400"
+          className="mt-2 h-13 w-full rounded-[20px] border border-slate-200 bg-white px-4 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-[#3182F6]"
         />
       </div>
 
       <div className="mt-5 grid gap-4 xl:grid-cols-2">
         {filteredGroups.map((group) => (
-          <div key={group.college} className="rounded-3xl border border-violet-200 bg-white/88 p-4">
+          <div key={group.college} className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4">
             <div className="border-b border-violet-100 pb-3">
               <p className="text-base font-bold text-slate-950">{group.college}</p>
               <p className="mt-1 text-xs font-medium text-slate-500">{group.departments.length}개 학과</p>
@@ -165,7 +165,7 @@ function DepartmentSelectionSection({
                 return (
                   <label
                     key={department.key}
-                    className={`flex cursor-pointer items-start gap-3 rounded-2xl border px-4 py-3 transition ${checked ? "border-violet-500 bg-violet-50" : "border-slate-200 bg-white hover:bg-slate-50"}`}
+                    className={`flex cursor-pointer items-start gap-3 rounded-[22px] border px-4 py-3.5 transition ${checked ? "border-violet-500 bg-violet-50" : "border-slate-200 bg-white hover:bg-slate-50"}`}
                   >
                     <input type="checkbox" checked={checked} onChange={() => onToggle(department.key)} className="mt-1 h-4 w-4" />
                     <div>
@@ -216,7 +216,7 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
 
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
-      <section className="rounded-[32px] border border-white/70 bg-white/92 p-6 shadow-[0_16px_40px_rgba(15,23,42,0.06)] backdrop-blur sm:p-7">
+      <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
         <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">공지 설정</span>
         <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">보고 싶은 공지만 골라두세요</h1>
         <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
