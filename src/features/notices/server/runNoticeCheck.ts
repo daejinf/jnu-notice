@@ -1,3 +1,4 @@
+import type { Notice } from "@/types/notice";
 import { enabledCenterBoardConfigs } from "@/features/notices/config/centerBoards";
 import { schoolBoardAllCategory } from "@/features/notices/config/schoolBoardCategories";
 import { enabledCollegeBoardConfigs } from "@/features/notices/config/collegeBoards";
@@ -12,12 +13,24 @@ import { loadStoredNotices, saveNotices } from "@/features/notices/server/notice
 import { appendNoticeUpdateSnapshot } from "@/features/notices/server/noticeUpdateHistory";
 import { notifyNewNotices } from "@/features/notices/server/notifications";
 
+async function resolveNoticeGroup(
+  label: string,
+  task: Promise<Notice[]>,
+) {
+  try {
+    return await task;
+  } catch (error) {
+    console.error(`[notice-check] ${label} batch failed`, error);
+    return [] as Notice[];
+  }
+}
+
 export async function runNoticeCheck() {
   const [schoolNotices, collegeNotices, departmentNotices, centerNotices] = await Promise.all([
-    fetchSchoolBoardNotices(schoolBoardAllCategory),
-    fetchMultipleCollegeBoardNotices(enabledCollegeBoardConfigs),
-    fetchMultipleDepartmentNotices(enabledDepartmentConfigs),
-    fetchMultipleCenterBoardNotices(enabledCenterBoardConfigs),
+    resolveNoticeGroup("school", fetchSchoolBoardNotices(schoolBoardAllCategory)),
+    resolveNoticeGroup("college", fetchMultipleCollegeBoardNotices(enabledCollegeBoardConfigs)),
+    resolveNoticeGroup("department", fetchMultipleDepartmentNotices(enabledDepartmentConfigs)),
+    resolveNoticeGroup("center", fetchMultipleCenterBoardNotices(enabledCenterBoardConfigs)),
   ]);
 
   const currentNotices = sortNoticesByDate(
@@ -35,8 +48,17 @@ export async function runNoticeCheck() {
       console.log(notice.url);
     });
 
-    await appendNoticeUpdateSnapshot(newNotices);
-    await notifyNewNotices(newNotices);
+    try {
+      await appendNoticeUpdateSnapshot(newNotices);
+    } catch (error) {
+      console.error("[notice-check] failed to append update snapshot", error);
+    }
+
+    try {
+      await notifyNewNotices(newNotices);
+    } catch (error) {
+      console.error("[notice-check] failed to notify new notices", error);
+    }
   } else {
     console.log("no new notices");
   }
