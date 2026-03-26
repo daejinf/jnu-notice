@@ -55,7 +55,7 @@ function getThresholdTime() {
 }
 
 function formatNoticeDate(date: string) {
-  return date ? date.replaceAll("-", ".") : "?? ??";
+  return date ? date.replaceAll("-", ".") : "\ub0a0\uc9dc \uc5c6\uc74c";
 }
 
 function formatViews(views: number) {
@@ -71,7 +71,9 @@ function isUnsupportedViewsNotice(notice: Notice) {
 }
 
 function formatViewsLabel(notice: Notice) {
-  return isUnsupportedViewsNotice(notice) ? "??? ???" : `?? ${formatViews(notice.views)}`;
+  return isUnsupportedViewsNotice(notice)
+    ? "\uc870\ud68c\uc218 \ubbf8\uc9c0\uc6d0"
+    : `\uc870\ud68c ${formatViews(notice.views)}`;
 }
 
 function getSourceBadgeClass(notice: Notice) {
@@ -153,8 +155,8 @@ function HotNoticeCardList({ notices }: { notices: Notice[] }) {
           </a>
 
           <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
-            <span>{`??? ${notice.author}`}</span>
-            <span>{`??? ${formatNoticeDate(notice.date)}`}</span>
+            <span>{`\uc791\uc131\uc790 ${notice.author}`}</span>
+            <span>{`\uac8c\uc2dc\uc77c ${formatNoticeDate(notice.date)}`}</span>
             <span>{formatViewsLabel(notice)}</span>
           </div>
         </article>
@@ -228,7 +230,7 @@ export function HotNoticeSection({
         const data = (await response.json()) as NoticeApiResponse;
 
         if (!response.ok) {
-          throw new Error(data.error ?? "HOT ??? ???? ?????.");
+          throw new Error(data.error ?? "HOT \uacf5\uc9c0\ub97c \ubd88\ub7ec\uc624\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4.");
         }
 
         setNotices(data.notices);
@@ -237,7 +239,7 @@ export function HotNoticeSection({
         const message =
           fetchError instanceof Error
             ? fetchError.message
-            : "? ? ?? ??? ??????.";
+            : "\uc54c \uc218 \uc5c6\ub294 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4.";
         setError(message);
         setNotices([]);
       } finally {
@@ -263,15 +265,13 @@ export function HotNoticeSection({
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
         <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
           <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold text-rose-700">
-            HOT ??
+            {"HOT \uc54c\ub9bc"}
           </span>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-            ?? 7? ?? ??? ??
+            {"\ucd5c\uadfc 7\uc77c \uacf5\uc9c0 \uc870\ud68c\uc218 \ub7ad\ud0b9"}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            ? ?? ??? ???? ?? 7? ?? ??? ?? ???, ???? ?? ????
-            ??? ?? ?????. ?? ??? ?? ?? ?? HOT ??? ???????
-            30??? ??? ?? HOT ??? ?? ??? ? ????.
+            {"\uc0c8 \uacf5\uc9c0 \uc5ec\ubd80\uc640 \uc0c1\uad00\uc5c6\uc774 \ucd5c\uadfc 7\uc77c \uc548\uc5d0 \uc62c\ub77c\uc628 \uacf5\uc9c0 \uc911\uc5d0\uc11c, \uc870\ud68c\uc218\uac00 \ub192\uc740 \uc21c\uc11c\ub300\ub85c \ube60\ub974\uac8c \ubcf4\ub294 \ud654\uba74\uc785\ub2c8\ub2e4. \ub0b4\uac00 \uc124\uc815\ud55c \uacf5\uc9c0 \ubaa9\ub85d \uae30\uc900 HOT \uc54c\ub9bc\uacfc \ubc31\uadf8\ub77c\uc6b4\ub4dc\uc5d0\uc11c 30\ubd84\ub9c8\ub2e4 \ubaa8\uc544\ub454 \uc804\uccb4 HOT \uc54c\ub9bc\uc744 \ud568\uaed8 \ud655\uc778\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."}
           </p>
         </section>
 
@@ -283,20 +283,20 @@ export function HotNoticeSection({
 
         {isLoading ? (
           <section className="rounded-[32px] border border-dashed border-slate-300 bg-white/90 px-6 py-16 text-center text-sm text-slate-500 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
-            HOT ??? ???? ????.
+            {"HOT \uc54c\ub9bc\uc744 \ubd88\ub7ec\uc624\ub294 \uc911\uc785\ub2c8\ub2e4."}
           </section>
         ) : personalHotNotices.length === 0 ? (
           <section className="rounded-[32px] border border-dashed border-slate-300 bg-white/90 px-6 py-16 text-center text-sm text-slate-500 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
-            ? ?? ?? ?? 7? HOT ??? ?? ????.
+            {"\ub0b4 \uc124\uc815 \uae30\uc900 \ucd5c\uadfc 7\uc77c HOT \uacf5\uc9c0\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4."}
           </section>
         ) : (
           <section className="rounded-[36px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-6">
             <div className="flex items-center justify-between border-b border-slate-100 pb-4">
               <h2 className="text-xl font-bold tracking-tight text-slate-950">
-                ? ?? ?? HOT ??
+                {"\ub0b4 \uc124\uc815 \uae30\uc900 HOT \uc54c\ub9bc"}
               </h2>
               <span className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700">
-                {`? ${personalHotNotices.length}?`}
+                {`\ucd1d ${personalHotNotices.length}\uac74`}
               </span>
             </div>
             <HotNoticeCardList notices={personalHotNotices} />
@@ -307,20 +307,20 @@ export function HotNoticeSection({
           <div className="flex flex-col gap-2 border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="text-xl font-bold tracking-tight text-slate-950">
-                HOT ??(??)
+                {"HOT \uc54c\ub9bc(\uc804\uccb4)"}
               </h2>
               <p className="mt-1 text-sm text-slate-500">
-                ???? 30??? ?? ??? ??? ?? ?? 7? ??? ?????.
+                {"\ubc31\uc5d4\ub4dc\uac00 30\ubd84\ub9c8\ub2e4 \uc804\uccb4 \uacf5\uc9c0\ub97c \uc218\uc9d1\ud574 \ub9cc\ub4e0 \ucd5c\uadfc 7\uc77c \uc870\ud68c\uc218 \ub7ad\ud0b9\uc785\ub2c8\ub2e4."}
               </p>
             </div>
             <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
-              {`? ${globalHotNotices.length}?`}
+              {`\ucd1d ${globalHotNotices.length}\uac74`}
             </span>
           </div>
 
           {globalHotNotices.length === 0 ? (
             <div className="mt-5 rounded-[28px] border border-dashed border-slate-200 bg-[#FBFCFD] px-5 py-10 text-center text-sm text-slate-500">
-              ?? ?? ?? 7? HOT ??? ?? ????.
+              {"\uc804\uccb4 \uae30\uc900 \ucd5c\uadfc 7\uc77c HOT \uacf5\uc9c0\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4."}
             </div>
           ) : (
             <HotNoticeCardList notices={globalHotNotices} />
