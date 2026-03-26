@@ -1,4 +1,4 @@
-export type NoticeSourceType = "school" | "college" | "department" | "center";
+﻿export type NoticeSourceType = "school" | "college" | "department" | "center";
 
 export type Notice = {
   id: string;
@@ -25,6 +25,11 @@ export type NoticeUpdateSnapshot = {
 export type HotNoticeSnapshot = {
   checkedAt: string;
   notices: Notice[];
+};
+
+export type NoticeCheckSnapshot = {
+  checkedAt: string;
+  totalNoticeCount: number;
 };
 
 export type DepartmentParserType = "subview-bbs" | "xboard";

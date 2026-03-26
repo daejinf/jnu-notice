@@ -7,6 +7,7 @@ import { enabledDepartmentConfigs } from "@/features/notices/config/departments"
 import { schoolBoardCategories } from "@/features/notices/config/schoolBoardCategories";
 import { readNoticePreferencesFromRequest } from "@/features/notices/server/noticePreferenceCookies";
 import { loadNoticePreferences } from "@/features/notices/server/noticePreferences";
+import { loadNoticeCheckSnapshot } from "@/features/notices/server/noticeCheckSnapshot";
 import { loadStoredNotices } from "@/features/notices/server/noticeStorage";
 import { sortNoticesByDate } from "@/features/notices/lib/sortNotices";
 
@@ -80,9 +81,11 @@ export async function GET(request: NextRequest) {
     }),
   );
 
+  const latestCheck = await loadNoticeCheckSnapshot();
+
   return NextResponse.json({
     notices: filteredNotices,
-    fetchedAt: new Date().toISOString(),
+    fetchedAt: latestCheck?.checkedAt ?? new Date().toISOString(),
     totalCount: filteredNotices.length,
     hasPreferences: true,
     preferencesUpdatedAt: preferences.updatedAt,

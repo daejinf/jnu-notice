@@ -1,4 +1,4 @@
-import type { Notice } from "@/types/notice";
+﻿import type { Notice } from "@/types/notice";
 import { enabledCenterBoardConfigs } from "@/features/notices/config/centerBoards";
 import { schoolBoardAllCategory } from "@/features/notices/config/schoolBoardCategories";
 import { enabledCollegeBoardConfigs } from "@/features/notices/config/collegeBoards";
@@ -9,6 +9,7 @@ import { fetchMultipleDepartmentNotices } from "@/features/notices/lib/fetchDepa
 import { fetchSchoolBoardNotices } from "@/features/notices/lib/fetchSchoolBoardNotices";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
 import { findNewNotices } from "@/features/notices/server/noticeDiff";
+import { saveNoticeCheckSnapshot } from "@/features/notices/server/noticeCheckSnapshot";
 import { loadStoredNotices, saveNotices } from "@/features/notices/server/noticeStorage";
 import { appendNoticeUpdateSnapshot, filterFreshNotices } from "@/features/notices/server/noticeUpdateHistory";
 import { notifyNewNotices } from "@/features/notices/server/notifications";
@@ -44,6 +45,10 @@ export async function runNoticeCheck() {
 
   await saveNotices(currentNotices);
   await saveRecentHotNotices(currentNotices);
+  await saveNoticeCheckSnapshot({
+    checkedAt,
+    totalNoticeCount: currentNotices.length,
+  });
 
   if (newNotices.length > 0) {
     console.log(`new notices: ${newNotices.length}`);
