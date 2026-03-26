@@ -1,4 +1,4 @@
-import { request as httpRequest } from "node:http";
+﻿import { request as httpRequest } from "node:http";
 import { request as httpsRequest } from "node:https";
 import { load, type Cheerio, type CheerioAPI } from "cheerio";
 import type { AnyNode } from "domhandler";
@@ -511,7 +511,7 @@ function parseAspNetBoardHtml(html: string, center: CenterBoardConfig) {
   const seen = new Set<string>();
   const headerRow = $("table tr").filter((_, element) => $(element).find("th").length > 0).first();
   const viewsColumnIndex = headerRow.length
-    ? findColumnIndexByHeader(headerRow, (text, className) => text.includes("조회수") || className.includes("hit"))
+    ? findColumnIndexByHeader(headerRow, (text, className) => text.includes("조회") || className.includes("hit"))
     : -1;
 
   $("table tr").each((index, element) => {
@@ -560,7 +560,7 @@ function parseAspNetBoardHtml(html: string, center: CenterBoardConfig) {
       sourceType: center.sourceType,
       sourceName: center.sourceName,
       category: center.category,
-      isPinned: rawNo.includes("공지") || rawNo.toLowerCase().includes("notice"),
+      isPinned: rawNo.includes("怨듭?") || rawNo.toLowerCase().includes("notice"),
     });
   });
 
@@ -605,8 +605,8 @@ function parseCapdHomeDate(value: string) {
 function parseCapdHomeStatus(value: string) {
   const raw = cleanText(value).toUpperCase();
 
-  if (raw === "마감") {
-    return { label: "마감", kind: "closed" as const };
+  if (raw === "留덇컧") {
+    return { label: "留덇컧", kind: "closed" as const };
   }
 
   if (raw === "D-DAY" || /^D-\d+$/.test(raw)) {
@@ -821,7 +821,7 @@ function parseGrowNoticeHtml(html: string, center: CenterBoardConfig) {
       sourceType: center.sourceType,
       sourceName: center.sourceName,
       category: center.category,
-      isPinned: stateLabel === "임박" || stateLabel.startsWith("D-"),
+      isPinned: stateLabel === "?꾨컯" || stateLabel.startsWith("D-"),
     });
   });
 
@@ -865,7 +865,7 @@ function parseIleNoticeHtml(html: string, center: CenterBoardConfig) {
       sourceType: center.sourceType,
       sourceName: center.sourceName,
       category: center.category,
-      isPinned: row.hasClass('notice') || rawNo.includes('공지'),
+      isPinned: row.hasClass('notice') || rawNo.includes('怨듭?'),
     });
   });
 
@@ -878,7 +878,7 @@ function parseLibraryNoticeHtml(html: string, center: CenterBoardConfig) {
   const seen = new Set<string>();
   const viewsColumnIndex = findColumnIndexByHeader(
     $("table.mobileTable thead tr").first(),
-    (text, className) => text.includes("조회") || className.includes("hit"),
+    (text, className) => text.includes("議고쉶") || className.includes("hit"),
   );
 
   $("table.mobileTable tbody tr").each((index, element) => {
@@ -921,7 +921,7 @@ function parseLibraryNoticeHtml(html: string, center: CenterBoardConfig) {
       sourceType: center.sourceType,
       sourceName: center.sourceName,
       category: center.category,
-      isPinned: cleanText(cells.eq(1).text()).includes("공지"),
+      isPinned: cleanText(cells.eq(1).text()).includes("怨듭?"),
     });
   });
 
@@ -967,7 +967,7 @@ function parseGenericDatedLinks(
 
     seen.add(seenKey);
 
-    const isPinned = /^notice$/i.test(blockText.split(" ")[0] ?? "") || blockText.includes("공지");
+    const isPinned = /^notice$/i.test(blockText.split(" ")[0] ?? "") || blockText.includes("怨듭?");
 
     notices.push({
       id: extractIdFromUrl(noticeUrl, `${center.key}-${index}`),
@@ -1109,3 +1109,8 @@ export async function fetchMultipleCenterBoardNotices(
 
   return sortNoticesByDate(dedupeNotices(settledGroups.flat()));
 }
+
+
+
+
+

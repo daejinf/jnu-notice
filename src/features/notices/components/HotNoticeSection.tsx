@@ -152,7 +152,7 @@ function HotNoticeCardList({ notices }: { notices: Notice[] }) {
             href={notice.url}
             target="_blank"
             rel="noreferrer"
-            className="mt-4 block text-lg font-bold leading-8 tracking-tight text-slate-950 hover:text-[#1B64DA]"
+            className="mt-4 block whitespace-normal break-words pr-2 text-[17px] font-bold leading-7 tracking-tight text-slate-950 hover:text-[#1B64DA] sm:text-lg"
           >
             {notice.title}
           </a>
@@ -383,6 +383,7 @@ export function HotNoticeSection({
     </main>
   );
 }
+
 
 
 
