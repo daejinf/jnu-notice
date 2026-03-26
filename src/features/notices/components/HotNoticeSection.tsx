@@ -66,7 +66,8 @@ function isUnsupportedViewsNotice(notice: Notice) {
   return (
     notice.sourceType === "center" &&
     (notice.url.includes("https://sojoong.kr/education/") ||
-      notice.url.includes("https://sojoong.kr/education_single/"))
+      notice.url.includes("https://sojoong.kr/education_single/") ||
+      notice.url.includes("https://capd.jnu.ac.kr/"))
   );
 }
 
@@ -271,7 +272,7 @@ export function HotNoticeSection({
             {"\ucd5c\uadfc 7\uc77c \uacf5\uc9c0 \uc870\ud68c\uc218 \ub7ad\ud0b9"}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            {"\uc0c8 \uacf5\uc9c0 \uc5ec\ubd80\uc640 \uc0c1\uad00\uc5c6\uc774 \ucd5c\uadfc 7\uc77c \uc548\uc5d0 \uc62c\ub77c\uc628 \uacf5\uc9c0 \uc911\uc5d0\uc11c, \uc870\ud68c\uc218\uac00 \ub192\uc740 \uc21c\uc11c\ub300\ub85c \ube60\ub974\uac8c \ubcf4\ub294 \ud654\uba74\uc785\ub2c8\ub2e4. \ub0b4\uac00 \uc124\uc815\ud55c \uacf5\uc9c0 \ubaa9\ub85d \uae30\uc900 HOT \uc54c\ub9bc\uacfc \ubc31\uadf8\ub77c\uc6b4\ub4dc\uc5d0\uc11c 30\ubd84\ub9c8\ub2e4 \ubaa8\uc544\ub454 \uc804\uccb4 HOT \uc54c\ub9bc\uc744 \ud568\uaed8 \ud655\uc778\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."}
+            {"\uc0c8 \uacf5\uc9c0 \uc5ec\ubd80\uc640 \uc0c1\uad00\uc5c6\uc774 \ucd5c\uadfc 7\uc77c \uc548\uc5d0 \uc62c\ub77c\uc628 \uacf5\uc9c0 \uc911\uc5d0\uc11c, \uc870\ud68c\uc218\uac00 \ub192\uc740 \uc21c\uc11c\ub300\ub85c \ube60\ub974\uac8c \ubcf4\ub294 \ud654\uba74\uc785\ub2c8\ub2e4. \ub0b4\uac00 \uc124\uc815\ud55c \uacf5\uc9c0 \ubaa9\ub85d \uae30\uc900 HOT \uc54c\ub9bc\uacfc \ubc31\uadf8\ub77c\uc6b4\ub4dc\uc5d0\uc11c 10\ubd84\ub9c8\ub2e4 \ubaa8\uc544\ub454 \uc804\uccb4 HOT \uc54c\ub9bc\uc744 \ud568\uaed8 \ud655\uc778\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."}
           </p>
         </section>
 
@@ -310,7 +311,7 @@ export function HotNoticeSection({
                 {"HOT \uc54c\ub9bc(\uc804\uccb4)"}
               </h2>
               <p className="mt-1 text-sm text-slate-500">
-                {"\ubc31\uc5d4\ub4dc\uac00 30\ubd84\ub9c8\ub2e4 \uc804\uccb4 \uacf5\uc9c0\ub97c \uc218\uc9d1\ud574 \ub9cc\ub4e0 \ucd5c\uadfc 7\uc77c \uc870\ud68c\uc218 \ub7ad\ud0b9\uc785\ub2c8\ub2e4."}
+                {"\ubc31\uc5d4\ub4dc\uac00 10\ubd84\ub9c8\ub2e4 \uc804\uccb4 \uacf5\uc9c0\ub97c \uc218\uc9d1\ud574 \ub9cc\ub4e0 \ucd5c\uadfc 7\uc77c \uc870\ud68c\uc218 \ub7ad\ud0b9\uc785\ub2c8\ub2e4."}
               </p>
             </div>
             <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
