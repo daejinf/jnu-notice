@@ -76,7 +76,7 @@ function UpdatesHistoryList({ history }: { history: NoticeUpdateSnapshot[] }) {
                     <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500">{notice.category}</span>
                     {notice.statusLabel ? <span className={`rounded-full px-3 py-1 text-xs font-semibold ${getStatusTone(notice.statusLabel)}`}>{notice.statusLabel}</span> : null}
                   </div>
-                  <a href={notice.url} target="_blank" rel="noreferrer" className="mt-4 block whitespace-normal break-words text-lg font-bold leading-8 tracking-tight text-slate-950 hover:text-[#1B64DA]">{notice.title}</a>
+                  <a href={notice.url} target="_blank" rel="noreferrer" className="mt-4 block whitespace-normal break-words pr-2 text-[17px] font-bold leading-7 tracking-tight text-slate-950 hover:text-[#1B64DA] sm:text-lg">{notice.title}</a>
                   <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
                     <span>{`${TEXT.author} ${notice.author}`}</span>
                     <span>{`${TEXT.date} ${formatNoticeDate(notice.date)}`}</span>
@@ -111,16 +111,16 @@ function SelectorCard({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-[30px] border px-6 py-6 text-left transition ${
+      className={`rounded-[28px] border px-5 py-4 text-left transition ${
         active
-          ? "border-[#1B64DA] bg-[linear-gradient(180deg,#F8FBFF_0%,#F2F7FF_100%)] shadow-[0_18px_32px_rgba(27,100,218,0.10)]"
-          : "border-slate-200 bg-white hover:border-slate-300 hover:bg-[#FCFCFD]"
+          ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_12px_24px_rgba(27,100,218,0.10)]"
+          : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
       }`}
     >
-      <div className="text-[13px] font-semibold tracking-[-0.01em] text-slate-400">{label}</div>
-      <div className="mt-2 text-[28px] font-black tracking-[-0.045em] text-slate-950">{title}</div>
-      <p className="mt-2 text-[15px] leading-6 text-slate-500">{description}</p>
-      <div className="mt-6 inline-flex rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{badge}</div>
+      <div className="text-xs font-semibold tracking-[0.08em] text-slate-400">{label}</div>
+      <div className="mt-1 text-lg font-bold tracking-tight text-slate-950">{title}</div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">{description}</p>
+      <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{badge}</div>
     </button>
   );
 }
@@ -143,8 +143,8 @@ export function UpdatesHubSection({
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">{TEXT.description}</p>
         </section>
 
-        <section className="rounded-[34px] border border-slate-200 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(248,250,252,0.98)_100%)] p-3 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-4">
-          <div className="grid gap-3 sm:grid-cols-2">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-3 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-4">
+          <div className="grid gap-2 sm:grid-cols-2">
             <SelectorCard
               active={tab === "alerts"}
               label={TEXT.alertsLabel}
