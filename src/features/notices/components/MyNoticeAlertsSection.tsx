@@ -15,8 +15,8 @@ type MyAlertsResponse = {
 
 const TEXT = {
   badge: "\uB9DE\uCDA4",
-  title: "\uB0B4 \uAE30\uC900\uC73C\uB85C\uB9CC \uBCF4\uAE30",
-  description: "\uAD00\uB9AC\uC5D0\uC11C \uACE0\uB978 \uC18C\uC2A4\uB9CC \uC11C\uBC84\uC5D0\uC11C \uBC14\uB85C \uBD88\uB7EC\uC635\uB2C8\uB2E4.",
+  title: "\uB0B4\uAC00 \uCF1C\uB454 \uACF5\uC9C0",
+  description: "\uACE0\uB978 \uC18C\uC2A4\uB9CC \uBC14\uB85C \uBAA8\uC544\uBD05\uB2C8\uB2E4.",
   totalCount: "\uCD1D",
   lastFetched: "\uB9C8\uC9C0\uB9C9 \uBC18\uC601",
   settingsSaved: "\uC124\uC815 \uC800\uC7A5",
@@ -36,7 +36,11 @@ function formatFetchedAt(value: string | null) {
   return new Intl.DateTimeFormat("ko-KR", { dateStyle: "medium", timeStyle: "short" }).format(date);
 }
 
-export function MyNoticeAlertsSection() {
+export function MyNoticeAlertsSection({
+  embedded = false,
+}: {
+  embedded?: boolean;
+}) {
   const [notices, setNotices] = useState<Notice[]>([]);
   const [fetchedAt, setFetchedAt] = useState<string | null>(null);
   const [preferencesUpdatedAt, setPreferencesUpdatedAt] = useState<string | null>(null);
@@ -72,48 +76,57 @@ export function MyNoticeAlertsSection() {
     return () => controller.abort();
   }, []);
 
-  return (
-    <main className="min-h-screen bg-transparent">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
+  const content = (
+    <>
+      {!embedded ? (
         <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
           <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">{TEXT.badge}</span>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">{TEXT.title}</h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">{TEXT.description}</p>
           <div className="mt-4 flex flex-wrap gap-2 text-sm text-slate-500">
-            <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-700">{`${TEXT.totalCount} ${notices.length}?`}</span>
+            <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-700">{`${TEXT.totalCount} ${notices.length}건`}</span>
             <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-600">{`${TEXT.lastFetched} ${formatFetchedAt(fetchedAt)}`}</span>
             {preferencesUpdatedAt ? <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-600">{`${TEXT.settingsSaved} ${formatFetchedAt(preferencesUpdatedAt)}`}</span> : null}
           </div>
         </section>
-        {error ? <section className="rounded-[28px] border border-rose-200 bg-rose-50 px-5 py-4 text-sm text-rose-700">{error}</section> : null}
-        {!hasPreferences && !isLoading ? (
-          <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.noPreferences}</section>
-        ) : isLoading ? (
-          <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.loading}</section>
-        ) : notices.length === 0 ? (
-          <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.empty}</section>
-        ) : (
-          <div className="grid gap-4">
-            {notices.map((notice) => (
-              <article key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`} className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">{notice.sourceName}</span>
-                  <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200">{notice.category}</span>
-                  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">{formatViewsLabel(notice)}</span>
-                </div>
-                <a href={notice.url} target="_blank" rel="noreferrer" className="mt-4 block text-lg font-bold leading-8 tracking-tight text-slate-950 hover:text-[#1B64DA]">{notice.title}</a>
-                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
-                  <span>{`${TEXT.author} ${notice.author}`}</span>
-                  <span>{`${TEXT.date} ${formatNoticeDate(notice.date)}`}</span>
-                  <span>{formatViewsLabel(notice)}</span>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-      </div>
+      ) : null}
+
+      {error ? <section className="rounded-[28px] border border-rose-200 bg-rose-50 px-5 py-4 text-sm text-rose-700">{error}</section> : null}
+      {!hasPreferences && !isLoading ? (
+        <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.noPreferences}</section>
+      ) : isLoading ? (
+        <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.loading}</section>
+      ) : notices.length === 0 ? (
+        <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.empty}</section>
+      ) : (
+        <div className="grid gap-4">
+          {notices.map((notice) => (
+            <article key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`} className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">{notice.sourceName}</span>
+                <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200">{notice.category}</span>
+                <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">{formatViewsLabel(notice)}</span>
+              </div>
+              <a href={notice.url} target="_blank" rel="noreferrer" className="mt-4 block whitespace-normal break-words text-lg font-bold leading-8 tracking-tight text-slate-950 hover:text-[#1B64DA]">{notice.title}</a>
+              <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
+                <span>{`${TEXT.author} ${notice.author}`}</span>
+                <span>{`${TEXT.date} ${formatNoticeDate(notice.date)}`}</span>
+                <span>{formatViewsLabel(notice)}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </>
+  );
+
+  if (embedded) {
+    return content;
+  }
+
+  return (
+    <main className="min-h-screen bg-transparent">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">{content}</div>
     </main>
   );
 }
-
-

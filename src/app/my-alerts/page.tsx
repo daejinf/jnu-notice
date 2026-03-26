@@ -1,13 +1,5 @@
-import { auth } from "@/auth";
-import { AuthLanding } from "@/features/auth/components/AuthLanding";
-import { MyNoticeAlertsSection } from "@/features/notices/components/MyNoticeAlertsSection";
+﻿import { redirect } from "next/navigation";
 
 export default async function MyAlertsPage() {
-  const session = await auth();
-
-  if (!session) {
-    return <AuthLanding />;
-  }
-
-  return <MyNoticeAlertsSection />;
+  redirect("/updates?tab=alerts");
 }
