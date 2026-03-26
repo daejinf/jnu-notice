@@ -1,6 +1,7 @@
 ﻿import type { Notice } from "@/types/notice";
 import type { DepartmentConfig } from "@/features/notices/config/departments";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
+import { mapWithConcurrency } from "@/features/notices/lib/concurrency";
 import { getDepartmentParser } from "@/features/notices/lib/parserFactory";
 
 type FetchDepartmentNoticesOptions = {
@@ -27,16 +28,14 @@ export async function fetchMultipleDepartmentNotices(
   departments: DepartmentConfig[],
   options: FetchDepartmentNoticesOptions = {},
 ) {
-  const noticeGroups = await Promise.all(
-    departments.map(async (department) => {
-      try {
-        return await fetchDepartmentNotices(department, options);
-      } catch (error) {
-        console.error(`[notice-fetch] ${department.department}`, error);
-        return [] as Notice[];
-      }
-    }),
-  );
+  const noticeGroups = await mapWithConcurrency(departments, 6, async (department) => {
+    try {
+      return await fetchDepartmentNotices(department, options);
+    } catch (error) {
+      console.error(`[notice-fetch] ${department.department}`, error);
+      return [] as Notice[];
+    }
+  });
 
   return sortNoticesByDate(dedupeNotices(noticeGroups.flat()));
 }

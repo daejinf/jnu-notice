@@ -2,6 +2,7 @@
 import type { Notice } from "@/types/notice";
 import type { CollegeBoardConfig } from "@/features/notices/config/collegeBoards";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
+import { mapWithConcurrency } from "@/features/notices/lib/concurrency";
 import { buildSubviewNoticeUrl } from "@/features/notices/lib/subviewUrl";
 
 const COLLEGE_BOARD_DEFAULT_MAX_PAGES = 5;
@@ -169,16 +170,14 @@ export async function fetchMultipleCollegeBoardNotices(
   colleges: CollegeBoardConfig[],
   options: FetchCollegeBoardNoticesOptions = {},
 ) {
-  const settledGroups = await Promise.all(
-    colleges.map(async (college) => {
-      try {
-        return await fetchCollegeBoardNotices(college, options);
-      } catch (error) {
-        console.error(`[notice-fetch] ${college.sourceName}`, error);
-        return [] as Notice[];
-      }
-    }),
-  );
+  const settledGroups = await mapWithConcurrency(colleges, 4, async (college) => {
+    try {
+      return await fetchCollegeBoardNotices(college, options);
+    } catch (error) {
+      console.error(`[notice-fetch] ${college.sourceName}`, error);
+      return [] as Notice[];
+    }
+  });
 
   return sortNoticesByDate(dedupeNotices(settledGroups.flat()));
 }

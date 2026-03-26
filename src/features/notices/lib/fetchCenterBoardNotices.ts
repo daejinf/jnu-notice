@@ -5,6 +5,7 @@ import type { AnyNode } from "domhandler";
 import type { CollegeBoardConfig } from "@/features/notices/config/collegeBoards";
 import type { CenterBoardConfig } from "@/features/notices/config/centerBoards";
 import { fetchCollegeBoardNotices } from "@/features/notices/lib/fetchCollegeBoardNotices";
+import { mapWithConcurrency } from "@/features/notices/lib/concurrency";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
 import type { Notice } from "@/types/notice";
 
@@ -14,7 +15,7 @@ const MIN_TITLE_LENGTH = 6;
 const MOVE_PAGE_VIEW_PATTERN = /movePageView\((\d+)\)/;
 const TITLE_SHORT_DATE_PATTERN = /\((\d{2})\.\s*(\d{2})\.\s*(\d{2})\.?\)/;
 const TITLE_FULL_DATE_PATTERN = /\((\d{4})\.\s*(\d{2})\.\s*(\d{2})\.?\)/;
-const REQUEST_TIMEOUT_MS = 8000;
+const REQUEST_TIMEOUT_MS = 12000;
 
 type FetchCenterBoardNoticesOptions = {
   page?: number;
@@ -1097,16 +1098,14 @@ export async function fetchMultipleCenterBoardNotices(
   centers: CenterBoardConfig[],
   options: FetchCenterBoardNoticesOptions = {},
 ) {
-  const settledGroups = await Promise.all(
-    centers.map(async (center) => {
-      try {
-        return await fetchCenterBoardNotices(center, options);
-      } catch (error) {
-        console.error(`[center-fetch] ${center.sourceName}`, error);
-        return [] as Notice[];
-      }
-    }),
-  );
+  const settledGroups = await mapWithConcurrency(centers, 4, async (center) => {
+    try {
+      return await fetchCenterBoardNotices(center, options);
+    } catch (error) {
+      console.error(`[center-fetch] ${center.sourceName}`, error);
+      return [] as Notice[];
+    }
+  });
 
   return sortNoticesByDate(dedupeNotices(settledGroups.flat()));
 }
