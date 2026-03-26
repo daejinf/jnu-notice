@@ -9,13 +9,13 @@ type HistoryTab = "updates" | "alerts";
 
 const TEXT = {
   badge: "히스토리",
-  title: "기록과 알림",
-  description: "바로 봐야 할 것만 남겼습니다.",
+  title: "내 알림과 새 공지",
+  description: "놓치면 아쉬운 것부터 바로 봅니다.",
   alertsLabel: "내 알림",
   alertsTitle: "내가 켜둔 공지",
-  alertsDescription: "고른 소스만 바로 봅니다.",
-  alertsCta: "바로 보기",
-  updatesLabel: "새 공지 기록",
+  alertsDescription: "고른 소스만 바로 모아봅니다.",
+  alertsCta: "지금 보기",
+  updatesLabel: "새 공지",
   updatesTitle: "방금 올라온 공지",
   updatesDescription: "실제로 새로 올라온 것만 남깁니다.",
   checkedAt: "수집 시각",
@@ -111,23 +111,23 @@ function SelectorCard({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-[28px] border px-6 py-5 text-left transition ${
+      className={`rounded-[30px] border px-6 py-6 text-left transition ${
         active
-          ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_16px_28px_rgba(27,100,218,0.10)]"
-          : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
+          ? "border-[#1B64DA] bg-[linear-gradient(180deg,#F8FBFF_0%,#F2F7FF_100%)] shadow-[0_18px_32px_rgba(27,100,218,0.10)]"
+          : "border-slate-200 bg-white hover:border-slate-300 hover:bg-[#FCFCFD]"
       }`}
     >
       <div className="text-[13px] font-semibold tracking-[-0.01em] text-slate-400">{label}</div>
-      <div className="mt-2 text-[29px] font-black tracking-[-0.04em] text-slate-950">{title}</div>
+      <div className="mt-2 text-[28px] font-black tracking-[-0.045em] text-slate-950">{title}</div>
       <p className="mt-2 text-[15px] leading-6 text-slate-500">{description}</p>
-      <div className="mt-5 inline-flex rounded-full bg-white/95 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{badge}</div>
+      <div className="mt-6 inline-flex rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{badge}</div>
     </button>
   );
 }
 
 export function UpdatesHubSection({
   history,
-  initialTab = "updates",
+  initialTab = "alerts",
 }: {
   history: NoticeUpdateSnapshot[];
   initialTab?: HistoryTab;
@@ -143,8 +143,8 @@ export function UpdatesHubSection({
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">{TEXT.description}</p>
         </section>
 
-        <section className="rounded-[32px] border border-slate-200 bg-white p-3 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-4">
-          <div className="grid gap-2 sm:grid-cols-2">
+        <section className="rounded-[34px] border border-slate-200 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(248,250,252,0.98)_100%)] p-3 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-4">
+          <div className="grid gap-3 sm:grid-cols-2">
             <SelectorCard
               active={tab === "alerts"}
               label={TEXT.alertsLabel}

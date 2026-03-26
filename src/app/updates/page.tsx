@@ -12,7 +12,7 @@ export default async function UpdatesPage({
   if (!session) return <AuthLanding />;
 
   const params = (await searchParams) ?? {};
-  const initialTab = params.tab === "alerts" ? "alerts" : "updates";
+  const initialTab = params.tab === "updates" ? "updates" : "alerts";
   const history = (await loadNoticeUpdateHistory()).filter(
     (snapshot) => (snapshot.newNoticeCount ?? snapshot.notices.length) > 0,
   );
