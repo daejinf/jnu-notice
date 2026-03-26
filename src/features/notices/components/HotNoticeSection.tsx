@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { selectableCenters, selectableCenterKeys } from "@/data/selectableCenters";
@@ -269,13 +269,13 @@ export function HotNoticeSection({
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
         <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
           <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold text-rose-700">
-            {"HOT \uc54c\ub9bc"}
+            {"\uB7AD\uD0B9"}
           </span>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-            {"\ucd5c\uadfc 7\uc77c \uacf5\uc9c0 \uc870\ud68c\uc218 \ub7ad\ud0b9"}
+            {"\uC9C0\uAE08 \uB9CE\uC774 \uBCF4\uB294 \uACF5\uC9C0"}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            {"\uc0c8 \uacf5\uc9c0 \uc5ec\ubd80\uc640 \uc0c1\uad00\uc5c6\uc774 \ucd5c\uadfc 7\uc77c \uc548\uc5d0 \uc62c\ub77c\uc628 \uacf5\uc9c0 \uc911\uc5d0\uc11c, \uc870\ud68c\uc218\uac00 \ub192\uc740 \uc21c\uc11c\ub300\ub85c \ube60\ub974\uac8c \ubcf4\ub294 \ud654\uba74\uc785\ub2c8\ub2e4. \ub0b4\uac00 \uc124\uc815\ud55c \uacf5\uc9c0 \ubaa9\ub85d \uae30\uc900 HOT \uc54c\ub9bc\uacfc \ubc31\uadf8\ub77c\uc6b4\ub4dc\uc5d0\uc11c 10\ubd84\ub9c8\ub2e4 \ubaa8\uc544\ub454 \uc804\uccb4 HOT \uc54c\ub9bc\uc744 \ud568\uaed8 \ud655\uc778\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."}
+            {"\uCD5C\uADFC 7\uC77C \uAE30\uC900\uC73C\uB85C \uC870\uD68C\uC218\uAC00 \uB192\uC740 \uACF5\uC9C0\uB9CC \uBAA8\uC544\uBD05\uB2C8\uB2E4. \uB0B4 \uAE30\uC900\uACFC \uC804\uCCB4 \uAE30\uC900\uC744 \uBC14\uB85C \uBC14\uAFD4 \uBCFC \uC218 \uC788\uC2B5\uB2C8\uB2E4."}
           </p>
         </section>
 
@@ -296,12 +296,12 @@ export function HotNoticeSection({
                   : "border-slate-200 bg-[#FBFCFD] hover:border-slate-300 hover:bg-white"
               }`}
             >
-              <div className="text-sm font-semibold text-slate-500">{"\ubc14\ub85c \ubcf4\uae30"}</div>
+              <div className="text-sm font-semibold text-slate-500">{"\uB0B4 \uAE30\uC900"}</div>
               <div className="mt-1 text-lg font-bold tracking-tight text-slate-950">
-                {"\ub0b4 \uc124\uc815 \uae30\uc900 HOT \uc54c\ub9bc"}
+                {"\uB9DE\uCDA4 \uB7AD\uD0B9"}
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                {"\ub0b4 \uacf5\uc9c0 \uc124\uc815 \uae30\uc900\uc73c\ub85c \ucd5c\uadfc 7\uc77c \uc870\ud68c\uc218 \uc21c\uc744 \ubc14\ub85c \ubd05\ub2c8\ub2e4."}
+                {"\uB0B4\uAC00 \uCF1C\uB454 \uC18C\uC2A4\uAE30\uC900 \uC21C\uC704\uB97C \uBC14\uB85C \uBD05\uB2C8\uB2E4."}
               </p>
               <div className="mt-3 text-sm font-semibold text-[#1B64DA]">{`\ucd1d ${personalHotNotices.length}\uac74`}</div>
             </button>
@@ -315,12 +315,12 @@ export function HotNoticeSection({
                   : "border-slate-200 bg-[#FBFCFD] hover:border-slate-300 hover:bg-white"
               }`}
             >
-              <div className="text-sm font-semibold text-slate-500">{"\ubc31\uc5d4\ub4dc \uc2a4\ub0c5\uc0f7"}</div>
+              <div className="text-sm font-semibold text-slate-500">{"\uC804\uCCB4 \uAE30\uC900"}</div>
               <div className="mt-1 text-lg font-bold tracking-tight text-slate-950">
                 {"HOT \uc54c\ub9bc(\uc804\uccb4)"}
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                {"\ubc31\uc5d4\ub4dc\uac00 10\ubd84\ub9c8\ub2e4 \uc804\uccb4 \uacf5\uc9c0\ub97c \ubbf8\ub9ac \uacc4\uc0b0\ud574 \ub450\uace0, \ud398\uc774\uc9c0\uc5d0\uc11c\ub294 \ube60\ub974\uac8c \uac00\uc838\uc635\ub2c8\ub2e4."}
+                {"\uBC31\uC5D4\uB4DC\uAC00 \uBBF8\uB9AC \uACC4\uC0B0\uD574 \uB450\uACE0 \uD398\uC774\uC9C0\uC5D0\uC11C\uB294 \uBC14\uB85C \uBD88\uB7EC\uC635\uB2C8\uB2E4."}
               </p>
               <div className="mt-3 text-sm font-semibold text-[#1B64DA]">{`\ucd1d ${globalHotNotices.length}\uac74`}</div>
             </button>
@@ -341,7 +341,7 @@ export function HotNoticeSection({
               <div className="flex items-center justify-between border-b border-slate-100 pb-4">
                 <div>
                   <h2 className="text-xl font-bold tracking-tight text-slate-950">
-                    {"\ub0b4 \uc124\uc815 \uae30\uc900 HOT \uc54c\ub9bc"}
+                    {"\uB9DE\uCDA4 \uB7AD\uD0B9"}
                   </h2>
                   <p className="mt-1 text-sm text-slate-500">
                     {"\uc124\uc815 \ud398\uc774\uc9c0\uc5d0\uc11c \uc120\ud0dd\ud55c \uacf5\uc9c0\ub4e4\ub9cc \ubaa8\uc544 \uc870\ud68c\uc218 \uc21c\uc73c\ub85c \ubcf4\uc5ec\uc90d\ub2c8\ub2e4."}
@@ -383,3 +383,4 @@ export function HotNoticeSection({
     </main>
   );
 }
+

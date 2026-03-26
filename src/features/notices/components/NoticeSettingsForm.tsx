@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { selectableCenters, selectableCenterKeys } from "@/data/selectableCenters";
@@ -23,26 +23,26 @@ const PROJECT_CENTER_KEYS = ["greenbio", "battery", "sw-core", "sw-core-educatio
 const TEXT = {
   selectAll: "\uC804\uCCB4 \uC120\uD0DD",
   clear: "\uC120\uD0DD \uD574\uC81C",
-  settingsBadge: "\uACF5\uC9C0 \uC124\uC815",
-  settingsTitle: "\uBCF4\uACE0 \uC2F6\uC740 \uACF5\uC9C0\uB9CC \uACE8\uB77C\uB450\uC138\uC694",
-  settingsDescription: "\uD559\uAD50 \uBCF8\uBD80, \uB2E8\uACFC\uB300, \uD559\uACFC, \uAE30\uAD00 \uACF5\uC9C0, \uC0AC\uC5C5\uB2E8 \uC54C\uB9BC \uC911\uC5D0\uC11C \uB098\uD55C\uD14C \uD544\uC694\uD55C \uAC83\uB9CC \uACE0\uB97C \uC218 \uC788\uC2B5\uB2C8\uB2E4. \uBB36\uC74C\uBCC4 \uC0C9\uC744 \uB2E4\uB974\uAC8C \uB098\uB220\uC11C \uD55C\uB208\uC5D0 \uAD6C\uBD84\uB418\uB3C4\uB85D \uC815\uB9AC\uD588\uC2B5\uB2C8\uB2E4.",
-  hydrating: "\uC11C\uBC84 \uC124\uC815 \uBD88\uB7EC\uC624\uB294 \uC911",
-  synced: "\uC124\uC815\uC774 \uC774 \uACC4\uC815 \uAE30\uC900\uC73C\uB85C \uB3D9\uAE30\uD654\uB429\uB2C8\uB2E4",
+  settingsBadge: "\uAD00\uB9AC",
+  settingsTitle: "\uBC1B\uC744 \uACF5\uC9C0 \uAD00\uB9AC",
+  settingsDescription: "\uC18C\uC2A4\uB9CC \uCF1C\uB450\uBA74 \uD53C\uB4DC, \uB7AD\uD0B9, \uB9DE\uCDA4\uC5D0 \uBC14\uB85C \uBC18\uC601\uB429\uB2C8\uB2E4.",
+  hydrating: "\uBD88\uB7EC\uC624\uB294 \uC911",
+  synced: "\uACC4\uC815\uC5D0 \uC800\uC7A5\uB428",
   fetchError: "\uC124\uC815 \uC815\uBCF4\uB97C \uBD88\uB7EC\uC624\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.",
-  saving: "\uC124\uC815\uC744 \uBC31\uC5D4\uB4DC\uC5D0 \uC800\uC7A5\uD558\uACE0 \uC788\uC2B5\uB2C8\uB2E4.",
+  saving: "\uC800\uC7A5\uD558\uB294 \uC911",
   saveError: "\uC124\uC815 \uC815\uBCF4\uB97C \uC800\uC7A5\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.",
-  saveDone: "\uC774 \uACC4\uC815\uC758 \uACF5\uC9C0 \uC124\uC815\uC774 \uBC31\uC5D4\uB4DC\uC5D0 \uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4.",
-  schoolTitle: "\uBCF8\uBD80 \uC54C\uB9BC",
+  saveDone: "\uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4.",
+  schoolTitle: "\uBCF8\uBD80",
   schoolDescription: "\uD559\uC0AC, \uC7A5\uD559, \uCDE8\uC5C5, \uD559\uC0DD\uC9C0\uC6D0\uCC98\uB7FC \uD559\uAD50 \uC804\uCCB4 \uB2E8\uC704 \uACF5\uC9C0\uB97C \uD55C \uBC88\uC5D0 \uACE0\uB97C \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
   schoolSubtitle: "\uD559\uAD50 \uBCF8\uBD80 \uACF5\uC9C0",
-  collegeTitle: "\uB2E8\uACFC\uB300 \uC54C\uB9BC",
+  collegeTitle: "\uB2E8\uACFC\uB300",
   collegeDescription: "\uAD00\uC2EC \uC788\uB294 \uB2E8\uACFC\uB300 \uACF5\uC9C0\uB9CC \uB530\uB85C \uBC1B\uC544\uBCFC \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
   collegeSubtitle: "\uB2E8\uACFC\uB300 \uACF5\uC9C0",
-  centerTitle: "\uAE30\uAD00 \uC54C\uB9BC",
+  centerTitle: "\uAE30\uAD00",
   centerDescription: "\uAD50\uC721\uD601\uC2E0\uBCF8\uBD80, \uB3C4\uC11C\uAD00, \uAD6D\uC81C\uD611\uB825\uACFC, \uC0DD\uD65C\uAD00, \uCDE8\uC5C5\uC9C4\uB85C\uD3EC\uD138\uCC98\uB7FC \uAE30\uAD00 \uC131\uACA9\uC758 \uACF5\uC9C0\uB97C \uB530\uB85C \uBB36\uC5C8\uC2B5\uB2C8\uB2E4.",
-  projectTitle: "\uC0AC\uC5C5\uB2E8 \uC54C\uB9BC",
+  projectTitle: "\uC0AC\uC5C5\uB2E8",
   projectDescription: "\uADF8\uB9B0\uBC14\uC774\uC624, \uC774\uCC28\uC804\uC9C0, \uC18C\uD504\uD2B8\uC6E8\uC5B4, \uC778\uACF5\uC9C0\uB2A5, \uBC18\uB3C4\uCCB4, \uCC28\uC138\uB300\uD1B5\uC2E0 \uAC19\uC740 \uC0AC\uC5C5\uB2E8 \uACF5\uC9C0\uB97C \uB530\uB85C \uAD00\uB9AC\uD569\uB2C8\uB2E4.",
-  departmentTitle: "\uD559\uACFC \uC54C\uB9BC",
+  departmentTitle: "\uD559\uACFC",
   departmentDescription: "\uD559\uACFC\uBA85\uC744 \uAC80\uC0C9\uD574\uC11C \uBE60\uB974\uAC8C \uCC3E\uACE0, \uB2E8\uACFC\uB300 \uC544\uB798\uC5D0\uC11C \uC6D0\uD558\uB294 \uD559\uACFC\uB9CC \uC138\uBC00\uD558\uAC8C \uACE0\uB97C \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
   departmentSearch: "\uD559\uACFC \uAC80\uC0C9",
   departmentSearchPlaceholder: "\uC608: \uACBD\uC601\uD559\uACFC, \uC804\uC790\uACF5\uD559\uACFC, \uC778\uACF5\uC9C0\uB2A5\uD559\uBD80",
@@ -140,3 +140,4 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
 
   return <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8"><section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7"><span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">{TEXT.settingsBadge}</span><h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">{TEXT.settingsTitle}</h1><p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">{TEXT.settingsDescription}</p><div className="mt-4 flex flex-wrap gap-2 text-sm"><span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-700">{isHydratingServer ? TEXT.hydrating : TEXT.synced}</span>{syncMessage ? <span className={`rounded-full px-4 py-2 font-semibold ${syncStatus === "error" ? "bg-rose-100 text-rose-700" : syncStatus === "saved" ? "bg-emerald-100 text-emerald-700" : "bg-sky-100 text-sky-700"}`}>{syncMessage}</span> : null}</div></section><div className="grid gap-5 xl:grid-cols-2"><SelectionSection title={TEXT.schoolTitle} description={TEXT.schoolDescription} sectionTone="border-sky-200 bg-sky-50/70" accentClass="border-sky-500 bg-sky-100" buttonClass="bg-sky-600 hover:bg-sky-700" items={selectableSchoolCategories.map((category) => ({ key: category.key, title: category.name, subtitle: TEXT.schoolSubtitle }))} selectedKeys={schoolSelection.selectedCategories} onToggle={schoolSelection.toggleCategory} onSelectAll={schoolSelection.selectAllCategories} onClear={schoolSelection.clearCategories} /><SelectionSection title={TEXT.collegeTitle} description={TEXT.collegeDescription} sectionTone="border-emerald-200 bg-emerald-50/70" accentClass="border-emerald-500 bg-emerald-100" buttonClass="bg-emerald-600 hover:bg-emerald-700" items={selectableColleges.map((college) => ({ key: college.key, title: college.name, subtitle: TEXT.collegeSubtitle }))} selectedKeys={collegeSelection.selectedCategories} onToggle={collegeSelection.toggleCategory} onSelectAll={collegeSelection.selectAllCategories} onClear={collegeSelection.clearCategories} /><SelectionSection title={TEXT.centerTitle} description={TEXT.centerDescription} sectionTone="border-amber-200 bg-amber-50/75" accentClass="border-amber-500 bg-amber-100" buttonClass="bg-amber-500 hover:bg-amber-600" items={institutionCenters.map((center) => ({ key: center.key, title: center.name, subtitle: center.category }))} selectedKeys={centerSelection.selectedCategories} onToggle={centerSelection.toggleCategory} onSelectAll={() => selectCenterGroup(institutionCenters.map((center) => center.key))} onClear={() => clearCenterGroup(institutionCenters.map((center) => center.key))} /><SelectionSection title={TEXT.projectTitle} description={TEXT.projectDescription} sectionTone="border-orange-200 bg-orange-50/75" accentClass="border-orange-500 bg-orange-100" buttonClass="bg-orange-500 hover:bg-orange-600" items={projectCenters.map((center) => ({ key: center.key, title: center.name, subtitle: center.category }))} selectedKeys={centerSelection.selectedCategories} onToggle={centerSelection.toggleCategory} onSelectAll={() => selectCenterGroup(projectCenters.map((center) => center.key))} onClear={() => clearCenterGroup(projectCenters.map((center) => center.key))} /></div><DepartmentSelectionSection selectedKeys={departmentSelection.selectedCategories} onToggle={departmentSelection.toggleCategory} onSelectAll={departmentSelection.selectAllCategories} onClear={departmentSelection.clearCategories} /></div>;
 }
+

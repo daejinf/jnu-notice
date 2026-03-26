@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { selectableCenters, selectableCenterKeys } from "@/data/selectableCenters";
@@ -117,14 +117,14 @@ function matchesSearch(notice: Notice, query: string) {
 
   const sourceGroup =
     notice.sourceType === "school"
-      ? "본부 알림"
+      ? "\uBCF8\uBD80 \uC54C\uB9BC"
       : notice.sourceType === "college"
-        ? "단과대 알림"
+        ? "\uB2E8\uACFC\uB300 \uC54C\uB9BC"
         : notice.sourceType === "department"
-          ? "학과 알림"
+          ? "\uD559\uACFC \uC54C\uB9BC"
           : PROJECT_CENTER_NAME_SET.has(notice.sourceName)
-            ? "사업단 알림"
-            : "기관 알림";
+            ? "\uC0AC\uC5C5\uB2E8 \uC54C\uB9BC"
+            : "\uAE30\uAD00 \uC54C\uB9BC";
 
   const haystack = normalizeSearchText(
     [notice.title, notice.author, notice.sourceName, notice.category, sourceGroup].join(" "),
@@ -275,9 +275,9 @@ function PageArrowButton({
       onClick={onClick}
       disabled={disabled}
       className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
-      aria-label={direction === "prev" ? "이전 페이지" : "다음 페이지"}
+      aria-label={direction === "prev" ? "\uC774\uC804 \uD398\uC774\uC9C0" : "\uB2E4\uC74C \uD398\uC774\uC9C0"}
     >
-      <span className="text-base font-bold">{direction === "prev" ? "‹" : "›"}</span>
+      <span className="text-base font-bold">{direction === "prev" ? "\u2039" : "\u203A"}</span>
     </button>
   );
 }
@@ -403,13 +403,13 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
         const data = (await response.json()) as NoticeApiResponse;
 
         if (!response.ok) {
-          throw new Error(data.error ?? "공지 목록을 불러오지 못했습니다.");
+          throw new Error(data.error ?? "\uACF5\uC9C0 \uBAA9\uB85D\uC744 \uBD88\uB7EC\uC624\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.");
         }
 
         setNotices(data.notices);
       } catch (fetchError) {
         if (fetchError instanceof Error && fetchError.name === "AbortError") return;
-        const message = fetchError instanceof Error ? fetchError.message : "알 수 없는 오류가 발생했습니다.";
+        const message = fetchError instanceof Error ? fetchError.message : "\uC54C \uC218 \uC5C6\uB294 \uC624\uB958\uAC00 \uBC1C\uC0DD\uD588\uC2B5\uB2C8\uB2E4.";
         setError(message);
         setNotices([]);
       } finally {
@@ -451,7 +451,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     () =>
       selectableDepartments
         .filter((department) => departmentSelection.selectedCategories.includes(department.key))
-        .map((department) => `${department.college} · ${department.department}`),
+        .map((department) => `${department.college} \u00B7 ${department.department}`),
     [departmentSelection.selectedCategories],
   );
 
@@ -549,31 +549,30 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
       <section className="rounded-[32px] border border-slate-200 bg-white px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:px-7 sm:py-8">
         <div className="flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
           <div className="max-w-3xl">
-            <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">{"\uACF5\uC9C0 \uD53C\uB4DC"}</span>
+            <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">{"\uD53C\uB4DC"}</span>
             <h1 className="mt-3 text-[30px] font-black tracking-tight text-[#191F28] sm:text-[38px]">
-              {"\uD544\uC694\uD55C \uACF5\uC9C0\uB9CC \uBE60\uB974\uAC8C \uD655\uC778\uD558\uC138\uC694"}
+              {"\uD544\uC694\uD55C \uAC83\uB9CC, \uBC14\uB85C"}
             </h1>
             <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
-              {"\uBCF8\uBD80, \uB2E8\uACFC\uB300, \uD559\uACFC, \uAE30\uAD00, \uC0AC\uC5C5\uB2E8 \uACF5\uC9C0\uB97C \uD55C \uD654\uBA74\uC5D0\uC11C \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."}
-              {" \uC77D\uC740 \uACF5\uC9C0\uC640 \uC800\uC7A5\uD55C \uACF5\uC9C0\uB3C4 \uC790\uC5F0\uC2A4\uB7FD\uAC8C \uC815\uB9AC\uB429\uB2C8\uB2E4."}
+              {"\uC124\uC815\uD55C \uC18C\uC2A4\uB9CC \uBAA8\uC544 \uD55C \uBC88\uC5D0 \uBD05\uB2C8\uB2E4. \uC77D\uC74C\uACFC \uC800\uC7A5\uB3C4 \uBE60\uB974\uAC8C \uC815\uB9AC\uB429\uB2C8\uB2E4."}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 xl:min-w-[520px]">
             <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
-              <p className="text-xs font-semibold text-slate-500">{"\uB0B4 \uACF5\uC9C0"}</p>
+              <p className="text-xs font-semibold text-slate-500">{"\uBC1B\uC740 \uACF5\uC9C0"}</p>
               <p className="mt-2 text-[28px] font-black tracking-tight text-[#191F28]">{joinedAfterNotices.length}</p>
             </div>
             <div className="rounded-[24px] border border-blue-100 bg-blue-50 p-4">
-              <p className="text-xs font-semibold text-blue-700">{"\uC548 \uC77D\uC740 \uACF5\uC9C0"}</p>
+              <p className="text-xs font-semibold text-blue-700">{"\uC548 \uC77D\uC74C"}</p>
               <p className="mt-2 text-[28px] font-black tracking-tight text-[#1B64DA]">{unreadCount}</p>
             </div>
             <div className="rounded-[24px] border border-amber-100 bg-amber-50 p-4">
-              <p className="text-xs font-semibold text-amber-700">{"\uBD81\uB9C8\uD06C"}</p>
+              <p className="text-xs font-semibold text-amber-700">{"\uC800\uC7A5"}</p>
               <p className="mt-2 text-[28px] font-black tracking-tight text-amber-700">{bookmarkCount}</p>
             </div>
             <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
-              <p className="text-xs font-semibold text-slate-500">{"\uC120\uD0DD \uCD9C\uCC98"}</p>
+              <p className="text-xs font-semibold text-slate-500">{"\uC18C\uC2A4"}</p>
               <p className="mt-2 text-[28px] font-black tracking-tight text-[#191F28]">
                 {schoolSelection.selectedCategories.length + collegeSelection.selectedCategories.length + departmentSelection.selectedCategories.length + centerSelection.selectedCategories.length}
               </p>
@@ -586,8 +585,8 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
         <aside className="space-y-4 xl:sticky xl:top-[108px] xl:self-start">
           <section className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-[0_12px_28px_rgba(15,23,42,0.04)]">
             <div className="border-b border-slate-100 pb-4">
-              <p className="text-sm font-semibold text-slate-500">{"\uC120\uD0DD\uD55C \uCD9C\uCC98"}</p>
-              <h2 className="mt-1 text-xl font-bold tracking-tight text-slate-950">{"\uD604\uC7AC \uBC1B\uC544\uBCF4\uB294 \uACF5\uC9C0 \uBC94\uC704"}</h2>
+              <p className="text-sm font-semibold text-slate-500">{"\uBC1B\uB294 \uC18C\uC2A4"}</p>
+              <h2 className="mt-1 text-xl font-bold tracking-tight text-slate-950">{"\uC9C0\uAE08 \uCF1C\uB454 \uC18C\uC2A4"}</h2>
             </div>
 
             <div className="mt-4 flex flex-wrap gap-2">
@@ -614,7 +613,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
             selectedInstitutionCenterNames.length === 0 &&
             selectedProjectCenterNames.length === 0 ? (
               <div className="mt-4 rounded-[20px] bg-[#FBFCFD] px-4 py-4 text-sm leading-6 text-slate-500">
-                {"\uC544\uC9C1 \uC120\uD0DD\uD55C \uCD9C\uCC98\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4. \uC124\uC815\uC5D0\uC11C \uC6D0\uD558\uB294 \uACF5\uC9C0\uB97C \uACE8\uB77C\uBCF4\uC138\uC694."}
+                {"\uC544\uC9C1 \uCF1C\uB454 \uC18C\uC2A4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4. \uAD00\uB9AC\uC5D0\uC11C \uBA3C\uC800 \uACE0\uB974\uC138\uC694."}
               </div>
             ) : null}
           </section>
@@ -626,8 +625,8 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
             <section className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 <div>
-                  <p className="text-sm font-semibold text-slate-500">{"\uBE60\uB978 \uBCF4\uAE30"}</p>
-                  <h2 className="mt-1 text-lg font-bold tracking-tight text-slate-950">{"\uD544\uD130\uC640 \uC815\uB82C"}</h2>
+                  <p className="text-sm font-semibold text-slate-500">{"\uBCF4\uAE30 \uBC29\uC2DD"}</p>
+                  <h2 className="mt-1 text-lg font-bold tracking-tight text-slate-950">{"\uC815\uB82C"}</h2>
                 </div>
 
                 <div className="grid gap-2 sm:grid-cols-3">
@@ -635,10 +634,10 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                     {"\uC804\uCCB4 \uACF5\uC9C0"}
                   </button>
                   <button type="button" onClick={() => setViewMode("unread")} className={`rounded-[18px] px-4 py-3 text-left text-sm font-semibold transition ${getSegmentClass(viewMode === "unread", "brand")}`}>
-                    {"\uC548 \uC77D\uC740 \uACF5\uC9C0"}
+                    {"\uC548 \uC77D\uC74C"}
                   </button>
                   <button type="button" onClick={() => setViewMode("bookmarks")} className={`rounded-[18px] px-4 py-3 text-left text-sm font-semibold transition ${getSegmentClass(viewMode === "bookmarks", "bookmark")}`}>
-                    {"\uBD81\uB9C8\uD06C"}
+                    {"\uC800\uC7A5"}
                   </button>
                 </div>
               </div>
@@ -646,9 +645,9 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
 
             <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <h2 className="text-[24px] font-black tracking-tight text-[#191F28]">{"\uACF5\uC9C0 \uBAA9\uB85D"}</h2>
+                <h2 className="text-[24px] font-black tracking-tight text-[#191F28]">{"\uC0C8 \uACF5\uC9C0"}</h2>
                 <p className="mt-1 text-sm leading-6 text-slate-500">
-                  {"\uC81C\uBAA9, \uC791\uC131\uC790 \uAE30\uC900\uC73C\uB85C \uBE60\uB974\uAC8C \uCC3E\uACE0 \uD544\uC694\uD55C \uACF5\uC9C0\uB9CC \uACE8\uB77C\uBCF4\uC138\uC694."}
+                  {"\uC81C\uBAA9, \uC791\uC131\uC790, \uC18C\uC2A4 \uAE30\uC900\uC73C\uB85C \uBE60\uB974\uAC8C \uCC3E\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4."}
                 </p>
               </div>
 
@@ -658,7 +657,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                     type="search"
                     value={searchInput}
                     onChange={(event) => setSearchInput(event.target.value)}
-                    placeholder={"\uC81C\uBAA9, \uC791\uC131\uC790"}
+                    placeholder={"\uC81C\uBAA9, \uC791\uC131\uC790, \uC18C\uC2A4"}
                     className="h-12 w-full rounded-[18px] border border-slate-200 bg-[#F7F9FB] px-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#3182F6] focus:bg-white focus:ring-4 focus:ring-blue-100"
                   />
                   {searchInput ? (
@@ -696,13 +695,13 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
           <div className="mt-5 grid gap-3">
             {isLoading ? (
               <div className="rounded-[24px] border border-dashed border-slate-300 bg-[#FBFCFD] px-4 py-16 text-center text-sm text-slate-500">
-                {"\uACF5\uC9C0 \uBAA9\uB85D\uC744 \uBD88\uB7EC\uC624\uACE0 \uC788\uC2B5\uB2C8\uB2E4."}
+                {"\uACF5\uC9C0\uB97C \uBD88\uB7EC\uC624\uB294 \uC911\uC785\uB2C8\uB2E4."}
               </div>
             ) : null}
 
             {!isLoading && filteredNotices.length === 0 && !error ? (
               <div className="rounded-[24px] border border-dashed border-slate-300 bg-[#FBFCFD] px-4 py-16 text-center text-sm text-slate-500">
-                {"\uC9C0\uAE08 \uC870\uAC74\uC5D0 \uB9DE\uB294 \uACF5\uC9C0\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4."}
+                {"\uC870\uAC74\uC5D0 \uB9DE\uB294 \uACF5\uC9C0\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4."}
               </div>
             ) : null}
 
@@ -817,3 +816,4 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     </div>
   );
 }
+
