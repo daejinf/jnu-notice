@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 const navItems = [
   { href: "/", label: "\uACF5\uC9C0" },
   { href: "/hot", label: "HOT \uC54C\uB9BC" },
+  { href: "/my-alerts", label: "\uB0B4 \uC54C\uB9BC" },
   { href: "/updates", label: "\uC54C\uB9BC \uAE30\uB85D" },
   { href: "/settings", label: "\uC124\uC815" },
 ];
