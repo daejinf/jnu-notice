@@ -29,10 +29,6 @@ export async function fetchRecentHotNotices() {
         return b.views - a.views;
       }
 
-      if (a.isPinned !== b.isPinned) {
-        return a.isPinned ? -1 : 1;
-      }
-
       return toSortableTime(b.date) - toSortableTime(a.date);
     });
 }
