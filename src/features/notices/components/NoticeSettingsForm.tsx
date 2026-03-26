@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { selectableCenters, selectableCenterKeys } from "@/data/selectableCenters";
 import { selectableColleges, selectableCollegeKeys } from "@/data/selectableColleges";
 import { selectableDepartments, selectableDepartmentKeys } from "@/data/selectableDepartments";
@@ -16,8 +16,14 @@ import {
   SCHOOL_STORAGE_KEY,
 } from "@/features/notices/constants/storageKeys";
 import { useSelectedCategories } from "@/features/notices/hooks/useSelectedCategories";
+import type { NoticePreferences } from "@/types/notice";
 
 const PROJECT_CENTER_KEYS = ["greenbio", "battery", "sw-core", "sw-core-education", "aicoss", "juice-semi", "nccoss"];
+
+type NoticePreferencesResponse = {
+  preferences: NoticePreferences | null;
+  error?: string;
+};
 
 function SelectionSection({
   title,
@@ -55,14 +61,14 @@ function SelectionSection({
             onClick={onSelectAll}
             className={`rounded-full px-4 py-2 text-sm font-semibold text-white transition ${buttonClass}`}
           >
-            전체 선택
+            ?? ??
           </button>
           <button
             type="button"
             onClick={onClear}
             className="rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
           >
-            선택 해제
+            ?? ??
           </button>
         </div>
       </div>
@@ -126,28 +132,28 @@ function DepartmentSelectionSection({
     <section className="rounded-[32px] border border-slate-200 bg-white p-5 shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:p-6">
       <div className="flex flex-col gap-4 border-b border-violet-200/70 pb-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <h2 className="text-xl font-bold tracking-tight text-slate-950">학과 알림</h2>
+          <h2 className="text-xl font-bold tracking-tight text-slate-950">?? ??</h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            학과명을 검색해서 빠르게 찾고, 단과대 아래에서 원하는 학과만 세밀하게 고를 수 있습니다.
+            ???? ???? ??? ??, ??? ???? ??? ??? ???? ?? ? ????.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
           <button type="button" onClick={onSelectAll} className="rounded-2xl bg-[#3182F6] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1B64DA]">
-            전체 선택
+            ?? ??
           </button>
           <button type="button" onClick={onClear} className="rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">
-            선택 해제
+            ?? ??
           </button>
         </div>
       </div>
 
       <div className="mt-5">
-        <label className="text-sm font-semibold text-violet-800">학과 검색</label>
+        <label className="text-sm font-semibold text-violet-800">?? ??</label>
         <input
           type="text"
           value={searchKeyword}
           onChange={(event) => setSearchKeyword(event.target.value)}
-          placeholder="예: 경영학과, 전자공학과, 인공지능학부"
+          placeholder="?: ????, ?????, ??????"
           className="mt-2 h-13 w-full rounded-[20px] border border-slate-200 bg-white px-4 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-[#3182F6]"
         />
       </div>
@@ -157,7 +163,7 @@ function DepartmentSelectionSection({
           <div key={group.college} className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4">
             <div className="border-b border-violet-100 pb-3">
               <p className="text-base font-bold text-slate-950">{group.college}</p>
-              <p className="mt-1 text-xs font-medium text-slate-500">{group.departments.length}개 학과</p>
+              <p className="mt-1 text-xs font-medium text-slate-500">{group.departments.length}? ??</p>
             </div>
             <div className="mt-4 grid gap-2">
               {group.departments.map((department) => {
@@ -182,7 +188,7 @@ function DepartmentSelectionSection({
 
       {filteredGroups.length === 0 ? (
         <div className="mt-5 rounded-3xl border border-dashed border-violet-300 bg-white/80 px-4 py-14 text-center text-sm text-slate-500">
-          검색 결과에 맞는 학과가 없습니다.
+          ?? ??? ?? ??? ????.
         </div>
       ) : null}
     </section>
@@ -203,8 +209,125 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
     storageKey: buildScopedStorageKey(CENTER_STORAGE_KEY, storageScope),
   });
 
+  const [isHydratingServer, setIsHydratingServer] = useState(true);
+  const [syncStatus, setSyncStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [syncMessage, setSyncMessage] = useState<string | null>(null);
+  const hasFetchedServerPreferences = useRef(false);
+
+  const isReady =
+    schoolSelection.isReady &&
+    collegeSelection.isReady &&
+    departmentSelection.isReady &&
+    centerSelection.isReady;
+
   const institutionCenters = useMemo(() => selectableCenters.filter((center) => !PROJECT_CENTER_KEYS.includes(center.key)), []);
   const projectCenters = useMemo(() => selectableCenters.filter((center) => PROJECT_CENTER_KEYS.includes(center.key)), []);
+
+  useEffect(() => {
+    if (!isReady || hasFetchedServerPreferences.current) return;
+
+    const controller = new AbortController();
+    hasFetchedServerPreferences.current = true;
+
+    const run = async () => {
+      try {
+        const response = await fetch("/api/notice-preferences", {
+          signal: controller.signal,
+          cache: "no-store",
+        });
+        const data = (await response.json()) as NoticePreferencesResponse;
+
+        if (!response.ok) {
+          throw new Error(data.error ?? "?? ??? ???? ?????.");
+        }
+
+        if (data.preferences) {
+          schoolSelection.setSelectedCategories(
+            data.preferences.schoolCategoryKeys.filter((value) => selectableSchoolCategoryKeys.includes(value)),
+          );
+          collegeSelection.setSelectedCategories(
+            data.preferences.collegeKeys.filter((value) => selectableCollegeKeys.includes(value)),
+          );
+          departmentSelection.setSelectedCategories(
+            data.preferences.departmentKeys.filter((value) => selectableDepartmentKeys.includes(value)),
+          );
+          centerSelection.setSelectedCategories(
+            data.preferences.centerKeys.filter((value) => selectableCenterKeys.includes(value)),
+          );
+        }
+      } catch (error) {
+        if (error instanceof Error && error.name === "AbortError") return;
+        setSyncStatus("error");
+        setSyncMessage(error instanceof Error ? error.message : "?? ??? ???? ?????.");
+      } finally {
+        setIsHydratingServer(false);
+      }
+    };
+
+    void run();
+
+    return () => controller.abort();
+  }, [
+    centerSelection,
+    centerSelection.setSelectedCategories,
+    collegeSelection,
+    collegeSelection.setSelectedCategories,
+    departmentSelection,
+    departmentSelection.setSelectedCategories,
+    isReady,
+    schoolSelection,
+    schoolSelection.setSelectedCategories,
+  ]);
+
+  useEffect(() => {
+    if (!isReady || isHydratingServer) return;
+
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      try {
+        setSyncStatus("saving");
+        setSyncMessage("??? ???? ???? ????.");
+
+        const response = await fetch("/api/notice-preferences", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            schoolCategoryKeys: schoolSelection.selectedCategories,
+            collegeKeys: collegeSelection.selectedCategories,
+            departmentKeys: departmentSelection.selectedCategories,
+            centerKeys: centerSelection.selectedCategories,
+          }),
+          signal: controller.signal,
+        });
+        const data = (await response.json()) as NoticePreferencesResponse;
+
+        if (!response.ok) {
+          throw new Error(data.error ?? "?? ??? ???? ?????.");
+        }
+
+        setSyncStatus("saved");
+        setSyncMessage("? ??? ?? ??? ???? ???????.");
+      } catch (error) {
+        if (error instanceof Error && error.name === "AbortError") return;
+        setSyncStatus("error");
+        setSyncMessage(error instanceof Error ? error.message : "?? ??? ???? ?????.");
+      }
+    }, 300);
+
+    return () => {
+      controller.abort();
+      window.clearTimeout(timer);
+    };
+  }, [
+    centerSelection.selectedCategories,
+    collegeSelection.selectedCategories,
+    departmentSelection.selectedCategories,
+    isHydratingServer,
+    isReady,
+    schoolSelection.selectedCategories,
+  ]);
 
   function selectCenterGroup(keys: string[]) {
     centerSelection.setSelectedCategories((current: string[]) => Array.from(new Set([...current, ...keys])));
@@ -217,22 +340,40 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
       <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
-        <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">공지 설정</span>
-        <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">보고 싶은 공지만 골라두세요</h1>
+        <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">?? ??</span>
+        <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">?? ?? ??? ?????</h1>
         <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-          학교 본부, 단과대, 학과, 기관 공지, 사업단 알림 중에서 나한테 필요한 것만 고를 수 있습니다.
-          묶음별 색을 다르게 나눠서 한눈에 구분되도록 정리했습니다.
+          ?? ??, ???, ??, ?? ??, ??? ?? ??? ??? ??? ?? ?? ? ????.
+          ??? ?? ??? ??? ??? ????? ??????.
         </p>
+        <div className="mt-4 flex flex-wrap gap-2 text-sm">
+          <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-700">
+            {isHydratingServer ? "?? ?? ???? ?" : "??? ? ?? ???? ??????"}
+          </span>
+          {syncMessage ? (
+            <span
+              className={`rounded-full px-4 py-2 font-semibold ${
+                syncStatus === "error"
+                  ? "bg-rose-100 text-rose-700"
+                  : syncStatus === "saved"
+                    ? "bg-emerald-100 text-emerald-700"
+                    : "bg-sky-100 text-sky-700"
+              }`}
+            >
+              {syncMessage}
+            </span>
+          ) : null}
+        </div>
       </section>
 
       <div className="grid gap-5 xl:grid-cols-2">
         <SelectionSection
-          title="본부 알림"
-          description="학사, 장학, 취업, 학생지원처럼 학교 전체 단위 공지를 한 번에 고를 수 있습니다."
+          title="?? ??"
+          description="??, ??, ??, ?????? ?? ?? ?? ??? ? ?? ?? ? ????."
           sectionTone="border-sky-200 bg-sky-50/70"
           accentClass="border-sky-500 bg-sky-100"
           buttonClass="bg-sky-600 hover:bg-sky-700"
-          items={selectableSchoolCategories.map((category) => ({ key: category.key, title: category.name, subtitle: "학교 본부 공지" }))}
+          items={selectableSchoolCategories.map((category) => ({ key: category.key, title: category.name, subtitle: "?? ?? ??" }))}
           selectedKeys={schoolSelection.selectedCategories}
           onToggle={schoolSelection.toggleCategory}
           onSelectAll={schoolSelection.selectAllCategories}
@@ -240,12 +381,12 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
         />
 
         <SelectionSection
-          title="단과대 알림"
-          description="관심 있는 단과대 공지만 따로 받아볼 수 있습니다."
+          title="??? ??"
+          description="?? ?? ??? ??? ?? ??? ? ????."
           sectionTone="border-emerald-200 bg-emerald-50/70"
           accentClass="border-emerald-500 bg-emerald-100"
           buttonClass="bg-emerald-600 hover:bg-emerald-700"
-          items={selectableColleges.map((college) => ({ key: college.key, title: college.name, subtitle: "단과대 공지" }))}
+          items={selectableColleges.map((college) => ({ key: college.key, title: college.name, subtitle: "??? ??" }))}
           selectedKeys={collegeSelection.selectedCategories}
           onToggle={collegeSelection.toggleCategory}
           onSelectAll={collegeSelection.selectAllCategories}
@@ -253,8 +394,8 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
         />
 
         <SelectionSection
-          title="기관 알림"
-          description="교육혁신본부, 도서관, 국제협력과, 생활관, 취업진로포털처럼 기관 성격의 공지를 따로 묶었습니다."
+          title="?? ??"
+          description="??????, ???, ?????, ???, ???????? ?? ??? ??? ?? ?????."
           sectionTone="border-amber-200 bg-amber-50/75"
           accentClass="border-amber-500 bg-amber-100"
           buttonClass="bg-amber-500 hover:bg-amber-600"
@@ -266,8 +407,8 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
         />
 
         <SelectionSection
-          title="사업단 알림"
-          description="그린바이오, 이차전지, 소프트웨어, 인공지능, 반도체, 차세대통신 같은 사업단 공지를 따로 관리합니다."
+          title="??? ??"
+          description="?????, ????, ?????, ????, ???, ????? ?? ??? ??? ?? ?????."
           sectionTone="border-orange-200 bg-orange-50/75"
           accentClass="border-orange-500 bg-orange-100"
           buttonClass="bg-orange-500 hover:bg-orange-600"

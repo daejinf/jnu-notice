@@ -9,7 +9,5 @@ export default async function MyAlertsPage() {
     return <AuthLanding />;
   }
 
-  const storageScope = session.user?.email ?? session.user?.name ?? "default";
-
-  return <MyNoticeAlertsSection storageScope={storageScope} />;
+  return <MyNoticeAlertsSection />;
 }

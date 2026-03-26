@@ -1,22 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { selectableCenterKeys } from "@/data/selectableCenters";
-import { selectableCollegeKeys } from "@/data/selectableColleges";
-import { selectableDepartmentKeys } from "@/data/selectableDepartments";
-import { selectableSchoolCategoryKeys } from "@/data/selectableSchoolCategories";
-import {
-  buildScopedStorageKey,
-  CENTER_STORAGE_KEY,
-  COLLEGE_STORAGE_KEY,
-  DEPARTMENT_STORAGE_KEY,
-  SCHOOL_STORAGE_KEY,
-} from "@/features/notices/constants/storageKeys";
-import { useSelectedCategories } from "@/features/notices/hooks/useSelectedCategories";
+import { useEffect, useState } from "react";
 import {
   formatNoticeDate,
   formatViewsLabel,
-  joinCategoryQuery,
 } from "@/features/notices/utils/format";
 import type { Notice } from "@/types/notice";
 
@@ -24,6 +11,8 @@ type MyAlertsResponse = {
   notices: Notice[];
   fetchedAt: string;
   totalCount: number;
+  hasPreferences: boolean;
+  preferencesUpdatedAt?: string;
   error?: string;
 };
 
@@ -38,56 +27,15 @@ function formatFetchedAt(value: string | null) {
   }).format(date);
 }
 
-export function MyNoticeAlertsSection({ storageScope }: { storageScope: string }) {
-  const schoolSelection = useSelectedCategories(selectableSchoolCategoryKeys, {
-    storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope),
-  });
-  const collegeSelection = useSelectedCategories(selectableCollegeKeys, {
-    storageKey: buildScopedStorageKey(COLLEGE_STORAGE_KEY, storageScope),
-  });
-  const departmentSelection = useSelectedCategories(selectableDepartmentKeys, {
-    storageKey: buildScopedStorageKey(DEPARTMENT_STORAGE_KEY, storageScope),
-  });
-  const centerSelection = useSelectedCategories(selectableCenterKeys, {
-    storageKey: buildScopedStorageKey(CENTER_STORAGE_KEY, storageScope),
-  });
-
+export function MyNoticeAlertsSection() {
   const [notices, setNotices] = useState<Notice[]>([]);
   const [fetchedAt, setFetchedAt] = useState<string | null>(null);
+  const [preferencesUpdatedAt, setPreferencesUpdatedAt] = useState<string | null>(null);
+  const [hasPreferences, setHasPreferences] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const isReady =
-    schoolSelection.isReady &&
-    collegeSelection.isReady &&
-    departmentSelection.isReady &&
-    centerSelection.isReady;
-
-  const hasAnySelection = useMemo(
-    () =>
-      schoolSelection.selectedCategories.length > 0 ||
-      collegeSelection.selectedCategories.length > 0 ||
-      departmentSelection.selectedCategories.length > 0 ||
-      centerSelection.selectedCategories.length > 0,
-    [
-      centerSelection.selectedCategories.length,
-      collegeSelection.selectedCategories.length,
-      departmentSelection.selectedCategories.length,
-      schoolSelection.selectedCategories.length,
-    ],
-  );
-
   useEffect(() => {
-    if (!isReady) return;
-
-    if (!hasAnySelection) {
-      setNotices([]);
-      setFetchedAt(null);
-      setError(null);
-      setIsLoading(false);
-      return;
-    }
-
     const controller = new AbortController();
 
     const run = async () => {
@@ -95,32 +43,31 @@ export function MyNoticeAlertsSection({ storageScope }: { storageScope: string }
         setIsLoading(true);
         setError(null);
 
-        const schoolQuery = joinCategoryQuery(schoolSelection.selectedCategories);
-        const collegeQuery = joinCategoryQuery(collegeSelection.selectedCategories);
-        const departmentQuery = joinCategoryQuery(departmentSelection.selectedCategories);
-        const centerQuery = joinCategoryQuery(centerSelection.selectedCategories);
-
-        const response = await fetch(
-          `/api/my-alerts?categories=${schoolQuery}&colleges=${collegeQuery}&departments=${departmentQuery}&centers=${centerQuery}`,
-          { signal: controller.signal, cache: "no-store" },
-        );
+        const response = await fetch("/api/my-alerts", {
+          signal: controller.signal,
+          cache: "no-store",
+        });
         const data = (await response.json()) as MyAlertsResponse;
 
         if (!response.ok) {
-          throw new Error(data.error ?? "? ?? ??? ???? ?????.");
+          throw new Error(data.error ?? "? ??? ???? ?????.");
         }
 
         setNotices(data.notices);
         setFetchedAt(data.fetchedAt);
+        setPreferencesUpdatedAt(data.preferencesUpdatedAt ?? null);
+        setHasPreferences(data.hasPreferences);
       } catch (fetchError) {
         if (fetchError instanceof Error && fetchError.name === "AbortError") return;
         setError(
           fetchError instanceof Error
             ? fetchError.message
-            : "? ? ?? ??? ??????.",
+            : "? ??? ???? ? ??? ??????.",
         );
         setNotices([]);
         setFetchedAt(null);
+        setPreferencesUpdatedAt(null);
+        setHasPreferences(true);
       } finally {
         setIsLoading(false);
       }
@@ -129,29 +76,26 @@ export function MyNoticeAlertsSection({ storageScope }: { storageScope: string }
     void run();
 
     return () => controller.abort();
-  }, [
-    centerSelection.selectedCategories,
-    collegeSelection.selectedCategories,
-    departmentSelection.selectedCategories,
-    hasAnySelection,
-    isReady,
-    schoolSelection.selectedCategories,
-  ]);
+  }, []);
 
   return (
     <main className="min-h-screen bg-transparent">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
         <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
-          <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">? ?? ??</span>
+          <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">? ??</span>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-            ?? ??? ??? ??? ????
+            ?? ?? ??? ????? ??? ??
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            ?? ????? ?? ??, ???, ??, ??, ??? ??? ??? ?? ???? ?? ?????. ??? ??? ?? ???? ??, ???? ??? ?? ??? ???? ??? ??? ? ????.
+            ???? ?? ??, ???, ??, ??, ??? ??? ??? ????? ??? ?? ?????.
+            ???? ?? ???? ?? ???? ?? ???? ?? ?????.
           </p>
           <div className="mt-4 flex flex-wrap gap-2 text-sm text-slate-500">
             <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-700">? {notices.length}?</span>
-            <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-600">?? ?? {formatFetchedAt(fetchedAt)}</span>
+            <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-600">??? ?? {formatFetchedAt(fetchedAt)}</span>
+            {preferencesUpdatedAt ? (
+              <span className="rounded-full bg-slate-100 px-4 py-2 font-semibold text-slate-600">?? ?? {formatFetchedAt(preferencesUpdatedAt)}</span>
+            ) : null}
           </div>
         </section>
 
@@ -161,13 +105,13 @@ export function MyNoticeAlertsSection({ storageScope }: { storageScope: string }
           </section>
         ) : null}
 
-        {!hasAnySelection && isReady ? (
+        {!hasPreferences && !isLoading ? (
           <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">
-            ???? ?? ?? ??? ?? ??? ???. ??? ??? ??? ? ???? ?? ?? ?????.
+            ?? ? ??? ??? ?? ??? ????. ?? ?? ????? ?? ?? ??? ???, ????? ???? ? ???? ?? ?? ?????.
           </section>
         ) : isLoading ? (
           <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">
-            ? ?? ??? ???? ????.
+            ? ??? ??? ????? ???? ????.
           </section>
         ) : notices.length === 0 ? (
           <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">

@@ -28,3 +28,11 @@ export type HotNoticeSnapshot = {
 };
 
 export type DepartmentParserType = "subview-bbs" | "xboard";
+
+export type NoticePreferences = {
+  schoolCategoryKeys: string[];
+  collegeKeys: string[];
+  departmentKeys: string[];
+  centerKeys: string[];
+  updatedAt: string;
+};
