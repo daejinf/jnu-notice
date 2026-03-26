@@ -55,7 +55,7 @@ function getThresholdTime() {
 }
 
 function formatNoticeDate(date: string) {
-  return date ? date.replaceAll("-", ".") : "날짜 없음";
+  return date ? date.replaceAll("-", ".") : "?? ??";
 }
 
 function formatViews(views: number) {
@@ -71,9 +71,7 @@ function isUnsupportedViewsNotice(notice: Notice) {
 }
 
 function formatViewsLabel(notice: Notice) {
-  return isUnsupportedViewsNotice(notice)
-    ? "조회 미지원"
-    : `조회 ${formatViews(notice.views)}`;
+  return isUnsupportedViewsNotice(notice) ? "?? ???" : `?? ${formatViews(notice.views)}`;
 }
 
 function getSourceBadgeClass(notice: Notice) {
@@ -108,7 +106,70 @@ function dedupeHotNotices(notices: Notice[]) {
   return Array.from(noticeMap.values());
 }
 
-export function HotNoticeSection({ storageScope }: { storageScope: string }) {
+function buildHotNotices(notices: Notice[]) {
+  const thresholdTime = getThresholdTime();
+
+  return dedupeHotNotices(notices)
+    .filter((notice) => toSortableTime(notice.date) >= thresholdTime)
+    .sort((a, b) => {
+      if (b.views !== a.views) {
+        return b.views - a.views;
+      }
+
+      return toSortableTime(b.date) - toSortableTime(a.date);
+    });
+}
+
+function HotNoticeCardList({ notices }: { notices: Notice[] }) {
+  return (
+    <div className="mt-5 grid gap-4">
+      {notices.map((notice, index) => (
+        <article
+          key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`}
+          className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-5 transition hover:border-slate-300 hover:bg-white hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)]"
+        >
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">
+              #{index + 1}
+            </span>
+            <span className={`rounded-full px-3 py-1 text-xs font-semibold ${getSourceBadgeClass(notice)}`}>
+              {notice.sourceName}
+            </span>
+            <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
+              {notice.category}
+            </span>
+            <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+              {formatViewsLabel(notice)}
+            </span>
+          </div>
+
+          <a
+            href={notice.url}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 block text-lg font-bold leading-8 tracking-tight text-slate-950 hover:text-[#1B64DA]"
+          >
+            {notice.title}
+          </a>
+
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
+            <span>{`??? ${notice.author}`}</span>
+            <span>{`??? ${formatNoticeDate(notice.date)}`}</span>
+            <span>{formatViewsLabel(notice)}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+export function HotNoticeSection({
+  storageScope,
+  globalHotNotices,
+}: {
+  storageScope: string;
+  globalHotNotices: Notice[];
+}) {
   const schoolSelection = useSelectedCategories(selectableSchoolCategoryKeys, {
     storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope),
   });
@@ -167,9 +228,7 @@ export function HotNoticeSection({ storageScope }: { storageScope: string }) {
         const data = (await response.json()) as NoticeApiResponse;
 
         if (!response.ok) {
-          throw new Error(
-            data.error ?? "공지 목록을 불러오지 못했습니다.",
-          );
+          throw new Error(data.error ?? "?? ??? ???? ?????.");
         }
 
         setNotices(data.notices);
@@ -178,7 +237,7 @@ export function HotNoticeSection({ storageScope }: { storageScope: string }) {
         const message =
           fetchError instanceof Error
             ? fetchError.message
-            : "알 수 없는 오류가 발생했습니다.";
+            : "? ? ?? ??? ??????.";
         setError(message);
         setNotices([]);
       } finally {
@@ -197,34 +256,21 @@ export function HotNoticeSection({ storageScope }: { storageScope: string }) {
     schoolSelection.selectedCategories,
   ]);
 
-  const hotNotices = useMemo(() => {
-    const thresholdTime = getThresholdTime();
-
-    return dedupeHotNotices(notices)
-      .filter((notice) => toSortableTime(notice.date) >= thresholdTime)
-      .sort((a, b) => {
-        if (b.views !== a.views) {
-          return b.views - a.views;
-        }
-
-        return toSortableTime(b.date) - toSortableTime(a.date);
-      });
-  }, [notices]);
+  const personalHotNotices = useMemo(() => buildHotNotices(notices), [notices]);
 
   return (
     <main className="min-h-screen bg-transparent">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
         <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
           <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold text-rose-700">
-            {"HOT 알림"}
+            HOT ??
           </span>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-            {"공지 목록 기준 최근 7일 조회수 랭킹"}
+            ?? ?? ?? ?? 7? ??? ??
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            {
-              "현재 공지 목록에 잡히는 출처만 기준으로 최근 7일 공지를 다시 모아, 조회수 높은 순서대로 정렬합니다. 새 공지 여부와 무관하게 목록 안에서 조회수가 가장 높은 공지가 HOT 상단으로 올라갑니다."
-            }
+            ?? ?? ??? ??? ??? ???? ?? 7? ??? ?? ??, ??? ?? ???? ?????.
+            ? ?? ??? ???? ?? ??? ???? ?? ?? ??? HOT ???? ?????.
           </p>
         </section>
 
@@ -236,63 +282,49 @@ export function HotNoticeSection({ storageScope }: { storageScope: string }) {
 
         {isLoading ? (
           <section className="rounded-[32px] border border-dashed border-slate-300 bg-white/90 px-6 py-16 text-center text-sm text-slate-500 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
-            {"HOT 알림을 계산하고 있습니다."}
+            HOT ??? ???? ????.
           </section>
-        ) : hotNotices.length === 0 ? (
+        ) : personalHotNotices.length === 0 ? (
           <section className="rounded-[32px] border border-dashed border-slate-300 bg-white/90 px-6 py-16 text-center text-sm text-slate-500 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
-            {"공지 목록 기준 최근 7일 HOT 공지가 아직 없습니다."}
+            ?? ?? ?? ?? 7? HOT ??? ?? ????.
           </section>
         ) : (
           <section className="rounded-[36px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-6">
             <div className="flex items-center justify-between border-b border-slate-100 pb-4">
               <h2 className="text-xl font-bold tracking-tight text-slate-950">
-                {"최근 7일 조회수 TOP 공지"}
+                ? ?? ?? HOT ??
               </h2>
               <span className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700">
-                {`총 ${hotNotices.length}건`}
+                {`? ${personalHotNotices.length}?`}
               </span>
             </div>
-
-            <div className="mt-5 grid gap-4">
-              {hotNotices.map((notice, index) => (
-                <article
-                  key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`}
-                  className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-5 transition hover:border-slate-300 hover:bg-white hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)]"
-                >
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">
-                      #{index + 1}
-                    </span>
-                    <span className={`rounded-full px-3 py-1 text-xs font-semibold ${getSourceBadgeClass(notice)}`}>
-                      {notice.sourceName}
-                    </span>
-                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
-                      {notice.category}
-                    </span>
-                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-                      {formatViewsLabel(notice)}
-                    </span>
-                  </div>
-
-                  <a
-                    href={notice.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-4 block text-lg font-bold leading-8 tracking-tight text-slate-950 hover:text-[#1B64DA]"
-                  >
-                    {notice.title}
-                  </a>
-
-                  <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
-                    <span>{`작성자 ${notice.author}`}</span>
-                    <span>{`작성일 ${formatNoticeDate(notice.date)}`}</span>
-                    <span>{formatViewsLabel(notice)}</span>
-                  </div>
-                </article>
-              ))}
-            </div>
+            <HotNoticeCardList notices={personalHotNotices} />
           </section>
         )}
+
+        <section className="rounded-[36px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-6">
+          <div className="flex flex-col gap-2 border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 className="text-xl font-bold tracking-tight text-slate-950">
+                HOT ??(??)
+              </h2>
+              <p className="mt-1 text-sm text-slate-500">
+                ???? 30??? ?? ??? ??? ??? ??? ???? ?????.
+              </p>
+            </div>
+            <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
+              {`? ${globalHotNotices.length}?`}
+            </span>
+          </div>
+
+          {globalHotNotices.length === 0 ? (
+            <div className="mt-5 rounded-[28px] border border-dashed border-slate-200 bg-[#FBFCFD] px-5 py-10 text-center text-sm text-slate-500">
+              ??? ?? ?? ?? ?? 7? HOT ??? ?? ????.
+            </div>
+          ) : (
+            <HotNoticeCardList notices={globalHotNotices} />
+          )}
+        </section>
       </div>
     </main>
   );
