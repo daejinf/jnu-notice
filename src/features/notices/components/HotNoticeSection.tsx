@@ -272,10 +272,10 @@ export function HotNoticeSection({
             {"\uB7AD\uD0B9"}
           </span>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-            {"\uC9C0\uAE08 \uB9CE\uC774 \uBCF4\uB294 \uACF5\uC9C0"}
+            {"\uC9C0\uAE08 \uB728\uB294 \uACF5\uC9C0"}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            {"\uCD5C\uADFC 7\uC77C \uAE30\uC900\uC73C\uB85C \uC870\uD68C\uC218\uAC00 \uB192\uC740 \uACF5\uC9C0\uB9CC \uBAA8\uC544\uBD05\uB2C8\uB2E4. \uB0B4 \uAE30\uC900\uACFC \uC804\uCCB4 \uAE30\uC900\uC744 \uBC14\uB85C \uBC14\uAFD4 \uBCFC \uC218 \uC788\uC2B5\uB2C8\uB2E4."}
+            {"\uCD5C\uADFC 7\uC77C \uAE30\uC900 \uC870\uD68C\uC218 \uC21C\uC73C\uB85C \uBCF4\uC5EC\uC90D\uB2C8\uB2E4."}
           </p>
         </section>
 
@@ -285,25 +285,25 @@ export function HotNoticeSection({
           </section>
         ) : null}
 
-        <section className="rounded-[36px] border border-slate-200 bg-white p-4 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-5">
-          <div className="grid gap-3 sm:grid-cols-2">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-3 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-4">
+          <div className="grid gap-2 sm:grid-cols-2">
             <button
               type="button"
               onClick={() => setViewMode("personal")}
               className={`rounded-[28px] border px-5 py-4 text-left transition ${
                 viewMode === "personal"
-                  ? "border-[#1B64DA] bg-[#EEF5FF] shadow-[0_12px_24px_rgba(27,100,218,0.12)]"
-                  : "border-slate-200 bg-[#FBFCFD] hover:border-slate-300 hover:bg-white"
+                  ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_12px_24px_rgba(27,100,218,0.10)]"
+                  : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
               }`}
             >
-              <div className="text-sm font-semibold text-slate-500">{"\uB0B4 \uAE30\uC900"}</div>
+              <div className="text-xs font-semibold tracking-[0.08em] text-slate-400">{"\uB9DE\uCDA4"}</div>
               <div className="mt-1 text-lg font-bold tracking-tight text-slate-950">
-                {"\uB9DE\uCDA4 \uB7AD\uD0B9"}
+                {"\uB0B4 \uB7AD\uD0B9"}
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                {"\uB0B4\uAC00 \uCF1C\uB454 \uC18C\uC2A4\uAE30\uC900 \uC21C\uC704\uB97C \uBC14\uB85C \uBD05\uB2C8\uB2E4."}
+                {"\uCF1C\uB454 \uC18C\uC2A4\uB9CC \uBCF4\uAE30"}
               </p>
-              <div className="mt-3 text-sm font-semibold text-[#1B64DA]">{`\ucd1d ${personalHotNotices.length}\uac74`}</div>
+              <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{`${personalHotNotices.length}\uAC74`}</div>
             </button>
 
             <button
@@ -311,18 +311,18 @@ export function HotNoticeSection({
               onClick={() => setViewMode("global")}
               className={`rounded-[28px] border px-5 py-4 text-left transition ${
                 viewMode === "global"
-                  ? "border-[#1B64DA] bg-[#EEF5FF] shadow-[0_12px_24px_rgba(27,100,218,0.12)]"
-                  : "border-slate-200 bg-[#FBFCFD] hover:border-slate-300 hover:bg-white"
+                  ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_12px_24px_rgba(27,100,218,0.10)]"
+                  : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
               }`}
             >
-              <div className="text-sm font-semibold text-slate-500">{"\uC804\uCCB4 \uAE30\uC900"}</div>
+              <div className="text-xs font-semibold tracking-[0.08em] text-slate-400">{"\uC804\uCCB4"}</div>
               <div className="mt-1 text-lg font-bold tracking-tight text-slate-950">
-                {"HOT \uc54c\ub9bc(\uc804\uccb4)"}
+                {"\uC804\uCCB4 \uB7AD\uD0B9"}
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                {"\uBC31\uC5D4\uB4DC\uAC00 \uBBF8\uB9AC \uACC4\uC0B0\uD574 \uB450\uACE0 \uD398\uC774\uC9C0\uC5D0\uC11C\uB294 \uBC14\uB85C \uBD88\uB7EC\uC635\uB2C8\uB2E4."}
+                {"\uC804\uCCB4 \uACF5\uC9C0 \uAE30\uC900"}
               </p>
-              <div className="mt-3 text-sm font-semibold text-[#1B64DA]">{`\ucd1d ${globalHotNotices.length}\uac74`}</div>
+              <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{`${globalHotNotices.length}\uAC74`}</div>
             </button>
           </div>
         </section>
@@ -341,14 +341,14 @@ export function HotNoticeSection({
               <div className="flex items-center justify-between border-b border-slate-100 pb-4">
                 <div>
                   <h2 className="text-xl font-bold tracking-tight text-slate-950">
-                    {"\uB9DE\uCDA4 \uB7AD\uD0B9"}
+                    {"\uB0B4 \uB7AD\uD0B9"}
                   </h2>
                   <p className="mt-1 text-sm text-slate-500">
-                    {"\uc124\uc815 \ud398\uc774\uc9c0\uc5d0\uc11c \uc120\ud0dd\ud55c \uacf5\uc9c0\ub4e4\ub9cc \ubaa8\uc544 \uc870\ud68c\uc218 \uc21c\uc73c\ub85c \ubcf4\uc5ec\uc90d\ub2c8\ub2e4."}
+                    {"\uCF1C\uB454 \uC18C\uC2A4\uB9CC \uBAA8\uC544 \uBCF4\uC5EC\uC90D\uB2C8\uB2E4."}
                   </p>
                 </div>
                 <span className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700">
-                  {`\ucd1d ${personalHotNotices.length}\uac74`}
+                  {`${personalHotNotices.length}\uAC74`}
                 </span>
               </div>
               <HotNoticeCardList notices={personalHotNotices} />
@@ -359,14 +359,14 @@ export function HotNoticeSection({
             <div className="flex flex-col gap-2 border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h2 className="text-xl font-bold tracking-tight text-slate-950">
-                  {"HOT \uc54c\ub9bc(\uc804\uccb4)"}
+                  {"\uC804\uCCB4 \uB7AD\uD0B9"}
                 </h2>
                 <p className="mt-1 text-sm text-slate-500">
-                  {"\ubc31\uc5d4\ub4dc\uac00 10\ubd84\ub9c8\ub2e4 \uc804\uccb4 \uacf5\uc9c0\ub97c \uc218\uc9d1\ud574 \ub9cc\ub4e0 \ucd5c\uadfc 7\uc77c \uc870\ud68c\uc218 \ub7ad\ud0b9\uc785\ub2c8\ub2e4."}
+                  {"\uBC31\uC5D4\uB4DC\uAC00 \uBBF8\uB9AC \uB9CC\uB4E0 \uC804\uCCB4 \uC21C\uC704\uC785\uB2C8\uB2E4."}
                 </p>
               </div>
               <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
-                {`\ucd1d ${globalHotNotices.length}\uac74`}
+                {`${globalHotNotices.length}\uAC74`}
               </span>
             </div>
 
@@ -383,5 +383,6 @@ export function HotNoticeSection({
     </main>
   );
 }
+
 
 
