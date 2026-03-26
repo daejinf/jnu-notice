@@ -8,22 +8,23 @@ import type { NoticeUpdateSnapshot } from "@/types/notice";
 type HistoryTab = "updates" | "alerts";
 
 const TEXT = {
-  badge: "\uD788\uC2A4\uD1A0\uB9AC",
-  title: "\uBC14\uB85C \uD655\uC778\uD558\uB294 \uAE30\uB85D",
-  description: "\uC0C8 \uACF5\uC9C0 \uAE30\uB85D\uACFC \uB0B4 \uC54C\uB9BC\uC744 \uD55C \uACF3\uC5D0\uC11C \uBCF4\uC138\uC694.",
-  updatesLabel: "\uAE30\uB85D",
-  updatesTitle: "\uC0C8 \uACF5\uC9C0 \uAE30\uB85D",
-  updatesDescription: "\uC2E4\uC81C\uB85C \uC0C8\uB85C \uC62C\uB77C\uC628 \uACF5\uC9C0\uB9CC \uBAA8\uC544\uBD05\uB2C8\uB2E4.",
-  alertsLabel: "\uB9DE\uCDA4",
-  alertsTitle: "\uB0B4 \uC54C\uB9BC",
-  alertsDescription: "\uCF1C\uB454 \uC18C\uC2A4\uB9CC \uBC14\uB85C \uD655\uC778\uD569\uB2C8\uB2E4.",
-  checkedAt: "\uC218\uC9D1 \uC2DC\uAC01",
-  newNotices: "\uC0C8 \uACF5\uC9C0",
-  totalChecked: "\uC804\uCCB4 \uD655\uC778",
-  empty: "\uC544\uC9C1 \uC313\uC778 \uC0C8 \uACF5\uC9C0\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.",
-  author: "\uC791\uC131\uC790",
-  date: "\uAC8C\uC2DC\uC77C",
-  unsupported: "\uBBF8\uC9C0\uC6D0",
+  badge: "히스토리",
+  title: "기록과 알림",
+  description: "바로 봐야 할 것만 남겼습니다.",
+  alertsLabel: "내 알림",
+  alertsTitle: "내가 켜둔 공지",
+  alertsDescription: "고른 소스만 바로 봅니다.",
+  alertsCta: "바로 보기",
+  updatesLabel: "새 공지 기록",
+  updatesTitle: "방금 올라온 공지",
+  updatesDescription: "실제로 새로 올라온 것만 남깁니다.",
+  checkedAt: "수집 시각",
+  newNotices: "새 공지",
+  totalChecked: "전체 확인",
+  empty: "아직 쌓인 새 공지가 없습니다.",
+  author: "작성자",
+  date: "게시일",
+  unsupported: "미지원",
 };
 
 function formatCheckedAt(value: string) {
@@ -91,6 +92,39 @@ function UpdatesHistoryList({ history }: { history: NoticeUpdateSnapshot[] }) {
   );
 }
 
+function SelectorCard({
+  active,
+  label,
+  title,
+  description,
+  badge,
+  onClick,
+}: {
+  active: boolean;
+  label: string;
+  title: string;
+  description: string;
+  badge: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`rounded-[28px] border px-6 py-5 text-left transition ${
+        active
+          ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_16px_28px_rgba(27,100,218,0.10)]"
+          : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
+      }`}
+    >
+      <div className="text-[13px] font-semibold tracking-[-0.01em] text-slate-400">{label}</div>
+      <div className="mt-2 text-[29px] font-black tracking-[-0.04em] text-slate-950">{title}</div>
+      <p className="mt-2 text-[15px] leading-6 text-slate-500">{description}</p>
+      <div className="mt-5 inline-flex rounded-full bg-white/95 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{badge}</div>
+    </button>
+  );
+}
+
 export function UpdatesHubSection({
   history,
   initialTab = "updates",
@@ -111,35 +145,22 @@ export function UpdatesHubSection({
 
         <section className="rounded-[32px] border border-slate-200 bg-white p-3 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-4">
           <div className="grid gap-2 sm:grid-cols-2">
-            <button
-              type="button"
-              onClick={() => setTab("updates")}
-              className={`rounded-[28px] border px-5 py-4 text-left transition ${
-                tab === "updates"
-                  ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_12px_24px_rgba(27,100,218,0.10)]"
-                  : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
-              }`}
-            >
-              <div className="text-xs font-semibold tracking-[0.08em] text-slate-400">{TEXT.updatesLabel}</div>
-              <div className="mt-1 text-xl font-black tracking-tight text-slate-950">{TEXT.updatesTitle}</div>
-              <p className="mt-1 text-sm leading-6 text-slate-500">{TEXT.updatesDescription}</p>
-              <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{`${history.length}회`}</div>
-            </button>
-
-            <button
-              type="button"
+            <SelectorCard
+              active={tab === "alerts"}
+              label={TEXT.alertsLabel}
+              title={TEXT.alertsTitle}
+              description={TEXT.alertsDescription}
+              badge={TEXT.alertsCta}
               onClick={() => setTab("alerts")}
-              className={`rounded-[28px] border px-5 py-4 text-left transition ${
-                tab === "alerts"
-                  ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_12px_24px_rgba(27,100,218,0.10)]"
-                  : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
-              }`}
-            >
-              <div className="text-xs font-semibold tracking-[0.08em] text-slate-400">{TEXT.alertsLabel}</div>
-              <div className="mt-1 text-xl font-black tracking-tight text-slate-950">{TEXT.alertsTitle}</div>
-              <p className="mt-1 text-sm leading-6 text-slate-500">{TEXT.alertsDescription}</p>
-              <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">바로 보기</div>
-            </button>
+            />
+            <SelectorCard
+              active={tab === "updates"}
+              label={TEXT.updatesLabel}
+              title={TEXT.updatesTitle}
+              description={TEXT.updatesDescription}
+              badge={`${history.length}회`}
+              onClick={() => setTab("updates")}
+            />
           </div>
         </section>
 
