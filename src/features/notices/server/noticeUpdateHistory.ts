@@ -1,5 +1,6 @@
-import type { Notice, NoticeUpdateSnapshot } from "@/types/notice";
+﻿import type { Notice, NoticeUpdateSnapshot } from "@/types/notice";
 import { readJsonFile, writeJsonFile } from "@/features/notices/server/storagePath";
+import { getNoticeIdentity } from "@/features/notices/server/noticeIdentity";
 
 const HISTORY_FILE_NAME = "notice-updates.json";
 const MAX_HISTORY_COUNT = 120;
@@ -61,7 +62,27 @@ function normalizeSnapshot(snapshot: NoticeUpdateSnapshot): NoticeUpdateSnapshot
 
 export async function loadNoticeUpdateHistory(): Promise<NoticeUpdateSnapshot[]> {
   const history = (await readJsonFile<NoticeUpdateSnapshot[]>(HISTORY_FILE_NAME)) ?? [];
-  return history.map(normalizeSnapshot);
+  const seen = new Set<string>();
+
+  return history.map((snapshot) => {
+    const normalizedSnapshot = normalizeSnapshot(snapshot);
+    const dedupedNotices = normalizedSnapshot.notices.filter((notice) => {
+      const identity = getNoticeIdentity(notice);
+
+      if (seen.has(identity)) {
+        return false;
+      }
+
+      seen.add(identity);
+      return true;
+    });
+
+    return {
+      ...normalizedSnapshot,
+      notices: dedupedNotices,
+      newNoticeCount: dedupedNotices.length,
+    };
+  });
 }
 
 export async function saveNoticeUpdateHistory(history: NoticeUpdateSnapshot[]) {
