@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import { auth, signIn, signOut } from "@/auth";
 import "./globals.css";
@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 const navItems = [
-  { href: "/", label: "\uACF5\uC9C0" },
-  { href: "/hot", label: "HOT \uC54C\uB9BC" },
-  { href: "/my-alerts", label: "\uB0B4 \uC54C\uB9BC" },
-  { href: "/updates", label: "\uC54C\uB9BC \uAE30\uB85D" },
-  { href: "/settings", label: "\uC124\uC815" },
+  { href: "/", label: "\uD53C\uB4DC" },
+  { href: "/hot", label: "\uB7AD\uD0B9" },
+  { href: "/my-alerts", label: "\uB9DE\uCDA4" },
+  { href: "/updates", label: "\uD788\uC2A4\uD1A0\uB9AC" },
+  { href: "/settings", label: "\uAD00\uB9AC" },
 ];
 
 export default async function RootLayout({
