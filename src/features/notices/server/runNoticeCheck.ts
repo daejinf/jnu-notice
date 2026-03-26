@@ -12,6 +12,7 @@ import { findNewNotices } from "@/features/notices/server/noticeDiff";
 import { loadStoredNotices, saveNotices } from "@/features/notices/server/noticeStorage";
 import { appendNoticeUpdateSnapshot } from "@/features/notices/server/noticeUpdateHistory";
 import { notifyNewNotices } from "@/features/notices/server/notifications";
+import { saveRecentHotNotices } from "@/features/notices/server/fetchTodayHotNotices";
 
 async function resolveNoticeGroup(
   label: string,
@@ -40,6 +41,7 @@ export async function runNoticeCheck() {
   const newNotices = findNewNotices(currentNotices, storedNotices);
 
   await saveNotices(currentNotices);
+  await saveRecentHotNotices(currentNotices);
 
   if (newNotices.length > 0) {
     console.log(`new notices: ${newNotices.length}`);

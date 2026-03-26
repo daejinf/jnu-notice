@@ -22,4 +22,9 @@ export type NoticeUpdateSnapshot = {
   totalNoticeCount?: number;
 };
 
+export type HotNoticeSnapshot = {
+  checkedAt: string;
+  notices: Notice[];
+};
+
 export type DepartmentParserType = "subview-bbs" | "xboard";
