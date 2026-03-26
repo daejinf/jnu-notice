@@ -47,20 +47,26 @@ export async function runNoticeCheck() {
       console.log(`${notice.date} | ${notice.sourceName} | ${notice.title}`);
       console.log(notice.url);
     });
+  } else {
+    console.log("no new notices");
+  }
 
-    try {
-      await appendNoticeUpdateSnapshot(newNotices);
-    } catch (error) {
-      console.error("[notice-check] failed to append update snapshot", error);
-    }
+  try {
+    await appendNoticeUpdateSnapshot({
+      notices: newNotices,
+      newNoticeCount: newNotices.length,
+      totalNoticeCount: currentNotices.length,
+    });
+  } catch (error) {
+    console.error("[notice-check] failed to append update snapshot", error);
+  }
 
+  if (newNotices.length > 0) {
     try {
       await notifyNewNotices(newNotices);
     } catch (error) {
       console.error("[notice-check] failed to notify new notices", error);
     }
-  } else {
-    console.log("no new notices");
   }
 
   return {
