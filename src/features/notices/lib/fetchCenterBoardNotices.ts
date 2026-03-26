@@ -29,6 +29,54 @@ type GenericParserOptions = {
   author?: string;
 };
 
+function normalizeCharset(charset: string | null | undefined) {
+  const normalized = (charset ?? "").trim().toLowerCase().replaceAll('"', '');
+
+  if (!normalized) {
+    return "utf-8";
+  }
+
+  if (["utf8", "utf-8"].includes(normalized)) {
+    return "utf-8";
+  }
+
+  if (["euc-kr", "euckr", "cp949", "x-windows-949", "ks_c_5601-1987"].includes(normalized)) {
+    return "euc-kr";
+  }
+
+  return normalized;
+}
+
+function detectCharsetFromHtml(buffer: Buffer, contentType?: string | null) {
+  const headerMatch = contentType?.match(/charset=([^;]+)/i);
+  if (headerMatch?.[1]) {
+    return normalizeCharset(headerMatch[1]);
+  }
+
+  const asciiSample = buffer.toString("latin1", 0, Math.min(buffer.length, 4096));
+  const metaCharsetMatch = asciiSample.match(/<meta[^>]+charset=["']?\s*([^\s"'>/]+)/i);
+  if (metaCharsetMatch?.[1]) {
+    return normalizeCharset(metaCharsetMatch[1]);
+  }
+
+  const metaContentTypeMatch = asciiSample.match(/<meta[^>]+content=["'][^"']*charset=([^\s"'>;]+)/i);
+  if (metaContentTypeMatch?.[1]) {
+    return normalizeCharset(metaContentTypeMatch[1]);
+  }
+
+  return "utf-8";
+}
+
+function decodeHtmlBuffer(buffer: Buffer, contentType?: string | null) {
+  const charset = detectCharsetFromHtml(buffer, contentType);
+
+  try {
+    return new TextDecoder(charset).decode(buffer);
+  } catch {
+    return buffer.toString("utf8");
+  }
+}
+
 function requestHtmlViaNode(url: string, redirectCount = 0, timeoutMs = REQUEST_TIMEOUT_MS): Promise<string> {
   return new Promise((resolve, reject) => {
     const target = new URL(url);
@@ -66,7 +114,7 @@ function requestHtmlViaNode(url: string, redirectCount = 0, timeoutMs = REQUEST_
           chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
         });
         response.on("end", () => {
-          resolve(Buffer.concat(chunks).toString("utf8"));
+          resolve(decodeHtmlBuffer(Buffer.concat(chunks), response.headers["content-type"]));
         });
       },
     );
@@ -95,7 +143,8 @@ async function fetchHtml(pageUrl: string, fetchImpl: typeof fetch) {
       throw new Error(`request failed: ${response.status}`);
     }
 
-    return await response.text();
+    const htmlBuffer = Buffer.from(await response.arrayBuffer());
+    return decodeHtmlBuffer(htmlBuffer, response.headers.get("content-type"));
   } catch {
     return requestHtmlViaNode(pageUrl);
   }
