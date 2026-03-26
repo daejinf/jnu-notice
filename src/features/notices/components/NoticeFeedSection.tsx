@@ -211,11 +211,11 @@ function SectionChip({
   href?: string | null;
 }) {
   const toneClass = {
-    school: "border border-sky-100 bg-sky-50 text-sky-700",
-    college: "border border-emerald-100 bg-emerald-50 text-emerald-700",
-    department: "border border-violet-100 bg-violet-50 text-violet-700",
-    institution: "border border-amber-100 bg-amber-50 text-amber-700",
-    project: "border border-orange-100 bg-orange-50 text-orange-700",
+    school: "border border-sky-200 bg-sky-100 text-sky-900",
+    college: "border border-emerald-200 bg-emerald-100 text-emerald-900",
+    department: "border border-violet-200 bg-violet-100 text-violet-900",
+    institution: "border border-amber-200 bg-amber-100 text-amber-900",
+    project: "border border-orange-200 bg-orange-100 text-orange-900",
   }[tone];
 
   if (href) {
@@ -816,5 +816,6 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     </div>
   );
 }
+
 
 
