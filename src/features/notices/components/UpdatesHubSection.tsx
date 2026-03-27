@@ -11,6 +11,7 @@ const TEXT = {
   badge: "히스토리",
   title: "내 알림과 새 공지",
   description: "놓치면 아쉬운 것부터 바로 봅니다.",
+  updatedUntil: "최근 반영",
   alertsLabel: "내 알림",
   alertsTitle: "내가 켜둔 공지",
   alertsDescription: "고른 소스만 바로 모아봅니다.",
@@ -97,6 +98,7 @@ function SelectorCard({
   label,
   title,
   description,
+  updatedAt,
   badge,
   onClick,
 }: {
@@ -104,6 +106,7 @@ function SelectorCard({
   label: string;
   title: string;
   description: string;
+  updatedAt?: string | null;
   badge: string;
   onClick: () => void;
 }) {
@@ -120,6 +123,7 @@ function SelectorCard({
       <div className="text-xs font-semibold tracking-[0.08em] text-slate-400">{label}</div>
       <div className="mt-1 text-lg font-bold tracking-tight text-slate-950">{title}</div>
       <p className="mt-2 text-sm leading-6 text-slate-600">{description}</p>
+      {updatedAt ? <p className="mt-2 text-xs font-medium text-slate-400">{`${TEXT.updatedUntil} ${formatCheckedAt(updatedAt)}`}</p> : null}
       <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{badge}</div>
     </button>
   );
@@ -135,6 +139,7 @@ export function UpdatesHubSection({
   initialTab?: HistoryTab;
 }) {
   const [tab, setTab] = useState<HistoryTab>(initialTab);
+  const latestHistoryCheckedAt = history[0]?.checkedAt ?? null;
 
   return (
     <main className="min-h-screen bg-transparent">
@@ -152,6 +157,7 @@ export function UpdatesHubSection({
               label={TEXT.alertsLabel}
               title={TEXT.alertsTitle}
               description={TEXT.alertsDescription}
+              updatedAt={myAlerts.fetchedAt}
               badge={myAlerts.hasPreferences ? `${myAlerts.totalCount}건` : TEXT.alertsCta}
               onClick={() => setTab("alerts")}
             />
@@ -160,6 +166,7 @@ export function UpdatesHubSection({
               label={TEXT.updatesLabel}
               title={TEXT.updatesTitle}
               description={TEXT.updatesDescription}
+              updatedAt={latestHistoryCheckedAt}
               badge={`${history.length}회`}
               onClick={() => setTab("updates")}
             />
