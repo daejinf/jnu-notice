@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-03-27T19:12:02.717Z",
+  "checkedAt": "2026-03-27T19:53:13.153Z",
   "notices": [
     {
       "id": "93963",
@@ -55,7 +55,7 @@
       "url": "https://grow.jnu.ac.kr/ko/program/intro/view/718",
       "author": "국제협력본부",
       "date": "2026-03-25",
-      "views": 1088,
+      "views": 1090,
       "sourceType": "center",
       "sourceName": "비교과 통합 플랫폼 성장마루",
       "category": "Program",
@@ -67,7 +67,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68648",
       "author": "학생과",
       "date": "2026-03-27",
-      "views": 868,
+      "views": 872,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -91,7 +91,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68620",
       "author": "학생과",
       "date": "2026-03-25",
-      "views": 703,
+      "views": 704,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -103,7 +103,7 @@
       "url": "https://eng.jnu.ac.kr/bbs/eng/993/978672/artclView.do",
       "author": "조은혜",
       "date": "2026-03-26",
-      "views": 684,
+      "views": 685,
       "sourceType": "college",
       "sourceName": "공과대학",
       "category": "공지사항",
@@ -151,7 +151,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68639",
       "author": "학생과",
       "date": "2026-03-27",
-      "views": 441,
+      "views": 442,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -602,6 +602,18 @@
       "isPinned": true
     },
     {
+      "id": "1140",
+      "title": "대학 통합 로그인(전남대 포털) 서비스 2차 인증 체계 적용 안내",
+      "url": "https://spededu.jnu.ac.kr/bbs/spededu/2321/977628/artclView.do",
+      "author": "특수교육학부",
+      "date": "2026-03-23",
+      "views": 144,
+      "sourceType": "department",
+      "sourceName": "특수교육학부",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "774",
       "title": "2026학년도 건강장애학생 맞춤형 멘토링(학습·심리·정서) 모집 안내 새글",
       "url": "https://human.jnu.ac.kr/bbs/human/1819/977624/artclView.do",
@@ -610,18 +622,6 @@
       "views": 143,
       "sourceType": "college",
       "sourceName": "인문대학",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "1140",
-      "title": "대학 통합 로그인(전남대 포털) 서비스 2차 인증 체계 적용 안내",
-      "url": "https://spededu.jnu.ac.kr/bbs/spededu/2321/977628/artclView.do",
-      "author": "특수교육학부",
-      "date": "2026-03-23",
-      "views": 142,
-      "sourceType": "department",
-      "sourceName": "특수교육학부",
       "category": "공지사항",
       "isPinned": false
     },
@@ -703,7 +703,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68638",
       "author": "학생과",
       "date": "2026-03-27",
-      "views": 131,
+      "views": 132,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -919,7 +919,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68650",
       "author": "취업지원실",
       "date": "2026-03-27",
-      "views": 101,
+      "views": 103,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "취업정보",
@@ -1087,7 +1087,7 @@
       "url": "https://humanecology.jnu.ac.kr/bbs/humanecology/1870/977815/artclView.do",
       "author": "성수행",
       "date": "2026-03-23",
-      "views": 88,
+      "views": 89,
       "sourceType": "college",
       "sourceName": "생활과학대학",
       "category": "공지사항",
@@ -1099,7 +1099,7 @@
       "url": "https://humanecology.jnu.ac.kr/bbs/humanecology/1870/977815/artclView.do",
       "author": "성수행",
       "date": "2026-03-23",
-      "views": 88,
+      "views": 89,
       "sourceType": "college",
       "sourceName": "생활과학대학",
       "category": "공지사항",
@@ -1418,6 +1418,18 @@
       "isPinned": false
     },
     {
+      "id": "629",
+      "title": "2026학년도 신입생 대학 핵심역량 진단",
+      "url": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/977832/artclView.do",
+      "author": "김진성",
+      "date": "2026-03-24",
+      "views": 70,
+      "sourceType": "department",
+      "sourceName": "물리교육과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "26923",
       "title": "[Notice Study Abroad-복수학위] 2026학년도 2학기 경영학부 3+1 복수학위 프로그램 최종 합격자 발표",
       "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EB%B3%B5%EC%88%98%ED%95%99%EC%9C%84&Seq=26923",
@@ -1438,18 +1450,6 @@
       "views": 69,
       "sourceType": "department",
       "sourceName": "산림자원학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "629",
-      "title": "2026학년도 신입생 대학 핵심역량 진단",
-      "url": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/977832/artclView.do",
-      "author": "김진성",
-      "date": "2026-03-24",
-      "views": 69,
-      "sourceType": "department",
-      "sourceName": "물리교육과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1922,6 +1922,18 @@
       "isPinned": false
     },
     {
+      "id": "philosophy-1",
+      "title": "(예비군) 2026학년도 대학직장 예비군훈련 계획 안내",
+      "url": "http://philos.jnu.ac.kr/bbs/philos/2261/977909/artclView.do",
+      "author": "철학과",
+      "date": "2026-03-24",
+      "views": 53,
+      "sourceType": "department",
+      "sourceName": "철학과",
+      "category": "공지사항",
+      "isPinned": true
+    },
+    {
       "id": "1700",
       "title": "[지역혁신중심대학지원체계(RISE)사업단] 2026학년도 1학기 캡스톤디자인 교과목 지원 안내(~4/9 15",
       "url": "https://ce.jnu.ac.kr/bbs/ce/2114/977756/artclView.do",
@@ -1944,18 +1956,6 @@
       "sourceName": "통계학과",
       "category": "공지사항",
       "isPinned": false
-    },
-    {
-      "id": "philosophy-1",
-      "title": "(예비군) 2026학년도 대학직장 예비군훈련 계획 안내",
-      "url": "http://philos.jnu.ac.kr/bbs/philos/2261/977909/artclView.do",
-      "author": "철학과",
-      "date": "2026-03-24",
-      "views": 52,
-      "sourceType": "department",
-      "sourceName": "철학과",
-      "category": "공지사항",
-      "isPinned": true
     },
     {
       "id": "332",
@@ -2954,6 +2954,18 @@
       "isPinned": false
     },
     {
+      "id": "biotech-1",
+      "title": "2026학년도 대학원 비교과프로그램 설명회 안내",
+      "url": "https://bte.jnu.ac.kr/bbs/bte/1824/978819/artclView.do",
+      "author": "허수진",
+      "date": "2026-03-27",
+      "views": 14,
+      "sourceType": "department",
+      "sourceName": "생물공학과",
+      "category": "공지사항",
+      "isPinned": true
+    },
+    {
       "id": "743",
       "title": "「2026학년도 대학원 비교과프로그램 설명회」안내 새글",
       "url": "https://sea.jnu.ac.kr/bbs/sea/291/978865/artclView.do",
@@ -2990,18 +3002,6 @@
       "isPinned": false
     },
     {
-      "id": "biotech-1",
-      "title": "2026학년도 대학원 비교과프로그램 설명회 안내",
-      "url": "https://bte.jnu.ac.kr/bbs/bte/1824/978819/artclView.do",
-      "author": "허수진",
-      "date": "2026-03-27",
-      "views": 13,
-      "sourceType": "department",
-      "sourceName": "생물공학과",
-      "category": "공지사항",
-      "isPinned": true
-    },
-    {
       "id": "742",
       "title": "2026학년도 대학원 비교과프로그램 설명회 개최 안내",
       "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/978871/artclView.do",
@@ -3026,6 +3026,18 @@
       "isPinned": false
     },
     {
+      "id": "2339",
+      "title": "[대학원] 2026학년도 1학기 일반대학원 수료후등록(3차) 신청 안내 [마지막]",
+      "url": "https://geo.jnu.ac.kr/bbs/geo/1868/978809/artclView.do",
+      "author": "윤이현",
+      "date": "2026-03-27",
+      "views": 13,
+      "sourceType": "department",
+      "sourceName": "지리학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "1093",
       "title": "2026학년도 신입생 대학 핵심역량 진단 실시 안내",
       "url": "https://mimb.jnu.ac.kr/bbs/mimb/560/978806/artclView.do",
@@ -3034,18 +3046,6 @@
       "views": 12,
       "sourceType": "department",
       "sourceName": "분자생명공학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "2339",
-      "title": "[대학원] 2026학년도 1학기 일반대학원 수료후등록(3차) 신청 안내 [마지막]",
-      "url": "https://geo.jnu.ac.kr/bbs/geo/1868/978809/artclView.do",
-      "author": "윤이현",
-      "date": "2026-03-27",
-      "views": 12,
-      "sourceType": "department",
-      "sourceName": "지리학과",
       "category": "공지사항",
       "isPinned": false
     },
