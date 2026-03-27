@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-03-27T15:39:36.774Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8215
+  },
+  {
     "checkedAt": "2026-03-27T14:54:29.380Z",
     "notices": [
       {
@@ -239,18 +245,6 @@
         "views": 32,
         "sourceType": "college",
         "sourceName": "AI융합대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "132",
-        "title": "2026학년도 대학생 청소년 교육지원사업 참여학생(멘토) 모집 안내",
-        "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/978876/artclView.do",
-        "author": "AI융합대학",
-        "date": "2026-03-27",
-        "views": 32,
-        "sourceType": "department",
-        "sourceName": "융합전공",
         "category": "공지사항",
         "isPinned": false
       },
@@ -643,7 +637,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 53,
+    "newNoticeCount": 52,
     "totalNoticeCount": 8219
   },
   {
@@ -1286,18 +1280,6 @@
         "isPinned": false
       },
       {
-        "id": "68631",
-        "title": "2026년도 제1회 대학원혁신본부 4단계 BK21사업 계약직원...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68631",
-        "author": "인재양성실",
-        "date": "2026-03-26",
-        "views": 126,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
         "id": "1777",
         "title": "[홍보] 2026년 3월 전남대학교병원 직원(지원직) 공개채용 공고",
         "url": "https://welfare.jnu.ac.kr/bbs/welfare/1702/978703/artclView.do",
@@ -1319,66 +1301,6 @@
         "sourceType": "school",
         "sourceName": "전남대학교 본부",
         "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68630",
-        "title": "[CJ제일제당]식품사업분야_신입채용(~4.1.(수) 17시까지)",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68630",
-        "author": "취업지원실",
-        "date": "2026-03-26",
-        "views": 43,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "68632",
-        "title": "2026학년도 상반기 GSAT 및 대기업 대비 직무적성검사 집...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68632",
-        "author": "취업지원실",
-        "date": "2026-03-26",
-        "views": 37,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "68633",
-        "title": "[유네스코 아태교육원] 2026 세계시민교육 청년 리더십 연수...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68633",
-        "author": "전남대학교광주국제개발협력센터",
-        "date": "2026-03-26",
-        "views": 29,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "대학생활",
-        "isPinned": false
-      },
-      {
-        "id": "68628",
-        "title": "[CJ올리브네트웍스]26년 상반기 신입채용(~4.1.(수)17...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68628",
-        "author": "취업지원실",
-        "date": "2026-03-26",
-        "views": 27,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "68629",
-        "title": "[LG유플러스]3월 신입채용(~3.29.(일)23시까지)",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68629",
-        "author": "취업지원실",
-        "date": "2026-03-26",
-        "views": 19,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
         "isPinned": false
       },
       {
@@ -2324,7 +2246,7 @@
         "statusKind": "closed"
       }
     ],
-    "newNoticeCount": 90,
+    "newNoticeCount": 84,
     "totalNoticeCount": 7539
   }
 ]
