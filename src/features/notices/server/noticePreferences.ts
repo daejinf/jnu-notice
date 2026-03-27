@@ -1,4 +1,8 @@
 ﻿import type { NoticePreferences } from "@/types/notice";
+import {
+  loadGitHubNoticePreferencesMap,
+  saveGitHubNoticePreferencesMap,
+} from "@/features/notices/server/githubNoticePreferencesStorage";
 import { readJsonFile, writeJsonFile } from "@/features/notices/server/storagePath";
 
 const PREFERENCES_FILE_NAME = "notice-preferences.json";
@@ -9,8 +13,16 @@ export function normalizeNoticePreferenceScope(scope: string) {
   return scope.trim().toLowerCase();
 }
 
-export async function loadNoticePreferencesMap() {
+async function loadLocalNoticePreferencesMap() {
   return (await readJsonFile<NoticePreferencesMap>(PREFERENCES_FILE_NAME)) ?? {};
+}
+
+async function saveLocalNoticePreferencesMap(preferencesMap: NoticePreferencesMap) {
+  await writeJsonFile(PREFERENCES_FILE_NAME, preferencesMap);
+}
+
+export async function loadNoticePreferencesMap() {
+  return (await loadGitHubNoticePreferencesMap<NoticePreferencesMap>()) ?? (await loadLocalNoticePreferencesMap());
 }
 
 export async function loadNoticePreferences(scope: string) {
@@ -28,6 +40,7 @@ export async function saveNoticePreferences(scope: string, preferences: Omit<Not
   };
 
   preferencesMap[normalizedScope] = nextPreferences;
-  await writeJsonFile(PREFERENCES_FILE_NAME, preferencesMap);
+  await saveLocalNoticePreferencesMap(preferencesMap);
+  await saveGitHubNoticePreferencesMap(preferencesMap).catch(() => false);
   return nextPreferences;
 }

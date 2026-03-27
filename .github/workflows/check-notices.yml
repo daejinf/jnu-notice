@@ -27,6 +27,9 @@ jobs:
       - name: Run notice check
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GITHUB_STORAGE_TOKEN: ${{ github.token }}
+          GITHUB_STORAGE_REPOSITORY: ${{ github.repository }}
+          GITHUB_STORAGE_BRANCH: ${{ github.ref_name }}
         run: npm run check:notices
 
       - name: Commit stored notices update
