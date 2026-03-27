@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { MyNoticeAlertsSection } from "@/features/notices/components/MyNoticeAlertsSection";
 import { formatNoticeDate, formatViewsLabel } from "@/features/notices/utils/format";
+import type { MyAlertsSnapshot } from "@/features/notices/server/myAlerts";
 import type { NoticeUpdateSnapshot } from "@/types/notice";
 
 type HistoryTab = "updates" | "alerts";
@@ -127,9 +128,11 @@ function SelectorCard({
 
 export function UpdatesHubSection({
   history,
+  myAlerts,
   initialTab = "alerts",
 }: {
   history: NoticeUpdateSnapshot[];
+  myAlerts: MyAlertsSnapshot;
   initialTab?: HistoryTab;
 }) {
   const [tab, setTab] = useState<HistoryTab>(initialTab);
@@ -150,7 +153,7 @@ export function UpdatesHubSection({
               label={TEXT.alertsLabel}
               title={TEXT.alertsTitle}
               description={TEXT.alertsDescription}
-              badge={TEXT.alertsCta}
+              badge={myAlerts.hasPreferences ? `${myAlerts.totalCount}건` : TEXT.alertsCta}
               onClick={() => setTab("alerts")}
             />
             <SelectorCard
@@ -164,7 +167,7 @@ export function UpdatesHubSection({
           </div>
         </section>
 
-        {tab === "updates" ? <UpdatesHistoryList history={history} /> : <MyNoticeAlertsSection embedded />}
+        {tab === "updates" ? <UpdatesHistoryList history={history} /> : <MyNoticeAlertsSection embedded initialData={myAlerts} />}
       </div>
     </main>
   );

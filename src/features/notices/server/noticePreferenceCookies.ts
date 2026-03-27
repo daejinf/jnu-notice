@@ -11,6 +11,10 @@ const COOKIE_NAMES = {
   updatedAt: "jnu_notice_pref_updated_at",
 } as const;
 
+type CookieReader = {
+  get(name: string): { value?: string } | undefined;
+};
+
 function parseList(value?: string) {
   if (!value) return [];
   return value
@@ -19,12 +23,12 @@ function parseList(value?: string) {
     .filter(Boolean);
 }
 
-export function readNoticePreferencesFromRequest(request: NextRequest): NoticePreferences | null {
-  const schoolCategoryKeys = parseList(request.cookies.get(COOKIE_NAMES.school)?.value);
-  const collegeKeys = parseList(request.cookies.get(COOKIE_NAMES.college)?.value);
-  const departmentKeys = parseList(request.cookies.get(COOKIE_NAMES.department)?.value);
-  const centerKeys = parseList(request.cookies.get(COOKIE_NAMES.center)?.value);
-  const updatedAt = request.cookies.get(COOKIE_NAMES.updatedAt)?.value;
+export function readNoticePreferencesFromCookieStore(cookieStore: CookieReader): NoticePreferences | null {
+  const schoolCategoryKeys = parseList(cookieStore.get(COOKIE_NAMES.school)?.value);
+  const collegeKeys = parseList(cookieStore.get(COOKIE_NAMES.college)?.value);
+  const departmentKeys = parseList(cookieStore.get(COOKIE_NAMES.department)?.value);
+  const centerKeys = parseList(cookieStore.get(COOKIE_NAMES.center)?.value);
+  const updatedAt = cookieStore.get(COOKIE_NAMES.updatedAt)?.value;
 
   const hasAnySelection =
     schoolCategoryKeys.length > 0 ||
@@ -43,6 +47,10 @@ export function readNoticePreferencesFromRequest(request: NextRequest): NoticePr
     centerKeys,
     updatedAt: updatedAt || new Date().toISOString(),
   };
+}
+
+export function readNoticePreferencesFromRequest(request: NextRequest): NoticePreferences | null {
+  return readNoticePreferencesFromCookieStore(request.cookies);
 }
 
 export function applyNoticePreferencesCookies(

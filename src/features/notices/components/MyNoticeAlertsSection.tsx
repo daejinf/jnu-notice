@@ -3,15 +3,7 @@
 import { useEffect, useState } from "react";
 import { formatNoticeDate, formatViewsLabel } from "@/features/notices/utils/format";
 import type { Notice } from "@/types/notice";
-
-type MyAlertsResponse = {
-  notices: Notice[];
-  fetchedAt: string;
-  totalCount: number;
-  hasPreferences: boolean;
-  preferencesUpdatedAt?: string;
-  error?: string;
-};
+import type { MyAlertsSnapshot } from "@/features/notices/server/myAlerts";
 
 const TEXT = {
   badge: "맞춤",
@@ -59,24 +51,30 @@ function AlertsSnapshotHeader({ fetchedAt, totalCount }: { fetchedAt: string | n
 
 export function MyNoticeAlertsSection({
   embedded = false,
+  initialData,
 }: {
   embedded?: boolean;
+  initialData?: MyAlertsSnapshot;
 }) {
-  const [notices, setNotices] = useState<Notice[]>([]);
-  const [fetchedAt, setFetchedAt] = useState<string | null>(null);
-  const [preferencesUpdatedAt, setPreferencesUpdatedAt] = useState<string | null>(null);
-  const [hasPreferences, setHasPreferences] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [notices, setNotices] = useState<Notice[]>(initialData?.notices ?? []);
+  const [fetchedAt, setFetchedAt] = useState<string | null>(initialData?.fetchedAt ?? null);
+  const [preferencesUpdatedAt, setPreferencesUpdatedAt] = useState<string | null>(initialData?.preferencesUpdatedAt ?? null);
+  const [hasPreferences, setHasPreferences] = useState(initialData?.hasPreferences ?? true);
+  const [isLoading, setIsLoading] = useState(initialData ? false : true);
+  const [error, setError] = useState<string | null>(initialData?.error ?? null);
 
   useEffect(() => {
+    if (initialData) {
+      return;
+    }
+
     const controller = new AbortController();
     const run = async () => {
       try {
         setIsLoading(true);
         setError(null);
         const response = await fetch("/api/my-alerts", { signal: controller.signal, cache: "no-store" });
-        const data = (await response.json()) as MyAlertsResponse;
+        const data = (await response.json()) as MyAlertsSnapshot;
         if (!response.ok) throw new Error(data.error ?? TEXT.loadError);
         setNotices(data.notices);
         setFetchedAt(data.fetchedAt);
@@ -95,7 +93,7 @@ export function MyNoticeAlertsSection({
     };
     void run();
     return () => controller.abort();
-  }, []);
+  }, [initialData]);
 
   const content = (
     <>
