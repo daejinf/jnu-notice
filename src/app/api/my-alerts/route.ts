@@ -6,6 +6,9 @@ import { loadNoticePreferences } from "@/features/notices/server/noticePreferenc
 import { buildMyAlertsSnapshot } from "@/features/notices/server/myAlerts";
 import { loadMyAlertsSnapshot } from "@/features/notices/server/myAlertsSnapshots";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET() {
   const session = await auth();
   if (!session) {
@@ -23,5 +26,9 @@ export async function GET() {
     (preferences && !requestHeaders.get("x-force-live-alerts") ? await loadMyAlertsSnapshot(sessionScope) : null) ??
     (await buildMyAlertsSnapshot(preferences));
 
-  return NextResponse.json(snapshot);
+  return NextResponse.json(snapshot, {
+    headers: {
+      "Cache-Control": "no-store, max-age=0",
+    },
+  });
 }

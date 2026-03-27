@@ -8,6 +8,9 @@ import { buildMyAlertsSnapshot } from "@/features/notices/server/myAlerts";
 import { loadMyAlertsSnapshot } from "@/features/notices/server/myAlertsSnapshots";
 import { cookies } from "next/headers";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default async function UpdatesPage({
   searchParams,
 }: {
