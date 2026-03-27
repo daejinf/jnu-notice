@@ -5,6 +5,7 @@ import { readNoticePreferencesFromCookieStore } from "@/features/notices/server/
 import { loadNoticePreferences } from "@/features/notices/server/noticePreferences";
 import { loadNoticeUpdateHistory } from "@/features/notices/server/noticeUpdateHistory";
 import { buildMyAlertsSnapshot } from "@/features/notices/server/myAlerts";
+import { loadMyAlertsSnapshot } from "@/features/notices/server/myAlertsSnapshots";
 import { cookies } from "next/headers";
 
 export default async function UpdatesPage({
@@ -25,7 +26,9 @@ export default async function UpdatesPage({
   const preferences =
     (await loadNoticePreferences(sessionScope)) ??
     readNoticePreferencesFromCookieStore(cookieStore);
-  const myAlerts = await buildMyAlertsSnapshot(preferences);
+  const myAlerts =
+    (preferences ? await loadMyAlertsSnapshot(sessionScope) : null) ??
+    (await buildMyAlertsSnapshot(preferences));
 
   return <UpdatesHubSection history={history} initialTab={initialTab} myAlerts={myAlerts} />;
 }

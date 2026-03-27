@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { formatNoticeDate, formatViewsLabel } from "@/features/notices/utils/format";
-import type { Notice } from "@/types/notice";
-import type { MyAlertsSnapshot } from "@/features/notices/server/myAlerts";
+import type { MyAlertsSnapshot, Notice } from "@/types/notice";
 
 const TEXT = {
   badge: "맞춤",

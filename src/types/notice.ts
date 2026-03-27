@@ -41,3 +41,17 @@ export type NoticePreferences = {
   centerKeys: string[];
   updatedAt: string;
 };
+
+export type MyAlertsSnapshot = {
+  notices: Notice[];
+  fetchedAt: string;
+  totalCount: number;
+  hasPreferences: boolean;
+  preferencesUpdatedAt?: string;
+  error?: string;
+};
+
+export type MyAlertsSnapshotStore = {
+  checkedAt: string;
+  scopes: Record<string, MyAlertsSnapshot>;
+};

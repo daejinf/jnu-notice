@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { MyNoticeAlertsSection } from "@/features/notices/components/MyNoticeAlertsSection";
 import { formatNoticeDate, formatViewsLabel } from "@/features/notices/utils/format";
-import type { MyAlertsSnapshot } from "@/features/notices/server/myAlerts";
-import type { NoticeUpdateSnapshot } from "@/types/notice";
+import type { MyAlertsSnapshot, NoticeUpdateSnapshot } from "@/types/notice";
 
 type HistoryTab = "updates" | "alerts";
 

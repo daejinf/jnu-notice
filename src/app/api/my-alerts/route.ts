@@ -1,30 +1,27 @@
 ﻿import { auth } from "@/auth";
-import type { Session } from "next-auth";
-import { NextRequest, NextResponse } from "next/server";
-import { readNoticePreferencesFromRequest } from "@/features/notices/server/noticePreferenceCookies";
+import { NextResponse } from "next/server";
+import { headers, cookies } from "next/headers";
+import { readNoticePreferencesFromCookieStore } from "@/features/notices/server/noticePreferenceCookies";
 import { loadNoticePreferences } from "@/features/notices/server/noticePreferences";
 import { buildMyAlertsSnapshot } from "@/features/notices/server/myAlerts";
+import { loadMyAlertsSnapshot } from "@/features/notices/server/myAlertsSnapshots";
 
-function getSessionScope(session: Session | null) {
-  return session?.user?.email ?? session?.user?.name ?? "default";
-}
-
-export async function GET(request: NextRequest) {
+export async function GET() {
   const session = await auth();
-
   if (!session) {
-    return NextResponse.json(
-      {
-        notices: [],
-        error: "로그인이 필요합니다.",
-      },
-      { status: 401 },
-    );
+    return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
   }
 
+  const sessionScope = session.user?.email ?? session.user?.name ?? "default";
+  const requestHeaders = await headers();
+  const cookieStore = await cookies();
   const preferences =
-    (await loadNoticePreferences(getSessionScope(session))) ??
-    readNoticePreferencesFromRequest(request);
+    (await loadNoticePreferences(sessionScope)) ??
+    readNoticePreferencesFromCookieStore(cookieStore);
 
-  return NextResponse.json(await buildMyAlertsSnapshot(preferences));
+  const snapshot =
+    (preferences && !requestHeaders.get("x-force-live-alerts") ? await loadMyAlertsSnapshot(sessionScope) : null) ??
+    (await buildMyAlertsSnapshot(preferences));
+
+  return NextResponse.json(snapshot);
 }

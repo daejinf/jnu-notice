@@ -1,4 +1,4 @@
-﻿import type { Notice, NoticePreferences } from "@/types/notice";
+﻿import type { MyAlertsSnapshot, Notice, NoticePreferences } from "@/types/notice";
 import { enabledCenterBoardConfigs } from "@/features/notices/config/centerBoards";
 import { enabledCollegeBoardConfigs } from "@/features/notices/config/collegeBoards";
 import { enabledDepartmentConfigs } from "@/features/notices/config/departments";
@@ -7,25 +7,7 @@ import { loadNoticeCheckSnapshot } from "@/features/notices/server/noticeCheckSn
 import { loadStoredNotices } from "@/features/notices/server/noticeStorage";
 import { sortNoticesByDate } from "@/features/notices/lib/sortNotices";
 
-export type MyAlertsSnapshot = {
-  notices: Notice[];
-  fetchedAt: string;
-  totalCount: number;
-  hasPreferences: boolean;
-  preferencesUpdatedAt?: string;
-  error?: string;
-};
-
-export async function buildMyAlertsSnapshot(preferences: NoticePreferences | null): Promise<MyAlertsSnapshot> {
-  if (!preferences) {
-    return {
-      notices: [],
-      fetchedAt: new Date().toISOString(),
-      totalCount: 0,
-      hasPreferences: false,
-    };
-  }
-
+export function filterMyAlertNotices(notices: Notice[], preferences: NoticePreferences) {
   const allowedSchoolCategories = new Set(
     schoolBoardCategories
       .filter((category) => preferences.schoolCategoryKeys.includes(category.key))
@@ -47,8 +29,7 @@ export async function buildMyAlertsSnapshot(preferences: NoticePreferences | nul
       .map((center) => center.sourceName),
   );
 
-  const notices = await loadStoredNotices();
-  const filteredNotices = sortNoticesByDate(
+  return sortNoticesByDate(
     notices.filter((notice) => {
       if (notice.sourceType === "school") {
         return allowedSchoolCategories.has(notice.category);
@@ -65,14 +46,36 @@ export async function buildMyAlertsSnapshot(preferences: NoticePreferences | nul
       return false;
     }),
   );
+}
 
-  const latestCheck = await loadNoticeCheckSnapshot();
+export function buildMyAlertsSnapshotFromNotices(
+  notices: Notice[],
+  checkedAt: string,
+  preferences: NoticePreferences | null,
+): MyAlertsSnapshot {
+  if (!preferences) {
+    return {
+      notices: [],
+      fetchedAt: checkedAt,
+      totalCount: 0,
+      hasPreferences: false,
+    };
+  }
+
+  const filteredNotices = filterMyAlertNotices(notices, preferences);
 
   return {
     notices: filteredNotices,
-    fetchedAt: latestCheck?.checkedAt ?? new Date().toISOString(),
+    fetchedAt: checkedAt,
     totalCount: filteredNotices.length,
     hasPreferences: true,
     preferencesUpdatedAt: preferences.updatedAt,
   };
+}
+
+export async function buildMyAlertsSnapshot(preferences: NoticePreferences | null): Promise<MyAlertsSnapshot> {
+  const notices = await loadStoredNotices();
+  const latestCheck = await loadNoticeCheckSnapshot();
+  const checkedAt = latestCheck?.checkedAt ?? new Date().toISOString();
+  return buildMyAlertsSnapshotFromNotices(notices, checkedAt, preferences);
 }

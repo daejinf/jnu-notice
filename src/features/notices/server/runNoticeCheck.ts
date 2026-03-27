@@ -14,6 +14,7 @@ import { loadStoredNotices, saveNotices } from "@/features/notices/server/notice
 import { appendNoticeUpdateSnapshot, filterFreshNotices } from "@/features/notices/server/noticeUpdateHistory";
 import { notifyNewNotices } from "@/features/notices/server/notifications";
 import { saveRecentHotNotices } from "@/features/notices/server/fetchTodayHotNotices";
+import { saveMyAlertsSnapshots } from "@/features/notices/server/myAlertsSnapshots";
 
 async function resolveNoticeGroup(
   label: string,
@@ -49,6 +50,7 @@ export async function runNoticeCheck() {
     checkedAt,
     totalNoticeCount: currentNotices.length,
   });
+  await saveMyAlertsSnapshots(currentNotices, checkedAt);
 
   if (newNotices.length > 0) {
     console.log(`new notices: ${newNotices.length}`);
