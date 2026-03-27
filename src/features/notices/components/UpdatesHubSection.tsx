@@ -12,6 +12,8 @@ const TEXT = {
   title: "내 알림과 새 공지",
   description: "놓치면 아쉬운 것부터 바로 봅니다.",
   updatedUntil: "최근 반영",
+  latestCheck: "최근 수집",
+  noNewNoticesThisRun: "이번 회차에는 새 공지가 없었습니다.",
   alertsLabel: "내 알림",
   alertsTitle: "내가 켜둔 공지",
   alertsDescription: "고른 소스만 바로 모아봅니다.",
@@ -45,13 +47,41 @@ function getStatusTone(label?: string) {
   return "border border-emerald-500 bg-white text-emerald-600";
 }
 
-function UpdatesHistoryList({ history }: { history: NoticeUpdateSnapshot[] }) {
+function UpdatesHistoryList({
+  history,
+  latestCheckedAt,
+}: {
+  history: NoticeUpdateSnapshot[];
+  latestCheckedAt: string | null;
+}) {
+  const latestHistoryCheckedAt = history[0]?.checkedAt ?? null;
+  const showLatestCheckNote = Boolean(latestCheckedAt && latestCheckedAt !== latestHistoryCheckedAt);
+
   if (history.length === 0) {
-    return <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.empty}</section>;
+    return (
+      <div className="grid gap-4">
+        {showLatestCheckNote ? (
+          <section className="rounded-[28px] border border-slate-200 bg-white px-5 py-4 text-sm text-slate-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+            <span className="font-semibold text-slate-700">{TEXT.latestCheck}</span>
+            {` ${formatCheckedAt(latestCheckedAt ?? "")}`}
+            <span className="ml-2 text-slate-400">{TEXT.noNewNoticesThisRun}</span>
+          </section>
+        ) : null}
+        <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.empty}</section>
+      </div>
+    );
   }
 
   return (
     <div className="grid gap-5">
+      {showLatestCheckNote ? (
+        <section className="rounded-[28px] border border-slate-200 bg-white px-5 py-4 text-sm text-slate-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+          <span className="font-semibold text-slate-700">{TEXT.latestCheck}</span>
+          {` ${formatCheckedAt(latestCheckedAt ?? "")}`}
+          <span className="ml-2 text-slate-400">{TEXT.noNewNoticesThisRun}</span>
+        </section>
+      ) : null}
+
       {history.map((snapshot) => {
         const newNoticeCount = snapshot.newNoticeCount ?? snapshot.notices.length;
         const totalNoticeCount = snapshot.totalNoticeCount ?? 0;
@@ -131,15 +161,16 @@ function SelectorCard({
 
 export function UpdatesHubSection({
   history,
+  latestCheckedAt,
   myAlerts,
   initialTab = "alerts",
 }: {
   history: NoticeUpdateSnapshot[];
+  latestCheckedAt: string | null;
   myAlerts: MyAlertsSnapshot;
   initialTab?: HistoryTab;
 }) {
   const [tab, setTab] = useState<HistoryTab>(initialTab);
-  const latestHistoryCheckedAt = history[0]?.checkedAt ?? null;
 
   return (
     <main className="min-h-screen bg-transparent">
@@ -166,14 +197,18 @@ export function UpdatesHubSection({
               label={TEXT.updatesLabel}
               title={TEXT.updatesTitle}
               description={TEXT.updatesDescription}
-              updatedAt={latestHistoryCheckedAt}
+              updatedAt={latestCheckedAt}
               badge={`${history.length}회`}
               onClick={() => setTab("updates")}
             />
           </div>
         </section>
 
-        {tab === "updates" ? <UpdatesHistoryList history={history} /> : <MyNoticeAlertsSection embedded initialData={myAlerts} />}
+        {tab === "updates" ? (
+          <UpdatesHistoryList history={history} latestCheckedAt={latestCheckedAt} />
+        ) : (
+          <MyNoticeAlertsSection embedded initialData={myAlerts} />
+        )}
       </div>
     </main>
   );
