@@ -27,7 +27,7 @@ export const schoolBoardCategories: SchoolBoardCategory[] = [
   {
     key: "campusLife",
     name: "대학생활",
-    cate: "2",
+    cate: "6",
     sourceType: "school",
     sourceName: "전남대학교 본부",
   },
@@ -111,14 +111,14 @@ export const schoolBoardCategories: SchoolBoardCategory[] = [
   {
     key: "staffAward",
     name: "직원표창공개",
-    cate: "18",
+    cate: "842",
     sourceType: "school",
     sourceName: "전남대학교 본부",
   },
   {
     key: "administrative",
     name: "행정공고",
-    cate: "19",
+    cate: "1367",
     sourceType: "school",
     sourceName: "전남대학교 본부",
   },
