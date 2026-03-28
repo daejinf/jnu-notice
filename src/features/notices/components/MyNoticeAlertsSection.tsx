@@ -7,7 +7,7 @@ import type { MyAlertsSnapshot, Notice } from "@/types/notice";
 const TEXT = {
   badge: "맞춤",
   title: "내가 켜둔 공지",
-  description: "고른 소스만 바로 모아봅니다.",
+  description: "켜둔 소스 중 오늘 올라온 것만 모아봅니다.",
   totalCount: "총",
   checkedAt: "수집 시각",
   lastFetched: "마지막 반영",
@@ -16,7 +16,7 @@ const TEXT = {
   loadErrorFallback: "내 알림을 불러오는 중 오류가 발생했습니다.",
   noPreferences: "아직 켜둔 소스가 없습니다. 관리에서 먼저 고르면 바로 반영됩니다.",
   loading: "서버에서 불러오는 중입니다.",
-  empty: "지금 조건에 맞는 공지가 없습니다.",
+  empty: "오늘은 켜둔 소스에 새 공지가 없습니다.",
   author: "작성자",
   date: "게시일",
 };
@@ -150,3 +150,4 @@ export function MyNoticeAlertsSection({
     </main>
   );
 }
+

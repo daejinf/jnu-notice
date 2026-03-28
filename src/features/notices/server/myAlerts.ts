@@ -7,7 +7,50 @@ import { loadNoticeCheckSnapshot } from "@/features/notices/server/noticeCheckSn
 import { loadStoredNotices } from "@/features/notices/server/noticeStorage";
 import { sortNoticesByDate } from "@/features/notices/lib/sortNotices";
 
-export function filterMyAlertNotices(notices: Notice[], preferences: NoticePreferences) {
+function toSeoulDateKey(value: string | Date) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(date);
+
+  const year = parts.find((part) => part.type === "year")?.value;
+  const month = parts.find((part) => part.type === "month")?.value;
+  const day = parts.find((part) => part.type === "day")?.value;
+
+  return year && month && day ? `${year}-${month}-${day}` : null;
+}
+
+function normalizeNoticeDateKey(value: string) {
+  const match = value.match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);
+  if (!match) {
+    return null;
+  }
+
+  const [, year, month, day] = match;
+  return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+}
+
+function isNoticeFromCheckedDay(notice: Notice, checkedAt: string) {
+  const checkedDateKey = toSeoulDateKey(checkedAt);
+  const noticeDateKey = normalizeNoticeDateKey(notice.date);
+  if (!checkedDateKey || !noticeDateKey) {
+    return false;
+  }
+  return checkedDateKey === noticeDateKey;
+}
+
+export function filterMyAlertNotices(
+  notices: Notice[],
+  preferences: NoticePreferences,
+  checkedAt: string,
+) {
   const allowedSchoolCategories = new Set(
     schoolBoardCategories
       .filter((category) => preferences.schoolCategoryKeys.includes(category.key))
@@ -31,19 +74,23 @@ export function filterMyAlertNotices(notices: Notice[], preferences: NoticePrefe
 
   return sortNoticesByDate(
     notices.filter((notice) => {
-      if (notice.sourceType === "school") {
-        return allowedSchoolCategories.has(notice.category);
-      }
-      if (notice.sourceType === "college") {
-        return allowedColleges.has(notice.sourceName);
-      }
-      if (notice.sourceType === "department") {
-        return allowedDepartments.has(notice.sourceName);
-      }
-      if (notice.sourceType === "center") {
-        return allowedCenters.has(notice.sourceName);
-      }
-      return false;
+      const isAllowed = (() => {
+        if (notice.sourceType === "school") {
+          return allowedSchoolCategories.has(notice.category);
+        }
+        if (notice.sourceType === "college") {
+          return allowedColleges.has(notice.sourceName);
+        }
+        if (notice.sourceType === "department") {
+          return allowedDepartments.has(notice.sourceName);
+        }
+        if (notice.sourceType === "center") {
+          return allowedCenters.has(notice.sourceName);
+        }
+        return false;
+      })();
+
+      return isAllowed && isNoticeFromCheckedDay(notice, checkedAt);
     }),
   );
 }
@@ -62,7 +109,7 @@ export function buildMyAlertsSnapshotFromNotices(
     };
   }
 
-  const filteredNotices = filterMyAlertNotices(notices, preferences);
+  const filteredNotices = filterMyAlertNotices(notices, preferences, checkedAt);
 
   return {
     notices: filteredNotices,
