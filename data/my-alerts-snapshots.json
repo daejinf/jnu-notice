@@ -1,10 +1,47 @@
 {
-  "checkedAt": "2026-03-31T23:50:19.271Z",
+  "checkedAt": "2026-04-01T03:45:52.999Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-03-31T23:50:19.271Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "3913",
+          "title": "2026 AICOSS 서포터즈 선발 안내",
+          "url": "https://www.aicoss.kr/www/notice/view/3913?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-04-01",
+          "views": 63,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "2855",
+          "title": "[기후에너지환경부 국립생물자원관] 생물다양성 정책지원 현장실무 인력양성 야생동물 교육과정 교육생 모집",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=2855",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-04-01",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": true
+        },
+        {
+          "id": "823",
+          "title": "New 2026학년도 1학기 SW교학상장, 학부-대학원 프로그램 선발 안내",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=823&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-04-01",
+          "views": 111,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-01T03:45:52.999Z",
+      "totalCount": 3,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
