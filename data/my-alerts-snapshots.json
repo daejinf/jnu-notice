@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-02T05:24:34.299Z",
+  "checkedAt": "2026-04-02T06:55:01.745Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,10 +9,22 @@
           "url": "https://www.aicoss.kr/www/notice/view/3914?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
           "author": "인공지능혁신융합대학사업단",
           "date": "2026-04-02",
-          "views": 41,
+          "views": 49,
           "sourceType": "center",
           "sourceName": "인공지능혁신융합대학사업단",
           "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "1",
+          "title": "[교수지원] 2026학년도 1학기 교수 공동체 더티칭랩 선정 결과",
+          "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10469?p=1",
+          "author": "이현진",
+          "date": "2026-04-02",
+          "views": 2,
+          "sourceType": "center",
+          "sourceName": "교육혁신본부",
+          "category": "기관 공지",
           "isPinned": true
         },
         {
@@ -21,15 +33,15 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68706",
           "author": "입학과",
           "date": "2026-04-02",
-          "views": 132,
+          "views": 153,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-02T05:24:34.299Z",
-      "totalCount": 2,
+      "fetchedAt": "2026-04-02T06:55:01.745Z",
+      "totalCount": 3,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
