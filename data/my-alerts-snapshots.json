@@ -1,23 +1,35 @@
 {
-  "checkedAt": "2026-04-03T03:28:25.648Z",
+  "checkedAt": "2026-04-03T05:26:28.693Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "828",
+          "title": "New 2026 SW 창업동아리 선발 결과 안내",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=828&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-04-03",
+          "views": 39,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        },
         {
           "id": "68719",
           "title": "2026년도 정보보호특성화대학지원사업단 참여학생 모집(3.31...",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68719",
           "author": "정보보호특성화대학지원사업단",
           "date": "2026-04-03",
-          "views": 14,
+          "views": 27,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-03T03:28:25.648Z",
-      "totalCount": 1,
+      "fetchedAt": "2026-04-03T05:26:28.693Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
