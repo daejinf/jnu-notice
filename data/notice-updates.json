@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-03T19:05:45.303Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7915
+  },
+  {
     "checkedAt": "2026-04-03T17:53:43.850Z",
     "notices": [
       {
@@ -51,18 +57,6 @@
   {
     "checkedAt": "2026-04-03T14:27:58.948Z",
     "notices": [
-      {
-        "id": "chemical-1",
-        "title": "(필수) 2026년도 재학생 온라인 폭력예방교육 실시 안내",
-        "url": "https://ace.jnu.ac.kr/bbs/ace/1860/992970/artclView.do",
-        "author": "나현정",
-        "date": "2026-04-03",
-        "views": 83,
-        "sourceType": "department",
-        "sourceName": "화학공학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
       {
         "id": "2231",
         "title": "(6/30, 10:30)신소재공학부 초청 세미나 안내(Prof. Joachim Maier)",
@@ -120,18 +114,6 @@
         "views": 33,
         "sourceType": "department",
         "sourceName": "신소재공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3240",
-        "title": "2026년 전남대 전공 알림아리 프로그램 운영을 위한 전공 알리미 선발",
-        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/992563/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-03",
-        "views": 32,
-        "sourceType": "department",
-        "sourceName": "전기공학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -280,7 +262,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 19,
+    "newNoticeCount": 17,
     "totalNoticeCount": 7918
   },
   {
@@ -5572,60 +5554,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8217
-  },
-  {
-    "checkedAt": "2026-03-28T12:00:02.747Z",
-    "notices": [
-      {
-        "id": "chemical-1",
-        "title": "신입생 전공탐색 멘토링 신청 안내",
-        "url": "https://ace.jnu.ac.kr/bbs/ace/1860/978729/artclView.do",
-        "author": "나현정",
-        "date": "2026-03-27",
-        "views": 249,
-        "sourceType": "department",
-        "sourceName": "화학공학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "biotech-1",
-        "title": "2026학년도 대학원 비교과프로그램 설명회 안내",
-        "url": "https://bte.jnu.ac.kr/bbs/bte/1824/978819/artclView.do",
-        "author": "허수진",
-        "date": "2026-03-27",
-        "views": 15,
-        "sourceType": "department",
-        "sourceName": "생물공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "2223",
-        "title": "「2026학년도 대학원 비교과프로그램 설명회」 개최 안내",
-        "url": "https://mse.jnu.ac.kr/bbs/mse/2060/978803/artclView.do",
-        "author": "관리자",
-        "date": "2026-03-27",
-        "views": 83,
-        "sourceType": "department",
-        "sourceName": "신소재공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "408",
-        "title": "2026학년도 대학원 비교과프로그램 설명회 개최 안내(4/2 16:00)",
-        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/978862/artclView.do",
-        "author": "관리자",
-        "date": "2026-03-27",
-        "views": 30,
-        "sourceType": "department",
-        "sourceName": "전자컴퓨터공학부",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 4,
-    "totalNoticeCount": 7977
   }
 ]
