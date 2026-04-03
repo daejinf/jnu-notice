@@ -1,10 +1,23 @@
 {
-  "checkedAt": "2026-04-02T23:50:53.052Z",
+  "checkedAt": "2026-04-03T03:28:25.648Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-02T23:50:53.052Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "68719",
+          "title": "2026년도 정보보호특성화대학지원사업단 참여학생 모집(3.31...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68719",
+          "author": "정보보호특성화대학지원사업단",
+          "date": "2026-04-03",
+          "views": 14,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-03T03:28:25.648Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
