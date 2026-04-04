@@ -1057,12 +1057,10 @@ async function fetchCenterByCustomEngine(
     }
   }
 
-  if (center.engine === "sojoong-notice") {
-    return enrichNoticeViews(allNotices, fetchImpl, parseSojoongDetailViews);
-  }
-
-  if (center.engine === "sojoong-education" && options.maxPages === undefined) {
-    return enrichNoticeViews(allNotices, fetchImpl, parseSojoongDetailViews);
+  // Sojoong detail pages increment the public view counter on every GET.
+  // Keep list-derived notices only so our crawler never inflates their views.
+  if (center.engine === "sojoong-notice" || center.engine === "sojoong-education") {
+    return sortNoticesByDate(dedupeNotices(allNotices));
   }
 
   return sortNoticesByDate(dedupeNotices(allNotices));
@@ -1109,6 +1107,7 @@ export async function fetchMultipleCenterBoardNotices(
 
   return sortNoticesByDate(dedupeNotices(settledGroups.flat()));
 }
+
 
 
 
