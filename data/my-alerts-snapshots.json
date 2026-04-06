@@ -1,10 +1,71 @@
 {
-  "checkedAt": "2026-04-05T23:49:43.398Z",
+  "checkedAt": "2026-04-06T03:39:59.867Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-05T23:49:43.398Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "68723",
+          "title": "2026 전남대학교 지역봉사 참가자 모집 공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68723",
+          "author": "학생과",
+          "date": "2026-04-06",
+          "views": 87,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": true
+        },
+        {
+          "id": "26949",
+          "title": "[Notice Study Abroad-단기파견] 2026학년도 하계 해외 단기 파견 2차 모집 안내 (~4. 8. 수)",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EB%8B%A8%EA%B8%B0%ED%8C%8C%EA%B2%AC&Seq=26949",
+          "author": "국제협력과",
+          "date": "2026-04-06",
+          "views": 1289,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "68724",
+          "title": "2026학년도 1학기 학부 및 대학원 재학생 미등록자 고지서 출력",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68724",
+          "author": "재무과",
+          "date": "2026-04-06",
+          "views": 98,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "1758",
+          "title": "(선발자만 참고_개별연락) ★2026.1학기 교수 교육 및 연구 보조 국가 근로장학생 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/998566/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-06",
+          "views": 11,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1",
+          "title": "[학생지원] 2026학년도 1학기 이뭣고-교학상장 알림아리 성료",
+          "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10511?p=1",
+          "author": "강미영",
+          "date": "2026-04-06",
+          "views": 1,
+          "sourceType": "center",
+          "sourceName": "교육혁신본부",
+          "category": "기관 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-06T03:39:59.867Z",
+      "totalCount": 5,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
