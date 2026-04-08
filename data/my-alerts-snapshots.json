@@ -1,8 +1,20 @@
 {
-  "checkedAt": "2026-04-08T12:42:50.217Z",
+  "checkedAt": "2026-04-08T14:19:29.423Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "ai-major-1",
+          "title": "[지능형 소프트웨어 진화 및 유지보수 연구실] 연구원 모집",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1003051/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-04-08",
+          "views": 79,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
         {
           "id": "software-5",
           "title": "(~4/23) [지능형 소프트웨어 진화 및 유지보수 연구실] : 김미수교수님 연구실 연구원",
@@ -12,18 +24,6 @@
           "views": 78,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
-          "category": "공지사항",
-          "isPinned": true
-        },
-        {
-          "id": "ai-major-1",
-          "title": "[지능형 소프트웨어 진화 및 유지보수 연구실] 연구원 모집",
-          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1003051/artclView.do",
-          "author": "인공지능학부",
-          "date": "2026-04-08",
-          "views": 69,
-          "sourceType": "department",
-          "sourceName": "인공지능학부",
           "category": "공지사항",
           "isPinned": true
         },
@@ -45,7 +45,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1002994/artclView.do",
           "author": "오승하",
           "date": "2026-04-08",
-          "views": 20,
+          "views": 21,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -57,7 +57,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1003002/artclView.do",
           "author": "오승하",
           "date": "2026-04-08",
-          "views": 18,
+          "views": 19,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -69,7 +69,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1003070/artclView.do",
           "author": "오승하",
           "date": "2026-04-08",
-          "views": 16,
+          "views": 17,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -81,7 +81,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1003095/artclView.do",
           "author": "오승하",
           "date": "2026-04-08",
-          "views": 9,
+          "views": 13,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -117,7 +117,7 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EA%B5%AD%EC%A0%9C%EC%9D%B8%ED%84%B4&Seq=26958",
           "author": "국제협력과",
           "date": "2026-04-08",
-          "views": 716,
+          "views": 737,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
@@ -129,7 +129,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68762",
           "author": "전남대학교광주국제개발협력센터",
           "date": "2026-04-08",
-          "views": 243,
+          "views": 248,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -141,22 +141,10 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68771",
           "author": "학생과",
           "date": "2026-04-08",
-          "views": 106,
+          "views": 120,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
-          "isPinned": false
-        },
-        {
-          "id": "68761",
-          "title": "2026학년도 1학기 재학생 분할납부 3회차 고지서 출력",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68761",
-          "author": "재무과",
-          "date": "2026-04-08",
-          "views": 74,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "학사안내",
           "isPinned": false
         },
         {
@@ -165,10 +153,22 @@
           "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1003051/artclView.do",
           "author": "인공지능학부",
           "date": "2026-04-08",
-          "views": 69,
+          "views": 79,
           "sourceType": "department",
           "sourceName": "인공지능학부",
           "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "68761",
+          "title": "2026학년도 1학기 재학생 분할납부 3회차 고지서 출력",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68761",
+          "author": "재무과",
+          "date": "2026-04-08",
+          "views": 77,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
           "isPinned": false
         },
         {
@@ -177,14 +177,14 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26959",
           "author": "국제협력과",
           "date": "2026-04-08",
-          "views": 21,
+          "views": 24,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-08T12:42:50.217Z",
+      "fetchedAt": "2026-04-08T14:19:29.423Z",
       "totalCount": 15,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
