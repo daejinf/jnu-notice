@@ -1,10 +1,35 @@
 {
-  "checkedAt": "2026-04-08T00:08:21.517Z",
+  "checkedAt": "2026-04-08T03:32:32.343Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-08T00:08:21.517Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "68762",
+          "title": "[청년중기봉사단]2025-2027 KOICA 청년중기봉사단(아...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68762",
+          "author": "전남대학교광주국제개발협력센터",
+          "date": "2026-04-08",
+          "views": 124,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "68761",
+          "title": "2026학년도 1학기 재학생 분할납부 3회차 고지서 출력",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68761",
+          "author": "재무과",
+          "date": "2026-04-08",
+          "views": 48,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-08T03:32:32.343Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
