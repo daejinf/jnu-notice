@@ -1,27 +1,15 @@
 {
-  "checkedAt": "2026-04-08T05:31:32.353Z",
+  "checkedAt": "2026-04-08T07:02:02.800Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
         {
           "id": "software-1",
-          "title": "(~4/20, 09:00) [LIG D&A] 임베디드SW 스쿨 4기 모집",
-          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1003020/artclView.do",
+          "title": "(~4/23) [지능형 소프트웨어 진화 및 유지보수 연구실] : 김미수교수님 연구실 연구원",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1003033/artclView.do",
           "author": "오승하",
           "date": "2026-04-08",
-          "views": 4,
-          "sourceType": "department",
-          "sourceName": "소프트웨어공학과",
-          "category": "공지사항",
-          "isPinned": true
-        },
-        {
-          "id": "software-3",
-          "title": "(~4/16, 15:00) [현대모비스] 26년 상반기 연구장학생 모집",
-          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1002994/artclView.do",
-          "author": "오승하",
-          "date": "2026-04-08",
-          "views": 3,
+          "views": 59,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -29,13 +17,49 @@
         },
         {
           "id": "software-2",
+          "title": "(~4/20, 09:00) [LIG D&A] 임베디드SW 스쿨 4기 모집",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1003020/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-08",
+          "views": 12,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-4",
+          "title": "(~4/16, 15:00) [현대모비스] 26년 상반기 연구장학생 모집",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1002994/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-08",
+          "views": 11,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-3",
           "title": "(~4/16, 15:00) [현대모비스] 26년 상반기 장학전환인턴 모집",
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1003002/artclView.do",
           "author": "오승하",
           "date": "2026-04-08",
-          "views": 1,
+          "views": 10,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "ai-major-1",
+          "title": "[지능형 소프트웨어 진화 및 유지보수 연구실] 연구원 모집",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1003051/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-04-08",
+          "views": 10,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
           "category": "공지사항",
           "isPinned": true
         },
@@ -45,10 +69,22 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68762",
           "author": "전남대학교광주국제개발협력센터",
           "date": "2026-04-08",
-          "views": 173,
+          "views": 203,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "26958",
+          "title": "[Notice Study Abroad-국제인턴] 2026년 2학기 KIST 유럽연구소 글로벌 인턴십 프로그램 모집 공고...",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EA%B5%AD%EC%A0%9C%EC%9D%B8%ED%84%B4&Seq=26958",
+          "author": "국제협력과",
+          "date": "2026-04-08",
+          "views": 134,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
           "isPinned": false
         },
         {
@@ -57,7 +93,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68761",
           "author": "재무과",
           "date": "2026-04-08",
-          "views": 61,
+          "views": 65,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -69,15 +105,27 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68771",
           "author": "학생과",
           "date": "2026-04-08",
-          "views": 36,
+          "views": 64,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
           "isPinned": false
+        },
+        {
+          "id": "51",
+          "title": "[공지사항] [지능형 소프트웨어 진화 및 유지보수 연구실] 연구원 모집",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1003051/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-04-08",
+          "views": 10,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
+          "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-08T05:31:32.353Z",
-      "totalCount": 6,
+      "fetchedAt": "2026-04-08T07:02:02.800Z",
+      "totalCount": 10,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
