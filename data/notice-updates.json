@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-09T11:37:43.772Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7995
+  },
+  {
     "checkedAt": "2026-04-09T10:22:10.945Z",
     "notices": [
       {
@@ -683,18 +689,6 @@
         "isPinned": true
       },
       {
-        "id": "1",
-        "title": "[프로그램 리뷰] 2026학년도 1학기 CNU 학습공동체 알림아리 성료",
-        "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10529?p=1",
-        "author": "박덕희",
-        "date": "2026-04-09",
-        "views": 3,
-        "sourceType": "center",
-        "sourceName": "교육혁신본부",
-        "category": "기관 공지",
-        "isPinned": true
-      },
-      {
         "id": "philosophy-1",
         "title": "(글커잉) 2026학년도 1학기 글로벌커뮤니케이션잉글리쉬 학점 미취득자 교과목 이수 안내(2014~2018년도 신입학자/2016~2020년도 편",
         "url": "http://philos.jnu.ac.kr/bbs/philos/2261/1004544/artclView.do",
@@ -913,7 +907,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 23,
+    "newNoticeCount": 22,
     "totalNoticeCount": 7998
   },
   {
@@ -5561,11 +5555,5 @@
     ],
     "newNoticeCount": 31,
     "totalNoticeCount": 7804
-  },
-  {
-    "checkedAt": "2026-04-02T23:50:53.368Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7894
   }
 ]
