@@ -1,10 +1,83 @@
 {
-  "checkedAt": "2026-04-08T23:53:40.759Z",
+  "checkedAt": "2026-04-09T03:28:22.817Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-08T23:53:40.759Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "3924",
+          "title": "2026 AICOSS 동아리 선정 안내",
+          "url": "https://www.aicoss.kr/www/notice/view/3924?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-04-09",
+          "views": 27,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "software-1",
+          "title": "2026학년도 2학기 국제인턴(KIST 유럽연구소) 프로그램 참가자 모집 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1004585/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-09",
+          "views": 5,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "1",
+          "title": "[프로그램 리뷰] 2026학년도 1학기 CNU 학습공동체 알림아리 성료",
+          "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10529?p=1",
+          "author": "박덕희",
+          "date": "2026-04-09",
+          "views": 3,
+          "sourceType": "center",
+          "sourceName": "교육혁신본부",
+          "category": "기관 공지",
+          "isPinned": true
+        },
+        {
+          "id": "831",
+          "title": "New [학생모집] 2026년 학부-대학원 공동운영(그룹스터디) 추가모집 (~4/16)",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=831&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-04-09",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        },
+        {
+          "id": "830",
+          "title": "New [제25회 TOPCIT 정기평가] 개인정보 등록 안내(~04. 16.(목), 15시까지)",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=830&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-04-09",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        },
+        {
+          "id": "education-%ed%95%99%ec%83%9d%eb%aa%a8%ec%a7%91-2026%eb%85%84-%ed%95%99%eb%b6%80-%eb%8c%80%ed%95%99%ec%9b%90-%ea%b3%b5%eb%8f%99%ec%9a%b4%ec%98%81%ea%b7%b8%eb%a3%b9%ec%8a%a4%ed%84%b0%eb%94%94-%ec%b6%94",
+          "title": "[학생모집] 2026년 학부-대학원 공동운영(그룹스터디) 추가모집 (~4/16)",
+          "url": "https://sojoong.kr/education/%ed%95%99%ec%83%9d%eb%aa%a8%ec%a7%91-2026%eb%85%84-%ed%95%99%eb%b6%80-%eb%8c%80%ed%95%99%ec%9b%90-%ea%b3%b5%eb%8f%99%ec%9a%b4%ec%98%81%ea%b7%b8%eb%a3%b9%ec%8a%a4%ed%84%b0%eb%94%94-%ec%b6%94/",
+          "author": "진행중",
+          "date": "2026-04-09",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단 교육신청",
+          "category": "교육신청",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-09T03:28:22.817Z",
+      "totalCount": 6,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
