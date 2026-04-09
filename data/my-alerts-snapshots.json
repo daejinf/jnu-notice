@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-09T08:47:48.678Z",
+  "checkedAt": "2026-04-09T10:22:10.739Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,14 +9,14 @@
           "url": "https://www.aicoss.kr/www/notice/view/3924?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
           "author": "인공지능혁신융합대학사업단",
           "date": "2026-04-09",
-          "views": 126,
+          "views": 144,
           "sourceType": "center",
           "sourceName": "인공지능혁신융합대학사업단",
           "category": "사업단 공지",
           "isPinned": true
         },
         {
-          "id": "software-1",
+          "id": "software-2",
           "title": "2026학년도 2학기 국제인턴(KIST 유럽연구소) 프로그램 참가자 모집 안내",
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1004585/artclView.do",
           "author": "오승하",
@@ -28,27 +28,39 @@
           "isPinned": true
         },
         {
+          "id": "1",
+          "title": "[프로그램 리뷰] 2026학년도 1학기 CNU 학습공동체 알림아리 성료",
+          "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10529?p=1",
+          "author": "박덕희",
+          "date": "2026-04-09",
+          "views": 4,
+          "sourceType": "center",
+          "sourceName": "교육혁신본부",
+          "category": "기관 공지",
+          "isPinned": true
+        },
+        {
+          "id": "software-1",
+          "title": "(4/20~4/24) 2026학년도 1학기 중간고사 응원 「이천원의 저녁밥」 이용 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1005196/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-09",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
           "id": "68786",
           "title": "[한국장학재단] 2026년 학부 대통령과학장학금 신규 장학생 ...",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68786",
           "author": "학생과",
           "date": "2026-04-09",
-          "views": 157,
+          "views": 233,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
-          "isPinned": false
-        },
-        {
-          "id": "68784",
-          "title": "2026년도 정보보호특성화대학지원사업단 참여학생 모집(기간연장...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68784",
-          "author": "정보보호특성화대학지원사업단",
-          "date": "2026-04-09",
-          "views": 15,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -57,10 +69,22 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EB%8B%A8%EA%B8%B0%ED%8C%8C%EA%B2%AC&Seq=26962",
           "author": "국제협력과",
           "date": "2026-04-09",
-          "views": 15,
+          "views": 44,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "68784",
+          "title": "2026년도 정보보호특성화대학지원사업단 참여학생 모집(기간연장...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68784",
+          "author": "정보보호특성화대학지원사업단",
+          "date": "2026-04-09",
+          "views": 16,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -100,8 +124,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-09T08:47:48.678Z",
-      "totalCount": 8,
+      "fetchedAt": "2026-04-09T10:22:10.739Z",
+      "totalCount": 10,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
