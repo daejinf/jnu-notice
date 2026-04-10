@@ -1,10 +1,35 @@
 {
-  "checkedAt": "2026-04-10T00:08:15.350Z",
+  "checkedAt": "2026-04-10T03:40:48.078Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-10T00:08:15.350Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "1006855",
+          "title": "[공지] 중간고사 시험기간 302호, 402호 강의실, 스튜던트라운지 룸 1,2 열람 공지",
+          "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/1006855/artclView.do",
+          "author": "AI융합대학",
+          "date": "2026-04-10",
+          "views": 38,
+          "sourceType": "college",
+          "sourceName": "AI융합대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "133",
+          "title": "[공지] 중간고사 시험기간 302호, 402호 강의실, 스튜던트라운지 룸 1,2 열람 공지 새글",
+          "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/1006855/artclView.do",
+          "author": "AI융합대학",
+          "date": "2026-04-10",
+          "views": 38,
+          "sourceType": "college",
+          "sourceName": "AI융합대학",
+          "category": "공지사항",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-10T03:40:48.078Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
