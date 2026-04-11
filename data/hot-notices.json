@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-11T19:50:22.361Z",
+  "checkedAt": "2026-04-11T20:51:51.603Z",
   "notices": [
     {
       "id": "68793",
@@ -7,7 +7,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68793",
       "author": "학생과",
       "date": "2026-04-09",
-      "views": 1986,
+      "views": 1987,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -43,7 +43,7 @@
       "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94730",
       "author": "생활안내 중간고사 기간 반디라운지 24시간 운영 안내 Extended Bandi Lounge (Study ...",
       "date": "2026-04-07",
-      "views": 1004,
+      "views": 1005,
       "sourceType": "center",
       "sourceName": "광주생활관",
       "category": "기관 공지",
@@ -91,7 +91,7 @@
       "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1000386/artclView.do",
       "author": "박찬민",
       "date": "2026-04-07",
-      "views": 660,
+      "views": 663,
       "sourceType": "department",
       "sourceName": "산업공학과",
       "category": "공지사항",
@@ -415,7 +415,7 @@
       "url": "https://physics.jnu.ac.kr/bbs/physics/2140/1000481/artclView.do",
       "author": "물리학과",
       "date": "2026-04-07",
-      "views": 195,
+      "views": 196,
       "sourceType": "department",
       "sourceName": "물리학과",
       "category": "공지사항",
@@ -866,6 +866,18 @@
       "isPinned": false
     },
     {
+      "id": "94783",
+      "title": "2026학년도 1학기 중간고사 지연귀가 벌점 면제 안내",
+      "url": "https://house.jnu.ac.kr/Board/Board.aspx?BoardID=29&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94783",
+      "author": "생활안내 2026학년도 1학기 중간고사 지연귀가 벌점 면제 안내",
+      "date": "2026-04-10",
+      "views": 105,
+      "sourceType": "center",
+      "sourceName": "여수생활관",
+      "category": "기관 공지",
+      "isPinned": false
+    },
+    {
       "id": "1779",
       "title": "[홍보] 2026년도 하반기 등록민간자격 4종(소비자업무전문가 등) 시행계획 공고",
       "url": "https://welfare.jnu.ac.kr/bbs/welfare/1702/1004005/artclView.do",
@@ -899,18 +911,6 @@
       "sourceType": "department",
       "sourceName": "철학과",
       "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "94783",
-      "title": "2026학년도 1학기 중간고사 지연귀가 벌점 면제 안내",
-      "url": "https://house.jnu.ac.kr/Board/Board.aspx?BoardID=29&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94783",
-      "author": "생활안내 2026학년도 1학기 중간고사 지연귀가 벌점 면제 안내",
-      "date": "2026-04-10",
-      "views": 103,
-      "sourceType": "center",
-      "sourceName": "여수생활관",
-      "category": "기관 공지",
       "isPinned": false
     },
     {
@@ -1034,6 +1034,18 @@
       "isPinned": false
     },
     {
+      "id": "68799",
+      "title": "2026학년도 1학기 중간고사 이천원의 저녁밥 제공 안내",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68799",
+      "author": "학생과",
+      "date": "2026-04-10",
+      "views": 87,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "대학생활",
+      "isPinned": false
+    },
+    {
       "id": "89",
       "title": "[교외] [동원그룹]GO:FIELD인턴십(채용연계형) 국내영업, 생산, 건설, 안전★학교 추천채용(~4.19.일)",
       "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1004428/artclView.do",
@@ -1056,18 +1068,6 @@
       "sourceName": "융합전공",
       "category": "공지사항",
       "isPinned": true
-    },
-    {
-      "id": "68799",
-      "title": "2026학년도 1학기 중간고사 이천원의 저녁밥 제공 안내",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68799",
-      "author": "학생과",
-      "date": "2026-04-10",
-      "views": 86,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "대학생활",
-      "isPinned": false
     },
     {
       "id": "1006855",
@@ -1267,7 +1267,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68781",
       "author": "취업지원실",
       "date": "2026-04-09",
-      "views": 70,
+      "views": 71,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "취업정보",
@@ -1526,6 +1526,18 @@
       "isPinned": true
     },
     {
+      "id": "657",
+      "title": "2026학년도 2학기 국제인턴(KIST 유럽연구소) 프로그램 참가자 모집 안내 (~4.28",
+      "url": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/1004914/artclView.do",
+      "author": "빅데이터융합학과",
+      "date": "2026-04-09",
+      "views": 56,
+      "sourceType": "department",
+      "sourceName": "빅데이터융합학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "1425",
       "title": "2026학년도 후기(1차) 일반대학원 입학전형 모집요강 안내",
       "url": "https://clothing.jnu.ac.kr/bbs/clothing/1006/1000428/artclView.do",
@@ -1547,18 +1559,6 @@
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "취업정보",
-      "isPinned": false
-    },
-    {
-      "id": "657",
-      "title": "2026학년도 2학기 국제인턴(KIST 유럽연구소) 프로그램 참가자 모집 안내 (~4.28",
-      "url": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/1004914/artclView.do",
-      "author": "빅데이터융합학과",
-      "date": "2026-04-09",
-      "views": 55,
-      "sourceType": "department",
-      "sourceName": "빅데이터융합학과",
-      "category": "공지사항",
       "isPinned": false
     },
     {
@@ -1898,6 +1898,18 @@
       "isPinned": false
     },
     {
+      "id": "68770",
+      "title": "[한미그룹] 2026년 상반기 각 부문별 공개채용(~4.26....",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68770",
+      "author": "취업지원실",
+      "date": "2026-04-08",
+      "views": 40,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "취업정보",
+      "isPinned": false
+    },
+    {
       "id": "1",
       "title": "[학생지원] [HAI-UP] 제2차 나의 아이디어 구조화: AI로 과제 기획 완성 특강 개최",
       "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10521?p=1",
@@ -1934,11 +1946,11 @@
       "isPinned": false
     },
     {
-      "id": "68770",
-      "title": "[한미그룹] 2026년 상반기 각 부문별 공개채용(~4.26....",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68770",
+      "id": "68758",
+      "title": "[한화손보] 2026 상반기 신입사원 모집~(4.20.(월)1...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=4&key=68758",
       "author": "취업지원실",
-      "date": "2026-04-08",
+      "date": "2026-04-07",
       "views": 39,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
@@ -1967,18 +1979,6 @@
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "모집공고",
-      "isPinned": false
-    },
-    {
-      "id": "68758",
-      "title": "[한화손보] 2026 상반기 신입사원 모집~(4.20.(월)1...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=4&key=68758",
-      "author": "취업지원실",
-      "date": "2026-04-07",
-      "views": 38,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "취업정보",
       "isPinned": false
     },
     {
@@ -2030,6 +2030,18 @@
       "isPinned": false
     },
     {
+      "id": "68805",
+      "title": "[전북특별자치도 산하 공공기관]2026년 상반기 직원 통합채용...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68805",
+      "author": "취업지원실",
+      "date": "2026-04-10",
+      "views": 35,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "취업정보",
+      "isPinned": false
+    },
+    {
       "id": "68801",
       "title": "[오픈캠퍼스] 2026년 상반기 전국 에너지 공동학점과정 참여...",
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68801",
@@ -2075,18 +2087,6 @@
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "대학생활",
-      "isPinned": false
-    },
-    {
-      "id": "68805",
-      "title": "[전북특별자치도 산하 공공기관]2026년 상반기 직원 통합채용...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68805",
-      "author": "취업지원실",
-      "date": "2026-04-10",
-      "views": 34,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "취업정보",
       "isPinned": false
     },
     {
@@ -2162,6 +2162,18 @@
       "isPinned": false
     },
     {
+      "id": "physics-1",
+      "title": "[4/20~24] 중간고사 응원‘이천원의 저녁밥’제공 안내",
+      "url": "https://physics.jnu.ac.kr/bbs/physics/2140/1007163/artclView.do",
+      "author": "물리학과",
+      "date": "2026-04-10",
+      "views": 32,
+      "sourceType": "department",
+      "sourceName": "물리학과",
+      "category": "공지사항",
+      "isPinned": true
+    },
+    {
       "id": "773",
       "title": "중간고사 응원 ‘이천원의 저녁밥’ 제공 안내",
       "url": "https://homeedu.jnu.ac.kr/bbs/homeedu/2318/1006447/artclView.do",
@@ -2186,23 +2198,23 @@
       "isPinned": false
     },
     {
-      "id": "physics-1",
-      "title": "[4/20~24] 중간고사 응원‘이천원의 저녁밥’제공 안내",
-      "url": "https://physics.jnu.ac.kr/bbs/physics/2140/1007163/artclView.do",
-      "author": "물리학과",
-      "date": "2026-04-10",
-      "views": 31,
-      "sourceType": "department",
-      "sourceName": "물리학과",
-      "category": "공지사항",
-      "isPinned": true
-    },
-    {
       "id": "68792",
       "title": "[콜마그룹]2026 상반기 대졸신입 공채(~4.22.(수)까지)",
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68792",
       "author": "취업지원실",
       "date": "2026-04-09",
+      "views": 31,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "취업정보",
+      "isPinned": false
+    },
+    {
+      "id": "68807",
+      "title": "[세아창원특수강]2026상반기 채용(~4.19.(일)까지)",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68807",
+      "author": "취업지원실",
+      "date": "2026-04-10",
       "views": 30,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
@@ -2222,18 +2234,6 @@
       "isPinned": false
     },
     {
-      "id": "68807",
-      "title": "[세아창원특수강]2026상반기 채용(~4.19.(일)까지)",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68807",
-      "author": "취업지원실",
-      "date": "2026-04-10",
-      "views": 29,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "취업정보",
-      "isPinned": false
-    },
-    {
       "id": "1248",
       "title": "중간고사 응원‘이천원의 저녁밥’제공 안내",
       "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1007153/artclView.do",
@@ -2243,6 +2243,18 @@
       "sourceType": "department",
       "sourceName": "생물공학과",
       "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "68791",
+      "title": "[키엔스코리아주식회사]2026년 컨설팅세일즈 신입사원 채용(~...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68791",
+      "author": "취업지원실",
+      "date": "2026-04-09",
+      "views": 29,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "취업정보",
       "isPinned": false
     },
     {
@@ -2270,9 +2282,21 @@
       "isPinned": false
     },
     {
-      "id": "68791",
-      "title": "[키엔스코리아주식회사]2026년 컨설팅세일즈 신입사원 채용(~...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68791",
+      "id": "68790",
+      "title": "[Bayer]MSL I Radiology 포지션 (육아휴직 대...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68790",
+      "author": "취업지원실",
+      "date": "2026-04-09",
+      "views": 28,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "취업정보",
+      "isPinned": false
+    },
+    {
+      "id": "68788",
+      "title": "[한국피앤지판매] P&G 2026 채용전환형 인턴십(~4.17...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68788",
       "author": "취업지원실",
       "date": "2026-04-09",
       "views": 28,
@@ -2294,21 +2318,9 @@
       "isPinned": false
     },
     {
-      "id": "68790",
-      "title": "[Bayer]MSL I Radiology 포지션 (육아휴직 대...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68790",
-      "author": "취업지원실",
-      "date": "2026-04-09",
-      "views": 27,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "취업정보",
-      "isPinned": false
-    },
-    {
-      "id": "68788",
-      "title": "[한국피앤지판매] P&G 2026 채용전환형 인턴십(~4.17...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68788",
+      "id": "68787",
+      "title": "[SK머티리얼즈]2026 석사 신입사원 채용(~4.21.(화)...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68787",
       "author": "취업지원실",
       "date": "2026-04-09",
       "views": 27,
@@ -2327,18 +2339,6 @@
       "sourceType": "department",
       "sourceName": "디자인학과",
       "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "68787",
-      "title": "[SK머티리얼즈]2026 석사 신입사원 채용(~4.21.(화)...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68787",
-      "author": "취업지원실",
-      "date": "2026-04-09",
-      "views": 26,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "취업정보",
       "isPinned": false
     },
     {
@@ -2486,6 +2486,18 @@
       "isPinned": true
     },
     {
+      "id": "68739",
+      "title": "[한국유나이티드제약(주)]의약품(개인병원) 영업★학교 추천채용...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=5&key=68739",
+      "author": "취업지원실",
+      "date": "2026-04-07",
+      "views": 20,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "취업정보",
+      "isPinned": false
+    },
+    {
       "id": "1393",
       "title": "[공통]2026학년도 1학기 중간고사 응원 이천원의 저녁밥 이용 안내",
       "url": "https://ecedu.jnu.ac.kr/bbs/ecedu/2303/1006899/artclView.do",
@@ -2495,18 +2507,6 @@
       "sourceType": "department",
       "sourceName": "유아교육과",
       "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "68739",
-      "title": "[한국유나이티드제약(주)]의약품(개인병원) 영업★학교 추천채용...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=5&key=68739",
-      "author": "취업지원실",
-      "date": "2026-04-07",
-      "views": 19,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "취업정보",
       "isPinned": false
     },
     {
