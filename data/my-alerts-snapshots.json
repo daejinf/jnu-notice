@@ -1,10 +1,35 @@
 {
-  "checkedAt": "2026-04-12T23:52:06.979Z",
+  "checkedAt": "2026-04-13T03:52:42.095Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-12T23:52:06.979Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "68811",
+          "title": "[고용노동부] 제5회 고용노동 공공데이터·AI 활용 공모전 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68811",
+          "author": "학생과",
+          "date": "2026-04-13",
+          "views": 31,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "833",
+          "title": "New [홍보] 전국민 AI 경진대회- 인공지능 루키 대회",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=833&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-04-13",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-13T03:52:42.095Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
