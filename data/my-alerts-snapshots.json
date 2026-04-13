@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-13T11:56:04.186Z",
+  "checkedAt": "2026-04-13T14:07:42.043Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://www.aicoss.kr/www/notice/view/3931?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
           "author": "인공지능혁신융합대학사업단",
           "date": "2026-04-13",
-          "views": 612,
+          "views": 639,
           "sourceType": "center",
           "sourceName": "인공지능혁신융합대학사업단",
           "category": "사업단 공지",
@@ -21,7 +21,7 @@
           "url": "https://www.aicoss.kr/www/notice/view/3932?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
           "author": "인공지능혁신융합대학사업단",
           "date": "2026-04-13",
-          "views": 72,
+          "views": 86,
           "sourceType": "center",
           "sourceName": "인공지능혁신융합대학사업단",
           "category": "사업단 공지",
@@ -33,7 +33,7 @@
           "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1013520/artclView.do",
           "author": "인공지능학부",
           "date": "2026-04-13",
-          "views": 54,
+          "views": 68,
           "sourceType": "department",
           "sourceName": "인공지능학부",
           "category": "공지사항",
@@ -45,7 +45,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013517/artclView.do",
           "author": "오승하",
           "date": "2026-04-13",
-          "views": 36,
+          "views": 41,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -57,7 +57,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013518/artclView.do",
           "author": "오승하",
           "date": "2026-04-13",
-          "views": 25,
+          "views": 28,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -69,7 +69,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013355/artclView.do",
           "author": "오승하",
           "date": "2026-04-13",
-          "views": 17,
+          "views": 18,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -81,22 +81,10 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68815",
           "author": "전남대학교광주국제개발협력센터",
           "date": "2026-04-13",
-          "views": 192,
+          "views": 212,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
-          "isPinned": false
-        },
-        {
-          "id": "68811",
-          "title": "[고용노동부] 제5회 고용노동 공공데이터·AI 활용 공모전 안내",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68811",
-          "author": "학생과",
-          "date": "2026-04-13",
-          "views": 57,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -105,10 +93,22 @@
           "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1013520/artclView.do",
           "author": "인공지능학부",
           "date": "2026-04-13",
-          "views": 54,
+          "views": 68,
           "sourceType": "department",
           "sourceName": "인공지능학부",
           "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "68811",
+          "title": "[고용노동부] 제5회 고용노동 공공데이터·AI 활용 공모전 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68811",
+          "author": "학생과",
+          "date": "2026-04-13",
+          "views": 58,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -148,7 +148,7 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-13T11:56:04.186Z",
+      "fetchedAt": "2026-04-13T14:07:42.043Z",
       "totalCount": 12,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
