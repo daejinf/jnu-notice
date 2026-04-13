@@ -1,15 +1,51 @@
 {
-  "checkedAt": "2026-04-13T03:52:42.095Z",
+  "checkedAt": "2026-04-13T06:27:33.259Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "3931",
+          "title": "2026년 제5회 CO-Week Academy 참여 수요조사 안내(~4/19까지)",
+          "url": "https://www.aicoss.kr/www/notice/view/3931?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-04-13",
+          "views": 138,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "software-1",
+          "title": "보건진료소 운영 안내 및 이용 활성화 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013355/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-13",
+          "views": 4,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "68815",
+          "title": "[KOICA]2026년 코이카 이노포트 신규 입주사 공모",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68815",
+          "author": "전남대학교광주국제개발협력센터",
+          "date": "2026-04-13",
+          "views": 82,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
         {
           "id": "68811",
           "title": "[고용노동부] 제5회 고용노동 공공데이터·AI 활용 공모전 안내",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68811",
           "author": "학생과",
           "date": "2026-04-13",
-          "views": 31,
+          "views": 50,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
@@ -28,8 +64,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-13T03:52:42.095Z",
-      "totalCount": 2,
+      "fetchedAt": "2026-04-13T06:27:33.259Z",
+      "totalCount": 5,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
