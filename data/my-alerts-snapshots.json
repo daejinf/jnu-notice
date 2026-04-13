@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-13T08:36:02.342Z",
+  "checkedAt": "2026-04-13T10:23:22.295Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://www.aicoss.kr/www/notice/view/3931?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
           "author": "인공지능혁신융합대학사업단",
           "date": "2026-04-13",
-          "views": 536,
+          "views": 583,
           "sourceType": "center",
           "sourceName": "인공지능혁신융합대학사업단",
           "category": "사업단 공지",
@@ -21,19 +21,31 @@
           "url": "https://www.aicoss.kr/www/notice/view/3932?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
           "author": "인공지능혁신융합대학사업단",
           "date": "2026-04-13",
-          "views": 40,
+          "views": 63,
           "sourceType": "center",
           "sourceName": "인공지능혁신융합대학사업단",
           "category": "사업단 공지",
           "isPinned": true
         },
         {
+          "id": "ai-major-1",
+          "title": "[전공자율선택제 지원] 전공 및 취업 역량 강화 '자격증 응시료 지원'",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1013520/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-04-13",
+          "views": 36,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
           "id": "software-2",
-          "title": "보건진료소 운영 안내 및 이용 활성화 안내",
-          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013355/artclView.do",
+          "title": "(신입 ~4/13(월) 11시, 인턴 ~4/20(월) 11시까지) [기아] 2026 상반기",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013517/artclView.do",
           "author": "오승하",
           "date": "2026-04-13",
-          "views": 14,
+          "views": 34,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -41,11 +53,23 @@
         },
         {
           "id": "software-1",
-          "title": "(신입 ~4/13(월) 11시, 인턴 ~4/20(월) 11시까지) [기아] 2026 상반기",
-          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013517/artclView.do",
+          "title": "(~4/15, 23:59) [삼성증권] 2026년 대학생 멤버십 Young Creator",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013518/artclView.do",
           "author": "오승하",
           "date": "2026-04-13",
-          "views": 3,
+          "views": 23,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-3",
+          "title": "보건진료소 운영 안내 및 이용 활성화 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013355/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-13",
+          "views": 17,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -54,10 +78,10 @@
         {
           "id": "68815",
           "title": "[KOICA]2026년 코이카 이노포트 신규 입주사 공모",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68815",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68815",
           "author": "전남대학교광주국제개발협력센터",
           "date": "2026-04-13",
-          "views": 154,
+          "views": 177,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -69,10 +93,22 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68811",
           "author": "학생과",
           "date": "2026-04-13",
-          "views": 54,
+          "views": 55,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "52",
+          "title": "[공지사항] [전공자율선택제 지원] 전공 및 취업 역량 강화 '자격증 응시료 지원'",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1013520/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-04-13",
+          "views": 36,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -112,8 +148,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-13T08:36:02.342Z",
-      "totalCount": 9,
+      "fetchedAt": "2026-04-13T10:23:22.295Z",
+      "totalCount": 12,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
