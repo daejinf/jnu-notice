@@ -1,10 +1,35 @@
 {
-  "checkedAt": "2026-04-14T23:29:32.450Z",
+  "checkedAt": "2026-04-15T01:09:36.354Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-14T23:29:32.450Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "68844",
+          "title": "2027년도 시민사회협력프로그램(진입형·성장형) 공모 설명회 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68844",
+          "author": "전남대학교광주국제개발협력센터",
+          "date": "2026-04-15",
+          "views": 45,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "846",
+          "title": "New 디지털경진대회(AI 부문)",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=846&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-04-15",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-15T01:09:36.354Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
