@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-15T17:47:06.890Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8025
+  },
+  {
     "checkedAt": "2026-04-15T16:15:31.904Z",
     "notices": [
       {
@@ -2747,23 +2753,9 @@
         "sourceName": "전남대학교 본부",
         "category": "취업정보",
         "isPinned": false
-      },
-      {
-        "id": "3624",
-        "title": "[2025 현직자 멘토링_SK하이닉스(청주) 양산기술]",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3624",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-13",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-3",
-        "statusKind": "deadline"
       }
     ],
-    "newNoticeCount": 2,
+    "newNoticeCount": 1,
     "totalNoticeCount": 7997
   },
   {
@@ -5113,11 +5105,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 4777
-  },
-  {
-    "checkedAt": "2026-04-08T14:19:29.801Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7993
   }
 ]
