@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-15T04:18:18.143Z",
+  "checkedAt": "2026-04-15T06:22:42.938Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68844",
           "author": "전남대학교광주국제개발협력센터",
           "date": "2026-04-15",
-          "views": 113,
+          "views": 131,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -21,10 +21,34 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68850",
           "author": "학사과",
           "date": "2026-04-15",
-          "views": 82,
+          "views": 121,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "68851",
+          "title": "2026학년도 하계 계절학기 타 대학교(충북대) 교류수학 추천...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68851",
+          "author": "학사과",
+          "date": "2026-04-15",
+          "views": 80,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "847",
+          "title": "New 디지털 경진대회(SW부문)",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=847&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-04-15",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
           "isPinned": false
         },
         {
@@ -40,8 +64,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-15T04:18:18.143Z",
-      "totalCount": 3,
+      "fetchedAt": "2026-04-15T06:22:42.938Z",
+      "totalCount": 5,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
