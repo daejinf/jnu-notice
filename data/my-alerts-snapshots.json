@@ -1,15 +1,27 @@
 {
-  "checkedAt": "2026-04-16T04:26:20.195Z",
+  "checkedAt": "2026-04-16T06:24:21.342Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "352",
+          "title": "2026 NCCOSS 경진대회 개최(접수 05/01(금)~05/11(월) 15:00)",
+          "url": "https://jnu.nccoss.kr/www/notice/view/352?bd=notice&page=1",
+          "author": "차세대통신혁신융합대학사업단",
+          "date": "2026-04-16",
+          "views": 26,
+          "sourceType": "center",
+          "sourceName": "차세대통신혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
         {
           "id": "software-1",
           "title": "(~4/21, 18:00) [소프트웨어중심대학사업] 2026 하계 해외(일본) 인턴십 프로",
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1020155/artclView.do",
           "author": "오승하",
           "date": "2026-04-16",
-          "views": 21,
+          "views": 25,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -21,10 +33,22 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1020088/artclView.do",
           "author": "오승하",
           "date": "2026-04-16",
-          "views": 14,
+          "views": 19,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "68863",
+          "title": "전남대학교 5·18 제46주년 기념 벽화 그리기 공모전 1차 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68863",
+          "author": "학생과",
+          "date": "2026-04-16",
+          "views": 15,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
           "isPinned": true
         },
         {
@@ -45,7 +69,7 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26969",
           "author": "국제협력과",
           "date": "2026-04-16",
-          "views": 16,
+          "views": 19,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
@@ -57,7 +81,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68856",
           "author": "학생과",
           "date": "2026-04-16",
-          "views": 15,
+          "views": 17,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
@@ -88,8 +112,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-16T04:26:20.195Z",
-      "totalCount": 7,
+      "fetchedAt": "2026-04-16T06:24:21.342Z",
+      "totalCount": 9,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
