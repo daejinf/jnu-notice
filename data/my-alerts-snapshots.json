@@ -1,25 +1,73 @@
 {
-  "checkedAt": "2026-04-15T23:28:56.974Z",
+  "checkedAt": "2026-04-16T01:12:42.968Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "software-1",
+          "title": "(~4/21, 18:00) [소프트웨어중심대학사업] 2026 하계 해외(일본) 인턴십 프로",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1020155/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-16",
+          "views": 11,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-2",
+          "title": "(~4/21, 18:00) [소프트웨어중심대학사업단] 해외 교육연수 프로그램 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1020088/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-16",
+          "views": 5,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "2937",
+          "title": "[전라남도혁신도시지원단] 2026 전남광주 지역인재 채용안내서 및 전남광주공동혁신도시 이전공공기관 안내서 게시",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=2937",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-04-16",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": true
+        },
         {
           "id": "68856",
           "title": "[강원대학교] 2026년 통일 모의 국무회의 경연대회 안내",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68856",
           "author": "학생과",
           "date": "2026-04-16",
-          "views": 1,
+          "views": 9,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
           "isPinned": false
         },
         {
+          "id": "26969",
+          "title": "[Event]관내 체류 외국인 재난문자 앱(Emergency Ready App) 안내",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26969",
+          "author": "국제협력과",
+          "date": "2026-04-16",
+          "views": 7,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
           "id": "education-%ec%b7%a8%ec%97%85%ea%b5%90%ec%9c%a1-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8_1%eb%8b%a8%ea%b3%84-%ea%bf%88%ec%9d%84-%ec%b0%be%eb%8a%94-%ec%a7%84%eb%a1%9c%ec%ba%a0%ed%94%84",
           "title": "취업교육 프로그램_1단계 꿈을 찾는 진로캠프",
           "url": "https://sojoong.kr/education/%ec%b7%a8%ec%97%85%ea%b5%90%ec%9c%a1-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8_1%eb%8b%a8%ea%b3%84-%ea%bf%88%ec%9d%84-%ec%b0%be%eb%8a%94-%ec%a7%84%eb%a1%9c%ec%ba%a0%ed%94%84/",
-          "author": "공고",
+          "author": "진행중",
           "date": "2026-04-16",
           "views": 0,
           "sourceType": "center",
@@ -28,8 +76,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-15T23:28:56.974Z",
-      "totalCount": 2,
+      "fetchedAt": "2026-04-16T01:12:42.968Z",
+      "totalCount": 6,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
