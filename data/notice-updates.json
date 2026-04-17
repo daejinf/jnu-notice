@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-17T13:58:32.544Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8027
+  },
+  {
     "checkedAt": "2026-04-17T12:06:33.030Z",
     "notices": [
       {
@@ -5614,73 +5620,6 @@
       }
     ],
     "newNoticeCount": 16,
-    "totalNoticeCount": 7999
-  },
-  {
-    "checkedAt": "2026-04-10T07:59:44.875Z",
-    "notices": [
-      {
-        "id": "philosophy-1",
-        "title": "(학술대회) 한국프랑스철학회 2026년 춘계 학술대회 - <프랑스 철학의 새로운 시선들> 안내",
-        "url": "http://philos.jnu.ac.kr/bbs/philos/2261/1007469/artclView.do",
-        "author": "철학과",
-        "date": "2026-04-10",
-        "views": 4,
-        "sourceType": "department",
-        "sourceName": "철학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "546",
-        "title": "학부 졸업논문 발표 일정 안내(5.6예정)",
-        "url": "https://chem.jnu.ac.kr/bbs/chem/1013/1007370/artclView.do",
-        "author": "이은희",
-        "date": "2026-04-10",
-        "views": 59,
-        "sourceType": "department",
-        "sourceName": "화학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "68799",
-        "title": "2026학년도 1학기 중간고사 이천원의 저녁밥 제공 안내",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68799",
-        "author": "학생과",
-        "date": "2026-04-10",
-        "views": 43,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "대학생활",
-        "isPinned": false
-      },
-      {
-        "id": "68800",
-        "title": "전남대학교 첨단산업 인재양성 부트캠프(AI) 사업단』서류전형 ...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68800",
-        "author": "AI융합대학",
-        "date": "2026-04-10",
-        "views": 29,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68801",
-        "title": "[오픈캠퍼스] 2026년 상반기 전국 에너지 공동학점과정 참여...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68801",
-        "author": "취업지원실",
-        "date": "2026-04-10",
-        "views": 15,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 5,
     "totalNoticeCount": 7999
   }
 ]
