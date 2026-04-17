@@ -1,5 +1,36 @@
 [
   {
+    "checkedAt": "2026-04-17T10:00:15.773Z",
+    "notices": [
+      {
+        "id": "2932",
+        "title": "[홍보] 2026학년도 후기 일반대학원 신입생 모집",
+        "url": "https://history.jnu.ac.kr/bbs/history/1604/1026332/artclView.do",
+        "author": "이지민",
+        "date": "2026-04-17",
+        "views": 7,
+        "sourceType": "department",
+        "sourceName": "사학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "2268",
+        "title": "2026학년도 하계 현장실습학기제 운영 안내 및 참여요청",
+        "url": "https://biology.jnu.ac.kr/bbs/biology/2113/1026462/artclView.do",
+        "author": "생물학과",
+        "date": "2026-04-17",
+        "views": 0,
+        "sourceType": "department",
+        "sourceName": "생물학과",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 2,
+    "totalNoticeCount": 8007
+  },
+  {
     "checkedAt": "2026-04-17T08:16:59.654Z",
     "notices": [
       {
@@ -5774,36 +5805,5 @@
     ],
     "newNoticeCount": 9,
     "totalNoticeCount": 7996
-  },
-  {
-    "checkedAt": "2026-04-10T00:08:15.712Z",
-    "notices": [
-      {
-        "id": "68795",
-        "title": "2026년도 제1회 4단계 BK21사업 계약직원 경력경쟁채용 ...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68795",
-        "author": "인재양성실",
-        "date": "2026-04-10",
-        "views": 9,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68794",
-        "title": "2026년 제1회 전남대학교 첨단산업 인재양성 부트캠프(미래차...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68794",
-        "author": "미래모빌리티학과",
-        "date": "2026-04-09",
-        "views": 91,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 7994
   }
 ]
