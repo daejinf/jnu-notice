@@ -1,10 +1,35 @@
 {
-  "checkedAt": "2026-04-16T23:57:47.595Z",
+  "checkedAt": "2026-04-17T03:45:15.337Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-16T23:57:47.595Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "3945",
+          "title": "2026 국제인공지능대전(AI EXPO KOREA) 참관 참가자 모집 안내",
+          "url": "https://www.aicoss.kr/www/notice/view/3945?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-04-17",
+          "views": 54,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "68874",
+          "title": "2026학년도 하계 계절학기 타 대학교(전북대) 교류수학 추천...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68874",
+          "author": "학사과",
+          "date": "2026-04-17",
+          "views": 53,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-17T03:45:15.337Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
