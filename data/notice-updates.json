@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-17T11:12:44.420Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8027
+  },
+  {
     "checkedAt": "2026-04-17T10:00:15.773Z",
     "notices": [
       {
@@ -5688,122 +5694,5 @@
     ],
     "newNoticeCount": 4,
     "totalNoticeCount": 7999
-  },
-  {
-    "checkedAt": "2026-04-10T03:40:48.416Z",
-    "notices": [
-      {
-        "id": "convergence-major-1",
-        "title": "[공지] 중간고사 시험기간 302호, 402호 강의실, 스튜던트라운지 룸 1,2 열람 공지",
-        "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/1006855/artclView.do",
-        "author": "AI융합대학",
-        "date": "2026-04-10",
-        "views": 38,
-        "sourceType": "department",
-        "sourceName": "융합전공",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "53302",
-        "title": "[한국토지주택공사] LH 2026년 상반기 신입사원 채용설명회(직무:사무직, 기술직(토목, 건축군)), (참여특전: 스타벅스 1만원권 상품권 제공)",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53302",
-        "author": "취업진로포털 채용설명회",
-        "date": "2026-04-10",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 채용설명회",
-        "category": "채용설명회",
-        "isPinned": true
-      },
-      {
-        "id": "68795",
-        "title": "2026년도 제1회 4단계 BK21사업 계약직원 경력경쟁채용 ...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68795",
-        "author": "인재양성실",
-        "date": "2026-04-10",
-        "views": 53,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68796",
-        "title": "2026년도 제2회 전남대학교 미래전략본부 국립대학육성사업 계...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68796",
-        "author": "미래전략정책실",
-        "date": "2026-04-10",
-        "views": 32,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68797",
-        "title": "2026년 제3회 전남대학교 창업중심대학사업 전담직원 채용 공고",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68797",
-        "author": "산학협력단",
-        "date": "2026-04-10",
-        "views": 27,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68798",
-        "title": "[한국토지주택공사] LH 2026년 상반기 신입사원 채용설명회...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68798",
-        "author": "취업지원실",
-        "date": "2026-04-10",
-        "views": 16,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "658",
-        "title": "2026학년도 1학기 중간고사 응원「이천원의 저녁밥」이용 안내",
-        "url": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/1006461/artclView.do",
-        "author": "빅데이터융합학과",
-        "date": "2026-04-10",
-        "views": 13,
-        "sourceType": "department",
-        "sourceName": "빅데이터융합학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1297",
-        "title": "2026학년도 1학기 중간고사 응원「이천원의 저녁밥」이용 안내",
-        "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1006458/artclView.do",
-        "author": "통계학과",
-        "date": "2026-04-10",
-        "views": 7,
-        "sourceType": "department",
-        "sourceName": "통계학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3622",
-        "title": "2026 강점탐색 집단상담 『자기탐색과 강점브랜딩 프로그램(10회차)』",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3622",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-10",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-7",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 9,
-    "totalNoticeCount": 7996
   }
 ]
