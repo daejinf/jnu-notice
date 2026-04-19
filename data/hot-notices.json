@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-19T19:09:02.031Z",
+  "checkedAt": "2026-04-19T19:53:33.678Z",
   "notices": [
     {
       "id": "68862",
@@ -19,7 +19,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68858",
       "author": "학생과",
       "date": "2026-04-16",
-      "views": 801,
+      "views": 803,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -55,7 +55,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68887",
       "author": "학생과",
       "date": "2026-04-17",
-      "views": 500,
+      "views": 501,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -91,7 +91,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68859",
       "author": "학생과",
       "date": "2026-04-16",
-      "views": 315,
+      "views": 316,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -127,7 +127,7 @@
       "url": "https://eco.jnu.ac.kr/bbs/eco/1845/1021201/artclView.do",
       "author": "정소은",
       "date": "2026-04-16",
-      "views": 243,
+      "views": 244,
       "sourceType": "department",
       "sourceName": "경제학부",
       "category": "공지사항",
@@ -163,7 +163,7 @@
       "url": "https://www.aicoss.kr/www/notice/view/3940?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
       "author": "인공지능혁신융합대학사업단",
       "date": "2026-04-15",
-      "views": 210,
+      "views": 211,
       "sourceType": "center",
       "sourceName": "인공지능혁신융합대학사업단",
       "category": "사업단 공지",
@@ -175,7 +175,7 @@
       "url": "https://www.aicoss.kr/www/notice/view/3945?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
       "author": "인공지능혁신융합대학사업단",
       "date": "2026-04-17",
-      "views": 206,
+      "views": 207,
       "sourceType": "center",
       "sourceName": "인공지능혁신융합대학사업단",
       "category": "사업단 공지",
@@ -223,7 +223,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68885",
       "author": "대학혁신지원과",
       "date": "2026-04-17",
-      "views": 169,
+      "views": 170,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "채용공고",
@@ -290,6 +290,18 @@
       "isPinned": false
     },
     {
+      "id": "68888",
+      "title": "2026년 제3회 글로컬대학사업 계약직원 공개채용시험 서류전형...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68888",
+      "author": "대외협력과",
+      "date": "2026-04-17",
+      "views": 150,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "채용공고",
+      "isPinned": false
+    },
+    {
       "id": "2241",
       "title": "보건진료소 이용 안내",
       "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1017779/artclView.do",
@@ -299,18 +311,6 @@
       "sourceType": "department",
       "sourceName": "신소재공학부",
       "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "68888",
-      "title": "2026년 제3회 글로컬대학사업 계약직원 공개채용시험 서류전형...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68888",
-      "author": "대외협력과",
-      "date": "2026-04-17",
-      "views": 149,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "채용공고",
       "isPinned": false
     },
     {
@@ -391,7 +391,7 @@
       "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EA%B5%AD%EC%A0%9C%EC%9D%B8%ED%84%B4&Seq=26971",
       "author": "국제협력과",
       "date": "2026-04-17",
-      "views": 119,
+      "views": 120,
       "sourceType": "center",
       "sourceName": "국제협력과",
       "category": "기관 공지",
@@ -643,7 +643,7 @@
       "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1017275/artclView.do",
       "author": "명재민",
       "date": "2026-04-15",
-      "views": 92,
+      "views": 93,
       "sourceType": "department",
       "sourceName": "산업공학과",
       "category": "공지사항",
@@ -830,6 +830,18 @@
       "isPinned": false
     },
     {
+      "id": "1300",
+      "title": "2026학년도 하계 현장실습학기제 운영 안내",
+      "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1024807/artclView.do",
+      "author": "통계학과",
+      "date": "2026-04-17",
+      "views": 75,
+      "sourceType": "department",
+      "sourceName": "통계학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "2819",
       "title": "광주국제교류센터 광주글로벌 청년캠프",
       "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1022136/artclView.do",
@@ -838,18 +850,6 @@
       "views": 75,
       "sourceType": "department",
       "sourceName": "영어교육과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "1300",
-      "title": "2026학년도 하계 현장실습학기제 운영 안내",
-      "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1024807/artclView.do",
-      "author": "통계학과",
-      "date": "2026-04-17",
-      "views": 73,
-      "sourceType": "department",
-      "sourceName": "통계학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1106,6 +1106,18 @@
       "isPinned": false
     },
     {
+      "id": "26970",
+      "title": "[Event]JB금융지주 글로벌 인재 채용(~5/3)",
+      "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26970",
+      "author": "국제협력과",
+      "date": "2026-04-17",
+      "views": 57,
+      "sourceType": "center",
+      "sourceName": "국제협력과",
+      "category": "기관 공지",
+      "isPinned": false
+    },
+    {
       "id": "1399",
       "title": "[공통]2026학년도 후기 일반대학원 신입생모집 입학설명회(온라인) 개최 안내",
       "url": "https://ecedu.jnu.ac.kr/bbs/ecedu/2303/1017732/artclView.do",
@@ -1115,18 +1127,6 @@
       "sourceType": "department",
       "sourceName": "유아교육과",
       "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "26970",
-      "title": "[Event]JB금융지주 글로벌 인재 채용(~5/3)",
-      "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26970",
-      "author": "국제협력과",
-      "date": "2026-04-17",
-      "views": 56,
-      "sourceType": "center",
-      "sourceName": "국제협력과",
-      "category": "기관 공지",
       "isPinned": false
     },
     {
@@ -1178,6 +1178,18 @@
       "isPinned": false
     },
     {
+      "id": "26969",
+      "title": "[Event]관내 체류 외국인 재난문자 앱(Emergency Ready App) 안내",
+      "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26969",
+      "author": "국제협력과",
+      "date": "2026-04-16",
+      "views": 53,
+      "sourceType": "center",
+      "sourceName": "국제협력과",
+      "category": "기관 공지",
+      "isPinned": false
+    },
+    {
       "id": "3246",
       "title": "2026학년도 하계 계절학기 타 대학교(충북대) 수학 추천 안내",
       "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1024976/artclView.do",
@@ -1199,18 +1211,6 @@
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "취업정보",
-      "isPinned": false
-    },
-    {
-      "id": "26969",
-      "title": "[Event]관내 체류 외국인 재난문자 앱(Emergency Ready App) 안내",
-      "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26969",
-      "author": "국제협력과",
-      "date": "2026-04-16",
-      "views": 52,
-      "sourceType": "center",
-      "sourceName": "국제협력과",
-      "category": "기관 공지",
       "isPinned": false
     },
     {
@@ -1622,6 +1622,18 @@
       "isPinned": false
     },
     {
+      "id": "161",
+      "title": "2026년 융합바이오시스템기계공학과 세미나 개최 안내(1회)",
+      "url": "https://bse.jnu.ac.kr/bbs/bse/2568/1017612/artclView.do",
+      "author": "융합바이오시스템기계공학과",
+      "date": "2026-04-15",
+      "views": 30,
+      "sourceType": "department",
+      "sourceName": "융합바이오시스템기계공학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "68882",
       "title": "[한국교통안전공단]2026년 제2차 기간제 근로자 통합채용(~...",
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68882",
@@ -1642,18 +1654,6 @@
       "views": 29,
       "sourceType": "department",
       "sourceName": "생물공학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "161",
-      "title": "2026년 융합바이오시스템기계공학과 세미나 개최 안내(1회)",
-      "url": "https://bse.jnu.ac.kr/bbs/bse/2568/1017612/artclView.do",
-      "author": "융합바이오시스템기계공학과",
-      "date": "2026-04-15",
-      "views": 29,
-      "sourceType": "department",
-      "sourceName": "융합바이오시스템기계공학과",
       "category": "공지사항",
       "isPinned": false
     },
