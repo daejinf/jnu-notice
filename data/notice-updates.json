@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-20T21:01:35.323Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8030
+  },
+  {
     "checkedAt": "2026-04-20T19:47:13.432Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -5296,157 +5302,6 @@
     "checkedAt": "2026-04-13T11:56:04.560Z",
     "notices": [],
     "newNoticeCount": 0,
-    "totalNoticeCount": 8005
-  },
-  {
-    "checkedAt": "2026-04-13T10:23:22.573Z",
-    "notices": [
-      {
-        "id": "ai-major-1",
-        "title": "[전공자율선택제 지원] 전공 및 취업 역량 강화 '자격증 응시료 지원'",
-        "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1013520/artclView.do",
-        "author": "인공지능학부",
-        "date": "2026-04-13",
-        "views": 36,
-        "sourceType": "department",
-        "sourceName": "인공지능학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-1",
-        "title": "(~4/15, 23:59) [삼성증권] 2026년 대학생 멤버십 Young Creator",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1013518/artclView.do",
-        "author": "오승하",
-        "date": "2026-04-13",
-        "views": 23,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "mobility-1",
-        "title": "[공지] 중간고사 시험기간 302호, 402호 강의실, 스튜던트라운지 룸 1,2 열람 공지",
-        "url": "https://mobility.jnu.ac.kr/bbs/imob/69/1013522/artclView.do",
-        "author": "미래모빌리티학",
-        "date": "2026-04-13",
-        "views": 4,
-        "sourceType": "department",
-        "sourceName": "미래모빌리티학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "68815",
-        "title": "[KOICA]2026년 코이카 이노포트 신규 입주사 공모",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68815",
-        "author": "전남대학교광주국제개발협력센터",
-        "date": "2026-04-13",
-        "views": 177,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "학사안내",
-        "isPinned": false
-      },
-      {
-        "id": "68814",
-        "title": "[채용공고] 2026년도 제 3회 인문사회 융합인재양성사업단 ...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68814",
-        "author": "인문사회융합인재양성사업단",
-        "date": "2026-04-13",
-        "views": 96,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68816",
-        "title": "2026년도 제3회 광주·전남 반도체공동연구소 책임연구원 채용...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68816",
-        "author": "광주·전남 반도체공동연구소",
-        "date": "2026-04-13",
-        "views": 52,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68817",
-        "title": "2026년 AI 전환 대응 특별과정(산대특) 수강생 모집",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68817",
-        "author": "대외협력과",
-        "date": "2026-04-13",
-        "views": 19,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "모집공고",
-        "isPinned": false
-      },
-      {
-        "id": "68821",
-        "title": "[광주광역시 공공기관 통합채용]2026 신규직원채용(4.24....",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68821",
-        "author": "취업지원실",
-        "date": "2026-04-13",
-        "views": 14,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "68820",
-        "title": "경험분석 프로그램 [My Story Lab]",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68820",
-        "author": "취업지원실",
-        "date": "2026-04-13",
-        "views": 13,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "68822",
-        "title": "[미래내일일경험] 홍보/영업 마케팅 실무 프로젝트 참여자 모집",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68822",
-        "author": "취업지원실",
-        "date": "2026-04-13",
-        "views": 9,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "68819",
-        "title": "[포스코DX]2026 상반기 신입사원 채용(~4.27.(월) ...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68819",
-        "author": "취업지원실",
-        "date": "2026-04-13",
-        "views": 9,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "774",
-        "title": "보건복지부 [2026 학교인구교육 수업나눔 경진대회] 개최 알림",
-        "url": "https://homeedu.jnu.ac.kr/bbs/homeedu/2318/1013521/artclView.do",
-        "author": "가정교육과",
-        "date": "2026-04-13",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "가정교육과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 12,
     "totalNoticeCount": 8005
   }
 ]
