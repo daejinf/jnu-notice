@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-20T09:01:11.327Z",
+  "checkedAt": "2026-04-20T10:58:41.452Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1033794/artclView.do",
           "author": "오승하",
           "date": "2026-04-20",
-          "views": 27,
+          "views": 37,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -21,7 +21,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68897",
           "author": "학사과",
           "date": "2026-04-20",
-          "views": 106,
+          "views": 120,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -33,19 +33,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68905",
           "author": "학사과",
           "date": "2026-04-20",
-          "views": 59,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "학사안내",
-          "isPinned": false
-        },
-        {
-          "id": "68896",
-          "title": "2026학년도 하계 계절학기 타 대학교(부경대) 교류수학 추천...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68896",
-          "author": "학사과",
-          "date": "2026-04-20",
-          "views": 57,
+          "views": 70,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -57,10 +45,22 @@
           "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94905",
           "author": "생활안내 생활관 난방 중단 및 냉방 가동 안내",
           "date": "2026-04-20",
-          "views": 51,
+          "views": 68,
           "sourceType": "center",
           "sourceName": "광주생활관",
           "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "68896",
+          "title": "2026학년도 하계 계절학기 타 대학교(부경대) 교류수학 추천...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68896",
+          "author": "학사과",
+          "date": "2026-04-20",
+          "views": 65,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
           "isPinned": false
         },
         {
@@ -69,7 +69,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68893",
           "author": "학사과",
           "date": "2026-04-20",
-          "views": 49,
+          "views": 58,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -81,10 +81,22 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68892",
           "author": "학사과",
           "date": "2026-04-20",
-          "views": 39,
+          "views": 44,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "68910",
+          "title": "[국립국제교육원] 한미대학생연수(WEST), 국비유학&연수 프...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68910",
+          "author": "국제협력과",
+          "date": "2026-04-20",
+          "views": 24,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -105,19 +117,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68901",
           "author": "학생과",
           "date": "2026-04-20",
-          "views": 13,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
-          "isPinned": false
-        },
-        {
-          "id": "68910",
-          "title": "[국립국제교육원] 한미대학생연수(WEST), 국비유학&연수 프...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68910",
-          "author": "국제협력과",
-          "date": "2026-04-20",
-          "views": 10,
+          "views": 14,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
@@ -148,7 +148,7 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-20T09:01:11.327Z",
+      "fetchedAt": "2026-04-20T10:58:41.452Z",
       "totalCount": 12,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
