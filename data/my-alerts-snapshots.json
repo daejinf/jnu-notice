@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-21T12:46:10.716Z",
+  "checkedAt": "2026-04-21T14:54:55.261Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68913",
           "author": "학생과",
           "date": "2026-04-21",
-          "views": 36,
+          "views": 37,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
@@ -21,7 +21,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68926",
           "author": "이기호",
           "date": "2026-04-21",
-          "views": 191,
+          "views": 214,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -33,7 +33,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68934",
           "author": "국제협력과",
           "date": "2026-04-21",
-          "views": 88,
+          "views": 101,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -45,7 +45,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68918",
           "author": "학사과",
           "date": "2026-04-21",
-          "views": 84,
+          "views": 90,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -57,7 +57,7 @@
           "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94930",
           "author": "생활안내 지구의 날! 전국 소등행사 참여 안내",
           "date": "2026-04-21",
-          "views": 46,
+          "views": 53,
           "sourceType": "center",
           "sourceName": "광주생활관",
           "category": "기관 공지",
@@ -69,7 +69,7 @@
           "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64641",
           "author": "2026 CLS 한국어 프로그램 룸메이트 모집",
           "date": "2026-04-21",
-          "views": 29,
+          "views": 32,
           "sourceType": "center",
           "sourceName": "언어교육원",
           "category": "기관 공지",
@@ -81,15 +81,27 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68915",
           "author": "학사과",
           "date": "2026-04-21",
-          "views": 27,
+          "views": 28,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
           "isPinned": false
+        },
+        {
+          "id": "26977",
+          "title": "[Event]어학원 외국인 유학생 아르바이트 모집",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26977",
+          "author": "국제협력과",
+          "date": "2026-04-21",
+          "views": 7,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-21T12:46:10.716Z",
-      "totalCount": 7,
+      "fetchedAt": "2026-04-21T14:54:55.261Z",
+      "totalCount": 8,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
