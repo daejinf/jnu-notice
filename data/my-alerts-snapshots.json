@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-21T06:14:14.106Z",
+  "checkedAt": "2026-04-21T08:22:51.600Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,11 +9,23 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68913",
           "author": "학생과",
           "date": "2026-04-21",
-          "views": 26,
+          "views": 30,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
           "isPinned": true
+        },
+        {
+          "id": "68926",
+          "title": "2026년 하계 계절학기 타대학 교류수학 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68926",
+          "author": "이기호",
+          "date": "2026-04-21",
+          "views": 101,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
         },
         {
           "id": "68918",
@@ -21,19 +33,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68918",
           "author": "학사과",
           "date": "2026-04-21",
-          "views": 50,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "학사안내",
-          "isPinned": false
-        },
-        {
-          "id": "68915",
-          "title": "2026학년도 하계 계절학기 타 대학교(경상국립대) 교류수학 ...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68915",
-          "author": "학사과",
-          "date": "2026-04-21",
-          "views": 22,
+          "views": 66,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -45,15 +45,51 @@
           "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64641",
           "author": "2026 CLS 한국어 프로그램 룸메이트 모집",
           "date": "2026-04-21",
-          "views": 20,
+          "views": 24,
           "sourceType": "center",
           "sourceName": "언어교육원",
           "category": "기관 공지",
           "isPinned": false
+        },
+        {
+          "id": "68915",
+          "title": "2026학년도 하계 계절학기 타 대학교(경상국립대) 교류수학 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68915",
+          "author": "학사과",
+          "date": "2026-04-21",
+          "views": 23,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "94930",
+          "title": "지구의 날! 전국 소등행사 참여 안내",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94930",
+          "author": "생활안내 지구의 날! 전국 소등행사 참여 안내",
+          "date": "2026-04-21",
+          "views": 20,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "68932",
+          "title": "2026년도 제3회 전남대학교 글로컬대학사업 전문/사무 인력 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68932",
+          "author": "재정전략실",
+          "date": "2026-04-21",
+          "views": 1,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-21T06:14:14.106Z",
-      "totalCount": 4,
+      "fetchedAt": "2026-04-21T08:22:51.600Z",
+      "totalCount": 7,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
