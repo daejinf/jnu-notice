@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-21T17:41:22.719Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7991
+  },
+  {
     "checkedAt": "2026-04-21T16:21:24.242Z",
     "notices": [
       {
@@ -2577,20 +2583,6 @@
         "statusKind": "deadline"
       },
       {
-        "id": "3626",
-        "title": "[재학생 및 졸업생]CJ올리브네트웍스리모트인턴십 7기(1차 모집 오픈)",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3626",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-20",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-20",
-        "statusKind": "deadline"
-      },
-      {
         "id": "3613",
         "title": "온라인 자격on 플랫폼(e-myedu) open!!",
         "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3613",
@@ -2861,7 +2853,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 28,
+    "newNoticeCount": 27,
     "totalNoticeCount": 8007
   },
   {
@@ -6117,217 +6109,6 @@
       }
     ],
     "newNoticeCount": 1,
-    "totalNoticeCount": 8016
-  },
-  {
-    "checkedAt": "2026-04-14T06:22:05.046Z",
-    "notices": [
-      {
-        "id": "ece-2",
-        "title": "2026년도 외국어 시험 응시료 지원 신청(상시) 안내(예산 소진 시까지)",
-        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1015305/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-14",
-        "views": 35,
-        "sourceType": "department",
-        "sourceName": "전자컴퓨터공학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "ece-1",
-        "title": "2026년도 전공 관련 기사 자격증 응시료 지원 신청(상시) 안내(예산 소진시 까지)",
-        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1015318/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-14",
-        "views": 27,
-        "sourceType": "department",
-        "sourceName": "전자컴퓨터공학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "computer-info-1",
-        "title": "2026년도 전공 관련 기사 자격증 응시료 지원 신청(상시) 안내(예산 소진시 까지)",
-        "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1015314/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-14",
-        "views": 12,
-        "sourceType": "department",
-        "sourceName": "컴퓨터정보통신공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "computer-info-2",
-        "title": "2026년도 외국어 시험 응시료 지원 신청(상시) 안내(예산 소진 시까지)",
-        "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1015309/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-14",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "컴퓨터정보통신공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-1",
-        "title": "(~4/27) [한화투자증권] 2026년 상반기 신입사원 공개채용 안내",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1015403/artclView.do",
-        "author": "오승하",
-        "date": "2026-04-14",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "68830",
-        "title": "[SAF Korea] IES 인턴십 프로그램 방문 설명회 (4...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68830",
-        "author": "국제협력과",
-        "date": "2026-04-14",
-        "views": 23,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "대학생활",
-        "isPinned": false
-      },
-      {
-        "id": "3244",
-        "title": "2026년 에너지기술분야 창업교육 안내",
-        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1015384/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-14",
-        "views": 12,
-        "sourceType": "department",
-        "sourceName": "전기공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "68835",
-        "title": "[삼성전기]2026년 경력 단기계약직 채용(수원/세종/부산)(...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68835",
-        "author": "취업지원실",
-        "date": "2026-04-14",
-        "views": 11,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "569",
-        "title": "2026학년도 1학기 대학원 학생모니터링단 위원회(6기) 모집",
-        "url": "https://rbe.jnu.ac.kr/bbs/rbe/447/1015442/artclView.do",
-        "author": "지역.바이오시스템공학과",
-        "date": "2026-04-14",
-        "views": 10,
-        "sourceType": "department",
-        "sourceName": "지역·바이오시스템공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "759",
-        "title": "2026학년도 1학기 대학원 학생모니터링단 위원회(6기) 모집 안내",
-        "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1015406/artclView.do",
-        "author": "바이오에너지공학과",
-        "date": "2026-04-14",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "바이오에너지공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1299",
-        "title": "2026 국제여름학교 외국인교수 도우미 선발 계획 안내 (~4.24까지)",
-        "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1015404/artclView.do",
-        "author": "통계학과",
-        "date": "2026-04-14",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "통계학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2430",
-        "title": "식약처 청소년 소통프로그램 '제15기 식의약 영리더 ' 모집",
-        "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1015508/artclView.do",
-        "author": "식품공학과",
-        "date": "2026-04-14",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "식품공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2429",
-        "title": "2026년 대학(원)생 축산유통 아이디어 경진대회 개최 안내",
-        "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1015503/artclView.do",
-        "author": "식품공학과",
-        "date": "2026-04-14",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "식품공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "760",
-        "title": "식약처 청소년(대학생 포함) 소통프로그램 '제15기 식의약 영리더 모집'",
-        "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1015505/artclView.do",
-        "author": "바이오에너지공학과",
-        "date": "2026-04-14",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "바이오에너지공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "840",
-        "title": "New [학생모집] 2026년 하계 계절학기 해외(일본) 인턴십(8주) 참여학생 모집",
-        "url": "https://sojoong.kr/notice/notice-board/?uid=840&mod=document",
-        "author": "소프트웨어중심사업단",
-        "date": "2026-04-14",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "소프트웨어중심사업단",
-        "category": "사업단 공지",
-        "isPinned": false
-      },
-      {
-        "id": "839",
-        "title": "New [학생모집] 2026년 해외 교육연수 프로그램(美, 네바다주립대학교) 참여학생 모집",
-        "url": "https://sojoong.kr/notice/notice-board/?uid=839&mod=document",
-        "author": "소프트웨어중심사업단",
-        "date": "2026-04-14",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "소프트웨어중심사업단",
-        "category": "사업단 공지",
-        "isPinned": false
-      },
-      {
-        "id": "68810",
-        "title": "[2025 현직자 멘토링_SK하이닉스(청주) 양산기술]",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68810",
-        "author": "취업지원실",
-        "date": "2026-04-13",
-        "views": 43,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 17,
     "totalNoticeCount": 8016
   }
 ]
