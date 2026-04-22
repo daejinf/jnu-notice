@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-04-22T05:53:24.708Z",
+  "checkedAt": "2026-04-22T08:05:44.608Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
         {
-          "id": "ai-major-1",
+          "id": "ai-major-2",
           "title": "(~4/28, 11:00까지) 2026년 상반기 학·석사연계과정 학부연구생 장학사업 신청",
           "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1033997/artclView.do",
           "author": "김민재",
           "date": "2026-04-22",
-          "views": 54,
+          "views": 73,
           "sourceType": "department",
           "sourceName": "인공지능학부",
           "category": "공지사항",
@@ -21,7 +21,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1033996/artclView.do",
           "author": "김민재",
           "date": "2026-04-22",
-          "views": 12,
+          "views": 22,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -33,10 +33,34 @@
           "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10553?p=1",
           "author": "조승현",
           "date": "2026-04-22",
-          "views": 10,
+          "views": 21,
           "sourceType": "center",
           "sourceName": "교육혁신본부",
           "category": "기관 공지",
+          "isPinned": true
+        },
+        {
+          "id": "3946",
+          "title": "2026학년도 하계 계절학기 서울대학교 학점교류 신청 안내(~4/29(수) 9:00까지)",
+          "url": "https://www.aicoss.kr/www/notice/view/3946?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-04-22",
+          "views": 19,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "ai-major-1",
+          "title": "AI융합대학 외국어능력개발비 지원 공지",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1034069/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-04-22",
+          "views": 17,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
           "isPinned": true
         },
         {
@@ -45,7 +69,19 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68940",
           "author": "학사과",
           "date": "2026-04-22",
-          "views": 43,
+          "views": 48,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "68941",
+          "title": "2026학년도 하계 계절학기 타 대학교(동국대) 교류수학 추천...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68941",
+          "author": "학사과",
+          "date": "2026-04-22",
+          "views": 35,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -57,27 +93,27 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68938",
           "author": "대외협력과",
           "date": "2026-04-22",
-          "views": 23,
+          "views": 28,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
           "isPinned": false
         },
         {
-          "id": "68941",
-          "title": "2026학년도 하계 계절학기 타 대학교(동국대) 교류수학 추천...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68941",
-          "author": "학사과",
+          "id": "54",
+          "title": "[공지사항] AI융합대학 외국어능력개발비 지원 공지",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1034069/artclView.do",
+          "author": "인공지능학부",
           "date": "2026-04-22",
-          "views": 9,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "학사안내",
+          "views": 17,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-22T05:53:24.708Z",
-      "totalCount": 6,
+      "fetchedAt": "2026-04-22T08:05:44.608Z",
+      "totalCount": 9,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
