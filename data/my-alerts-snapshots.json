@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-22T03:41:52.807Z",
+  "checkedAt": "2026-04-22T05:53:24.708Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1033997/artclView.do",
           "author": "김민재",
           "date": "2026-04-22",
-          "views": 33,
+          "views": 54,
           "sourceType": "department",
           "sourceName": "인공지능학부",
           "category": "공지사항",
@@ -21,10 +21,22 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1033996/artclView.do",
           "author": "김민재",
           "date": "2026-04-22",
-          "views": 9,
+          "views": 12,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "1",
+          "title": "[교수지원] 2026학년도 AI BASIC 과정(2차) Zoom 강의 안내(교원 대상)",
+          "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10553?p=1",
+          "author": "조승현",
+          "date": "2026-04-22",
+          "views": 10,
+          "sourceType": "center",
+          "sourceName": "교육혁신본부",
+          "category": "기관 공지",
           "isPinned": true
         },
         {
@@ -33,7 +45,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68940",
           "author": "학사과",
           "date": "2026-04-22",
-          "views": 30,
+          "views": 43,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -45,15 +57,27 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68938",
           "author": "대외협력과",
           "date": "2026-04-22",
-          "views": 17,
+          "views": 23,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
           "isPinned": false
+        },
+        {
+          "id": "68941",
+          "title": "2026학년도 하계 계절학기 타 대학교(동국대) 교류수학 추천...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68941",
+          "author": "학사과",
+          "date": "2026-04-22",
+          "views": 9,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-22T03:41:52.807Z",
-      "totalCount": 4,
+      "fetchedAt": "2026-04-22T05:53:24.708Z",
+      "totalCount": 6,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
