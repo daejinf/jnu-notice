@@ -1,10 +1,59 @@
 {
-  "checkedAt": "2026-04-21T23:51:49.450Z",
+  "checkedAt": "2026-04-22T03:41:52.807Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-21T23:51:49.450Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ai-major-1",
+          "title": "(~4/28, 11:00까지) 2026년 상반기 학·석사연계과정 학부연구생 장학사업 신청",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1033997/artclView.do",
+          "author": "김민재",
+          "date": "2026-04-22",
+          "views": 33,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-1",
+          "title": "(~4/28, 11:00까지) 2026년 상반기 학·석사연계과정 학부연구생 장학사업 신청",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1033996/artclView.do",
+          "author": "김민재",
+          "date": "2026-04-22",
+          "views": 9,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "68940",
+          "title": "2026학년도 하계 계절학기 타 대학교(국립목포대) 교류수학 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68940",
+          "author": "학사과",
+          "date": "2026-04-22",
+          "views": 30,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "68938",
+          "title": "지구의 날! 전국 소등행사 참여 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68938",
+          "author": "대외협력과",
+          "date": "2026-04-22",
+          "views": 17,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-22T03:41:52.807Z",
+      "totalCount": 4,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
