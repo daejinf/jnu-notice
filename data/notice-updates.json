@@ -1,5 +1,48 @@
 [
   {
+    "checkedAt": "2026-04-23T10:10:00.563Z",
+    "notices": [
+      {
+        "id": "public-admin-1",
+        "title": "2026학년도 1학기 대학원 몽땅 알리미(지도교수 Matching Day & Open Lab)",
+        "url": "https://jnupa.jnu.ac.kr/bbs/jnupa/1731/1034209/artclView.do",
+        "author": "행정학과",
+        "date": "2026-04-23",
+        "views": 9,
+        "sourceType": "department",
+        "sourceName": "행정학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "1419",
+        "title": "[대학원] 2025학년도 후기(2026년 8월 졸업예정) 석·박사학위청구논문 심사 안내",
+        "url": "https://psyche.jnu.ac.kr/bbs/psyche/1004/1034207/artclView.do",
+        "author": "심리학과",
+        "date": "2026-04-23",
+        "views": 30,
+        "sourceType": "department",
+        "sourceName": "심리학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "2822",
+        "title": "2026학년도 1차 CNU 학습나래 운영 안내",
+        "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1034206/artclView.do",
+        "author": "영어교육과",
+        "date": "2026-04-23",
+        "views": 2,
+        "sourceType": "department",
+        "sourceName": "영어교육과",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 3,
+    "totalNoticeCount": 8034
+  },
+  {
     "checkedAt": "2026-04-23T08:25:05.741Z",
     "notices": [
       {
@@ -6768,11 +6811,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8026
-  },
-  {
-    "checkedAt": "2026-04-15T21:36:38.732Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 8025
   }
 ]
