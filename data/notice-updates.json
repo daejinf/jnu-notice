@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-23T12:44:40.310Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8034
+  },
+  {
     "checkedAt": "2026-04-23T11:37:05.864Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6780,36 +6786,5 @@
     ],
     "newNoticeCount": 13,
     "totalNoticeCount": 8029
-  },
-  {
-    "checkedAt": "2026-04-15T23:28:57.260Z",
-    "notices": [
-      {
-        "id": "68856",
-        "title": "[강원대학교] 2026년 통일 모의 국무회의 경연대회 안내",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68856",
-        "author": "학생과",
-        "date": "2026-04-16",
-        "views": 1,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "대학생활",
-        "isPinned": false
-      },
-      {
-        "id": "68851",
-        "title": "2026학년도 하계 계절학기 타 대학교(충북대) 교류수학 추천...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68851",
-        "author": "학사과",
-        "date": "2026-04-15",
-        "views": 168,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "학사안내",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8026
   }
 ]
