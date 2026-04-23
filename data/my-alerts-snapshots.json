@@ -1,10 +1,47 @@
 {
-  "checkedAt": "2026-04-22T23:32:46.162Z",
+  "checkedAt": "2026-04-23T01:14:02.229Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-04-22T23:32:46.162Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "3949",
+          "title": "2026 AICOSS 동아리 발대식 신청 안내(~05.03.(일)까지)",
+          "url": "https://www.aicoss.kr/www/notice/view/3949?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-04-23",
+          "views": 81,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "ko-program-intro-view-727",
+          "title": "[여수캠] 2026-1학기. 학습법 특강-이런 시기 다신 없어. 제발 믿어줘!",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/727",
+          "author": "부속시설 글로벌교육원",
+          "date": "2026-04-23",
+          "views": 3,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": true
+        },
+        {
+          "id": "68945",
+          "title": "[한국국제협력단] 2026년 KOICA 장애인인턴 채용공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68945",
+          "author": "전남대학교광주국제개발협력센터",
+          "date": "2026-04-23",
+          "views": 18,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-04-23T01:14:02.229Z",
+      "totalCount": 3,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-03-30T03:58:29.118Z"
     }
