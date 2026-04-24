@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-24T19:13:23.542Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8038
+  },
+  {
     "checkedAt": "2026-04-24T18:01:27.219Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6248,36 +6254,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8027
-  },
-  {
-    "checkedAt": "2026-04-17T10:00:15.773Z",
-    "notices": [
-      {
-        "id": "2932",
-        "title": "[홍보] 2026학년도 후기 일반대학원 신입생 모집",
-        "url": "https://history.jnu.ac.kr/bbs/history/1604/1026332/artclView.do",
-        "author": "이지민",
-        "date": "2026-04-17",
-        "views": 7,
-        "sourceType": "department",
-        "sourceName": "사학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2268",
-        "title": "2026학년도 하계 현장실습학기제 운영 안내 및 참여요청",
-        "url": "https://biology.jnu.ac.kr/bbs/biology/2113/1026462/artclView.do",
-        "author": "생물학과",
-        "date": "2026-04-17",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "생물학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8007
   }
 ]
