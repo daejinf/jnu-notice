@@ -11,8 +11,7 @@ export function formatViews(views: number) {
 export function isUnsupportedViewsNotice(notice: Notice) {
   return (
     notice.sourceType === "center" &&
-    (notice.url.includes("https://sojoong.kr/notice/notice-board/") ||
-      notice.url.includes("https://sojoong.kr/education/") ||
+    (notice.url.includes("https://sojoong.kr/education/") ||
       notice.url.includes("https://sojoong.kr/education_single/") ||
       notice.url.includes("https://capd.jnu.ac.kr/"))
   );
