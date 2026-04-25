@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-25T11:02:57.096Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8039
+  },
+  {
     "checkedAt": "2026-04-25T10:07:43.512Z",
     "notices": [
       {
@@ -201,18 +207,6 @@
         "isPinned": false
       },
       {
-        "id": "2777",
-        "title": "[4학년 필독] 2026-1학기 전공보고서 제출 안내 새글",
-        "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034351/artclView.do",
-        "author": "한진선",
-        "date": "2026-04-24",
-        "views": 59,
-        "sourceType": "college",
-        "sourceName": "자율전공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "2778",
         "title": "[졸업] 2026년 8월 졸업(수료) 대상자 유보 신청 안내(★졸업(수료)가능자만 신청) 새글",
         "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034355/artclView.do",
@@ -225,7 +219,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 17,
+    "newNoticeCount": 16,
     "totalNoticeCount": 8039
   },
   {
@@ -358,45 +352,8 @@
   },
   {
     "checkedAt": "2026-04-24T12:42:57.112Z",
-    "notices": [
-      {
-        "id": "software-1",
-        "title": "[현대엔지비] 2026년 K-디지털 기초역량훈련 교육생 모집 안내 (교육비 90% 지원,",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1034392/artclView.do",
-        "author": "오승하",
-        "date": "2026-04-24",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-3",
-        "title": "(4/29, 12:00) SK그룹 채용연계 AI 교육(SKALA 4기) 설명회 개최 안내",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1034390/artclView.do",
-        "author": "오승하",
-        "date": "2026-04-24",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-2",
-        "title": "보건진료소 운영 안내 및 이용 활성화",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1034391/artclView.do",
-        "author": "오승하",
-        "date": "2026-04-24",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      }
-    ],
-    "newNoticeCount": 3,
+    "notices": [],
+    "newNoticeCount": 0,
     "totalNoticeCount": 8040
   },
   {
@@ -417,18 +374,6 @@
         "views": 9,
         "sourceType": "department",
         "sourceName": "화학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-1",
-        "title": "(~5/15)[유동현 교수님 연구실/ 암호 및 보안 프로토콜 연구실] 연구원 모집",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1034367/artclView.do",
-        "author": "김민재",
-        "date": "2026-04-24",
-        "views": 5,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
         "category": "공지사항",
         "isPinned": true
       },
@@ -482,18 +427,6 @@
       },
       {
         "id": "2778",
-        "title": "[졸업] 2026년 8월 졸업(수료) 대상자 유보 신청 안내(★졸업(수료)가능자만 신청) 새글",
-        "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034355/artclView.do",
-        "author": "자율전공학부",
-        "date": "2026-04-24",
-        "views": 2,
-        "sourceType": "college",
-        "sourceName": "자율전공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2778",
         "title": "[졸업] 2026년 8월 졸업(수료) 대상자 유보 신청 안내(★졸업(수료)가능자만 신청)",
         "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1034355/artclView.do",
         "author": "자율전공학부",
@@ -517,7 +450,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 9,
+    "newNoticeCount": 7,
     "totalNoticeCount": 8038
   },
   {
@@ -593,18 +526,6 @@
         "sourceType": "school",
         "sourceName": "전남대학교 본부",
         "category": "장학안내",
-        "isPinned": false
-      },
-      {
-        "id": "1034351",
-        "title": "[4학년 필독] 2026-1학기 전공보고서 제출 안내",
-        "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034351/artclView.do",
-        "author": "한진선",
-        "date": "2026-04-24",
-        "views": 17,
-        "sourceType": "college",
-        "sourceName": "자율전공학부",
-        "category": "공지사항",
         "isPinned": false
       },
       {
@@ -716,7 +637,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 16,
+    "newNoticeCount": 15,
     "totalNoticeCount": 8035
   },
   {
@@ -1440,23 +1361,8 @@
   },
   {
     "checkedAt": "2026-04-23T15:22:49.959Z",
-    "notices": [
-      {
-        "id": "3642",
-        "title": "[오프라인 특강/선착순 50명] 2026학년도 상반기 면접전략 수립 특강[5.18.(월)]",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3642",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-24",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-14",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 1,
+    "notices": [],
+    "newNoticeCount": 0,
     "totalNoticeCount": 8031
   },
   {
@@ -1940,18 +1846,6 @@
     "checkedAt": "2026-04-23T04:39:10.476Z",
     "notices": [
       {
-        "id": "ko-program-intro-view-726",
-        "title": "2026학년도 1차 CNU 학습나래",
-        "url": "https://grow.jnu.ac.kr/ko/program/intro/view/726",
-        "author": "사범대학",
-        "date": "2026-04-24",
-        "views": 15,
-        "sourceType": "center",
-        "sourceName": "비교과 통합 플랫폼 성장마루",
-        "category": "Program",
-        "isPinned": false
-      },
-      {
         "id": "mechanical-1",
         "title": "[그린바이오사업] 그린바이오 기후테크 글로벌 프렉티컬 프로그램 참여자 모집 ~5.6.(수)",
         "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1034129/artclView.do",
@@ -2144,7 +2038,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 17,
+    "newNoticeCount": 16,
     "totalNoticeCount": 8033
   },
   {
@@ -3382,118 +3276,6 @@
     "checkedAt": "2026-04-21T22:58:59.575Z",
     "notices": [
       {
-        "id": "3626",
-        "title": "[재학생 및 졸업생]CJ올리브네트웍스리모트인턴십 7기(1차 모집 오픈)",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3626",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-22",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-18",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3636",
-        "title": "2026-1 [미래설계프로그램] 전공계열별 직무탐색 특강: 인문사회계열",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3636",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-22",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-20",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3637",
-        "title": "2026-1 [미래설계프로그램] 전공계열별 직무탐색 특강: 이공계열",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3637",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-22",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-20",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3638",
-        "title": "2026-1 [미래설계프로그램] 전공계열별 직무탐색 특강: 자연과학계열",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3638",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-22",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-20",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3639",
-        "title": "2026-1 [미래설계프로그램] 전공계열별 직무탐색 특강: 예술체육계열",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3639",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-22",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-20",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3640",
-        "title": "2026-1 [미래설계프로그램] 전공계열별 직무탐색 특강: AI융합계열",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3640",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-22",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-20",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3613",
-        "title": "온라인 자격on 플랫폼(e-myedu) open!!",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3613",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-22",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-284",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3599",
-        "title": "[재학생 맞춤형 고용서비스] 2026년도 점프업 신청 안내 (★ 예산소진시 조기 마감됨 ★)",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3599",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-22",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-312",
-        "statusKind": "deadline"
-      },
-      {
         "id": "53345",
         "title": "[국립광주과학관] 2026년 런치채용설명회(채용직무: 정규직 이공계 연구직 , 비정규직 등)(참여특전: 과학관 홍보물 및 기념품 증정(제한수량))",
         "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53345",
@@ -3720,7 +3502,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 26,
+    "newNoticeCount": 18,
     "totalNoticeCount": 8031
   },
   {
@@ -6459,24 +6241,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8007
-  },
-  {
-    "checkedAt": "2026-04-17T23:55:42.503Z",
-    "notices": [
-      {
-        "id": "3633",
-        "title": "[여수] 2026학년도 버크만 자기이해 프로젝트: 어쩌다 대학생 제대로",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3633",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-04-17",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": true
-      }
-    ],
-    "newNoticeCount": 1,
-    "totalNoticeCount": 8027
   }
 ]
