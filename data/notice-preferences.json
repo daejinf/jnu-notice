@@ -1,6 +1,9 @@
 {
   "lightsailk@gmail.com": {
-    "schoolCategoryKeys": [],
+    "schoolCategoryKeys": [
+      "academic",
+      "campusLife"
+    ],
     "collegeKeys": [],
     "departmentKeys": [
       "ai-major",
@@ -11,6 +14,6 @@
       "sw-core",
       "nccoss"
     ],
-    "updatedAt": "2026-04-25T09:04:29.087Z"
+    "updatedAt": "2026-04-25T09:04:30.452Z"
   }
 }
