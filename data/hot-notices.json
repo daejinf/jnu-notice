@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-26T03:56:02.385Z",
+  "checkedAt": "2026-04-26T06:20:01.091Z",
   "notices": [
     {
       "id": "68943",
@@ -7,7 +7,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68943",
       "author": "학사과",
       "date": "2026-04-22",
-      "views": 1036,
+      "views": 1057,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "학사안내",
@@ -31,7 +31,7 @@
       "url": "https://www.aicoss.kr/www/notice/view/3949?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
       "author": "인공지능혁신융합대학사업단",
       "date": "2026-04-23",
-      "views": 451,
+      "views": 459,
       "sourceType": "center",
       "sourceName": "인공지능혁신융합대학사업단",
       "category": "사업단 공지",
@@ -43,7 +43,7 @@
       "url": "https://www.aicoss.kr/www/notice/view/3946?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
       "author": "인공지능혁신융합대학사업단",
       "date": "2026-04-22",
-      "views": 411,
+      "views": 412,
       "sourceType": "center",
       "sourceName": "인공지능혁신융합대학사업단",
       "category": "사업단 공지",
@@ -55,7 +55,19 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68944",
       "author": "학생과",
       "date": "2026-04-23",
-      "views": 397,
+      "views": 401,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "장학안내",
+      "isPinned": false
+    },
+    {
+      "id": "68964",
+      "title": "[한국통신학회] KICS 한국통신학회 장학금 지원 대상자 선발...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68964",
+      "author": "학생과",
+      "date": "2026-04-24",
+      "views": 376,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "장학안내",
@@ -67,23 +79,11 @@
       "url": "https://biz.jnu.ac.kr/bbs/biz/2245/1034020/artclView.do",
       "author": "경영학부",
       "date": "2026-04-22",
-      "views": 369,
+      "views": 372,
       "sourceType": "department",
       "sourceName": "경영학부",
       "category": "공지사항",
       "isPinned": true
-    },
-    {
-      "id": "68964",
-      "title": "[한국통신학회] KICS 한국통신학회 장학금 지원 대상자 선발...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68964",
-      "author": "학생과",
-      "date": "2026-04-24",
-      "views": 358,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "장학안내",
-      "isPinned": false
     },
     {
       "id": "21",
@@ -115,22 +115,10 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68946",
       "author": "총무과",
       "date": "2026-04-23",
-      "views": 236,
+      "views": 237,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "채용공고",
-      "isPinned": false
-    },
-    {
-      "id": "68914",
-      "title": "[재단법인 서울미래인재재단] 2026년 서울독립유공자후손장학금...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=4&key=68914",
-      "author": "학생과",
-      "date": "2026-04-21",
-      "views": 229,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "장학안내",
       "isPinned": false
     },
     {
@@ -139,10 +127,22 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68956",
       "author": "G-램프(LAMP)사업단",
       "date": "2026-04-24",
-      "views": 226,
+      "views": 231,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "학사안내",
+      "isPinned": false
+    },
+    {
+      "id": "68914",
+      "title": "[재단법인 서울미래인재재단] 2026년 서울독립유공자후손장학금...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=4&key=68914",
+      "author": "학생과",
+      "date": "2026-04-21",
+      "views": 230,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "장학안내",
       "isPinned": false
     },
     {
@@ -163,7 +163,7 @@
       "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1033985/artclView.do",
       "author": "신혜경",
       "date": "2026-04-21",
-      "views": 186,
+      "views": 188,
       "sourceType": "department",
       "sourceName": "기계공학부",
       "category": "공지사항",
@@ -175,7 +175,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68918",
       "author": "학사과",
       "date": "2026-04-21",
-      "views": 186,
+      "views": 187,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "학사안내",
@@ -190,6 +190,18 @@
       "views": 181,
       "sourceType": "center",
       "sourceName": "광주생활관",
+      "category": "기관 공지",
+      "isPinned": false
+    },
+    {
+      "id": "64643",
+      "title": "CLS 한국어 프로그램 언어파트너 모집",
+      "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64643",
+      "author": "CLS 한국어 프로그램 언어파트너 모집",
+      "date": "2026-04-23",
+      "views": 171,
+      "sourceType": "center",
+      "sourceName": "언어교육원",
       "category": "기관 공지",
       "isPinned": false
     },
@@ -230,27 +242,27 @@
       "isPinned": false
     },
     {
-      "id": "64643",
-      "title": "CLS 한국어 프로그램 언어파트너 모집",
-      "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64643",
-      "author": "CLS 한국어 프로그램 언어파트너 모집",
-      "date": "2026-04-23",
-      "views": 168,
-      "sourceType": "center",
-      "sourceName": "언어교육원",
-      "category": "기관 공지",
-      "isPinned": false
-    },
-    {
       "id": "68925",
       "title": "2026년 CLS 한국어 프로그램 룸메이트 모집",
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68925",
       "author": "언어교육원",
       "date": "2026-04-21",
-      "views": 166,
+      "views": 167,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "모집공고",
+      "isPinned": false
+    },
+    {
+      "id": "26977",
+      "title": "[Event]어학원 외국인 유학생 아르바이트 모집",
+      "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26977",
+      "author": "국제협력과",
+      "date": "2026-04-21",
+      "views": 165,
+      "sourceType": "center",
+      "sourceName": "국제협력과",
+      "category": "기관 공지",
       "isPinned": false
     },
     {
@@ -264,18 +276,6 @@
       "sourceName": "인공지능학부",
       "category": "공지사항",
       "isPinned": true
-    },
-    {
-      "id": "26977",
-      "title": "[Event]어학원 외국인 유학생 아르바이트 모집",
-      "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26977",
-      "author": "국제협력과",
-      "date": "2026-04-21",
-      "views": 162,
-      "sourceType": "center",
-      "sourceName": "국제협력과",
-      "category": "기관 공지",
-      "isPinned": false
     },
     {
       "id": "68948",
@@ -307,21 +307,21 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68941",
       "author": "학사과",
       "date": "2026-04-22",
-      "views": 155,
+      "views": 158,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "학사안내",
       "isPinned": false
     },
     {
-      "id": "898",
-      "title": "글로컬대학사업 창업지원본부 \"2026 AI 융합 창업 교육 프로그램\" 안 새글",
-      "url": "https://natural.jnu.ac.kr/bbs/natural/1560/1033866/artclView.do",
-      "author": "박승범",
-      "date": "2026-04-21",
+      "id": "661",
+      "title": "2026 국제여름학교 외국인교수 도우미 선발 계획 안내 (~4.24까지)",
+      "url": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/1034060/artclView.do",
+      "author": "빅데이터융합학과",
+      "date": "2026-04-22",
       "views": 154,
-      "sourceType": "college",
-      "sourceName": "자연과학대학",
+      "sourceType": "department",
+      "sourceName": "빅데이터융합학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -334,18 +334,6 @@
       "views": 153,
       "sourceType": "department",
       "sourceName": "지리학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "661",
-      "title": "2026 국제여름학교 외국인교수 도우미 선발 계획 안내 (~4.24까지)",
-      "url": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/1034060/artclView.do",
-      "author": "빅데이터융합학과",
-      "date": "2026-04-22",
-      "views": 152,
-      "sourceType": "department",
-      "sourceName": "빅데이터융합학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -367,11 +355,35 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68913",
       "author": "학생과",
       "date": "2026-04-21",
-      "views": 146,
+      "views": 148,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "대학생활",
       "isPinned": true
+    },
+    {
+      "id": "64645",
+      "title": "2026학년도 2차 외국어강좌 개폐강 안내",
+      "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64645",
+      "author": "2026학년도 2차 외국어강좌 개폐강 안내",
+      "date": "2026-04-23",
+      "views": 147,
+      "sourceType": "center",
+      "sourceName": "언어교육원",
+      "category": "기관 공지",
+      "isPinned": false
+    },
+    {
+      "id": "68962",
+      "title": "2026년도 제3회 전남대학교 글로컬대학사업 전문/사무 인력 ...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68962",
+      "author": "재정전략실",
+      "date": "2026-04-24",
+      "views": 146,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "채용공고",
+      "isPinned": false
     },
     {
       "id": "sbst-2",
@@ -391,47 +403,11 @@
       "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1033981/artclView.do",
       "author": "신혜경",
       "date": "2026-04-21",
-      "views": 143,
+      "views": 144,
       "sourceType": "department",
       "sourceName": "기계공학부",
       "category": "공지사항",
       "isPinned": true
-    },
-    {
-      "id": "68962",
-      "title": "2026년도 제3회 전남대학교 글로컬대학사업 전문/사무 인력 ...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68962",
-      "author": "재정전략실",
-      "date": "2026-04-24",
-      "views": 142,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "채용공고",
-      "isPinned": false
-    },
-    {
-      "id": "64645",
-      "title": "2026학년도 2차 외국어강좌 개폐강 안내",
-      "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64645",
-      "author": "2026학년도 2차 외국어강좌 개폐강 안내",
-      "date": "2026-04-23",
-      "views": 141,
-      "sourceType": "center",
-      "sourceName": "언어교육원",
-      "category": "기관 공지",
-      "isPinned": false
-    },
-    {
-      "id": "64641",
-      "title": "2026 CLS 한국어 프로그램 룸메이트 모집",
-      "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64641",
-      "author": "2026 CLS 한국어 프로그램 룸메이트 모집",
-      "date": "2026-04-21",
-      "views": 141,
-      "sourceType": "center",
-      "sourceName": "언어교육원",
-      "category": "기관 공지",
-      "isPinned": false
     },
     {
       "id": "biotech-1",
@@ -439,11 +415,23 @@
       "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1034240/artclView.do",
       "author": "허수진",
       "date": "2026-04-24",
-      "views": 139,
+      "views": 143,
       "sourceType": "department",
       "sourceName": "생물공학과",
       "category": "공지사항",
       "isPinned": true
+    },
+    {
+      "id": "64641",
+      "title": "2026 CLS 한국어 프로그램 룸메이트 모집",
+      "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64641",
+      "author": "2026 CLS 한국어 프로그램 룸메이트 모집",
+      "date": "2026-04-21",
+      "views": 143,
+      "sourceType": "center",
+      "sourceName": "언어교육원",
+      "category": "기관 공지",
+      "isPinned": false
     },
     {
       "id": "68940",
@@ -451,7 +439,7 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68940",
       "author": "학사과",
       "date": "2026-04-22",
-      "views": 135,
+      "views": 136,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "학사안내",
@@ -463,10 +451,46 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68965",
       "author": "김선임",
       "date": "2026-04-24",
-      "views": 131,
+      "views": 132,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "채용공고",
+      "isPinned": false
+    },
+    {
+      "id": "ko-program-intro-view-726",
+      "title": "2026학년도 1차 CNU 학습나래",
+      "url": "https://grow.jnu.ac.kr/ko/program/intro/view/726",
+      "author": "사범대학",
+      "date": "2026-04-24",
+      "views": 130,
+      "sourceType": "center",
+      "sourceName": "비교과 통합 플랫폼 성장마루",
+      "category": "Program",
+      "isPinned": true
+    },
+    {
+      "id": "mechanical-3",
+      "title": "[그린바이오사업] 그린바이오 기후테크 글로벌 프렉티컬 프로그램 참여자 모집 ~5.6.(수)",
+      "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1034129/artclView.do",
+      "author": "최미진",
+      "date": "2026-04-23",
+      "views": 126,
+      "sourceType": "department",
+      "sourceName": "기계공학부",
+      "category": "공지사항",
+      "isPinned": true
+    },
+    {
+      "id": "68945",
+      "title": "[한국국제협력단] 2026년 KOICA 장애인인턴 채용공고",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68945",
+      "author": "전남대학교광주국제개발협력센터",
+      "date": "2026-04-23",
+      "views": 126,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "학사안내",
       "isPinned": false
     },
     {
@@ -482,18 +506,6 @@
       "isPinned": false
     },
     {
-      "id": "68945",
-      "title": "[한국국제협력단] 2026년 KOICA 장애인인턴 채용공고",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68945",
-      "author": "전남대학교광주국제개발협력센터",
-      "date": "2026-04-23",
-      "views": 125,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "학사안내",
-      "isPinned": false
-    },
-    {
       "id": "food-nutrition-1",
       "title": "[전남대학교RISE사업] 통합돌봄 서포터즈단 모집 안내",
       "url": "https://fn.jnu.ac.kr/bbs/fn/1139/1033861/artclView.do",
@@ -502,18 +514,6 @@
       "views": 125,
       "sourceType": "department",
       "sourceName": "식품영양과학부",
-      "category": "공지사항",
-      "isPinned": true
-    },
-    {
-      "id": "mechanical-3",
-      "title": "[그린바이오사업] 그린바이오 기후테크 글로벌 프렉티컬 프로그램 참여자 모집 ~5.6.(수)",
-      "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1034129/artclView.do",
-      "author": "최미진",
-      "date": "2026-04-23",
-      "views": 122,
-      "sourceType": "department",
-      "sourceName": "기계공학부",
       "category": "공지사항",
       "isPinned": true
     },
@@ -554,12 +554,36 @@
       "isPinned": true
     },
     {
+      "id": "68966",
+      "title": "[현대자동차]채용전환형 하계 인턴십(~5.8.(금) 17시까지)",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68966",
+      "author": "취업지원실",
+      "date": "2026-04-24",
+      "views": 114,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "취업정보",
+      "isPinned": false
+    },
+    {
+      "id": "68959",
+      "title": "우리 다시 시작하자... 내가 더 잘할게...............",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68959",
+      "author": "정보보호특성화대학지원사업단",
+      "date": "2026-04-24",
+      "views": 114,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "대학생활",
+      "isPinned": false
+    },
+    {
       "id": "1777",
       "title": "2026년도 재단법인 보건장학회 연구지원 장학생 선발 안내 새글",
       "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1034052/artclView.do",
       "author": "간호학과(간호대)",
       "date": "2026-04-22",
-      "views": 112,
+      "views": 113,
       "sourceType": "college",
       "sourceName": "간호대학",
       "category": "공지사항",
@@ -571,9 +595,21 @@
       "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1034052/artclView.do",
       "author": "간호학과(간호대)",
       "date": "2026-04-22",
-      "views": 112,
+      "views": 113,
       "sourceType": "department",
       "sourceName": "간호학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "2245",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1034239/artclView.do",
+      "author": "관리자",
+      "date": "2026-04-24",
+      "views": 112,
+      "sourceType": "department",
+      "sourceName": "신소재공학부",
       "category": "공지사항",
       "isPinned": false
     },
@@ -590,36 +626,12 @@
       "isPinned": false
     },
     {
-      "id": "68959",
-      "title": "우리 다시 시작하자... 내가 더 잘할게...............",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68959",
-      "author": "정보보호특성화대학지원사업단",
-      "date": "2026-04-24",
-      "views": 111,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "대학생활",
-      "isPinned": false
-    },
-    {
-      "id": "68966",
-      "title": "[현대자동차]채용전환형 하계 인턴십(~5.8.(금) 17시까지)",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68966",
-      "author": "취업지원실",
-      "date": "2026-04-24",
-      "views": 108,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "취업정보",
-      "isPinned": false
-    },
-    {
-      "id": "2245",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1034239/artclView.do",
+      "id": "2244",
+      "title": "「2026 제2회 전남대학교 입학처 숏폼 공모전」안내",
+      "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1034101/artclView.do",
       "author": "관리자",
-      "date": "2026-04-24",
-      "views": 107,
+      "date": "2026-04-23",
+      "views": 108,
       "sourceType": "department",
       "sourceName": "신소재공학부",
       "category": "공지사항",
@@ -638,27 +650,27 @@
       "isPinned": false
     },
     {
-      "id": "2244",
-      "title": "「2026 제2회 전남대학교 입학처 숏폼 공모전」안내",
-      "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1034101/artclView.do",
-      "author": "관리자",
-      "date": "2026-04-23",
-      "views": 105,
-      "sourceType": "department",
-      "sourceName": "신소재공학부",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
       "id": "26978",
       "title": "[Event]서울정원여행자 프로그램 참여자 모집",
       "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26978",
       "author": "국제협력과",
       "date": "2026-04-24",
-      "views": 100,
+      "views": 102,
       "sourceType": "center",
       "sourceName": "국제협력과",
       "category": "기관 공지",
+      "isPinned": false
+    },
+    {
+      "id": "68963",
+      "title": "전남대학교 의사과학자양성사업단 K-MediST 지원사업 석사급...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68963",
+      "author": "민정준",
+      "date": "2026-04-24",
+      "views": 100,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "채용공고",
       "isPinned": false
     },
     {
@@ -674,15 +686,15 @@
       "isPinned": false
     },
     {
-      "id": "68963",
-      "title": "전남대학교 의사과학자양성사업단 K-MediST 지원사업 석사급...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68963",
-      "author": "민정준",
-      "date": "2026-04-24",
-      "views": 98,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "채용공고",
+      "id": "3251",
+      "title": "2026학년도 하계 계절학기 타 대학교(한양대, 서울대, 부경대(수정)) 수학 추천 안내",
+      "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1033864/artclView.do",
+      "author": "관리자",
+      "date": "2026-04-21",
+      "views": 96,
+      "sourceType": "department",
+      "sourceName": "전기공학과",
+      "category": "공지사항",
       "isPinned": false
     },
     {
@@ -707,6 +719,42 @@
       "sourceType": "department",
       "sourceName": "화학과",
       "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "1515",
+      "title": "[모집] 2026 AI 융합 창업 교육 프로그램 새글",
+      "url": "https://engc.jnu.ac.kr/bbs/engc/280/1033862/artclView.do",
+      "author": "이현숙",
+      "date": "2026-04-21",
+      "views": 95,
+      "sourceType": "college",
+      "sourceName": "공학대학(여수)",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "mechanical-1",
+      "title": "[졸업유보 신청] 2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내 (추가 기간 없음)",
+      "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1034169/artclView.do",
+      "author": "신혜경",
+      "date": "2026-04-23",
+      "views": 94,
+      "sourceType": "department",
+      "sourceName": "기계공학부",
+      "category": "공지사항",
+      "isPinned": true
+    },
+    {
+      "id": "68961",
+      "title": "전남대학교 경영전문대학원 연구근접 지원인력 최종 합격자 발표",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68961",
+      "author": "경영전문대학원",
+      "date": "2026-04-24",
+      "views": 93,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "채용공고",
       "isPinned": false
     },
     {
@@ -746,42 +794,6 @@
       "isPinned": false
     },
     {
-      "id": "1515",
-      "title": "[모집] 2026 AI 융합 창업 교육 프로그램 새글",
-      "url": "https://engc.jnu.ac.kr/bbs/engc/280/1033862/artclView.do",
-      "author": "이현숙",
-      "date": "2026-04-21",
-      "views": 93,
-      "sourceType": "college",
-      "sourceName": "공학대학(여수)",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "68961",
-      "title": "전남대학교 경영전문대학원 연구근접 지원인력 최종 합격자 발표",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68961",
-      "author": "경영전문대학원",
-      "date": "2026-04-24",
-      "views": 92,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "채용공고",
-      "isPinned": false
-    },
-    {
-      "id": "mechanical-1",
-      "title": "[졸업유보 신청] 2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내 (추가 기간 없음)",
-      "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1034169/artclView.do",
-      "author": "신혜경",
-      "date": "2026-04-23",
-      "views": 92,
-      "sourceType": "department",
-      "sourceName": "기계공학부",
-      "category": "공지사항",
-      "isPinned": true
-    },
-    {
       "id": "105",
       "title": "[교내] 2026-1 [미래설계프로그램] 전공계열별 직무탐색 특강: 이공계열(4/27월 ~ 5/12화)",
       "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1034042/artclView.do",
@@ -811,7 +823,19 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68921",
       "author": "취업지원실",
       "date": "2026-04-21",
-      "views": 89,
+      "views": 90,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "취업정보",
+      "isPinned": false
+    },
+    {
+      "id": "68951",
+      "title": "[IBK기업은행]하계 체험형인턴(~5.13.(수) 14시까지)",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68951",
+      "author": "취업지원실",
+      "date": "2026-04-23",
+      "views": 86,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "취업정보",
@@ -828,18 +852,6 @@
       "sourceName": "생명과학기술학부",
       "category": "공지사항",
       "isPinned": true
-    },
-    {
-      "id": "68951",
-      "title": "[IBK기업은행]하계 체험형인턴(~5.13.(수) 14시까지)",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68951",
-      "author": "취업지원실",
-      "date": "2026-04-23",
-      "views": 85,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "취업정보",
-      "isPinned": false
     },
     {
       "id": "68949",
@@ -890,6 +902,42 @@
       "isPinned": false
     },
     {
+      "id": "852",
+      "title": "[홍보] KOICA-청년중기봉사단 2차 파견 단원 모집 안내",
+      "url": "https://sojoong.kr/notice/notice-board/?uid=852&mod=document",
+      "author": "소프트웨어중심사업단",
+      "date": "2026-04-24",
+      "views": 83,
+      "sourceType": "center",
+      "sourceName": "소프트웨어중심사업단",
+      "category": "사업단 공지",
+      "isPinned": false
+    },
+    {
+      "id": "857",
+      "title": "2026학년도 하계 계절학기 타 대학교(경상국립대) 수학 추천 안내 (~4.27) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033963/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
+      "views": 83,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "857",
+      "title": "2026학년도 하계 계절학기 타 대학교(경상국립대) 수학 추천 안내 (~4.27)",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033963/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
+      "views": 83,
+      "sourceType": "department",
+      "sourceName": "약학부",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "639",
       "title": "전남대학교 입학처 숏폼 공모전",
       "url": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/1034019/artclView.do",
@@ -914,39 +962,27 @@
       "isPinned": false
     },
     {
-      "id": "857",
-      "title": "2026학년도 하계 계절학기 타 대학교(경상국립대) 수학 추천 안내 (~4.27)",
-      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033963/artclView.do",
-      "author": "약학부",
-      "date": "2026-04-21",
-      "views": 82,
-      "sourceType": "department",
-      "sourceName": "약학부",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
       "id": "68955",
       "title": "[남구학교밖청소년지원센터] 2026 하반기 교육봉사자 모집",
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68955",
       "author": "학생과",
       "date": "2026-04-24",
-      "views": 80,
+      "views": 81,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "모집공고",
       "isPinned": false
     },
     {
-      "id": "852",
-      "title": "[홍보] KOICA-청년중기봉사단 2차 파견 단원 모집 안내",
-      "url": "https://sojoong.kr/notice/notice-board/?uid=852&mod=document",
-      "author": "소프트웨어중심사업단",
+      "id": "64646",
+      "title": "2026학년도 2차 외국어강좌 기간 휴강일 안내",
+      "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64646",
+      "author": "2026학년도 2차 외국어강좌 기간 휴강일 안내",
       "date": "2026-04-24",
       "views": 80,
       "sourceType": "center",
-      "sourceName": "소프트웨어중심사업단",
-      "category": "사업단 공지",
+      "sourceName": "언어교육원",
+      "category": "기관 공지",
       "isPinned": false
     },
     {
@@ -986,24 +1022,12 @@
       "isPinned": false
     },
     {
-      "id": "64646",
-      "title": "2026학년도 2차 외국어강좌 기간 휴강일 안내",
-      "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64646",
-      "author": "2026학년도 2차 외국어강좌 기간 휴강일 안내",
-      "date": "2026-04-24",
-      "views": 77,
-      "sourceType": "center",
-      "sourceName": "언어교육원",
-      "category": "기관 공지",
-      "isPinned": false
-    },
-    {
       "id": "68935",
       "title": "2026 제2회 전남대학교 입학처 숏폼 공모전 안내",
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68935",
       "author": "입학과",
       "date": "2026-04-22",
-      "views": 76,
+      "views": 77,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "공모전",
@@ -1015,7 +1039,7 @@
       "url": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/1033965/artclView.do",
       "author": "김진성",
       "date": "2026-04-21",
-      "views": 76,
+      "views": 77,
       "sourceType": "department",
       "sourceName": "물리교육과",
       "category": "공지사항",
@@ -1027,10 +1051,34 @@
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68939",
       "author": "대외협력과",
       "date": "2026-04-22",
-      "views": 75,
+      "views": 76,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "공모전",
+      "isPinned": false
+    },
+    {
+      "id": "1419",
+      "title": "[대학원] 2025학년도 후기(2026년 8월 졸업예정) 석·박사학위청구논문 심사 안내",
+      "url": "https://psyche.jnu.ac.kr/bbs/psyche/1004/1034207/artclView.do",
+      "author": "심리학과",
+      "date": "2026-04-23",
+      "views": 75,
+      "sourceType": "department",
+      "sourceName": "심리학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "94950",
+      "title": "7, 8동 소방점검 안내 Fire Extinguishing Equipment Inspection for buildi...",
+      "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94950",
+      "author": "점검안내 7, 8동 소방점검 안내 Fire Extinguishing Equipment Inspection for buildi...",
+      "date": "2026-04-24",
+      "views": 74,
+      "sourceType": "center",
+      "sourceName": "광주생활관",
+      "category": "기관 공지",
       "isPinned": false
     },
     {
@@ -1042,18 +1090,6 @@
       "views": 74,
       "sourceType": "department",
       "sourceName": "산림자원학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "1419",
-      "title": "[대학원] 2025학년도 후기(2026년 8월 졸업예정) 석·박사학위청구논문 심사 안내",
-      "url": "https://psyche.jnu.ac.kr/bbs/psyche/1004/1034207/artclView.do",
-      "author": "심리학과",
-      "date": "2026-04-23",
-      "views": 74,
-      "sourceType": "department",
-      "sourceName": "심리학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1078,6 +1114,18 @@
       "views": 74,
       "sourceType": "college",
       "sourceName": "수의과대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "860",
+      "title": "2026학년도 하계 계절학기 타 대학교(동국대학교 서울캠퍼스) 수학 추천 안내 (~4.29 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1034056/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-22",
+      "views": 74,
+      "sourceType": "college",
+      "sourceName": "약학대학",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1142,6 +1190,18 @@
       "isPinned": false
     },
     {
+      "id": "3252",
+      "title": "2026학년도 하계 계절학기 타 대학교(경상국립대, 서울시립대) 수학 추천 안내",
+      "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1033977/artclView.do",
+      "author": "관리자",
+      "date": "2026-04-21",
+      "views": 74,
+      "sourceType": "department",
+      "sourceName": "전기공학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "68947",
       "title": "대학본부 CCTV 추가 설치에 따른 행정예고",
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68947",
@@ -1151,6 +1211,18 @@
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "행정공고",
+      "isPinned": false
+    },
+    {
+      "id": "858",
+      "title": "「2026 제2회 전남대학교 입학처 숏폼 공모전」 홍보 안내 (4.22.~5.17.) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1034051/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-22",
+      "views": 73,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
       "isPinned": false
     },
     {
@@ -1166,15 +1238,27 @@
       "isPinned": false
     },
     {
-      "id": "94950",
-      "title": "7, 8동 소방점검 안내 Fire Extinguishing Equipment Inspection for buildi...",
-      "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94950",
-      "author": "점검안내 7, 8동 소방점검 안내 Fire Extinguishing Equipment Inspection for buildi...",
-      "date": "2026-04-24",
+      "id": "334",
+      "title": "2026학년도 후기 일반대학원 입학설명회",
+      "url": "https://oceanography.jnu.ac.kr/bbs/oceanography/2041/1033957/artclView.do",
+      "author": "해양환경전공",
+      "date": "2026-04-21",
+      "views": 73,
+      "sourceType": "department",
+      "sourceName": "해양환경전공",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "3254",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1034164/artclView.do",
+      "author": "관리자",
+      "date": "2026-04-23",
       "views": 72,
-      "sourceType": "center",
-      "sourceName": "광주생활관",
-      "category": "기관 공지",
+      "sourceType": "department",
+      "sourceName": "전기공학과",
+      "category": "공지사항",
       "isPinned": false
     },
     {
@@ -1186,18 +1270,6 @@
       "views": 72,
       "sourceType": "department",
       "sourceName": "특수교육학부",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "334",
-      "title": "2026학년도 후기 일반대학원 입학설명회",
-      "url": "https://oceanography.jnu.ac.kr/bbs/oceanography/2041/1033957/artclView.do",
-      "author": "해양환경전공",
-      "date": "2026-04-21",
-      "views": 72,
-      "sourceType": "department",
-      "sourceName": "해양환경전공",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1214,14 +1286,14 @@
       "isPinned": true
     },
     {
-      "id": "2269",
-      "title": "‘26년 상반기 학·석사연계과정 및 학·석박통합연계과정 학부연구생 장학사업 선발 계획 안내",
-      "url": "https://biology.jnu.ac.kr/bbs/biology/2113/1033991/artclView.do",
-      "author": "생물학과",
-      "date": "2026-04-22",
+      "id": "1077",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://biz.jnu.ac.kr/bbs/biz/2245/1034245/artclView.do",
+      "author": "경영학부",
+      "date": "2026-04-24",
       "views": 69,
       "sourceType": "department",
-      "sourceName": "생물학과",
+      "sourceName": "경영학부",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1231,9 +1303,21 @@
       "url": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/1034270/artclView.do",
       "author": "김진성",
       "date": "2026-04-24",
-      "views": 68,
+      "views": 69,
       "sourceType": "department",
       "sourceName": "물리교육과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "2269",
+      "title": "‘26년 상반기 학·석사연계과정 및 학·석박통합연계과정 학부연구생 장학사업 선발 계획 안내",
+      "url": "https://biology.jnu.ac.kr/bbs/biology/2113/1033991/artclView.do",
+      "author": "생물학과",
+      "date": "2026-04-22",
+      "views": 69,
+      "sourceType": "department",
+      "sourceName": "생물학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1310,6 +1394,30 @@
       "isPinned": false
     },
     {
+      "id": "68915",
+      "title": "2026학년도 하계 계절학기 타 대학교(경상국립대) 교류수학 ...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=4&key=68915",
+      "author": "학사과",
+      "date": "2026-04-21",
+      "views": 67,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "학사안내",
+      "isPinned": false
+    },
+    {
+      "id": "856",
+      "title": "2026학년도 하계 계절학기 타 대학교(서울시립대) 수학 추천 안내 (~5.18) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033960/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
+      "views": 67,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "856",
       "title": "2026학년도 하계 계절학기 타 대학교(서울시립대) 수학 추천 안내 (~5.18)",
       "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033960/artclView.do",
@@ -1322,26 +1430,50 @@
       "isPinned": false
     },
     {
-      "id": "68915",
-      "title": "2026학년도 하계 계절학기 타 대학교(경상국립대) 교류수학 ...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=4&key=68915",
-      "author": "학사과",
-      "date": "2026-04-21",
+      "id": "ko-program-intro-view-727",
+      "title": "[여수캠] 2026-1학기. 학습법 특강-이런 시기 다신 없어. 제발 믿어줘!",
+      "url": "https://grow.jnu.ac.kr/ko/program/intro/view/727",
+      "author": "부속시설 글로벌교육원",
+      "date": "2026-04-23",
       "views": 66,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "학사안내",
+      "sourceType": "center",
+      "sourceName": "비교과 통합 플랫폼 성장마루",
+      "category": "Program",
+      "isPinned": true
+    },
+    {
+      "id": "self-designed-1",
+      "title": "[4학년 필독] 2026-1학기 전공보고서 제출 안내",
+      "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1034351/artclView.do",
+      "author": "한진선",
+      "date": "2026-04-24",
+      "views": 65,
+      "sourceType": "department",
+      "sourceName": "자율전공학부",
+      "category": "공지사항",
+      "isPinned": true
+    },
+    {
+      "id": "1034351",
+      "title": "[4학년 필독] 2026-1학기 전공보고서 제출 안내",
+      "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034351/artclView.do",
+      "author": "한진선",
+      "date": "2026-04-24",
+      "views": 65,
+      "sourceType": "college",
+      "sourceName": "자율전공학부",
+      "category": "공지사항",
       "isPinned": false
     },
     {
-      "id": "1922",
-      "title": "[일반대] 2025학년도 후기(2026년 8월 졸업예정) 학위청구논문 심사 안내",
-      "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1034039/artclView.do",
-      "author": "김선경",
-      "date": "2026-04-22",
+      "id": "2777",
+      "title": "[4학년 필독] 2026-1학기 전공보고서 제출 안내 새글",
+      "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034351/artclView.do",
+      "author": "한진선",
+      "date": "2026-04-24",
       "views": 65,
-      "sourceType": "department",
-      "sourceName": "환경에너지공학과",
+      "sourceType": "college",
+      "sourceName": "자율전공학부",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1354,6 +1486,18 @@
       "views": 64,
       "sourceType": "college",
       "sourceName": "수의과대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "859",
+      "title": "2026학년도 하계 계절학기 타 대학교(목포대) 수학 추천 안내 (~5.7) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1034055/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-22",
+      "views": 64,
+      "sourceType": "college",
+      "sourceName": "약학대학",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1406,24 +1550,12 @@
       "isPinned": false
     },
     {
-      "id": "1077",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://biz.jnu.ac.kr/bbs/biz/2245/1034245/artclView.do",
-      "author": "경영학부",
-      "date": "2026-04-24",
-      "views": 63,
-      "sourceType": "department",
-      "sourceName": "경영학부",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
       "id": "68920",
       "title": "2026-1 [미래설계프로그램] 전공계열별 직무탐색 특강: A...",
       "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=68920",
       "author": "취업지원실",
       "date": "2026-04-21",
-      "views": 63,
+      "views": 64,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
       "category": "취업정보",
@@ -1443,6 +1575,18 @@
     },
     {
       "id": "854",
+      "title": "2026학년도 하계 계절학기 타 대학교(서울대) 수학 추천 안내 (~4.29) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033956/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
+      "views": 63,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "854",
       "title": "2026학년도 하계 계절학기 타 대학교(서울대) 수학 추천 안내 (~4.29)",
       "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033956/artclView.do",
       "author": "약학부",
@@ -1454,38 +1598,14 @@
       "isPinned": false
     },
     {
-      "id": "self-designed-1",
-      "title": "[4학년 필독] 2026-1학기 전공보고서 제출 안내",
-      "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1034351/artclView.do",
-      "author": "한진선",
-      "date": "2026-04-24",
-      "views": 62,
-      "sourceType": "department",
-      "sourceName": "자율전공학부",
-      "category": "공지사항",
-      "isPinned": true
-    },
-    {
-      "id": "1034351",
-      "title": "[4학년 필독] 2026-1학기 전공보고서 제출 안내",
-      "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034351/artclView.do",
-      "author": "한진선",
-      "date": "2026-04-24",
+      "id": "855",
+      "title": "2026학년도 하계 계절학기 타 대학교(한양대) 수학 추천 안내 (~5. 6.) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033958/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
       "views": 62,
       "sourceType": "college",
-      "sourceName": "자율전공학부",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "2777",
-      "title": "[4학년 필독] 2026-1학기 전공보고서 제출 안내 새글",
-      "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034351/artclView.do",
-      "author": "한진선",
-      "date": "2026-04-24",
-      "views": 62,
-      "sourceType": "college",
-      "sourceName": "자율전공학부",
+      "sourceName": "약학대학",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1514,6 +1634,30 @@
       "isPinned": true
     },
     {
+      "id": "2356",
+      "title": "2026 제 2회 전남대학교 입학처 숏품 공모전 안내",
+      "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1034021/artclView.do",
+      "author": "영어영문학과",
+      "date": "2026-04-22",
+      "views": 60,
+      "sourceType": "department",
+      "sourceName": "영어영문학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "853",
+      "title": "2026학년도 하계 계절학기 타 대학교(강원대) 수학 추천 안내 (~4.23) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033952/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
+      "views": 60,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "853",
       "title": "2026학년도 하계 계절학기 타 대학교(강원대) 수학 추천 안내 (~4.23)",
       "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033952/artclView.do",
@@ -1526,14 +1670,50 @@
       "isPinned": false
     },
     {
-      "id": "2356",
-      "title": "2026 제 2회 전남대학교 입학처 숏품 공모전 안내",
-      "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1034021/artclView.do",
-      "author": "영어영문학과",
-      "date": "2026-04-22",
+      "id": "68967",
+      "title": "광주청년일자리스테이션 동명 전담인력 채용(상담직)",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68967",
+      "author": "산학협력단 센터 및 사업단",
+      "date": "2026-04-25",
       "views": 59,
+      "sourceType": "school",
+      "sourceName": "전남대학교 본부",
+      "category": "채용공고",
+      "isPinned": false
+    },
+    {
+      "id": "861",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1034092/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-23",
+      "views": 58,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "1780",
+      "title": "[학사] 2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://welfare.jnu.ac.kr/bbs/welfare/1702/1034125/artclView.do",
+      "author": "생활복지학과생",
+      "date": "2026-04-23",
+      "views": 58,
       "sourceType": "department",
-      "sourceName": "영어영문학과",
+      "sourceName": "생활복지학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "861",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1034092/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-23",
+      "views": 58,
+      "sourceType": "department",
+      "sourceName": "약학부",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1574,26 +1754,26 @@
       "isPinned": false
     },
     {
-      "id": "1780",
-      "title": "[학사] 2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://welfare.jnu.ac.kr/bbs/welfare/1702/1034125/artclView.do",
-      "author": "생활복지학과생",
-      "date": "2026-04-23",
+      "id": "106",
+      "title": "[교내] 2026년 CLS 한국어 프로그램 (대면) 언어파트너 모집(4/27월~5/11월13:00)",
+      "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1034341/artclView.do",
+      "author": "홍민아",
+      "date": "2026-04-24",
       "views": 57,
       "sourceType": "department",
-      "sourceName": "생활복지학과",
+      "sourceName": "산업공학과",
       "category": "공지사항",
       "isPinned": false
     },
     {
-      "id": "861",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1034092/artclView.do",
-      "author": "약학부",
-      "date": "2026-04-23",
+      "id": "3253",
+      "title": "2026학년도 하계 계절학기 타 대학교(동국대 서울캠퍼스, 목포대) 수학 추천 안내",
+      "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1034070/artclView.do",
+      "author": "관리자",
+      "date": "2026-04-22",
       "views": 57,
       "sourceType": "department",
-      "sourceName": "약학부",
+      "sourceName": "전기공학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1682,26 +1862,26 @@
       "isPinned": false
     },
     {
-      "id": "68967",
-      "title": "광주청년일자리스테이션 동명 전담인력 채용(상담직)",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68967",
-      "author": "산학협력단 센터 및 사업단",
-      "date": "2026-04-25",
+      "id": "68958",
+      "title": "KOICA 국제기구 진출 설명회 개최! 파견 프로그램 설명부터...",
+      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68958",
+      "author": "전남대학교광주국제개발협력센터",
+      "date": "2026-04-24",
       "views": 54,
       "sourceType": "school",
       "sourceName": "전남대학교 본부",
-      "category": "채용공고",
+      "category": "대학생활",
       "isPinned": false
     },
     {
-      "id": "106",
-      "title": "[교내] 2026년 CLS 한국어 프로그램 (대면) 언어파트너 모집(4/27월~5/11월13:00)",
-      "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1034341/artclView.do",
-      "author": "홍민아",
+      "id": "862",
+      "title": "「QS Best Student Cities 2027」 설문 참여 안내 (~4.30.) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1034269/artclView.do",
+      "author": "약학부",
       "date": "2026-04-24",
-      "views": 54,
-      "sourceType": "department",
-      "sourceName": "산업공학과",
+      "views": 53,
+      "sourceType": "college",
+      "sourceName": "약학대학",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1731,6 +1911,18 @@
     },
     {
       "id": "852",
+      "title": "2026학년도 하계 계절학기 타 대학교(충남대) 수학 추천 안내 (~4.28) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033950/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
+      "views": 53,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "852",
       "title": "2026학년도 하계 계절학기 타 대학교(충남대) 수학 추천 안내 (~4.28)",
       "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033950/artclView.do",
       "author": "약학부",
@@ -1742,26 +1934,26 @@
       "isPinned": false
     },
     {
-      "id": "68958",
-      "title": "KOICA 국제기구 진출 설명회 개최! 파견 프로그램 설명부터...",
-      "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68958",
-      "author": "전남대학교광주국제개발협력센터",
-      "date": "2026-04-24",
-      "views": 52,
-      "sourceType": "school",
-      "sourceName": "전남대학교 본부",
-      "category": "대학생활",
-      "isPinned": false
-    },
-    {
       "id": "669",
       "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료) 대상자 유보 신청 안내",
       "url": "https://pf.jnu.ac.kr/bbs/pf/997/1034237/artclView.do",
       "author": "관리자",
       "date": "2026-04-24",
-      "views": 51,
+      "views": 52,
       "sourceType": "department",
       "sourceName": "고분자융합소재공학부",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "335",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료) 대상자 유보 신청 안내",
+      "url": "https://oceanography.jnu.ac.kr/bbs/oceanography/2041/1034127/artclView.do",
+      "author": "해양환경전공",
+      "date": "2026-04-23",
+      "views": 51,
+      "sourceType": "department",
+      "sourceName": "해양환경전공",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1783,7 +1975,7 @@
       "url": "https://chem.jnu.ac.kr/bbs/chem/1472/1034358/artclView.do",
       "author": "장미희",
       "date": "2026-04-24",
-      "views": 49,
+      "views": 50,
       "sourceType": "department",
       "sourceName": "화학과",
       "category": "공지사항",
@@ -1798,18 +1990,6 @@
       "views": 49,
       "sourceType": "department",
       "sourceName": "식품영양과학부",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "335",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료) 대상자 유보 신청 안내",
-      "url": "https://oceanography.jnu.ac.kr/bbs/oceanography/2041/1034127/artclView.do",
-      "author": "해양환경전공",
-      "date": "2026-04-23",
-      "views": 49,
-      "sourceType": "department",
-      "sourceName": "해양환경전공",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1910,6 +2090,18 @@
       "isPinned": false
     },
     {
+      "id": "2324",
+      "title": "2026학년도 하계 계절학기 타 대학교(전북대) 수학 추천 안내",
+      "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1034084/artclView.do",
+      "author": "송혜종",
+      "date": "2026-04-22",
+      "views": 46,
+      "sourceType": "department",
+      "sourceName": "국어교육과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "766",
       "title": "다중운집 인파사고 대비 국민행동요령 안내",
       "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1033859/artclView.do",
@@ -1946,14 +2138,26 @@
       "isPinned": false
     },
     {
-      "id": "2324",
-      "title": "2026학년도 하계 계절학기 타 대학교(전북대) 수학 추천 안내",
-      "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1034084/artclView.do",
-      "author": "송혜종",
-      "date": "2026-04-22",
+      "id": "2357",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1034142/artclView.do",
+      "author": "영어영문학과",
+      "date": "2026-04-23",
       "views": 45,
       "sourceType": "department",
-      "sourceName": "국어교육과",
+      "sourceName": "영어영문학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "2823",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1034330/artclView.do",
+      "author": "영어교육과",
+      "date": "2026-04-24",
+      "views": 44,
+      "sourceType": "department",
+      "sourceName": "영어교육과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -1966,18 +2170,6 @@
       "views": 44,
       "sourceType": "department",
       "sourceName": "바이오에너지공학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "2357",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1034142/artclView.do",
-      "author": "영어영문학과",
-      "date": "2026-04-23",
-      "views": 44,
-      "sourceType": "department",
-      "sourceName": "영어영문학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -2006,6 +2198,18 @@
       "isPinned": false
     },
     {
+      "id": "1302",
+      "title": "2026학년도 후기 학·석사연계 및 학·석박사통합연계과정자 입학지원서 제출 안내 (~5.",
+      "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1034334/artclView.do",
+      "author": "통계학과",
+      "date": "2026-04-24",
+      "views": 43,
+      "sourceType": "department",
+      "sourceName": "통계학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "539",
       "title": "농생명화학과 현장견학 신청 안내",
       "url": "https://agrochem.jnu.ac.kr/bbs/agrochem/555/1034113/artclView.do",
@@ -2018,18 +2222,6 @@
       "isPinned": false
     },
     {
-      "id": "2823",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1034330/artclView.do",
-      "author": "영어교육과",
-      "date": "2026-04-24",
-      "views": 42,
-      "sourceType": "department",
-      "sourceName": "영어교육과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
       "id": "770",
       "title": "「2026 제2회 전남대학교 입학처 숏폼 공모전」 안내",
       "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1034130/artclView.do",
@@ -2038,18 +2230,6 @@
       "views": 42,
       "sourceType": "department",
       "sourceName": "바이오에너지공학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "1302",
-      "title": "2026학년도 후기 학·석사연계 및 학·석박사통합연계과정자 입학지원서 제출 안내 (~5.",
-      "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1034334/artclView.do",
-      "author": "통계학과",
-      "date": "2026-04-24",
-      "views": 40,
-      "sourceType": "department",
-      "sourceName": "통계학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -2198,14 +2378,14 @@
       "isPinned": false
     },
     {
-      "id": "1114",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://civil.jnu.ac.kr/bbs/civil/1829/1034177/artclView.do",
-      "author": "토목공학과",
-      "date": "2026-04-23",
+      "id": "1303",
+      "title": "Central Florida 대학교 강수연 교수님 초청 강연 안내(2026. 6. 5.)",
+      "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1034356/artclView.do",
+      "author": "통계학과",
+      "date": "2026-04-24",
       "views": 33,
       "sourceType": "department",
-      "sourceName": "토목공학과",
+      "sourceName": "통계학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -2294,18 +2474,6 @@
       "isPinned": false
     },
     {
-      "id": "1303",
-      "title": "Central Florida 대학교 강수연 교수님 초청 강연 안내(2026. 6. 5.)",
-      "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1034356/artclView.do",
-      "author": "통계학과",
-      "date": "2026-04-24",
-      "views": 31,
-      "sourceType": "department",
-      "sourceName": "통계학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
       "id": "523",
       "title": "(학부) 2026 제2회 전남대학교 입학처 숏폼 공모전 안내",
       "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1034172/artclView.do",
@@ -2390,18 +2558,6 @@
       "isPinned": true
     },
     {
-      "id": "1923",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1034178/artclView.do",
-      "author": "김선경",
-      "date": "2026-04-23",
-      "views": 29,
-      "sourceType": "department",
-      "sourceName": "환경에너지공학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
       "id": "1113",
       "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
       "url": "https://mimb.jnu.ac.kr/bbs/mimb/560/1034266/artclView.do",
@@ -2450,6 +2606,18 @@
       "isPinned": false
     },
     {
+      "id": "2778",
+      "title": "[졸업] 2026년 8월 졸업(수료) 대상자 유보 신청 안내(★졸업(수료)가능자만 신청) 새글",
+      "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034355/artclView.do",
+      "author": "자율전공학부",
+      "date": "2026-04-24",
+      "views": 26,
+      "sourceType": "college",
+      "sourceName": "자율전공학부",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "278",
       "title": "2026학년도 1학기 학습법 특강 「이런 시기 다신 없어. 제발 믿어줘!」안내 새글",
       "url": "https://fcc.jnu.ac.kr/bbs/fcc/2864/1034241/artclView.do",
@@ -2458,6 +2626,18 @@
       "views": 26,
       "sourceType": "college",
       "sourceName": "창의융합학부(여수)",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "1112",
+      "title": "2026학년도 전남대학교 도서관 학술전자정보박람회 개최 안내",
+      "url": "https://mimb.jnu.ac.kr/bbs/mimb/560/1034264/artclView.do",
+      "author": "분자생명공학과",
+      "date": "2026-04-24",
+      "views": 26,
+      "sourceType": "department",
+      "sourceName": "분자생명공학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -2474,6 +2654,18 @@
       "isPinned": false
     },
     {
+      "id": "2778",
+      "title": "[졸업] 2026년 8월 졸업(수료) 대상자 유보 신청 안내(★졸업(수료)가능자만 신청)",
+      "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1034355/artclView.do",
+      "author": "자율전공학부",
+      "date": "2026-04-24",
+      "views": 26,
+      "sourceType": "department",
+      "sourceName": "자율전공학부",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "6015",
       "title": "[채용공고] 2026년 전남대학교병원 직원(수습직) 공개채용 공고",
       "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1034248/artclView.do",
@@ -2486,18 +2678,6 @@
       "isPinned": false
     },
     {
-      "id": "1112",
-      "title": "2026학년도 전남대학교 도서관 학술전자정보박람회 개최 안내",
-      "url": "https://mimb.jnu.ac.kr/bbs/mimb/560/1034264/artclView.do",
-      "author": "분자생명공학과",
-      "date": "2026-04-24",
-      "views": 25,
-      "sourceType": "department",
-      "sourceName": "분자생명공학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
       "id": "773",
       "title": "2026학년도 전남대학교 도서관 학술전자정보박람회 개최 안내",
       "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1034246/artclView.do",
@@ -2506,30 +2686,6 @@
       "views": 25,
       "sourceType": "department",
       "sourceName": "바이오에너지공학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "2778",
-      "title": "[졸업] 2026년 8월 졸업(수료) 대상자 유보 신청 안내(★졸업(수료)가능자만 신청) 새글",
-      "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1034355/artclView.do",
-      "author": "자율전공학부",
-      "date": "2026-04-24",
-      "views": 24,
-      "sourceType": "college",
-      "sourceName": "자율전공학부",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "2778",
-      "title": "[졸업] 2026년 8월 졸업(수료) 대상자 유보 신청 안내(★졸업(수료)가능자만 신청)",
-      "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1034355/artclView.do",
-      "author": "자율전공학부",
-      "date": "2026-04-24",
-      "views": 24,
-      "sourceType": "department",
-      "sourceName": "자율전공학부",
       "category": "공지사항",
       "isPinned": false
     },
@@ -2571,6 +2727,18 @@
     },
     {
       "id": "851",
+      "title": "2026학년도 하계 계절학기 타 대학교(전북대) 수학 추천 안내 (~4.24.) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033949/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
+      "views": 22,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "851",
       "title": "2026학년도 하계 계절학기 타 대학교(전북대) 수학 추천 안내 (~4.24.)",
       "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033949/artclView.do",
       "author": "약학부",
@@ -2578,18 +2746,6 @@
       "views": 22,
       "sourceType": "department",
       "sourceName": "약학부",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "1924",
-      "title": "[학부] 2026학년도 1학기 캡스톤디자인 교과목 지원 신청 안내(~4/30)",
-      "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1034315/artclView.do",
-      "author": "김선경",
-      "date": "2026-04-24",
-      "views": 21,
-      "sourceType": "department",
-      "sourceName": "환경에너지공학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -2715,6 +2871,18 @@
     },
     {
       "id": "850",
+      "title": "2026학년도 하계 계절학기 타 대학교(부경대) 수학 추천 안내 (~5. 7.) 새글",
+      "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033946/artclView.do",
+      "author": "약학부",
+      "date": "2026-04-21",
+      "views": 17,
+      "sourceType": "college",
+      "sourceName": "약학대학",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "850",
       "title": "2026학년도 하계 계절학기 타 대학교(부경대) 수학 추천 안내 (~5. 7.)",
       "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1033946/artclView.do",
       "author": "약학부",
@@ -2755,9 +2923,21 @@
       "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1034254/artclView.do",
       "author": "식품공학과",
       "date": "2026-04-24",
-      "views": 15,
+      "views": 16,
       "sourceType": "department",
       "sourceName": "식품공학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
+      "id": "571",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://rbe.jnu.ac.kr/bbs/rbe/447/1034235/artclView.do",
+      "author": "전승주",
+      "date": "2026-04-24",
+      "views": 16,
+      "sourceType": "department",
+      "sourceName": "지역·바이오시스템공학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -2782,18 +2962,6 @@
       "views": 15,
       "sourceType": "department",
       "sourceName": "디자인학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "571",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://rbe.jnu.ac.kr/bbs/rbe/447/1034235/artclView.do",
-      "author": "전승주",
-      "date": "2026-04-24",
-      "views": 14,
-      "sourceType": "department",
-      "sourceName": "지역·바이오시스템공학과",
       "category": "공지사항",
       "isPinned": false
     },
@@ -2846,6 +3014,18 @@
       "isPinned": false
     },
     {
+      "id": "760",
+      "title": "2026 제2회 전남대학교 입학처 숏폼 공모전 안내",
+      "url": "https://agro.jnu.ac.kr/bbs/agro/444/1034352/artclView.do",
+      "author": "응용식물학과",
+      "date": "2026-04-24",
+      "views": 13,
+      "sourceType": "department",
+      "sourceName": "응용식물학과",
+      "category": "공지사항",
+      "isPinned": false
+    },
+    {
       "id": "1108",
       "title": "다중운집 인파사고 대비 국민행동요령 안내",
       "url": "https://mimb.jnu.ac.kr/bbs/mimb/560/1034260/artclView.do",
@@ -2858,9 +3038,9 @@
       "isPinned": false
     },
     {
-      "id": "760",
-      "title": "2026 제2회 전남대학교 입학처 숏폼 공모전 안내",
-      "url": "https://agro.jnu.ac.kr/bbs/agro/444/1034352/artclView.do",
+      "id": "762",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료) 대상자 유보 신청 안내",
+      "url": "https://agro.jnu.ac.kr/bbs/agro/444/1034354/artclView.do",
       "author": "응용식물학과",
       "date": "2026-04-24",
       "views": 12,
@@ -2868,6 +3048,18 @@
       "sourceName": "응용식물학과",
       "category": "공지사항",
       "isPinned": false
+    },
+    {
+      "id": "chem-edu-3",
+      "title": "2026학년도 하계 계절학기 타 대학교(목포대) 수학 추천 안내(~5.4.(월))",
+      "url": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/1034102/artclView.do",
+      "author": "화학교육과",
+      "date": "2026-04-23",
+      "views": 12,
+      "sourceType": "department",
+      "sourceName": "화학교육과",
+      "category": "공지사항",
+      "isPinned": true
     },
     {
       "id": "chem-edu-9",
@@ -2892,30 +3084,6 @@
       "sourceName": "화학교육과",
       "category": "공지사항",
       "isPinned": false
-    },
-    {
-      "id": "762",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료) 대상자 유보 신청 안내",
-      "url": "https://agro.jnu.ac.kr/bbs/agro/444/1034354/artclView.do",
-      "author": "응용식물학과",
-      "date": "2026-04-24",
-      "views": 11,
-      "sourceType": "department",
-      "sourceName": "응용식물학과",
-      "category": "공지사항",
-      "isPinned": false
-    },
-    {
-      "id": "chem-edu-3",
-      "title": "2026학년도 하계 계절학기 타 대학교(목포대) 수학 추천 안내(~5.4.(월))",
-      "url": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/1034102/artclView.do",
-      "author": "화학교육과",
-      "date": "2026-04-23",
-      "views": 11,
-      "sourceType": "department",
-      "sourceName": "화학교육과",
-      "category": "공지사항",
-      "isPinned": true
     },
     {
       "id": "chem-edu-5",
@@ -3002,6 +3170,18 @@
       "isPinned": true
     },
     {
+      "id": "chem-edu-6",
+      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
+      "url": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/1034094/artclView.do",
+      "author": "화학교육과",
+      "date": "2026-04-23",
+      "views": 10,
+      "sourceType": "department",
+      "sourceName": "화학교육과",
+      "category": "공지사항",
+      "isPinned": true
+    },
+    {
       "id": "815",
       "title": "「2026년 예비교사 실전역량 강화 첫걸음 연수 과정」 모집 안내",
       "url": "https://ethicsedu.jnu.ac.kr/bbs/ethicsedu/2304/1034257/artclView.do",
@@ -3024,18 +3204,6 @@
       "sourceName": "체육교육과",
       "category": "공지사항",
       "isPinned": false
-    },
-    {
-      "id": "chem-edu-6",
-      "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-      "url": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/1034094/artclView.do",
-      "author": "화학교육과",
-      "date": "2026-04-23",
-      "views": 9,
-      "sourceType": "department",
-      "sourceName": "화학교육과",
-      "category": "공지사항",
-      "isPinned": true
     },
     {
       "id": "813",
