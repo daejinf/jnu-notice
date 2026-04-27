@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-27T04:55:54.855Z",
+  "checkedAt": "2026-04-27T07:43:16.596Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1034437/artclView.do",
           "author": "인공지능학부",
           "date": "2026-04-27",
-          "views": 16,
+          "views": 31,
           "sourceType": "department",
           "sourceName": "인공지능학부",
           "category": "공지사항",
@@ -30,13 +30,25 @@
         {
           "id": "68976",
           "title": "2026학년도 하계 계절학기 타 대학교(고려대) 교류수학 추천...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68976",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68976",
           "author": "학사과",
           "date": "2026-04-27",
-          "views": 57,
+          "views": 94,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "854",
+          "title": "New [홍보]TOPCIT 릴레이 특강 안내(5.6.(수) ~ 8.(금), Zoom)",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=854&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-04-27",
+          "views": 84,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
           "isPinned": false
         },
         {
@@ -45,7 +57,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68972",
           "author": "학사과",
           "date": "2026-04-27",
-          "views": 56,
+          "views": 76,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -54,61 +66,13 @@
         {
           "id": "68975",
           "title": "2026학년도 하기 계절학기 타 대학교(부산대) 교류수학 추천...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68975",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68975",
           "author": "학사과",
           "date": "2026-04-27",
-          "views": 48,
+          "views": 70,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
-          "isPinned": false
-        },
-        {
-          "id": "68969",
-          "title": "전남대생협 2026년도 임원 선거 공보",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68969",
-          "author": "소비자생활협동조합",
-          "date": "2026-04-27",
-          "views": 31,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
-          "isPinned": false
-        },
-        {
-          "id": "68968",
-          "title": "전남대생협 2026년도 대의원 확정공고",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68968",
-          "author": "소비자생활협동조합",
-          "date": "2026-04-27",
-          "views": 25,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
-          "isPinned": false
-        },
-        {
-          "id": "26980",
-          "title": "[Event]시립청소년문화교류센터 청소년국제정치역사특사단 모집",
-          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26980",
-          "author": "국제협력과",
-          "date": "2026-04-27",
-          "views": 18,
-          "sourceType": "center",
-          "sourceName": "국제협력과",
-          "category": "기관 공지",
-          "isPinned": false
-        },
-        {
-          "id": "56",
-          "title": "[공지사항] SK그룹 채용연계 AI 교육(SKALA 4기) 설명회 및 과정 모집",
-          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1034437/artclView.do",
-          "author": "인공지능학부",
-          "date": "2026-04-27",
-          "views": 16,
-          "sourceType": "department",
-          "sourceName": "인공지능학부",
-          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -117,10 +81,70 @@
           "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94973",
           "author": "생활안내 2026학년도 1학기 예향관(BTL) 생활관 식당 만족도조사 Satisfaction Survey...",
           "date": "2026-04-27",
-          "views": 14,
+          "views": 67,
           "sourceType": "center",
           "sourceName": "광주생활관",
           "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "68984",
+          "title": "[한국마사회] 2026년 상반기 '힐링승마 지원사업&...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68984",
+          "author": "학생과",
+          "date": "2026-04-27",
+          "views": 44,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "68969",
+          "title": "전남대생협 2026년도 임원 선거 공보",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68969",
+          "author": "소비자생활협동조합",
+          "date": "2026-04-27",
+          "views": 39,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "56",
+          "title": "[공지사항] SK그룹 채용연계 AI 교육(SKALA 4기) 설명회 및 과정 모집",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1034437/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-04-27",
+          "views": 31,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "26980",
+          "title": "[Event]시립청소년문화교류센터 청소년국제정치역사특사단 모집",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26980",
+          "author": "국제협력과",
+          "date": "2026-04-27",
+          "views": 30,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "68968",
+          "title": "전남대생협 2026년도 대의원 확정공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68968",
+          "author": "소비자생활협동조합",
+          "date": "2026-04-27",
+          "views": 27,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -232,8 +256,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-27T04:55:54.855Z",
-      "totalCount": 19,
+      "fetchedAt": "2026-04-27T07:43:16.596Z",
+      "totalCount": 21,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-04-25T09:11:58.522Z"
     }
