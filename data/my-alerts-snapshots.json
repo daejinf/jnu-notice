@@ -1,17 +1,89 @@
 {
-  "checkedAt": "2026-04-27T12:00:25.741Z",
+  "checkedAt": "2026-04-27T14:26:47.497Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "software-3",
+          "title": "(~5/11, 14:00) [현대자동차그룹] 소프티어 부트캠프 8기 모집",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1041911/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-27",
+          "views": 44,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-6",
+          "title": "(1차:4/27~5/8, 2차:5/26~6/10) 2025학년도 후기(2026년 8월) 학",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1034592/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-27",
+          "views": 43,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
         {
           "id": "ai-major-1",
           "title": "SK그룹 채용연계 AI 교육(SKALA 4기) 설명회 및 과정 모집",
           "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1034437/artclView.do",
           "author": "인공지능학부",
           "date": "2026-04-27",
-          "views": 39,
+          "views": 40,
           "sourceType": "department",
           "sourceName": "인공지능학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-1",
+          "title": "(~5/11) SSAFY 16기 모집 : 취업역량과 AI 활용역량을 한 번에!",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1041914/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-27",
+          "views": 12,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-5",
+          "title": "(~4/30, 15:00)『지역혁신중심대학지원체계(RISE)사업단』 2026학년도 1학기",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1034662/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-27",
+          "views": 11,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-2",
+          "title": "(~5/8(금) 17:00) [현대자동차] 현대자동차 채용전환형 하계 인턴십 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1041912/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-27",
+          "views": 8,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-4",
+          "title": "(~4/30)「QS Best Student Cities 2027」 설문 참여 협조 요청",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1041910/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-27",
+          "views": 6,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
           "category": "공지사항",
           "isPinned": true
         },
@@ -52,12 +124,24 @@
           "isPinned": true
         },
         {
+          "id": "94973",
+          "title": "2026학년도 1학기 예향관(BTL) 생활관 식당 만족도조사 Satisfaction Survey...",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94973",
+          "author": "생활안내 2026학년도 1학기 예향관(BTL) 생활관 식당 만족도조사 Satisfaction Survey...",
+          "date": "2026-04-27",
+          "views": 149,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
           "id": "68976",
           "title": "2026학년도 하계 계절학기 타 대학교(고려대) 교류수학 추천...",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68976",
           "author": "학사과",
           "date": "2026-04-27",
-          "views": 132,
+          "views": 147,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -69,22 +153,10 @@
           "url": "https://sojoong.kr/notice/notice-board/?uid=854&mod=document",
           "author": "소프트웨어중심사업단",
           "date": "2026-04-27",
-          "views": 129,
+          "views": 138,
           "sourceType": "center",
           "sourceName": "소프트웨어중심사업단",
           "category": "사업단 공지",
-          "isPinned": false
-        },
-        {
-          "id": "94973",
-          "title": "2026학년도 1학기 예향관(BTL) 생활관 식당 만족도조사 Satisfaction Survey...",
-          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94973",
-          "author": "생활안내 2026학년도 1학기 예향관(BTL) 생활관 식당 만족도조사 Satisfaction Survey...",
-          "date": "2026-04-27",
-          "views": 126,
-          "sourceType": "center",
-          "sourceName": "광주생활관",
-          "category": "기관 공지",
           "isPinned": false
         },
         {
@@ -93,7 +165,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68975",
           "author": "학사과",
           "date": "2026-04-27",
-          "views": 96,
+          "views": 102,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -105,7 +177,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68972",
           "author": "학사과",
           "date": "2026-04-27",
-          "views": 93,
+          "views": 99,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -117,34 +189,10 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68984",
           "author": "학생과",
           "date": "2026-04-27",
-          "views": 76,
+          "views": 87,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
-          "isPinned": false
-        },
-        {
-          "id": "68969",
-          "title": "전남대생협 2026년도 임원 선거 공보",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68969",
-          "author": "소비자생활협동조합",
-          "date": "2026-04-27",
-          "views": 43,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
-          "isPinned": false
-        },
-        {
-          "id": "56",
-          "title": "[공지사항] SK그룹 채용연계 AI 교육(SKALA 4기) 설명회 및 과정 모집",
-          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1034437/artclView.do",
-          "author": "인공지능학부",
-          "date": "2026-04-27",
-          "views": 39,
-          "sourceType": "department",
-          "sourceName": "인공지능학부",
-          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -153,10 +201,22 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68988",
           "author": "학사과",
           "date": "2026-04-27",
-          "views": 37,
+          "views": 63,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "68969",
+          "title": "전남대생협 2026년도 임원 선거 공보",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68969",
+          "author": "소비자생활협동조합",
+          "date": "2026-04-27",
+          "views": 44,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -165,10 +225,22 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26980",
           "author": "국제협력과",
           "date": "2026-04-27",
-          "views": 37,
+          "views": 41,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "56",
+          "title": "[공지사항] SK그룹 채용연계 AI 교육(SKALA 4기) 설명회 및 과정 모집",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1034437/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-04-27",
+          "views": 40,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -292,8 +364,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-27T12:00:25.741Z",
-      "totalCount": 24,
+      "fetchedAt": "2026-04-27T14:26:47.497Z",
+      "totalCount": 30,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-04-25T09:11:58.522Z"
     }
