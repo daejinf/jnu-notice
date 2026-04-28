@@ -1,15 +1,75 @@
 {
-  "checkedAt": "2026-04-28T01:22:59.353Z",
+  "checkedAt": "2026-04-28T05:03:31.665Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "68992",
+          "title": "2025학년도 후기(2026년8월)학부 졸업(수료) 유보 신청...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68992",
+          "author": "학사과",
+          "date": "2026-04-28",
+          "views": 106,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": true
+        },
+        {
+          "id": "software-1",
+          "title": "2026학년도 하계 계절학기 운영 계획 안내 (1차:5/6~12, 2차:5/18~19)",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1041948/artclView.do",
+          "author": "오승하",
+          "date": "2026-04-28",
+          "views": 77,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "3955",
+          "title": "2026년도 4월호 AICOSS 레터",
+          "url": "https://www.aicoss.kr/www/notice/view/3955?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-04-28",
+          "views": 4,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "353",
+          "title": "2026년 제5회 CO-Week Academy 참가 안내( ~05/08(금) 15:00)",
+          "url": "https://jnu.nccoss.kr/www/notice/view/353?bd=notice&page=1",
+          "author": "차세대통신혁신융합대학사업단",
+          "date": "2026-04-28",
+          "views": 3,
+          "sourceType": "center",
+          "sourceName": "차세대통신혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
         {
           "id": "68991",
           "title": "2026학년도 하계 계절학기 타 대학교(한국교원대) 교류수학 ...",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68991",
           "author": "학사과",
           "date": "2026-04-28",
-          "views": 5,
+          "views": 53,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "68993",
+          "title": "2026학년도 하계 계절학기 타 대학교(동국대 WISE) 교류...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68993",
+          "author": "학사과",
+          "date": "2026-04-28",
+          "views": 49,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -124,8 +184,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-28T01:22:59.353Z",
-      "totalCount": 10,
+      "fetchedAt": "2026-04-28T05:03:31.665Z",
+      "totalCount": 15,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-04-25T09:11:58.522Z"
     }
