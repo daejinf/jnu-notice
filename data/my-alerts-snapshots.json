@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-28T05:03:31.665Z",
+  "checkedAt": "2026-04-28T07:41:41.351Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68992",
           "author": "학사과",
           "date": "2026-04-28",
-          "views": 106,
+          "views": 141,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -21,7 +21,7 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1041948/artclView.do",
           "author": "오승하",
           "date": "2026-04-28",
-          "views": 77,
+          "views": 114,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
@@ -33,7 +33,7 @@
           "url": "https://www.aicoss.kr/www/notice/view/3955?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
           "author": "인공지능혁신융합대학사업단",
           "date": "2026-04-28",
-          "views": 4,
+          "views": 32,
           "sourceType": "center",
           "sourceName": "인공지능혁신융합대학사업단",
           "category": "사업단 공지",
@@ -45,23 +45,11 @@
           "url": "https://jnu.nccoss.kr/www/notice/view/353?bd=notice&page=1",
           "author": "차세대통신혁신융합대학사업단",
           "date": "2026-04-28",
-          "views": 3,
+          "views": 11,
           "sourceType": "center",
           "sourceName": "차세대통신혁신융합대학사업단",
           "category": "사업단 공지",
           "isPinned": true
-        },
-        {
-          "id": "68991",
-          "title": "2026학년도 하계 계절학기 타 대학교(한국교원대) 교류수학 ...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68991",
-          "author": "학사과",
-          "date": "2026-04-28",
-          "views": 53,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "학사안내",
-          "isPinned": false
         },
         {
           "id": "68993",
@@ -69,10 +57,46 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68993",
           "author": "학사과",
           "date": "2026-04-28",
-          "views": 49,
+          "views": 82,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "68991",
+          "title": "2026학년도 하계 계절학기 타 대학교(한국교원대) 교류수학 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68991",
+          "author": "학사과",
+          "date": "2026-04-28",
+          "views": 77,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "94984",
+          "title": "2026학년도 1학기 5월 정기점검 일정 안내 Schedule for May 2026 Regular ...",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94984",
+          "author": "점검안내 2026학년도 1학기 5월 정기점검 일정 안내 Schedule for May 2026 Regular ...",
+          "date": "2026-04-28",
+          "views": 33,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "64656",
+          "title": "2026년 5월 모의토익/모의 토익스피킹 접수 안내",
+          "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64656",
+          "author": "2026년 5월 모의토익/모의 토익스피킹 접수 안내",
+          "date": "2026-04-28",
+          "views": 2,
+          "sourceType": "center",
+          "sourceName": "언어교육원",
+          "category": "기관 공지",
           "isPinned": false
         },
         {
@@ -184,8 +208,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-28T05:03:31.665Z",
-      "totalCount": 15,
+      "fetchedAt": "2026-04-28T07:41:41.351Z",
+      "totalCount": 17,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-04-25T09:11:58.522Z"
     }
