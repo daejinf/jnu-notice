@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-04-29T13:11:48.609Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 6827
+  },
+  {
     "checkedAt": "2026-04-29T11:19:13.199Z",
     "notices": [
       {
@@ -573,18 +579,6 @@
         "isPinned": true
       },
       {
-        "id": "3018",
-        "title": "​​​​​​​[진로취업지원실] 2026년 진로취업지원프로그램 연간 일정표 안내",
-        "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3018",
-        "author": "취업진로포털 공지사항",
-        "date": "2026-04-29",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 공지사항",
-        "category": "기관 공지",
-        "isPinned": true
-      },
-      {
         "id": "69007",
         "title": "[공무원연금공단]사무직 신입직원(채용형 인턴) 채용(~5.11...",
         "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69007",
@@ -617,18 +611,6 @@
         "views": 25,
         "sourceType": "department",
         "sourceName": "산업공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "900",
-        "title": "「QS Best Student Cities 2027」 설문 참여 협조 요청 새글",
-        "url": "https://natural.jnu.ac.kr/bbs/natural/1560/1042218/artclView.do",
-        "author": "박승범",
-        "date": "2026-04-29",
-        "views": 20,
-        "sourceType": "college",
-        "sourceName": "자연과학대학",
         "category": "공지사항",
         "isPinned": false
       },
@@ -713,18 +695,6 @@
         "views": 8,
         "sourceType": "department",
         "sourceName": "농생명화학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3262",
-        "title": "2026학년도 하계 계절학기 타 대학교(군산대, 조선대) 수학 추천 안내",
-        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1042174/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-29",
-        "views": 5,
-        "sourceType": "department",
-        "sourceName": "전기공학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -997,81 +967,9 @@
         "isPinned": false,
         "statusLabel": "D-305",
         "statusKind": "deadline"
-      },
-      {
-        "id": "software-2",
-        "title": "2026학년도 하계 계절학기 운영 계획 안내 (1차:5/6~12, 2차:5/18~19)",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1041948/artclView.do",
-        "author": "오승하",
-        "date": "2026-04-28",
-        "views": 147,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-1",
-        "title": "(~5/6) 2026년 스마트해운물류 × ICT 멘토링 프로젝트 신청안내",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1042125/artclView.do",
-        "author": "오승하",
-        "date": "2026-04-28",
-        "views": 38,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "3259",
-        "title": "공기업 취업 특강 프로그램 「2026 제1회 멘토러닝톡」 추가모집 홍보",
-        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1041917/artclView.do",
-        "author": "문지혜",
-        "date": "2026-04-28",
-        "views": 68,
-        "sourceType": "department",
-        "sourceName": "전기공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "899",
-        "title": "제9기 대학일자리플러스센터 홍보대사 모집 안내 새글",
-        "url": "https://natural.jnu.ac.kr/bbs/natural/1560/1041975/artclView.do",
-        "author": "행정실",
-        "date": "2026-04-28",
-        "views": 49,
-        "sourceType": "college",
-        "sourceName": "자연과학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3260",
-        "title": "2026학년도 하계 계절학기 타 대학교(고려대) 수학 추천 안내",
-        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1041970/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-28",
-        "views": 32,
-        "sourceType": "department",
-        "sourceName": "전기공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3261",
-        "title": "2026학년도 하계 계절학기 타 대학교(한국교원대, 경북대, 동국대WISE) 수학 추천 안",
-        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1042081/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-28",
-        "views": 30,
-        "sourceType": "department",
-        "sourceName": "전기공학과",
-        "category": "공지사항",
-        "isPinned": false
       }
     ],
-    "newNoticeCount": 44,
+    "newNoticeCount": 35,
     "totalNoticeCount": 8051
   },
   {
@@ -8279,37 +8177,6 @@
     "checkedAt": "2026-04-21T16:21:24.242Z",
     "notices": [],
     "newNoticeCount": 0,
-    "totalNoticeCount": 8031
-  },
-  {
-    "checkedAt": "2026-04-21T14:54:55.543Z",
-    "notices": [
-      {
-        "id": "26977",
-        "title": "[Event]어학원 외국인 유학생 아르바이트 모집",
-        "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26977",
-        "author": "국제협력과",
-        "date": "2026-04-21",
-        "views": 7,
-        "sourceType": "center",
-        "sourceName": "국제협력과",
-        "category": "기관 공지",
-        "isPinned": false
-      },
-      {
-        "id": "157",
-        "title": "2026년 1학기 반도체 프로젝트 중간발표 일정 안내",
-        "url": "https://www.juice-semi.kr/jnu/main/?menu=63&mode=view&no=157",
-        "author": "반도체특성화대학사업단",
-        "date": "2026-04-20",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "반도체특성화대학사업단",
-        "category": "사업단 공지",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
     "totalNoticeCount": 8031
   }
 ]
