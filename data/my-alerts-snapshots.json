@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-04-29T07:36:21.508Z",
+  "checkedAt": "2026-04-29T09:38:57.172Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://grow.jnu.ac.kr/ko/program/intro/view/730",
           "author": "교육혁신본부",
           "date": "2026-04-29",
-          "views": 339,
+          "views": 358,
           "sourceType": "center",
           "sourceName": "비교과 통합 플랫폼 성장마루",
           "category": "Program",
@@ -21,7 +21,7 @@
           "url": "https://grow.jnu.ac.kr/ko/program/intro/view/729",
           "author": "부속시설 글로벌교육원",
           "date": "2026-04-29",
-          "views": 103,
+          "views": 118,
           "sourceType": "center",
           "sourceName": "비교과 통합 플랫폼 성장마루",
           "category": "Program",
@@ -33,7 +33,19 @@
           "url": "https://www.aicoss.kr/www/notice/view/3957?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
           "author": "인공지능혁신융합대학사업단",
           "date": "2026-04-29",
-          "views": 42,
+          "views": 49,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "3958",
+          "title": "2026년 제5회 CO-Week Academy 신청 안내(~5/5(수))",
+          "url": "https://www.aicoss.kr/www/notice/view/3958?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-04-29",
+          "views": 19,
           "sourceType": "center",
           "sourceName": "인공지능혁신융합대학사업단",
           "category": "사업단 공지",
@@ -45,21 +57,9 @@
           "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10565?p=1",
           "author": "조승현",
           "date": "2026-04-29",
-          "views": 10,
+          "views": 12,
           "sourceType": "center",
           "sourceName": "교육혁신본부",
-          "category": "기관 공지",
-          "isPinned": true
-        },
-        {
-          "id": "3018",
-          "title": "​​​​​​​[진로취업지원실] 2026년 진로취업지원프로그램 연간 일정표 안내",
-          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3018",
-          "author": "취업진로포털 공지사항",
-          "date": "2026-04-29",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 공지사항",
           "category": "기관 공지",
           "isPinned": true
         },
@@ -69,34 +69,10 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EA%B5%AD%EC%A0%9C%EC%9D%B8%ED%84%B4&Seq=26981",
           "author": "국제협력과",
           "date": "2026-04-29",
-          "views": 275,
+          "views": 288,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
-          "isPinned": false
-        },
-        {
-          "id": "26982",
-          "title": "[Event]제13차 한중일 대학생 외교캠프 개최 안내",
-          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26982",
-          "author": "국제협력과",
-          "date": "2026-04-29",
-          "views": 29,
-          "sourceType": "center",
-          "sourceName": "국제협력과",
-          "category": "기관 공지",
-          "isPinned": false
-        },
-        {
-          "id": "69009",
-          "title": "전남대생협 제22차 정기 총회 개최 공고",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69009",
-          "author": "소비자생활협동조합",
-          "date": "2026-04-29",
-          "views": 20,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -105,10 +81,70 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69015",
           "author": "학사과",
           "date": "2026-04-29",
-          "views": 16,
+          "views": 99,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "26982",
+          "title": "[Event]제13차 한중일 대학생 외교캠프 개최 안내",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26982",
+          "author": "국제협력과",
+          "date": "2026-04-29",
+          "views": 37,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "69009",
+          "title": "전남대생협 제22차 정기 총회 개최 공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69009",
+          "author": "소비자생활협동조합",
+          "date": "2026-04-29",
+          "views": 22,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "26984",
+          "title": "[Notice Study Abroad-국제인턴] 2026학년도 2학기 KIST Europe 국제인턴 서류 합격자 발표",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EA%B5%AD%EC%A0%9C%EC%9D%B8%ED%84%B4&Seq=26984",
+          "author": "국제협력과",
+          "date": "2026-04-29",
+          "views": 15,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "69019",
+          "title": "2026학년도 하계 계절학기 타 대학교(한국예술종합학교) 교류...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69019",
+          "author": "학사과",
+          "date": "2026-04-29",
+          "views": 13,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "26985",
+          "title": "[Event]2026학년도 하계 5만기행 프로그램 합격(팀) 발표",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26985",
+          "author": "국제협력과",
+          "date": "2026-04-29",
+          "views": 2,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
           "isPinned": false
         },
         {
@@ -137,6 +173,20 @@
           "category": "추천채용",
           "isPinned": false,
           "statusLabel": "D-8",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "53368",
+          "title": "[현대백화점]회계/재무 限★학교 추천채용(~5.11.(월)까지)",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53368",
+          "author": "취업진로포털 추천채용",
+          "date": "2026-04-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 추천채용",
+          "category": "추천채용",
+          "isPinned": false,
+          "statusLabel": "D-12",
           "statusKind": "deadline"
         },
         {
@@ -210,22 +260,10 @@
           "sourceName": "취업진로포털 추천채용",
           "category": "추천채용",
           "isPinned": false
-        },
-        {
-          "id": "53297",
-          "title": "[동원그룹]GO:FIELD인턴십(채용연계형) 국내영업, 생산, 건설, 안전★학교 추천채용(~4.19.(일)까지)",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53297",
-          "author": "취업진로포털 추천채용",
-          "date": "2026-04-29",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 추천채용",
-          "category": "추천채용",
-          "isPinned": false
         }
       ],
-      "fetchedAt": "2026-04-29T07:36:21.508Z",
-      "totalCount": 18,
+      "fetchedAt": "2026-04-29T09:38:57.172Z",
+      "totalCount": 21,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-04-25T09:11:58.522Z"
     }
