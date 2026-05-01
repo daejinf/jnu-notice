@@ -39,6 +39,7 @@ const HOT_PERIOD_OPTIONS: { key: HotNoticePeriodKey; label: string; description:
   { key: "30", label: "\uCD5C\uADFC 30\uC77C", description: "\uD55C \uB2EC \uAE30\uC900" },
 ];
 const DEFAULT_HOT_PERIOD: HotNoticePeriodKey = "7";
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 type NoticeApiResponse = {
   notices: Notice[];
@@ -53,14 +54,30 @@ function toSortableTime(date: string) {
   return Number.isNaN(time) ? 0 : time;
 }
 
-function getThresholdTime(days: number) {
-  const now = new Date();
-  const kstNow = new Date(now.getTime() + 9 * 60 * 60 * 1000);
-  const startOfTodayKst = new Date(
-    Date.UTC(kstNow.getUTCFullYear(), kstNow.getUTCMonth(), kstNow.getUTCDate()),
-  );
-  startOfTodayKst.setUTCDate(startOfTodayKst.getUTCDate() - (days - 1));
-  return startOfTodayKst.getTime();
+function getTodayKstDateKey() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const year = parts.find((part) => part.type === "year")?.value;
+  const month = parts.find((part) => part.type === "month")?.value;
+  const day = parts.find((part) => part.type === "day")?.value;
+
+  return year && month && day ? `${year}-${month}-${day}` : null;
+}
+
+function getHotPeriodRange(days: number) {
+  const todayKstDateKey = getTodayKstDateKey();
+  const startOfTodayKst = todayKstDateKey
+    ? new Date(`${todayKstDateKey}T00:00:00+09:00`).getTime()
+    : Date.now();
+
+  return {
+    startTime: startOfTodayKst - (days - 1) * DAY_MS,
+    endTime: startOfTodayKst + DAY_MS - 1,
+  };
 }
 
 function formatNoticeDate(date: string) {
@@ -119,10 +136,13 @@ function dedupeHotNotices(notices: Notice[]) {
 }
 
 function buildHotNotices(notices: Notice[], periodKey: HotNoticePeriodKey = DEFAULT_HOT_PERIOD) {
-  const thresholdTime = getThresholdTime(Number(periodKey));
+  const { startTime, endTime } = getHotPeriodRange(Number(periodKey));
 
   return dedupeHotNotices(notices)
-    .filter((notice) => toSortableTime(notice.date) >= thresholdTime)
+    .filter((notice) => {
+      const noticeTime = toSortableTime(notice.date);
+      return noticeTime >= startTime && noticeTime <= endTime;
+    })
     .sort((a, b) => {
       if (b.views !== a.views) {
         return b.views - a.views;

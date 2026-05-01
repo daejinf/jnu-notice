@@ -41,11 +41,12 @@ export async function runNoticeCheck() {
   );
   const storedNotices = await loadStoredNotices();
   const discoveredNotices = findNewNotices(currentNotices, storedNotices);
+  const allKnownNotices = sortNoticesByDate(dedupeNotices([...currentNotices, ...storedNotices]));
   const checkedAt = new Date().toISOString();
   const newNotices = filterFreshNotices(discoveredNotices, checkedAt);
 
-  await saveNotices(currentNotices);
-  await saveRecentHotNotices(currentNotices);
+  await saveNotices(allKnownNotices);
+  await saveRecentHotNotices(allKnownNotices);
   await saveNoticeCheckSnapshot({
     checkedAt,
     totalNoticeCount: currentNotices.length,

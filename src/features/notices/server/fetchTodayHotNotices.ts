@@ -5,6 +5,7 @@ import { loadStoredNotices } from "@/features/notices/server/noticeStorage";
 
 const HOT_NOTICE_PERIOD_KEYS = ["3", "7", "14", "30"] as const;
 const HOT_STORAGE_FILE_NAME = "hot-notices.json";
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 function toSortableTime(date: string) {
   const normalized = date.replaceAll(".", "-");
@@ -12,21 +13,40 @@ function toSortableTime(date: string) {
   return Number.isNaN(time) ? 0 : time;
 }
 
-function getThresholdTime(days: number) {
-  const now = new Date();
-  const kstNow = new Date(now.getTime() + 9 * 60 * 60 * 1000);
-  const startOfTodayKst = new Date(
-    Date.UTC(kstNow.getUTCFullYear(), kstNow.getUTCMonth(), kstNow.getUTCDate()),
-  );
-  startOfTodayKst.setUTCDate(startOfTodayKst.getUTCDate() - (days - 1));
-  return startOfTodayKst.getTime();
+function getTodayKstDateKey() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const year = parts.find((part) => part.type === "year")?.value;
+  const month = parts.find((part) => part.type === "month")?.value;
+  const day = parts.find((part) => part.type === "day")?.value;
+
+  return year && month && day ? `${year}-${month}-${day}` : null;
+}
+
+function getHotPeriodRange(days: number) {
+  const todayKstDateKey = getTodayKstDateKey();
+  const startOfTodayKst = todayKstDateKey
+    ? new Date(`${todayKstDateKey}T00:00:00+09:00`).getTime()
+    : Date.now();
+
+  return {
+    startTime: startOfTodayKst - (days - 1) * DAY_MS,
+    endTime: startOfTodayKst + DAY_MS - 1,
+  };
 }
 
 function buildRecentHotNotices(notices: Notice[], days: number) {
-  const thresholdTime = getThresholdTime(days);
+  const { startTime, endTime } = getHotPeriodRange(days);
 
   return dedupeNotices(notices)
-    .filter((notice) => toSortableTime(notice.date) >= thresholdTime)
+    .filter((notice) => {
+      const noticeTime = toSortableTime(notice.date);
+      return noticeTime >= startTime && noticeTime <= endTime;
+    })
     .sort((a: Notice, b: Notice) => {
       if (b.views !== a.views) {
         return b.views - a.views;
@@ -52,28 +72,22 @@ function buildRecentHotNoticeRankings(notices: Notice[]): HotNoticeRankings {
   }, createEmptyHotRankings());
 }
 
-function normalizeHotRankings(
-  rankings: Partial<HotNoticeRankings> | undefined,
-  fallbackNotices: Notice[],
-): HotNoticeRankings {
-  const normalized = createEmptyHotRankings();
-
-  HOT_NOTICE_PERIOD_KEYS.forEach((periodKey) => {
-    normalized[periodKey] = rankings?.[periodKey] ?? (periodKey === "7" ? fallbackNotices : []);
-  });
-
-  return normalized;
+function flattenHotRankings(rankings: Partial<HotNoticeRankings> | undefined) {
+  return HOT_NOTICE_PERIOD_KEYS.flatMap((periodKey) => rankings?.[periodKey] ?? []);
 }
 
 export async function fetchRecentHotNoticeRankings() {
-  const snapshot = await readJsonFile<HotNoticeSnapshot>(HOT_STORAGE_FILE_NAME);
+  const [snapshot, storedNotices] = await Promise.all([
+    readJsonFile<HotNoticeSnapshot>(HOT_STORAGE_FILE_NAME),
+    loadStoredNotices(),
+  ]);
 
-  if (snapshot?.rankings) {
-    return normalizeHotRankings(snapshot.rankings, snapshot.notices ?? []);
-  }
+  const snapshotNotices = snapshot
+    ? [...flattenHotRankings(snapshot.rankings), ...(snapshot.notices ?? [])]
+    : [];
+  const allKnownNotices = [...snapshotNotices, ...storedNotices];
 
-  const notices = await loadStoredNotices();
-  return buildRecentHotNoticeRankings(notices);
+  return buildRecentHotNoticeRankings(allKnownNotices);
 }
 
 export async function fetchRecentHotNotices() {
