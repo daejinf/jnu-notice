@@ -59,23 +59,23 @@ function UpdatesHistoryList({
 
   if (history.length === 0) {
     return (
-      <div className="grid gap-4">
+      <div className="grid min-w-0 gap-4">
         {showLatestCheckNote ? (
-          <section className="rounded-[28px] border border-slate-200 bg-white px-5 py-4 text-sm text-slate-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+          <section className="min-w-0 rounded-[28px] border border-slate-200 bg-white px-5 py-4 text-sm text-slate-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
             <span className="font-semibold text-slate-700">{TEXT.latestCheck}</span>
             {` ${formatCheckedAt(latestCheckedAt ?? "")}`}
             <span className="mt-1 block text-slate-400 sm:ml-2 sm:inline">{TEXT.noNewNoticesThisRun}</span>
           </section>
         ) : null}
-        <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.empty}</section>
+        <section className="min-w-0 rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.empty}</section>
       </div>
     );
   }
 
   return (
-    <div className="grid gap-5">
+    <div className="grid min-w-0 gap-5">
       {showLatestCheckNote ? (
-        <section className="rounded-[28px] border border-slate-200 bg-white px-5 py-4 text-sm text-slate-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
+        <section className="min-w-0 rounded-[28px] border border-slate-200 bg-white px-5 py-4 text-sm text-slate-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
           <span className="font-semibold text-slate-700">{TEXT.latestCheck}</span>
           {` ${formatCheckedAt(latestCheckedAt ?? "")}`}
           <span className="mt-1 block text-slate-400 sm:ml-2 sm:inline">{TEXT.noNewNoticesThisRun}</span>
@@ -87,7 +87,7 @@ function UpdatesHistoryList({
         const totalNoticeCount = snapshot.totalNoticeCount ?? 0;
 
         return (
-          <section key={snapshot.checkedAt} className="rounded-[32px] border border-slate-200 bg-white p-4 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:rounded-[36px] sm:p-6">
+          <section key={snapshot.checkedAt} className="min-w-0 rounded-[32px] border border-slate-200 bg-white p-4 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:rounded-[36px] sm:p-6">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{TEXT.checkedAt}</p>
@@ -99,18 +99,18 @@ function UpdatesHistoryList({
               </div>
             </div>
 
-            <div className="mt-5 grid gap-4">
+            <div className="mt-5 grid min-w-0 gap-4">
               {snapshot.notices.map((notice) => (
-                <article key={`${snapshot.checkedAt}-${notice.url}`} className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4 sm:p-5">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">{notice.sourceName}</span>
-                    <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500">{notice.category}</span>
+                <article key={`${snapshot.checkedAt}-${notice.url}`} className="min-w-0 rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4 sm:p-5">
+                  <div className="flex min-w-0 flex-wrap items-center gap-2">
+                    <span className="max-w-full rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 [overflow-wrap:anywhere]">{notice.sourceName}</span>
+                    <span className="max-w-full rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500 [overflow-wrap:anywhere]">{notice.category}</span>
                     {notice.statusLabel ? <span className={`rounded-full px-3 py-1 text-xs font-semibold ${getStatusTone(notice.statusLabel)}`}>{notice.statusLabel}</span> : null}
                   </div>
-                  <a href={notice.url} target="_blank" rel="noreferrer" className="mt-4 block whitespace-normal break-words pr-2 text-[17px] font-bold leading-7 tracking-tight text-slate-950 hover:text-[#1B64DA] sm:text-lg">{notice.title}</a>
-                  <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
-                    <span>{`${TEXT.author} ${notice.author}`}</span>
-                    <span>{`${TEXT.date} ${formatNoticeDate(notice.date)}`}</span>
+                  <a href={notice.url} target="_blank" rel="noreferrer" className="mt-4 block max-w-full whitespace-normal break-words pr-0 text-[17px] font-bold leading-7 tracking-tight text-slate-950 [overflow-wrap:anywhere] hover:text-[#1B64DA] sm:pr-2 sm:text-lg">{notice.title}</a>
+                  <div className="mt-3 flex min-w-0 flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
+                    <span className="max-w-full [overflow-wrap:anywhere]">{`${TEXT.author} ${notice.author}`}</span>
+                    <span className="max-w-full [overflow-wrap:anywhere]">{`${TEXT.date} ${formatNoticeDate(notice.date)}`}</span>
                     <span>{formatViewsLabel(notice)}</span>
                   </div>
                 </article>

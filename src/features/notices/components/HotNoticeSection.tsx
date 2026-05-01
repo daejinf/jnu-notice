@@ -134,20 +134,20 @@ function buildHotNotices(notices: Notice[], periodKey: HotNoticePeriodKey = DEFA
 
 function HotNoticeCardList({ notices }: { notices: Notice[] }) {
   return (
-    <div className="mt-5 grid gap-4">
+    <div className="mt-5 grid min-w-0 gap-4">
       {notices.map((notice, index) => (
         <article
           key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`}
-          className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4 transition hover:border-slate-300 hover:bg-white hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)] sm:p-5"
+          className="min-w-0 rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4 transition hover:border-slate-300 hover:bg-white hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)] sm:p-5"
         >
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
             <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">
               #{index + 1}
             </span>
-            <span className={`rounded-full px-3 py-1 text-xs font-semibold ${getSourceBadgeClass(notice)}`}>
+            <span className={`max-w-full rounded-full px-3 py-1 text-xs font-semibold [overflow-wrap:anywhere] ${getSourceBadgeClass(notice)}`}>
               {notice.sourceName}
             </span>
-            <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
+            <span className="max-w-full rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 [overflow-wrap:anywhere]">
               {notice.category}
             </span>
             <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
@@ -159,14 +159,14 @@ function HotNoticeCardList({ notices }: { notices: Notice[] }) {
             href={notice.url}
             target="_blank"
             rel="noreferrer"
-            className="mt-4 block whitespace-normal break-words pr-2 text-[17px] font-bold leading-7 tracking-tight text-slate-950 hover:text-[#1B64DA] sm:text-lg"
+            className="mt-4 block max-w-full whitespace-normal break-words pr-0 text-[17px] font-bold leading-7 tracking-tight text-slate-950 [overflow-wrap:anywhere] hover:text-[#1B64DA] sm:pr-2 sm:text-lg"
           >
             {notice.title}
           </a>
 
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
-            <span>{`\uc791\uc131\uc790 ${notice.author}`}</span>
-            <span>{`\uac8c\uc2dc\uc77c ${formatNoticeDate(notice.date)}`}</span>
+          <div className="mt-3 flex min-w-0 flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
+            <span className="max-w-full [overflow-wrap:anywhere]">{`\uc791\uc131\uc790 ${notice.author}`}</span>
+            <span className="max-w-full [overflow-wrap:anywhere]">{`\uac8c\uc2dc\uc77c ${formatNoticeDate(notice.date)}`}</span>
             <span>{formatViewsLabel(notice)}</span>
           </div>
         </article>

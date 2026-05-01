@@ -714,24 +714,24 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                   return (
                     <article
                       key={noticeId}
-                      className={`rounded-[24px] border px-4 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.03)] transition sm:px-5 sm:py-5 ${getCardClass(notice, isRead)}`}
+                      className={`min-w-0 rounded-[24px] border px-4 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.03)] transition sm:px-5 sm:py-5 ${getCardClass(notice, isRead)}`}
                     >
-                      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                      <div className="flex min-w-0 flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                         <div className="min-w-0 flex-1">
-                          <div className="flex flex-wrap items-center gap-2">
+                          <div className="flex min-w-0 flex-wrap items-center gap-2">
                             {getNoticeSourceLink(notice) ? (
                               <a
                                 href={getNoticeSourceLink(notice) ?? undefined}
                                 target="_blank"
                                 rel="noreferrer"
-                                className={`rounded-2xl px-3 py-1.5 text-[11px] font-semibold transition hover:brightness-95 ${getSourceBadgeClass(notice)}`}
+                                className={`max-w-full rounded-2xl px-3 py-1.5 text-[11px] font-semibold transition [overflow-wrap:anywhere] hover:brightness-95 ${getSourceBadgeClass(notice)}`}
                               >
                                 {notice.sourceName}
                               </a>
                             ) : (
-                              <span className={`rounded-2xl px-3 py-1.5 text-[11px] font-semibold ${getSourceBadgeClass(notice)}`}>{notice.sourceName}</span>
+                              <span className={`max-w-full rounded-2xl px-3 py-1.5 text-[11px] font-semibold [overflow-wrap:anywhere] ${getSourceBadgeClass(notice)}`}>{notice.sourceName}</span>
                             )}
-                            <span className="rounded-2xl bg-slate-100 px-3 py-1.5 text-[11px] font-semibold text-slate-500">{notice.category}</span>
+                            <span className="max-w-full rounded-2xl bg-slate-100 px-3 py-1.5 text-[11px] font-semibold text-slate-500 [overflow-wrap:anywhere]">{notice.category}</span>
                             {notice.isPinned ? <span className="rounded-2xl bg-amber-50 px-3 py-1.5 text-[11px] font-semibold text-amber-700">{"\uC911\uC694"}</span> : null}
                             {notice.statusLabel ? <span className={`rounded-2xl px-3 py-1.5 text-[11px] font-semibold ${getStatusBadgeClass(notice)}`}>{notice.statusLabel}</span> : null}
                             <span className={`rounded-2xl px-3 py-1.5 text-[11px] font-semibold ${isRead ? "bg-emerald-600 text-white" : "bg-blue-50 text-blue-700"}`}>{isRead ? "\uC77D\uC74C" : "\uC548 \uC77D\uC74C"}</span>
@@ -742,13 +742,13 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                             target="_blank"
                             rel="noreferrer"
                             onClick={() => markAsRead(notice)}
-                            className={`mt-3 block break-words text-[18px] font-bold leading-8 tracking-tight sm:text-[19px] ${notice.statusKind === "closed" ? "text-slate-500 hover:text-slate-600" : isRead ? "text-slate-700 hover:text-slate-900" : "text-[#191F28] hover:text-[#1B64DA]"}`}
+                            className={`mt-3 block max-w-full break-words text-[18px] font-bold leading-8 tracking-tight [overflow-wrap:anywhere] sm:text-[19px] ${notice.statusKind === "closed" ? "text-slate-500 hover:text-slate-600" : isRead ? "text-slate-700 hover:text-slate-900" : "text-[#191F28] hover:text-[#1B64DA]"}`}
                           >
                             {notice.title}
                           </a>
 
-                          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-slate-500">
-                            <span>{notice.author}</span>
+                          <div className="mt-3 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-slate-500">
+                            <span className="max-w-full [overflow-wrap:anywhere]">{notice.author}</span>
                             <span className="text-slate-300">|</span>
                             <span>{formatNoticeDate(notice.date)}</span>
                             <span className="text-slate-300">|</span>
