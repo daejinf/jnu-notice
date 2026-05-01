@@ -40,6 +40,7 @@ const HOT_PERIOD_OPTIONS: { key: HotNoticePeriodKey; label: string; description:
 ];
 const DEFAULT_HOT_PERIOD: HotNoticePeriodKey = "7";
 const DAY_MS = 24 * 60 * 60 * 1000;
+const HOT_PAGE_SIZE = 30;
 
 type NoticeApiResponse = {
   notices: Notice[];
@@ -152,7 +153,7 @@ function buildHotNotices(notices: Notice[], periodKey: HotNoticePeriodKey = DEFA
     });
 }
 
-function HotNoticeCardList({ notices }: { notices: Notice[] }) {
+function HotNoticeCardList({ notices, rankOffset = 0 }: { notices: Notice[]; rankOffset?: number }) {
   return (
     <div className="mt-5 grid min-w-0 gap-4">
       {notices.map((notice, index) => (
@@ -162,7 +163,7 @@ function HotNoticeCardList({ notices }: { notices: Notice[] }) {
         >
           <div className="flex min-w-0 flex-wrap items-center gap-2">
             <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">
-              #{index + 1}
+              #{rankOffset + index + 1}
             </span>
             <span className={`max-w-full rounded-full px-3 py-1 text-xs font-semibold [overflow-wrap:anywhere] ${getSourceBadgeClass(notice)}`}>
               {notice.sourceName}
@@ -195,6 +196,62 @@ function HotNoticeCardList({ notices }: { notices: Notice[] }) {
   );
 }
 
+function HotPagination({
+  currentPage,
+  totalCount,
+  totalPages,
+  onPageChange,
+}: {
+  currentPage: number;
+  totalCount: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}) {
+  if (totalPages <= 1) {
+    return null;
+  }
+
+  const startItem = (currentPage - 1) * HOT_PAGE_SIZE + 1;
+  const endItem = Math.min(currentPage * HOT_PAGE_SIZE, totalCount);
+
+  return (
+    <div className="mt-5 flex flex-col gap-3 border-t border-slate-100 pt-4 sm:flex-row sm:items-center sm:justify-between">
+      <p className="text-sm font-medium text-slate-500">
+        {`${startItem}-${endItem} / ${formatViews(totalCount)}\uAC74`}
+      </p>
+      <div className="flex flex-wrap items-center gap-2">
+        <button
+          type="button"
+          onClick={() => onPageChange(1)}
+          disabled={currentPage === 1}
+          className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          {"\uCC98\uC74C"}
+        </button>
+        <button
+          type="button"
+          onClick={() => onPageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          {"\uC774\uC804"}
+        </button>
+        <span className="rounded-full bg-[#F5F9FF] px-4 py-2 text-sm font-bold text-[#1B64DA] ring-1 ring-[#D6E6FF]">
+          {`${currentPage} / ${totalPages}`}
+        </span>
+        <button
+          type="button"
+          onClick={() => onPageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          {"\uB2E4\uC74C"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function HotNoticeSection({
   storageScope,
   globalHotRankings,
@@ -220,6 +277,7 @@ export function HotNoticeSection({
   const [error, setError] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<HotViewMode>("personal");
   const [globalPeriod, setGlobalPeriod] = useState<HotNoticePeriodKey>(DEFAULT_HOT_PERIOD);
+  const [hotPage, setHotPage] = useState(1);
 
   const isReady =
     schoolSelection.isReady &&
@@ -294,6 +352,19 @@ export function HotNoticeSection({
   const selectedGlobalHotNotices = globalHotRankings[globalPeriod] ?? [];
   const selectedGlobalPeriodLabel =
     HOT_PERIOD_OPTIONS.find((option) => option.key === globalPeriod)?.label ?? HOT_PERIOD_OPTIONS[1].label;
+  const activeHotNotices = viewMode === "personal" ? personalHotNotices : selectedGlobalHotNotices;
+  const totalHotPages = Math.max(1, Math.ceil(activeHotNotices.length / HOT_PAGE_SIZE));
+  const currentHotPage = Math.min(hotPage, totalHotPages);
+  const currentHotPageStart = (currentHotPage - 1) * HOT_PAGE_SIZE;
+  const pagedHotNotices = activeHotNotices.slice(currentHotPageStart, currentHotPageStart + HOT_PAGE_SIZE);
+
+  useEffect(() => {
+    setHotPage(1);
+  }, [globalPeriod, personalHotNotices.length, selectedGlobalHotNotices.length, viewMode]);
+
+  const handleHotPageChange = (page: number) => {
+    setHotPage(Math.min(Math.max(page, 1), totalHotPages));
+  };
 
   return (
     <main className="min-h-screen bg-transparent">
@@ -382,7 +453,13 @@ export function HotNoticeSection({
                   {`${personalHotNotices.length}\uAC74`}
                 </span>
               </div>
-              <HotNoticeCardList notices={personalHotNotices} />
+              <HotNoticeCardList notices={pagedHotNotices} rankOffset={currentHotPageStart} />
+              <HotPagination
+                currentPage={currentHotPage}
+                totalCount={personalHotNotices.length}
+                totalPages={totalHotPages}
+                onPageChange={handleHotPageChange}
+              />
             </section>
           )
         ) : (
@@ -424,7 +501,15 @@ export function HotNoticeSection({
                 {`${selectedGlobalPeriodLabel} \uae30\uc900 HOT \uacf5\uc9c0\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4.`}
               </div>
             ) : (
-              <HotNoticeCardList notices={selectedGlobalHotNotices} />
+              <>
+                <HotNoticeCardList notices={pagedHotNotices} rankOffset={currentHotPageStart} />
+                <HotPagination
+                  currentPage={currentHotPage}
+                  totalCount={selectedGlobalHotNotices.length}
+                  totalPages={totalHotPages}
+                  onPageChange={handleHotPageChange}
+                />
+              </>
             )}
           </section>
         )}
