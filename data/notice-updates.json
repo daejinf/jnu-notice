@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-05-01T12:41:28.127Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7498
+  },
+  {
     "checkedAt": "2026-05-01T11:23:14.001Z",
     "notices": [
       {
@@ -27,18 +33,6 @@
   {
     "checkedAt": "2026-05-01T07:53:15.022Z",
     "notices": [
-      {
-        "id": "ko-program-intro-view-724",
-        "title": "2026학년도 1학기 교양 맛보기 특강 1차 [독일어와 독일 알아보기]",
-        "url": "https://grow.jnu.ac.kr/ko/program/intro/view/724",
-        "author": "교육혁신본부",
-        "date": "2026-05-04",
-        "views": 56,
-        "sourceType": "center",
-        "sourceName": "비교과 통합 플랫폼 성장마루",
-        "category": "Program",
-        "isPinned": false
-      },
       {
         "id": "3647",
         "title": "2026년 글로컬대학 사업 「AI와 함께하는 IT기업 직무 체험: PM, 기획, 개발, 마케팅」 안내",
@@ -274,7 +268,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 19,
+    "newNoticeCount": 18,
     "totalNoticeCount": 8051
   },
   {
@@ -7919,169 +7913,6 @@
       }
     ],
     "newNoticeCount": 21,
-    "totalNoticeCount": 8034
-  },
-  {
-    "checkedAt": "2026-04-23T06:28:33.824Z",
-    "notices": [
-      {
-        "id": "mechanical-2",
-        "title": "[숏폼 공모전] 2026 제2회 전남대학교 입학처 숏폼 공모전 안내",
-        "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1034163/artclView.do",
-        "author": "신혜경",
-        "date": "2026-04-23",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "기계공학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "mechanical-1",
-        "title": "[졸업유보 신청] 2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내 (추가 기간 없음)",
-        "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1034169/artclView.do",
-        "author": "신혜경",
-        "date": "2026-04-23",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "기계공학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "6014",
-        "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-        "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1034168/artclView.do",
-        "author": "건축학부",
-        "date": "2026-04-23",
-        "views": 5,
-        "sourceType": "department",
-        "sourceName": "건축학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1067",
-        "title": "2026학년도 하계 계절학기 타 대학교(서울시립대) 수학 안내",
-        "url": "https://design.jnu.ac.kr/bbs/design/1007/1034147/artclView.do",
-        "author": "디자인학과",
-        "date": "2026-04-23",
-        "views": 4,
-        "sourceType": "department",
-        "sourceName": "디자인학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "771",
-        "title": "‘26년 상반기 학·석사연계과정 및 학·석박통합연계과정 학부연구생 장학사업 선발 계획 안내",
-        "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1034150/artclView.do",
-        "author": "바이오에너지공학과",
-        "date": "2026-04-23",
-        "views": 3,
-        "sourceType": "department",
-        "sourceName": "바이오에너지공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3254",
-        "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1034164/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-23",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "전기공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1068",
-        "title": "2026학년도 하계 계절학기 타 대학교(한양대) 수학 안내",
-        "url": "https://design.jnu.ac.kr/bbs/design/1007/1034148/artclView.do",
-        "author": "디자인학과",
-        "date": "2026-04-23",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "디자인학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "523",
-        "title": "(학부) 2026 제2회 전남대학교 입학처 숏폼 공모전 안내",
-        "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1034172/artclView.do",
-        "author": "음악교육과",
-        "date": "2026-04-23",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "음악교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1155",
-        "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-        "url": "https://illyu.jnu.ac.kr/bbs/illyu/1866/1034152/artclView.do",
-        "author": "문화인류고고학과",
-        "date": "2026-04-23",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "문화인류고고학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1065",
-        "title": "2026학년도 하계 계절학기 타 대학교(목포대) 수학 안내",
-        "url": "https://design.jnu.ac.kr/bbs/design/1007/1034145/artclView.do",
-        "author": "디자인학과",
-        "date": "2026-04-23",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "디자인학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "349",
-        "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-        "url": "https://resources.jnu.ac.kr/bbs/resources/1194/1034170/artclView.do",
-        "author": "최미진",
-        "date": "2026-04-23",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "에너지자원공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1719",
-        "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료) 대상자 유보 신청 안내(1차:4/27~5/8, 2차:",
-        "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1034171/artclView.do",
-        "author": "관리자",
-        "date": "2026-04-23",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "컴퓨터정보통신공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1066",
-        "title": "2026학년도 하계 계절학기 타 대학교(부경대) 수학 안내",
-        "url": "https://design.jnu.ac.kr/bbs/design/1007/1034146/artclView.do",
-        "author": "디자인학과",
-        "date": "2026-04-23",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "디자인학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 13,
     "totalNoticeCount": 8034
   }
 ]
