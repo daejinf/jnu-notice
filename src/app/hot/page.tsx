@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import { AuthLanding } from "@/features/auth/components/AuthLanding";
 import { HotNoticeSection } from "@/features/notices/components/HotNoticeSection";
-import { fetchRecentHotNotices } from "@/features/notices/server/fetchTodayHotNotices";
+import { fetchRecentHotNoticeRankings } from "@/features/notices/server/fetchTodayHotNotices";
 
 export default async function HotPage() {
   const session = await auth();
@@ -11,7 +11,7 @@ export default async function HotPage() {
   }
 
   const storageScope = session.user?.email ?? session.user?.name ?? "default";
-  const globalHotNotices = await fetchRecentHotNotices();
+  const globalHotRankings = await fetchRecentHotNoticeRankings();
 
-  return <HotNoticeSection storageScope={storageScope} globalHotNotices={globalHotNotices} />;
+  return <HotNoticeSection storageScope={storageScope} globalHotRankings={globalHotRankings} />;
 }

@@ -15,7 +15,7 @@ import {
 import { useSelectedCategories } from "@/features/notices/hooks/useSelectedCategories";
 import { joinCategoryQuery } from "@/features/notices/utils/format";
 import { getNoticeClientId } from "@/features/notices/utils/noticeClientState";
-import type { Notice } from "@/types/notice";
+import type { HotNoticePeriodKey, HotNoticeRankings, Notice } from "@/types/notice";
 
 const PROJECT_CENTER_KEYS = [
   "greenbio",
@@ -31,7 +31,14 @@ const PROJECT_CENTER_NAME_SET = new Set(
     .filter((center) => PROJECT_CENTER_KEYS.includes(center.key))
     .map((center) => center.name),
 );
-const HOT_NOTICE_DAYS = 7;
+
+const HOT_PERIOD_OPTIONS: { key: HotNoticePeriodKey; label: string; description: string }[] = [
+  { key: "3", label: "\uCD5C\uADFC 3\uC77C", description: "3\uC77C \uAE30\uC900" },
+  { key: "7", label: "\uCD5C\uADFC 7\uC77C", description: "7\uC77C \uAE30\uC900" },
+  { key: "14", label: "\uCD5C\uADFC 14\uC77C", description: "14\uC77C \uAE30\uC900" },
+  { key: "30", label: "\uCD5C\uADFC 30\uC77C", description: "\uD55C \uB2EC \uAE30\uC900" },
+];
+const DEFAULT_HOT_PERIOD: HotNoticePeriodKey = "7";
 
 type NoticeApiResponse = {
   notices: Notice[];
@@ -46,13 +53,13 @@ function toSortableTime(date: string) {
   return Number.isNaN(time) ? 0 : time;
 }
 
-function getThresholdTime() {
+function getThresholdTime(days: number) {
   const now = new Date();
   const kstNow = new Date(now.getTime() + 9 * 60 * 60 * 1000);
   const startOfTodayKst = new Date(
     Date.UTC(kstNow.getUTCFullYear(), kstNow.getUTCMonth(), kstNow.getUTCDate()),
   );
-  startOfTodayKst.setUTCDate(startOfTodayKst.getUTCDate() - (HOT_NOTICE_DAYS - 1));
+  startOfTodayKst.setUTCDate(startOfTodayKst.getUTCDate() - (days - 1));
   return startOfTodayKst.getTime();
 }
 
@@ -111,8 +118,8 @@ function dedupeHotNotices(notices: Notice[]) {
   return Array.from(noticeMap.values());
 }
 
-function buildHotNotices(notices: Notice[]) {
-  const thresholdTime = getThresholdTime();
+function buildHotNotices(notices: Notice[], periodKey: HotNoticePeriodKey = DEFAULT_HOT_PERIOD) {
+  const thresholdTime = getThresholdTime(Number(periodKey));
 
   return dedupeHotNotices(notices)
     .filter((notice) => toSortableTime(notice.date) >= thresholdTime)
@@ -170,10 +177,10 @@ function HotNoticeCardList({ notices }: { notices: Notice[] }) {
 
 export function HotNoticeSection({
   storageScope,
-  globalHotNotices,
+  globalHotRankings,
 }: {
   storageScope: string;
-  globalHotNotices: Notice[];
+  globalHotRankings: HotNoticeRankings;
 }) {
   const schoolSelection = useSelectedCategories(selectableSchoolCategoryKeys, {
     storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope),
@@ -192,6 +199,7 @@ export function HotNoticeSection({
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<HotViewMode>("personal");
+  const [globalPeriod, setGlobalPeriod] = useState<HotNoticePeriodKey>(DEFAULT_HOT_PERIOD);
 
   const isReady =
     schoolSelection.isReady &&
@@ -263,6 +271,9 @@ export function HotNoticeSection({
   ]);
 
   const personalHotNotices = useMemo(() => buildHotNotices(notices), [notices]);
+  const selectedGlobalHotNotices = globalHotRankings[globalPeriod] ?? [];
+  const selectedGlobalPeriodLabel =
+    HOT_PERIOD_OPTIONS.find((option) => option.key === globalPeriod)?.label ?? HOT_PERIOD_OPTIONS[1].label;
 
   return (
     <main className="min-h-screen bg-transparent">
@@ -275,7 +286,7 @@ export function HotNoticeSection({
             {"\uC9C0\uAE08 \uB728\uB294 \uACF5\uC9C0"}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            {"\uCD5C\uADFC 7\uC77C \uAE30\uC900 \uC870\uD68C\uC218 \uC21C\uC73C\uB85C \uBCF4\uC5EC\uC90D\uB2C8\uB2E4."}
+            {"\uAE30\uAC04\uC744 \uBC14\uAFC0 \uC218 \uC788\uB294 \uC870\uD68C\uC218 \uB7AD\uD0B9\uC785\uB2C8\uB2E4."}
           </p>
         </section>
 
@@ -322,7 +333,7 @@ export function HotNoticeSection({
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 {"\uC804\uCCB4 \uACF5\uC9C0 \uAE30\uC900"}
               </p>
-              <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{`${globalHotNotices.length}\uAC74`}</div>
+              <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{`${selectedGlobalHotNotices.length}\uAC74`}</div>
             </button>
           </div>
         </section>
@@ -362,20 +373,38 @@ export function HotNoticeSection({
                   {"\uC804\uCCB4 \uB7AD\uD0B9"}
                 </h2>
                 <p className="mt-1 text-sm text-slate-500">
-                  {"\uBC31\uC5D4\uB4DC\uAC00 \uBBF8\uB9AC \uB9CC\uB4E0 \uC804\uCCB4 \uC21C\uC704\uC785\uB2C8\uB2E4."}
+                  {`${selectedGlobalPeriodLabel} \uAE30\uAC04\uC758 \uC804\uCCB4 \uC21C\uC704\uC785\uB2C8\uB2E4.`}
                 </p>
               </div>
               <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
-                {`${globalHotNotices.length}\uAC74`}
+                {`${selectedGlobalHotNotices.length}\uAC74`}
               </span>
             </div>
 
-            {globalHotNotices.length === 0 ? (
+            <div className="mt-4 grid gap-2 sm:grid-cols-4">
+              {HOT_PERIOD_OPTIONS.map((option) => (
+                <button
+                  key={option.key}
+                  type="button"
+                  onClick={() => setGlobalPeriod(option.key)}
+                  className={`rounded-[20px] border px-4 py-3 text-left transition ${
+                    globalPeriod === option.key
+                      ? "border-[#1B64DA] bg-[#F5F9FF] text-[#1B64DA] shadow-[0_10px_22px_rgba(27,100,218,0.10)]"
+                      : "border-slate-200 bg-[#FBFCFD] text-slate-600 hover:border-slate-300 hover:bg-white"
+                  }`}
+                >
+                  <p className="text-sm font-bold">{option.label}</p>
+                  <p className="mt-1 text-xs font-medium opacity-70">{option.description}</p>
+                </button>
+              ))}
+            </div>
+
+            {selectedGlobalHotNotices.length === 0 ? (
               <div className="mt-5 rounded-[28px] border border-dashed border-slate-200 bg-[#FBFCFD] px-5 py-10 text-center text-sm text-slate-500">
-                {"\uc804\uccb4 \uae30\uc900 \ucd5c\uadfc 7\uc77c HOT \uacf5\uc9c0\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4."}
+                {`${selectedGlobalPeriodLabel} \uae30\uc900 HOT \uacf5\uc9c0\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4.`}
               </div>
             ) : (
-              <HotNoticeCardList notices={globalHotNotices} />
+              <HotNoticeCardList notices={selectedGlobalHotNotices} />
             )}
           </section>
         )}

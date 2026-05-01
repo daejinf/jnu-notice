@@ -22,9 +22,14 @@ export type NoticeUpdateSnapshot = {
   totalNoticeCount?: number;
 };
 
+export type HotNoticePeriodKey = "3" | "7" | "14" | "30";
+
+export type HotNoticeRankings = Record<HotNoticePeriodKey, Notice[]>;
+
 export type HotNoticeSnapshot = {
   checkedAt: string;
   notices: Notice[];
+  rankings?: Partial<HotNoticeRankings>;
 };
 
 export type NoticeCheckSnapshot = {
