@@ -14,7 +14,7 @@ const TEXT = {
   settingsSaved: "설정 저장",
   loadError: "내 알림을 불러오지 못했습니다.",
   loadErrorFallback: "내 알림을 불러오는 중 오류가 발생했습니다.",
-  noPreferences: "아직 켜둔 소스가 없습니다. 관리에서 먼저 고르면 바로 반영됩니다.",
+  noPreferences: "아직 켜둔 소스가 없습니다. 소스관리에서 먼저 고르면 바로 반영됩니다.",
   loading: "서버에서 불러오는 중입니다.",
   empty: "오늘은 켜둔 소스에 새 공지가 없습니다.",
   author: "작성자",

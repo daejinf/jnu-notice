@@ -23,8 +23,8 @@ const PROJECT_CENTER_KEYS = ["greenbio", "battery", "sw-core", "sw-core-educatio
 const TEXT = {
   selectAll: "\uC804\uCCB4 \uC120\uD0DD",
   clear: "\uC120\uD0DD \uD574\uC81C",
-  settingsBadge: "\uAD00\uB9AC",
-  settingsTitle: "\uBC1B\uC744 \uACF5\uC9C0 \uAD00\uB9AC",
+  settingsBadge: "\uC18C\uC2A4\uAD00\uB9AC",
+  settingsTitle: "\uBC1B\uC744 \uACF5\uC9C0 \uC18C\uC2A4\uAD00\uB9AC",
   settingsDescription: "\uC18C\uC2A4\uB9CC \uCF1C\uB450\uBA74 \uD53C\uB4DC, \uB7AD\uD0B9, \uB9DE\uCDA4\uC5D0 \uBC14\uB85C \uBC18\uC601\uB429\uB2C8\uB2E4.",
   hydrating: "\uBD88\uB7EC\uC624\uB294 \uC911",
   synced: "\uACC4\uC815\uC5D0 \uC800\uC7A5\uB428",

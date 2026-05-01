@@ -17,7 +17,7 @@ const navItems = [
   { href: "/", label: "\uD53C\uB4DC" },
   { href: "/hot", label: "\uB7AD\uD0B9" },
   { href: "/updates", label: "\uD788\uC2A4\uD1A0\uB9AC" },
-  { href: "/settings", label: "\uAD00\uB9AC" },
+  { href: "/settings", label: "\uC18C\uC2A4\uAD00\uB9AC" },
 ];
 
 export default async function RootLayout({
