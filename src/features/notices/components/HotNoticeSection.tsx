@@ -131,7 +131,7 @@ function HotNoticeCardList({ notices }: { notices: Notice[] }) {
       {notices.map((notice, index) => (
         <article
           key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`}
-          className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-5 transition hover:border-slate-300 hover:bg-white hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)]"
+          className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4 transition hover:border-slate-300 hover:bg-white hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)] sm:p-5"
         >
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">
@@ -267,11 +267,11 @@ export function HotNoticeSection({
   return (
     <main className="min-h-screen bg-transparent">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
-        <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:rounded-[36px] sm:p-7">
           <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold text-rose-700">
             {"\uB7AD\uD0B9"}
           </span>
-          <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+          <h1 className="mt-3 text-[32px] font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
             {"\uC9C0\uAE08 \uB728\uB294 \uACF5\uC9C0"}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
@@ -338,7 +338,7 @@ export function HotNoticeSection({
             </section>
           ) : (
             <section className="rounded-[36px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-6">
-              <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+              <div className="flex flex-col gap-2 border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <h2 className="text-xl font-bold tracking-tight text-slate-950">
                     {"\uB0B4 \uB7AD\uD0B9"}

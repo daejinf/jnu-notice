@@ -224,14 +224,14 @@ function SectionChip({
         href={href}
         target="_blank"
         rel="noreferrer"
-        className={`rounded-full px-3 py-1 text-xs font-semibold transition hover:brightness-95 ${toneClass}`}
+        className={`max-w-full break-words rounded-full px-3 py-1 text-xs font-semibold leading-5 transition hover:brightness-95 ${toneClass}`}
       >
         {label}
       </a>
     );
   }
 
-  return <span className={`rounded-full px-3 py-1 text-xs font-semibold ${toneClass}`}>{label}</span>;
+  return <span className={`max-w-full break-words rounded-full px-3 py-1 text-xs font-semibold leading-5 ${toneClass}`}>{label}</span>;
 }
 
 function CompactActionButton({
@@ -545,12 +545,12 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
   const bookmarkCount = uniqueNotices.filter((notice) => bookmarkNoticeIdSet.has(getNoticeClientId(notice))).length;
 
   return (
-    <div className="mx-auto w-full max-w-[1240px] px-4 py-6 sm:px-6 lg:px-8">
-      <section className="rounded-[32px] border border-slate-200 bg-white px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:px-7 sm:py-8">
+    <div className="mx-auto w-full max-w-[1240px] px-3 py-4 sm:px-6 sm:py-6 lg:px-8">
+      <section className="rounded-[28px] border border-slate-200 bg-white px-5 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:rounded-[32px] sm:px-7 sm:py-8">
         <div className="flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
           <div className="max-w-3xl">
             <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">{"\uD53C\uB4DC"}</span>
-            <h1 className="mt-3 text-[30px] font-black tracking-tight text-[#191F28] sm:text-[38px]">
+            <h1 className="mt-3 text-[28px] font-black leading-tight tracking-tight text-[#191F28] sm:text-[38px]">
               {"\uD544\uC694\uD55C \uAC83\uB9CC, \uBC14\uB85C"}
             </h1>
             <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
@@ -558,22 +558,22 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 xl:min-w-[520px]">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 xl:min-w-[520px]">
             <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
               <p className="text-xs font-semibold text-slate-500">{"\uBC1B\uC740 \uACF5\uC9C0"}</p>
-              <p className="mt-2 text-[28px] font-black tracking-tight text-[#191F28]">{joinedAfterNotices.length}</p>
+              <p className="mt-2 text-2xl font-black tracking-tight text-[#191F28] sm:text-[28px]">{joinedAfterNotices.length}</p>
             </div>
             <div className="rounded-[24px] border border-blue-100 bg-blue-50 p-4">
               <p className="text-xs font-semibold text-blue-700">{"\uC548 \uC77D\uC74C"}</p>
-              <p className="mt-2 text-[28px] font-black tracking-tight text-[#1B64DA]">{unreadCount}</p>
+              <p className="mt-2 text-2xl font-black tracking-tight text-[#1B64DA] sm:text-[28px]">{unreadCount}</p>
             </div>
             <div className="rounded-[24px] border border-amber-100 bg-amber-50 p-4">
               <p className="text-xs font-semibold text-amber-700">{"\uC800\uC7A5"}</p>
-              <p className="mt-2 text-[28px] font-black tracking-tight text-amber-700">{bookmarkCount}</p>
+              <p className="mt-2 text-2xl font-black tracking-tight text-amber-700 sm:text-[28px]">{bookmarkCount}</p>
             </div>
             <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
               <p className="text-xs font-semibold text-slate-500">{"\uC18C\uC2A4"}</p>
-              <p className="mt-2 text-[28px] font-black tracking-tight text-[#191F28]">
+              <p className="mt-2 text-2xl font-black tracking-tight text-[#191F28] sm:text-[28px]">
                 {schoolSelection.selectedCategories.length + collegeSelection.selectedCategories.length + departmentSelection.selectedCategories.length + centerSelection.selectedCategories.length}
               </p>
             </div>
@@ -620,7 +620,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
 
         </aside>
 
-        <section className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:p-6">
+        <section className="rounded-[28px] border border-slate-200 bg-white p-4 shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:p-6">
           <div className="flex flex-col gap-4 border-b border-slate-100 pb-5">
             <section className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -671,7 +671,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                   ) : null}
                 </div>
 
-                <div className="flex items-center gap-2 self-end sm:self-auto">
+                <div className="flex w-full flex-wrap items-center justify-end gap-2 sm:w-auto sm:flex-nowrap sm:self-auto">
                   <PageArrowButton
                     direction="prev"
                     disabled={safeCurrentPage === 1}
@@ -714,7 +714,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                   return (
                     <article
                       key={noticeId}
-                      className={`rounded-[24px] border px-5 py-5 shadow-[0_8px_20px_rgba(15,23,42,0.03)] transition ${getCardClass(notice, isRead)}`}
+                      className={`rounded-[24px] border px-4 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.03)] transition sm:px-5 sm:py-5 ${getCardClass(notice, isRead)}`}
                     >
                       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                         <div className="min-w-0 flex-1">
@@ -742,7 +742,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                             target="_blank"
                             rel="noreferrer"
                             onClick={() => markAsRead(notice)}
-                            className={`mt-3 block text-[19px] font-bold leading-8 tracking-tight ${notice.statusKind === "closed" ? "text-slate-500 hover:text-slate-600" : isRead ? "text-slate-700 hover:text-slate-900" : "text-[#191F28] hover:text-[#1B64DA]"}`}
+                            className={`mt-3 block break-words text-[18px] font-bold leading-8 tracking-tight sm:text-[19px] ${notice.statusKind === "closed" ? "text-slate-500 hover:text-slate-600" : isRead ? "text-slate-700 hover:text-slate-900" : "text-[#191F28] hover:text-[#1B64DA]"}`}
                           >
                             {notice.title}
                           </a>
@@ -756,7 +756,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                           </div>
                         </div>
 
-                        <div className="flex shrink-0 items-center gap-2 lg:pl-4">
+                        <div className="flex w-full flex-wrap items-center justify-end gap-2 lg:w-auto lg:flex-nowrap lg:pl-4">
                           <CompactActionButton
                             active={isRead}
                             onClick={() => markAsRead(notice)}

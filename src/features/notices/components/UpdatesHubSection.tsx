@@ -64,7 +64,7 @@ function UpdatesHistoryList({
           <section className="rounded-[28px] border border-slate-200 bg-white px-5 py-4 text-sm text-slate-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
             <span className="font-semibold text-slate-700">{TEXT.latestCheck}</span>
             {` ${formatCheckedAt(latestCheckedAt ?? "")}`}
-            <span className="ml-2 text-slate-400">{TEXT.noNewNoticesThisRun}</span>
+            <span className="mt-1 block text-slate-400 sm:ml-2 sm:inline">{TEXT.noNewNoticesThisRun}</span>
           </section>
         ) : null}
         <section className="rounded-[36px] border border-dashed border-slate-300 bg-[#FBFCFD] px-6 py-16 text-center text-sm text-slate-500">{TEXT.empty}</section>
@@ -78,7 +78,7 @@ function UpdatesHistoryList({
         <section className="rounded-[28px] border border-slate-200 bg-white px-5 py-4 text-sm text-slate-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
           <span className="font-semibold text-slate-700">{TEXT.latestCheck}</span>
           {` ${formatCheckedAt(latestCheckedAt ?? "")}`}
-          <span className="ml-2 text-slate-400">{TEXT.noNewNoticesThisRun}</span>
+          <span className="mt-1 block text-slate-400 sm:ml-2 sm:inline">{TEXT.noNewNoticesThisRun}</span>
         </section>
       ) : null}
 
@@ -87,7 +87,7 @@ function UpdatesHistoryList({
         const totalNoticeCount = snapshot.totalNoticeCount ?? 0;
 
         return (
-          <section key={snapshot.checkedAt} className="rounded-[36px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-6">
+          <section key={snapshot.checkedAt} className="rounded-[32px] border border-slate-200 bg-white p-4 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:rounded-[36px] sm:p-6">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{TEXT.checkedAt}</p>
@@ -101,7 +101,7 @@ function UpdatesHistoryList({
 
             <div className="mt-5 grid gap-4">
               {snapshot.notices.map((notice) => (
-                <article key={`${snapshot.checkedAt}-${notice.url}`} className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-5">
+                <article key={`${snapshot.checkedAt}-${notice.url}`} className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4 sm:p-5">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">{notice.sourceName}</span>
                     <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500">{notice.category}</span>
@@ -144,7 +144,7 @@ function SelectorCard({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-[28px] border px-5 py-4 text-left transition ${
+      className={`rounded-[28px] border px-4 py-4 text-left transition sm:px-5 ${
         active
           ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_12px_24px_rgba(27,100,218,0.10)]"
           : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
@@ -175,9 +175,9 @@ export function UpdatesHubSection({
   return (
     <main className="min-h-screen bg-transparent">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
-        <section className="rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-7">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:rounded-[36px] sm:p-7">
           <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">{TEXT.badge}</span>
-          <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">{TEXT.title}</h1>
+          <h1 className="mt-3 text-[32px] font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">{TEXT.title}</h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">{TEXT.description}</p>
         </section>
 
