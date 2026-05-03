@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
+import { AppHeroSection, AppPageContainer, AppPanel } from "@/components/ui/AppSurfaces";
 import { selectableCenters, selectableCenterKeys } from "@/data/selectableCenters";
 import { selectableColleges, selectableCollegeKeys } from "@/data/selectableColleges";
 import { selectableDepartments, selectableDepartmentKeys } from "@/data/selectableDepartments";
@@ -545,48 +546,41 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
   const bookmarkCount = uniqueNotices.filter((notice) => bookmarkNoticeIdSet.has(getNoticeClientId(notice))).length;
 
   return (
-    <div className="mx-auto w-full max-w-[1240px] px-3 py-4 sm:px-6 sm:py-6 lg:px-8">
-      <section className="rounded-[28px] border border-slate-200 bg-white px-5 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)] sm:rounded-[32px] sm:px-7 sm:py-8">
-        <div className="flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
-          <div className="max-w-3xl">
-            <span className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">{"\uD53C\uB4DC"}</span>
-            <h1 className="mt-3 text-[28px] font-black leading-tight tracking-tight text-[#191F28] sm:text-[38px]">
-              {"\uD544\uC694\uD55C \uAC83\uB9CC, \uBC14\uB85C"}
-            </h1>
-            <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
-              {"\uC124\uC815\uD55C \uC18C\uC2A4\uB9CC \uBAA8\uC544 \uD55C \uBC88\uC5D0 \uBD05\uB2C8\uB2E4. \uC77D\uC74C\uACFC \uC800\uC7A5\uB3C4 \uBE60\uB974\uAC8C \uC815\uB9AC\uB429\uB2C8\uB2E4."}
+    <AppPageContainer>
+      <AppHeroSection
+        badge="피드"
+        badgeTone="blue"
+        title="지금 필요한 공지부터"
+        description="켜둔 소스를 기준으로 새 공지, 안 읽은 공지, 저장한 공지를 한 흐름으로 정리했습니다."
+      >
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 xl:min-w-[520px]">
+          <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
+            <p className="text-xs font-semibold text-slate-500">{"\uBC1B\uC740 \uACF5\uC9C0"}</p>
+            <p className="mt-2 text-2xl font-black tracking-tight text-[#191F28] sm:text-[28px]">{joinedAfterNotices.length}</p>
+          </div>
+          <div className="rounded-[24px] border border-blue-100 bg-blue-50 p-4">
+            <p className="text-xs font-semibold text-blue-700">{"\uC548 \uC77D\uC74C"}</p>
+            <p className="mt-2 text-2xl font-black tracking-tight text-[#1B64DA] sm:text-[28px]">{unreadCount}</p>
+          </div>
+          <div className="rounded-[24px] border border-amber-100 bg-amber-50 p-4">
+            <p className="text-xs font-semibold text-amber-700">{"\uC800\uC7A5"}</p>
+            <p className="mt-2 text-2xl font-black tracking-tight text-amber-700 sm:text-[28px]">{bookmarkCount}</p>
+          </div>
+          <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
+            <p className="text-xs font-semibold text-slate-500">{"\uC18C\uC2A4"}</p>
+            <p className="mt-2 text-2xl font-black tracking-tight text-[#191F28] sm:text-[28px]">
+              {schoolSelection.selectedCategories.length + collegeSelection.selectedCategories.length + departmentSelection.selectedCategories.length + centerSelection.selectedCategories.length}
             </p>
           </div>
-
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 xl:min-w-[520px]">
-            <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
-              <p className="text-xs font-semibold text-slate-500">{"\uBC1B\uC740 \uACF5\uC9C0"}</p>
-              <p className="mt-2 text-2xl font-black tracking-tight text-[#191F28] sm:text-[28px]">{joinedAfterNotices.length}</p>
-            </div>
-            <div className="rounded-[24px] border border-blue-100 bg-blue-50 p-4">
-              <p className="text-xs font-semibold text-blue-700">{"\uC548 \uC77D\uC74C"}</p>
-              <p className="mt-2 text-2xl font-black tracking-tight text-[#1B64DA] sm:text-[28px]">{unreadCount}</p>
-            </div>
-            <div className="rounded-[24px] border border-amber-100 bg-amber-50 p-4">
-              <p className="text-xs font-semibold text-amber-700">{"\uC800\uC7A5"}</p>
-              <p className="mt-2 text-2xl font-black tracking-tight text-amber-700 sm:text-[28px]">{bookmarkCount}</p>
-            </div>
-            <div className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
-              <p className="text-xs font-semibold text-slate-500">{"\uC18C\uC2A4"}</p>
-              <p className="mt-2 text-2xl font-black tracking-tight text-[#191F28] sm:text-[28px]">
-                {schoolSelection.selectedCategories.length + collegeSelection.selectedCategories.length + departmentSelection.selectedCategories.length + centerSelection.selectedCategories.length}
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
+      </AppHeroSection>
 
       <div className="mt-5 grid gap-5 xl:grid-cols-[300px_minmax(0,1fr)]">
         <aside className="space-y-4 xl:sticky xl:top-[108px] xl:self-start">
-          <section className="rounded-[28px] border border-slate-200 bg-white p-5 shadow-[0_12px_28px_rgba(15,23,42,0.04)]">
+          <AppPanel className="p-5 shadow-[0_12px_28px_rgba(15,23,42,0.04)]">
             <div className="border-b border-slate-100 pb-4">
               <p className="text-sm font-semibold text-slate-500">{"\uBC1B\uB294 \uC18C\uC2A4"}</p>
-              <h2 className="mt-1 text-xl font-bold tracking-tight text-slate-950">{"\uC9C0\uAE08 \uCF1C\uB454 \uC18C\uC2A4"}</h2>
+              <h2 className="mt-1 text-xl font-bold tracking-tight text-slate-950">{"\uC9C0\uAE08 \uBCFC \uC18C\uC2A4"}</h2>
             </div>
 
             <div className="mt-4 flex flex-wrap gap-2">
@@ -613,14 +607,14 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
             selectedInstitutionCenterNames.length === 0 &&
             selectedProjectCenterNames.length === 0 ? (
               <div className="mt-4 rounded-[20px] bg-[#FBFCFD] px-4 py-4 text-sm leading-6 text-slate-500">
-                {"\uC544\uC9C1 \uCF1C\uB454 \uC18C\uC2A4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4. \uAD00\uB9AC\uC5D0\uC11C \uBA3C\uC800 \uACE0\uB974\uC138\uC694."}
+                {"\uC544\uC9C1 \uCF1C\uB454 \uC18C\uC2A4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4. \uC18C\uC2A4\uAD00\uB9AC\uC5D0\uC11C \uC6B0\uC120 \uACE0\uB974\uBA74 \uBC14\uB85C \uBC18\uC601\uB429\uB2C8\uB2E4."}
               </div>
             ) : null}
-          </section>
+          </AppPanel>
 
         </aside>
 
-        <section className="rounded-[28px] border border-slate-200 bg-white p-4 shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:p-6">
+        <AppPanel className="p-4 shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:p-6">
           <div className="flex flex-col gap-4 border-b border-slate-100 pb-5">
             <section className="rounded-[24px] border border-slate-200 bg-[#FBFCFD] p-4">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -811,9 +805,9 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
               </button>
             </div>
           ) : null}
-        </section>
+        </AppPanel>
       </div>
-    </div>
+    </AppPageContainer>
   );
 }
 

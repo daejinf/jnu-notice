@@ -1,6 +1,14 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
+import {
+  AppEmptyState,
+  AppHeroSection,
+  AppPageContainer,
+  AppPanel,
+  AppSelectorCard,
+  AppSelectorSection,
+} from "@/components/ui/AppSurfaces";
 import { selectableCenters, selectableCenterKeys } from "@/data/selectableCenters";
 import { selectableColleges, selectableCollegeKeys } from "@/data/selectableColleges";
 import { selectableDepartments, selectableDepartmentKeys } from "@/data/selectableDepartments";
@@ -26,6 +34,7 @@ const PROJECT_CENTER_KEYS = [
   "juice-semi",
   "nccoss",
 ];
+
 const PROJECT_CENTER_NAME_SET = new Set(
   selectableCenters
     .filter((center) => PROJECT_CENTER_KEYS.includes(center.key))
@@ -33,11 +42,12 @@ const PROJECT_CENTER_NAME_SET = new Set(
 );
 
 const HOT_PERIOD_OPTIONS: { key: HotNoticePeriodKey; label: string; description: string }[] = [
-  { key: "3", label: "\uCD5C\uADFC 3\uC77C", description: "3\uC77C \uAE30\uC900" },
-  { key: "7", label: "\uCD5C\uADFC 7\uC77C", description: "7\uC77C \uAE30\uC900" },
-  { key: "14", label: "\uCD5C\uADFC 14\uC77C", description: "14\uC77C \uAE30\uC900" },
-  { key: "30", label: "\uCD5C\uADFC 30\uC77C", description: "\uD55C \uB2EC \uAE30\uC900" },
+  { key: "3", label: "최근 3일", description: "3일 기준" },
+  { key: "7", label: "최근 7일", description: "7일 기준" },
+  { key: "14", label: "최근 14일", description: "14일 기준" },
+  { key: "30", label: "최근 30일", description: "한 달 기준" },
 ];
+
 const DEFAULT_HOT_PERIOD: HotNoticePeriodKey = "7";
 const DAY_MS = 24 * 60 * 60 * 1000;
 const HOT_PAGE_SIZE = 30;
@@ -82,11 +92,11 @@ function getHotPeriodRange(days: number) {
 }
 
 function formatNoticeDate(date: string) {
-  return date ? date.replaceAll("-", ".") : "\ub0a0\uc9dc \uc5c6\uc74c";
+  return date ? date.replaceAll("-", ".") : "날짜 없음";
 }
 
-function formatViews(views: number) {
-  return new Intl.NumberFormat("ko-KR").format(views);
+function formatViews(value: number) {
+  return new Intl.NumberFormat("ko-KR").format(value);
 }
 
 function isUnsupportedViewsNotice(notice: Notice) {
@@ -99,15 +109,14 @@ function isUnsupportedViewsNotice(notice: Notice) {
 }
 
 function formatViewsLabel(notice: Notice) {
-  return isUnsupportedViewsNotice(notice)
-    ? "\uc870\ud68c\uc218 \ubbf8\uc9c0\uc6d0"
-    : `\uc870\ud68c ${formatViews(notice.views)}`;
+  return isUnsupportedViewsNotice(notice) ? "조회수 미지원" : `조회 ${formatViews(notice.views)}`;
 }
 
 function getSourceBadgeClass(notice: Notice) {
   if (notice.sourceType === "school") return "bg-sky-100 text-sky-700";
   if (notice.sourceType === "college") return "bg-emerald-100 text-emerald-700";
   if (notice.sourceType === "department") return "bg-violet-100 text-violet-700";
+
   return PROJECT_CENTER_NAME_SET.has(notice.sourceName)
     ? "bg-orange-100 text-orange-700"
     : "bg-amber-100 text-amber-700";
@@ -165,7 +174,9 @@ function HotNoticeCardList({ notices, rankOffset = 0 }: { notices: Notice[]; ran
             <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">
               #{rankOffset + index + 1}
             </span>
-            <span className={`max-w-full rounded-full px-3 py-1 text-xs font-semibold [overflow-wrap:anywhere] ${getSourceBadgeClass(notice)}`}>
+            <span
+              className={`max-w-full rounded-full px-3 py-1 text-xs font-semibold [overflow-wrap:anywhere] ${getSourceBadgeClass(notice)}`}
+            >
               {notice.sourceName}
             </span>
             <span className="max-w-full rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 [overflow-wrap:anywhere]">
@@ -186,8 +197,8 @@ function HotNoticeCardList({ notices, rankOffset = 0 }: { notices: Notice[]; ran
           </a>
 
           <div className="mt-3 flex min-w-0 flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
-            <span className="max-w-full [overflow-wrap:anywhere]">{`\uc791\uc131\uc790 ${notice.author}`}</span>
-            <span className="max-w-full [overflow-wrap:anywhere]">{`\uac8c\uc2dc\uc77c ${formatNoticeDate(notice.date)}`}</span>
+            <span className="max-w-full [overflow-wrap:anywhere]">{`작성자 ${notice.author}`}</span>
+            <span className="max-w-full [overflow-wrap:anywhere]">{`게시일 ${formatNoticeDate(notice.date)}`}</span>
             <span>{formatViewsLabel(notice)}</span>
           </div>
         </article>
@@ -216,9 +227,7 @@ function HotPagination({
 
   return (
     <div className="mt-5 flex flex-col gap-3 border-t border-slate-100 pt-4 sm:flex-row sm:items-center sm:justify-between">
-      <p className="text-sm font-medium text-slate-500">
-        {`${startItem}-${endItem} / ${formatViews(totalCount)}\uAC74`}
-      </p>
+      <p className="text-sm font-medium text-slate-500">{`${startItem}-${endItem} / ${formatViews(totalCount)}건`}</p>
       <div className="flex flex-wrap items-center gap-2">
         <button
           type="button"
@@ -226,7 +235,7 @@ function HotPagination({
           disabled={currentPage === 1}
           className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
         >
-          {"\uCC98\uC74C"}
+          처음
         </button>
         <button
           type="button"
@@ -234,7 +243,7 @@ function HotPagination({
           disabled={currentPage === 1}
           className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
         >
-          {"\uC774\uC804"}
+          이전
         </button>
         <span className="rounded-full bg-[#F5F9FF] px-4 py-2 text-sm font-bold text-[#1B64DA] ring-1 ring-[#D6E6FF]">
           {`${currentPage} / ${totalPages}`}
@@ -245,7 +254,7 @@ function HotPagination({
           disabled={currentPage === totalPages}
           className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 transition hover:border-slate-300 disabled:cursor-not-allowed disabled:opacity-40"
         >
-          {"\uB2E4\uC74C"}
+          다음
         </button>
       </div>
     </div>
@@ -320,17 +329,13 @@ export function HotNoticeSection({
         const data = (await response.json()) as NoticeApiResponse;
 
         if (!response.ok) {
-          throw new Error(data.error ?? "HOT \uacf5\uc9c0\ub97c \ubd88\ub7ec\uc624\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4.");
+          throw new Error(data.error ?? "랭킹에 쓸 공지를 불러오지 못했습니다.");
         }
 
         setNotices(data.notices);
       } catch (fetchError) {
         if (fetchError instanceof Error && fetchError.name === "AbortError") return;
-        const message =
-          fetchError instanceof Error
-            ? fetchError.message
-            : "\uc54c \uc218 \uc5c6\ub294 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4.";
-        setError(message);
+        setError(fetchError instanceof Error ? fetchError.message : "알 수 없는 오류가 발생했습니다.");
         setNotices([]);
       } finally {
         setIsLoading(false);
@@ -368,18 +373,13 @@ export function HotNoticeSection({
 
   return (
     <main className="min-h-screen bg-transparent">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8">
-        <section className="rounded-[32px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:rounded-[36px] sm:p-7">
-          <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold text-rose-700">
-            {"\uB7AD\uD0B9"}
-          </span>
-          <h1 className="mt-3 text-[32px] font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">
-            {"\uC9C0\uAE08 \uB728\uB294 \uACF5\uC9C0"}
-          </h1>
-          <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-            {"\uAE30\uAC04\uC744 \uBC14\uAFC0 \uC218 \uC788\uB294 \uC870\uD68C\uC218 \uB7AD\uD0B9\uC785\uB2C8\uB2E4."}
-          </p>
-        </section>
+      <AppPageContainer>
+        <AppHeroSection
+          badge="랭킹"
+          badgeTone="rose"
+          title="지금 많이 보는 공지"
+          description="기간별 조회수 흐름을 기준으로 공지를 다시 정리했습니다."
+        />
 
         {error ? (
           <section className="rounded-[28px] border border-rose-200 bg-rose-50 px-5 py-4 text-sm text-rose-700">
@@ -387,70 +387,39 @@ export function HotNoticeSection({
           </section>
         ) : null}
 
-        <section className="rounded-[32px] border border-slate-200 bg-white p-3 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-4">
-          <div className="grid gap-2 sm:grid-cols-2">
-            <button
-              type="button"
-              onClick={() => setViewMode("personal")}
-              className={`rounded-[28px] border px-5 py-4 text-left transition ${
-                viewMode === "personal"
-                  ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_12px_24px_rgba(27,100,218,0.10)]"
-                  : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
-              }`}
-            >
-              <div className="text-xs font-semibold tracking-[0.08em] text-slate-400">{"\uB9DE\uCDA4"}</div>
-              <div className="mt-1 text-lg font-bold tracking-tight text-slate-950">
-                {"\uB0B4 \uB7AD\uD0B9"}
-              </div>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                {"\uCF1C\uB454 \uC18C\uC2A4\uB9CC \uBCF4\uAE30"}
-              </p>
-              <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{`${personalHotNotices.length}\uAC74`}</div>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setViewMode("global")}
-              className={`rounded-[28px] border px-5 py-4 text-left transition ${
-                viewMode === "global"
-                  ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_12px_24px_rgba(27,100,218,0.10)]"
-                  : "border-slate-200 bg-[#FCFCFD] hover:border-slate-300 hover:bg-white"
-              }`}
-            >
-              <div className="text-xs font-semibold tracking-[0.08em] text-slate-400">{"\uC804\uCCB4"}</div>
-              <div className="mt-1 text-lg font-bold tracking-tight text-slate-950">
-                {"\uC804\uCCB4 \uB7AD\uD0B9"}
-              </div>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                {"\uC804\uCCB4 \uACF5\uC9C0 \uAE30\uC900"}
-              </p>
-              <div className="mt-4 inline-flex rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-[#1B64DA] ring-1 ring-[#D6E6FF]">{`${selectedGlobalHotNotices.length}\uAC74`}</div>
-            </button>
-          </div>
-        </section>
+        <AppSelectorSection>
+          <AppSelectorCard
+            active={viewMode === "personal"}
+            label="맞춤"
+            title="내 랭킹"
+            description="켜둔 소스 안에서만 추려 보여줍니다."
+            badge={`${formatViews(personalHotNotices.length)}건`}
+            onClick={() => setViewMode("personal")}
+          />
+          <AppSelectorCard
+            active={viewMode === "global"}
+            label="전체"
+            title="전체 랭킹"
+            description="관리 대상 전체 소스를 묶어 계산합니다."
+            badge={`${formatViews(selectedGlobalHotNotices.length)}건`}
+            onClick={() => setViewMode("global")}
+          />
+        </AppSelectorSection>
 
         {viewMode === "personal" ? (
           isLoading ? (
-            <section className="rounded-[32px] border border-dashed border-slate-300 bg-white/90 px-6 py-16 text-center text-sm text-slate-500 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
-              {"HOT \uc54c\ub9bc\uc744 \ubd88\ub7ec\uc624\ub294 \uc911\uc785\ub2c8\ub2e4."}
-            </section>
+            <AppEmptyState>랭킹을 불러오는 중입니다.</AppEmptyState>
           ) : personalHotNotices.length === 0 ? (
-            <section className="rounded-[32px] border border-dashed border-slate-300 bg-white/90 px-6 py-16 text-center text-sm text-slate-500 shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
-              {"\ub0b4 \uc124\uc815 \uae30\uc900 \ucd5c\uadfc 7\uc77c HOT \uacf5\uc9c0\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4."}
-            </section>
+            <AppEmptyState>켜둔 소스 기준으로 아직 눈에 띄는 공지가 없습니다.</AppEmptyState>
           ) : (
-            <section className="rounded-[36px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-6">
+            <AppPanel className="p-5 sm:rounded-[36px] sm:p-6">
               <div className="flex flex-col gap-2 border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <h2 className="text-xl font-bold tracking-tight text-slate-950">
-                    {"\uB0B4 \uB7AD\uD0B9"}
-                  </h2>
-                  <p className="mt-1 text-sm text-slate-500">
-                    {"\uCF1C\uB454 \uC18C\uC2A4\uB9CC \uBAA8\uC544 \uBCF4\uC5EC\uC90D\uB2C8\uB2E4."}
-                  </p>
+                  <h2 className="text-xl font-bold tracking-tight text-slate-950">내 랭킹</h2>
+                  <p className="mt-1 text-sm text-slate-500">최근 7일 안에서 켜둔 소스만 다시 추렸습니다.</p>
                 </div>
                 <span className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700">
-                  {`${personalHotNotices.length}\uAC74`}
+                  {`${formatViews(personalHotNotices.length)}건`}
                 </span>
               </div>
               <HotNoticeCardList notices={pagedHotNotices} rankOffset={currentHotPageStart} />
@@ -460,64 +429,54 @@ export function HotNoticeSection({
                 totalPages={totalHotPages}
                 onPageChange={handleHotPageChange}
               />
-            </section>
+            </AppPanel>
           )
+        ) : selectedGlobalHotNotices.length === 0 ? (
+          <AppEmptyState>전체 랭킹을 준비 중입니다.</AppEmptyState>
         ) : (
-          <section className="rounded-[36px] border border-slate-200 bg-white p-5 shadow-[0_20px_48px_rgba(15,23,42,0.06)] sm:p-6">
-            <div className="flex flex-col gap-2 border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <h2 className="text-xl font-bold tracking-tight text-slate-950">
-                  {"\uC804\uCCB4 \uB7AD\uD0B9"}
-                </h2>
-                <p className="mt-1 text-sm text-slate-500">
-                  {`${selectedGlobalPeriodLabel} \uAE30\uAC04\uC758 \uC804\uCCB4 \uC21C\uC704\uC785\uB2C8\uB2E4.`}
-                </p>
+          <AppPanel className="p-5 sm:rounded-[36px] sm:p-6">
+            <div className="flex flex-col gap-3 border-b border-slate-100 pb-4">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h2 className="text-xl font-bold tracking-tight text-slate-950">전체 랭킹</h2>
+                  <p className="mt-1 text-sm text-slate-500">
+                    {`${selectedGlobalPeriodLabel} 기준으로 전체 공지를 다시 정렬했습니다.`}
+                  </p>
+                </div>
+                <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
+                  {`${formatViews(selectedGlobalHotNotices.length)}건`}
+                </span>
               </div>
-              <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
-                {`${selectedGlobalHotNotices.length}\uAC74`}
-              </span>
+
+              <div className="grid gap-2 sm:grid-cols-4">
+                {HOT_PERIOD_OPTIONS.map((option) => (
+                  <button
+                    key={option.key}
+                    type="button"
+                    onClick={() => setGlobalPeriod(option.key)}
+                    className={`rounded-[24px] border px-4 py-4 text-left transition ${
+                      globalPeriod === option.key
+                        ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_10px_20px_rgba(27,100,218,0.08)]"
+                        : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
+                    }`}
+                  >
+                    <div className="text-lg font-bold tracking-tight text-slate-950">{option.label}</div>
+                    <p className="mt-1 text-sm text-slate-500">{option.description}</p>
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-4 grid gap-2 sm:grid-cols-4">
-              {HOT_PERIOD_OPTIONS.map((option) => (
-                <button
-                  key={option.key}
-                  type="button"
-                  onClick={() => setGlobalPeriod(option.key)}
-                  className={`rounded-[20px] border px-4 py-3 text-left transition ${
-                    globalPeriod === option.key
-                      ? "border-[#1B64DA] bg-[#F5F9FF] text-[#1B64DA] shadow-[0_10px_22px_rgba(27,100,218,0.10)]"
-                      : "border-slate-200 bg-[#FBFCFD] text-slate-600 hover:border-slate-300 hover:bg-white"
-                  }`}
-                >
-                  <p className="text-sm font-bold">{option.label}</p>
-                  <p className="mt-1 text-xs font-medium opacity-70">{option.description}</p>
-                </button>
-              ))}
-            </div>
-
-            {selectedGlobalHotNotices.length === 0 ? (
-              <div className="mt-5 rounded-[28px] border border-dashed border-slate-200 bg-[#FBFCFD] px-5 py-10 text-center text-sm text-slate-500">
-                {`${selectedGlobalPeriodLabel} \uae30\uc900 HOT \uacf5\uc9c0\uac00 \uc544\uc9c1 \uc5c6\uc2b5\ub2c8\ub2e4.`}
-              </div>
-            ) : (
-              <>
-                <HotNoticeCardList notices={pagedHotNotices} rankOffset={currentHotPageStart} />
-                <HotPagination
-                  currentPage={currentHotPage}
-                  totalCount={selectedGlobalHotNotices.length}
-                  totalPages={totalHotPages}
-                  onPageChange={handleHotPageChange}
-                />
-              </>
-            )}
-          </section>
+            <HotNoticeCardList notices={pagedHotNotices} rankOffset={currentHotPageStart} />
+            <HotPagination
+              currentPage={currentHotPage}
+              totalCount={selectedGlobalHotNotices.length}
+              totalPages={totalHotPages}
+              onPageChange={handleHotPageChange}
+            />
+          </AppPanel>
         )}
-      </div>
+      </AppPageContainer>
     </main>
   );
 }
-
-
-
-

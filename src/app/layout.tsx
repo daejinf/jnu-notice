@@ -20,6 +20,27 @@ const navItems = [
   { href: "/settings", label: "\uC18C\uC2A4\uAD00\uB9AC" },
 ];
 
+const navLinkClass =
+  "shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950";
+
+function BrandLockup() {
+  return (
+    <div className="flex min-w-0 items-center gap-2 sm:gap-3">
+      <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#191F28] text-xs font-bold text-white shadow-[0_8px_20px_rgba(25,31,40,0.18)] sm:h-12 sm:w-12 sm:text-sm">
+        JN
+      </span>
+      <div className="min-w-0">
+        <p className="truncate text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-400 sm:text-[11px] sm:tracking-[0.18em]">
+          JNU Notice Hub
+        </p>
+        <p className="truncate text-base font-bold tracking-tight text-slate-950 sm:text-xl">
+          {"\uC804\uB0A8\uB300 \uACF5\uC9C0 \uD1B5\uD569 \uC54C\uB9BC"}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -36,28 +57,12 @@ export default async function RootLayout({
               <div className="flex min-w-0 items-center justify-between gap-2 sm:gap-4">
                 <div className="flex min-w-0 flex-1 items-center gap-3 lg:gap-6">
                   <Link href="/" className="min-w-0 flex-1 lg:flex-none">
-                    <div className="flex min-w-0 items-center gap-2 sm:gap-3">
-                      <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#191F28] text-xs font-bold text-white shadow-[0_8px_20px_rgba(25,31,40,0.18)] sm:h-12 sm:w-12 sm:text-sm">
-                        JN
-                      </span>
-                      <div className="min-w-0">
-                        <p className="truncate text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-400 sm:text-[11px] sm:tracking-[0.18em]">
-                          JNU Notice Hub
-                        </p>
-                        <p className="truncate text-base font-bold tracking-tight text-slate-950 sm:text-xl">
-                          {"\uC804\uB0A8\uB300 \uACF5\uC9C0 \uD1B5\uD569 \uC54C\uB9BC"}
-                        </p>
-                      </div>
-                    </div>
+                    <BrandLockup />
                   </Link>
 
                   <nav className="hidden items-center gap-2 overflow-x-auto lg:flex">
                     {navItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950"
-                      >
+                      <Link key={item.href} href={item.href} className={navLinkClass}>
                         {item.label}
                       </Link>
                     ))}
@@ -109,11 +114,7 @@ export default async function RootLayout({
 
               <nav className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:hidden">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950"
-                  >
+                  <Link key={item.href} href={item.href} className={navLinkClass}>
                     {item.label}
                   </Link>
                 ))}
