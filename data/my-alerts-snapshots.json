@@ -1,10 +1,35 @@
 {
-  "checkedAt": "2026-05-03T13:59:57.591Z",
+  "checkedAt": "2026-05-03T15:06:01.113Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-03T13:59:57.591Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ko-program-intro-view-724",
+          "title": "2026학년도 1학기 교양 맛보기 특강 1차 [독일어와 독일 알아보기]",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/724",
+          "author": "교육혁신본부",
+          "date": "2026-05-04",
+          "views": 91,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        },
+        {
+          "id": "education-%ec%82%ac%ec%a0%84%ea%b5%90%ec%9c%a1-%ec%a0%9c10%ed%9a%8c-%ec%a0%84%eb%82%a8%eb%8c%80%ed%95%99%ea%b5%90-%ea%b5%90%eb%82%b4-sw%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%98%eb%b0%8d-%ea%b2%bd%ec%a7%84%eb%8c%80",
+          "title": "[사전교육] 제10회 전남대학교 교내 SW프로그래밍 경진대회 응시자 대상 설명회",
+          "url": "https://sojoong.kr/education/%ec%82%ac%ec%a0%84%ea%b5%90%ec%9c%a1-%ec%a0%9c10%ed%9a%8c-%ec%a0%84%eb%82%a8%eb%8c%80%ed%95%99%ea%b5%90-%ea%b5%90%eb%82%b4-sw%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%98%eb%b0%8d-%ea%b2%bd%ec%a7%84%eb%8c%80/",
+          "author": "공고",
+          "date": "2026-05-04",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단 교육신청",
+          "category": "교육신청",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-03T15:06:01.113Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
