@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-05-03T09:09:23.064Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7478
+  },
+  {
     "checkedAt": "2026-05-03T07:27:19.646Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6676,36 +6682,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8019
-  },
-  {
-    "checkedAt": "2026-04-25T05:31:38.541Z",
-    "notices": [
-      {
-        "id": "68967",
-        "title": "광주청년일자리스테이션 동명 전담인력 채용(상담직)",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=68967",
-        "author": "산학협력단 센터 및 사업단",
-        "date": "2026-04-25",
-        "views": 16,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "68959",
-        "title": "우리 다시 시작하자... 내가 더 잘할게...............",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=68959",
-        "author": "정보보호특성화대학지원사업단",
-        "date": "2026-04-24",
-        "views": 89,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "대학생활",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8039
   }
 ]
