@@ -1,10 +1,71 @@
 {
-  "checkedAt": "2026-05-07T00:06:45.624Z",
+  "checkedAt": "2026-05-07T04:03:46.665Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-07T00:06:45.624Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "software-2",
+          "title": "[카카오테크캠퍼스] 카테캠 4기 선발학생 학점이수 관련 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1042970/artclView.do",
+          "author": "오승하",
+          "date": "2026-05-07",
+          "views": 16,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-1",
+          "title": "2026 블록체인 밋업데이(BCMD) 4회차 교육생 모집",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1042992/artclView.do",
+          "author": "오승하",
+          "date": "2026-05-07",
+          "views": 9,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "95097",
+          "title": "2026년도 1분기 청아관 BTL생활관 성과평가 결과 공개",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=95097",
+          "author": "생활안내 2026년도 1분기 청아관 BTL생활관 성과평가 결과 공개",
+          "date": "2026-05-07",
+          "views": 4,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "95096",
+          "title": "2026년도 1분기 예향관(9동) BTL생활관 성과평가 결과 공개",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=95096",
+          "author": "생활안내 2026년도 1분기 예향관(9동) BTL생활관 성과평가 결과 공개",
+          "date": "2026-05-07",
+          "views": 2,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "education-2026%eb%85%84-%ec%a0%9c29%ec%b0%a8-%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4sw%ea%b5%90%ec%9c%a1-%eb%b0%94%ec%9d%b4%eb%b8%8c%ec%bd%94%eb%94%a9%ec%9d%84-%ec%9c%84%ed%95%9c-git-github-%ed%99%9c%ec%9a%a9",
+          "title": "2026년 제29차 오픈소스SW교육 (바이브코딩을 위한 Git/Github 활용 심화)",
+          "url": "https://sojoong.kr/education/2026%eb%85%84-%ec%a0%9c29%ec%b0%a8-%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4sw%ea%b5%90%ec%9c%a1-%eb%b0%94%ec%9d%b4%eb%b8%8c%ec%bd%94%eb%94%a9%ec%9d%84-%ec%9c%84%ed%95%9c-git-github-%ed%99%9c%ec%9a%a9/",
+          "author": "진행중",
+          "date": "2026-05-07",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단 교육신청",
+          "category": "교육신청",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-07T04:03:46.665Z",
+      "totalCount": 5,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
