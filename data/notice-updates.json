@@ -1,5 +1,62 @@
 [
   {
+    "checkedAt": "2026-05-07T12:05:33.367Z",
+    "notices": [
+      {
+        "id": "software-1",
+        "title": "(~5/20) SK텔레콤 FLY AI Challenger 9기 모집요강 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1043138/artclView.do",
+        "author": "오승하",
+        "date": "2026-05-07",
+        "views": 12,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "432",
+        "title": "IDEC 학부생 동아리 지원 사업 안내(~5/31까지)",
+        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1043116/artclView.do",
+        "author": "관리자",
+        "date": "2026-05-07",
+        "views": 32,
+        "sourceType": "department",
+        "sourceName": "전자컴퓨터공학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "12",
+        "title": "2026학년도 진로·취업지원 프로그램 연간 일정표 새글",
+        "url": "https://socsci.jnu.ac.kr/bbs/socsci/1044/1043141/artclView.do",
+        "author": "양준성",
+        "date": "2026-05-07",
+        "views": 6,
+        "sourceType": "college",
+        "sourceName": "사회과학대학",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "53386",
+        "title": "[경영대학] 주식회사 한국그린피아 신입사원 채용",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53386",
+        "author": "취업진로포털 추천채용",
+        "date": "2026-05-07",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 추천채용",
+        "category": "추천채용",
+        "isPinned": false,
+        "statusLabel": "D-6",
+        "statusKind": "deadline"
+      }
+    ],
+    "newNoticeCount": 4,
+    "totalNoticeCount": 8060
+  },
+  {
     "checkedAt": "2026-05-07T09:45:54.034Z",
     "notices": [
       {
@@ -303,30 +360,6 @@
         "isPinned": false
       },
       {
-        "id": "1148",
-        "title": "26년 여름방학 실습 안내[ (주)돼지와건강]",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1043121/artclView.do",
-        "author": "김은자",
-        "date": "2026-05-07",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1148",
-        "title": "26년 여름방학 실습 안내[ (주)돼지와건강]",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1043121/artclView.do",
-        "author": "김은자",
-        "date": "2026-05-07",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "수의학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "1257",
         "title": "2026학년도 1학기 대학원생 1:1 화상영어",
         "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1043122/artclView.do",
@@ -375,7 +408,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 31,
+    "newNoticeCount": 29,
     "totalNoticeCount": 7547
   },
   {
@@ -7417,36 +7450,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8046
-  },
-  {
-    "checkedAt": "2026-04-28T14:41:10.055Z",
-    "notices": [
-      {
-        "id": "2529",
-        "title": "2026학년도 상반기 추가 교직 적인성검사 신청 안내",
-        "url": "https://korean.jnu.ac.kr/bbs/korean/1637/1042137/artclView.do",
-        "author": "국어국문학과",
-        "date": "2026-04-28",
-        "views": 5,
-        "sourceType": "department",
-        "sourceName": "국어국문학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2528",
-        "title": "2025학년도 후기(2026년 8월) 학부 졸업(수료)대상자 유보 신청 안내",
-        "url": "https://korean.jnu.ac.kr/bbs/korean/1637/1042136/artclView.do",
-        "author": "국어국문학과",
-        "date": "2026-04-28",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "국어국문학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8048
   }
 ]

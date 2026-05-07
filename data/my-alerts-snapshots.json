@@ -1,8 +1,44 @@
 {
-  "checkedAt": "2026-05-07T09:45:53.729Z",
+  "checkedAt": "2026-05-07T12:05:32.999Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "software-3",
+          "title": "[카카오테크캠퍼스] 카테캠 4기 선발학생 학점이수 관련 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1042970/artclView.do",
+          "author": "오승하",
+          "date": "2026-05-07",
+          "views": 31,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-2",
+          "title": "2026 블록체인 밋업데이(BCMD) 4회차 교육생 모집",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1042992/artclView.do",
+          "author": "오승하",
+          "date": "2026-05-07",
+          "views": 28,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "software-1",
+          "title": "(~5/20) SK텔레콤 FLY AI Challenger 9기 모집요강 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1043138/artclView.do",
+          "author": "오승하",
+          "date": "2026-05-07",
+          "views": 12,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
         {
           "id": "1",
           "title": "[교수지원] 2026학년도 1학기 맞춤형 교수법 워크숍 개최",
@@ -64,8 +100,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-05-07T09:45:53.729Z",
-      "totalCount": 5,
+      "fetchedAt": "2026-05-07T12:05:32.999Z",
+      "totalCount": 8,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
