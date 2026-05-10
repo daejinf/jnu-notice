@@ -1,10 +1,23 @@
 {
-  "checkedAt": "2026-05-10T14:09:14.461Z",
+  "checkedAt": "2026-05-10T15:14:14.067Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-10T14:09:14.461Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "education-%ec%97%85%ec%8a%a4%ed%85%8c%ec%9d%b4%ec%a7%80%ec%99%80-%ed%95%a8%ea%bb%98%ed%95%98%eb%8a%94-%ea%b5%90%eb%82%b4-%eb%94%94%ec%a7%80%ed%84%b8-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8cai%eb%b6%80%eb%ac%b8",
+          "title": "업스테이지와 함께하는 교내 디지털 경진대회(AI부문)",
+          "url": "https://sojoong.kr/education/%ec%97%85%ec%8a%a4%ed%85%8c%ec%9d%b4%ec%a7%80%ec%99%80-%ed%95%a8%ea%bb%98%ed%95%98%eb%8a%94-%ea%b5%90%eb%82%b4-%eb%94%94%ec%a7%80%ed%84%b8-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8cai%eb%b6%80%eb%ac%b8/",
+          "author": "공고",
+          "date": "2026-05-11",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단 교육신청",
+          "category": "교육신청",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-10T15:14:14.067Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
