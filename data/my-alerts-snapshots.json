@@ -1,10 +1,47 @@
 {
-  "checkedAt": "2026-05-11T23:40:20.016Z",
+  "checkedAt": "2026-05-12T01:25:04.240Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-11T23:40:20.016Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ko-program-intro-view-739",
+          "title": "AI 시대의 연구자: 신뢰성과 퍼포먼스를 함께 지키는 방법",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/739",
+          "author": "대학원혁신본부",
+          "date": "2026-05-12",
+          "views": 4,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": true
+        },
+        {
+          "id": "69127",
+          "title": "2026 전남대학교 지역봉사 최종 선발자 공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69127",
+          "author": "학생과",
+          "date": "2026-05-12",
+          "views": 26,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "ko-program-intro-view-740",
+          "title": "2026년 제2회 전남대학교 용봉포럼(우원식 국회의장 초청 강연)",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/740",
+          "author": "대외협력본부",
+          "date": "2026-05-12",
+          "views": 4,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-12T01:25:04.240Z",
+      "totalCount": 3,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
