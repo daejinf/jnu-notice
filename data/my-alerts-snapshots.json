@@ -1,10 +1,59 @@
 {
-  "checkedAt": "2026-05-12T23:18:41.834Z",
+  "checkedAt": "2026-05-13T01:27:50.841Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-12T23:18:41.834Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "software-1",
+          "title": "(~6/3) [차세대통신혁신융합대학사업단] 인턴 채용 공고(AUMOVIO) 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1043696/artclView.do",
+          "author": "오승하",
+          "date": "2026-05-13",
+          "views": 8,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "69136",
+          "title": "[한국항공대학교] 2026 AI Pilot Top Gun Ch...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69136",
+          "author": "학생과",
+          "date": "2026-05-13",
+          "views": 17,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "69134",
+          "title": "[고용노동부] 청년 노동권 보호 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69134",
+          "author": "학생과",
+          "date": "2026-05-13",
+          "views": 9,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "27007",
+          "title": "[Visa]외국인유학생 학위과정 별 총 체류기간 상한 안내 Guidance on the Maximum Total Period of Stay for...",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=33&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27007",
+          "author": "국제협력과",
+          "date": "2026-05-13",
+          "views": 1,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-13T01:27:50.841Z",
+      "totalCount": 4,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
