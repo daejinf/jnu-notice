@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { AppHeroSection, AppPageContainer, AppPanel } from "@/components/ui/AppSurfaces";
@@ -132,31 +132,16 @@ function getTodayInKorea() {
   }).format(new Date());
 }
 
-function toCalendarWeekdayLabel(value: string) {
-  const matched = value.match(/(월|화|수|목|금|토|일)(?:요일)?/);
-  if (matched) {
-    return `${matched[1]} 시작`;
-  }
-
-  return "요일 미정";
-}
-
-function toCompactDeadlineLabel(value: string) {
+function parseCalendarDates(value: string) {
   const normalized = value.replace(/\s+/g, " ").trim();
-  const fullDateMatch = normalized.match(/(\d{4})[./-]\s*(\d{1,2})[./-]\s*(\d{1,2})/);
+  const matches = Array.from(normalized.matchAll(/(\d{4}[./-]\d{1,2}[./-]\d{1,2}\([^)]*\)|\d{4}[./-]\d{1,2}[./-]\d{1,2})/g)).map(
+    (match) => match[1],
+  );
 
-  if (fullDateMatch) {
-    const [, , month, day] = fullDateMatch;
-    return `${Number(month)}/${Number(day)} 마감`;
-  }
-
-  const shortDateMatch = normalized.match(/~\s*(\d{1,2})[./-]\s*(\d{1,2})/);
-  if (shortDateMatch) {
-    const [, month, day] = shortDateMatch;
-    return `${Number(month)}/${Number(day)} 마감`;
-  }
-
-  return "마감일 확인";
+  return {
+    start: matches[0] ?? normalized,
+    end: matches.length > 1 ? matches[matches.length - 1] : matches[0] ?? normalized,
+  };
 }
 
 function toCompactProgramName(label: string, noticeTitle: string) {
@@ -174,11 +159,18 @@ function toCompactProgramName(label: string, noticeTitle: string) {
 }
 
 function buildCalendarTitle(notice: Notice, item: NoticeSummaryData["calendarItems"][number]) {
-  return [
-    toCompactDeadlineLabel(item.when),
-    toCalendarWeekdayLabel(item.note),
-    toCompactProgramName(item.label, notice.title),
-  ].join(" | ");
+  const { start, end } = parseCalendarDates(item.when);
+  const programName = toCompactProgramName(item.label, notice.title);
+
+  if (start && end && start !== end) {
+    return `${programName} | 시작 ${start} | 마감 ${end}`;
+  }
+
+  if (end) {
+    return `${programName} | 일정 ${end}`;
+  }
+
+  return `${programName} | 일정 확인 필요`;
 }
 
 function toSortableTime(date: string) {
@@ -942,7 +934,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                             <div>
                               <p className="text-sm font-bold text-violet-900">AI 요약</p>
                               <p className="text-xs text-violet-700">
-                                {summaryState?.data?.fromCache ? "캐시된 요약" : "Gemini가 상세 페이지를 읽고 정리한 내용"}
+                                {summaryState?.data?.fromCache ? "캐시된 요약" : "DeepSeek가 상세 페이지를 읽고 정리한 내용"}
                               </p>
                             </div>
                             {summaryState?.data?.extractedAt ? (
@@ -985,8 +977,14 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                         const memoText = [
                                           "메모:",
                                           `- 프로그램: ${programName}`,
+                                          `- 일정: ${item.when}`,
                                           `- 출처: ${notice.sourceName}`,
                                           `- 링크: ${notice.url}`,
+                                        ].join("\n");
+                                        const memoPreview = [
+                                          `프로그램: ${programName}`,
+                                          `일정: ${item.when}`,
+                                          `출처: ${notice.sourceName}`,
                                         ].join("\n");
 
                                         return (
@@ -1002,6 +1000,8 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                               </button>
                                               <button
                                                 type="button"
+                                                title={memoPreview}
+                                                aria-label={memoPreview}
                                                 onClick={() => void copyCalendarText(memoKey, memoText)}
                                                 className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${memoCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
                                               >
