@@ -23,7 +23,7 @@ export async function POST(request: Request) {
   try {
     body = (await request.json()) as NoticeSummaryRequestBody;
   } catch {
-    return NextResponse.json({ summary: null, error: "요청 형식이 올바르지 않습니다." }, { status: 400 });
+    return NextResponse.json({ summary: null, error: "요청 본문을 읽지 못했습니다." }, { status: 400 });
   }
 
   const url = body.url?.trim();

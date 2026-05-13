@@ -64,6 +64,29 @@ type CacheEntry = {
   expiresAt: number;
 };
 
+type DeepSeekChoiceMessage = {
+  content?: string | null;
+  reasoning_content?: string | null;
+};
+
+type DeepSeekPayload = {
+  error?: { message?: string };
+  choices?: Array<{
+    finish_reason?: string;
+    message?: DeepSeekChoiceMessage;
+  }>;
+};
+
+type RawSummaryPayload = {
+  summary?: unknown;
+  bullets?: unknown;
+  targetAudience?: unknown;
+  deadline?: unknown;
+  actionItems?: unknown;
+  caution?: unknown;
+  calendarItems?: unknown;
+};
+
 function getSummaryCache() {
   const globalCache = globalThis as typeof globalThis & {
     __noticeSummaryCache?: Map<string, CacheEntry>;
@@ -201,7 +224,7 @@ async function fetchNoticeDetailHtml(url: string) {
   const parsedUrl = new URL(url);
 
   if (!["http:", "https:"].includes(parsedUrl.protocol)) {
-    throw new Error("지원하지 않는 상세 링크 형식입니다.");
+    throw new Error("상세 페이지 주소 형식이 올바르지 않습니다.");
   }
 
   try {
@@ -221,7 +244,7 @@ async function fetchNoticeDetailHtml(url: string) {
 
     const contentType = response.headers.get("content-type");
     if (contentType?.includes("application/pdf")) {
-      throw new Error("PDF 상세 페이지는 아직 지원하지 않습니다.");
+      throw new Error("PDF 상세 페이지는 아직 AI 요약을 지원하지 않습니다.");
     }
 
     const htmlBuffer = Buffer.from(await response.arrayBuffer());
@@ -233,7 +256,7 @@ async function fetchNoticeDetailHtml(url: string) {
     const fallback = await requestHtmlViaNode(url);
 
     if (fallback.contentType?.includes("application/pdf")) {
-      throw new Error("PDF 상세 페이지는 아직 지원하지 않습니다.");
+      throw new Error("PDF 상세 페이지는 아직 AI 요약을 지원하지 않습니다.");
     }
 
     return fallback;
@@ -272,118 +295,113 @@ function pickBestContentBlock(html: string) {
 
 function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
   return [
-    "다음은 대학 공지 상세 페이지 원문입니다.",
-    "한국어로만 답하고, 정보가 불충분하면 추측하지 말고 '명시되지 않음'이라고 적어주세요.",
-    "중요한 마감일, 대상, 해야 할 일을 빠뜨리지 말고 짧고 실용적으로 정리해주세요.",
-    "캘린더에 넣을 가치가 있는 일정만 추려주세요. 일반 안내성 기간 전체보다 신청, 접수, 납부, 마감처럼 사용자가 실제로 챙겨야 하는 일정이 우선입니다.",
+    "다음 대학 공지 본문을 읽고 JSON으로만 답하세요.",
+    "불필요한 설명, 코드블록, 마크다운 없이 순수 JSON 객체만 반환하세요.",
+    "모든 값은 한국어로 작성하세요.",
+    "모르는 값은 추측하지 말고 '명시되지 않음'으로 적으세요.",
+    "calendarItems는 최대 3개만 넣고, 정말 캘린더에 옮길 만한 일정만 담으세요.",
+    "calendarItems.note에는 요일이나 시작 성격 같은 짧은 힌트만 넣으세요. 예: '월 시작', '화 시작', '지원 시작'",
     "",
-    "[출력 규칙]",
-    "- 아래 라벨 형식을 정확히 지켜서 일반 텍스트로만 출력",
-    "- 항목명은 영어 대문자 라벨 그대로 유지",
-    "- 목록 항목은 반드시 '- '로 시작",
-    "- 정보가 없으면 '명시되지 않음' 또는 '없음' 사용",
-    "",
-    "SUMMARY:",
-    "1~2문장 요약",
-    "",
-    "BULLETS:",
-    "- 핵심 포인트",
-    "- 핵심 포인트",
-    "",
-    "TARGET_AUDIENCE:",
-    "대상자",
-    "",
-    "DEADLINE:",
-    "마감일 또는 일정",
-    "",
-    "ACTION_ITEMS:",
-    "- 해야 할 일",
-    "- 해야 할 일",
-    "",
-    "CAUTION:",
-    "주의사항",
-    "",
-    "CALENDAR_ITEMS:",
-    "- 일정이름 | 일정 | 메모",
-    "- 일정이름 | 일정 | 메모",
-    "- 최대 3개까지만",
+    "반환 JSON 스키마:",
+    "{",
+    '  "summary": "1~2문장 요약",',
+    '  "bullets": ["핵심 포인트", "핵심 포인트"],',
+    '  "targetAudience": "대상자",',
+    '  "deadline": "마감일 또는 주요 일정",',
+    '  "actionItems": ["해야 할 일", "해야 할 일"],',
+    '  "caution": "주의사항",',
+    '  "calendarItems": [',
+    '    { "label": "프로그램명", "when": "일정", "note": "월 시작" }',
+    "  ]",
+    "}",
     "",
     `[공지 제목] ${input.title}`,
-    `[공지 출처] ${input.sourceName}`,
-    `[상세 링크] ${input.url}`,
+    `[출처] ${input.sourceName}`,
+    `[원문 링크] ${input.url}`,
     "",
-    "[공지 원문]",
+    "[공지 본문]",
     extractedText,
   ].join("\n");
 }
 
-function parseLabeledSection(rawText: string, label: string, nextLabels: string[]) {
-  const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const escapedNextLabels = nextLabels.map((item) => item.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
-  const boundary = escapedNextLabels.length > 0 ? `(?=\\n(?:${escapedNextLabels.join("|")}):|$)` : "$";
-  const pattern = new RegExp(`${escapedLabel}:\\s*([\\s\\S]*?)${boundary}`, "i");
-  const matched = rawText.match(pattern);
-  return matched?.[1]?.trim() ?? "";
+function asCleanString(value: unknown, fallback: string) {
+  if (typeof value !== "string") return fallback;
+  const cleaned = cleanText(value);
+  return cleaned || fallback;
 }
 
-function parseBulletSection(rawText: string) {
-  return rawText
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => line.startsWith("- "))
-    .map((line) => line.slice(2).trim())
-    .filter(Boolean);
+function asStringArray(value: unknown, limit: number) {
+  if (!Array.isArray(value)) return [];
+
+  return value
+    .map((item) => (typeof item === "string" ? cleanText(item) : ""))
+    .filter(Boolean)
+    .slice(0, limit);
 }
 
-function parseCalendarItems(rawText: string) {
-  return rawText
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => line.startsWith("- "))
-    .map((line) => line.slice(2).trim())
-    .map((line) => {
-      const [label = "", when = "", note = ""] = line.split("|").map((item) => item.trim());
+function normalizeCalendarItems(value: unknown) {
+  if (!Array.isArray(value)) return [];
+
+  return value
+    .map((item) => {
+      if (!item || typeof item !== "object") return null;
+
+      const source = item as Record<string, unknown>;
+      const label = asCleanString(source.label, "");
+      const when = asCleanString(source.when, "");
+      const note = asCleanString(source.note, "");
+
+      if (!label || !when) return null;
+
       return { label, when, note };
     })
-    .filter((item) => item.label && item.when)
+    .filter((item): item is NoticeCalendarItem => Boolean(item))
     .slice(0, 3);
 }
 
-function parseSummaryText(rawText: string) {
-  const summary = parseLabeledSection(rawText, "SUMMARY", [
-    "BULLETS",
-    "TARGET_AUDIENCE",
-    "DEADLINE",
-    "ACTION_ITEMS",
-    "CAUTION",
-    "CALENDAR_ITEMS",
-  ]);
-  const bulletsText = parseLabeledSection(rawText, "BULLETS", [
-    "TARGET_AUDIENCE",
-    "DEADLINE",
-    "ACTION_ITEMS",
-    "CAUTION",
-    "CALENDAR_ITEMS",
-  ]);
-  const targetAudience = parseLabeledSection(rawText, "TARGET_AUDIENCE", [
-    "DEADLINE",
-    "ACTION_ITEMS",
-    "CAUTION",
-    "CALENDAR_ITEMS",
-  ]);
-  const deadline = parseLabeledSection(rawText, "DEADLINE", ["ACTION_ITEMS", "CAUTION", "CALENDAR_ITEMS"]);
-  const actionItemsText = parseLabeledSection(rawText, "ACTION_ITEMS", ["CAUTION", "CALENDAR_ITEMS"]);
-  const caution = parseLabeledSection(rawText, "CAUTION", ["CALENDAR_ITEMS"]);
-  const calendarItemsText = parseLabeledSection(rawText, "CALENDAR_ITEMS", []);
+function extractJsonObject(rawText: string) {
+  const trimmed = rawText.trim();
+
+  if (trimmed.startsWith("{") && trimmed.endsWith("}")) {
+    return trimmed;
+  }
+
+  const fencedMatch = trimmed.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+  if (fencedMatch?.[1]) {
+    return fencedMatch[1].trim();
+  }
+
+  const firstBrace = trimmed.indexOf("{");
+  const lastBrace = trimmed.lastIndexOf("}");
+  if (firstBrace >= 0 && lastBrace > firstBrace) {
+    return trimmed.slice(firstBrace, lastBrace + 1);
+  }
+
+  return "";
+}
+
+function parseSummaryPayload(rawText: string) {
+  const jsonText = extractJsonObject(rawText);
+  if (!jsonText) {
+    throw new Error("DeepSeek 응답에서 JSON 요약 결과를 찾지 못했습니다.");
+  }
+
+  let parsed: RawSummaryPayload;
+
+  try {
+    parsed = JSON.parse(jsonText) as RawSummaryPayload;
+  } catch {
+    throw new Error("DeepSeek 요약 결과를 해석하지 못했습니다.");
+  }
 
   return {
-    summary: summary || "요약을 생성하지 못했습니다.",
-    bullets: parseBulletSection(bulletsText).slice(0, 4),
-    targetAudience: targetAudience || "명시되지 않음",
-    deadline: deadline || "명시되지 않음",
-    actionItems: parseBulletSection(actionItemsText).slice(0, 4),
-    caution: caution || "없음",
-    calendarItems: parseCalendarItems(calendarItemsText),
+    summary: asCleanString(parsed.summary, "요약을 생성했지만 본문 정리가 충분하지 않았습니다."),
+    bullets: asStringArray(parsed.bullets, 4),
+    targetAudience: asCleanString(parsed.targetAudience, "명시되지 않음"),
+    deadline: asCleanString(parsed.deadline, "명시되지 않음"),
+    actionItems: asStringArray(parsed.actionItems, 4),
+    caution: asCleanString(parsed.caution, "명시되지 않음"),
+    calendarItems: normalizeCalendarItems(parsed.calendarItems),
   };
 }
 
@@ -405,34 +423,40 @@ async function requestDeepSeekSummary(input: NoticeSummaryInput, extractedText: 
       model,
       messages: [
         {
+          role: "system",
+          content: "You summarize Korean university notices and must return only a valid JSON object.",
+        },
+        {
           role: "user",
           content: buildSummaryPrompt(input, extractedText),
         },
       ],
+      thinking: {
+        type: "disabled",
+      },
+      response_format: {
+        type: "json_object",
+      },
       temperature: 0.2,
-      max_tokens: 1024,
+      max_tokens: 1400,
     }),
   });
 
-  const payload = (await response.json()) as {
-    error?: { message?: string };
-    choices?: Array<{
-      message?: {
-        content?: string;
-      };
-    }>;
-  };
+  const payload = (await response.json()) as DeepSeekPayload;
 
   if (!response.ok) {
     throw new Error(payload.error?.message ?? "DeepSeek 요약 요청에 실패했습니다.");
   }
 
-  const rawText = payload.choices?.[0]?.message?.content?.trim();
+  const choice = payload.choices?.[0];
+  const rawText = choice?.message?.content?.trim();
+
   if (!rawText) {
-    throw new Error("DeepSeek가 요약 결과를 반환하지 않았습니다.");
+    const reason = choice?.finish_reason ? ` (${choice.finish_reason})` : "";
+    throw new Error(`DeepSeek가 비어 있는 응답을 반환했습니다${reason}.`);
   }
 
-  return parseSummaryText(rawText);
+  return parseSummaryPayload(rawText);
 }
 
 export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<NoticeSummaryResult> {
