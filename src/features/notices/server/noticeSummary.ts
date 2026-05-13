@@ -40,6 +40,12 @@ type NoticeSummaryInput = {
   sourceName: string;
 };
 
+export type NoticeCalendarItem = {
+  label: string;
+  when: string;
+  note: string;
+};
+
 export type NoticeSummaryResult = {
   summary: string;
   bullets: string[];
@@ -47,6 +53,7 @@ export type NoticeSummaryResult = {
   deadline: string;
   actionItems: string[];
   caution: string;
+  calendarItems: NoticeCalendarItem[];
   sourceTitle: string;
   extractedAt: string;
   fromCache: boolean;
@@ -267,6 +274,7 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
     "다음은 대학 공지 상세 페이지 원문입니다.",
     "한국어로만 답하고, 정보가 불충분하면 추측하지 말고 '명시되지 않음'이라고 적어주세요.",
     "중요한 마감일, 대상, 해야 할 일을 빠뜨리지 말고 짧고 실용적으로 정리해주세요.",
+    "캘린더에 넣을 가치가 있는 일정만 추려주세요. 일반 안내성 기간 전체보다 신청, 접수, 납부, 마감처럼 사용자가 실제로 챙겨야 하는 일정이 우선입니다.",
     "",
     "[출력 규칙]",
     "- 아래 라벨 형식을 정확히 지켜서 일반 텍스트로만 출력",
@@ -293,6 +301,11 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
     "",
     "CAUTION:",
     "주의사항",
+    "",
+    "CALENDAR_ITEMS:",
+    "- 일정이름 | 일정 | 메모",
+    "- 일정이름 | 일정 | 메모",
+    "- 최대 3개까지만",
     "",
     `[공지 제목] ${input.title}`,
     `[공지 출처] ${input.sourceName}`,
@@ -326,6 +339,20 @@ function parseBulletSection(rawText: string) {
     .filter(Boolean);
 }
 
+function parseCalendarItems(rawText: string) {
+  return rawText
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.startsWith("- "))
+    .map((line) => line.slice(2).trim())
+    .map((line) => {
+      const [label = "", when = "", note = ""] = line.split("|").map((item) => item.trim());
+      return { label, when, note };
+    })
+    .filter((item) => item.label && item.when)
+    .slice(0, 3);
+}
+
 function parseGeminiSummaryText(rawText: string) {
   const summary = parseLabeledSection(rawText, "SUMMARY", [
     "BULLETS",
@@ -333,21 +360,25 @@ function parseGeminiSummaryText(rawText: string) {
     "DEADLINE",
     "ACTION_ITEMS",
     "CAUTION",
+    "CALENDAR_ITEMS",
   ]);
   const bulletsText = parseLabeledSection(rawText, "BULLETS", [
     "TARGET_AUDIENCE",
     "DEADLINE",
     "ACTION_ITEMS",
     "CAUTION",
+    "CALENDAR_ITEMS",
   ]);
   const targetAudience = parseLabeledSection(rawText, "TARGET_AUDIENCE", [
     "DEADLINE",
     "ACTION_ITEMS",
     "CAUTION",
+    "CALENDAR_ITEMS",
   ]);
-  const deadline = parseLabeledSection(rawText, "DEADLINE", ["ACTION_ITEMS", "CAUTION"]);
-  const actionItemsText = parseLabeledSection(rawText, "ACTION_ITEMS", ["CAUTION"]);
-  const caution = parseLabeledSection(rawText, "CAUTION", []);
+  const deadline = parseLabeledSection(rawText, "DEADLINE", ["ACTION_ITEMS", "CAUTION", "CALENDAR_ITEMS"]);
+  const actionItemsText = parseLabeledSection(rawText, "ACTION_ITEMS", ["CAUTION", "CALENDAR_ITEMS"]);
+  const caution = parseLabeledSection(rawText, "CAUTION", ["CALENDAR_ITEMS"]);
+  const calendarItemsText = parseLabeledSection(rawText, "CALENDAR_ITEMS", []);
 
   return {
     summary: summary || "요약을 생성하지 못했습니다.",
@@ -356,6 +387,7 @@ function parseGeminiSummaryText(rawText: string) {
     deadline: deadline || "명시되지 않음",
     actionItems: parseBulletSection(actionItemsText).slice(0, 4),
     caution: caution || "없음",
+    calendarItems: parseCalendarItems(calendarItemsText),
   };
 }
 
