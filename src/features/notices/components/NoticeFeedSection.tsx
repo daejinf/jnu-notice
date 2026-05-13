@@ -92,6 +92,30 @@ type NoticeApiResponse = {
   error?: string;
 };
 
+type NoticeSummaryData = {
+  summary: string;
+  bullets: string[];
+  targetAudience: string;
+  deadline: string;
+  actionItems: string[];
+  caution: string;
+  sourceTitle: string;
+  extractedAt: string;
+  fromCache: boolean;
+};
+
+type NoticeSummaryApiResponse = {
+  summary: NoticeSummaryData | null;
+  error?: string;
+};
+
+type NoticeSummaryState = {
+  open: boolean;
+  status: "loading" | "success" | "error";
+  data?: NoticeSummaryData;
+  error?: string;
+};
+
 type NoticeViewMode = "all" | "unread" | "bookmarks";
 
 function getTodayInKorea() {
@@ -242,6 +266,7 @@ function CompactActionButton({
   idleLabel,
   activeClass,
   idleClass,
+  disabled = false,
 }: {
   active: boolean;
   onClick: () => void;
@@ -249,12 +274,14 @@ function CompactActionButton({
   idleLabel: string;
   activeClass: string;
   idleClass: string;
+  disabled?: boolean;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex h-10 items-center justify-center rounded-2xl px-3.5 text-xs font-semibold transition ${active ? activeClass : idleClass}`}
+      disabled={disabled}
+      className={`inline-flex h-10 items-center justify-center rounded-2xl px-3.5 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-60 ${active ? activeClass : idleClass}`}
     >
       {active ? activeLabel : idleLabel}
     </button>
@@ -307,6 +334,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
   const [bookmarkNoticeIds, setBookmarkNoticeIds] = useState<string[]>([]);
   const [accountFirstSeenDate, setAccountFirstSeenDate] = useState("");
   const [isClientStateReady, setIsClientStateReady] = useState(false);
+  const [noticeSummaryById, setNoticeSummaryById] = useState<Record<string, NoticeSummaryState>>({});
 
   const deferredSearchInput = useDeferredValue(searchInput);
   const normalizedSearchQuery = useMemo(
@@ -540,6 +568,69 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     );
   }
 
+  async function handleNoticeSummary(notice: Notice) {
+    const noticeId = getNoticeClientId(notice);
+    const currentState = noticeSummaryById[noticeId];
+
+    if (currentState?.status === "success") {
+      setNoticeSummaryById((current) => ({
+        ...current,
+        [noticeId]: {
+          ...currentState,
+          open: !currentState.open,
+        },
+      }));
+      return;
+    }
+
+    setNoticeSummaryById((current) => ({
+      ...current,
+      [noticeId]: {
+        open: true,
+        status: "loading",
+      },
+    }));
+
+    try {
+      const response = await fetch("/api/notice-summary", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          url: notice.url,
+          title: notice.title,
+          sourceName: notice.sourceName,
+        }),
+      });
+      const data = (await response.json()) as NoticeSummaryApiResponse;
+      const summary = data.summary;
+
+      if (!response.ok || !summary) {
+        throw new Error(data.error ?? "AI 요약을 불러오지 못했습니다.");
+      }
+
+      setNoticeSummaryById((current) => ({
+        ...current,
+        [noticeId]: {
+          open: true,
+          status: "success",
+          data: summary,
+        },
+      }));
+    } catch (summaryError) {
+      const message = summaryError instanceof Error ? summaryError.message : "AI 요약 중 오류가 발생했습니다.";
+      setNoticeSummaryById((current) => ({
+        ...current,
+        [noticeId]: {
+          open: true,
+          status: "error",
+          error: message,
+        },
+      }));
+    }
+  }
+
   const unreadCount = joinedAfterNotices.filter(
     (notice) => !readNoticeIdSet.has(getNoticeClientId(notice)),
   ).length;
@@ -704,6 +795,9 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                   const noticeId = getNoticeClientId(notice);
                   const isRead = readNoticeIdSet.has(noticeId);
                   const isBookmarked = bookmarkNoticeIdSet.has(noticeId);
+                  const summaryState = noticeSummaryById[noticeId];
+                  const isSummaryLoading = summaryState?.status === "loading";
+                  const isSummaryOpen = summaryState?.open ?? false;
 
                   return (
                     <article
@@ -752,6 +846,15 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
 
                         <div className="flex w-full flex-wrap items-center justify-end gap-2 lg:w-auto lg:flex-nowrap lg:pl-4">
                           <CompactActionButton
+                            active={isSummaryOpen && summaryState?.status === "success"}
+                            onClick={() => void handleNoticeSummary(notice)}
+                            activeLabel={"요약 닫기"}
+                            idleLabel={isSummaryLoading ? "요약 중" : "AI 요약"}
+                            activeClass="bg-violet-600 text-white hover:bg-violet-700"
+                            idleClass="bg-violet-50 text-violet-700 hover:bg-violet-100"
+                            disabled={isSummaryLoading}
+                          />
+                          <CompactActionButton
                             active={isRead}
                             onClick={() => markAsRead(notice)}
                             activeLabel={"\uC77D\uC74C"}
@@ -769,6 +872,91 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                           />
                         </div>
                       </div>
+
+                      {isSummaryOpen ? (
+                        <div className="mt-4 rounded-[20px] border border-violet-100 bg-violet-50/70 p-4">
+                          <div className="flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                              <p className="text-sm font-bold text-violet-900">AI 요약</p>
+                              <p className="text-xs text-violet-700">
+                                {summaryState?.data?.fromCache ? "캐시된 요약" : "Gemini가 상세 페이지를 읽고 정리한 내용"}
+                              </p>
+                            </div>
+                            {summaryState?.data?.extractedAt ? (
+                              <p className="text-xs text-violet-700">
+                                {new Date(summaryState.data.extractedAt).toLocaleString("ko-KR", { timeZone: "Asia/Seoul" })}
+                              </p>
+                            ) : null}
+                          </div>
+
+                          {summaryState.status === "loading" ? (
+                            <p className="mt-3 text-sm leading-6 text-violet-900">
+                              상세 페이지를 먼저 읽고, 핵심 내용과 마감 일정을 정리하고 있습니다.
+                            </p>
+                          ) : null}
+
+                          {summaryState.status === "error" ? (
+                            <div className="mt-3 rounded-2xl border border-rose-200 bg-white px-4 py-3 text-sm leading-6 text-rose-700">
+                              {summaryState.error}
+                            </div>
+                          ) : null}
+
+                          {summaryState.status === "success" && summaryState.data ? (
+                            <div className="mt-3 space-y-3">
+                              {summaryState.data.sourceTitle ? (
+                                <div className="rounded-2xl bg-white px-4 py-3 text-sm text-slate-600">
+                                  <span className="font-semibold text-slate-900">상세 페이지 제목</span>
+                                  <span className="ml-2 break-words">{summaryState.data.sourceTitle}</span>
+                                </div>
+                              ) : null}
+
+                              <div className="rounded-2xl bg-white px-4 py-3">
+                                <p className="text-sm font-semibold text-slate-900">한눈에 요약</p>
+                                <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.summary}</p>
+                              </div>
+
+                              {summaryState.data.bullets.length > 0 ? (
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">핵심 포인트</p>
+                                  <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
+                                    {summaryState.data.bullets.map((item) => (
+                                      <p key={item}>• {item}</p>
+                                    ))}
+                                  </div>
+                                </div>
+                              ) : null}
+
+                              <div className="grid gap-3 md:grid-cols-2">
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">대상자</p>
+                                  <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.targetAudience}</p>
+                                </div>
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">마감일 / 일정</p>
+                                  <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.deadline}</p>
+                                </div>
+                              </div>
+
+                              <div className="grid gap-3 md:grid-cols-2">
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">해야 할 일</p>
+                                  <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
+                                    {summaryState.data.actionItems.length > 0 ? (
+                                      summaryState.data.actionItems.map((item) => <p key={item}>• {item}</p>)
+                                    ) : (
+                                      <p>• 명시되지 않음</p>
+                                    )}
+                                  </div>
+                                </div>
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">주의사항</p>
+                                  <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.caution}</p>
+                                </div>
+                              </div>
+                            </div>
+                          ) : null}
+                        </div>
+                      ) : null}
                     </article>
                   );
                 })
