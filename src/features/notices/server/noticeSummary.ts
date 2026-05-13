@@ -171,7 +171,7 @@ async function requestHtmlViaNode(url: string, redirectCount = 0): Promise<{ htm
 
         if (statusCode < 200 || statusCode >= 300) {
           response.resume();
-          reject(new Error(`detail page request failed: ${statusCode}`));
+          reject(new Error(`detail page request failed: ${response.statusCode}`));
           return;
         }
 
@@ -221,7 +221,7 @@ async function fetchNoticeDetailHtml(url: string) {
 
     const contentType = response.headers.get("content-type");
     if (contentType?.includes("application/pdf")) {
-      throw new Error("PDF 상세 페이지는 다음 단계에서 지원할 예정입니다.");
+      throw new Error("PDF 상세 페이지는 아직 지원하지 않습니다.");
     }
 
     const htmlBuffer = Buffer.from(await response.arrayBuffer());
@@ -233,7 +233,7 @@ async function fetchNoticeDetailHtml(url: string) {
     const fallback = await requestHtmlViaNode(url);
 
     if (fallback.contentType?.includes("application/pdf")) {
-      throw new Error("PDF 상세 페이지는 다음 단계에서 지원할 예정입니다.");
+      throw new Error("PDF 상세 페이지는 아직 지원하지 않습니다.");
     }
 
     return fallback;
@@ -253,7 +253,8 @@ function pickBestContentBlock(html: string) {
 
   const prioritizedCandidate =
     orderedCandidates.find((candidate) => candidate.text.length >= 120)?.text ?? "";
-  const longestCandidate = orderedCandidates.sort((left, right) => right.text.length - left.text.length)[0]?.text ?? "";
+  const longestCandidate =
+    orderedCandidates.sort((left, right) => right.text.length - left.text.length)[0]?.text ?? "";
   const bodyText = extractStructuredText($.html($("body")) || "");
   const title = cleanText($("title").first().text());
 
@@ -316,11 +317,6 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
   ].join("\n");
 }
 
-function normalizeStringArray(value: unknown) {
-  if (!Array.isArray(value)) return [];
-  return value.map((item) => String(item).trim()).filter(Boolean);
-}
-
 function parseLabeledSection(rawText: string, label: string, nextLabels: string[]) {
   const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const escapedNextLabels = nextLabels.map((item) => item.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
@@ -353,7 +349,7 @@ function parseCalendarItems(rawText: string) {
     .slice(0, 3);
 }
 
-function parseGeminiSummaryText(rawText: string) {
+function parseSummaryText(rawText: string) {
   const summary = parseLabeledSection(rawText, "SUMMARY", [
     "BULLETS",
     "TARGET_AUDIENCE",
@@ -391,61 +387,52 @@ function parseGeminiSummaryText(rawText: string) {
   };
 }
 
-async function requestGeminiSummary(input: NoticeSummaryInput, extractedText: string) {
-  const apiKey = process.env.GEMINI_API_KEY?.trim();
-  const model = process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash";
+async function requestDeepSeekSummary(input: NoticeSummaryInput, extractedText: string) {
+  const apiKey = process.env.DEEPSEEK_API_KEY?.trim();
+  const model = process.env.DEEPSEEK_MODEL?.trim() || "deepseek-v4-flash";
 
   if (!apiKey) {
-    throw new Error("GEMINI_API_KEY 환경변수가 설정되지 않았습니다.");
+    throw new Error("DEEPSEEK_API_KEY 환경변수가 설정되지 않았습니다.");
   }
 
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
-  const response = await fetch(endpoint, {
+  const response = await fetch("https://api.deepseek.com/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      contents: [
+      model,
+      messages: [
         {
-          parts: [
-            {
-              text: buildSummaryPrompt(input, extractedText),
-            },
-          ],
+          role: "user",
+          content: buildSummaryPrompt(input, extractedText),
         },
       ],
-      generationConfig: {
-        temperature: 0.2,
-        maxOutputTokens: 1024,
-        thinkingConfig: {
-          thinkingBudget: 0,
-        },
-      },
+      temperature: 0.2,
+      max_tokens: 1024,
     }),
   });
 
   const payload = (await response.json()) as {
     error?: { message?: string };
-    candidates?: Array<{
-      content?: {
-        parts?: Array<{
-          text?: string;
-        }>;
+    choices?: Array<{
+      message?: {
+        content?: string;
       };
     }>;
   };
 
   if (!response.ok) {
-    throw new Error(payload.error?.message ?? "Gemini 요약 요청에 실패했습니다.");
+    throw new Error(payload.error?.message ?? "DeepSeek 요약 요청에 실패했습니다.");
   }
 
-  const rawText = payload.candidates?.[0]?.content?.parts?.map((part) => part.text ?? "").join("").trim();
+  const rawText = payload.choices?.[0]?.message?.content?.trim();
   if (!rawText) {
-    throw new Error("Gemini가 요약 결과를 반환하지 않았습니다.");
+    throw new Error("DeepSeek가 요약 결과를 반환하지 않았습니다.");
   }
 
-  return parseGeminiSummaryText(rawText);
+  return parseSummaryText(rawText);
 }
 
 export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<NoticeSummaryResult> {
@@ -462,7 +449,7 @@ export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<
 
   const { html } = await fetchNoticeDetailHtml(input.url);
   const extracted = pickBestContentBlock(html);
-  const summarized = await requestGeminiSummary(input, extracted.content);
+  const summarized = await requestDeepSeekSummary(input, extracted.content);
   const value = {
     ...summarized,
     sourceTitle: extracted.sourceTitle,
