@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-05-13T01:27:50.841Z",
+  "checkedAt": "2026-05-13T05:35:11.360Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,19 +9,31 @@
           "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1043696/artclView.do",
           "author": "오승하",
           "date": "2026-05-13",
-          "views": 8,
+          "views": 17,
           "sourceType": "department",
           "sourceName": "소프트웨어공학과",
           "category": "공지사항",
           "isPinned": true
         },
         {
+          "id": "864",
+          "title": "New [홍보] 제8차 SW전공융합특화교육(AI에 대체되지 않는 나만의 키워드 찾기/Apple Developer Academy)",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=864&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-05-13",
+          "views": 53,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        },
+        {
           "id": "69136",
           "title": "[한국항공대학교] 2026 AI Pilot Top Gun Ch...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69136",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69136",
           "author": "학생과",
           "date": "2026-05-13",
-          "views": 17,
+          "views": 44,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
@@ -30,13 +42,25 @@
         {
           "id": "69134",
           "title": "[고용노동부] 청년 노동권 보호 안내",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69134",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69134",
           "author": "학생과",
           "date": "2026-05-13",
-          "views": 9,
+          "views": 13,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "27008",
+          "title": "[Visa]시간제취업 Part-Time Work Guideline",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=33&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27008",
+          "author": "국제협력과",
+          "date": "2026-05-13",
+          "views": 12,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
           "isPinned": false
         },
         {
@@ -45,15 +69,15 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=33&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27007",
           "author": "국제협력과",
           "date": "2026-05-13",
-          "views": 1,
+          "views": 10,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-05-13T01:27:50.841Z",
-      "totalCount": 4,
+      "fetchedAt": "2026-05-13T05:35:11.360Z",
+      "totalCount": 6,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
