@@ -132,6 +132,55 @@ function getTodayInKorea() {
   }).format(new Date());
 }
 
+function toCalendarWeekdayLabel(value: string) {
+  const matched = value.match(/(월|화|수|목|금|토|일)(?:요일)?/);
+  if (matched) {
+    return `${matched[1]} 시작`;
+  }
+
+  return "요일 미정";
+}
+
+function toCompactDeadlineLabel(value: string) {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  const fullDateMatch = normalized.match(/(\d{4})[./-]\s*(\d{1,2})[./-]\s*(\d{1,2})/);
+
+  if (fullDateMatch) {
+    const [, , month, day] = fullDateMatch;
+    return `${Number(month)}/${Number(day)} 마감`;
+  }
+
+  const shortDateMatch = normalized.match(/~\s*(\d{1,2})[./-]\s*(\d{1,2})/);
+  if (shortDateMatch) {
+    const [, month, day] = shortDateMatch;
+    return `${Number(month)}/${Number(day)} 마감`;
+  }
+
+  return "마감일 확인";
+}
+
+function toCompactProgramName(label: string, noticeTitle: string) {
+  const preferred =
+    label.match(/[A-Z][A-Z0-9&+ -]{1,24}/)?.[0]?.trim() ??
+    noticeTitle.match(/\(([A-Za-z0-9&+ -]{2,24})\)/)?.[1]?.trim() ??
+    label.trim() ??
+    noticeTitle.trim();
+
+  return preferred
+    .replace(/복사$/g, "")
+    .replace(/모집 시작|지원 시작|지원 마감|신청 시작|신청 마감|접수 시작|접수 마감/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function buildCalendarTitle(notice: Notice, item: NoticeSummaryData["calendarItems"][number]) {
+  return [
+    toCompactDeadlineLabel(item.when),
+    toCalendarWeekdayLabel(item.note),
+    toCompactProgramName(item.label, notice.title),
+  ].join(" | ");
+}
+
 function toSortableTime(date: string) {
   const normalized = date.replaceAll(".", "-");
   const time = new Date(`${normalized}T00:00:00+09:00`).getTime();
@@ -574,22 +623,8 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     );
   }
 
-  async function copyCalendarItem(notice: Notice, item: NoticeSummaryData["calendarItems"][number], summary: NoticeSummaryData) {
-    const clipboardText = [
-      `제목: ${item.label} - ${notice.title}`,
-      `일정: ${item.when}`,
-      "메모:",
-      `- 공지: ${notice.title}`,
-      `- 출처: ${notice.sourceName}`,
-      `- 핵심 요약: ${summary.summary}`,
-      `- 해야 할 일: ${summary.actionItems[0] ?? "명시되지 않음"}`,
-      `- 추가 메모: ${item.note || "없음"}`,
-      `- 링크: ${notice.url}`,
-    ].join("\n");
-
-    await navigator.clipboard.writeText(clipboardText);
-
-    const key = `${getNoticeClientId(notice)}-${item.label}`;
+  async function copyCalendarText(key: string, text: string) {
+    await navigator.clipboard.writeText(text);
     setCopiedCalendarKey(key);
     window.setTimeout(() => {
       setCopiedCalendarKey((current) => (current === key ? null : current));
@@ -933,25 +968,47 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                             <div className="mt-3 space-y-3">
                               {summaryState.data.calendarItems.length > 0 ? (
                                 <div className="rounded-2xl bg-white px-4 py-3">
-                                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                                  <div className="flex flex-col gap-3">
                                     <div>
                                       <p className="text-sm font-semibold text-slate-900">캘린더 복사</p>
-                                      <p className="mt-1 text-xs text-slate-500">제목, 일정, 메모를 한 번에 복사합니다.</p>
+                                      <p className="mt-1 text-xs text-slate-500">일정 제목과 메모를 따로 복사해서 캘린더에 바로 붙여 넣을 수 있습니다.</p>
                                     </div>
-                                    <div className="flex flex-wrap gap-2">
+
+                                    <div className="space-y-3">
                                       {summaryState.data.calendarItems.map((item) => {
-                                        const key = `${noticeId}-${item.label}`;
-                                        const copied = copiedCalendarKey === key;
+                                        const titleKey = `${noticeId}-${item.label}-title`;
+                                        const memoKey = `${noticeId}-${item.label}-memo`;
+                                        const titleCopied = copiedCalendarKey === titleKey;
+                                        const memoCopied = copiedCalendarKey === memoKey;
+                                        const programName = toCompactProgramName(item.label, notice.title);
+                                        const titleText = buildCalendarTitle(notice, item);
+                                        const memoText = [
+                                          "메모:",
+                                          `- 프로그램: ${programName}`,
+                                          `- 출처: ${notice.sourceName}`,
+                                          `- 링크: ${notice.url}`,
+                                        ].join("\n");
 
                                         return (
-                                          <button
-                                            key={key}
-                                            type="button"
-                                            onClick={() => void copyCalendarItem(notice, item, summaryState.data!)}
-                                            className={`rounded-2xl px-3.5 py-2 text-sm font-semibold transition ${copied ? "bg-emerald-600 text-white" : "bg-violet-100 text-violet-800 hover:bg-violet-200"}`}
-                                          >
-                                            {copied ? "복사됨" : `${item.label} 복사`}
-                                          </button>
+                                          <div key={`${noticeId}-${item.label}`} className="rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-3">
+                                            <p className="text-sm font-semibold text-slate-900">{titleText}</p>
+                                            <div className="mt-2 flex flex-wrap gap-2">
+                                              <button
+                                                type="button"
+                                                onClick={() => void copyCalendarText(titleKey, titleText)}
+                                                className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${titleCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
+                                              >
+                                                {titleCopied ? "일정 복사됨" : "일정 복사"}
+                                              </button>
+                                              <button
+                                                type="button"
+                                                onClick={() => void copyCalendarText(memoKey, memoText)}
+                                                className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${memoCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
+                                              >
+                                                {memoCopied ? "메모 복사됨" : "메모 복사"}
+                                              </button>
+                                            </div>
+                                          </div>
                                         );
                                       })}
                                     </div>
