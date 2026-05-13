@@ -99,6 +99,11 @@ type NoticeSummaryData = {
   deadline: string;
   actionItems: string[];
   caution: string;
+  calendarItems: Array<{
+    label: string;
+    when: string;
+    note: string;
+  }>;
   sourceTitle: string;
   extractedAt: string;
   fromCache: boolean;
@@ -335,6 +340,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
   const [accountFirstSeenDate, setAccountFirstSeenDate] = useState("");
   const [isClientStateReady, setIsClientStateReady] = useState(false);
   const [noticeSummaryById, setNoticeSummaryById] = useState<Record<string, NoticeSummaryState>>({});
+  const [copiedCalendarKey, setCopiedCalendarKey] = useState<string | null>(null);
 
   const deferredSearchInput = useDeferredValue(searchInput);
   const normalizedSearchQuery = useMemo(
@@ -566,6 +572,28 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     setBookmarkNoticeIds((current) =>
       current.includes(noticeId) ? current.filter((id) => id !== noticeId) : [...current, noticeId],
     );
+  }
+
+  async function copyCalendarItem(notice: Notice, item: NoticeSummaryData["calendarItems"][number], summary: NoticeSummaryData) {
+    const clipboardText = [
+      `제목: ${item.label} - ${notice.title}`,
+      `일정: ${item.when}`,
+      "메모:",
+      `- 공지: ${notice.title}`,
+      `- 출처: ${notice.sourceName}`,
+      `- 핵심 요약: ${summary.summary}`,
+      `- 해야 할 일: ${summary.actionItems[0] ?? "명시되지 않음"}`,
+      `- 추가 메모: ${item.note || "없음"}`,
+      `- 링크: ${notice.url}`,
+    ].join("\n");
+
+    await navigator.clipboard.writeText(clipboardText);
+
+    const key = `${getNoticeClientId(notice)}-${item.label}`;
+    setCopiedCalendarKey(key);
+    window.setTimeout(() => {
+      setCopiedCalendarKey((current) => (current === key ? null : current));
+    }, 1800);
   }
 
   async function handleNoticeSummary(notice: Notice) {
@@ -903,6 +931,34 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
 
                           {summaryState.status === "success" && summaryState.data ? (
                             <div className="mt-3 space-y-3">
+                              {summaryState.data.calendarItems.length > 0 ? (
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                                    <div>
+                                      <p className="text-sm font-semibold text-slate-900">캘린더 복사</p>
+                                      <p className="mt-1 text-xs text-slate-500">제목, 일정, 메모를 한 번에 복사합니다.</p>
+                                    </div>
+                                    <div className="flex flex-wrap gap-2">
+                                      {summaryState.data.calendarItems.map((item) => {
+                                        const key = `${noticeId}-${item.label}`;
+                                        const copied = copiedCalendarKey === key;
+
+                                        return (
+                                          <button
+                                            key={key}
+                                            type="button"
+                                            onClick={() => void copyCalendarItem(notice, item, summaryState.data!)}
+                                            className={`rounded-2xl px-3.5 py-2 text-sm font-semibold transition ${copied ? "bg-emerald-600 text-white" : "bg-violet-100 text-violet-800 hover:bg-violet-200"}`}
+                                          >
+                                            {copied ? "복사됨" : `${item.label} 복사`}
+                                          </button>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                </div>
+                              ) : null}
+
                               {summaryState.data.sourceTitle ? (
                                 <div className="rounded-2xl bg-white px-4 py-3 text-sm text-slate-600">
                                   <span className="font-semibold text-slate-900">상세 페이지 제목</span>
