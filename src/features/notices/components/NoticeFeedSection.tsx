@@ -294,6 +294,19 @@ function loadStoredIds(storageKey: string) {
   }
 }
 
+function parseApiJsonResponse<T>(rawText: string, fallbackMessage: string) {
+  try {
+    return JSON.parse(rawText) as T;
+  } catch {
+    const preview = rawText.trim().slice(0, 120).toLowerCase();
+    if (preview.startsWith("<!doctype") || preview.startsWith("<html") || preview.startsWith("<")) {
+      throw new Error(`${fallbackMessage} 서버가 JSON 대신 HTML 페이지를 반환했습니다.`);
+    }
+
+    throw new Error(fallbackMessage);
+  }
+}
+
 function dedupeNotices(notices: Notice[]) {
   const noticeMap = new Map<string, Notice>();
 
@@ -775,7 +788,11 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
           sourceName: notice.sourceName,
         }),
       });
-      const data = (await response.json()) as NoticeSummaryApiResponse;
+      const rawResponseText = await response.text();
+      const data = parseApiJsonResponse<NoticeSummaryApiResponse>(
+        rawResponseText,
+        "AI 요약 응답을 읽지 못했습니다.",
+      );
       const summary = data.summary;
 
       if (!response.ok || !summary) {
