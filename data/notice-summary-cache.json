@@ -1222,5 +1222,52 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779378597154
+  },
+  "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=64645::v10": {
+    "value": {
+      "summary": "2026학년도 2차 외국어강좌 개폐강 안내입니다. 개설 및 폐강된 강좌 목록을 첨부파일로 확인하세요. 수강신청은 강좌접수 페이지에서 가능합니다.",
+      "bullets": [
+        "2026학년도 2차 외국어강좌 개폐강 확정",
+        "개설 및 폐강 강좌는 첨부파일에서 확인",
+        "수강신청은 강좌접수 페이지에서 진행"
+      ],
+      "targetAudience": "외국어강좌 수강 희망자",
+      "deadline": "명시되지 않음",
+      "actionItems": [
+        "첨부파일에서 개폐강 강좌 확인",
+        "강좌접수 페이지에서 수강신청"
+      ],
+      "benefits": [
+        "명시되지 않음"
+      ],
+      "requiredDocuments": [
+        "명시되지 않음"
+      ],
+      "contact": "명시되지 않음",
+      "caution": "명시되지 않음",
+      "calendarItems": [
+        {
+          "label": "2026학년도 2차 외국어강좌 개폐강 안내",
+          "eventType": "announcement",
+          "eventDate": "2026.04.23(목)",
+          "startAt": "2026.04.23(목)",
+          "endAt": "2026.04.23(목)",
+          "when": "2026.04.23(목)",
+          "note": "개폐강 확정 안내 공지일"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "강좌접수",
+          "url": "https://lec.jnu.ac.kr/SubPage.aspx?PageCode=050100",
+          "note": "수강신청 페이지"
+        }
+      ],
+      "attachments": [],
+      "sourceTitle": "전남대학교 언어교육원 > 게시판 > 공지사항 > 2026학년도 2차 외국어강좌 개폐강 안내",
+      "extractedAt": "2026-05-14T15:50:29.545Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1779378629673
   }
 }
