@@ -814,40 +814,9 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
           open: true,
           status: "success",
           data: summary,
-          isRefreshing: summary.attachmentAnalysisState === "pending",
+          isRefreshing: false,
         },
       }));
-
-      if (summary.attachmentAnalysisState === "pending") {
-        void requestNoticeSummary(notice, true)
-          .then((enrichedSummary) => {
-            setNoticeSummaryById((current) => ({
-              ...current,
-              [noticeId]: {
-                open: current[noticeId]?.open ?? true,
-                status: "success",
-                data: enrichedSummary,
-                isRefreshing: false,
-              },
-            }));
-          })
-          .catch(() => {
-            setNoticeSummaryById((current) => {
-              const existing = current[noticeId];
-              if (!existing || existing.status !== "success") {
-                return current;
-              }
-
-              return {
-                ...current,
-                [noticeId]: {
-                  ...existing,
-                  isRefreshing: false,
-                },
-              };
-            });
-          });
-      }
     } catch (summaryError) {
       const message = summaryError instanceof Error ? summaryError.message : "AI ?? ?? ? ??? ??????.";
       setNoticeSummaryById((current) => ({
@@ -858,6 +827,55 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
           error: message,
         },
       }));
+    }
+  }
+
+  async function handleAttachmentAnalysis(notice: Notice) {
+    const noticeId = getNoticeClientId(notice);
+
+    setNoticeSummaryById((current) => {
+      const existing = current[noticeId];
+      if (!existing || existing.status !== "success") {
+        return current;
+      }
+
+      return {
+        ...current,
+        [noticeId]: {
+          ...existing,
+          isRefreshing: true,
+        },
+      };
+    });
+
+    try {
+      const enrichedSummary = await requestNoticeSummary(notice, true);
+      setNoticeSummaryById((current) => ({
+        ...current,
+        [noticeId]: {
+          open: current[noticeId]?.open ?? true,
+          status: "success",
+          data: enrichedSummary,
+          isRefreshing: false,
+        },
+      }));
+    } catch (summaryError) {
+      const message = summaryError instanceof Error ? summaryError.message : "첨부 분석 중 문제가 발생했습니다.";
+      setNoticeSummaryById((current) => {
+        const existing = current[noticeId];
+        if (!existing || existing.status !== "success") {
+          return current;
+        }
+
+        return {
+          ...current,
+          [noticeId]: {
+            ...existing,
+            isRefreshing: false,
+            error: message,
+          },
+        };
+      });
     }
   }
 
@@ -1121,10 +1139,25 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                             ) : null}
                           </div>
 
-                          {summaryState?.status === "success" && summaryState.isRefreshing ? (
-                            <p className="mt-2 text-xs text-violet-700">
-                              첨부파일 내용을 뒤에서 추가로 확인하고 있습니다. 본문 요약은 먼저 보여드리고 있어요.
-                            </p>
+                          {summaryState?.status === "success" &&
+                          summaryState.data?.attachmentAnalysisState === "pending" ? (
+                            <div className="mt-2 flex flex-wrap items-center gap-2">
+                              <p className="text-xs text-violet-700">
+                                현재는 본문만 먼저 읽었습니다. 필요하면 첨부파일까지 더 깊게 분석할 수 있어요.
+                              </p>
+                              <button
+                                type="button"
+                                onClick={() => void handleAttachmentAnalysis(notice)}
+                                disabled={summaryState.isRefreshing}
+                                className={`rounded-xl border px-3 py-2 text-xs font-semibold transition ${
+                                  summaryState.isRefreshing
+                                    ? "cursor-wait border-violet-200 bg-violet-100 text-violet-500"
+                                    : "border-violet-200 bg-white text-violet-700 hover:border-violet-300 hover:bg-violet-100"
+                                }`}
+                              >
+                                {summaryState.isRefreshing ? "첨부 분석 중..." : "첨부까지 분석"}
+                              </button>
+                            </div>
                           ) : null}
 
                           {summaryState.status === "loading" ? (
