@@ -1144,5 +1144,82 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779378562910
+  },
+  "https://greenbio.jnu.ac.kr/bbs/greenbio/3467/1033897/artclView.do::v10": {
+    "value": {
+      "summary": "CO-WEEK ACADEMY 참가자 선정 문자를 받은 학생은 기한 내에 신청서를 제출해야 합니다. 제출서류는 수강신청원, 참가신청서(사업단 제출), 참가신청서(충남대 제출) 총 3건이며, 학과실 및 이메일로 제출합니다. 기한 내 미회신 시 선발이 취소될 수 있습니다.",
+      "bullets": [
+        "제출기한: ~4/23(목) 18:00까지",
+        "제출처: 학과실 및 메일(sdh5461@naver.com)",
+        "제출서류 3건: 수강신청원(학과실), 참가신청서(사업단 메일), 참가신청서(충남대 메일)",
+        "충남대 교류수학으로 학점인정(1학점, 수강료 3만원)"
+      ],
+      "targetAudience": "CO-WEEK ACADEMY 참가자 선정 문자를 받은 학생",
+      "deadline": "2026.04.23(목) 18:00",
+      "actionItems": [
+        "수강신청원에 소속 학과장 직인 받아 학과실 제출",
+        "참가신청서 2부를 sdh5461@naver.com으로 메일 제출",
+        "기한 내 미제출 시 선발 취소 주의"
+      ],
+      "benefits": [
+        "충남대 첨단기술과융합사고 교과목 1학점 인정",
+        "수강료 3만원"
+      ],
+      "requiredDocuments": [
+        "수강신청원(전남대 제출, 학과장 직인)",
+        "참가신청서(사업단 제출)",
+        "참가신청서(충남대 제출)"
+      ],
+      "contact": "062-530-0554",
+      "caution": "기한 내 미회신 시 선발이 취소될 수 있습니다.",
+      "calendarItems": [
+        {
+          "label": "CO-WEEK ACADEMY 참가신청서 제출 마감",
+          "eventType": "apply_deadline",
+          "eventDate": "2026.04.23(목)",
+          "startAt": "명시되지 않음",
+          "endAt": "2026.04.23(목) 18:00",
+          "when": "2026.04.23(목) 18:00까지",
+          "note": "참가신청서 제출 마감일"
+        }
+      ],
+      "actionLinks": [],
+      "attachments": [
+        {
+          "label": "제출2. 참가신청서_사업단제출.hwp",
+          "url": "https://greenbio.jnu.ac.kr/bbs/greenbio/3467/837719/download.do",
+          "note": "DO"
+        },
+        {
+          "label": "제출3. 참가신청서_충남대제출.xls",
+          "url": "https://greenbio.jnu.ac.kr/bbs/greenbio/3467/837720/download.do",
+          "note": "DO"
+        },
+        {
+          "label": "붙임1. 충남대 교류수학 공지.hwp",
+          "url": "https://greenbio.jnu.ac.kr/bbs/greenbio/3467/837721/download.do",
+          "note": "DO"
+        },
+        {
+          "label": "붙임2. 충남대 하계 계절학기 교과목 개설 현황.xlsx",
+          "url": "https://greenbio.jnu.ac.kr/bbs/greenbio/3467/837722/download.do",
+          "note": "DO"
+        },
+        {
+          "label": "붙임3. 전남대 국내 타 대학 학점교류 필독사항.hwp",
+          "url": "https://greenbio.jnu.ac.kr/bbs/greenbio/3467/837723/download.do",
+          "note": "DO"
+        },
+        {
+          "label": "제출1. 수강신청원_전남대제출 (교과목 내용 추가) 2.hwp",
+          "url": "https://greenbio.jnu.ac.kr/bbs/greenbio/3467/837787/download.do",
+          "note": "DO"
+        }
+      ],
+      "sourceTitle": "K2Web Wizard",
+      "extractedAt": "2026-05-14T15:49:38.106Z",
+      "attachmentAnalysisState": "pending"
+    },
+    "expiresAt": 1779378578185
   }
 }
