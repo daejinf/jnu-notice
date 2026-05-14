@@ -1045,5 +1045,68 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779376299716
+  },
+  "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=26994::v10": {
+    "value": {
+      "summary": "전남대학교 예술대학에서 5월에 국악 공연(5/8)과 합창 공연(5/13)을 개최합니다. 무료 공연이며 네이버 폼으로 예매 가능하고, 유학생은 문자로 개별 예매 지원이 가능합니다.",
+      "bullets": [
+        "5/8 국악 공연, 5/13 합창 공연",
+        "장소: 전남대학교 민주마루",
+        "전석 무료, 네이버 폼 예매",
+        "유학생은 문자로 예매 지원 가능"
+      ],
+      "targetAudience": "전남대학교 학생 및 일반인",
+      "deadline": "명시되지 않음",
+      "actionItems": [
+        "5/8 국악 공연 예매: https://naver.me/FuNWVW6u",
+        "5/13 합창 공연 예매: https://naver.me/54KJVJ3B",
+        "유학생은 010-4699-8366으로 문자"
+      ],
+      "benefits": [
+        "무료 공연 관람"
+      ],
+      "requiredDocuments": [
+        "명시되지 않음"
+      ],
+      "contact": "010-4699-8366",
+      "caution": "네이버 폼 예매가 어려운 유학생은 문자로 개별 예매 지원",
+      "calendarItems": [
+        {
+          "label": "5월의 선물 국악 공연",
+          "eventType": "program_start",
+          "eventDate": "2026.05.08(금)",
+          "startAt": "2026.05.08(금)",
+          "endAt": "2026.05.08(금)",
+          "when": "2026.05.08(금)",
+          "note": "국악 공연 관람"
+        },
+        {
+          "label": "5월의 선물 합창 공연",
+          "eventType": "program_start",
+          "eventDate": "2026.05.13(수)",
+          "startAt": "2026.05.13(수)",
+          "endAt": "2026.05.13(수)",
+          "when": "2026.05.13(수)",
+          "note": "합창 공연 관람"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "5/8 국악 공연 예매",
+          "url": "https://naver.me/FuNWVW6u",
+          "note": "네이버 폼 예매"
+        },
+        {
+          "label": "5/13 합창 공연 예매",
+          "url": "https://naver.me/54KJVJ3B",
+          "note": "네이버 폼 예매"
+        }
+      ],
+      "attachments": [],
+      "sourceTitle": "> 전남대학교 예술대학 <5월의 선물 : 함께하는 합창과 국악> 홍보",
+      "extractedAt": "2026-05-14T15:35:23.720Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1779377723820
   }
 }
