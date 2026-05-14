@@ -1,7 +1,9 @@
 import { request as httpRequest } from "node:http";
 import { request as httpsRequest } from "node:https";
 import { load } from "cheerio";
+import JSZip from "jszip";
 import { PDFParse } from "pdf-parse";
+import { recognize } from "tesseract.js";
 import {
   loadNoticeSummaryCacheMap,
   saveNoticeSummaryCacheMap,
@@ -12,9 +14,11 @@ import {
 const REQUEST_TIMEOUT_MS = 15000;
 const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
 const MAX_CONTENT_CHARS = 12000;
-const SUMMARY_CACHE_VERSION = "v6";
+const SUMMARY_CACHE_VERSION = "v7";
 const MAX_ATTACHMENT_TEXT_CHARS = 8000;
 const MAX_PDF_ATTACHMENTS_TO_PARSE = 2;
+const MAX_HWPX_ATTACHMENTS_TO_PARSE = 2;
+const MAX_IMAGE_ATTACHMENTS_TO_PARSE = 2;
 const MAX_LINKS_PER_KIND = 6;
 
 const CONTENT_SELECTOR_CANDIDATES = [
@@ -188,6 +192,8 @@ const ATTACHMENT_EXTENSIONS = new Set([
   "jpg",
   "jpeg",
   "png",
+  "gif",
+  "webp",
 ]);
 
 const ACTION_LINK_KEYWORDS = [
@@ -473,21 +479,76 @@ function dedupeResourceLinks(links: NoticeResourceLink[], limit: number) {
   return Array.from(uniqueLinks.values()).slice(0, limit);
 }
 
+function decodeXmlEntities(value: string) {
+  return value
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&amp;", "&");
+}
+
+async function extractHwpxText(buffer: Buffer) {
+  const zip = await JSZip.loadAsync(buffer);
+  const sectionEntries = Object.keys(zip.files)
+    .filter((name) => /^Contents\/section\d+\.xml$/i.test(name))
+    .sort((left, right) => left.localeCompare(right, "en"));
+
+  const chunks: string[] = [];
+
+  for (const entryName of sectionEntries.slice(0, 12)) {
+    const entry = zip.file(entryName);
+    if (!entry) continue;
+    const xml = await entry.async("text");
+    const text = decodeXmlEntities(
+      xml
+        .replace(/<[^>]+>/g, "\n")
+        .replace(/\s+/g, " ")
+        .trim(),
+    );
+
+    if (text) {
+      chunks.push(text);
+    }
+  }
+
+  return cleanText(chunks.join("\n")).slice(0, MAX_ATTACHMENT_TEXT_CHARS);
+}
+
+async function extractImageText(buffer: Buffer) {
+  const result = await recognize(buffer, "kor+eng");
+  return cleanText(result.data.text ?? "").slice(0, MAX_ATTACHMENT_TEXT_CHARS);
+}
+
 async function extractAttachmentTexts(attachments: NoticeResourceLink[]) {
   const extractedTexts: NoticeResourceLink[] = [];
+  let parsedPdfCount = 0;
+  let parsedHwpxCount = 0;
+  let parsedImageCount = 0;
 
-  for (const attachment of attachments.slice(0, MAX_PDF_ATTACHMENTS_TO_PARSE)) {
+  for (const attachment of attachments) {
     const extension = getFileExtensionFromUrl(attachment.url);
-    if (extension !== "pdf") continue;
 
     try {
       const { buffer, contentType } = await fetchBinaryResource(attachment.url);
-      if (!contentType.toLowerCase().includes("pdf") && extension !== "pdf") continue;
+      let content = "";
 
-      const parser = new PDFParse({ data: buffer });
-      const parsed = await parser.getText();
-      await parser.destroy();
-      const content = cleanText(parsed.text ?? "").slice(0, MAX_ATTACHMENT_TEXT_CHARS);
+      if ((contentType.toLowerCase().includes("pdf") || extension === "pdf") && parsedPdfCount < MAX_PDF_ATTACHMENTS_TO_PARSE) {
+        const parser = new PDFParse({ data: buffer });
+        const parsed = await parser.getText();
+        await parser.destroy();
+        content = cleanText(parsed.text ?? "").slice(0, MAX_ATTACHMENT_TEXT_CHARS);
+        parsedPdfCount += 1;
+      } else if (extension === "hwpx" && parsedHwpxCount < MAX_HWPX_ATTACHMENTS_TO_PARSE) {
+        content = await extractHwpxText(buffer);
+        parsedHwpxCount += 1;
+      } else if (["png", "jpg", "jpeg", "gif", "webp"].includes(extension) && parsedImageCount < MAX_IMAGE_ATTACHMENTS_TO_PARSE) {
+        content = await extractImageText(buffer);
+        parsedImageCount += 1;
+      } else if (extension === "hwp") {
+        content = "Legacy HWP attachment detected. Text extraction is not yet supported.";
+      }
+
       if (!content) continue;
 
       extractedTexts.push({
@@ -565,6 +626,25 @@ async function pickBestContentBlock(html: string, baseUrl: string): Promise<Extr
         note: "바로 이동",
       });
     }
+  });
+
+  $("img[src]").each((_, element) => {
+    const rawSrc = $(element).attr("src")?.trim();
+    if (!rawSrc) return;
+
+    let absoluteUrl: string;
+    try {
+      absoluteUrl = new URL(rawSrc, baseUrl).toString();
+    } catch {
+      return;
+    }
+
+    const label = normalizeLinkLabel($(element).attr("alt") ?? $(element).attr("title") ?? "image", absoluteUrl);
+    attachments.push({
+      label,
+      url: absoluteUrl,
+      note: "IMAGE",
+    });
   });
 
   const dedupedAttachments = dedupeResourceLinks(attachments, MAX_LINKS_PER_KIND);
