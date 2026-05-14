@@ -10,7 +10,8 @@ import {
 
 const REQUEST_TIMEOUT_MS = 15000;
 const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
-const MAX_CONTENT_CHARS = 12000;
+const MAX_FAST_CONTENT_CHARS = 4500;
+const MAX_DEEP_CONTENT_CHARS = 12000;
 const SUMMARY_CACHE_VERSION = "v8";
 const MAX_ATTACHMENT_TEXT_CHARS = 8000;
 const MAX_PDF_ATTACHMENTS_TO_PARSE = 2;
@@ -401,7 +402,7 @@ async function parsePdfBufferToHtml(buffer: Buffer) {
     throw new Error("PDF에서 읽을 수 있는 본문을 찾지 못했습니다.");
   }
 
-  return `<article>${escapeHtml(text.slice(0, MAX_CONTENT_CHARS))}</article>`;
+  return `<article>${escapeHtml(text.slice(0, MAX_DEEP_CONTENT_CHARS))}</article>`;
 }
 
 async function fetchNoticeDetailHtml(url: string) {
@@ -643,7 +644,8 @@ async function pickBestContentBlock(
   const contentWithHints = [prioritizedCandidate || longestCandidate || bodyText, ...inlineImageHints.map((hint) => `[이미지 설명] ${hint}`)]
     .filter(Boolean)
     .join("\n");
-  const content = contentWithHints.slice(0, MAX_CONTENT_CHARS);
+  const maxContentChars = options.includeAttachmentAnalysis ? MAX_DEEP_CONTENT_CHARS : MAX_FAST_CONTENT_CHARS;
+  const content = contentWithHints.slice(0, maxContentChars);
 
   if (!content) {
     throw new Error("상세 페이지에서 읽을 수 있는 본문을 찾지 못했습니다.");
@@ -986,9 +988,11 @@ async function requestDeepSeekSummary(
   attachments: NoticeResourceLink[],
   actionCandidates: NoticeResourceLink[],
   attachmentTexts: NoticeResourceLink[],
+  options: GenerateNoticeSummaryOptions = {},
 ) {
   const apiKey = process.env.DEEPSEEK_API_KEY?.trim();
   const model = process.env.DEEPSEEK_MODEL?.trim() || "deepseek-v4-flash";
+  const isDeepAnalysis = !!options.includeAttachmentAnalysis;
 
   if (!apiKey) {
     throw new Error("DEEPSEEK_API_KEY 환경변수가 설정되지 않았습니다.");
@@ -1009,7 +1013,13 @@ async function requestDeepSeekSummary(
         },
         {
           role: "user",
-          content: buildSummaryPrompt(input, extractedText, attachments, actionCandidates, attachmentTexts),
+          content: buildSummaryPrompt(
+            input,
+            extractedText,
+            isDeepAnalysis ? attachments : [],
+            actionCandidates,
+            isDeepAnalysis ? attachmentTexts : [],
+          ),
         },
       ],
       thinking: {
@@ -1018,8 +1028,8 @@ async function requestDeepSeekSummary(
       response_format: {
         type: "json_object",
       },
-      temperature: 0.2,
-      max_tokens: 1800,
+      temperature: 0.1,
+      max_tokens: isDeepAnalysis ? 1400 : 900,
     }),
   });
 
@@ -1079,6 +1089,7 @@ export async function generateNoticeSummary(
     extracted.attachments,
     extracted.actionCandidates,
     extracted.attachmentTexts,
+    options,
   );
   const value: Omit<NoticeSummaryResult, "fromCache"> = {
     ...summarized,
