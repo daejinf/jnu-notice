@@ -23,7 +23,7 @@ import { useSelectedCategories } from "@/features/notices/hooks/useSelectedCateg
 import { getNoticeClientId } from "@/features/notices/utils/noticeClientState";
 import { formatNoticeDate, formatViewsLabel, joinCategoryQuery } from "@/features/notices/utils/format";
 import type { SchoolBoardCategory } from "@/features/notices/config/schoolBoardCategories";
-import type { Notice } from "@/types/notice";
+import type { Notice, NoticeState } from "@/types/notice";
 
 const PROJECT_CENTER_KEYS = [
   "greenbio",
@@ -111,6 +111,11 @@ type NoticeSummaryData = {
 
 type NoticeSummaryApiResponse = {
   summary: NoticeSummaryData | null;
+  error?: string;
+};
+
+type NoticeStateApiResponse = {
+  state: NoticeState | null;
   error?: string;
 };
 
@@ -380,6 +385,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
   const [bookmarkNoticeIds, setBookmarkNoticeIds] = useState<string[]>([]);
   const [accountFirstSeenDate, setAccountFirstSeenDate] = useState("");
   const [isClientStateReady, setIsClientStateReady] = useState(false);
+  const [isHydratingNoticeState, setIsHydratingNoticeState] = useState(true);
   const [noticeSummaryById, setNoticeSummaryById] = useState<Record<string, NoticeSummaryState>>({});
   const [copiedCalendarKey, setCopiedCalendarKey] = useState<string | null>(null);
 
@@ -424,6 +430,75 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     if (!isClientStateReady) return;
     window.localStorage.setItem(bookmarkStorageKey, JSON.stringify(bookmarkNoticeIds));
   }, [bookmarkNoticeIds, bookmarkStorageKey, isClientStateReady]);
+
+  useEffect(() => {
+    if (!isClientStateReady) {
+      return;
+    }
+
+    const controller = new AbortController();
+
+    const run = async () => {
+      try {
+        const response = await fetch("/api/notice-state", {
+          signal: controller.signal,
+          cache: "no-store",
+        });
+        const data = (await response.json()) as NoticeStateApiResponse;
+
+        if (!response.ok) {
+          throw new Error(data.error ?? "읽음 상태를 불러오지 못했습니다.");
+        }
+
+        if (data.state) {
+          setReadNoticeIds((current) => Array.from(new Set([...current, ...data.state!.readNoticeIds])));
+          setBookmarkNoticeIds((current) => Array.from(new Set([...current, ...data.state!.bookmarkNoticeIds])));
+        }
+      } catch (stateError) {
+        if (stateError instanceof Error && stateError.name === "AbortError") {
+          return;
+        }
+      } finally {
+        setIsHydratingNoticeState(false);
+      }
+    };
+
+    void run();
+
+    return () => controller.abort();
+  }, [isClientStateReady]);
+
+  useEffect(() => {
+    if (!isClientStateReady || isHydratingNoticeState) {
+      return;
+    }
+
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      try {
+        await fetch("/api/notice-state", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            readNoticeIds,
+            bookmarkNoticeIds,
+          }),
+          signal: controller.signal,
+        });
+      } catch (stateError) {
+        if (stateError instanceof Error && stateError.name === "AbortError") {
+          return;
+        }
+      }
+    }, 300);
+
+    return () => {
+      controller.abort();
+      window.clearTimeout(timer);
+    };
+  }, [bookmarkNoticeIds, isClientStateReady, isHydratingNoticeState, readNoticeIds]);
 
   const requestKey = useMemo(
     () =>

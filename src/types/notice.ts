@@ -47,6 +47,12 @@ export type NoticePreferences = {
   updatedAt: string;
 };
 
+export type NoticeState = {
+  readNoticeIds: string[];
+  bookmarkNoticeIds: string[];
+  updatedAt: string;
+};
+
 export type MyAlertsSnapshot = {
   notices: Notice[];
   fetchedAt: string;
