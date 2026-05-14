@@ -1,9 +1,6 @@
 import { request as httpRequest } from "node:http";
 import { request as httpsRequest } from "node:https";
 import { load } from "cheerio";
-import JSZip from "jszip";
-import { PDFParse } from "pdf-parse";
-import { recognize } from "tesseract.js";
 import {
   loadNoticeSummaryCacheMap,
   saveNoticeSummaryCacheMap,
@@ -279,6 +276,21 @@ function escapeHtml(value: string) {
     .replaceAll("'", "&#39;");
 }
 
+async function getPdfParseClass() {
+  const module = await import("pdf-parse");
+  return module.PDFParse;
+}
+
+async function getJsZipModule() {
+  const module = await import("jszip");
+  return module.default;
+}
+
+async function runImageOcr(buffer: Buffer) {
+  const module = await import("tesseract.js");
+  return module.recognize(buffer, "kor+eng");
+}
+
 function extractStructuredText(rootHtml: string) {
   const $ = load(rootHtml);
   $("script, style, noscript, iframe, svg, nav, footer, header, button, input, select, textarea").remove();
@@ -355,6 +367,7 @@ async function requestHtmlViaNode(url: string, redirectCount = 0): Promise<{ htm
 }
 
 async function parsePdfBufferToHtml(buffer: Buffer) {
+  const PDFParse = await getPdfParseClass();
   const parser = new PDFParse({ data: buffer });
   const parsed = await parser.getText();
   await parser.destroy();
@@ -489,6 +502,7 @@ function decodeXmlEntities(value: string) {
 }
 
 async function extractHwpxText(buffer: Buffer) {
+  const JSZip = await getJsZipModule();
   const zip = await JSZip.loadAsync(buffer);
   const sectionEntries = Object.keys(zip.files)
     .filter((name) => /^Contents\/section\d+\.xml$/i.test(name))
@@ -516,7 +530,7 @@ async function extractHwpxText(buffer: Buffer) {
 }
 
 async function extractImageText(buffer: Buffer) {
-  const result = await recognize(buffer, "kor+eng");
+  const result = await runImageOcr(buffer);
   return cleanText(result.data.text ?? "").slice(0, MAX_ATTACHMENT_TEXT_CHARS);
 }
 
@@ -534,6 +548,7 @@ async function extractAttachmentTexts(attachments: NoticeResourceLink[]) {
       let content = "";
 
       if ((contentType.toLowerCase().includes("pdf") || extension === "pdf") && parsedPdfCount < MAX_PDF_ATTACHMENTS_TO_PARSE) {
+        const PDFParse = await getPdfParseClass();
         const parser = new PDFParse({ data: buffer });
         const parsed = await parser.getText();
         await parser.destroy();
