@@ -263,7 +263,7 @@ function getStatusBadgeClass(notice: Notice) {
 function getSourceBadgeClass(notice: Notice) {
   if (notice.sourceType === "school") return "border border-sky-100 bg-sky-50 text-sky-700";
   if (notice.sourceType === "college") return "border border-emerald-100 bg-emerald-50 text-emerald-700";
-  if (notice.sourceType === "department") return "border border-violet-100 bg-violet-50 text-violet-700";
+  if (notice.sourceType === "department") return "border border-violet-100 bg-violet-50 text-slate-500";
   return PROJECT_CENTER_NAME_SET.has(notice.sourceName)
     ? "border border-orange-100 bg-orange-50 text-orange-700"
     : "border border-amber-100 bg-amber-50 text-amber-700";
@@ -346,7 +346,7 @@ function SectionChip({
   const toneClass = {
     school: "border border-sky-200 bg-sky-100 text-sky-900",
     college: "border border-emerald-200 bg-emerald-100 text-emerald-900",
-    department: "border border-violet-200 bg-violet-100 text-violet-900",
+    department: "border border-violet-200 bg-violet-100 text-slate-950",
     institution: "border border-amber-200 bg-amber-100 text-amber-900",
     project: "border border-orange-200 bg-orange-100 text-orange-900",
   }[tone];
@@ -389,7 +389,7 @@ function CompactActionButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`inline-flex h-10 items-center justify-center rounded-2xl px-3.5 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-60 ${active ? activeClass : idleClass}`}
+      className={`inline-flex h-11 items-center justify-center rounded-[18px] px-4 text-[13px] font-semibold tracking-[-0.01em] transition disabled:cursor-not-allowed disabled:opacity-60 ${active ? activeClass : idleClass}`}
     >
       {active ? activeLabel : idleLabel}
     </button>
@@ -1098,8 +1098,8 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                             onClick={() => void handleNoticeSummary(notice)}
                             activeLabel="요약 보기"
                             idleLabel={isSummaryLoading ? "요약 중" : "AI 요약"}
-                            activeClass="bg-violet-600 text-white hover:bg-violet-700"
-                            idleClass="bg-violet-50 text-violet-700 hover:bg-violet-100"
+                            activeClass="border border-slate-900 bg-slate-900 text-white shadow-[0_10px_24px_rgba(15,23,42,0.18)]"
+                            idleClass="border border-slate-200 bg-white text-slate-900 hover:border-slate-300 hover:bg-slate-50"
                             disabled={isSummaryLoading}
                           />
                           <CompactActionButton
@@ -1122,18 +1122,18 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                       </div>
 
                       {isSummaryOpen ? (
-                        <div className="mt-4 rounded-[20px] border border-violet-100 bg-violet-50/70 p-4">
-                          <div className="flex flex-wrap items-center justify-between gap-2">
+                        <div className="mt-5 overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_48px_rgba(15,23,42,0.08)]">
+                          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 bg-[linear-gradient(135deg,#f8fafc_0%,#eef5ff_55%,#ffffff_100%)] px-5 py-5 sm:px-6">
                             <div>
-                              <p className="text-sm font-bold text-violet-900">AI 요약</p>
-                              <p className="text-xs text-violet-700">
+                              <p className="text-sm font-bold text-slate-950">AI 요약</p>
+                              <p className="text-xs text-slate-500">
                                 {summaryState?.data?.fromCache
                                   ? "DeepSeek가 저장된 요약을 다시 불러왔습니다."
                                   : "DeepSeek가 상세 페이지를 읽고 정리한 내용"}
                               </p>
                             </div>
                             {summaryState?.data?.extractedAt ? (
-                              <p className="text-xs text-violet-700">
+                              <p className="text-xs text-slate-500">
                                 {new Date(summaryState.data.extractedAt).toLocaleString("ko-KR", { timeZone: "Asia/Seoul" })}
                               </p>
                             ) : null}
@@ -1141,18 +1141,18 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
 
                           {summaryState?.status === "success" &&
                           summaryState.data?.attachmentAnalysisState === "pending" ? (
-                            <div className="mt-2 flex flex-wrap items-center gap-2">
-                              <p className="text-xs text-violet-700">
+                            <div className="mx-5 mt-4 flex flex-wrap items-center gap-3 rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4 sm:mx-6">
+                              <p className="text-sm leading-6 text-slate-600">
                                 현재는 본문만 먼저 읽었습니다. 필요하면 첨부파일까지 더 깊게 분석할 수 있어요.
                               </p>
                               <button
                                 type="button"
                                 onClick={() => void handleAttachmentAnalysis(notice)}
                                 disabled={summaryState.isRefreshing}
-                                className={`rounded-xl border px-3 py-2 text-xs font-semibold transition ${
+                                className={`inline-flex h-11 items-center rounded-[16px] px-4 text-sm font-semibold transition ${
                                   summaryState.isRefreshing
-                                    ? "cursor-wait border-violet-200 bg-violet-100 text-violet-500"
-                                    : "border-violet-200 bg-white text-violet-700 hover:border-violet-300 hover:bg-violet-100"
+                                    ? "cursor-wait border border-slate-200 bg-slate-200 text-slate-500"
+                                    : "border border-slate-900 bg-slate-900 text-white shadow-[0_10px_22px_rgba(15,23,42,0.18)] hover:bg-slate-800"
                                 }`}
                               >
                                 {summaryState.isRefreshing ? "첨부 분석 중..." : "첨부까지 분석"}
@@ -1161,21 +1161,21 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                           ) : null}
 
                           {summaryState.status === "loading" ? (
-                            <p className="mt-3 text-sm leading-6 text-violet-900">
+                            <p className="mx-5 mt-4 rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4 text-sm leading-6 text-slate-700 sm:mx-6">
                               상세 페이지를 읽고 핵심 일정과 지원 조건을 정리하고 있습니다.
                             </p>
                           ) : null}
 
                           {summaryState.status === "error" ? (
-                            <div className="mt-3 rounded-2xl border border-rose-200 bg-white px-4 py-3 text-sm leading-6 text-rose-700">
+                            <div className="mx-5 mt-4 rounded-[22px] border border-rose-200 bg-rose-50 px-4 py-4 text-sm leading-6 text-rose-700 sm:mx-6">
                               {summaryState.error}
                             </div>
                           ) : null}
 
                           {summaryState.status === "success" && summaryState.data ? (
-                            <div className="mt-3 space-y-3">
+                            <div className="space-y-4 px-5 py-5 sm:px-6 sm:py-6">
                               {summaryState.data.calendarItems.length > 0 ? (
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <div>
                                     <p className="text-sm font-semibold text-slate-900">바로 캨린더에 옮길 일정</p>
                                     <p className="mt-1 text-xs text-slate-500">
@@ -1220,14 +1220,14 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                       ].join("\n");
 
                                       return (
-                                        <div key={`${noticeId}-${item.label}`} className="rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-3">
+                                        <div key={`${noticeId}-${item.label}`} className="rounded-[24px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.05)]">
                                           <p className="text-sm font-semibold text-slate-900">{titleText}</p>
                                           <p className="mt-1 text-xs text-slate-500">{item.note}</p>
                                           <div className="mt-2 flex flex-wrap gap-2">
                                             <button
                                               type="button"
                                               onClick={() => void copyCalendarText(titleKey, titleText)}
-                                              className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${titleCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
+                                              className={`inline-flex h-11 items-center rounded-[16px] border px-4 text-sm font-semibold transition ${titleCopied ? "border-slate-900 bg-slate-900 text-white shadow-[0_10px_22px_rgba(15,23,42,0.16)]" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}
                                             >
                                               {titleCopied ? "일정 복사됨" : "일정 복사"}
                                             </button>
@@ -1236,7 +1236,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                               title={memoPreview}
                                               aria-label={memoPreview}
                                               onClick={() => void copyCalendarText(memoKey, memoText)}
-                                              className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${memoCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
+                                              className={`inline-flex h-11 items-center rounded-[16px] border px-4 text-sm font-semibold transition ${memoCopied ? "border-slate-900 bg-slate-900 text-white shadow-[0_10px_22px_rgba(15,23,42,0.16)]" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}
                                             >
                                               {memoCopied ? "메모 복사됨" : "메모 복사"}
                                             </button>
@@ -1249,14 +1249,14 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                               ) : null}
 
                               {summaryState.data.sourceTitle ? (
-                                <div className="rounded-2xl bg-white px-4 py-3 text-sm text-slate-600">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)] text-sm text-slate-600">
                                   <span className="font-semibold text-slate-900">상세 페이지 제목</span>
                                   <span className="ml-2 break-words">{summaryState.data.sourceTitle}</span>
                                 </div>
                               ) : null}
 
                               {summaryState.data.actionLinks.length > 0 ? (
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">바로가기</p>
                                   <div className="mt-3 flex flex-wrap gap-2">
                                     {summaryState.data.actionLinks.map((item) => (
@@ -1265,7 +1265,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                         href={item.url}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="inline-flex items-center rounded-xl border border-sky-200 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-700 transition hover:border-sky-300 hover:bg-sky-100"
+                                        className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-100"
                                         title={item.note}
                                       >
                                         {item.label}
@@ -1276,7 +1276,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                               ) : null}
 
                               {summaryState.data.attachments.length > 0 ? (
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">첨부파일</p>
                                   <div className="mt-3 flex flex-wrap gap-2">
                                     {summaryState.data.attachments.map((item) => (
@@ -1285,7 +1285,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                         href={item.url}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-100"
+                                        className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
                                         title={item.note}
                                       >
                                         {item.label}
@@ -1295,13 +1295,13 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                 </div>
                               ) : null}
 
-                              <div className="rounded-2xl bg-white px-4 py-3">
+                              <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                 <p className="text-sm font-semibold text-slate-900">한눈에 요약</p>
                                 <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.summary}</p>
                               </div>
 
                               {summaryState.data.bullets.length > 0 ? (
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">핵심 포인트</p>
                                   <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
                                     {summaryState.data.bullets.map((item) => (
@@ -1312,18 +1312,18 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                               ) : null}
 
                               <div className="grid gap-3 md:grid-cols-2">
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">대상자</p>
                                   <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.targetAudience}</p>
                                 </div>
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">마감일 / 일정</p>
                                   <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.deadline}</p>
                                 </div>
                               </div>
 
                               <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">해야 할 일</p>
                                   <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
                                     {summaryState.data.actionItems.length > 0 ? (
@@ -1333,7 +1333,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                     )}
                                   </div>
                                 </div>
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">혜택</p>
                                   <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
                                     {summaryState.data.benefits.length > 0 ? (
@@ -1343,7 +1343,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                     )}
                                   </div>
                                 </div>
-                                <div className="rounded-2xl bg-white px-4 py-3 md:col-span-2 xl:col-span-1">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)] md:col-span-2 xl:col-span-1">
                                   <p className="text-sm font-semibold text-slate-900">준비 서류</p>
                                   <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
                                     {summaryState.data.requiredDocuments.length > 0 ? (
@@ -1356,11 +1356,11 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                               </div>
 
                               <div className="grid gap-3 md:grid-cols-2">
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">문의처</p>
                                   <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.contact}</p>
                                 </div>
-                                <div className="rounded-2xl bg-white px-4 py-3">
+                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">주의사항</p>
                                   <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.caution}</p>
                                 </div>
