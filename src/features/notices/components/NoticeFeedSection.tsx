@@ -102,6 +102,16 @@ type NoticeSummaryData = {
   requiredDocuments: string[];
   contact: string;
   caution: string;
+  attachments: Array<{
+    label: string;
+    url: string;
+    note: string;
+  }>;
+  actionLinks: Array<{
+    label: string;
+    url: string;
+    note: string;
+  }>;
   calendarItems: Array<{
     label: string;
     eventType: string;
@@ -1145,6 +1155,46 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                 <div className="rounded-2xl bg-white px-4 py-3 text-sm text-slate-600">
                                   <span className="font-semibold text-slate-900">상세 페이지 제목</span>
                                   <span className="ml-2 break-words">{summaryState.data.sourceTitle}</span>
+                                </div>
+                              ) : null}
+
+                              {summaryState.data.actionLinks.length > 0 ? (
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">바로가기</p>
+                                  <div className="mt-3 flex flex-wrap gap-2">
+                                    {summaryState.data.actionLinks.map((item) => (
+                                      <a
+                                        key={`${item.url}-${item.label}`}
+                                        href={item.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center rounded-xl border border-sky-200 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-700 transition hover:border-sky-300 hover:bg-sky-100"
+                                        title={item.note}
+                                      >
+                                        {item.label}
+                                      </a>
+                                    ))}
+                                  </div>
+                                </div>
+                              ) : null}
+
+                              {summaryState.data.attachments.length > 0 ? (
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">첨부파일</p>
+                                  <div className="mt-3 flex flex-wrap gap-2">
+                                    {summaryState.data.attachments.map((item) => (
+                                      <a
+                                        key={`${item.url}-${item.label}`}
+                                        href={item.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-100"
+                                        title={item.note}
+                                      >
+                                        {item.label}
+                                      </a>
+                                    ))}
+                                  </div>
                                 </div>
                               ) : null}
 

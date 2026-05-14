@@ -1,6 +1,7 @@
 import { request as httpRequest } from "node:http";
 import { request as httpsRequest } from "node:https";
 import { load } from "cheerio";
+import { PDFParse } from "pdf-parse";
 import {
   loadNoticeSummaryCacheMap,
   saveNoticeSummaryCacheMap,
@@ -11,7 +12,10 @@ import {
 const REQUEST_TIMEOUT_MS = 15000;
 const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
 const MAX_CONTENT_CHARS = 12000;
-const SUMMARY_CACHE_VERSION = "v3";
+const SUMMARY_CACHE_VERSION = "v6";
+const MAX_ATTACHMENT_TEXT_CHARS = 8000;
+const MAX_PDF_ATTACHMENTS_TO_PARSE = 2;
+const MAX_LINKS_PER_KIND = 6;
 
 const CONTENT_SELECTOR_CANDIDATES = [
   ".board_view_wrap",
@@ -47,6 +51,12 @@ type NoticeSummaryInput = {
   sourceName: string;
 };
 
+export type NoticeResourceLink = {
+  label: string;
+  url: string;
+  note: string;
+};
+
 export type NoticeCalendarItem = {
   label: string;
   eventType: string;
@@ -68,6 +78,8 @@ export type NoticeSummaryResult = {
   contact: string;
   caution: string;
   calendarItems: NoticeCalendarItem[];
+  attachments: NoticeResourceLink[];
+  actionLinks: NoticeResourceLink[];
   sourceTitle: string;
   extractedAt: string;
   fromCache: boolean;
@@ -101,6 +113,15 @@ type RawSummaryPayload = {
   contact?: unknown;
   caution?: unknown;
   calendarItems?: unknown;
+  actionLinks?: unknown;
+};
+
+type ExtractedNoticeDocument = {
+  sourceTitle: string;
+  content: string;
+  attachments: NoticeResourceLink[];
+  actionCandidates: NoticeResourceLink[];
+  attachmentTexts: NoticeResourceLink[];
 };
 
 const CALENDAR_EVENT_TYPE_ALIASES: Record<string, string> = {
@@ -152,6 +173,38 @@ const CALENDAR_EVENT_TYPE_LABELS: Record<string, string> = {
   announcement: "안내 일정",
   other: "주요 일정",
 };
+
+const ATTACHMENT_EXTENSIONS = new Set([
+  "pdf",
+  "hwp",
+  "hwpx",
+  "doc",
+  "docx",
+  "xls",
+  "xlsx",
+  "ppt",
+  "pptx",
+  "zip",
+  "jpg",
+  "jpeg",
+  "png",
+]);
+
+const ACTION_LINK_KEYWORDS = [
+  "신청",
+  "지원",
+  "접수",
+  "폼",
+  "form",
+  "바로가기",
+  "zoom",
+  "meet",
+  "홈페이지",
+  "사이트",
+  "링크",
+  "예약",
+  "등록",
+];
 
 function getSummaryCache() {
   const globalCache = globalThis as typeof globalThis & {
@@ -209,6 +262,15 @@ function decodeHtmlBuffer(buffer: Buffer, contentType?: string | null) {
 
 function cleanText(value: string) {
   return value.replace(/\s+/g, " ").trim();
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
 }
 
 function extractStructuredText(rootHtml: string) {
@@ -286,6 +348,19 @@ async function requestHtmlViaNode(url: string, redirectCount = 0): Promise<{ htm
   });
 }
 
+async function parsePdfBufferToHtml(buffer: Buffer) {
+  const parser = new PDFParse({ data: buffer });
+  const parsed = await parser.getText();
+  await parser.destroy();
+  const text = cleanText(parsed.text ?? "");
+
+  if (!text) {
+    throw new Error("PDF에서 읽을 수 있는 본문을 찾지 못했습니다.");
+  }
+
+  return `<article>${escapeHtml(text.slice(0, MAX_CONTENT_CHARS))}</article>`;
+}
+
 async function fetchNoticeDetailHtml(url: string) {
   const parsedUrl = new URL(url);
 
@@ -308,28 +383,127 @@ async function fetchNoticeDetailHtml(url: string) {
       throw new Error(`detail page request failed: ${response.status}`);
     }
 
+    const htmlBuffer = Buffer.from(await response.arrayBuffer());
     const contentType = response.headers.get("content-type");
+
     if (contentType?.includes("application/pdf")) {
-      throw new Error("PDF 상세 페이지는 아직 AI 요약을 지원하지 않습니다.");
+      return {
+        html: await parsePdfBufferToHtml(htmlBuffer),
+        contentType,
+      };
     }
 
-    const htmlBuffer = Buffer.from(await response.arrayBuffer());
     return {
       html: decodeHtmlBuffer(htmlBuffer, contentType),
       contentType,
     };
   } catch {
     const fallback = await requestHtmlViaNode(url);
-
-    if (fallback.contentType?.includes("application/pdf")) {
-      throw new Error("PDF 상세 페이지는 아직 AI 요약을 지원하지 않습니다.");
-    }
-
     return fallback;
   }
 }
 
-function pickBestContentBlock(html: string) {
+async function fetchBinaryResource(url: string) {
+  const response = await fetch(url, {
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    headers: {
+      "User-Agent": "Mozilla/5.0",
+      Accept: "*/*",
+    },
+    cache: "no-store",
+    redirect: "follow",
+  });
+
+  if (!response.ok) {
+    throw new Error(`resource request failed: ${response.status}`);
+  }
+
+  return {
+    buffer: Buffer.from(await response.arrayBuffer()),
+    contentType: response.headers.get("content-type") ?? "",
+  };
+}
+
+function getFileExtensionFromUrl(url: string) {
+  const pathname = new URL(url).pathname;
+  const match = pathname.match(/\.([a-z0-9]+)$/i);
+  return match?.[1]?.toLowerCase() ?? "";
+}
+
+function normalizeLinkLabel(label: string, fallbackUrl: string) {
+  const cleaned = cleanText(label)
+    .replace(/첨부파일|붙임파일/g, "")
+    .trim();
+
+  if (cleaned) {
+    return cleaned;
+  }
+
+  try {
+    const parsed = new URL(fallbackUrl);
+    return parsed.pathname.split("/").filter(Boolean).pop() ?? fallbackUrl;
+  } catch {
+    return fallbackUrl;
+  }
+}
+
+function isAttachmentUrl(url: string, label: string) {
+  const extension = getFileExtensionFromUrl(url);
+  if (ATTACHMENT_EXTENSIONS.has(extension)) {
+    return true;
+  }
+
+  const haystack = `${url} ${label}`.toLowerCase();
+  return haystack.includes("download") || haystack.includes("attach") || haystack.includes("첨부");
+}
+
+function isActionCandidateUrl(url: string, label: string) {
+  const haystack = `${url} ${label}`.toLowerCase();
+  return ACTION_LINK_KEYWORDS.some((keyword) => haystack.includes(keyword.toLowerCase()));
+}
+
+function dedupeResourceLinks(links: NoticeResourceLink[], limit: number) {
+  const uniqueLinks = new Map<string, NoticeResourceLink>();
+
+  for (const link of links) {
+    if (!link.url || uniqueLinks.has(link.url)) continue;
+    uniqueLinks.set(link.url, link);
+  }
+
+  return Array.from(uniqueLinks.values()).slice(0, limit);
+}
+
+async function extractAttachmentTexts(attachments: NoticeResourceLink[]) {
+  const extractedTexts: NoticeResourceLink[] = [];
+
+  for (const attachment of attachments.slice(0, MAX_PDF_ATTACHMENTS_TO_PARSE)) {
+    const extension = getFileExtensionFromUrl(attachment.url);
+    if (extension !== "pdf") continue;
+
+    try {
+      const { buffer, contentType } = await fetchBinaryResource(attachment.url);
+      if (!contentType.toLowerCase().includes("pdf") && extension !== "pdf") continue;
+
+      const parser = new PDFParse({ data: buffer });
+      const parsed = await parser.getText();
+      await parser.destroy();
+      const content = cleanText(parsed.text ?? "").slice(0, MAX_ATTACHMENT_TEXT_CHARS);
+      if (!content) continue;
+
+      extractedTexts.push({
+        label: attachment.label,
+        url: attachment.url,
+        note: content,
+      });
+    } catch {
+      continue;
+    }
+  }
+
+  return extractedTexts;
+}
+
+async function pickBestContentBlock(html: string, baseUrl: string): Promise<ExtractedNoticeDocument> {
   const $ = load(html);
   $("script, style, noscript, iframe, svg, nav, footer, header, button, input, select, textarea").remove();
 
@@ -353,15 +527,84 @@ function pickBestContentBlock(html: string) {
     throw new Error("상세 페이지에서 읽을 수 있는 본문을 찾지 못했습니다.");
   }
 
+  const attachments: NoticeResourceLink[] = [];
+  const actionCandidates: NoticeResourceLink[] = [];
+
+  $("a[href]").each((_, element) => {
+    const rawHref = $(element).attr("href")?.trim();
+    if (!rawHref) return;
+    if (rawHref.startsWith("#") || rawHref.toLowerCase().startsWith("javascript:")) return;
+
+    let absoluteUrl: string;
+    try {
+      absoluteUrl = new URL(rawHref, baseUrl).toString();
+    } catch {
+      return;
+    }
+
+    if (absoluteUrl === baseUrl) {
+      return;
+    }
+
+    const label = normalizeLinkLabel($(element).text(), absoluteUrl);
+    if (!label) return;
+
+    if (isAttachmentUrl(absoluteUrl, label)) {
+      attachments.push({
+        label,
+        url: absoluteUrl,
+        note: getFileExtensionFromUrl(absoluteUrl).toUpperCase() || "첨부파일",
+      });
+      return;
+    }
+
+    if (isActionCandidateUrl(absoluteUrl, label)) {
+      actionCandidates.push({
+        label,
+        url: absoluteUrl,
+        note: "바로 이동",
+      });
+    }
+  });
+
+  const dedupedAttachments = dedupeResourceLinks(attachments, MAX_LINKS_PER_KIND);
+  const dedupedActions = dedupeResourceLinks(actionCandidates, MAX_LINKS_PER_KIND);
+  const attachmentTexts = await extractAttachmentTexts(dedupedAttachments);
+
   return {
     sourceTitle: title,
     content,
+    attachments: dedupedAttachments,
+    actionCandidates: dedupedActions,
+    attachmentTexts,
   };
 }
 
-function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
+function buildSummaryPrompt(
+  input: NoticeSummaryInput,
+  extractedText: string,
+  attachments: NoticeResourceLink[],
+  actionCandidates: NoticeResourceLink[],
+  attachmentTexts: NoticeResourceLink[],
+) {
+  const attachmentSection =
+    attachments.length > 0
+      ? ["[첨부파일 목록]", ...attachments.map((item) => `- ${item.label} | ${item.note} | ${item.url}`), ""]
+      : [];
+  const actionCandidateSection =
+    actionCandidates.length > 0
+      ? ["[바로가기 후보 링크]", ...actionCandidates.map((item) => `- ${item.label} | ${item.url}`), ""]
+      : [];
+  const attachmentTextSection =
+    attachmentTexts.length > 0
+      ? [
+          "[첨부파일 본문 발췌]",
+          ...attachmentTexts.flatMap((item) => [`- ${item.label} | ${item.url}`, item.note, ""]),
+        ]
+      : [];
+
   return [
-    "다음 대학 공지 본문을 읽고 JSON으로만 답하세요.",
+    "다음 대학 공지 본문과 첨부자료를 읽고 JSON으로만 답하세요.",
     "불필요한 설명, 코드블록, 마크다운 없이 순수 JSON 객체만 반환하세요.",
     "모든 값은 한국어로 작성하세요.",
     "모르는 값은 추측하지 말고 '명시되지 않음'으로 적으세요.",
@@ -374,6 +617,9 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
     "benefits에는 혜택, 지원 내용, 특전만 넣으세요.",
     "requiredDocuments에는 제출서류, 준비서류만 넣으세요.",
     "contact에는 문의처가 있으면 전화, 이메일, 부서명을 한 줄로 적으세요.",
+    "actionLinks는 제공된 바로가기 후보 링크 중에서 실제로 누를 가치가 큰 링크만 최대 4개까지 고르세요.",
+    "actionLinks에는 지원서 제출, 신청 페이지, 안내 페이지, 문의 페이지처럼 사용자가 바로 눌러야 하는 링크만 담으세요.",
+    "attachment 목록은 본문과 함께 읽되, 첨부파일 버튼에 그대로 보여줄 수 있게 파일명을 살리세요.",
     "",
     "반환 JSON 스키마:",
     "{",
@@ -396,6 +642,9 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
     '      "when": "2026.06.03(수)",',
     '      "note": "지원서 제출 마감일"',
     "    }",
+    "  ],",
+    '  "actionLinks": [',
+    '    { "label": "지원 페이지", "url": "https://example.com/apply", "note": "온라인 지원서 제출" }',
     "  ]",
     "}",
     "",
@@ -403,6 +652,9 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
     `[출처] ${input.sourceName}`,
     `[원문 링크] ${input.url}`,
     "",
+    ...attachmentSection,
+    ...actionCandidateSection,
+    ...attachmentTextSection,
     "[공지 본문]",
     extractedText,
   ].join("\n");
@@ -434,6 +686,26 @@ function normalizeCalendarEventType(value: unknown, fallbackText = "") {
 
 function normalizeCalendarDateText(value: unknown) {
   return asCleanString(value, "명시되지 않음");
+}
+
+function normalizeResourceLinks(value: unknown, fallbackNote: string) {
+  if (!Array.isArray(value)) return [];
+
+  return value
+    .map((item) => {
+      if (!item || typeof item !== "object") return null;
+
+      const source = item as Record<string, unknown>;
+      const label = asCleanString(source.label, "");
+      const url = asCleanString(source.url, "");
+      const note = asCleanString(source.note, fallbackNote);
+
+      if (!label || !url) return null;
+
+      return { label, url, note };
+    })
+    .filter((item): item is NoticeResourceLink => Boolean(item))
+    .slice(0, 4);
 }
 
 function normalizeCalendarItems(value: unknown) {
@@ -511,6 +783,7 @@ function parseSummaryPayload(rawText: string) {
     contact: asCleanString(parsed.contact, "명시되지 않음"),
     caution: asCleanString(parsed.caution, "명시되지 않음"),
     calendarItems: normalizeCalendarItems(parsed.calendarItems),
+    actionLinks: normalizeResourceLinks(parsed.actionLinks, "\uBC14\uB85C\uAC00\uAE30"),
   };
 }
 
@@ -554,7 +827,25 @@ async function writePersistentCache(cacheKey: string, value: Omit<NoticeSummaryR
   await saveNoticeSummaryCacheMap(cacheMap).catch(() => undefined);
 }
 
-async function requestDeepSeekSummary(input: NoticeSummaryInput, extractedText: string) {
+function finalizeActionLinks(inputUrl: string, aiLinks: NoticeResourceLink[], fallbackLinks: NoticeResourceLink[]) {
+  const filteredAiLinks = aiLinks.filter((item) => item.url !== inputUrl);
+  if (filteredAiLinks.length > 0) {
+    return dedupeResourceLinks(filteredAiLinks, 4);
+  }
+
+  return dedupeResourceLinks(
+    fallbackLinks.filter((item) => item.url !== inputUrl),
+    4,
+  );
+}
+
+async function requestDeepSeekSummary(
+  input: NoticeSummaryInput,
+  extractedText: string,
+  attachments: NoticeResourceLink[],
+  actionCandidates: NoticeResourceLink[],
+  attachmentTexts: NoticeResourceLink[],
+) {
   const apiKey = process.env.DEEPSEEK_API_KEY?.trim();
   const model = process.env.DEEPSEEK_MODEL?.trim() || "deepseek-v4-flash";
 
@@ -577,7 +868,7 @@ async function requestDeepSeekSummary(input: NoticeSummaryInput, extractedText: 
         },
         {
           role: "user",
-          content: buildSummaryPrompt(input, extractedText),
+          content: buildSummaryPrompt(input, extractedText, attachments, actionCandidates, attachmentTexts),
         },
       ],
       thinking: {
@@ -628,10 +919,18 @@ export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<
   }
 
   const { html } = await fetchNoticeDetailHtml(input.url);
-  const extracted = pickBestContentBlock(html);
-  const summarized = await requestDeepSeekSummary(input, extracted.content);
+  const extracted = await pickBestContentBlock(html, input.url);
+  const summarized = await requestDeepSeekSummary(
+    input,
+    extracted.content,
+    extracted.attachments,
+    extracted.actionCandidates,
+    extracted.attachmentTexts,
+  );
   const value = {
     ...summarized,
+    attachments: extracted.attachments,
+    actionLinks: finalizeActionLinks(input.url, summarized.actionLinks, extracted.actionCandidates),
     sourceTitle: extracted.sourceTitle,
     extractedAt: new Date().toISOString(),
   };
