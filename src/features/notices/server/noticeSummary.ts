@@ -11,6 +11,7 @@ import {
 const REQUEST_TIMEOUT_MS = 15000;
 const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
 const MAX_CONTENT_CHARS = 12000;
+const SUMMARY_CACHE_VERSION = "v3";
 
 const CONTENT_SELECTOR_CANDIDATES = [
   ".board_view_wrap",
@@ -48,6 +49,10 @@ type NoticeSummaryInput = {
 
 export type NoticeCalendarItem = {
   label: string;
+  eventType: string;
+  eventDate: string;
+  startAt: string;
+  endAt: string;
   when: string;
   note: string;
 };
@@ -96,6 +101,56 @@ type RawSummaryPayload = {
   contact?: unknown;
   caution?: unknown;
   calendarItems?: unknown;
+};
+
+const CALENDAR_EVENT_TYPE_ALIASES: Record<string, string> = {
+  apply_open: "apply_open",
+  application_open: "apply_open",
+  모집시작: "apply_open",
+  지원시작: "apply_open",
+  접수시작: "apply_open",
+  시작: "apply_open",
+  apply_deadline: "apply_deadline",
+  application_deadline: "apply_deadline",
+  deadline: "apply_deadline",
+  모집마감: "apply_deadline",
+  지원마감: "apply_deadline",
+  접수마감: "apply_deadline",
+  마감: "apply_deadline",
+  interview: "interview",
+  면접: "interview",
+  result: "result",
+  발표: "result",
+  합격발표: "result",
+  orientation: "orientation",
+  설명회: "orientation",
+  ot: "orientation",
+  class_start: "class_start",
+  개강: "class_start",
+  수업시작: "class_start",
+  program_start: "program_start",
+  인턴시작: "program_start",
+  활동시작: "program_start",
+  프로그램시작: "program_start",
+  payment: "payment",
+  납부: "payment",
+  등록: "payment",
+  announcement: "announcement",
+  공지: "announcement",
+  other: "other",
+};
+
+const CALENDAR_EVENT_TYPE_LABELS: Record<string, string> = {
+  apply_open: "지원 시작",
+  apply_deadline: "지원 마감",
+  interview: "면접",
+  result: "결과 발표",
+  orientation: "설명회",
+  class_start: "수업 시작",
+  program_start: "프로그램 시작",
+  payment: "납부",
+  announcement: "안내 일정",
+  other: "주요 일정",
 };
 
 function getSummaryCache() {
@@ -310,8 +365,12 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
     "불필요한 설명, 코드블록, 마크다운 없이 순수 JSON 객체만 반환하세요.",
     "모든 값은 한국어로 작성하세요.",
     "모르는 값은 추측하지 말고 '명시되지 않음'으로 적으세요.",
-    "calendarItems는 최대 4개만 넣고, 실제로 캘린더에 옮길 만한 일정만 담으세요.",
-    "calendarItems.note에는 시작/마감/면접/발표 같은 일정 성격을 짧게 적으세요.",
+    "calendarItems는 최대 6개만 넣고, 실제로 캘린더에 옮길 만한 일정만 담으세요.",
+    "calendarItems는 시작일/마감일/면접일/발표일/설명회/수업 시작/납부처럼 이벤트 단위로 쪼개세요.",
+    "한 일정 구간에 시작일과 마감일이 모두 있으면 시작 이벤트와 마감 이벤트를 각각 따로 만드세요.",
+    "calendarItems.eventType은 apply_open, apply_deadline, interview, result, orientation, class_start, program_start, payment, announcement, other 중 하나만 쓰세요.",
+    "calendarItems.eventDate에는 대표 날짜 한 개를 넣고, calendarItems.startAt/endAt에는 정확한 시작/끝 날짜를 YYYY.MM.DD(요일) 형식으로 넣으세요. 없으면 '명시되지 않음'으로 적으세요.",
+    "calendarItems.note에는 왜 중요한 일정인지 한 줄로 짧게 적으세요.",
     "benefits에는 혜택, 지원 내용, 특전만 넣으세요.",
     "requiredDocuments에는 제출서류, 준비서류만 넣으세요.",
     "contact에는 문의처가 있으면 전화, 이메일, 부서명을 한 줄로 적으세요.",
@@ -328,7 +387,15 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
     '  "contact": "문의처",',
     '  "caution": "주의사항",',
     '  "calendarItems": [',
-    '    { "label": "프로그램명", "when": "2026.05.11(월) ~ 2026.06.03(수)", "note": "지원 마감" }',
+    '    {',
+    '      "label": "프로그램명",',
+    '      "eventType": "apply_deadline",',
+    '      "eventDate": "2026.06.03(수)",',
+    '      "startAt": "2026.06.03(수)",',
+    '      "endAt": "2026.06.03(수)",',
+    '      "when": "2026.06.03(수)",',
+    '      "note": "지원서 제출 마감일"',
+    "    }",
     "  ]",
     "}",
     "",
@@ -356,6 +423,19 @@ function asStringArray(value: unknown, limit: number) {
     .slice(0, limit);
 }
 
+function normalizeCalendarEventType(value: unknown, fallbackText = "") {
+  const normalized = cleanText(typeof value === "string" ? value : fallbackText)
+    .toLowerCase()
+    .replace(/\s+/g, "")
+    .replace(/[-/]/g, "_");
+
+  return CALENDAR_EVENT_TYPE_ALIASES[normalized] ?? "other";
+}
+
+function normalizeCalendarDateText(value: unknown) {
+  return asCleanString(value, "명시되지 않음");
+}
+
 function normalizeCalendarItems(value: unknown) {
   if (!Array.isArray(value)) return [];
 
@@ -365,15 +445,24 @@ function normalizeCalendarItems(value: unknown) {
 
       const source = item as Record<string, unknown>;
       const label = asCleanString(source.label, "");
+      const eventType = normalizeCalendarEventType(source.eventType, String(source.note ?? ""));
+      const eventDate = normalizeCalendarDateText(source.eventDate ?? source.when);
+      const startAt = normalizeCalendarDateText(source.startAt ?? source.eventDate ?? source.when);
+      const endAt = normalizeCalendarDateText(source.endAt ?? source.eventDate ?? source.when);
       const when = asCleanString(source.when, "");
-      const note = asCleanString(source.note, "");
+      const note = asCleanString(source.note, CALENDAR_EVENT_TYPE_LABELS[eventType] ?? "주요 일정");
 
       if (!label || !when) return null;
 
-      return { label, when, note };
+      return { label, eventType, eventDate, startAt, endAt, when, note };
     })
     .filter((item): item is NoticeCalendarItem => Boolean(item))
-    .slice(0, 4);
+    .sort((left, right) => {
+      const leftKey = left.eventDate === "명시되지 않음" ? left.startAt : left.eventDate;
+      const rightKey = right.eventDate === "명시되지 않음" ? right.startAt : right.eventDate;
+      return leftKey.localeCompare(rightKey, "ko");
+    })
+    .slice(0, 6);
 }
 
 function extractJsonObject(rawText: string) {
@@ -520,7 +609,7 @@ async function requestDeepSeekSummary(input: NoticeSummaryInput, extractedText: 
 }
 
 export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<NoticeSummaryResult> {
-  const cacheKey = input.url;
+  const cacheKey = `${input.url}::${SUMMARY_CACHE_VERSION}`;
   const memoryCache = getSummaryCache().get(cacheKey);
 
   if (memoryCache && memoryCache.expiresAt > Date.now()) {

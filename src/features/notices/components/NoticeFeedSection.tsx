@@ -104,6 +104,10 @@ type NoticeSummaryData = {
   caution: string;
   calendarItems: Array<{
     label: string;
+    eventType: string;
+    eventDate: string;
+    startAt: string;
+    endAt: string;
     when: string;
     note: string;
   }>;
@@ -152,6 +156,19 @@ function parseCalendarDates(value: string) {
   };
 }
 
+const CALENDAR_EVENT_TYPE_LABELS: Record<string, string> = {
+  apply_open: "지원 시작",
+  apply_deadline: "지원 마감",
+  interview: "면접",
+  result: "결과 발표",
+  orientation: "설명회",
+  class_start: "수업 시작",
+  program_start: "프로그램 시작",
+  payment: "납부",
+  announcement: "안내 일정",
+  other: "주요 일정",
+};
+
 function toCompactProgramName(label: string, noticeTitle: string) {
   const preferred =
     label.match(/[A-Z][A-Z0-9&+ -]{1,24}/)?.[0]?.trim() ??
@@ -167,18 +184,30 @@ function toCompactProgramName(label: string, noticeTitle: string) {
 }
 
 function buildCalendarTitle(notice: Notice, item: NoticeSummaryData["calendarItems"][number]) {
-  const { start, end } = parseCalendarDates(item.when);
   const programName = toCompactProgramName(item.label, notice.title);
+  const eventLabel = CALENDAR_EVENT_TYPE_LABELS[item.eventType] ?? item.note ?? "주요 일정";
+  const start = item.startAt && item.startAt !== "명시되지 않음" ? item.startAt : "";
+  const end = item.endAt && item.endAt !== "명시되지 않음" ? item.endAt : "";
+  const eventDate = item.eventDate && item.eventDate !== "명시되지 않음" ? item.eventDate : "";
 
   if (start && end && start !== end) {
-    return `${programName} | 시작 ${start} | 마감 ${end}`;
+    return `${programName} | ${eventLabel} | ${start} ~ ${end}`;
   }
 
-  if (end) {
-    return `${programName} | 일정 ${end}`;
+  if (eventDate) {
+    return `${programName} | ${eventLabel} | ${eventDate}`;
   }
 
-  return `${programName} | 일정 추출 필요`;
+  if (start || end) {
+    return `${programName} | ${eventLabel} | ${start || end}`;
+  }
+
+  const { start: parsedStart, end: parsedEnd } = parseCalendarDates(item.when);
+  if (parsedStart && parsedEnd && parsedStart !== parsedEnd) {
+    return `${programName} | ${eventLabel} | ${parsedStart} ~ ${parsedEnd}`;
+  }
+
+  return `${programName} | ${eventLabel} | ${item.when}`;
 }
 
 function toSortableTime(date: string) {
@@ -1055,16 +1084,31 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                       const memoCopied = copiedCalendarKey === memoKey;
                                       const programName = toCompactProgramName(item.label, notice.title);
                                       const titleText = buildCalendarTitle(notice, item);
+                                      const eventLabel = CALENDAR_EVENT_TYPE_LABELS[item.eventType] ?? item.note ?? "주요 일정";
+                                      const dateRange =
+                                        item.startAt &&
+                                        item.endAt &&
+                                        item.startAt !== "명시되지 않음" &&
+                                        item.endAt !== "명시되지 않음"
+                                          ? item.startAt === item.endAt
+                                            ? item.startAt
+                                            : `${item.startAt} ~ ${item.endAt}`
+                                          : item.eventDate !== "명시되지 않음"
+                                            ? item.eventDate
+                                            : item.when;
                                       const memoText = [
                                         "메모:",
                                         `- 프로그램: ${programName}`,
-                                        `- 일정: ${item.when}`,
+                                        `- 일정 종류: ${eventLabel}`,
+                                        `- 일정: ${dateRange}`,
+                                        `- 일정 설명: ${item.note}`,
                                         `- 출처: ${notice.sourceName}`,
                                         `- 링크: ${notice.url}`,
                                       ].join("\n");
                                       const memoPreview = [
                                         `프로그램: ${programName}`,
-                                        `일정: ${item.when}`,
+                                        `일정 종류: ${eventLabel}`,
+                                        `일정: ${dateRange}`,
                                         `출처: ${notice.sourceName}`,
                                       ].join("\n");
 
