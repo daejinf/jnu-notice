@@ -970,14 +970,20 @@ async function writePersistentCache(cacheKey: string, value: Omit<NoticeSummaryR
   await saveNoticeSummaryCacheMap(cacheMap).catch(() => undefined);
 }
 
-function finalizeActionLinks(inputUrl: string, aiLinks: NoticeResourceLink[], fallbackLinks: NoticeResourceLink[]) {
-  const filteredAiLinks = aiLinks.filter((item) => item.url !== inputUrl);
+function finalizeActionLinks(
+  inputUrl: string,
+  aiLinks: NoticeResourceLink[],
+  fallbackLinks: NoticeResourceLink[],
+  attachments: NoticeResourceLink[],
+) {
+  const attachmentUrlSet = new Set(attachments.map((item) => item.url));
+  const filteredAiLinks = aiLinks.filter((item) => item.url !== inputUrl && !attachmentUrlSet.has(item.url));
   if (filteredAiLinks.length > 0) {
     return dedupeResourceLinks(filteredAiLinks, 4);
   }
 
   return dedupeResourceLinks(
-    fallbackLinks.filter((item) => item.url !== inputUrl),
+    fallbackLinks.filter((item) => item.url !== inputUrl && !attachmentUrlSet.has(item.url)),
     4,
   );
 }
@@ -1094,7 +1100,7 @@ export async function generateNoticeSummary(
   const value: Omit<NoticeSummaryResult, "fromCache"> = {
     ...summarized,
     attachments: extracted.attachments,
-    actionLinks: finalizeActionLinks(input.url, summarized.actionLinks, extracted.actionCandidates),
+    actionLinks: finalizeActionLinks(input.url, summarized.actionLinks, extracted.actionCandidates, extracted.attachments),
     sourceTitle: extracted.sourceTitle,
     extractedAt: new Date().toISOString(),
     attachmentAnalysisState: extracted.attachmentAnalysisCompleted ? "complete" : "pending",

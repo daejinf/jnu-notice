@@ -1177,13 +1177,13 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                               {summaryState.data.calendarItems.length > 0 ? (
                                 <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <div>
-                                    <p className="text-sm font-semibold text-slate-900">바로 캨린더에 옮길 일정</p>
+                                    <p className="text-sm font-semibold text-slate-900">바로 캘린더에 옮길 일정</p>
                                     <p className="mt-1 text-xs text-slate-500">
-                                      중요한 일정만 압축해서 복사할 수 있게 정리했습니다.
+                                      중요한 일정만 캘린더에 바로 붙여 넣을 수 있게 정리했습니다.
                                     </p>
                                   </div>
 
-                                  <div className="mt-3 space-y-3">
+                                  <div className="mt-3 space-y-2.5">
                                     {summaryState.data.calendarItems.map((item) => {
                                       const titleKey = `${noticeId}-${item.label}-title`;
                                       const memoKey = `${noticeId}-${item.label}-memo`;
@@ -1220,14 +1220,17 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                       ].join("\n");
 
                                       return (
-                                        <div key={`${noticeId}-${item.label}`} className="rounded-[24px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.05)]">
-                                          <p className="text-sm font-semibold text-slate-900">{titleText}</p>
-                                          <p className="mt-1 text-xs text-slate-500">{item.note}</p>
-                                          <div className="mt-2 flex flex-wrap gap-2">
+                                        <div key={`${noticeId}-${item.label}`} className="rounded-[20px] border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-4 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.04)]">
+                                          <div className="flex items-start justify-between gap-3">
+                                            <div className="min-w-0 flex-1">
+                                              <p className="text-[13px] font-semibold leading-5 text-slate-900">{titleText}</p>
+                                              <p className="mt-1 text-[12px] text-slate-500">{item.note}</p>
+                                            </div>
+                                            <div className="flex shrink-0 items-center gap-1.5">
                                             <button
                                               type="button"
                                               onClick={() => void copyCalendarText(titleKey, titleText)}
-                                              className={`inline-flex h-11 items-center rounded-[16px] border px-4 text-sm font-semibold transition ${titleCopied ? "border-slate-900 bg-slate-900 text-white shadow-[0_10px_22px_rgba(15,23,42,0.16)]" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}
+                                              className={`inline-flex h-8 items-center rounded-[12px] border px-3 text-[12px] font-semibold transition ${titleCopied ? "border-slate-900 bg-slate-900 text-white shadow-[0_8px_18px_rgba(15,23,42,0.14)]" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}
                                             >
                                               {titleCopied ? "일정 복사됨" : "일정 복사"}
                                             </button>
@@ -1236,10 +1239,11 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                               title={memoPreview}
                                               aria-label={memoPreview}
                                               onClick={() => void copyCalendarText(memoKey, memoText)}
-                                              className={`inline-flex h-11 items-center rounded-[16px] border px-4 text-sm font-semibold transition ${memoCopied ? "border-slate-900 bg-slate-900 text-white shadow-[0_10px_22px_rgba(15,23,42,0.16)]" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}
+                                              className={`inline-flex h-8 items-center rounded-[12px] border px-3 text-[12px] font-semibold transition ${memoCopied ? "border-slate-900 bg-slate-900 text-white shadow-[0_8px_18px_rgba(15,23,42,0.14)]" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"}`}
                                             >
                                               {memoCopied ? "메모 복사됨" : "메모 복사"}
                                             </button>
+                                            </div>
                                           </div>
                                         </div>
                                       );
