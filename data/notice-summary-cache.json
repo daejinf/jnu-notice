@@ -445,5 +445,88 @@
       "extractedAt": "2026-05-14T13:54:41.396Z"
     },
     "expiresAt": 1779371681508
+  },
+  "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69152&cate=5::v8": {
+    "value": {
+      "summary": "2026학년도 하계 계절학기 서울과학기술대 교류수학 추천 안내. 지원서는 2026.6.10.(수) 18:00까지 제출.",
+      "bullets": [
+        "지원자격: 2026년도 1학기 현재 재적 중인 자",
+        "교류대학 수: 1개 대학만 가능",
+        "총 수강 가능 학점: 6학점 이내",
+        "수업기간: 2026.7.6.(월) ~ 7.24.(금)"
+      ],
+      "targetAudience": "2026년도 1학기 현재 재적 중인 전남대학교 학부생",
+      "deadline": "2026.6.10.(수) 18:00",
+      "actionItems": [
+        "서울과학기술대 교류수학 신청서를 2026.6.10.(수) 18:00까지 제출",
+        "붙임 파일을 확인하여 개설 교과목 및 세부사항 확인",
+        "교류대학 추천자 명단 및 수학신청원(전남대 서식) 작성"
+      ],
+      "benefits": [
+        "타 대학 학점 교류를 통한 학점 취득 기회"
+      ],
+      "requiredDocuments": [
+        "교류대학 추천자 명단",
+        "수학신청원(전남대 서식)"
+      ],
+      "contact": "학사과 062-530-1068",
+      "caution": "결재가 늦어질 경우 우선 메일로 송부 바람. 교류 학점 인정 시 타 대학 교필 이수과목은 전남대 교선으로만 인정.",
+      "calendarItems": [
+        {
+          "label": "서울과학기술대 하계 계절학기 교류수학 신청 마감",
+          "eventType": "apply_deadline",
+          "eventDate": "2026.06.10(수)",
+          "startAt": "2026.06.10(수)",
+          "endAt": "2026.06.10(수)",
+          "when": "2026.06.10(수) 18:00",
+          "note": "지원서 제출 마감일"
+        },
+        {
+          "label": "서울과학기술대 하계 계절학기 선발 결과 발표",
+          "eventType": "result",
+          "eventDate": "2026.06.17(수)",
+          "startAt": "2026.06.17(수)",
+          "endAt": "2026.06.17(수)",
+          "when": "2026.06.17(수) 이후",
+          "note": "홈페이지 개별 확인"
+        },
+        {
+          "label": "서울과학기술대 하계 계절학기 수업 기간",
+          "eventType": "class_start",
+          "eventDate": "2026.07.06(월)",
+          "startAt": "2026.07.06(월)",
+          "endAt": "2026.07.24(금)",
+          "when": "2026.07.06(월) ~ 2026.07.24(금)",
+          "note": "수업 기간"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "첨부파일1 다운로드",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=download&fileCode=2551907",
+          "note": "2026학년도 하기 계절수업 서울과기대 학점 교류 수학 안내 및 추천대상자 명단 서식.zip"
+        },
+        {
+          "label": "첨부파일2 다운로드",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=download&fileCode=2551908",
+          "note": "2026학년도 하계 계절학기 국내 타 대학 학점교류 필독사항 및 수학신청원.hwp"
+        }
+      ],
+      "attachments": [
+        {
+          "label": "2026학년도 하기 계절수업 서울과기대 학점 교류 수학 안내 및 추천대상자 명단 서식.zip",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=download&fileCode=2551907",
+          "note": "ASPX"
+        },
+        {
+          "label": "2026학년도 하계 계절학기 국내 타 대학 학점교류 필독사항 및 수학신청원.hwp",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=download&fileCode=2551908",
+          "note": "ASPX"
+        }
+      ],
+      "sourceTitle": "공지사항 < 공지사항 < 커뮤니티 < 전남대학교 대표 홈페이지",
+      "extractedAt": "2026-05-14T14:14:47.884Z"
+    },
+    "expiresAt": 1779372887974
   }
 }
