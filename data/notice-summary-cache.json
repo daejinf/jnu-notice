@@ -1269,5 +1269,63 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779378629673
+  },
+  "https://www.aicoss.kr/www/notice/view/3949?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90::v10": {
+    "value": {
+      "summary": "2026 AICOSS 동아리 발대식이 2026년 5월 12일 화요일 12:00~13:00에 공과대학 4호관 별관 105호 코스모스홀에서 열립니다. 신청 기간은 ~2026.05.03.(일)까지이며, 각 팀당 최소 50% 이상 참여 필수(팀장 필참)입니다. 점심이 제공됩니다.",
+      "bullets": [
+        "일시: 2026.05.12.(화) 12:00~13:00",
+        "장소: 공과대학 4호관 별관 105호 코스모스홀",
+        "신청기간: ~2026.05.03.(일)",
+        "각 팀당 최소 50% 이상 참여 필수(팀장 필참)",
+        "점심 제공"
+      ],
+      "targetAudience": "2026 AICOSS 동아리원",
+      "deadline": "2026.05.03.(일)",
+      "actionItems": [
+        "2026.05.03.(일)까지 신청 링크(forms.gle)를 통해 발대식 참가 신청",
+        "팀장은 반드시 참석하고, 팀원 중 최소 50% 이상 참여"
+      ],
+      "benefits": [
+        "점심 제공"
+      ],
+      "requiredDocuments": [
+        "명시되지 않음"
+      ],
+      "contact": "062-530-5384",
+      "caution": "각 팀당 최소 50% 이상의 인원 참여 필수(팀장 필참)",
+      "calendarItems": [
+        {
+          "label": "2026 AICOSS 동아리 발대식 신청 마감",
+          "eventType": "apply_deadline",
+          "eventDate": "2026.05.03(일)",
+          "startAt": "2026.05.03(일)",
+          "endAt": "2026.05.03(일)",
+          "when": "2026.05.03(일)",
+          "note": "발대식 참가 신청 마감일"
+        },
+        {
+          "label": "2026 AICOSS 동아리 발대식",
+          "eventType": "program_start",
+          "eventDate": "2026.05.12(화)",
+          "startAt": "2026.05.12(화)",
+          "endAt": "2026.05.12(화)",
+          "when": "2026.05.12(화) 12:00~13:00",
+          "note": "발대식 당일, 점심 제공"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "신청 링크",
+          "url": "https://forms.gle/k8SEccZqb3pf54hg8",
+          "note": "발대식 참가 신청"
+        }
+      ],
+      "attachments": [],
+      "sourceTitle": "전남대학교 인공지능혁신융합대학사업단",
+      "extractedAt": "2026-05-14T15:50:47.177Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1779378647303
   }
 }
