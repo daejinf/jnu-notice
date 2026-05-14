@@ -931,5 +931,41 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779376231905
+  },
+  "https://sojoong.kr/notice/notice-board/?uid=863&mod=document::v10": {
+    "value": {
+      "summary": "제10회 SW프로그래밍 경진대회 수상자를 발표합니다. 수상자에게는 개별 문자 안내 예정이며, 시상식은 5월 15일(금) 9시 15분 창조관1호관(평생교육원) 100호에서 열립니다.",
+      "bullets": [
+        "제10회 SW프로그래밍 경진대회 수상자 발표",
+        "수상자 개별 문자 안내 예정",
+        "시상식: 5월 15일(금) 9시 15분, 창조관1호관(평생교육원) 100호"
+      ],
+      "targetAudience": "수상자 및 참가 학생",
+      "deadline": "명시되지 않음",
+      "actionItems": [
+        "시상식 참석"
+      ],
+      "benefits": [],
+      "requiredDocuments": [],
+      "contact": "명시되지 않음",
+      "caution": "명시되지 않음",
+      "calendarItems": [
+        {
+          "label": "제10회 SW프로그래밍 경진대회 시상식",
+          "eventType": "announcement",
+          "eventDate": "2026.05.15(금)",
+          "startAt": "2026.05.15(금)",
+          "endAt": "2026.05.15(금)",
+          "when": "2026.05.15(금) 09:15",
+          "note": "수상자 시상식"
+        }
+      ],
+      "actionLinks": [],
+      "attachments": [],
+      "sourceTitle": "공지사항 – 전남대학교 소프트웨어 중심대학",
+      "extractedAt": "2026-05-14T15:10:56.127Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1779376256231
   }
 }
