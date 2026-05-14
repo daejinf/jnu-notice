@@ -236,6 +236,21 @@ function filterDuplicateActionLinks(
   return actionLinks.filter((item) => !attachmentUrlSet.has(item.url));
 }
 
+function getAttachmentDisplayLabel(item: NoticeSummaryData["attachments"][number]) {
+  const cleanedLabel = item.label.trim();
+  if (cleanedLabel && !/^첨부파일(?: 다운로드)?$/i.test(cleanedLabel)) {
+    return cleanedLabel;
+  }
+
+  try {
+    const parsed = new URL(item.url);
+    const fileName = decodeURIComponent(parsed.pathname.split("/").filter(Boolean).pop() ?? "");
+    return fileName || cleanedLabel || "첨부파일";
+  } catch {
+    return cleanedLabel || "첨부파일";
+  }
+}
+
 function normalizeSearchText(value: string) {
   return value.toLowerCase().replace(/\s+/g, " ").trim();
 }
@@ -1267,43 +1282,45 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                 </div>
                               ) : null}
 
-                              {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).length > 0 ? (
+                              {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).length > 0 ||
+                              summaryState.data.attachments.length > 0 ? (
                                 <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
-                                  <p className="text-sm font-semibold text-slate-900">바로가기</p>
-                                  <div className="mt-3 flex flex-wrap gap-2">
-                                    {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).map((item) => (
-                                      <a
-                                        key={`${item.url}-${item.label}`}
-                                        href={item.url}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-100"
-                                        title={item.note}
-                                      >
-                                        {item.label}
-                                      </a>
-                                    ))}
-                                  </div>
-                                </div>
-                              ) : null}
+                                  <p className="text-sm font-semibold text-slate-900">???? ? ????</p>
 
-                              {summaryState.data.attachments.length > 0 ? (
-                                <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
-                                  <p className="text-sm font-semibold text-slate-900">첨부파일</p>
-                                  <div className="mt-3 flex flex-wrap gap-2">
-                                    {summaryState.data.attachments.map((item) => (
-                                      <a
-                                        key={`${item.url}-${item.label}`}
-                                        href={item.url}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
-                                        title={item.note}
-                                      >
-                                        {item.label}
-                                      </a>
-                                    ))}
-                                  </div>
+                                  {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).length > 0 ? (
+                                    <div className="mt-3 flex flex-wrap gap-2">
+                                      {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).map((item) => (
+                                        <a
+                                          key={`${item.url}-${item.label}`}
+                                          href={item.url}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-100"
+                                          title={item.note}
+                                        >
+                                          {item.label}
+                                        </a>
+                                      ))}
+                                    </div>
+                                  ) : null}
+
+                                  {summaryState.data.attachments.length > 0 ? (
+                                    <div className="mt-3 space-y-2">
+                                      {summaryState.data.attachments.map((item) => (
+                                        <a
+                                          key={`${item.url}-${item.label}`}
+                                          href={item.url}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          className="flex w-full items-center rounded-[18px] border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                                          title={item.note}
+                                        >
+                                          <span className="mr-3 inline-flex h-7 shrink-0 items-center rounded-full bg-slate-100 px-2.5 text-[11px] font-bold text-slate-500">??</span>
+                                          <span className="min-w-0 break-words">{getAttachmentDisplayLabel(item)}</span>
+                                        </a>
+                                      ))}
+                                    </div>
+                                  ) : null}
                                 </div>
                               ) : null}
 
