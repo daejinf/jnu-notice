@@ -838,6 +838,19 @@ function extractJsonObject(rawText: string) {
   return "";
 }
 
+function parseJsonResponse<T>(rawText: string, fallbackMessage: string) {
+  try {
+    return JSON.parse(rawText) as T;
+  } catch {
+    const preview = rawText.trim().slice(0, 120).toLowerCase();
+    if (preview.startsWith("<!doctype") || preview.startsWith("<html") || preview.startsWith("<")) {
+      throw new Error(`${fallbackMessage} HTML ?? ???? ???????.`);
+    }
+
+    throw new Error(fallbackMessage);
+  }
+}
+
 function parseSummaryPayload(rawText: string) {
   const jsonText = extractJsonObject(rawText);
   if (!jsonText) {
@@ -962,7 +975,11 @@ async function requestDeepSeekSummary(
     }),
   });
 
-  const payload = (await response.json()) as DeepSeekPayload;
+  const rawResponseText = await response.text();
+  const payload = parseJsonResponse<DeepSeekPayload>(
+    rawResponseText,
+    "DeepSeek ??? JSON?? ?? ?????.",
+  );
 
   if (!response.ok) {
     throw new Error(payload.error?.message ?? "DeepSeek 요약 요청에 실패했습니다.");
