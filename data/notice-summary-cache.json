@@ -967,5 +967,83 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779376256231
+  },
+  "https://www.aicoss.kr/www/notice/view/3973?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90::v10": {
+    "value": {
+      "summary": "서울과학기술대학교 주관 AICOSS NVIDIA-SeoulTech 협력강좌 참가자를 모집합니다. 교육은 2026년 5월 23일(토) 10:00~19:00에 서울과기대 상상관 212호에서 진행되며, 선착순 6명 이내로 모집합니다. 신청 기한은 2026년 5월 12일(화)부터 5월 14일(목)까지이며, 설문 응답을 통해 신청 가능합니다.",
+      "bullets": [
+        "교육 주제: Building Transformer-Based Natural Language Processing Application",
+        "참여 혜택: NVIDIA 공식 수료 인증서, 식사, 교통비(버스) 지원, 보험 가입",
+        "모집 인원: 6명 이내 선착순 마감",
+        "신청 기한: 2026.5.12.(화) ~ 2026.5.14.(목)"
+      ],
+      "targetAudience": "전남대학교 학부 재학생(2학년 이상, 전공자 위주)",
+      "deadline": "2026.05.14(목) 신청 마감",
+      "actionItems": [
+        "설문 응답 링크를 통해 신청서 제출",
+        "개인 노트북 지참 및 Chrome 브라우저, Python 환경 준비"
+      ],
+      "benefits": [
+        "NVIDIA 공식 수료 인증서 수여",
+        "식사 제공",
+        "교통비(버스) 지원",
+        "보험 가입"
+      ],
+      "requiredDocuments": [
+        "명시되지 않음"
+      ],
+      "contact": "전남대학교 인공지능혁신융합대학사업단 (☎ 062-530-5377)",
+      "caution": "신청 후 무단 취소/당일 불참/중도 퇴실 시 수료증 발급 불가 및 향후 프로그램 참여 제한",
+      "calendarItems": [
+        {
+          "label": "AICOSS NVIDIA-SeoulTech 협력강좌",
+          "eventType": "apply_open",
+          "eventDate": "2026.05.12(화)",
+          "startAt": "2026.05.12(화)",
+          "endAt": "2026.05.12(화)",
+          "when": "2026.05.12(화)",
+          "note": "지원서 접수 시작일"
+        },
+        {
+          "label": "AICOSS NVIDIA-SeoulTech 협력강좌",
+          "eventType": "apply_deadline",
+          "eventDate": "2026.05.14(목)",
+          "startAt": "2026.05.14(목)",
+          "endAt": "2026.05.14(목)",
+          "when": "2026.05.14(목)",
+          "note": "지원서 접수 마감일"
+        },
+        {
+          "label": "AICOSS NVIDIA-SeoulTech 협력강좌",
+          "eventType": "result",
+          "eventDate": "2026.05.15(금)",
+          "startAt": "2026.05.15(금)",
+          "endAt": "2026.05.15(금)",
+          "when": "2026.05.15(금)",
+          "note": "선발 결과 개별 안내"
+        },
+        {
+          "label": "AICOSS NVIDIA-SeoulTech 협력강좌",
+          "eventType": "class_start",
+          "eventDate": "2026.05.23(토)",
+          "startAt": "2026.05.23(토)",
+          "endAt": "2026.05.23(토)",
+          "when": "2026.05.23(토) 10:00~19:00",
+          "note": "교육 진행일"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "설문 응답",
+          "url": "https://forms.gle/ktN4XAbFoYuephBx8",
+          "note": "온라인 지원서 제출"
+        }
+      ],
+      "attachments": [],
+      "sourceTitle": "전남대학교 인공지능혁신융합대학사업단",
+      "extractedAt": "2026-05-14T15:11:39.629Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1779376299716
   }
 }
