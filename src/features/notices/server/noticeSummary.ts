@@ -10,7 +10,7 @@ import {
 
 const REQUEST_TIMEOUT_MS = 15000;
 const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
-const MAX_FAST_CONTENT_CHARS = 6000;
+const MAX_FAST_CONTENT_CHARS = 4500;
 const MAX_DEEP_CONTENT_CHARS = 12000;
 const SUMMARY_CACHE_VERSION = "v10";
 const MAX_ATTACHMENT_TEXT_CHARS = 8000;
@@ -19,6 +19,8 @@ const MAX_HWPX_ATTACHMENTS_TO_PARSE = 2;
 const MAX_IMAGE_ATTACHMENTS_TO_PARSE = 2;
 const MAX_LINKS_PER_KIND = 6;
 const ATTACHMENT_EXTRACTION_TIMEOUT_MS = 3000;
+const FAST_SUMMARY_TIMEOUT_MS = 8000;
+const DEEP_SUMMARY_TIMEOUT_MS = 18000;
 
 const CONTENT_SELECTOR_CANDIDATES = [
   ".board_view_wrap",
@@ -867,6 +869,43 @@ function normalizeCalendarItems(value: unknown) {
     .slice(0, 6);
 }
 
+function inferDeadline(text: string) {
+  const deadlineMatch = text.match(/([^\n]{0,40}(마감|신청|접수|제출|예매)[^\n]{0,60})/);
+  if (deadlineMatch?.[1]) {
+    return cleanText(deadlineMatch[1]);
+  }
+
+  const dateMatch = text.match(/\d{4}[./-]\d{1,2}[./-]\d{1,2}(\([^)]*\))?/);
+  return dateMatch?.[0] ?? "명시되지 않음";
+}
+
+function buildFallbackSummary(
+  input: NoticeSummaryInput,
+  extracted: ExtractedNoticeDocument,
+): Omit<NoticeSummaryResult, "fromCache" | "attachments" | "actionLinks" | "sourceTitle" | "extractedAt" | "attachmentAnalysisState"> {
+  const lines = extracted.content
+    .split("\n")
+    .map((line) => cleanText(line))
+    .filter((line) => line.length >= 8);
+  const summary = cleanText(lines.slice(0, 3).join(" ")).slice(0, 280) || `${input.title} 공지 요약을 불러왔습니다.`;
+  const bullets = lines.slice(0, 5).filter((line, index, array) => array.indexOf(line) === index);
+  const actionItems =
+    lines.filter((line) => /(신청|접수|제출|예매|참석|확인)/.test(line)).slice(0, 5);
+
+  return {
+    summary,
+    bullets,
+    targetAudience: "명시되지 않음",
+    deadline: inferDeadline(extracted.content),
+    actionItems,
+    benefits: [],
+    requiredDocuments: [],
+    contact: "명시되지 않음",
+    caution: "명시되지 않음",
+    calendarItems: [],
+  };
+}
+
 function extractJsonObject(rawText: string) {
   const trimmed = rawText.trim();
 
@@ -999,67 +1038,86 @@ async function requestDeepSeekSummary(
   const apiKey = process.env.DEEPSEEK_API_KEY?.trim();
   const model = process.env.DEEPSEEK_MODEL?.trim() || "deepseek-v4-flash";
   const isDeepAnalysis = !!options.includeAttachmentAnalysis;
-
-  if (!apiKey) {
-    throw new Error("DEEPSEEK_API_KEY 환경변수가 설정되지 않았습니다.");
-  }
-
-  const response = await fetch("https://api.deepseek.com/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      messages: [
-        {
-          role: "system",
-          content: "You summarize Korean university notices and must return only a valid JSON object.",
-        },
-        {
-          role: "user",
-          content: buildSummaryPrompt(
-            input,
-            extractedText,
-            isDeepAnalysis ? attachments : [],
-            actionCandidates,
-            isDeepAnalysis ? attachmentTexts : [],
-          ),
-        },
-      ],
-      thinking: {
-        type: "disabled",
-      },
-      response_format: {
-        type: "json_object",
-      },
-      temperature: 0.1,
-      max_tokens: isDeepAnalysis ? 1700 : 1200,
-    }),
-  });
-
-  const rawResponseText = await response.text();
-  const payload = parseJsonResponse<DeepSeekPayload>(
-    rawResponseText,
-    "DeepSeek ??? JSON?? ?? ?????.",
+  const controller = new AbortController();
+  const timeoutHandle = setTimeout(
+    () => controller.abort(),
+    isDeepAnalysis ? DEEP_SUMMARY_TIMEOUT_MS : FAST_SUMMARY_TIMEOUT_MS,
   );
 
-  if (!response.ok) {
-    throw new Error(payload.error?.message ?? "DeepSeek 요약 요청에 실패했습니다.");
+  if (!apiKey) {
+    throw new Error("DEEPSEEK_API_KEY ????? ???? ?????.");
   }
 
-  const choice = payload.choices?.[0];
-  const rawText = choice?.message?.content?.trim();
+  try {
+    const response = await fetch("https://api.deepseek.com/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        messages: [
+          {
+            role: "system",
+            content: "You summarize Korean university notices and must return only a valid JSON object.",
+          },
+          {
+            role: "user",
+            content: buildSummaryPrompt(
+              input,
+              extractedText,
+              isDeepAnalysis ? attachments : [],
+              actionCandidates,
+              isDeepAnalysis ? attachmentTexts : [],
+            ),
+          },
+        ],
+        thinking: {
+          type: "disabled",
+        },
+        response_format: {
+          type: "json_object",
+        },
+        temperature: 0.1,
+        max_tokens: isDeepAnalysis ? 1700 : 1000,
+      }),
+      signal: controller.signal,
+    });
 
-  if (!rawText) {
-    const reason = choice?.finish_reason ? ` (${choice.finish_reason})` : "";
-    throw new Error(`DeepSeek가 비어 있는 응답을 반환했습니다${reason}.`);
+    const rawResponseText = await response.text();
+    const payload = parseJsonResponse<DeepSeekPayload>(
+      rawResponseText,
+      "DeepSeek ??? JSON ??? ????.",
+    );
+
+    if (!response.ok) {
+      throw new Error(payload.error?.message ?? "DeepSeek ?? ??? ??????.");
+    }
+
+    const choice = payload.choices?.[0];
+    const rawText = choice?.message?.content?.trim();
+
+    if (!rawText) {
+      const reason = choice?.finish_reason ? ` (${choice.finish_reason})` : "";
+      throw new Error(`DeepSeek? ?? ?? ??? ??????${reason}.`);
+    }
+
+    return parseSummaryPayload(rawText);
+  } catch (error) {
+    if (error instanceof Error && error.name === "AbortError") {
+      throw new Error(
+        isDeepAnalysis
+          ? "?? ?? ??? ???? ????. ?? ? ?? ??? ???."
+          : "AI ??? ???? ????. ?? ? ?? ??? ???.",
+      );
+    }
+
+    throw error;
+  } finally {
+    clearTimeout(timeoutHandle);
   }
-
-  return parseSummaryPayload(rawText);
 }
-
 export async function generateNoticeSummary(
   input: NoticeSummaryInput,
   options: GenerateNoticeSummaryOptions = {},

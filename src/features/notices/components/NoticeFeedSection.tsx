@@ -1285,7 +1285,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                               {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).length > 0 ||
                               summaryState.data.attachments.length > 0 ? (
                                 <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
-                                  <p className="text-sm font-semibold text-slate-900">???? ? ????</p>
+                                  <p className="text-sm font-semibold text-slate-900">{"\uB9C1\uD06C / \uD30C\uC77C"}</p>
 
                                   {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).length > 0 ? (
                                     <div className="mt-3 flex flex-wrap gap-2">
@@ -1315,7 +1315,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                           className="flex w-full items-center rounded-[18px] border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
                                           title={item.note}
                                         >
-                                          <span className="mr-3 inline-flex h-7 shrink-0 items-center rounded-full bg-slate-100 px-2.5 text-[11px] font-bold text-slate-500">??</span>
+                                          <span className="mr-3 inline-flex h-7 shrink-0 items-center rounded-full bg-slate-100 px-2.5 text-[11px] font-bold text-slate-500">{"\uD30C\uC77C"}</span>
                                           <span className="min-w-0 break-words">{getAttachmentDisplayLabel(item)}</span>
                                         </a>
                                       ))}
