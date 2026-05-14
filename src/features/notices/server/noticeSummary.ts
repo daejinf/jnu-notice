@@ -10,9 +10,9 @@ import {
 
 const REQUEST_TIMEOUT_MS = 15000;
 const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
-const MAX_FAST_CONTENT_CHARS = 4500;
+const MAX_FAST_CONTENT_CHARS = 6000;
 const MAX_DEEP_CONTENT_CHARS = 12000;
-const SUMMARY_CACHE_VERSION = "v8";
+const SUMMARY_CACHE_VERSION = "v10";
 const MAX_ATTACHMENT_TEXT_CHARS = 8000;
 const MAX_PDF_ATTACHMENTS_TO_PARSE = 2;
 const MAX_HWPX_ATTACHMENTS_TO_PARSE = 2;
@@ -753,7 +753,7 @@ function buildSummaryPrompt(
     "",
     "반환 JSON 스키마:",
     "{",
-    '  "summary": "1~2문장 요약",',
+    '  "summary": "2~4문장 요약",',
     '  "bullets": ["핵심 포인트", "핵심 포인트"],',
     '  "targetAudience": "대상자",',
     '  "deadline": "가장 중요한 마감일 또는 주요 일정",',
@@ -917,12 +917,12 @@ function parseSummaryPayload(rawText: string) {
 
   return {
     summary: asCleanString(parsed.summary, "요약을 생성했지만 본문 정리가 충분하지 않았습니다."),
-    bullets: asStringArray(parsed.bullets, 4),
+    bullets: asStringArray(parsed.bullets, 6),
     targetAudience: asCleanString(parsed.targetAudience, "명시되지 않음"),
     deadline: asCleanString(parsed.deadline, "명시되지 않음"),
-    actionItems: asStringArray(parsed.actionItems, 4),
-    benefits: asStringArray(parsed.benefits, 4),
-    requiredDocuments: asStringArray(parsed.requiredDocuments, 4),
+    actionItems: asStringArray(parsed.actionItems, 5),
+    benefits: asStringArray(parsed.benefits, 5),
+    requiredDocuments: asStringArray(parsed.requiredDocuments, 5),
     contact: asCleanString(parsed.contact, "명시되지 않음"),
     caution: asCleanString(parsed.caution, "명시되지 않음"),
     calendarItems: normalizeCalendarItems(parsed.calendarItems),
@@ -1035,7 +1035,7 @@ async function requestDeepSeekSummary(
         type: "json_object",
       },
       temperature: 0.1,
-      max_tokens: isDeepAnalysis ? 1400 : 900,
+      max_tokens: isDeepAnalysis ? 1700 : 1200,
     }),
   });
 

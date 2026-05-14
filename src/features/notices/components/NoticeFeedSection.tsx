@@ -228,6 +228,14 @@ function toSortableTime(date: string) {
   return Number.isNaN(time) ? 0 : time;
 }
 
+function filterDuplicateActionLinks(
+  actionLinks: NoticeSummaryData["actionLinks"],
+  attachments: NoticeSummaryData["attachments"],
+) {
+  const attachmentUrlSet = new Set(attachments.map((item) => item.url));
+  return actionLinks.filter((item) => !attachmentUrlSet.has(item.url));
+}
+
 function normalizeSearchText(value: string) {
   return value.toLowerCase().replace(/\s+/g, " ").trim();
 }
@@ -1259,11 +1267,11 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                 </div>
                               ) : null}
 
-                              {summaryState.data.actionLinks.length > 0 ? (
+                              {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).length > 0 ? (
                                 <div className="rounded-[24px] border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.04)]">
                                   <p className="text-sm font-semibold text-slate-900">바로가기</p>
                                   <div className="mt-3 flex flex-wrap gap-2">
-                                    {summaryState.data.actionLinks.map((item) => (
+                                    {filterDuplicateActionLinks(summaryState.data.actionLinks, summaryState.data.attachments).map((item) => (
                                       <a
                                         key={`${item.url}-${item.label}`}
                                         href={item.url}
