@@ -1,9 +1,15 @@
 import { request as httpRequest } from "node:http";
 import { request as httpsRequest } from "node:https";
 import { load } from "cheerio";
+import {
+  loadNoticeSummaryCacheMap,
+  saveNoticeSummaryCacheMap,
+  type NoticeSummaryCacheEntry,
+  type NoticeSummaryCacheMap,
+} from "@/features/notices/server/noticeSummaryCache";
 
 const REQUEST_TIMEOUT_MS = 15000;
-const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
+const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
 const MAX_CONTENT_CHARS = 12000;
 
 const CONTENT_SELECTOR_CANDIDATES = [
@@ -52,6 +58,9 @@ export type NoticeSummaryResult = {
   targetAudience: string;
   deadline: string;
   actionItems: string[];
+  benefits: string[];
+  requiredDocuments: string[];
+  contact: string;
   caution: string;
   calendarItems: NoticeCalendarItem[];
   sourceTitle: string;
@@ -59,14 +68,13 @@ export type NoticeSummaryResult = {
   fromCache: boolean;
 };
 
-type CacheEntry = {
+type InMemoryCacheEntry = {
   value: Omit<NoticeSummaryResult, "fromCache">;
   expiresAt: number;
 };
 
 type DeepSeekChoiceMessage = {
   content?: string | null;
-  reasoning_content?: string | null;
 };
 
 type DeepSeekPayload = {
@@ -83,17 +91,20 @@ type RawSummaryPayload = {
   targetAudience?: unknown;
   deadline?: unknown;
   actionItems?: unknown;
+  benefits?: unknown;
+  requiredDocuments?: unknown;
+  contact?: unknown;
   caution?: unknown;
   calendarItems?: unknown;
 };
 
 function getSummaryCache() {
   const globalCache = globalThis as typeof globalThis & {
-    __noticeSummaryCache?: Map<string, CacheEntry>;
+    __noticeSummaryCache?: Map<string, InMemoryCacheEntry>;
   };
 
   if (!globalCache.__noticeSummaryCache) {
-    globalCache.__noticeSummaryCache = new Map<string, CacheEntry>();
+    globalCache.__noticeSummaryCache = new Map<string, InMemoryCacheEntry>();
   }
 
   return globalCache.__noticeSummaryCache;
@@ -299,19 +310,25 @@ function buildSummaryPrompt(input: NoticeSummaryInput, extractedText: string) {
     "불필요한 설명, 코드블록, 마크다운 없이 순수 JSON 객체만 반환하세요.",
     "모든 값은 한국어로 작성하세요.",
     "모르는 값은 추측하지 말고 '명시되지 않음'으로 적으세요.",
-    "calendarItems는 최대 3개만 넣고, 정말 캘린더에 옮길 만한 일정만 담으세요.",
-    "calendarItems.note에는 요일이나 시작 성격 같은 짧은 힌트만 넣으세요. 예: '월 시작', '화 시작', '지원 시작'",
+    "calendarItems는 최대 4개만 넣고, 실제로 캘린더에 옮길 만한 일정만 담으세요.",
+    "calendarItems.note에는 시작/마감/면접/발표 같은 일정 성격을 짧게 적으세요.",
+    "benefits에는 혜택, 지원 내용, 특전만 넣으세요.",
+    "requiredDocuments에는 제출서류, 준비서류만 넣으세요.",
+    "contact에는 문의처가 있으면 전화, 이메일, 부서명을 한 줄로 적으세요.",
     "",
     "반환 JSON 스키마:",
     "{",
     '  "summary": "1~2문장 요약",',
     '  "bullets": ["핵심 포인트", "핵심 포인트"],',
     '  "targetAudience": "대상자",',
-    '  "deadline": "마감일 또는 주요 일정",',
+    '  "deadline": "가장 중요한 마감일 또는 주요 일정",',
     '  "actionItems": ["해야 할 일", "해야 할 일"],',
+    '  "benefits": ["혜택", "혜택"],',
+    '  "requiredDocuments": ["준비서류", "준비서류"],',
+    '  "contact": "문의처",',
     '  "caution": "주의사항",',
     '  "calendarItems": [',
-    '    { "label": "프로그램명", "when": "일정", "note": "월 시작" }',
+    '    { "label": "프로그램명", "when": "2026.05.11(월) ~ 2026.06.03(수)", "note": "지원 마감" }',
     "  ]",
     "}",
     "",
@@ -356,7 +373,7 @@ function normalizeCalendarItems(value: unknown) {
       return { label, when, note };
     })
     .filter((item): item is NoticeCalendarItem => Boolean(item))
-    .slice(0, 3);
+    .slice(0, 4);
 }
 
 function extractJsonObject(rawText: string) {
@@ -400,9 +417,52 @@ function parseSummaryPayload(rawText: string) {
     targetAudience: asCleanString(parsed.targetAudience, "명시되지 않음"),
     deadline: asCleanString(parsed.deadline, "명시되지 않음"),
     actionItems: asStringArray(parsed.actionItems, 4),
+    benefits: asStringArray(parsed.benefits, 4),
+    requiredDocuments: asStringArray(parsed.requiredDocuments, 4),
+    contact: asCleanString(parsed.contact, "명시되지 않음"),
     caution: asCleanString(parsed.caution, "명시되지 않음"),
     calendarItems: normalizeCalendarItems(parsed.calendarItems),
   };
+}
+
+function toPersistentEntry(value: Omit<NoticeSummaryResult, "fromCache">): NoticeSummaryCacheEntry {
+  return {
+    value,
+    expiresAt: Date.now() + SUMMARY_CACHE_TTL_MS,
+  };
+}
+
+function applyInMemoryCache(cacheKey: string, value: Omit<NoticeSummaryResult, "fromCache">, expiresAt: number) {
+  getSummaryCache().set(cacheKey, {
+    value,
+    expiresAt,
+  });
+}
+
+async function readPersistentCache(cacheKey: string) {
+  const cacheMap = await loadNoticeSummaryCacheMap();
+  const entry = cacheMap[cacheKey];
+
+  if (!entry) {
+    return null;
+  }
+
+  if (entry.expiresAt <= Date.now()) {
+    delete cacheMap[cacheKey];
+    await saveNoticeSummaryCacheMap(cacheMap).catch(() => undefined);
+    return null;
+  }
+
+  applyInMemoryCache(cacheKey, entry.value, entry.expiresAt);
+  return entry.value;
+}
+
+async function writePersistentCache(cacheKey: string, value: Omit<NoticeSummaryResult, "fromCache">) {
+  const cacheMap: NoticeSummaryCacheMap = await loadNoticeSummaryCacheMap();
+  const entry = toPersistentEntry(value);
+  cacheMap[cacheKey] = entry;
+  applyInMemoryCache(cacheKey, value, entry.expiresAt);
+  await saveNoticeSummaryCacheMap(cacheMap).catch(() => undefined);
 }
 
 async function requestDeepSeekSummary(input: NoticeSummaryInput, extractedText: string) {
@@ -438,7 +498,7 @@ async function requestDeepSeekSummary(input: NoticeSummaryInput, extractedText: 
         type: "json_object",
       },
       temperature: 0.2,
-      max_tokens: 1400,
+      max_tokens: 1800,
     }),
   });
 
@@ -460,13 +520,20 @@ async function requestDeepSeekSummary(input: NoticeSummaryInput, extractedText: 
 }
 
 export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<NoticeSummaryResult> {
-  const cache = getSummaryCache();
   const cacheKey = input.url;
-  const cached = cache.get(cacheKey);
+  const memoryCache = getSummaryCache().get(cacheKey);
 
-  if (cached && cached.expiresAt > Date.now()) {
+  if (memoryCache && memoryCache.expiresAt > Date.now()) {
     return {
-      ...cached.value,
+      ...memoryCache.value,
+      fromCache: true,
+    };
+  }
+
+  const persistentCache = await readPersistentCache(cacheKey);
+  if (persistentCache) {
+    return {
+      ...persistentCache,
       fromCache: true,
     };
   }
@@ -480,10 +547,7 @@ export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<
     extractedAt: new Date().toISOString(),
   };
 
-  cache.set(cacheKey, {
-    value,
-    expiresAt: Date.now() + SUMMARY_CACHE_TTL_MS,
-  });
+  await writePersistentCache(cacheKey, value);
 
   return {
     ...value,

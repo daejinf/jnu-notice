@@ -98,6 +98,9 @@ type NoticeSummaryData = {
   targetAudience: string;
   deadline: string;
   actionItems: string[];
+  benefits: string[];
+  requiredDocuments: string[];
+  contact: string;
   caution: string;
   calendarItems: Array<{
     label: string;
@@ -157,8 +160,8 @@ function toCompactProgramName(label: string, noticeTitle: string) {
     noticeTitle.trim();
 
   return preferred
-    .replace(/복사$/g, "")
-    .replace(/모집 시작|지원 시작|지원 마감|신청 시작|신청 마감|접수 시작|접수 마감/g, "")
+    .replace(/프로그램 일정/gi, "")
+    .replace(/지원 시작일|모집 시작일|접수 시작일|시작일|마감일|모집 마감일|지원 마감일/gi, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -175,7 +178,7 @@ function buildCalendarTitle(notice: Notice, item: NoticeSummaryData["calendarIte
     return `${programName} | 일정 ${end}`;
   }
 
-  return `${programName} | 일정 확인 필요`;
+  return `${programName} | 일정 추출 필요`;
 }
 
 function toSortableTime(date: string) {
@@ -447,7 +450,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
         const data = (await response.json()) as NoticeStateApiResponse;
 
         if (!response.ok) {
-          throw new Error(data.error ?? "읽음 상태를 불러오지 못했습니다.");
+          throw new Error(data.error ?? "??뚯벉 ?怨밴묶???븍뜄???? 筌륁궢六??щ빍??");
         }
 
         if (data.state) {
@@ -737,7 +740,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
       const summary = data.summary;
 
       if (!response.ok || !summary) {
-        throw new Error(data.error ?? "AI 요약을 불러오지 못했습니다.");
+        throw new Error(data.error ?? "AI ?遺용튋???븍뜄???? 筌륁궢六??щ빍??");
       }
 
       setNoticeSummaryById((current) => ({
@@ -749,7 +752,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
         },
       }));
     } catch (summaryError) {
-      const message = summaryError instanceof Error ? summaryError.message : "AI 요약 중 오류가 발생했습니다.";
+      const message = summaryError instanceof Error ? summaryError.message : "AI ?遺용튋 餓???살첒揶쎛 獄쏆뮇源??됰뮸??덈뼄.";
       setNoticeSummaryById((current) => ({
         ...current,
         [noticeId]: {
@@ -978,7 +981,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                           <CompactActionButton
                             active={isSummaryOpen && summaryState?.status === "success"}
                             onClick={() => void handleNoticeSummary(notice)}
-                            activeLabel={"요약 닫기"}
+                            activeLabel="요약 보기"
                             idleLabel={isSummaryLoading ? "요약 중" : "AI 요약"}
                             activeClass="bg-violet-600 text-white hover:bg-violet-700"
                             idleClass="bg-violet-50 text-violet-700 hover:bg-violet-100"
@@ -1009,7 +1012,9 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                             <div>
                               <p className="text-sm font-bold text-violet-900">AI 요약</p>
                               <p className="text-xs text-violet-700">
-                                {summaryState?.data?.fromCache ? "캐시된 요약" : "DeepSeek가 상세 페이지를 읽고 정리한 내용"}
+                                {summaryState?.data?.fromCache
+                                  ? "DeepSeek가 저장된 요약을 다시 불러왔습니다."
+                                  : "DeepSeek가 상세 페이지를 읽고 정리한 내용"}
                               </p>
                             </div>
                             {summaryState?.data?.extractedAt ? (
@@ -1021,7 +1026,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
 
                           {summaryState.status === "loading" ? (
                             <p className="mt-3 text-sm leading-6 text-violet-900">
-                              상세 페이지를 먼저 읽고, 핵심 내용과 마감 일정을 정리하고 있습니다.
+                              상세 페이지를 읽고 핵심 일정과 지원 조건을 정리하고 있습니다.
                             </p>
                           ) : null}
 
@@ -1035,58 +1040,59 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                             <div className="mt-3 space-y-3">
                               {summaryState.data.calendarItems.length > 0 ? (
                                 <div className="rounded-2xl bg-white px-4 py-3">
-                                  <div className="flex flex-col gap-3">
-                                    <div>
-                                      <p className="text-sm font-semibold text-slate-900">캘린더 복사</p>
-                                      <p className="mt-1 text-xs text-slate-500">일정 제목과 메모를 따로 복사해서 캘린더에 바로 붙여 넣을 수 있습니다.</p>
-                                    </div>
+                                  <div>
+                                    <p className="text-sm font-semibold text-slate-900">바로 캨린더에 옮길 일정</p>
+                                    <p className="mt-1 text-xs text-slate-500">
+                                      중요한 일정만 압축해서 복사할 수 있게 정리했습니다.
+                                    </p>
+                                  </div>
 
-                                    <div className="space-y-3">
-                                      {summaryState.data.calendarItems.map((item) => {
-                                        const titleKey = `${noticeId}-${item.label}-title`;
-                                        const memoKey = `${noticeId}-${item.label}-memo`;
-                                        const titleCopied = copiedCalendarKey === titleKey;
-                                        const memoCopied = copiedCalendarKey === memoKey;
-                                        const programName = toCompactProgramName(item.label, notice.title);
-                                        const titleText = buildCalendarTitle(notice, item);
-                                        const memoText = [
-                                          "메모:",
-                                          `- 프로그램: ${programName}`,
-                                          `- 일정: ${item.when}`,
-                                          `- 출처: ${notice.sourceName}`,
-                                          `- 링크: ${notice.url}`,
-                                        ].join("\n");
-                                        const memoPreview = [
-                                          `프로그램: ${programName}`,
-                                          `일정: ${item.when}`,
-                                          `출처: ${notice.sourceName}`,
-                                        ].join("\n");
+                                  <div className="mt-3 space-y-3">
+                                    {summaryState.data.calendarItems.map((item) => {
+                                      const titleKey = `${noticeId}-${item.label}-title`;
+                                      const memoKey = `${noticeId}-${item.label}-memo`;
+                                      const titleCopied = copiedCalendarKey === titleKey;
+                                      const memoCopied = copiedCalendarKey === memoKey;
+                                      const programName = toCompactProgramName(item.label, notice.title);
+                                      const titleText = buildCalendarTitle(notice, item);
+                                      const memoText = [
+                                        "메모:",
+                                        `- 프로그램: ${programName}`,
+                                        `- 일정: ${item.when}`,
+                                        `- 출처: ${notice.sourceName}`,
+                                        `- 링크: ${notice.url}`,
+                                      ].join("\n");
+                                      const memoPreview = [
+                                        `프로그램: ${programName}`,
+                                        `일정: ${item.when}`,
+                                        `출처: ${notice.sourceName}`,
+                                      ].join("\n");
 
-                                        return (
-                                          <div key={`${noticeId}-${item.label}`} className="rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-3">
-                                            <p className="text-sm font-semibold text-slate-900">{titleText}</p>
-                                            <div className="mt-2 flex flex-wrap gap-2">
-                                              <button
-                                                type="button"
-                                                onClick={() => void copyCalendarText(titleKey, titleText)}
-                                                className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${titleCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
-                                              >
-                                                {titleCopied ? "일정 복사됨" : "일정 복사"}
-                                              </button>
-                                              <button
-                                                type="button"
-                                                title={memoPreview}
-                                                aria-label={memoPreview}
-                                                onClick={() => void copyCalendarText(memoKey, memoText)}
-                                                className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${memoCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
-                                              >
-                                                {memoCopied ? "메모 복사됨" : "메모 복사"}
-                                              </button>
-                                            </div>
+                                      return (
+                                        <div key={`${noticeId}-${item.label}`} className="rounded-2xl border border-slate-200 bg-slate-50/80 px-3 py-3">
+                                          <p className="text-sm font-semibold text-slate-900">{titleText}</p>
+                                          <p className="mt-1 text-xs text-slate-500">{item.note}</p>
+                                          <div className="mt-2 flex flex-wrap gap-2">
+                                            <button
+                                              type="button"
+                                              onClick={() => void copyCalendarText(titleKey, titleText)}
+                                              className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${titleCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
+                                            >
+                                              {titleCopied ? "일정 복사됨" : "일정 복사"}
+                                            </button>
+                                            <button
+                                              type="button"
+                                              title={memoPreview}
+                                              aria-label={memoPreview}
+                                              onClick={() => void copyCalendarText(memoKey, memoText)}
+                                              className={`rounded-xl border px-3 py-2 text-sm font-medium transition ${memoCopied ? "border-emerald-600 bg-emerald-600 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-100"}`}
+                                            >
+                                              {memoCopied ? "메모 복사됨" : "메모 복사"}
+                                            </button>
                                           </div>
-                                        );
-                                      })}
-                                    </div>
+                                        </div>
+                                      );
+                                    })}
                                   </div>
                                 </div>
                               ) : null}
@@ -1108,7 +1114,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                   <p className="text-sm font-semibold text-slate-900">핵심 포인트</p>
                                   <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
                                     {summaryState.data.bullets.map((item) => (
-                                      <p key={item}>• {item}</p>
+                                      <p key={item}>- {item}</p>
                                     ))}
                                   </div>
                                 </div>
@@ -1125,16 +1131,43 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                                 </div>
                               </div>
 
-                              <div className="grid gap-3 md:grid-cols-2">
+                              <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                                 <div className="rounded-2xl bg-white px-4 py-3">
                                   <p className="text-sm font-semibold text-slate-900">해야 할 일</p>
                                   <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
                                     {summaryState.data.actionItems.length > 0 ? (
-                                      summaryState.data.actionItems.map((item) => <p key={item}>• {item}</p>)
+                                      summaryState.data.actionItems.map((item) => <p key={item}>- {item}</p>)
                                     ) : (
-                                      <p>• 명시되지 않음</p>
+                                      <p>별도로 안내된 행동 항목이 없습니다.</p>
                                     )}
                                   </div>
+                                </div>
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">혜택</p>
+                                  <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
+                                    {summaryState.data.benefits.length > 0 ? (
+                                      summaryState.data.benefits.map((item) => <p key={item}>- {item}</p>)
+                                    ) : (
+                                      <p>별도로 확인된 혜택이 없습니다.</p>
+                                    )}
+                                  </div>
+                                </div>
+                                <div className="rounded-2xl bg-white px-4 py-3 md:col-span-2 xl:col-span-1">
+                                  <p className="text-sm font-semibold text-slate-900">준비 서류</p>
+                                  <div className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
+                                    {summaryState.data.requiredDocuments.length > 0 ? (
+                                      summaryState.data.requiredDocuments.map((item) => <p key={item}>- {item}</p>)
+                                    ) : (
+                                      <p>별도로 확인된 준비 서류가 없습니다.</p>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="grid gap-3 md:grid-cols-2">
+                                <div className="rounded-2xl bg-white px-4 py-3">
+                                  <p className="text-sm font-semibold text-slate-900">문의처</p>
+                                  <p className="mt-2 text-sm leading-6 text-slate-700">{summaryState.data.contact}</p>
                                 </div>
                                 <div className="rounded-2xl bg-white px-4 py-3">
                                   <p className="text-sm font-semibold text-slate-900">주의사항</p>
