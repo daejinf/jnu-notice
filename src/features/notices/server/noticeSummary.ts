@@ -11,12 +11,14 @@ import {
 const REQUEST_TIMEOUT_MS = 15000;
 const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
 const MAX_CONTENT_CHARS = 12000;
-const SUMMARY_CACHE_VERSION = "v7";
+const SUMMARY_CACHE_VERSION = "v8";
 const MAX_ATTACHMENT_TEXT_CHARS = 8000;
 const MAX_PDF_ATTACHMENTS_TO_PARSE = 2;
 const MAX_HWPX_ATTACHMENTS_TO_PARSE = 2;
 const MAX_IMAGE_ATTACHMENTS_TO_PARSE = 2;
 const MAX_LINKS_PER_KIND = 6;
+const ATTACHMENT_EXTRACTION_TIMEOUT_MS = 3000;
+const MIN_CONTENT_LENGTH_FOR_ATTACHMENT_SKIP = 2400;
 
 const CONTENT_SELECTOR_CANDIDATES = [
   ".board_view_wrap",
@@ -289,6 +291,23 @@ async function getJsZipModule() {
 async function runImageOcr(buffer: Buffer) {
   const module = await import("tesseract.js");
   return module.recognize(buffer, "kor+eng");
+}
+
+async function withTimeout<T>(promise: Promise<T>, timeoutMs: number, fallbackValue: T) {
+  let timeoutHandle: NodeJS.Timeout | undefined;
+
+  try {
+    return await Promise.race([
+      promise,
+      new Promise<T>((resolve) => {
+        timeoutHandle = setTimeout(() => resolve(fallbackValue), timeoutMs);
+      }),
+    ]);
+  } finally {
+    if (timeoutHandle) {
+      clearTimeout(timeoutHandle);
+    }
+  }
 }
 
 function extractStructuredText(rootHtml: string) {
@@ -579,6 +598,21 @@ async function extractAttachmentTexts(attachments: NoticeResourceLink[]) {
   return extractedTexts;
 }
 
+function extractInlineImageHints(html: string) {
+  const $ = load(html);
+  const hints: string[] = [];
+
+  $("img").each((_, element) => {
+    const alt = cleanText($(element).attr("alt") ?? "");
+    const title = cleanText($(element).attr("title") ?? "");
+    const hint = alt || title;
+    if (!hint || hint.length < 2) return;
+    hints.push(hint);
+  });
+
+  return Array.from(new Set(hints)).slice(0, 8);
+}
+
 async function pickBestContentBlock(html: string, baseUrl: string): Promise<ExtractedNoticeDocument> {
   const $ = load(html);
   $("script, style, noscript, iframe, svg, nav, footer, header, button, input, select, textarea").remove();
@@ -596,8 +630,11 @@ async function pickBestContentBlock(html: string, baseUrl: string): Promise<Extr
     orderedCandidates.sort((left, right) => right.text.length - left.text.length)[0]?.text ?? "";
   const bodyText = extractStructuredText($.html($("body")) || "");
   const title = cleanText($("title").first().text());
-
-  const content = (prioritizedCandidate || longestCandidate || bodyText).slice(0, MAX_CONTENT_CHARS);
+  const inlineImageHints = extractInlineImageHints(html);
+  const contentWithHints = [prioritizedCandidate || longestCandidate || bodyText, ...inlineImageHints.map((hint) => `[이미지 설명] ${hint}`)]
+    .filter(Boolean)
+    .join("\n");
+  const content = contentWithHints.slice(0, MAX_CONTENT_CHARS);
 
   if (!content) {
     throw new Error("상세 페이지에서 읽을 수 있는 본문을 찾지 못했습니다.");
@@ -643,28 +680,13 @@ async function pickBestContentBlock(html: string, baseUrl: string): Promise<Extr
     }
   });
 
-  $("img[src]").each((_, element) => {
-    const rawSrc = $(element).attr("src")?.trim();
-    if (!rawSrc) return;
-
-    let absoluteUrl: string;
-    try {
-      absoluteUrl = new URL(rawSrc, baseUrl).toString();
-    } catch {
-      return;
-    }
-
-    const label = normalizeLinkLabel($(element).attr("alt") ?? $(element).attr("title") ?? "image", absoluteUrl);
-    attachments.push({
-      label,
-      url: absoluteUrl,
-      note: "IMAGE",
-    });
-  });
-
   const dedupedAttachments = dedupeResourceLinks(attachments, MAX_LINKS_PER_KIND);
   const dedupedActions = dedupeResourceLinks(actionCandidates, MAX_LINKS_PER_KIND);
-  const attachmentTexts = await extractAttachmentTexts(dedupedAttachments);
+  const shouldExtractAttachmentTexts =
+    content.length < MIN_CONTENT_LENGTH_FOR_ATTACHMENT_SKIP && dedupedAttachments.length > 0;
+  const attachmentTexts = shouldExtractAttachmentTexts
+    ? await withTimeout(extractAttachmentTexts(dedupedAttachments), ATTACHMENT_EXTRACTION_TIMEOUT_MS, [])
+    : [];
 
   return {
     sourceTitle: title,
