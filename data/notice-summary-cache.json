@@ -528,5 +528,35 @@
       "extractedAt": "2026-05-14T14:14:47.884Z"
     },
     "expiresAt": 1779372887974
+  },
+  "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=34&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27015::v8": {
+    "value": {
+      "summary": "정부초청 외국인 장학생(GKS) 학사 관련 서식을 안내합니다.",
+      "bullets": [
+        "GKS 학사 관련 서식 제공",
+        "첨부파일에서 서식 다운로드 가능"
+      ],
+      "targetAudience": "정부초청 외국인 장학생(GKS)",
+      "deadline": "명시되지 않음",
+      "actionItems": [
+        "첨부파일에서 서식 다운로드"
+      ],
+      "benefits": [],
+      "requiredDocuments": [],
+      "contact": "국제협력과",
+      "caution": "명시되지 않음",
+      "calendarItems": [],
+      "actionLinks": [
+        {
+          "label": "서식 다운로드",
+          "url": "https://international.jnu.ac.kr/Board/ByteToFile.aspx?Seq=33697&filename=%ec%a0%95%eb%b6%80%ec%b4%88%ec%b2%ad+%ec%99%b8%ea%b5%ad%ec%9d%b8+%ec%9e%a5%ed%95%99%ec%83%9d+%ed%95%99%ec%82%ac+%ea%b4%80%eb%a0%a8+%ec%84%9c%ec%8b%9d(Forms).hwp",
+          "note": "정부초청 외국인 장학생 학사 관련 서식(Forms).hwp"
+        }
+      ],
+      "attachments": [],
+      "sourceTitle": "> 정부초청 외국인 장학생 (GKS) 학사 관련 서식(GKS Academic Affairs Forms)",
+      "extractedAt": "2026-05-14T14:15:15.901Z"
+    },
+    "expiresAt": 1779372916039
   }
 }
