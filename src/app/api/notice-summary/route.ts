@@ -10,6 +10,7 @@ type NoticeSummaryRequestBody = {
   url?: string;
   title?: string;
   sourceName?: string;
+  includeAttachmentAnalysis?: boolean;
 };
 
 export async function POST(request: Request) {
@@ -30,6 +31,7 @@ export async function POST(request: Request) {
   const url = body.url?.trim();
   const title = body.title?.trim();
   const sourceName = body.sourceName?.trim();
+  const includeAttachmentAnalysis = body.includeAttachmentAnalysis === true;
 
   if (!url || !title || !sourceName) {
     return NextResponse.json(
@@ -39,7 +41,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const summary = await generateNoticeSummary({ url, title, sourceName });
+    const summary = await generateNoticeSummary({ url, title, sourceName }, { includeAttachmentAnalysis });
     return NextResponse.json({ summary });
   } catch (error) {
     const message = error instanceof Error ? error.message : "AI 요약 중 오류가 발생했습니다.";

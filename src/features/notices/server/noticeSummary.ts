@@ -18,7 +18,6 @@ const MAX_HWPX_ATTACHMENTS_TO_PARSE = 2;
 const MAX_IMAGE_ATTACHMENTS_TO_PARSE = 2;
 const MAX_LINKS_PER_KIND = 6;
 const ATTACHMENT_EXTRACTION_TIMEOUT_MS = 3000;
-const MIN_CONTENT_LENGTH_FOR_ATTACHMENT_SKIP = 2400;
 
 const CONTENT_SELECTOR_CANDIDATES = [
   ".board_view_wrap",
@@ -85,6 +84,7 @@ export type NoticeSummaryResult = {
   actionLinks: NoticeResourceLink[];
   sourceTitle: string;
   extractedAt: string;
+  attachmentAnalysisState: "pending" | "complete";
   fromCache: boolean;
 };
 
@@ -125,6 +125,11 @@ type ExtractedNoticeDocument = {
   attachments: NoticeResourceLink[];
   actionCandidates: NoticeResourceLink[];
   attachmentTexts: NoticeResourceLink[];
+  attachmentAnalysisCompleted: boolean;
+};
+
+type GenerateNoticeSummaryOptions = {
+  includeAttachmentAnalysis?: boolean;
 };
 
 const CALENDAR_EVENT_TYPE_ALIASES: Record<string, string> = {
@@ -613,7 +618,11 @@ function extractInlineImageHints(html: string) {
   return Array.from(new Set(hints)).slice(0, 8);
 }
 
-async function pickBestContentBlock(html: string, baseUrl: string): Promise<ExtractedNoticeDocument> {
+async function pickBestContentBlock(
+  html: string,
+  baseUrl: string,
+  options: GenerateNoticeSummaryOptions = {},
+): Promise<ExtractedNoticeDocument> {
   const $ = load(html);
   $("script, style, noscript, iframe, svg, nav, footer, header, button, input, select, textarea").remove();
 
@@ -683,10 +692,11 @@ async function pickBestContentBlock(html: string, baseUrl: string): Promise<Extr
   const dedupedAttachments = dedupeResourceLinks(attachments, MAX_LINKS_PER_KIND);
   const dedupedActions = dedupeResourceLinks(actionCandidates, MAX_LINKS_PER_KIND);
   const shouldExtractAttachmentTexts =
-    content.length < MIN_CONTENT_LENGTH_FOR_ATTACHMENT_SKIP && dedupedAttachments.length > 0;
+    !!options.includeAttachmentAnalysis && dedupedAttachments.length > 0;
   const attachmentTexts = shouldExtractAttachmentTexts
     ? await withTimeout(extractAttachmentTexts(dedupedAttachments), ATTACHMENT_EXTRACTION_TIMEOUT_MS, [])
     : [];
+  const attachmentAnalysisCompleted = dedupedAttachments.length === 0 || !!options.includeAttachmentAnalysis;
 
   return {
     sourceTitle: title,
@@ -694,6 +704,7 @@ async function pickBestContentBlock(html: string, baseUrl: string): Promise<Extr
     attachments: dedupedAttachments,
     actionCandidates: dedupedActions,
     attachmentTexts,
+    attachmentAnalysisCompleted,
   };
 }
 
@@ -1033,11 +1044,19 @@ async function requestDeepSeekSummary(
   return parseSummaryPayload(rawText);
 }
 
-export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<NoticeSummaryResult> {
+export async function generateNoticeSummary(
+  input: NoticeSummaryInput,
+  options: GenerateNoticeSummaryOptions = {},
+): Promise<NoticeSummaryResult> {
   const cacheKey = `${input.url}::${SUMMARY_CACHE_VERSION}`;
   const memoryCache = getSummaryCache().get(cacheKey);
+  const needsAttachmentAnalysis = !!options.includeAttachmentAnalysis;
 
-  if (memoryCache && memoryCache.expiresAt > Date.now()) {
+  if (
+    memoryCache &&
+    memoryCache.expiresAt > Date.now() &&
+    (!needsAttachmentAnalysis || memoryCache.value.attachmentAnalysisState === "complete")
+  ) {
     return {
       ...memoryCache.value,
       fromCache: true,
@@ -1045,7 +1064,7 @@ export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<
   }
 
   const persistentCache = await readPersistentCache(cacheKey);
-  if (persistentCache) {
+  if (persistentCache && (!needsAttachmentAnalysis || persistentCache.attachmentAnalysisState === "complete")) {
     return {
       ...persistentCache,
       fromCache: true,
@@ -1053,7 +1072,7 @@ export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<
   }
 
   const { html } = await fetchNoticeDetailHtml(input.url);
-  const extracted = await pickBestContentBlock(html, input.url);
+  const extracted = await pickBestContentBlock(html, input.url, options);
   const summarized = await requestDeepSeekSummary(
     input,
     extracted.content,
@@ -1061,12 +1080,13 @@ export async function generateNoticeSummary(input: NoticeSummaryInput): Promise<
     extracted.actionCandidates,
     extracted.attachmentTexts,
   );
-  const value = {
+  const value: Omit<NoticeSummaryResult, "fromCache"> = {
     ...summarized,
     attachments: extracted.attachments,
     actionLinks: finalizeActionLinks(input.url, summarized.actionLinks, extracted.actionCandidates),
     sourceTitle: extracted.sourceTitle,
     extractedAt: new Date().toISOString(),
+    attachmentAnalysisState: extracted.attachmentAnalysisCompleted ? "complete" : "pending",
   };
 
   await writePersistentCache(cacheKey, value);

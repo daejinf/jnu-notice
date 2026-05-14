@@ -112,6 +112,7 @@ type NoticeSummaryData = {
     url: string;
     note: string;
   }>;
+  attachmentAnalysisState: "pending" | "complete";
   calendarItems: Array<{
     label: string;
     eventType: string;
@@ -141,6 +142,7 @@ type NoticeSummaryState = {
   status: "loading" | "success" | "error";
   data?: NoticeSummaryData;
   error?: string;
+  isRefreshing?: boolean;
 };
 
 type NoticeViewMode = "all" | "unread" | "bookmarks";
@@ -753,6 +755,33 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     }, 1800);
   }
 
+  async function requestNoticeSummary(notice: Notice, includeAttachmentAnalysis = false) {
+    const response = await fetch("/api/notice-summary", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        url: notice.url,
+        title: notice.title,
+        sourceName: notice.sourceName,
+        includeAttachmentAnalysis,
+      }),
+    });
+    const rawResponseText = await response.text();
+    const data = parseApiJsonResponse<NoticeSummaryApiResponse>(
+      rawResponseText,
+      "AI 요약 응답을 읽지 못했습니다.",
+    );
+    const summary = data.summary;
+
+    if (!response.ok || !summary) {
+      throw new Error(data.error ?? "AI 요약을 불러오지 못했습니다.");
+    }
+
+    return summary;
+  }
+
   async function handleNoticeSummary(notice: Notice) {
     const noticeId = getNoticeClientId(notice);
     const currentState = noticeSummaryById[noticeId];
@@ -777,27 +806,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
     }));
 
     try {
-      const response = await fetch("/api/notice-summary", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          url: notice.url,
-          title: notice.title,
-          sourceName: notice.sourceName,
-        }),
-      });
-      const rawResponseText = await response.text();
-      const data = parseApiJsonResponse<NoticeSummaryApiResponse>(
-        rawResponseText,
-        "AI 요약 응답을 읽지 못했습니다.",
-      );
-      const summary = data.summary;
-
-      if (!response.ok || !summary) {
-        throw new Error(data.error ?? "AI ?遺용튋???븍뜄???? 筌륁궢六??щ빍??");
-      }
+      const summary = await requestNoticeSummary(notice, false);
 
       setNoticeSummaryById((current) => ({
         ...current,
@@ -805,10 +814,42 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
           open: true,
           status: "success",
           data: summary,
+          isRefreshing: summary.attachmentAnalysisState === "pending",
         },
       }));
+
+      if (summary.attachmentAnalysisState === "pending") {
+        void requestNoticeSummary(notice, true)
+          .then((enrichedSummary) => {
+            setNoticeSummaryById((current) => ({
+              ...current,
+              [noticeId]: {
+                open: current[noticeId]?.open ?? true,
+                status: "success",
+                data: enrichedSummary,
+                isRefreshing: false,
+              },
+            }));
+          })
+          .catch(() => {
+            setNoticeSummaryById((current) => {
+              const existing = current[noticeId];
+              if (!existing || existing.status !== "success") {
+                return current;
+              }
+
+              return {
+                ...current,
+                [noticeId]: {
+                  ...existing,
+                  isRefreshing: false,
+                },
+              };
+            });
+          });
+      }
     } catch (summaryError) {
-      const message = summaryError instanceof Error ? summaryError.message : "AI ?遺용튋 餓???살첒揶쎛 獄쏆뮇源??됰뮸??덈뼄.";
+      const message = summaryError instanceof Error ? summaryError.message : "AI ?? ?? ? ??? ??????.";
       setNoticeSummaryById((current) => ({
         ...current,
         [noticeId]: {
@@ -1079,6 +1120,12 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
                               </p>
                             ) : null}
                           </div>
+
+                          {summaryState?.status === "success" && summaryState.isRefreshing ? (
+                            <p className="mt-2 text-xs text-violet-700">
+                              첨부파일 내용을 뒤에서 추가로 확인하고 있습니다. 본문 요약은 먼저 보여드리고 있어요.
+                            </p>
+                          ) : null}
 
                           {summaryState.status === "loading" ? (
                             <p className="mt-3 text-sm leading-6 text-violet-900">
