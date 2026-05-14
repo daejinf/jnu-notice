@@ -1108,5 +1108,41 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779377723820
+  },
+  "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=94930::v10": {
+    "value": {
+      "summary": "지구의 날(4월 22일)을 맞아 전국 소등행사가 진행됩니다. 생활관에서는 4월 22일 오후 8시부터 10분간 소등에 참여할 예정입니다. 재학생 여러분의 적극적인 동참을 부탁드립니다.",
+      "bullets": [
+        "지구의 날(4월 22일) 전국 소등행사 참여",
+        "소등 시간: 오후 8시부터 10분간",
+        "생활관 전체 소등 예정"
+      ],
+      "targetAudience": "광주생활관 입주생",
+      "deadline": "2026.04.22(수) 오후 8시~8시 10분",
+      "actionItems": [
+        "4월 22일 오후 8시부터 10분간 소등에 동참하세요."
+      ],
+      "benefits": [],
+      "requiredDocuments": [],
+      "contact": "명시되지 않음",
+      "caution": "소등 시간 외에는 정상 전등 사용 가능합니다.",
+      "calendarItems": [
+        {
+          "label": "지구의 날 전국 소등행사",
+          "eventType": "other",
+          "eventDate": "2026.04.22(수)",
+          "startAt": "2026.04.22(수) 20:00",
+          "endAt": "2026.04.22(수) 20:10",
+          "when": "2026.04.22(수) 20:00~20:10",
+          "note": "지구의 날 기념 소등행사 참여"
+        }
+      ],
+      "actionLinks": [],
+      "attachments": [],
+      "sourceTitle": "> 지구의 날! 전국 소등행사 참여 안내",
+      "extractedAt": "2026-05-14T15:49:22.757Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1779378562910
   }
 }
