@@ -272,5 +272,86 @@
       "extractedAt": "2026-05-14T04:57:26.643Z"
     },
     "expiresAt": 1779339446718
+  },
+  "https://sw.jnu.ac.kr/bbs/sw/1038/1043813/artclView.do::v8": {
+    "value": {
+      "summary": "2027-2028년도 풀브라이트 포스트닥 장학 프로그램 선발 공고. 온라인 설명회는 6/11, 원서 제출은 8/14까지.",
+      "bullets": [
+        "한미교육위원단 주관 풀브라이트 포스트닥 장학 프로그램",
+        "온라인 설명회: 6/11, 원서 마감: 8/14",
+        "우수 재학생 및 졸업생 지원 가능"
+      ],
+      "targetAudience": "우수 재학생 및 졸업생",
+      "deadline": "2027.08.14(금)",
+      "actionItems": [
+        "온라인 설명회 참석 (6/11)",
+        "원서 제출 (8/14까지)"
+      ],
+      "benefits": [
+        "명시되지 않음"
+      ],
+      "requiredDocuments": [
+        "명시되지 않음"
+      ],
+      "contact": "한미교육위원단 장학팀 (application@fulbright.or.kr, 02-3275-4023)",
+      "caution": "명시되지 않음",
+      "calendarItems": [
+        {
+          "label": "풀브라이트 포스트닥 장학 프로그램 온라인 설명회",
+          "eventType": "orientation",
+          "eventDate": "2027.06.11(금)",
+          "startAt": "2027.06.11(금)",
+          "endAt": "2027.06.11(금)",
+          "when": "2027.06.11(금)",
+          "note": "온라인 설명회 참석"
+        },
+        {
+          "label": "풀브라이트 포스트닥 장학 프로그램 원서 제출 마감",
+          "eventType": "apply_deadline",
+          "eventDate": "2027.08.14(금)",
+          "startAt": "2027.08.14(금)",
+          "endAt": "2027.08.14(금)",
+          "when": "2027.08.14(금)",
+          "note": "원서 제출 마감일"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "첨부파일 다운로드",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/840287/download.do",
+          "note": "프로그램 안내 요청 PDF"
+        },
+        {
+          "label": "첨부파일 다운로드",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/840288/download.do",
+          "note": "선발 공고 PDF"
+        },
+        {
+          "label": "첨부파일 다운로드",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/840289/download.do",
+          "note": "프로그램 포스터 JPG"
+        }
+      ],
+      "attachments": [
+        {
+          "label": "(붙임1) 2027-28년도 풀브라이트 미국 연구비 지원 포스트닥 장학 프로그램 안내 요청.pdf",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/840287/download.do",
+          "note": "DO"
+        },
+        {
+          "label": "(붙임2) 2027-2028년도 풀브라이트 포스트닥 장학 프로그램 선발 공고.pdf",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/840288/download.do",
+          "note": "DO"
+        },
+        {
+          "label": "(붙임3) 2027-2028년도 풀브라이트 포스트닥 장학 프로그램 포스터.jpg",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/840289/download.do",
+          "note": "DO"
+        }
+      ],
+      "sourceTitle": "K2Web Wizard",
+      "extractedAt": "2026-05-14T13:54:31.325Z"
+    },
+    "expiresAt": 1779371671411
   }
 }
