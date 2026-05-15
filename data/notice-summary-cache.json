@@ -1415,5 +1415,68 @@
       "attachmentAnalysisState": "pending"
     },
     "expiresAt": 1779468002671
+  },
+  "https://cvg.jnu.ac.kr/bbs/cvg/405/1043920/artclView.do::v10": {
+    "value": {
+      "summary": "AI융합대학에서 2026 한일 공동 고등교육 유학생 교류사업 운영 보조 1명을 모집합니다. 대상은 AI융합대학 소속 학부 4학년으로 일어 및 영어 능통자이며, 활동기간은 7월 27일부터 8월 21일까지입니다. 신청은 5월 20일까지 AI융합대학 205호로 지원서를 방문 제출해야 합니다.",
+      "bullets": [
+        "선발인원: 1명",
+        "대상: AI융합대학 학부 4학년, 일어 및 영어 능통자(일어 우선)",
+        "활동기간: 26.07.27.(월)~08.21.(금)",
+        "신청 마감: 5월 20일(수)",
+        "신청 방법: AI융합대학 205호 방문 제출"
+      ],
+      "targetAudience": "AI융합대학 소속 학부생 4학년, 일어 및 영어 능통자(일어 능통자 우선)",
+      "deadline": "5월 20일(수)",
+      "actionItems": [
+        "지원서 작성",
+        "AI융합대학 205호 방문 제출"
+      ],
+      "benefits": [
+        "장학금 지급"
+      ],
+      "requiredDocuments": [
+        "지원서"
+      ],
+      "contact": "인공지능학부실 방문(AI융합대학 205호)",
+      "caution": "명시되지 않음",
+      "calendarItems": [
+        {
+          "label": "2026 한일 공동 고등교육 유학생 교류사업 운영 보조 모집",
+          "eventType": "apply_deadline",
+          "eventDate": "2026.05.20(수)",
+          "startAt": "2026.05.20(수)",
+          "endAt": "2026.05.20(수)",
+          "when": "2026.05.20(수)",
+          "note": "지원서 방문 제출 마감일"
+        },
+        {
+          "label": "2026 한일 공동 고등교육 유학생 교류사업 운영 보조 활동",
+          "eventType": "program_start",
+          "eventDate": "2026.07.27(월)",
+          "startAt": "2026.07.27(월)",
+          "endAt": "2026.08.21(금)",
+          "when": "2026.07.27(월)~08.21(금)",
+          "note": "사업 운영 보조 활동 기간"
+        }
+      ],
+      "actionLinks": [],
+      "attachments": [
+        {
+          "label": "2026 한일 공동 고등교육 유학생 교류사업 도우미 지원서.hwp",
+          "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/840356/download.do",
+          "note": "DO"
+        },
+        {
+          "label": "2026 한일공동고등교육유학생교류사업 프로그램 일정.pdf",
+          "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/840357/download.do",
+          "note": "DO"
+        }
+      ],
+      "sourceTitle": "K2Web Wizard",
+      "extractedAt": "2026-05-15T16:40:21.791Z",
+      "attachmentAnalysisState": "pending"
+    },
+    "expiresAt": 1779468021891
   }
 }
