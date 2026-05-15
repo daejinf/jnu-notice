@@ -1,15 +1,27 @@
 {
-  "checkedAt": "2026-05-15T11:05:40.375Z",
+  "checkedAt": "2026-05-15T13:04:52.229Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "69171",
+          "title": "2026학년도 하계 계절학기 1차 폐강 교과목 공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69171",
+          "author": "학사과",
+          "date": "2026-05-15",
+          "views": 181,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
         {
           "id": "1043920",
           "title": "2026 한일 공동 고등교육 유학생 교류사업 운영 보조 모집(1명)",
           "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/1043920/artclView.do",
           "author": "AI융합대학",
           "date": "2026-05-15",
-          "views": 124,
+          "views": 126,
           "sourceType": "college",
           "sourceName": "AI융합대학",
           "category": "공지사항",
@@ -21,7 +33,7 @@
           "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/1043920/artclView.do",
           "author": "AI융합대학",
           "date": "2026-05-15",
-          "views": 124,
+          "views": 126,
           "sourceType": "college",
           "sourceName": "AI융합대학",
           "category": "공지사항",
@@ -33,7 +45,31 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27020",
           "author": "국제협력과",
           "date": "2026-05-15",
-          "views": 23,
+          "views": 25,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "27022",
+          "title": "[Notice Study Abroad-버디프로그램] 2026 전남대 국제여름학교 1기 버디 추가모집 ~5.18.(월) 17시까지...",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EB%B2%84%EB%94%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8&Seq=27022",
+          "author": "국제협력과",
+          "date": "2026-05-15",
+          "views": 15,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "27021",
+          "title": "[Notice Study Abroad-버디프로그램] 2026학년도 하계 국제여름학교 1기 버디프로그램 최종합격자 공고...",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EB%B2%84%EB%94%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8&Seq=27021",
+          "author": "국제협력과",
+          "date": "2026-05-15",
+          "views": 9,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
@@ -52,8 +88,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-05-15T11:05:40.375Z",
-      "totalCount": 4,
+      "fetchedAt": "2026-05-15T13:04:52.229Z",
+      "totalCount": 7,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
