@@ -1509,5 +1509,52 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779508157443
+  },
+  "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69143&cate=6::v10": {
+    "value": {
+      "summary": "정보보안 특허출원 특강이 5월 14일(목) 오후 5시에 공과대학 7호관 1층 사이버보안 학생라운지에서 개최됩니다. 특허명세서 작성 요령에 대한 기초 내용을 다루며, 관심 있는 학생은 누구나 참석 가능합니다.",
+      "bullets": [
+        "특허명세서 작성법에 대한 기초 특강",
+        "5월 14일(목) 오후 5시, 공과대학 7호관 1층 사이버보안 학생라운지",
+        "강사: 박성현 대표(오더나우)",
+        "사전 신청 없이 자유롭게 참석 가능"
+      ],
+      "targetAudience": "특허 출원에 관심 있는 전남대학교 학생",
+      "deadline": "명시되지 않음",
+      "actionItems": [
+        "5월 14일(목) 오후 5시에 공과대학 7호관 1층 사이버보안 학생라운지로 참석"
+      ],
+      "benefits": [
+        "특허명세서 작성 요령 습득"
+      ],
+      "requiredDocuments": [
+        "명시되지 않음"
+      ],
+      "contact": "정보보호특성화대학지원사업단, 062-530-4272",
+      "caution": "명시되지 않음",
+      "calendarItems": [
+        {
+          "label": "정보보안 특허출원 특강",
+          "eventType": "program_start",
+          "eventDate": "2026.05.14(목)",
+          "startAt": "2026.05.14(목)",
+          "endAt": "2026.05.14(목)",
+          "when": "2026.05.14(목) 오후 5시",
+          "note": "특허명세서 작성법 특강"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "인스타그램",
+          "url": "https://www.instagram.com/jnujeongboboho/",
+          "note": "정보보호특성화대학지원사업단 인스타그램"
+        }
+      ],
+      "attachments": [],
+      "sourceTitle": "공지사항 < 공지사항 < 커뮤니티 < 전남대학교 대표 홈페이지",
+      "extractedAt": "2026-05-16T04:40:08.258Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1779511208348
   }
 }
