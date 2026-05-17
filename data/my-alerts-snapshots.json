@@ -1,10 +1,23 @@
 {
-  "checkedAt": "2026-05-17T22:08:49.757Z",
+  "checkedAt": "2026-05-17T23:11:26.063Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-17T22:08:49.757Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ko-program-intro-view-741",
+          "title": "[여수캠] 2026-1학기. 학습법 특강 - AI와 Tool로 똑똑하게! '갓생' 학교 생활",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/741",
+          "author": "부속시설 글로벌교육원",
+          "date": "2026-05-18",
+          "views": 41,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-17T23:11:26.063Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
