@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-05-17T20:10:55.332Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7431
+  },
+  {
     "checkedAt": "2026-05-17T18:45:05.377Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -5725,72 +5731,5 @@
     ],
     "newNoticeCount": 22,
     "totalNoticeCount": 7457
-  },
-  {
-    "checkedAt": "2026-05-08T07:58:02.329Z",
-    "notices": [
-      {
-        "id": "pharmacy-1",
-        "title": "[5월 21일 (목)]2025학년도 후기 대학원 석박사학위 청구논문 공개발표 일정 안내",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/978/1043243/artclView.do",
-        "author": "약학부",
-        "date": "2026-05-08",
-        "views": 57,
-        "sourceType": "department",
-        "sourceName": "약학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "355",
-        "title": "2025학년도 차세대통신혁신융합대학사업단 하계 현장실습학기제 운영 (~ 05/15(금) 15:00까지)",
-        "url": "https://jnu.nccoss.kr/www/notice/view/355?bd=notice&page=1",
-        "author": "차세대통신혁신융합대학사업단",
-        "date": "2026-05-08",
-        "views": 10,
-        "sourceType": "center",
-        "sourceName": "차세대통신혁신융합대학사업단",
-        "category": "사업단 공지",
-        "isPinned": true
-      },
-      {
-        "id": "860",
-        "title": "New [홍보] 제1회 SW기업Day(5.15(금)/9:30~12:00)",
-        "url": "https://sojoong.kr/notice/notice-board/?uid=860&mod=document",
-        "author": "소프트웨어중심사업단",
-        "date": "2026-05-08",
-        "views": 61,
-        "sourceType": "center",
-        "sourceName": "소프트웨어중심사업단",
-        "category": "사업단 공지",
-        "isPinned": false
-      },
-      {
-        "id": "69093",
-        "title": "전남대학교 산학협력단 학술연구교수 채용 계획 공고",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69093",
-        "author": "민정준",
-        "date": "2026-05-08",
-        "views": 27,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "69085",
-        "title": "[LX MMA]2026 상반기 신입/경력사원 수시채용(~5.1...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69085",
-        "author": "취업지원실",
-        "date": "2026-05-07",
-        "views": 52,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 5,
-    "totalNoticeCount": 7456
   }
 ]
