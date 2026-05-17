@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-05-17T10:54:48.872Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8081
+  },
+  {
     "checkedAt": "2026-05-17T09:24:11.930Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6235,68 +6241,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8069
-  },
-  {
-    "checkedAt": "2026-05-07T18:59:08.171Z",
-    "notices": [
-      {
-        "id": "3642",
-        "title": "[오프라인 특강/선착순 50명] 2026학년도 상반기 면접전략 수립 특강[5.18.(월)]",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3642",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-05-08",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3643",
-        "title": "[모의면접(인성/역량 면접)/선착순 13명] 2026학년도 실전대비 모의면접 컨설팅[5. 19.(화)]",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3643",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-05-08",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3644",
-        "title": "[모의면접(PT/역량 면접)/선착순 13명] 2026학년도 실전대비 모의면접 컨설팅[5. 20.(수)]",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3644",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-05-08",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3645",
-        "title": "[모의면접(토의/토론),선착순 12명] 2026학년도 상반기 실전대비 모의면접 컨설팅[5. 21.(목)]",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3645",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-05-08",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 4,
-    "totalNoticeCount": 7567
   }
 ]
