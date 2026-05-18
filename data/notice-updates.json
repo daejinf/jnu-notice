@@ -1,5 +1,36 @@
 [
   {
+    "checkedAt": "2026-05-18T23:45:12.451Z",
+    "notices": [
+      {
+        "id": "special-edu-1",
+        "title": "2026년 「CNU 반올림 클래스」 참여학생 모집 안내",
+        "url": "https://spededu.jnu.ac.kr/bbs/spededu/2321/1044268/artclView.do",
+        "author": "특수교육학부",
+        "date": "2026-05-19",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "특수교육학부",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "768",
+        "title": "재학생 대학 2026년 영어학습센터 1:1 무료 코칭 안내 새글",
+        "url": "https://sea.jnu.ac.kr/bbs/sea/291/1044267/artclView.do",
+        "author": "김영신",
+        "date": "2026-05-19",
+        "views": 1,
+        "sourceType": "college",
+        "sourceName": "수산해양대학(여수)",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 2,
+    "totalNoticeCount": 7526
+  },
+  {
     "checkedAt": "2026-05-18T22:38:23.912Z",
     "notices": [
       {
@@ -6513,11 +6544,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8076
-  },
-  {
-    "checkedAt": "2026-05-09T09:04:14.054Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7456
   }
 ]
