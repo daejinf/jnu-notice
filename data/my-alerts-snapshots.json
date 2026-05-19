@@ -1,10 +1,47 @@
 {
-  "checkedAt": "2026-05-18T23:45:12.191Z",
+  "checkedAt": "2026-05-19T04:33:25.323Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-18T23:45:12.191Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "3982",
+          "title": "여름방학 AI교육캠프 및 경진대회 참여 안내(~05.22.(금)까지)",
+          "url": "https://www.aicoss.kr/www/notice/view/3982?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-05-19",
+          "views": 2,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "69194",
+          "title": "KOICA 프로젝트 봉사단 (8기) 가나 모집",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69194",
+          "author": "전남대학교광주국제개발협력센터",
+          "date": "2026-05-19",
+          "views": 133,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "69193",
+          "title": "2026학년도 하계 계절학기 타 대학교(한국과학기술원) 교류수...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69193",
+          "author": "학사과",
+          "date": "2026-05-19",
+          "views": 44,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-19T04:33:25.323Z",
+      "totalCount": 3,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
