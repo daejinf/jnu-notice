@@ -1556,5 +1556,73 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779511208348
+  },
+  "https://www.aicoss.kr/www/notice/view/3983?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90::v10": {
+    "value": {
+      "summary": "2026학년도 하계 계절학기 서울과학기술대학교 학점교류 신청을 안내합니다. 신청기간은 5월 28일(목) 9시까지이며, 이메일로 제출해야 합니다. 수업기간은 7월 6일부터 7월 24일까지입니다.",
+      "bullets": [
+        "신청기간: ~2026.5.28.(목) 9:00",
+        "수업기간: 2026.7.6.(월)~7.24.(금)",
+        "수강료: 1학점당 35,500원",
+        "교통비 지원 및 사업단 프로그램 참여 혜택"
+      ],
+      "targetAudience": "전남대학교 재학생",
+      "deadline": "2026.5.28.(목) 9:00",
+      "actionItems": [
+        "서울과학기술대학교 학점교류 추천 학생 명단(양식) 작성",
+        "이메일(ebpark@jnu.ac.kr)로 제출"
+      ],
+      "benefits": [
+        "오프라인 시험 교통비 지원",
+        "사업단 주요 프로그램(해커톤, 경진대회, 글로벌 프로그램 등) 참여 혜택",
+        "주요 프로그램 선발시 가산점 부여"
+      ],
+      "requiredDocuments": [
+        "서울과학기술대학교 학점교류 추천 학생 명단(양식)"
+      ],
+      "contact": "수업 관련: 서울과학기술대학교 인공지능혁신융합대학사업단 02-970-9742, 학점교류 신청 관련: 전남대학교 인공지능혁신융합대학사업단 062-530-5381",
+      "caution": "학점교류 신청 유의사항 필독: https://aicoss.kr/www/notice/view/2305",
+      "calendarItems": [
+        {
+          "label": "서울과학기술대학교 학점교류 신청 마감",
+          "eventType": "apply_deadline",
+          "eventDate": "2026.05.28(목)",
+          "startAt": "2026.05.28(목)",
+          "endAt": "2026.05.28(목)",
+          "when": "2026.05.28(목) 9:00",
+          "note": "지원서 이메일 제출 마감"
+        },
+        {
+          "label": "서울과학기술대학교 학점교류 학번부여",
+          "eventType": "announcement",
+          "eventDate": "2026.06.17(수)",
+          "startAt": "2026.06.17(수)",
+          "endAt": "2026.06.17(수)",
+          "when": "2026.06.17(수) 이후",
+          "note": "과기대 포털에서 학번 확인"
+        },
+        {
+          "label": "서울과학기술대학교 하계 계절학기 수업기간",
+          "eventType": "class_start",
+          "eventDate": "2026.07.06(월)",
+          "startAt": "2026.07.06(월)",
+          "endAt": "2026.07.24(금)",
+          "when": "2026.07.06(월) ~ 07.24(금)",
+          "note": "학점교류 수업 진행"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "학점교류 신청 유의사항",
+          "url": "https://aicoss.kr/www/notice/view/2305",
+          "note": "신청 전 필독"
+        }
+      ],
+      "attachments": [],
+      "sourceTitle": "전남대학교 인공지능혁신융합대학사업단",
+      "extractedAt": "2026-05-20T06:06:46.409Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1779862006494
   }
 }
