@@ -1,5 +1,24 @@
 [
   {
+    "checkedAt": "2026-05-21T15:50:59.897Z",
+    "notices": [
+      {
+        "id": "software-1",
+        "title": "(5/22, 10:00~16:30) 지역 내 혈액 확보를 위한 헌혈 행사 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1044735/artclView.do",
+        "author": "오승하",
+        "date": "2026-05-21",
+        "views": 10,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      }
+    ],
+    "newNoticeCount": 1,
+    "totalNoticeCount": 8082
+  },
+  {
     "checkedAt": "2026-05-21T11:54:01.654Z",
     "notices": [
       {
@@ -23,18 +42,6 @@
         "views": 11,
         "sourceType": "department",
         "sourceName": "국어국문학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "56",
-        "title": "[공지사항] [2026년 대학정보공시] 학생 창업 현황 자료 제출 요청(26.05.27.수 까지)",
-        "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1044724/artclView.do",
-        "author": "인공지능학부",
-        "date": "2026-05-21",
-        "views": 11,
-        "sourceType": "department",
-        "sourceName": "인공지능학부",
         "category": "공지사항",
         "isPinned": false
       },
@@ -63,7 +70,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 5,
+    "newNoticeCount": 4,
     "totalNoticeCount": 7529
   },
   {
@@ -9949,11 +9956,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8075
-  },
-  {
-    "checkedAt": "2026-05-10T15:14:14.327Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7462
   }
 ]
