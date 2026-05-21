@@ -1,10 +1,23 @@
 {
-  "checkedAt": "2026-05-20T23:54:20.388Z",
+  "checkedAt": "2026-05-21T04:43:16.042Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-20T23:54:20.388Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "27032",
+          "title": "[Visa]외국인 유학생 비자관련 Visa FAQ",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=33&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27032",
+          "author": "국제협력과",
+          "date": "2026-05-21",
+          "views": 4,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-21T04:43:16.042Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
