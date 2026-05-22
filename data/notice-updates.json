@@ -1,5 +1,60 @@
 [
   {
+    "checkedAt": "2026-05-22T12:35:26.333Z",
+    "notices": [
+      {
+        "id": "software-3",
+        "title": "(~5/25) SK쉴더스 루키즈 6기 : SK쉴더스 지능형 애플리케이션 개발자 양성과정 안",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1044869/artclView.do",
+        "author": "오승하",
+        "date": "2026-05-22",
+        "views": 32,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "software-1",
+        "title": "(5/22~6/22, 18:00) 2026학년도 2학기 국가장학금 1차 신청 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1044876/artclView.do",
+        "author": "오승하",
+        "date": "2026-05-22",
+        "views": 4,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "software-2",
+        "title": "(6/1~7/1, 17:00) 2026 학생 포트폴리오 경진대회 개최 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1044874/artclView.do",
+        "author": "오승하",
+        "date": "2026-05-22",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "3280",
+        "title": "2026학년도 하계 계절학기 타 대학교(호남대) 수학 추천 안내",
+        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1044882/artclView.do",
+        "author": "관리자",
+        "date": "2026-05-22",
+        "views": 4,
+        "sourceType": "department",
+        "sourceName": "전기공학과",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 4,
+    "totalNoticeCount": 8107
+  },
+  {
     "checkedAt": "2026-05-22T09:49:53.543Z",
     "notices": [
       {
@@ -159,18 +214,6 @@
         "isPinned": false
       },
       {
-        "id": "1087",
-        "title": "[교내활동] 5월 4주차 교내프로그램 소개 새글",
-        "url": "https://humanecology.jnu.ac.kr/bbs/humanecology/1870/1044878/artclView.do",
-        "author": "성수행",
-        "date": "2026-05-22",
-        "views": 13,
-        "sourceType": "college",
-        "sourceName": "생활과학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "1268",
         "title": "2026학년도 2학기 국가장학금 1차 신청 안내",
         "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1044866/artclView.do",
@@ -243,7 +286,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 20,
+    "newNoticeCount": 19,
     "totalNoticeCount": 7532
   },
   {
@@ -10674,36 +10717,5 @@
     ],
     "newNoticeCount": 35,
     "totalNoticeCount": 8074
-  },
-  {
-    "checkedAt": "2026-05-11T00:07:32.536Z",
-    "notices": [
-      {
-        "id": "69099",
-        "title": "[광산구장애인복지관] 2026년도 현장중심·교감중심·광산형 장...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69099",
-        "author": "학생과",
-        "date": "2026-05-11",
-        "views": 4,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "모집공고",
-        "isPinned": false
-      },
-      {
-        "id": "2147",
-        "title": "2026 AI에듀톤(Edu-thon)대회 참가 안내",
-        "url": "https://hisedu.jnu.ac.kr/bbs/hisedu/2296/1043279/artclView.do",
-        "author": "역사교육과",
-        "date": "2026-05-11",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "역사교육과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8075
   }
 ]
