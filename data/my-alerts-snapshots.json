@@ -1,31 +1,19 @@
 {
-  "checkedAt": "2026-05-22T01:36:14.553Z",
+  "checkedAt": "2026-05-22T05:50:45.571Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
         {
-          "id": "69218",
-          "title": "[한국농어촌공사] 농촌공간계획 숏폼 공모전 안내",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69218",
-          "author": "학생과",
+          "id": "software-1",
+          "title": "(~5/25) 2027학년도 1학기 국제인턴(디즈니 월드) 프로그램 참가자 모집 협조 요청",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1044858/artclView.do",
+          "author": "오승하",
           "date": "2026-05-22",
-          "views": 10,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
-          "isPinned": false
-        },
-        {
-          "id": "69217",
-          "title": "[국민대학교 차세대통신사업단] 2026 다학제간캡스톤디자인(차...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69217",
-          "author": "학생과",
-          "date": "2026-05-22",
-          "views": 10,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
-          "isPinned": false
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
         },
         {
           "id": "69222",
@@ -33,10 +21,22 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69222",
           "author": "인재양성실",
           "date": "2026-05-22",
-          "views": 8,
+          "views": 77,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "69218",
+          "title": "[한국농어촌공사] 농촌공간계획 숏폼 공모전 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69218",
+          "author": "학생과",
+          "date": "2026-05-22",
+          "views": 17,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -45,7 +45,67 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27034",
           "author": "국제협력과",
           "date": "2026-05-22",
-          "views": 8,
+          "views": 17,
+          "sourceType": "center",
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "69224",
+          "title": "2026학년도 하계 계절학기 타 대학교(호남대) 교류수학 추천...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69224",
+          "author": "학사과",
+          "date": "2026-05-22",
+          "views": 16,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "69217",
+          "title": "[국민대학교 차세대통신사업단] 2026 다학제간캡스톤디자인(차...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69217",
+          "author": "학생과",
+          "date": "2026-05-22",
+          "views": 16,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "95350",
+          "title": "이룰관(7동), 한울관(8동) 저수조 청소, 방역, 에어컨 청소 안내 Notice on ...",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=95350",
+          "author": "생활안내 이룰관(7동), 한울관(8동) 저수조 청소, 방역, 에어컨 청소 안내 Notice on ...",
+          "date": "2026-05-22",
+          "views": 12,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "95349",
+          "title": "2026학년도 1학기 5월 정기점검 안내 Notice for regular inspection",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=95349",
+          "author": "점검안내 2026학년도 1학기 5월 정기점검 안내 Notice for regular inspection",
+          "date": "2026-05-22",
+          "views": 9,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "27035",
+          "title": "[Event]2026년 Study in Korea 서포터즈 모집 공고",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=4&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27035",
+          "author": "국제협력과",
+          "date": "2026-05-22",
+          "views": 5,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
@@ -64,8 +124,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-05-22T01:36:14.553Z",
-      "totalCount": 5,
+      "fetchedAt": "2026-05-22T05:50:45.571Z",
+      "totalCount": 10,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
