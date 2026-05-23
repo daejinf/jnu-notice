@@ -1,10 +1,23 @@
 {
-  "checkedAt": "2026-05-22T23:46:10.708Z",
+  "checkedAt": "2026-05-23T04:07:39.200Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-05-22T23:46:10.708Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "894",
+          "title": "New [모집공고] SW중심대학사업단 2026년 하계 계절학기 인턴십(현장실습) 추가 학생 모집",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=894&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-05-23",
+          "views": 65,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-05-23T04:07:39.200Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     }
