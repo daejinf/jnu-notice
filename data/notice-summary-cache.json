@@ -1675,5 +1675,45 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1779944642914
+  },
+  "https://sojoong.kr/notice/notice-board/?uid=895&mod=document::v10": {
+    "value": {
+      "summary": "2026 제10회 디지털 경진대회 발표 평가 운영시간표를 안내합니다. 참가확인서가 필요하면 이메일로 요청하시기 바랍니다. 문의처는 062-530-5364입니다.",
+      "bullets": [
+        "2026 제10회 디지털 경진대회 발표 평가 운영시간표 안내",
+        "참가확인서 필요 시 이메일(rha852@jnu.ac.kr)로 요청"
+      ],
+      "targetAudience": "디지털 경진대회 참가자",
+      "deadline": "명시되지 않음",
+      "actionItems": [
+        "발표 평가 일정 확인",
+        "참가확인서 필요 시 이메일 요청"
+      ],
+      "benefits": [
+        "명시되지 않음"
+      ],
+      "requiredDocuments": [
+        "참가확인서(필요 시)"
+      ],
+      "contact": "062-530-5364, rha852@jnu.ac.kr",
+      "caution": "참가확인서는 이메일로 요청",
+      "calendarItems": [
+        {
+          "label": "2026 제10회 디지털 경진대회 발표 평가",
+          "eventType": "other",
+          "eventDate": "명시되지 않음",
+          "startAt": "명시되지 않음",
+          "endAt": "명시되지 않음",
+          "when": "명시되지 않음",
+          "note": "발표 평가 운영시간표 확인"
+        }
+      ],
+      "actionLinks": [],
+      "attachments": [],
+      "sourceTitle": "공지사항 – 전남대학교 소프트웨어 중심대학",
+      "extractedAt": "2026-05-28T05:01:03.858Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1780549263956
   }
 }
