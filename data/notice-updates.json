@@ -1,5 +1,24 @@
 [
   {
+    "checkedAt": "2026-05-28T14:24:00.583Z",
+    "notices": [
+      {
+        "id": "1737",
+        "title": "[국가보안기술연구소] 채용설명회 및 채용상담회(6/2)",
+        "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1045195/artclView.do",
+        "author": "관리자",
+        "date": "2026-05-28",
+        "views": 14,
+        "sourceType": "department",
+        "sourceName": "컴퓨터정보통신공학과",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 1,
+    "totalNoticeCount": 8101
+  },
+  {
     "checkedAt": "2026-05-28T10:24:37.109Z",
     "notices": [
       {
@@ -123,18 +142,6 @@
         "isPinned": false
       },
       {
-        "id": "1787",
-        "title": "2026년 「CNU나눔-전공연계 국내봉사」 참여팀 모집 안내",
-        "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1045215/artclView.do",
-        "author": "간호학과(간호대)",
-        "date": "2026-05-28",
-        "views": 13,
-        "sourceType": "department",
-        "sourceName": "간호학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "889",
         "title": "2026년 「CNU나눔-전공연계 국내봉사」 참여팀 모집 새글",
         "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1045198/artclView.do",
@@ -143,18 +150,6 @@
         "views": 12,
         "sourceType": "college",
         "sourceName": "약학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "889",
-        "title": "2026년 「CNU나눔-전공연계 국내봉사」 참여팀 모집",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1045198/artclView.do",
-        "author": "약학부",
-        "date": "2026-05-28",
-        "views": 12,
-        "sourceType": "department",
-        "sourceName": "약학부",
         "category": "공지사항",
         "isPinned": false
       },
@@ -179,18 +174,6 @@
         "views": 9,
         "sourceType": "college",
         "sourceName": "약학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "890",
-        "title": "2026년 6월 도서관 이용교육 안내",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1045200/artclView.do",
-        "author": "약학부",
-        "date": "2026-05-28",
-        "views": 9,
-        "sourceType": "department",
-        "sourceName": "약학부",
         "category": "공지사항",
         "isPinned": false
       },
@@ -341,7 +324,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 28,
+    "newNoticeCount": 25,
     "totalNoticeCount": 7517
   },
   {
@@ -8841,11 +8824,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8061
-  },
-  {
-    "checkedAt": "2026-05-16T16:36:24.079Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 8081
   }
 ]
