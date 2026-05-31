@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-05-31T13:02:48.810Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8120
+  },
+  {
     "checkedAt": "2026-05-31T11:21:10.783Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -8370,48 +8376,5 @@
     ],
     "newNoticeCount": 2,
     "totalNoticeCount": 7526
-  },
-  {
-    "checkedAt": "2026-05-18T22:38:23.912Z",
-    "notices": [
-      {
-        "id": "3274",
-        "title": "2026 학생포트폴리오 경진대회 안내",
-        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1044237/artclView.do",
-        "author": "관리자",
-        "date": "2026-05-18",
-        "views": 34,
-        "sourceType": "department",
-        "sourceName": "전기공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "436",
-        "title": "[공학교육혁신센터] 2026 학생 포트폴리오 경진대회 개최 안내(6/1~7/1 17:00)",
-        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1044244/artclView.do",
-        "author": "관리자",
-        "date": "2026-05-18",
-        "views": 18,
-        "sourceType": "department",
-        "sourceName": "전자컴퓨터공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1732",
-        "title": "[공학교육혁신센터] 2026 학생 포트폴리오 경진대회 개최 안내(6/1~7/1 17:00)",
-        "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1044245/artclView.do",
-        "author": "관리자",
-        "date": "2026-05-18",
-        "views": 16,
-        "sourceType": "department",
-        "sourceName": "컴퓨터정보통신공학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 3,
-    "totalNoticeCount": 8081
   }
 ]
