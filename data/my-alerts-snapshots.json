@@ -1,15 +1,40 @@
 {
-  "checkedAt": "2026-06-02T22:04:41.774Z",
+  "checkedAt": "2026-06-03T00:02:30.019Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-06-02T22:04:41.774Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "69312",
+          "title": "2027년 지역인재7급 수습직원 선발시험 준비반 모집",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69312",
+          "author": "진로취업지원실",
+          "date": "2026-06-03",
+          "views": 13,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-06-03T00:02:30.019Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "69312",
+          "title": "2027년 지역인재7급 수습직원 선발시험 준비반 모집",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69312",
+          "author": "진로취업지원실",
+          "date": "2026-06-03",
+          "views": 13,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
         {
           "id": "53422",
           "title": "[국가보안기술연구소(국가보안기술 전문연구기관)] 2026년 1차 정규직 채용설명회(특강)(채용직무: 일반행정, IT인프라)(기관 기념품 증정)",
@@ -189,6 +214,20 @@
           "statusKind": "deadline"
         },
         {
+          "id": "53439",
+          "title": "2027년 지역인재7급 수습직원 선발시험 준비반 모집",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53439",
+          "author": "취업진로포털 추천채용",
+          "date": "2026-06-03",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 추천채용",
+          "category": "추천채용",
+          "isPinned": false,
+          "statusLabel": "D-13",
+          "statusKind": "deadline"
+        },
+        {
           "id": "53386",
           "title": "[경영대학] 주식회사 한국그린피아 신입사원 채용",
           "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53386",
@@ -223,22 +262,10 @@
           "sourceName": "취업진로포털 추천채용",
           "category": "추천채용",
           "isPinned": false
-        },
-        {
-          "id": "53397",
-          "title": "[한샘]채용전환형 인턴 영업직 (직매장 영업 / SC, Space Coordinator) 채용★학교 추천채용(~5.25.(월)까지)",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53397",
-          "author": "취업진로포털 추천채용",
-          "date": "2026-06-03",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 추천채용",
-          "category": "추천채용",
-          "isPinned": false
         }
       ],
-      "fetchedAt": "2026-06-02T22:04:41.774Z",
-      "totalCount": 18,
+      "fetchedAt": "2026-06-03T00:02:30.019Z",
+      "totalCount": 19,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
