@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-06-03T05:15:08.579Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7550
+  },
+  {
     "checkedAt": "2026-06-03T00:02:31.043Z",
     "notices": [
       {
@@ -7196,60 +7202,5 @@
     ],
     "newNoticeCount": 1,
     "totalNoticeCount": 8082
-  },
-  {
-    "checkedAt": "2026-05-21T11:54:01.654Z",
-    "notices": [
-      {
-        "id": "ai-major-1",
-        "title": "[2026년 대학정보공시] 학생 창업 현황 자료 제출 요청(26.05.27.수 까지)",
-        "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1044724/artclView.do",
-        "author": "인공지능학부",
-        "date": "2026-05-21",
-        "views": 11,
-        "sourceType": "department",
-        "sourceName": "인공지능학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "2534",
-        "title": "2026학년도 2학기 국가장학금 1차 신청 안내",
-        "url": "https://korean.jnu.ac.kr/bbs/korean/1637/1044728/artclView.do",
-        "author": "국어국문학과",
-        "date": "2026-05-21",
-        "views": 11,
-        "sourceType": "department",
-        "sourceName": "국어국문학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "856",
-        "title": "2026학년도 2학기 국가장학금 1차 신청 안내",
-        "url": "https://jnula.jnu.ac.kr/bbs/jnula/655/1044727/artclView.do",
-        "author": "김보경",
-        "date": "2026-05-21",
-        "views": 10,
-        "sourceType": "department",
-        "sourceName": "조경학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "773",
-        "title": "2026학년도「제27기 학생홍보대사」추가 선발 안내",
-        "url": "https://agro.jnu.ac.kr/bbs/agro/444/1044721/artclView.do",
-        "author": "응용식물학과",
-        "date": "2026-05-21",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "응용식물학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 4,
-    "totalNoticeCount": 7529
   }
 ]
