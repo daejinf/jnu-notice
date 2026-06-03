@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-06-03T10:26:10.226Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7540
+  },
+  {
     "checkedAt": "2026-06-03T05:15:08.579Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -7183,24 +7189,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8092
-  },
-  {
-    "checkedAt": "2026-05-21T15:50:59.897Z",
-    "notices": [
-      {
-        "id": "software-1",
-        "title": "(5/22, 10:00~16:30) 지역 내 혈액 확보를 위한 헌혈 행사 안내",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1044735/artclView.do",
-        "author": "오승하",
-        "date": "2026-05-21",
-        "views": 10,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      }
-    ],
-    "newNoticeCount": 1,
-    "totalNoticeCount": 8082
   }
 ]
