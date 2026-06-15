@@ -1,5 +1,24 @@
 [
   {
+    "checkedAt": "2026-06-15T23:24:30.241Z",
+    "notices": [
+      {
+        "id": "philosophy-1",
+        "title": "(재입학) 2026학년도 2학기 학부 및 대학원 재입학 실시 안내",
+        "url": "http://philos.jnu.ac.kr/bbs/philos/2261/1046806/artclView.do",
+        "author": "철학과",
+        "date": "2026-06-16",
+        "views": 0,
+        "sourceType": "department",
+        "sourceName": "철학과",
+        "category": "공지사항",
+        "isPinned": true
+      }
+    ],
+    "newNoticeCount": 1,
+    "totalNoticeCount": 8133
+  },
+  {
     "checkedAt": "2026-06-15T21:37:09.382Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -9094,36 +9113,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7536
-  },
-  {
-    "checkedAt": "2026-06-01T16:47:19.447Z",
-    "notices": [
-      {
-        "id": "2377",
-        "title": "2026년 「CNU 나눔-전공연계 국내봉사」참여팀 모집 공고",
-        "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1045492/artclView.do",
-        "author": "윤이현",
-        "date": "2026-06-01",
-        "views": 3,
-        "sourceType": "department",
-        "sourceName": "지리학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2378",
-        "title": "2026년 2학기 농림축산식품부 청년창업농장학생 선발 안내",
-        "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1045493/artclView.do",
-        "author": "윤이현",
-        "date": "2026-06-01",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "지리학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 7558
   }
 ]

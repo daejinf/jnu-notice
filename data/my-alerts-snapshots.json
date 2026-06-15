@@ -1,15 +1,27 @@
 {
-  "checkedAt": "2026-06-15T21:37:08.365Z",
+  "checkedAt": "2026-06-15T23:24:29.148Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [],
-      "fetchedAt": "2026-06-15T21:37:08.365Z",
+      "fetchedAt": "2026-06-15T23:24:29.148Z",
       "totalCount": 0,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "philosophy-1",
+          "title": "(재입학) 2026학년도 2학기 학부 및 대학원 재입학 실시 안내",
+          "url": "http://philos.jnu.ac.kr/bbs/philos/2261/1046806/artclView.do",
+          "author": "철학과",
+          "date": "2026-06-16",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "철학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
         {
           "id": "53406",
           "title": "[대한항공] 대한항공 2026 항공우주연구원/ 하계인턴 모집설명회(채용직무: 기술직 연구원(항공우주, 기계, 전기, 전자, 컴퓨터, S/W, 산업공학/ 하계인턴: 전공제한 없음)(참여특전: 소정의 기념품 증정, 선착순)",
@@ -239,8 +251,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-06-15T21:37:08.365Z",
-      "totalCount": 18,
+      "fetchedAt": "2026-06-15T23:24:29.148Z",
+      "totalCount": 19,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
