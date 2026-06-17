@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-06-17T16:03:37.340Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 5273
+  },
+  {
     "checkedAt": "2026-06-17T11:57:53.307Z",
     "notices": [
       {
@@ -327,18 +333,6 @@
         "isPinned": false
       },
       {
-        "id": "2796",
-        "title": "[필독] 2026학년도 1학기 졸업논문 심사본 제출 안내 새글",
-        "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1047116/artclView.do",
-        "author": "자율전공학부",
-        "date": "2026-06-17",
-        "views": 12,
-        "sourceType": "college",
-        "sourceName": "자율전공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "899",
         "title": "2026학년도 1학기 응원장학생 선발 안내 (6.19.~6.25.) 새글",
         "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1047150/artclView.do",
@@ -359,18 +353,6 @@
         "views": 11,
         "sourceType": "department",
         "sourceName": "지역·바이오시스템공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "899",
-        "title": "2026학년도 1학기 응원장학생 선발 안내 (6.19.~6.25.)",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1047150/artclView.do",
-        "author": "약학부",
-        "date": "2026-06-17",
-        "views": 11,
-        "sourceType": "department",
-        "sourceName": "약학부",
         "category": "공지사항",
         "isPinned": false
       },
@@ -521,7 +503,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 43,
+    "newNoticeCount": 41,
     "totalNoticeCount": 7856
   },
   {
@@ -10764,11 +10746,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7540
-  },
-  {
-    "checkedAt": "2026-06-03T05:15:08.579Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7550
   }
 ]
