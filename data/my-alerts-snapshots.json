@@ -1,15 +1,40 @@
 {
-  "checkedAt": "2026-06-21T15:31:29.065Z",
+  "checkedAt": "2026-06-21T17:11:33.177Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-06-21T15:31:29.065Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ko-program-intro-view-746",
+          "title": "전남대학교 발전계획(2026-2029) SNS 댓글 이벤트(2026.6.22.~6.29.)",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/746",
+          "author": "기획처",
+          "date": "2026-06-22",
+          "views": 237,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": true
+        }
+      ],
+      "fetchedAt": "2026-06-21T17:11:33.177Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "ko-program-intro-view-746",
+          "title": "전남대학교 발전계획(2026-2029) SNS 댓글 이벤트(2026.6.22.~6.29.)",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/746",
+          "author": "기획처",
+          "date": "2026-06-22",
+          "views": 237,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": true
+        },
         {
           "id": "53453",
           "title": "[쿠팡풀필먼트서비스(유)] 물류 현장 관리자 채용 설명회(직무: 현장관리자 및 학업 병행 및 방학 맞춤형 유연 계약직)(다과 및 기념품 증정)",
@@ -233,8 +258,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-06-21T15:31:29.065Z",
-      "totalCount": 18,
+      "fetchedAt": "2026-06-21T17:11:33.177Z",
+      "totalCount": 19,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
