@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-06-25T23:02:58.733Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8106
+  },
+  {
     "checkedAt": "2026-06-25T21:18:37.270Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -12784,72 +12790,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7547
-  },
-  {
-    "checkedAt": "2026-06-11T13:05:26.216Z",
-    "notices": [
-      {
-        "id": "software-1",
-        "title": "(~7/7, 18시까지) ★2026년 8월(2025학년도 후기) 졸업예정자 졸업논문(주전공",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1046425/artclView.do",
-        "author": "오승하",
-        "date": "2026-06-11",
-        "views": 61,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "horticulture-1",
-        "title": "[대학] 2026년도 1학기 '원예생명공학실험실습1' 구두발표(평가) 일",
-        "url": "https://hort.jnu.ac.kr/bbs/hort/441/1046429/artclView.do",
-        "author": "대학",
-        "date": "2026-06-11",
-        "views": 25,
-        "sourceType": "department",
-        "sourceName": "원예생명공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "69381",
-        "title": "전남대학교 생체재료개발센터 직원(행정지원) 채용 공고",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69381",
-        "author": "생체재료개발센터",
-        "date": "2026-06-11",
-        "views": 113,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "69386",
-        "title": "[기업탐방 및 현직자멘토링]국립아시아문화전당(*교류홍보직무)",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69386",
-        "author": "취업지원실",
-        "date": "2026-06-11",
-        "views": 32,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "69359",
-        "title": "[대전해든학교] 2026학년도 여름계절학교 교육봉사자 3차 모집",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=69359",
-        "author": "학생과",
-        "date": "2026-06-10",
-        "views": 48,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "모집공고",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 5,
-    "totalNoticeCount": 8135
   }
 ]
