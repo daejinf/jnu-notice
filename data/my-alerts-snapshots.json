@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-06-27T04:41:22.459Z",
+  "checkedAt": "2026-06-27T07:41:07.095Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [],
-      "fetchedAt": "2026-06-27T04:41:22.459Z",
+      "fetchedAt": "2026-06-27T07:41:07.095Z",
       "totalCount": 0,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
@@ -16,10 +16,22 @@
           "url": "https://hsdorm.jnu.ac.kr/Board/Board.aspx?BoardID=50&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=96080",
           "author": "2026학년도 하계 청진관(화순) 입주 안내",
           "date": "2026-06-27",
-          "views": 69,
+          "views": 87,
           "sourceType": "center",
           "sourceName": "화순생활관",
           "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "219",
+          "title": "[채용] '26.9.1.자 (2026학년도 2학기) 음악학과 강사 공개 채용",
+          "url": "https://music.jnu.ac.kr/bbs/music/1656/1048208/artclView.do",
+          "author": "이주이",
+          "date": "2026-06-27",
+          "views": 5,
+          "sourceType": "department",
+          "sourceName": "음악학과",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -367,8 +379,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-06-27T04:41:22.459Z",
-      "totalCount": 28,
+      "fetchedAt": "2026-06-27T07:41:07.095Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
