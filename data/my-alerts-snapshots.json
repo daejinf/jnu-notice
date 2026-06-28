@@ -1,15 +1,190 @@
 {
-  "checkedAt": "2026-06-28T17:35:49.831Z",
+  "checkedAt": "2026-06-28T18:50:30.733Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-06-28T17:35:49.831Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ko-program-intro-view-753",
+          "title": "2026학년도 하계방학 ‘직무역량 업스킬링 프로그램’",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/753",
+          "author": "공과대학",
+          "date": "2026-06-29",
+          "views": 349,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        },
+        {
+          "id": "ko-program-intro-view-755",
+          "title": "2026년 하반기 대비 공과대학 엔지니어 커리어 컨설팅 프로그램",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/755",
+          "author": "공과대학",
+          "date": "2026-06-29",
+          "views": 165,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-06-28T18:50:30.733Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "ko-program-intro-view-753",
+          "title": "2026학년도 하계방학 ‘직무역량 업스킬링 프로그램’",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/753",
+          "author": "공과대학",
+          "date": "2026-06-29",
+          "views": 349,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        },
+        {
+          "id": "ko-program-intro-view-755",
+          "title": "2026년 하반기 대비 공과대학 엔지니어 커리어 컨설팅 프로그램",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/755",
+          "author": "공과대학",
+          "date": "2026-06-29",
+          "views": 165,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        },
+        {
+          "id": "3685",
+          "title": "[재맞고] 2026년 빌드업 프로젝트 『커리어업 톡톡(Talk-Talk)』 참여자 모집!",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3685",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-8",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3689",
+          "title": "2026-1 [미래설계프로그램] 장점카드를 활용한 강점사전 만들기 프로그램 참여 안내",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3689",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-10",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3674",
+          "title": "2026년 글로컬대학 사업 「전현직자가 들려주는 AI+ 취준 특강(3차)」",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3674",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-11",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3684",
+          "title": "[재맞고] 2026 『AI활용 해커톤 공모전 준비 프로그램』",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3684",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-13",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3687",
+          "title": "2026년 글로컬대학사업 「빅데이터분석기사, 이론부터 차근차근」",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3687",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-16",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3690",
+          "title": "[재맞고] 2026 『e-DISC로 찾는 나의 Job-캐릭터)』",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3690",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-17",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3652",
+          "title": "[여수] 2026 학생지원역량강화를 위한 응시료 지원(1차)",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3652",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-25",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3613",
+          "title": "[재맞고] 온라인 자격on 플랫폼(e-myedu) open!!",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3613",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-216",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3599",
+          "title": "[재학생 맞춤형 고용서비스] 2026년도 점프업 신청 안내 (★ 예산소진시 조기 마감됨 ★)",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3599",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-06-29",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-244",
+          "statusKind": "deadline"
+        },
         {
           "id": "53453",
           "title": "[쿠팡풀필먼트서비스(유)] 물류 현장 관리자 채용 설명회(직무: 현장관리자 및 학업 병행 및 방학 맞춤형 유연 계약직)(다과 및 기념품 증정)",
@@ -227,8 +402,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-06-28T17:35:49.831Z",
-      "totalCount": 18,
+      "fetchedAt": "2026-06-28T18:50:30.733Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
