@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-01T15:25:05.129Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7603
+  },
+  {
     "checkedAt": "2026-07-01T12:17:47.974Z",
     "notices": [
       {
@@ -123,18 +129,6 @@
         "isPinned": false
       },
       {
-        "id": "795",
-        "title": "2026년 하계 인문대 취업동아리 H-Union 선발(예정)팀 공지 및 오리엔테이션 참석 새글",
-        "url": "https://human.jnu.ac.kr/bbs/human/1819/1048605/artclView.do",
-        "author": "이선헌",
-        "date": "2026-07-01",
-        "views": 10,
-        "sourceType": "college",
-        "sourceName": "인문대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "1958",
         "title": "[산업대] 2026학년도 2학기 산업대학원 수료자 추가학점 이수 학위취득 신청 안내(~7/",
         "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1048569/artclView.do",
@@ -195,7 +189,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 16,
+    "newNoticeCount": 15,
     "totalNoticeCount": 8172
   },
   {
@@ -9608,40 +9602,5 @@
     ],
     "newNoticeCount": 4,
     "totalNoticeCount": 8145
-  },
-  {
-    "checkedAt": "2026-06-18T17:48:17.661Z",
-    "notices": [
-      {
-        "id": "3677",
-        "title": "진로탐색 집단상담 [프레디저 집단상담 프로그램]",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3677",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-06-19",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3682",
-        "title": "[기업탐방 및 현직자멘토링]국립아시아문화전당(*교류홍보직무)",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3682",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-06-19",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 7613
   }
 ]
