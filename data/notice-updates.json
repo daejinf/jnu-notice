@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-05T19:42:18.051Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7576
+  },
+  {
     "checkedAt": "2026-07-05T17:44:26.069Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6869,60 +6875,5 @@
     ],
     "newNoticeCount": 3,
     "totalNoticeCount": 7953
-  },
-  {
-    "checkedAt": "2026-06-24T11:17:15.266Z",
-    "notices": [
-      {
-        "id": "1",
-        "title": "[이러닝지원] 2026년 G-RISE 공유대학 콘텐츠 수요조사 실시",
-        "url": "https://ile.jnu.ac.kr/ko/community/notice/view/10788?p=1",
-        "author": "정예진",
-        "date": "2026-06-24",
-        "views": 3,
-        "sourceType": "center",
-        "sourceName": "교육혁신본부",
-        "category": "기관 공지",
-        "isPinned": true
-      },
-      {
-        "id": "934",
-        "title": "New [결과발표] 2026년 캡스톤디자인 우수작품 경진대회 서류평가 결과발표",
-        "url": "https://sojoong.kr/notice/notice-board/?uid=934&mod=document",
-        "author": "소프트웨어중심사업단",
-        "date": "2026-06-24",
-        "views": 98,
-        "sourceType": "center",
-        "sourceName": "소프트웨어중심사업단",
-        "category": "사업단 공지",
-        "isPinned": false
-      },
-      {
-        "id": "985",
-        "title": "[대학원] 2026학년도 후기 박사 도약 장학 선발 계획 안내",
-        "url": "https://forestry.jnu.ac.kr/bbs/forestry/436/1047973/artclView.do",
-        "author": "이은도",
-        "date": "2026-06-24",
-        "views": 8,
-        "sourceType": "department",
-        "sourceName": "산림자원학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "859",
-        "title": "2026학년도 후기 박사 도약 장학 선발 계획 안내",
-        "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1047977/artclView.do",
-        "author": "바이오에너지공학과",
-        "date": "2026-06-24",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "바이오에너지공학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 4,
-    "totalNoticeCount": 7313
   }
 ]
