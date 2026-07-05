@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-07-05T05:48:09.545Z",
+  "checkedAt": "2026-07-05T09:22:19.757Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,14 +9,14 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69604",
           "author": "학사과",
           "date": "2026-07-05",
-          "views": 33,
+          "views": 39,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-05T05:48:09.545Z",
+      "fetchedAt": "2026-07-05T09:22:19.757Z",
       "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
@@ -29,10 +29,22 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69604",
           "author": "학사과",
           "date": "2026-07-05",
-          "views": 33,
+          "views": 39,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "767",
+          "title": "전남대 사회학과 강사·연구자·대학원생, 주요 학술사업 대거 선정",
+          "url": "https://sociology.jnu.ac.kr/bbs/sociology/1001/1048813/artclView.do",
+          "author": "김장승혁",
+          "date": "2026-07-05",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "사회학과",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -388,8 +400,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-05T05:48:09.545Z",
-      "totalCount": 28,
+      "fetchedAt": "2026-07-05T09:22:19.757Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
