@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-05T20:41:32.861Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8170
+  },
+  {
     "checkedAt": "2026-07-05T19:42:18.051Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6830,50 +6836,5 @@
     ],
     "newNoticeCount": 2,
     "totalNoticeCount": 8164
-  },
-  {
-    "checkedAt": "2026-06-24T13:54:00.072Z",
-    "notices": [
-      {
-        "id": "regional-bio-1",
-        "title": "!![대학원]!! 2026년 하반기 외국어·종합시험 실시 및 면제처리 안내",
-        "url": "https://rbe.jnu.ac.kr/bbs/rbe/447/1047978/artclView.do",
-        "author": "지역.바이오시스템공학과",
-        "date": "2026-06-24",
-        "views": 5,
-        "sourceType": "department",
-        "sourceName": "지역·바이오시스템공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "1518",
-        "title": "공학대학 학과 소개 영상 공모전 ‘LOOK AT MAJOR’ 운영 안내 새글",
-        "url": "https://engc.jnu.ac.kr/bbs/engc/280/1047968/artclView.do",
-        "author": "김진범",
-        "date": "2026-06-24",
-        "views": 16,
-        "sourceType": "college",
-        "sourceName": "공학대학(여수)",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3688",
-        "title": "[멘토링] 광주비엔날레 현직자와 만남",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3688",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-06-24",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-12",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 3,
-    "totalNoticeCount": 7953
   }
 ]
