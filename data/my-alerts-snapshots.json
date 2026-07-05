@@ -1,15 +1,40 @@
 {
-  "checkedAt": "2026-07-05T01:26:33.172Z",
+  "checkedAt": "2026-07-05T05:48:09.545Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-05T01:26:33.172Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "69604",
+          "title": "2026학년도 2학기 타 대학교(강원대 춘천, 삼척 캠퍼스 학...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69604",
+          "author": "학사과",
+          "date": "2026-07-05",
+          "views": 33,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-07-05T05:48:09.545Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "69604",
+          "title": "2026학년도 2학기 타 대학교(강원대 춘천, 삼척 캠퍼스 학...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69604",
+          "author": "학사과",
+          "date": "2026-07-05",
+          "views": 33,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
         {
           "id": "3674",
           "title": "2026년 글로컬대학 사업 「전현직자가 들려주는 AI+ 취준 특강(3차)」",
@@ -363,8 +388,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-05T01:26:33.172Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-07-05T05:48:09.545Z",
+      "totalCount": 28,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
