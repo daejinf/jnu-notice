@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-07T23:36:14.814Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8173
+  },
+  {
     "checkedAt": "2026-07-07T22:31:53.899Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6742,38 +6748,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7392
-  },
-  {
-    "checkedAt": "2026-06-26T18:04:00.498Z",
-    "notices": [
-      {
-        "id": "3689",
-        "title": "2026-1 [미래설계프로그램] 장점카드를 활용한 강점사전 만들기 프로그램 참여 안내",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3689",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-06-27",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-12",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "1759",
-        "title": "2026학년도 2학기 부·복수(연계)·융합전공, 마이크로디그리 취소 신청 및 이수자 선발 안내",
-        "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1048169/artclView.do",
-        "author": "관리자",
-        "date": "2026-06-26",
-        "views": 12,
-        "sourceType": "department",
-        "sourceName": "컴퓨터정보통신공학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 7892
   }
 ]
