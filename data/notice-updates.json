@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-07T22:31:53.899Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8173
+  },
+  {
     "checkedAt": "2026-07-07T21:11:22.701Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6769,48 +6775,5 @@
     ],
     "newNoticeCount": 2,
     "totalNoticeCount": 7892
-  },
-  {
-    "checkedAt": "2026-06-26T15:59:57.038Z",
-    "notices": [
-      {
-        "id": "applied-biology-1",
-        "title": "[학부, 대학원] 2026학년도 제 2학기 휴학, 복학 신청 안내",
-        "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1048197/artclView.do",
-        "author": "lee3533@jnu.ac.kr",
-        "date": "2026-06-26",
-        "views": 9,
-        "sourceType": "department",
-        "sourceName": "응용생물학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "applied-biology-2",
-        "title": "[대학원] 2026년 하반기 외국어·종합시험 실시 및 면제처리 시행 계획 알림",
-        "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1048179/artclView.do",
-        "author": "lee3533@jnu.ac.kr",
-        "date": "2026-06-26",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "응용생물학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "applied-biology-3",
-        "title": "[대학원] 2026학년도 후기 박사 도약 장학 선발 안내",
-        "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1048170/artclView.do",
-        "author": "lee3533@jnu.ac.kr",
-        "date": "2026-06-26",
-        "views": 5,
-        "sourceType": "department",
-        "sourceName": "응용생물학과",
-        "category": "공지사항",
-        "isPinned": true
-      }
-    ],
-    "newNoticeCount": 3,
-    "totalNoticeCount": 7473
   }
 ]
