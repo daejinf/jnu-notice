@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-09T14:15:40.413Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7575
+  },
+  {
     "checkedAt": "2026-07-09T11:18:13.417Z",
     "notices": [
       {
@@ -291,18 +297,6 @@
         "isPinned": false
       },
       {
-        "id": "2806",
-        "title": "[장학] 2026-2학기 학부 진리장학(등록금 감면) 신청 안내(~ 8월5일까지) 새글",
-        "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1049384/artclView.do",
-        "author": "한진선",
-        "date": "2026-07-09",
-        "views": 19,
-        "sourceType": "college",
-        "sourceName": "자율전공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "2141",
         "title": "2026학년도 2학기 모집단위간이동(전과) 실시 안내",
         "url": "https://china.jnu.ac.kr/bbs/china/1570/1049430/artclView.do",
@@ -411,30 +405,6 @@
         "isPinned": false
       },
       {
-        "id": "1187",
-        "title": "2026학년도 2학기 타 대학교(목포대) 교류수학 안내(학부)",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1049362/artclView.do",
-        "author": "김은자",
-        "date": "2026-07-09",
-        "views": 15,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1187",
-        "title": "2026학년도 2학기 타 대학교(목포대) 교류수학 안내(학부)",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1049362/artclView.do",
-        "author": "김은자",
-        "date": "2026-07-09",
-        "views": 15,
-        "sourceType": "department",
-        "sourceName": "수의학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "2140",
         "title": "2025학년도 후기(2026년 8월) 학부 졸업사정 안내",
         "url": "https://china.jnu.ac.kr/bbs/china/1570/1049344/artclView.do",
@@ -455,30 +425,6 @@
         "views": 14,
         "sourceType": "college",
         "sourceName": "수의과대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1188",
-        "title": "2026학년도 2학기 타 대학교(조선대) 교류수학 안내(학부)",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1049363/artclView.do",
-        "author": "김은자",
-        "date": "2026-07-09",
-        "views": 14,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1188",
-        "title": "2026학년도 2학기 타 대학교(조선대) 교류수학 안내(학부)",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1049363/artclView.do",
-        "author": "김은자",
-        "date": "2026-07-09",
-        "views": 14,
-        "sourceType": "department",
-        "sourceName": "수의학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -527,30 +473,6 @@
         "views": 12,
         "sourceType": "department",
         "sourceName": "유아교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1189",
-        "title": "2026학년도 2학기 타 대학교(충북대) 교류수학 안내(학부)",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1049399/artclView.do",
-        "author": "김은자",
-        "date": "2026-07-09",
-        "views": 12,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1189",
-        "title": "2026학년도 2학기 타 대학교(충북대) 교류수학 안내(학부)",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1049399/artclView.do",
-        "author": "김은자",
-        "date": "2026-07-09",
-        "views": 12,
-        "sourceType": "department",
-        "sourceName": "수의학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -855,7 +777,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 71,
+    "newNoticeCount": 64,
     "totalNoticeCount": 8186
   },
   {
@@ -9089,11 +9011,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7484
-  },
-  {
-    "checkedAt": "2026-06-27T22:43:17.728Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 8112
   }
 ]
