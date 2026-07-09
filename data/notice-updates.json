@@ -1,5 +1,72 @@
 [
   {
+    "checkedAt": "2026-07-09T19:00:11.398Z",
+    "notices": [
+      {
+        "id": "software-3",
+        "title": "(~7/16, 오전까지) 2026년 Power Engineer School Summer C",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049441/artclView.do",
+        "author": "오승하",
+        "date": "2026-07-09",
+        "views": 42,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "software-1",
+        "title": "(8/18~21, 16:00) 2026학년도 제2학기 등록 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049443/artclView.do",
+        "author": "오승하",
+        "date": "2026-07-09",
+        "views": 40,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "software-2",
+        "title": "(~7/22) 2026 하계 창업역량강화 프로그램 『AI기반 창업 창의력 Jump-Up』안",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049442/artclView.do",
+        "author": "오승하",
+        "date": "2026-07-09",
+        "views": 35,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "software-5",
+        "title": "(~7/14, 오전까지) 2026학년도 2학기 우선 선발 장학 대상자(법정장학 및 복지장학",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049439/artclView.do",
+        "author": "오승하",
+        "date": "2026-07-09",
+        "views": 20,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "software-4",
+        "title": "(~7/17) 2027학년도 1학기 해외 파견 교환학생 1차 선발 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049440/artclView.do",
+        "author": "오승하",
+        "date": "2026-07-09",
+        "views": 11,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      }
+    ],
+    "newNoticeCount": 5,
+    "totalNoticeCount": 8165
+  },
+  {
     "checkedAt": "2026-07-09T17:05:53.627Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -9005,11 +9072,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 6238
-  },
-  {
-    "checkedAt": "2026-06-28T04:48:53.828Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 8112
   }
 ]
