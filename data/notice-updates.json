@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-12T18:39:43.276Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8185
+  },
+  {
     "checkedAt": "2026-07-12T17:41:47.535Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6317,84 +6323,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7583
-  },
-  {
-    "checkedAt": "2026-07-02T10:51:12.610Z",
-    "notices": [
-      {
-        "id": "32",
-        "title": "2026년 하계 그린바이오 아카데미 안내 새글",
-        "url": "https://greenbio.jnu.ac.kr/bbs/greenbio/3467/1048699/artclView.do",
-        "author": "김다빈",
-        "date": "2026-07-02",
-        "views": 7,
-        "sourceType": "center",
-        "sourceName": "그린바이오혁신융합대학사업단",
-        "category": "사업단 공지",
-        "isPinned": false
-      },
-      {
-        "id": "2345",
-        "title": "2026학년도 제2학기 등록 안내",
-        "url": "https://math.jnu.ac.kr/bbs/math/2076/1048690/artclView.do",
-        "author": "수학과",
-        "date": "2026-07-02",
-        "views": 3,
-        "sourceType": "department",
-        "sourceName": "수학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "406",
-        "title": "2025학년도 후기(2026년 8월 졸업예정) 석·박사학위 제출 안내",
-        "url": "https://mathedu.jnu.ac.kr/bbs/mathedu/2306/1048713/artclView.do",
-        "author": "수학교육과",
-        "date": "2026-07-02",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "수학교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "404",
-        "title": "2026학년도 제2학기 등록 안내",
-        "url": "https://mathedu.jnu.ac.kr/bbs/mathedu/2306/1048711/artclView.do",
-        "author": "수학교육과",
-        "date": "2026-07-02",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "수학교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "405",
-        "title": "2026년 7월 도서관 이용교육 안내",
-        "url": "https://mathedu.jnu.ac.kr/bbs/mathedu/2306/1048712/artclView.do",
-        "author": "수학교육과",
-        "date": "2026-07-02",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "수학교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3416",
-        "title": "[한국산업기술기획평가원] 체험형 청년인턴 채용 공고",
-        "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3416",
-        "author": "취업진로포털 공지사항",
-        "date": "2026-07-02",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 공지사항",
-        "category": "기관 공지",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 6,
-    "totalNoticeCount": 8174
   }
 ]
