@@ -1,15 +1,52 @@
 {
-  "checkedAt": "2026-07-12T23:08:41.123Z",
+  "checkedAt": "2026-07-13T00:10:01.591Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-12T23:08:41.123Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "software-1",
+          "title": "(~7/22, 15:00) [차세대통신] 한국알프스 취업연계 교육과정 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049567/artclView.do",
+          "author": "오승하",
+          "date": "2026-07-13",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        }
+      ],
+      "fetchedAt": "2026-07-13T00:10:01.591Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "software-1",
+          "title": "(~7/22, 15:00) [차세대통신] 한국알프스 취업연계 교육과정 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049567/artclView.do",
+          "author": "오승하",
+          "date": "2026-07-13",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "3465",
+          "title": "[모비데이즈] 35기 인턴십 공개채용",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3465",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-07-13",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": false
+        },
         {
           "id": "3690",
           "title": "[재맞고] 2026 『e-DISC로 찾는 나의 Job-캐릭터』",
@@ -365,8 +402,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-12T23:08:41.123Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-07-13T00:10:01.591Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }

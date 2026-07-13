@@ -1,5 +1,36 @@
 [
   {
+    "checkedAt": "2026-07-13T00:10:02.666Z",
+    "notices": [
+      {
+        "id": "software-1",
+        "title": "(~7/22, 15:00) [차세대통신] 한국알프스 취업연계 교육과정 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049567/artclView.do",
+        "author": "오승하",
+        "date": "2026-07-13",
+        "views": 3,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "3465",
+        "title": "[모비데이즈] 35기 인턴십 공개채용",
+        "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3465",
+        "author": "취업진로포털 공지사항",
+        "date": "2026-07-13",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 공지사항",
+        "category": "기관 공지",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 2,
+    "totalNoticeCount": 8185
+  },
+  {
     "checkedAt": "2026-07-12T23:08:42.216Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6317,11 +6348,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8172
-  },
-  {
-    "checkedAt": "2026-07-02T20:37:43.391Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 8072
   }
 ]
