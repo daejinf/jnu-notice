@@ -1,15 +1,64 @@
 {
-  "checkedAt": "2026-07-14T16:04:39.750Z",
+  "checkedAt": "2026-07-14T17:34:16.262Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-14T16:04:39.750Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ko-program-intro-view-762",
+          "title": "대학원생 아이디어 공모전",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/762",
+          "author": "대학원혁신본부",
+          "date": "2026-07-15",
+          "views": 65,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        },
+        {
+          "id": "ko-program-intro-view-764",
+          "title": "2026학년도 2차 CNU 학습나래",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/764",
+          "author": "사범대학",
+          "date": "2026-07-15",
+          "views": 23,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-07-14T17:34:16.262Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "ko-program-intro-view-762",
+          "title": "대학원생 아이디어 공모전",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/762",
+          "author": "대학원혁신본부",
+          "date": "2026-07-15",
+          "views": 65,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        },
+        {
+          "id": "ko-program-intro-view-764",
+          "title": "2026학년도 2차 CNU 학습나래",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/764",
+          "author": "사범대학",
+          "date": "2026-07-15",
+          "views": 23,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        },
         {
           "id": "3698",
           "title": "[재맞고] AI 로보틱스 실무 부트캠프",
@@ -369,8 +418,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-14T16:04:39.750Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-07-14T17:34:16.262Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
