@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-16T13:06:38.936Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8192
+  },
+  {
     "checkedAt": "2026-07-16T11:22:12.641Z",
     "notices": [
       {
@@ -8246,72 +8252,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7581
-  },
-  {
-    "checkedAt": "2026-07-06T12:58:58.221Z",
-    "notices": [
-      {
-        "id": "software-1",
-        "title": "(~7/17) 2026 블록체인 밋업데이(BCMD) 14회차 교육생 모집 안내",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1048946/artclView.do",
-        "author": "오승하",
-        "date": "2026-07-06",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "biotech-1",
-        "title": "2026년 7월 지정폐기물 처리 신청",
-        "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1048947/artclView.do",
-        "author": "허수진",
-        "date": "2026-07-06",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "생물공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "69625",
-        "title": "전남대학교 전남광주인문사회연구원 학술연구교수 채용 (수정)공고",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69625",
-        "author": "전남광주인문사회연구원",
-        "date": "2026-07-06",
-        "views": 75,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "학사안내",
-        "isPinned": false
-      },
-      {
-        "id": "69624",
-        "title": "2026학년도 2학기 전남대학교 간호대학 비전임교원(객원교원)...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69624",
-        "author": "간호대학",
-        "date": "2026-07-06",
-        "views": 30,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "69604",
-        "title": "2026학년도 2학기 타 대학교(강원대 춘천, 삼척 캠퍼스 학...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=69604",
-        "author": "학사과",
-        "date": "2026-07-05",
-        "views": 106,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "학사안내",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 5,
-    "totalNoticeCount": 8171
   }
 ]
