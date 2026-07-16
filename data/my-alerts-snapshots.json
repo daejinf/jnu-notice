@@ -1,15 +1,172 @@
 {
-  "checkedAt": "2026-07-15T23:41:04.314Z",
+  "checkedAt": "2026-07-16T01:08:46.638Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-15T23:41:04.314Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ai-major-1",
+          "title": "스마트 컴퓨팅 연구실 학부연구생 모집",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1049843/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-07-16",
+          "views": 5,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "69751",
+          "title": "[광양시]「고향올래 청년복합공간 조성사업」광양 '달그...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69751",
+          "author": "학생과",
+          "date": "2026-07-16",
+          "views": 9,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "69750",
+          "title": "[한국특허전략개발원] 특허-산업 융합데이터 활용 아이디어 공모전",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69750",
+          "author": "학생과",
+          "date": "2026-07-16",
+          "views": 5,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "69752",
+          "title": "[시립청소년문화교류센터] 2026 서울-방콕 문화교류 참가자 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69752",
+          "author": "학생과",
+          "date": "2026-07-16",
+          "views": 1,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-07-16T01:08:46.638Z",
+      "totalCount": 4,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "self-designed-1",
+          "title": "[필독] 2026-1학기 전공보고서(4학년) 승인 알림(전공명 및 학위종 확인)",
+          "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1049840/artclView.do",
+          "author": "한진선",
+          "date": "2026-07-16",
+          "views": 6,
+          "sourceType": "department",
+          "sourceName": "자율전공학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "ai-major-1",
+          "title": "스마트 컴퓨팅 연구실 학부연구생 모집",
+          "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1049843/artclView.do",
+          "author": "인공지능학부",
+          "date": "2026-07-16",
+          "views": 5,
+          "sourceType": "department",
+          "sourceName": "인공지능학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "69748",
+          "title": "2026 한전KDN 인턴 연계 ICT 프로그램 교육생 모집",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69748",
+          "author": "여성과학기술인전문인력양성사업",
+          "date": "2026-07-16",
+          "views": 12,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "모집공고",
+          "isPinned": false
+        },
+        {
+          "id": "69751",
+          "title": "[광양시]「고향올래 청년복합공간 조성사업」광양 '달그...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69751",
+          "author": "학생과",
+          "date": "2026-07-16",
+          "views": 9,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "1049840",
+          "title": "[필독] 2026-1학기 전공보고서(4학년) 승인 알림(전공명 및 학위종 확인)",
+          "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1049840/artclView.do",
+          "author": "한진선",
+          "date": "2026-07-16",
+          "views": 6,
+          "sourceType": "college",
+          "sourceName": "자율전공학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2810",
+          "title": "[필독] 2026-1학기 전공보고서(4학년) 승인 알림(전공명 및 학위종 확인) 새글",
+          "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1049840/artclView.do",
+          "author": "한진선",
+          "date": "2026-07-16",
+          "views": 6,
+          "sourceType": "college",
+          "sourceName": "자율전공학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "69750",
+          "title": "[한국특허전략개발원] 특허-산업 융합데이터 활용 아이디어 공모전",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69750",
+          "author": "학생과",
+          "date": "2026-07-16",
+          "views": 5,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "558",
+          "title": "2026학년도 이공 우수인재 성장경로 지원 시범사업 신청 안내",
+          "url": "https://agrochem.jnu.ac.kr/bbs/agrochem/555/1049844/artclView.do",
+          "author": "농생명화학과",
+          "date": "2026-07-16",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "농생명화학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "69752",
+          "title": "[시립청소년문화교류센터] 2026 서울-방콕 문화교류 참가자 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69752",
+          "author": "학생과",
+          "date": "2026-07-16",
+          "views": 1,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
         {
           "id": "3698",
           "title": "[재맞고] AI 로보틱스 실무 부트캠프",
@@ -367,8 +524,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-15T23:41:04.314Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-07-16T01:08:46.638Z",
+      "totalCount": 36,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
