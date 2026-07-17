@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-07-17T03:39:41.253Z",
+  "checkedAt": "2026-07-17T08:27:17.834Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [],
-      "fetchedAt": "2026-07-17T03:39:41.253Z",
+      "fetchedAt": "2026-07-17T08:27:17.834Z",
       "totalCount": 0,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
@@ -11,12 +11,24 @@
     "passionate1114@gmail.com": {
       "notices": [
         {
+          "id": "96325",
+          "title": "2026학년도 2학기 선발자 명단",
+          "url": "https://hsdorm.jnu.ac.kr/Board/Board.aspx?BoardID=50&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=96325",
+          "author": "2026학년도 2학기 선발자 명단",
+          "date": "2026-07-17",
+          "views": 301,
+          "sourceType": "center",
+          "sourceName": "화순생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
           "id": "69766",
           "title": "2026년 도시농업 전문인력 양성과정 지연 모집 안내 드립니다.",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69766",
           "author": "농업실습교육원",
           "date": "2026-07-17",
-          "views": 4,
+          "views": 18,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "모집공고",
@@ -379,8 +391,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-17T03:39:41.253Z",
-      "totalCount": 28,
+      "fetchedAt": "2026-07-17T08:27:17.834Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
