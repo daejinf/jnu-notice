@@ -1755,5 +1755,55 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1783262616896
+  },
+  "https://aisw.jnu.ac.kr/bbs/aisw/64/1049843/artclView.do::v10": {
+    "value": {
+      "summary": "스마트 컴퓨팅 연구실에서 학부연구생을 모집합니다. 연구 분야는 Knowledge Graph, Medical AI 등이며, 2학년 이상 학생을 대상으로 합니다. 지원 마감일은 2026년 7월 24일이며, 장학금 1,200만원과 개인 PC 등 혜택이 제공됩니다.",
+      "bullets": [
+        "모집 마감: ~2026.07.24.",
+        "장학금 1,200만원 지원",
+        "개인 PC 및 연구 참여비 혜택"
+      ],
+      "targetAudience": "2학년 이상 학부생",
+      "deadline": "2026.07.24.",
+      "actionItems": [
+        "이메일(baech0713@gmail.com) 또는 전화(01098570713)로 문의",
+        "연구실 홈페이지 방문"
+      ],
+      "benefits": [
+        "장학금 1,200만원",
+        "개인 PC 제공",
+        "연구 참여비",
+        "교수님 및 박사님들의 지도"
+      ],
+      "requiredDocuments": [
+        "명시되지 않음"
+      ],
+      "contact": "baech0713@gmail.com, 01098570713",
+      "caution": "모집 마감일 이후에도 연락 가능",
+      "calendarItems": [
+        {
+          "label": "스마트 컴퓨팅 연구실 학부연구생 모집",
+          "eventType": "apply_deadline",
+          "eventDate": "2026.07.24(금)",
+          "startAt": "명시되지 않음",
+          "endAt": "2026.07.24(금)",
+          "when": "2026.07.24(금)",
+          "note": "지원서 제출 마감일"
+        }
+      ],
+      "actionLinks": [
+        {
+          "label": "연구실 홈페이지",
+          "url": "https://sclab.jnu.ac.kr/",
+          "note": "연구실 정보 확인"
+        }
+      ],
+      "attachments": [],
+      "sourceTitle": "K2Web Wizard",
+      "extractedAt": "2026-07-17T10:54:38.714Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1784890478817
   }
 }
