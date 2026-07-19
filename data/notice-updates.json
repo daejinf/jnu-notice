@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-07-19T06:42:37.301Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8188
+  },
+  {
     "checkedAt": "2026-07-19T03:51:05.198Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -4348,48 +4354,5 @@
     ],
     "newNoticeCount": 2,
     "totalNoticeCount": 4204
-  },
-  {
-    "checkedAt": "2026-07-10T13:35:09.042Z",
-    "notices": [
-      {
-        "id": "applied-biology-1",
-        "title": "[학부] 2026학년도 2학기 우선 선발 장학 대상자 제출 요청",
-        "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1049541/artclView.do",
-        "author": "lee3533@jnu.ac.kr",
-        "date": "2026-07-10",
-        "views": 14,
-        "sourceType": "department",
-        "sourceName": "응용생물학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "applied-biology-2",
-        "title": "[대학원] 2026학년도 2학기 대학원 저소득층(창조) 장학금 신청 안내",
-        "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1049532/artclView.do",
-        "author": "lee3533@jnu.ac.kr",
-        "date": "2026-07-10",
-        "views": 3,
-        "sourceType": "department",
-        "sourceName": "응용생물학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "786",
-        "title": "[식물생명공학부 응용식물학전공]2025학년도 후기(2026년 8월 졸업예정) 졸업시험 결과",
-        "url": "https://agro.jnu.ac.kr/bbs/agro/444/1049544/artclView.do",
-        "author": "응용식물학과",
-        "date": "2026-07-10",
-        "views": 4,
-        "sourceType": "department",
-        "sourceName": "응용식물학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 3,
-    "totalNoticeCount": 7656
   }
 ]
