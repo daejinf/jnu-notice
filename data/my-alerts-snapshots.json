@@ -1,15 +1,76 @@
 {
-  "checkedAt": "2026-07-19T23:09:50.686Z",
+  "checkedAt": "2026-07-20T00:12:36.959Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-19T23:09:50.686Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "69767",
+          "title": "[교육부] 2026 대한민국 인재상 선발 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69767",
+          "author": "학생과",
+          "date": "2026-07-20",
+          "views": 6,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-07-20T00:12:36.959Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "994",
+          "title": "2026학년도 이공 우수인재 성장경로 지원 시범사업 안내",
+          "url": "https://forestry.jnu.ac.kr/bbs/forestry/436/1049955/artclView.do",
+          "author": "이은도",
+          "date": "2026-07-20",
+          "views": 8,
+          "sourceType": "department",
+          "sourceName": "산림자원학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "69767",
+          "title": "[교육부] 2026 대한민국 인재상 선발 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69767",
+          "author": "학생과",
+          "date": "2026-07-20",
+          "views": 6,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "69768",
+          "title": "[교육부] 2026년도 학생 대상 안전한 개인정보보호 사례 공...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69768",
+          "author": "학생과",
+          "date": "2026-07-20",
+          "views": 3,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "공모전",
+          "isPinned": false
+        },
+        {
+          "id": "178",
+          "title": "[교내] 2026 하계 창업역량강화 프로그램 ⌜AI기반 창업 창의력 Jump-Up⌟참가자 모집 (~7/22 수)",
+          "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1049956/artclView.do",
+          "author": "김규빈",
+          "date": "2026-07-20",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "산업공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
         {
           "id": "3698",
           "title": "[재맞고] AI 로보틱스 실무 부트캠프",
@@ -361,8 +422,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-19T23:09:50.686Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-07-20T00:12:36.959Z",
+      "totalCount": 31,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
