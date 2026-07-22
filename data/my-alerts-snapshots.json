@@ -1,40 +1,183 @@
 {
-  "checkedAt": "2026-07-21T23:40:34.000Z",
+  "checkedAt": "2026-07-22T01:07:45.143Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-21T23:40:34.000Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "software-1",
+          "title": "★(~7/31, 18:00) 2026학년도 2학기 등록금재원 교내 장학금 신청 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1050167/artclView.do",
+          "author": "오승하",
+          "date": "2026-07-22",
+          "views": 12,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "69788",
+          "title": "전남대학교 인문사회융합인재양성사업(HUSS) 2026학년도 2...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69788",
+          "author": "인문사회융합인재양성사업단",
+          "date": "2026-07-22",
+          "views": 48,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "69789",
+          "title": "HUSS디지털경제 컨소시엄 2026년 2학기 개설 교과목 수강...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69789",
+          "author": "인문사회융합인재양성사업단",
+          "date": "2026-07-22",
+          "views": 29,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "69786",
+          "title": "[경주시] 2026 세계유산도시 콘텐츠 공모전(드로잉, 포토 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69786",
+          "author": "학생과",
+          "date": "2026-07-22",
+          "views": 11,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-07-22T01:07:45.143Z",
+      "totalCount": 4,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
         {
+          "id": "software-1",
+          "title": "★(~7/31, 18:00) 2026학년도 2학기 등록금재원 교내 장학금 신청 안내",
+          "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1050167/artclView.do",
+          "author": "오승하",
+          "date": "2026-07-22",
+          "views": 12,
+          "sourceType": "department",
+          "sourceName": "소프트웨어공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "69788",
+          "title": "전남대학교 인문사회융합인재양성사업(HUSS) 2026학년도 2...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69788",
+          "author": "인문사회융합인재양성사업단",
+          "date": "2026-07-22",
+          "views": 48,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "69789",
+          "title": "HUSS디지털경제 컨소시엄 2026년 2학기 개설 교과목 수강...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69789",
+          "author": "인문사회융합인재양성사업단",
+          "date": "2026-07-22",
+          "views": 29,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "69786",
+          "title": "[경주시] 2026 세계유산도시 콘텐츠 공모전(드로잉, 포토 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69786",
+          "author": "학생과",
+          "date": "2026-07-22",
+          "views": 11,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
           "id": "69785",
           "title": "[대관신청] 2026학년도 하반기 민주마루 교외 정기 대관 접...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69785",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69785",
           "author": "총무과",
           "date": "2026-07-22",
-          "views": 3,
+          "views": 9,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "모집공고",
           "isPinned": false
         },
         {
-          "id": "3703",
-          "title": "[재맞고] 2026 4차 산업혁명 리핑랩 3D프린팅 교육 과정",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3703",
-          "author": "취업진로포털 취업프로그램",
+          "id": "69787",
+          "title": "[한국과학창의재단] 과학기술 미래 상상 1컷 만화 공모전 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69787",
+          "author": "학생과",
           "date": "2026-07-22",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 취업프로그램",
-          "category": "취업프로그램",
-          "isPinned": false,
-          "statusLabel": "D-8",
-          "statusKind": "deadline"
+          "views": 8,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "공모전",
+          "isPinned": false
+        },
+        {
+          "id": "928",
+          "title": "2026년 하반기 일반대학원 외국어 및 종합시험 실시 안내 새글",
+          "url": "https://natural.jnu.ac.kr/bbs/natural/1560/1050166/artclView.do",
+          "author": "행정실",
+          "date": "2026-07-22",
+          "views": 6,
+          "sourceType": "college",
+          "sourceName": "자연과학대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1350",
+          "title": "2026학년도 2학기 대체교과목 신청 안내 (~9.7까지)",
+          "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1050164/artclView.do",
+          "author": "통계학과",
+          "date": "2026-07-22",
+          "views": 6,
+          "sourceType": "department",
+          "sourceName": "통계학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "707",
+          "title": "2026학년도 2학기 대체교과목 신청 안내 (~9.7까지)",
+          "url": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/1050165/artclView.do",
+          "author": "빅데이터융합학과",
+          "date": "2026-07-22",
+          "views": 4,
+          "sourceType": "department",
+          "sourceName": "빅데이터융합학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "597",
+          "title": "[학부,대학원]2026학년도 2학기 수강신청 시행 안내",
+          "url": "https://rbe.jnu.ac.kr/bbs/rbe/447/1050162/artclView.do",
+          "author": "지역.바이오시스템공학과",
+          "date": "2026-07-22",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "지역·바이오시스템공학과",
+          "category": "공지사항",
+          "isPinned": false
         },
         {
           "id": "3694",
@@ -54,6 +197,20 @@
           "id": "3695",
           "title": "[재맞고] 『2026 식약처 공인 HACCP 팀장과정』",
           "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3695",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-07-22",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-16",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3708",
+          "title": "[재맞고] 2026년도 청년미래직진 프로그램 『AI 데이터 인사이트(Insight): 실제 데이터를 활용한 생성형 AI 실무 솔루션』",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3708",
           "author": "취업진로포털 취업프로그램",
           "date": "2026-07-22",
           "views": 0,
@@ -375,8 +532,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-21T23:40:34.000Z",
-      "totalCount": 28,
+      "fetchedAt": "2026-07-22T01:07:45.143Z",
+      "totalCount": 37,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
