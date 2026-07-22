@@ -1,15 +1,40 @@
 {
-  "checkedAt": "2026-07-22T17:41:17.167Z",
+  "checkedAt": "2026-07-22T18:48:39.164Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-22T17:41:17.167Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ko-program-intro-view-767",
+          "title": "2026학년도 2학기 35기 온라인 글쓰기 상담가 모집",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/767",
+          "author": "교육혁신본부",
+          "date": "2026-07-23",
+          "views": 75,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": true
+        }
+      ],
+      "fetchedAt": "2026-07-22T18:48:39.164Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "ko-program-intro-view-767",
+          "title": "2026학년도 2학기 35기 온라인 글쓰기 상담가 모집",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/767",
+          "author": "교육혁신본부",
+          "date": "2026-07-23",
+          "views": 75,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": true
+        },
         {
           "id": "3694",
           "title": "2026년 글로컬대학사업 「Hello, AI Industry! @CNU」",
@@ -365,8 +390,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-22T17:41:17.167Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-07-22T18:48:39.164Z",
+      "totalCount": 28,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
