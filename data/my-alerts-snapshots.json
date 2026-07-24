@@ -1,26 +1,123 @@
 {
-  "checkedAt": "2026-07-24T01:07:40.985Z",
+  "checkedAt": "2026-07-24T04:30:51.909Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-24T01:07:40.985Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "375",
+          "title": "2026학년도 1학기 마이크로디그리 성적 우수 장학금 신청(★선착순)",
+          "url": "https://jnu.nccoss.kr/www/notice/view/375?bd=notice&page=1",
+          "author": "차세대통신혁신융합대학사업단",
+          "date": "2026-07-24",
+          "views": 70,
+          "sourceType": "center",
+          "sourceName": "차세대통신혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "4086",
+          "title": "2026학년도 2학기 성균관대학교 학점교류 신청 안내(8/3(월) 9:00까지)",
+          "url": "https://www.aicoss.kr/www/notice/view/4086?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-07-24",
+          "views": 10,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "96458",
+          "title": "2026년 2분기 예향관(9동) 시설물 만족도 조사 추가 실시 안내",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=96458",
+          "author": "생활안내 2026년 2분기 예향관(9동) 시설물 만족도 조사 추가 실시 안내",
+          "date": "2026-07-24",
+          "views": 117,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-07-24T04:30:51.909Z",
+      "totalCount": 3,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
         {
+          "id": "375",
+          "title": "2026학년도 1학기 마이크로디그리 성적 우수 장학금 신청(★선착순)",
+          "url": "https://jnu.nccoss.kr/www/notice/view/375?bd=notice&page=1",
+          "author": "차세대통신혁신융합대학사업단",
+          "date": "2026-07-24",
+          "views": 70,
+          "sourceType": "center",
+          "sourceName": "차세대통신혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
           "id": "mechanical-1",
           "title": "[전공배정] 3학년 2학기부터 전공배정/변경 신청서 제출 안내 (~'26.8.18.화)",
           "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1050382/artclView.do",
           "author": "신혜경",
           "date": "2026-07-24",
-          "views": 2,
+          "views": 31,
           "sourceType": "department",
           "sourceName": "기계공학부",
           "category": "공지사항",
           "isPinned": true
+        },
+        {
+          "id": "self-designed-1",
+          "title": "[필독] 2026년 8월(2025학년도 후기) 졸업사정 결과 확인 안내",
+          "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1050393/artclView.do",
+          "author": "자율전공학부",
+          "date": "2026-07-24",
+          "views": 11,
+          "sourceType": "department",
+          "sourceName": "자율전공학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "4086",
+          "title": "2026학년도 2학기 성균관대학교 학점교류 신청 안내(8/3(월) 9:00까지)",
+          "url": "https://www.aicoss.kr/www/notice/view/4086?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-07-24",
+          "views": 10,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "96458",
+          "title": "2026년 2분기 예향관(9동) 시설물 만족도 조사 추가 실시 안내",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=96458",
+          "author": "생활안내 2026년 2분기 예향관(9동) 시설물 만족도 조사 추가 실시 안내",
+          "date": "2026-07-24",
+          "views": 117,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "69810",
+          "title": "2026년도 제7차 전남대학교 소프트웨어중심대학사업단 행정직원...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69810",
+          "author": "소프트웨어중심대학사업단",
+          "date": "2026-07-24",
+          "views": 47,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "채용공고",
+          "isPinned": false
         },
         {
           "id": "2422",
@@ -28,19 +125,7 @@
           "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1050373/artclView.do",
           "author": "윤이현",
           "date": "2026-07-24",
-          "views": 11,
-          "sourceType": "department",
-          "sourceName": "지리학과",
-          "category": "공지사항",
-          "isPinned": false
-        },
-        {
-          "id": "2425",
-          "title": "[대학원] 2026학년도 2학기 일반(전문.특수대학원 포함)대학원 수료후등록 신청 안내",
-          "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1050377/artclView.do",
-          "author": "윤이현",
-          "date": "2026-07-24",
-          "views": 8,
+          "views": 23,
           "sourceType": "department",
           "sourceName": "지리학과",
           "category": "공지사항",
@@ -52,7 +137,7 @@
           "url": "https://yculture.jnu.ac.kr/bbs/yculture/284/1050368/artclView.do",
           "author": "관리자",
           "date": "2026-07-24",
-          "views": 6,
+          "views": 16,
           "sourceType": "college",
           "sourceName": "문화사회과학대학(여수)",
           "category": "공지사항",
@@ -64,9 +149,45 @@
           "url": "https://yculture.jnu.ac.kr/bbs/yculture/284/1050368/artclView.do",
           "author": "관리자",
           "date": "2026-07-24",
-          "views": 6,
+          "views": 16,
           "sourceType": "college",
           "sourceName": "문화사회과학대학(여수)",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2425",
+          "title": "[대학원] 2026학년도 2학기 일반(전문.특수대학원 포함)대학원 수료후등록 신청 안내",
+          "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1050377/artclView.do",
+          "author": "윤이현",
+          "date": "2026-07-24",
+          "views": 12,
+          "sourceType": "department",
+          "sourceName": "지리학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1050393",
+          "title": "[필독] 2026년 8월(2025학년도 후기) 졸업사정 결과 확인 안내",
+          "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1050393/artclView.do",
+          "author": "자율전공학부",
+          "date": "2026-07-24",
+          "views": 11,
+          "sourceType": "college",
+          "sourceName": "자율전공학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2815",
+          "title": "[필독] 2026년 8월(2025학년도 후기) 졸업사정 결과 확인 안내 새글",
+          "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1050393/artclView.do",
+          "author": "자율전공학부",
+          "date": "2026-07-24",
+          "views": 11,
+          "sourceType": "college",
+          "sourceName": "자율전공학부",
           "category": "공지사항",
           "isPinned": false
         },
@@ -76,7 +197,7 @@
           "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1050375/artclView.do",
           "author": "윤이현",
           "date": "2026-07-24",
-          "views": 6,
+          "views": 11,
           "sourceType": "department",
           "sourceName": "지리학과",
           "category": "공지사항",
@@ -88,7 +209,7 @@
           "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1050374/artclView.do",
           "author": "윤이현",
           "date": "2026-07-24",
-          "views": 5,
+          "views": 10,
           "sourceType": "department",
           "sourceName": "지리학과",
           "category": "공지사항",
@@ -100,9 +221,21 @@
           "url": "https://math.jnu.ac.kr/bbs/math/2076/1050381/artclView.do",
           "author": "수학과",
           "date": "2026-07-24",
-          "views": 3,
+          "views": 9,
           "sourceType": "department",
           "sourceName": "수학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "189",
+          "title": "[학부] 2026학년도 2학기 대체교과목 신청 안내",
+          "url": "https://bse.jnu.ac.kr/bbs/bse/2568/1050384/artclView.do",
+          "author": "융합바이오시스템기계공학과",
+          "date": "2026-07-24",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "융합바이오시스템기계공학과",
           "category": "공지사항",
           "isPinned": false
         },
@@ -469,8 +602,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-24T01:07:40.985Z",
-      "totalCount": 36,
+      "fetchedAt": "2026-07-24T04:30:51.909Z",
+      "totalCount": 44,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
