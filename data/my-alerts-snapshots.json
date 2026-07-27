@@ -1,15 +1,52 @@
 {
-  "checkedAt": "2026-07-26T23:13:40.185Z",
+  "checkedAt": "2026-07-27T00:14:45.074Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-07-26T23:13:40.185Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "69818",
+          "title": "[성평등가족부] 공공생리대 지원 사업「모두의 생리대」안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69818",
+          "author": "학생과",
+          "date": "2026-07-27",
+          "views": 5,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-07-27T00:14:45.074Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-01T16:57:47.879Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "69817",
+          "title": "경험정리 심화 과정_핵심 키워드 도출",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69817",
+          "author": "취업지원실",
+          "date": "2026-07-27",
+          "views": 8,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "69818",
+          "title": "[성평등가족부] 공공생리대 지원 사업「모두의 생리대」안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69818",
+          "author": "학생과",
+          "date": "2026-07-27",
+          "views": 5,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
         {
           "id": "3694",
           "title": "2026년 글로컬대학사업 「Hello, AI Industry! @CNU」",
@@ -361,8 +398,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-07-26T23:13:40.185Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-07-27T00:14:45.074Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
