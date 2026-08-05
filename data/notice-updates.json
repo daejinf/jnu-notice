@@ -1,5 +1,36 @@
 [
   {
+    "checkedAt": "2026-08-05T01:04:06.138Z",
+    "notices": [
+      {
+        "id": "music-edu-1",
+        "title": "(학부) 2026. 2학기 음악교육과 전공 수업시간표",
+        "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1051042/artclView.do",
+        "author": "음악교육",
+        "date": "2026-08-05",
+        "views": 13,
+        "sourceType": "department",
+        "sourceName": "음악교육과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "992",
+        "title": "New [학생필독] 2026년도 1차 (상반기) 마일리지 승인, 반려 메세지 안내",
+        "url": "https://sojoong.kr/notice/notice-board/?uid=992&mod=document",
+        "author": "소프트웨어중심사업단",
+        "date": "2026-08-05",
+        "views": 36,
+        "sourceType": "center",
+        "sourceName": "소프트웨어중심사업단",
+        "category": "사업단 공지",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 2,
+    "totalNoticeCount": 7557
+  },
+  {
     "checkedAt": "2026-08-04T23:18:18.198Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6728,11 +6759,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8193
-  },
-  {
-    "checkedAt": "2026-07-26T00:14:13.472Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7624
   }
 ]

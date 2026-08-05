@@ -1,8 +1,20 @@
 {
-  "checkedAt": "2026-08-04T23:18:17.230Z",
+  "checkedAt": "2026-08-05T01:04:05.079Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "992",
+          "title": "New [학생필독] 2026년도 1차 (상반기) 마일리지 승인, 반려 메세지 안내",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=992&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-08-05",
+          "views": 36,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        },
         {
           "id": "3708",
           "title": "[재맞고] 2026년도 청년미래직진 프로그램 『AI 데이터 인사이트(Insight): 실제 데이터를 활용한 생성형 AI 실무 솔루션』",
@@ -130,13 +142,37 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-08-04T23:18:17.230Z",
-      "totalCount": 9,
+      "fetchedAt": "2026-08-05T01:04:05.079Z",
+      "totalCount": 10,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-07-29T12:31:12.831Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "music-edu-1",
+          "title": "(학부) 2026. 2학기 음악교육과 전공 수업시간표",
+          "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1051042/artclView.do",
+          "author": "음악교육",
+          "date": "2026-08-05",
+          "views": 13,
+          "sourceType": "department",
+          "sourceName": "음악교육과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "992",
+          "title": "New [학생필독] 2026년도 1차 (상반기) 마일리지 승인, 반려 메세지 안내",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=992&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-08-05",
+          "views": 36,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        },
         {
           "id": "3708",
           "title": "[재맞고] 2026년도 청년미래직진 프로그램 『AI 데이터 인사이트(Insight): 실제 데이터를 활용한 생성형 AI 실무 솔루션』",
@@ -494,8 +530,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-08-04T23:18:17.230Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-08-05T01:04:05.079Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
