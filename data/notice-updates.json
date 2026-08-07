@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-07T15:08:30.072Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7602
+  },
+  {
     "checkedAt": "2026-08-07T13:58:57.872Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -7708,60 +7714,5 @@
     ],
     "newNoticeCount": 27,
     "totalNoticeCount": 7496
-  },
-  {
-    "checkedAt": "2026-07-28T06:14:45.291Z",
-    "notices": [
-      {
-        "id": "912",
-        "title": "[국립과학수사연구원(국과수)] 독성학과 및 마약과 채용안내 새글",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1050534/artclView.do",
-        "author": "약학부",
-        "date": "2026-07-28",
-        "views": 9,
-        "sourceType": "college",
-        "sourceName": "약학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "570",
-        "title": "대학원 신입생 및 학석사 연계과정 신입생 설명회 개최(8.4)",
-        "url": "https://chem.jnu.ac.kr/bbs/chem/1013/1050527/artclView.do",
-        "author": "이은희",
-        "date": "2026-07-28",
-        "views": 9,
-        "sourceType": "department",
-        "sourceName": "화학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2494",
-        "title": "2026년 국가식품클러스터 기업분석경진대회 안내",
-        "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1050541/artclView.do",
-        "author": "식품공학과",
-        "date": "2026-07-28",
-        "views": 8,
-        "sourceType": "department",
-        "sourceName": "식품공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2559",
-        "title": "2026학년도 2학기 교직 「응급처치 및 심폐소생술 실습」 실시 안내",
-        "url": "https://korean.jnu.ac.kr/bbs/korean/1637/1050535/artclView.do",
-        "author": "국어국문학과",
-        "date": "2026-07-28",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "국어국문학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 4,
-    "totalNoticeCount": 8191
   }
 ]
