@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-08T08:01:01.383Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8187
+  },
+  {
     "checkedAt": "2026-08-08T07:12:54.014Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -6504,26 +6510,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8169
-  },
-  {
-    "checkedAt": "2026-07-29T16:39:15.902Z",
-    "notices": [
-      {
-        "id": "3709",
-        "title": "경험정리 심화 과정_핵심 키워드 도출",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3709",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-07-30",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 1,
-    "totalNoticeCount": 7659
   }
 ]
