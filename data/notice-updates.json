@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-08T02:20:35.081Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8187
+  },
+  {
     "checkedAt": "2026-08-08T00:05:51.098Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -7284,84 +7290,5 @@
     ],
     "newNoticeCount": 32,
     "totalNoticeCount": 7551
-  },
-  {
-    "checkedAt": "2026-07-29T01:11:02.809Z",
-    "notices": [
-      {
-        "id": "japanese-1",
-        "title": "[중요][학사] 수강신청 여석 문의 관련 사전 안내 | 공통기간(8/13~8/14) 문의 바람⭐",
-        "url": "https://nihon.jnu.ac.kr/bbs/nihon/1578/1050584/artclView.do",
-        "author": "일어일문학과",
-        "date": "2026-07-29",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "일어일문학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "69856",
-        "title": "2026년 제6회 전남대학교(여수캠퍼스)첨단산업 인재양성 부트...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69856",
-        "author": "첨단산업인재양성부트캠프(미래",
-        "date": "2026-07-29",
-        "views": 23,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "69857",
-        "title": "2026년 제2회 전남대학교 청년도약 인재양성 부트캠프 사업 ...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69857",
-        "author": "첨단산업인재양성부트캠프(미래",
-        "date": "2026-07-29",
-        "views": 22,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "186",
-        "title": "[학사] 2026학년도 2학기 수업시간표 안내",
-        "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1050579/artclView.do",
-        "author": "김소윤",
-        "date": "2026-07-29",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "산업공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "69854",
-        "title": "[IGE] 영국 축구 구단 일경험 프로그램(WELL Progr...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69854",
-        "author": "진로취업지원실",
-        "date": "2026-07-28",
-        "views": 73,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "69855",
-        "title": "대한민국 국민 누구나 참여가능한 AI, 공공·사회 데이터 활용...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69855",
-        "author": "대외협력과",
-        "date": "2026-07-28",
-        "views": 60,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "공모전",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 6,
-    "totalNoticeCount": 7601
   }
 ]
