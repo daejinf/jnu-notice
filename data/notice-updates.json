@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-08T19:44:15.149Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7513
+  },
+  {
     "checkedAt": "2026-08-08T18:56:39.913Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -5617,40 +5623,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 6954
-  },
-  {
-    "checkedAt": "2026-07-30T16:15:02.942Z",
-    "notices": [
-      {
-        "id": "3712",
-        "title": "[졸특] 내일(My Job)을 밝히는 퍼즐램프",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3712",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-07-31",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "53639",
-        "title": "[삼양그룹]환경관리직, 무균의약품생산관리★학교 추천채용(~8.9.(일)까지)",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53639",
-        "author": "취업진로포털 추천채용",
-        "date": "2026-07-31",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 추천채용",
-        "category": "추천채용",
-        "isPinned": false,
-        "statusLabel": "D-9",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 7608
   }
 ]
