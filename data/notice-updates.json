@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-12T22:59:39.398Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7596
+  },
+  {
     "checkedAt": "2026-08-12T22:01:25.423Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -3423,84 +3429,5 @@
     ],
     "newNoticeCount": 16,
     "totalNoticeCount": 7792
-  },
-  {
-    "checkedAt": "2026-08-07T00:31:34.738Z",
-    "notices": [
-      {
-        "id": "ko-program-intro-view-781",
-        "title": "[이공계] 대학원 졸업 선배에게 듣는 대학원 생활",
-        "url": "https://grow.jnu.ac.kr/ko/program/intro/view/781",
-        "author": "대학원혁신본부",
-        "date": "2026-08-07",
-        "views": 4,
-        "sourceType": "center",
-        "sourceName": "비교과 통합 플랫폼 성장마루",
-        "category": "Program",
-        "isPinned": true
-      },
-      {
-        "id": "biotech-1",
-        "title": "8월 지정폐기물 처리 신청서 제출 안내",
-        "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1051313/artclView.do",
-        "author": "허수진",
-        "date": "2026-08-07",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "생물공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "870",
-        "title": "[일반대학원] 2026년 상반기 도전장학(미래) 안내",
-        "url": "https://jnula.jnu.ac.kr/bbs/jnula/655/1051307/artclView.do",
-        "author": "김보경",
-        "date": "2026-08-07",
-        "views": 7,
-        "sourceType": "department",
-        "sourceName": "조경학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "191",
-        "title": "[장학] [한국장학재단] 2026학년도 2학기 2차 주거안정장학금 학생 신청 안내",
-        "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1051312/artclView.do",
-        "author": "임지윤",
-        "date": "2026-08-07",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "산업공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "488",
-        "title": "[캡스톤디자인1] 담당교원 및 분반 변경",
-        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1051294/artclView.do",
-        "author": "관리자",
-        "date": "2026-08-06",
-        "views": 67,
-        "sourceType": "department",
-        "sourceName": "전자컴퓨터공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1713",
-        "title": "[대학원] (8/7~8/14) 2026학년도 2학기 수강신청 안내",
-        "url": "https://educate.jnu.ac.kr/bbs/educate/2285/1051297/artclView.do",
-        "author": "교육학과",
-        "date": "2026-08-06",
-        "views": 9,
-        "sourceType": "department",
-        "sourceName": "교육학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 6,
-    "totalNoticeCount": 8191
   }
 ]
