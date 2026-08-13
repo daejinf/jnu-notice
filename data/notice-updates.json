@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-13T11:59:33.881Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8199
+  },
+  {
     "checkedAt": "2026-08-13T11:10:54.667Z",
     "notices": [
       {
@@ -3626,36 +3632,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7533
-  },
-  {
-    "checkedAt": "2026-08-07T12:28:01.254Z",
-    "notices": [
-      {
-        "id": "software-1",
-        "title": "(8/12~9/9, 18:00) 2026학년도 2학기 2차 국가근로장학금 학생 신청 기간",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1051381/artclView.do",
-        "author": "오승하",
-        "date": "2026-08-07",
-        "views": 22,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-2",
-        "title": "(8/3~8/18, 10:00) [대학생 서포터즈 컴투스 플레이어 16기 모집]",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1051376/artclView.do",
-        "author": "오승하",
-        "date": "2026-08-07",
-        "views": 4,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8190
   }
 ]
