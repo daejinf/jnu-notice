@@ -1,5 +1,36 @@
 [
   {
+    "checkedAt": "2026-08-14T09:43:46.902Z",
+    "notices": [
+      {
+        "id": "70006",
+        "title": "[SAF Korea] 2027 봄학기 IES 인턴십 온라인 설...",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70006",
+        "author": "국제협력과",
+        "date": "2026-08-14",
+        "views": 42,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "대학생활",
+        "isPinned": false
+      },
+      {
+        "id": "70010",
+        "title": "전남대학교 입학처 입시업무보조원 모집 공고",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70010",
+        "author": "입학과",
+        "date": "2026-08-14",
+        "views": 23,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "채용공고",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 2,
+    "totalNoticeCount": 6778
+  },
+  {
     "checkedAt": "2026-08-14T08:37:29.475Z",
     "notices": [
       {
@@ -367,18 +398,6 @@
         "isPinned": false
       },
       {
-        "id": "70007",
-        "title": "과학기술 강사 역량 강화를 위한 온라인 보수 교육 모집안내(무료)",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70007",
-        "author": "광주지역 여성과학기술센터",
-        "date": "2026-08-14",
-        "views": 9,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "모집공고",
-        "isPinned": false
-      },
-      {
         "id": "1008",
         "title": "[대학원] 2026학년도 2학기 일반(전문.특수대학원 포함)대학원 수료후등록 신청자 등록",
         "url": "https://forestry.jnu.ac.kr/bbs/forestry/436/1051934/artclView.do",
@@ -489,7 +508,7 @@
         "statusKind": "deadline"
       }
     ],
-    "newNoticeCount": 11,
+    "newNoticeCount": 10,
     "totalNoticeCount": 7550
   },
   {
@@ -529,18 +548,6 @@
         "sourceType": "college",
         "sourceName": "자율전공학부",
         "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "70006",
-        "title": "[SAF Korea] 2027 봄학기 IES 인턴십 온라인 설...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70006",
-        "author": "국제협력과",
-        "date": "2026-08-14",
-        "views": 12,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "대학생활",
         "isPinned": false
       },
       {
@@ -616,7 +623,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 10,
+    "newNoticeCount": 9,
     "totalNoticeCount": 7685
   },
   {
@@ -4331,11 +4338,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8187
-  },
-  {
-    "checkedAt": "2026-08-08T07:12:54.014Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7578
   }
 ]
