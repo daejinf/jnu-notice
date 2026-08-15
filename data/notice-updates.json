@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-15T19:54:48.898Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8201
+  },
+  {
     "checkedAt": "2026-08-15T19:32:43.991Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -3485,50 +3491,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7745
-  },
-  {
-    "checkedAt": "2026-08-10T11:21:17.840Z",
-    "notices": [
-      {
-        "id": "69969",
-        "title": "[오비맥주] 광주공장 신입 엔지니어 채용(~8.17.(월)까지)",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69969",
-        "author": "취업지원실",
-        "date": "2026-08-10",
-        "views": 35,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "69971",
-        "title": "[스마트건설] 2026 스마트건설 청년인재 채용설명회(자체 Q...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69971",
-        "author": "취업지원실",
-        "date": "2026-08-10",
-        "views": 2,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "53674",
-        "title": "[스마트건설] 2026 스마트건설 청년인재 채용설명회(자체 QR신청, 장소: 서울시 강남구 언주로 711)",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53674",
-        "author": "취업진로포털 채용설명회",
-        "date": "2026-08-10",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 채용설명회",
-        "category": "채용설명회",
-        "isPinned": false,
-        "statusLabel": "D-15",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 3,
-    "totalNoticeCount": 7595
   }
 ]
