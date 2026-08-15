@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-15T17:56:41.145Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7685
+  },
+  {
     "checkedAt": "2026-08-15T17:34:22.078Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -3729,133 +3735,6 @@
       }
     ],
     "newNoticeCount": 9,
-    "totalNoticeCount": 8191
-  },
-  {
-    "checkedAt": "2026-08-10T06:02:01.125Z",
-    "notices": [
-      {
-        "id": "69970",
-        "title": "전남대학교 소프트웨어중심대학사업단 제7차 행정직원 서류평가 결...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69970",
-        "author": "소프트웨어중심대학사업단",
-        "date": "2026-08-10",
-        "views": 29,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      },
-      {
-        "id": "69968",
-        "title": "[한국철도공사]26년 하반기 신입채용(8.18.(화)14시~8...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69968",
-        "author": "취업지원실",
-        "date": "2026-08-10",
-        "views": 19,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "802",
-        "title": "2026학년도 동계 국제자원활동 활동가 모집 새글",
-        "url": "https://human.jnu.ac.kr/bbs/human/1819/1051438/artclView.do",
-        "author": "김성영",
-        "date": "2026-08-10",
-        "views": 16,
-        "sourceType": "college",
-        "sourceName": "인문대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1004",
-        "title": "2026학년도 개발도상국 전공연계 국외봉사 단원 모집 홍보",
-        "url": "https://forestry.jnu.ac.kr/bbs/forestry/436/1051458/artclView.do",
-        "author": "이은도",
-        "date": "2026-08-10",
-        "views": 16,
-        "sourceType": "department",
-        "sourceName": "산림자원학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "933",
-        "title": "2026학년도 개발도상국 전공연계 국외봉사 단원 모집 안내 새글",
-        "url": "https://natural.jnu.ac.kr/bbs/natural/1560/1051446/artclView.do",
-        "author": "행정실",
-        "date": "2026-08-10",
-        "views": 9,
-        "sourceType": "college",
-        "sourceName": "자연과학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1778",
-        "title": "2026년 상반기 도전장학(미래) 선발 계획 안내(신청: ~ 8/18 17:00)",
-        "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1051439/artclView.do",
-        "author": "관리자",
-        "date": "2026-08-10",
-        "views": 7,
-        "sourceType": "department",
-        "sourceName": "컴퓨터정보통신공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "352",
-        "title": "2026학년도 개발도상국 전공연계 국외봉사 단원 모집 새글",
-        "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1051441/artclView.do",
-        "author": "엄재찬",
-        "date": "2026-08-10",
-        "views": 4,
-        "sourceType": "college",
-        "sourceName": "예술대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "893",
-        "title": "2026학년도 개발도상국 전공연계 국외봉사 단원 모집 안내",
-        "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1051449/artclView.do",
-        "author": "바이오에너지공학과",
-        "date": "2026-08-10",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "바이오에너지공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "65146",
-        "title": "BK21대학원혁신지원사업_2026. 9월 대학원생 영어 글쓰기 입문과정(online)",
-        "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=65146",
-        "author": "BK21대학원혁신지원사업_2026. 9월 대학원생 영어 글쓰기 입문과정(online)",
-        "date": "2026-08-10",
-        "views": 1,
-        "sourceType": "center",
-        "sourceName": "언어교육원",
-        "category": "기관 공지",
-        "isPinned": false
-      },
-      {
-        "id": "2874",
-        "title": "[학사안내]2026학년도 2학기 학부 및 대학원 재학생 등록금 고지서 출력",
-        "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1051460/artclView.do",
-        "author": "영어교육과",
-        "date": "2026-08-10",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "영어교육과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 10,
     "totalNoticeCount": 8191
   }
 ]
