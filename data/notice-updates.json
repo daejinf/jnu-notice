@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-16T04:49:35.118Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8201
+  },
+  {
     "checkedAt": "2026-08-16T04:01:01.220Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -3446,50 +3452,5 @@
     ],
     "newNoticeCount": 14,
     "totalNoticeCount": 7675
-  },
-  {
-    "checkedAt": "2026-08-11T00:06:15.593Z",
-    "notices": [
-      {
-        "id": "69972",
-        "title": "「전남광주특별시형 인재 성장 프로젝트: 나의 길을 JOB다」 ...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69972",
-        "author": "취업지원실",
-        "date": "2026-08-11",
-        "views": 0,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "3716",
-        "title": "「전남광주특별시형 인재 성장 프로젝트: 나의 길을 JOB다」 참여자 모집 안내",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3716",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-08-11",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-8",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "69970",
-        "title": "전남대학교 소프트웨어중심대학사업단 제7차 행정직원 서류평가 결...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=69970",
-        "author": "소프트웨어중심대학사업단",
-        "date": "2026-08-10",
-        "views": 124,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 3,
-    "totalNoticeCount": 8189
   }
 ]
