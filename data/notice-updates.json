@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-16T09:40:06.820Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7576
+  },
+  {
     "checkedAt": "2026-08-16T08:46:16.715Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -2912,48 +2918,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8107
-  },
-  {
-    "checkedAt": "2026-08-11T09:13:28.593Z",
-    "notices": [
-      {
-        "id": "sbst-1",
-        "title": "2026학년도 2학기 국가장학금 2차 신청 안내",
-        "url": "https://sbst.jnu.ac.kr/bbs/sbst/1522/1051624/artclView.do",
-        "author": "생명과학기술학부",
-        "date": "2026-08-11",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "생명과학기술학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "2441",
-        "title": "2026학년도 「성취·성장장학 사업」 시행계획 변경 안내",
-        "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1051622/artclView.do",
-        "author": "윤이현",
-        "date": "2026-08-11",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "지리학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "3622",
-        "title": "[국가보훈부] 독립유공자 공적검증 기간제근로자(연구원) 채용",
-        "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3622",
-        "author": "취업진로포털 공지사항",
-        "date": "2026-08-11",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 공지사항",
-        "category": "기관 공지",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 3,
-    "totalNoticeCount": 8192
   }
 ]
