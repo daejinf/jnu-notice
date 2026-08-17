@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-17T22:39:07.259Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8116
+  },
+  {
     "checkedAt": "2026-08-17T21:58:59.715Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -751,36 +757,5 @@
     ],
     "newNoticeCount": 1,
     "totalNoticeCount": 8202
-  },
-  {
-    "checkedAt": "2026-08-14T09:43:46.902Z",
-    "notices": [
-      {
-        "id": "70006",
-        "title": "[SAF Korea] 2027 봄학기 IES 인턴십 온라인 설...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70006",
-        "author": "국제협력과",
-        "date": "2026-08-14",
-        "views": 42,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "대학생활",
-        "isPinned": false
-      },
-      {
-        "id": "70010",
-        "title": "전남대학교 입학처 입시업무보조원 모집 공고",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70010",
-        "author": "입학과",
-        "date": "2026-08-14",
-        "views": 23,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "채용공고",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 6778
   }
 ]
