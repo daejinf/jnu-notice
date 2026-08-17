@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-17T23:00:10.138Z",
+  "checkedAt": "2026-08-17T23:35:41.358Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -130,13 +130,37 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-08-17T23:00:10.138Z",
+      "fetchedAt": "2026-08-17T23:35:41.358Z",
       "totalCount": 9,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-07-29T12:31:12.831Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "70011",
+          "title": "[한국마사회] 2026년 하반기 한국마사회 힐링승마 지원사업 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70011",
+          "author": "학생과",
+          "date": "2026-08-18",
+          "views": 6,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "모집공고",
+          "isPinned": false
+        },
+        {
+          "id": "70012",
+          "title": "2026 현직자 멘토링_kotra",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70012",
+          "author": "취업지원실",
+          "date": "2026-08-18",
+          "views": 5,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
         {
           "id": "3731",
           "title": "[여수] 2026학년도 졸업생 진로잡담 브런치 특강 [14회 한국공항공사 운영부 안전직무 2026. 11. 10.(화) 11:30~13:30]",
@@ -482,8 +506,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-08-17T23:00:10.138Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-08-17T23:35:41.358Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
