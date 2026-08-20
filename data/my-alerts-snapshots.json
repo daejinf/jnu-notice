@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-20T23:38:42.151Z",
+  "checkedAt": "2026-08-20T23:59:06.398Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -130,13 +130,37 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-08-20T23:38:42.151Z",
+      "fetchedAt": "2026-08-20T23:59:06.398Z",
       "totalCount": 9,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-07-29T12:31:12.831Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "804",
+          "title": "2026학년도 2학기 학생건강검진 새글",
+          "url": "https://human.jnu.ac.kr/bbs/human/1819/1052420/artclView.do",
+          "author": "김성영",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "college",
+          "sourceName": "인문대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "803",
+          "title": "2027학년도 1학기 2차 해외 파견 교환학생 새글",
+          "url": "https://human.jnu.ac.kr/bbs/human/1819/1052419/artclView.do",
+          "author": "김성영",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "college",
+          "sourceName": "인문대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
         {
           "id": "3732",
           "title": "[여수] 2026학년도 졸업생 진로잡담 브런치 특강 [14회 타타대우모빌리티 정비기술 2026. 11. 17.(화) 11:30~13:30]",
@@ -498,8 +522,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-08-20T23:38:42.151Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-08-20T23:59:06.398Z",
+      "totalCount": 29,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
