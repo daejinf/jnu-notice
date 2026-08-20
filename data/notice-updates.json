@@ -1,5 +1,84 @@
 [
   {
+    "checkedAt": "2026-08-20T05:46:04.681Z",
+    "notices": [
+      {
+        "id": "biotech-2",
+        "title": "[대학원] 2026년 하반기 외국어 및 종합시험 추가 면제 신청",
+        "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1052349/artclView.do",
+        "author": "조교",
+        "date": "2026-08-20",
+        "views": 4,
+        "sourceType": "department",
+        "sourceName": "생물공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "biotech-1",
+        "title": "공과대학 「두근두근 엔지니어링 프로젝트 21기」 참가자 모집",
+        "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1052352/artclView.do",
+        "author": "조교",
+        "date": "2026-08-20",
+        "views": 2,
+        "sourceType": "department",
+        "sourceName": "생물공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "chemical-1",
+        "title": "공과대학 「두근두근 엔지니어링 프로젝트 21기」 참가자 모집",
+        "url": "https://ace.jnu.ac.kr/bbs/ace/1860/1052355/artclView.do",
+        "author": "나현정",
+        "date": "2026-08-20",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "화학공학부",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "1978",
+        "title": "[일반대] 2026년 하반기 일반대학원 외국어·종합시험 추가 면제 안내(~9/9)",
+        "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1052340/artclView.do",
+        "author": "김선경",
+        "date": "2026-08-20",
+        "views": 26,
+        "sourceType": "department",
+        "sourceName": "환경에너지공학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "6097",
+        "title": "공과대학 「Job-Road Map(두근두근 엔지니어링 프로젝트 21기)」 참가자 모집 안내",
+        "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052342/artclView.do",
+        "author": "건축학부",
+        "date": "2026-08-20",
+        "views": 5,
+        "sourceType": "department",
+        "sourceName": "건축학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "1979",
+        "title": "[학부] 공과대학 「두근두근 엔지니어링 프로젝트 21기」 참가자 모집(~8/28)",
+        "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1052346/artclView.do",
+        "author": "김선경",
+        "date": "2026-08-20",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "환경에너지공학과",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 6,
+    "totalNoticeCount": 7640
+  },
+  {
     "checkedAt": "2026-08-20T04:51:22.537Z",
     "notices": [
       {
@@ -39,18 +118,6 @@
         "isPinned": false
       },
       {
-        "id": "1805",
-        "title": "2026학년도 제2학기 등록 안내",
-        "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1052325/artclView.do",
-        "author": "간호학과(간호대)",
-        "date": "2026-08-20",
-        "views": 8,
-        "sourceType": "department",
-        "sourceName": "간호학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "1806",
         "title": "2026학년도 2학기 학생건강검진 실시 안내 새글",
         "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1052329/artclView.do",
@@ -59,18 +126,6 @@
         "views": 0,
         "sourceType": "college",
         "sourceName": "간호대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1806",
-        "title": "2026학년도 2학기 학생건강검진 실시 안내",
-        "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1052329/artclView.do",
-        "author": "간호학과(간호대)",
-        "date": "2026-08-20",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "간호학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -87,7 +142,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 7,
+    "newNoticeCount": 5,
     "totalNoticeCount": 8205
   },
   {
@@ -3688,11 +3743,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8201
-  },
-  {
-    "checkedAt": "2026-08-16T10:38:23.480Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7647
   }
 ]
