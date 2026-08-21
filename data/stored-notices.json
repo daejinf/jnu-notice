@@ -595,7 +595,7 @@
     "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97046",
     "author": "생활안내 2026학년도 2학기 입주자 건강검진 안내(검진항목: 결핵 검사) Health Cert....",
     "date": "2026-08-21",
-    "views": 916,
+    "views": 917,
     "sourceType": "center",
     "sourceName": "광주생활관",
     "category": "기관 공지",
@@ -607,7 +607,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70074",
     "author": "학생과",
     "date": "2026-08-21",
-    "views": 449,
+    "views": 450,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "장학안내",
@@ -871,7 +871,7 @@
     "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052469/artclView.do",
     "author": "건축학부",
     "date": "2026-08-21",
-    "views": 22,
+    "views": 23,
     "sourceType": "department",
     "sourceName": "건축학부",
     "category": "공지사항",
@@ -914,6 +914,18 @@
     "isPinned": false
   },
   {
+    "id": "6099",
+    "title": "2026학년도 2학기 셔틀버스(광주↔여수캠퍼스) 운행 계획 안내",
+    "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052467/artclView.do",
+    "author": "건축학부",
+    "date": "2026-08-21",
+    "views": 20,
+    "sourceType": "department",
+    "sourceName": "건축학부",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
     "id": "2971",
     "title": "[홍보] 2027학년도 1학기 해외 파견 교환학생 2차 선발 안내",
     "url": "https://history.jnu.ac.kr/bbs/history/1604/1052445/artclView.do",
@@ -935,18 +947,6 @@
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "취업정보",
-    "isPinned": false
-  },
-  {
-    "id": "6099",
-    "title": "2026학년도 2학기 셔틀버스(광주↔여수캠퍼스) 운행 계획 안내",
-    "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052467/artclView.do",
-    "author": "건축학부",
-    "date": "2026-08-21",
-    "views": 19,
-    "sourceType": "department",
-    "sourceName": "건축학부",
-    "category": "공지사항",
     "isPinned": false
   },
   {
@@ -979,7 +979,7 @@
     "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052471/artclView.do",
     "author": "건축학부",
     "date": "2026-08-21",
-    "views": 17,
+    "views": 18,
     "sourceType": "department",
     "sourceName": "건축학부",
     "category": "공지사항",
@@ -1034,18 +1034,6 @@
     "isPinned": false
   },
   {
-    "id": "1787",
-    "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내",
-    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1052462/artclView.do",
-    "author": "관리자",
-    "date": "2026-08-21",
-    "views": 15,
-    "sourceType": "department",
-    "sourceName": "컴퓨터정보통신공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2420",
     "title": "2027학년도 1학기 해외 파견 교환학생 2차 선발 안내",
     "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1052441/artclView.do",
@@ -1054,6 +1042,18 @@
     "views": 15,
     "sourceType": "department",
     "sourceName": "영어영문학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1787",
+    "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내",
+    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1052462/artclView.do",
+    "author": "관리자",
+    "date": "2026-08-21",
+    "views": 15,
+    "sourceType": "department",
+    "sourceName": "컴퓨터정보통신공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -1118,18 +1118,6 @@
     "isPinned": false
   },
   {
-    "id": "1788",
-    "title": "2026학년도 2학기 학생건강검진 실시 안내(8/31~9/4)",
-    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1052464/artclView.do",
-    "author": "관리자",
-    "date": "2026-08-21",
-    "views": 11,
-    "sourceType": "department",
-    "sourceName": "컴퓨터정보통신공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "1131",
     "title": "[학사안내]제74회 2025학년도 후기(2026년 8월) 학위수여식 안내",
     "url": "https://design.jnu.ac.kr/bbs/design/1007/1052438/artclView.do",
@@ -1138,6 +1126,18 @@
     "views": 11,
     "sourceType": "department",
     "sourceName": "디자인학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1788",
+    "title": "2026학년도 2학기 학생건강검진 실시 안내(8/31~9/4)",
+    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1052464/artclView.do",
+    "author": "관리자",
+    "date": "2026-08-21",
+    "views": 11,
+    "sourceType": "department",
+    "sourceName": "컴퓨터정보통신공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -1967,7 +1967,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=1015&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-20",
-    "views": 565,
+    "views": 581,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -2598,14 +2598,14 @@
     "isPinned": false
   },
   {
-    "id": "355",
-    "title": "2027학년도 1학기 해외 파견 교환학생 2차 선발 홍보 새글",
-    "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1052269/artclView.do",
-    "author": "엄재찬",
+    "id": "192",
+    "title": "[대학원] 2026년 하반기 일반대학원 외국어·종합시험 추가 면제 시행 계획 안내",
+    "url": "https://bse.jnu.ac.kr/bbs/bse/2568/1052311/artclView.do",
+    "author": "융합바이오시스템기계공학과",
     "date": "2026-08-20",
-    "views": 29,
-    "sourceType": "college",
-    "sourceName": "예술대학",
+    "views": 30,
+    "sourceType": "department",
+    "sourceName": "융합바이오시스템기계공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -2622,14 +2622,14 @@
     "isPinned": false
   },
   {
-    "id": "192",
-    "title": "[대학원] 2026년 하반기 일반대학원 외국어·종합시험 추가 면제 시행 계획 안내",
-    "url": "https://bse.jnu.ac.kr/bbs/bse/2568/1052311/artclView.do",
-    "author": "융합바이오시스템기계공학과",
+    "id": "355",
+    "title": "2027학년도 1학기 해외 파견 교환학생 2차 선발 홍보 새글",
+    "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1052269/artclView.do",
+    "author": "엄재찬",
     "date": "2026-08-20",
     "views": 29,
-    "sourceType": "department",
-    "sourceName": "융합바이오시스템기계공학과",
+    "sourceType": "college",
+    "sourceName": "예술대학",
     "category": "공지사항",
     "isPinned": false
   },
@@ -2730,18 +2730,6 @@
     "isPinned": false
   },
   {
-    "id": "1784",
-    "title": "공과대학 「두근두근 엔지니어링 프로젝트 21기」 참가자 모집 안내(8/24~28)",
-    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1052364/artclView.do",
-    "author": "관리자",
-    "date": "2026-08-20",
-    "views": 19,
-    "sourceType": "department",
-    "sourceName": "컴퓨터정보통신공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "817",
     "title": "2026학년도 2학기 학생건강검진 실시 안내",
     "url": "https://homeedu.jnu.ac.kr/bbs/homeedu/2318/1052289/artclView.do",
@@ -2750,6 +2738,18 @@
     "views": 19,
     "sourceType": "department",
     "sourceName": "가정교육과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1784",
+    "title": "공과대학 「두근두근 엔지니어링 프로젝트 21기」 참가자 모집 안내(8/24~28)",
+    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1052364/artclView.do",
+    "author": "관리자",
+    "date": "2026-08-20",
+    "views": 19,
+    "sourceType": "department",
+    "sourceName": "컴퓨터정보통신공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -3397,7 +3397,7 @@
     "url": "https://www.aicoss.kr/www/notice/view/4093?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
     "author": "인공지능혁신융합대학사업단",
     "date": "2026-08-19",
-    "views": 120,
+    "views": 121,
     "sourceType": "center",
     "sourceName": "인공지능혁신융합대학사업단",
     "category": "사업단 공지",
@@ -3493,7 +3493,7 @@
     "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=96999",
     "author": "입퇴관안내 2026학년도 2학기 생활관 입주 일정 안내",
     "date": "2026-08-19",
-    "views": 1306,
+    "views": 1307,
     "sourceType": "center",
     "sourceName": "광주생활관",
     "category": "기관 공지",
@@ -3505,7 +3505,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=4&key=70036",
     "author": "학생과",
     "date": "2026-08-19",
-    "views": 972,
+    "views": 973,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "장학안내",
@@ -3517,7 +3517,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=1004&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-19",
-    "views": 847,
+    "views": 863,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -3529,7 +3529,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=70042",
     "author": "학생과",
     "date": "2026-08-19",
-    "views": 730,
+    "views": 732,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "장학안내",
@@ -3541,7 +3541,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=70047",
     "author": "학생과",
     "date": "2026-08-19",
-    "views": 663,
+    "views": 664,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "장학안내",
@@ -4184,18 +4184,6 @@
     "isPinned": false
   },
   {
-    "id": "354",
-    "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내 새글",
-    "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1052159/artclView.do",
-    "author": "엄재찬",
-    "date": "2026-08-19",
-    "views": 46,
-    "sourceType": "college",
-    "sourceName": "예술대학",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "543",
     "title": "(학부, 교육대학원) 20266학년도 2학기 중 광주시내 통학버스 운행 안내",
     "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1052244/artclView.do",
@@ -4204,6 +4192,18 @@
     "views": 46,
     "sourceType": "department",
     "sourceName": "음악교육과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "354",
+    "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내 새글",
+    "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1052159/artclView.do",
+    "author": "엄재찬",
+    "date": "2026-08-19",
+    "views": 46,
+    "sourceType": "college",
+    "sourceName": "예술대학",
     "category": "공지사항",
     "isPinned": false
   },
@@ -4232,18 +4232,6 @@
     "isPinned": false
   },
   {
-    "id": "1783",
-    "title": "2026년 지역성장 인재양성체계(앵커) 사업 참여 대학(원)생 우수사례 경진대회 개최 및 참가 안내(~8/2",
-    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1052193/artclView.do",
-    "author": "관리자",
-    "date": "2026-08-19",
-    "views": 42,
-    "sourceType": "department",
-    "sourceName": "컴퓨터정보통신공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "542",
     "title": "(학부) 2027학년도 1학기 해외 파견 교환학생 2차 선발 안내",
     "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1052243/artclView.do",
@@ -4252,6 +4240,18 @@
     "views": 42,
     "sourceType": "department",
     "sourceName": "음악교육과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1783",
+    "title": "2026년 지역성장 인재양성체계(앵커) 사업 참여 대학(원)생 우수사례 경진대회 개최 및 참가 안내(~8/2",
+    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1052193/artclView.do",
+    "author": "관리자",
+    "date": "2026-08-19",
+    "views": 42,
+    "sourceType": "department",
+    "sourceName": "컴퓨터정보통신공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -5049,7 +5049,7 @@
     "url": "https://www.aicoss.kr/www/notice/view/4092?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
     "author": "인공지능혁신융합대학사업단",
     "date": "2026-08-18",
-    "views": 196,
+    "views": 198,
     "sourceType": "center",
     "sourceName": "인공지능혁신융합대학사업단",
     "category": "사업단 공지",
@@ -5145,7 +5145,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=5&key=70017",
     "author": "학생과",
     "date": "2026-08-18",
-    "views": 1626,
+    "views": 1627,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "장학안내",
@@ -5241,7 +5241,7 @@
     "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EB%B2%84%EB%94%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8&Seq=27542",
     "author": "국제협력과",
     "date": "2026-08-18",
-    "views": 196,
+    "views": 197,
     "sourceType": "center",
     "sourceName": "국제협력과",
     "category": "기관 공지",
@@ -5596,6 +5596,18 @@
     "isPinned": false
   },
   {
+    "id": "2444",
+    "title": "[대학원] 2026학년도 전기 석·박사학위청구논문 심사 계획 안내",
+    "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1052090/artclView.do",
+    "author": "윤이현",
+    "date": "2026-08-18",
+    "views": 39,
+    "sourceType": "department",
+    "sourceName": "지리학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
     "id": "70025",
     "title": "2026년 일반인 대상 생성형 AI 아카데미 교육(2기) 안내",
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70025",
@@ -5605,18 +5617,6 @@
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "대학생활",
-    "isPinned": false
-  },
-  {
-    "id": "2444",
-    "title": "[대학원] 2026학년도 전기 석·박사학위청구논문 심사 계획 안내",
-    "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1052090/artclView.do",
-    "author": "윤이현",
-    "date": "2026-08-18",
-    "views": 38,
-    "sourceType": "department",
-    "sourceName": "지리학과",
-    "category": "공지사항",
     "isPinned": false
   },
   {
@@ -6143,7 +6143,7 @@
     "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EA%B5%90%ED%99%98%ED%95%99%EC%83%9D&Seq=27537",
     "author": "국제협력과",
     "date": "2026-08-17",
-    "views": 2389,
+    "views": 2390,
     "sourceType": "center",
     "sourceName": "국제협력과",
     "category": "기관 공지",
@@ -7367,7 +7367,7 @@
     "url": "https://yculture.jnu.ac.kr/bbs/yculture/284/1051958/artclView.do",
     "author": "관리",
     "date": "2026-08-14",
-    "views": 270,
+    "views": 271,
     "sourceType": "college",
     "sourceName": "문화사회과학대학(여수)",
     "category": "공지사항",
@@ -8341,7 +8341,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69996",
     "author": "학생과",
     "date": "2026-08-13",
-    "views": 4464,
+    "views": 4466,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "장학안내",
@@ -8389,7 +8389,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=1001&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-13",
-    "views": 3120,
+    "views": 3136,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -8401,7 +8401,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=1000&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-13",
-    "views": 2851,
+    "views": 2866,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -8845,7 +8845,7 @@
     "url": "https://bse.jnu.ac.kr/bbs/bse/2568/1051834/artclView.do",
     "author": "융합바이오시스템기계공학",
     "date": "2026-08-13",
-    "views": 71,
+    "views": 72,
     "sourceType": "department",
     "sourceName": "융합바이오시스템기계공학과",
     "category": "공지사항",
@@ -9385,7 +9385,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=998&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-12",
-    "views": 3057,
+    "views": 3072,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -9884,9 +9884,9 @@
     "isPinned": false
   },
   {
-    "id": "380",
-    "title": "[대학원] 2027년 2월 졸업 대학원 석박사학위 청구논문 심사 계획 안내",
-    "url": "https://resources.jnu.ac.kr/bbs/resources/1194/1051685/artclView.do",
+    "id": "381",
+    "title": "2026학년도 2학기 국가장학금 2차 신청 안내",
+    "url": "https://resources.jnu.ac.kr/bbs/resources/1194/1051698/artclView.do",
     "author": "최미진",
     "date": "2026-08-12",
     "views": 94,
@@ -9896,12 +9896,12 @@
     "isPinned": false
   },
   {
-    "id": "381",
-    "title": "2026학년도 2학기 국가장학금 2차 신청 안내",
-    "url": "https://resources.jnu.ac.kr/bbs/resources/1194/1051698/artclView.do",
+    "id": "380",
+    "title": "[대학원] 2027년 2월 졸업 대학원 석박사학위 청구논문 심사 계획 안내",
+    "url": "https://resources.jnu.ac.kr/bbs/resources/1194/1051685/artclView.do",
     "author": "최미진",
     "date": "2026-08-12",
-    "views": 93,
+    "views": 94,
     "sourceType": "department",
     "sourceName": "에너지자원공학과",
     "category": "공지사항",
@@ -10669,7 +10669,7 @@
     "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1051576/artclView.do",
     "author": "김소윤",
     "date": "2026-08-11",
-    "views": 778,
+    "views": 779,
     "sourceType": "department",
     "sourceName": "산업공학과",
     "category": "공지사항",
@@ -10921,7 +10921,7 @@
     "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=33&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27494",
     "author": "국제협력과",
     "date": "2026-08-11",
-    "views": 100,
+    "views": 101,
     "sourceType": "center",
     "sourceName": "국제협력과",
     "category": "기관 공지",
@@ -11643,7 +11643,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=993&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-10",
-    "views": 3712,
+    "views": 3727,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -12183,7 +12183,7 @@
     "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1051497/artclView.do",
     "author": "관리자",
     "date": "2026-08-10",
-    "views": 104,
+    "views": 105,
     "sourceType": "department",
     "sourceName": "전자컴퓨터공학부",
     "category": "공지사항",
@@ -13961,7 +13961,7 @@
     "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1051384/artclView.do",
     "author": "바이오에너지공학과",
     "date": "2026-08-07",
-    "views": 122,
+    "views": 123,
     "sourceType": "department",
     "sourceName": "바이오에너지공학과",
     "category": "공지사항",
@@ -14481,7 +14481,7 @@
     "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1051186/artclView.do",
     "author": "건축학부",
     "date": "2026-08-06",
-    "views": 153,
+    "views": 154,
     "sourceType": "department",
     "sourceName": "건축학부",
     "category": "공지사항",
@@ -14577,7 +14577,7 @@
     "url": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/1051216/artclView.do",
     "author": "김진성",
     "date": "2026-08-06",
-    "views": 453,
+    "views": 454,
     "sourceType": "department",
     "sourceName": "물리교육과",
     "category": "공지사항",
@@ -15733,7 +15733,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=992&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-05",
-    "views": 4884,
+    "views": 4899,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -16220,6 +16220,18 @@
     "isPinned": false
   },
   {
+    "id": "377",
+    "title": "2026학년도 대학원 졸업선배에게 듣는 대학원 생활(이공계) 안내",
+    "url": "https://resources.jnu.ac.kr/bbs/resources/1194/1051101/artclView.do",
+    "author": "최미진",
+    "date": "2026-08-05",
+    "views": 183,
+    "sourceType": "department",
+    "sourceName": "에너지자원공학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
     "id": "6085",
     "title": "2026학년도 2학기 2차 국가근로장학금 학생 신청 안내",
     "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1051090/artclView.do",
@@ -16228,18 +16240,6 @@
     "views": 182,
     "sourceType": "department",
     "sourceName": "건축학부",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
-    "id": "377",
-    "title": "2026학년도 대학원 졸업선배에게 듣는 대학원 생활(이공계) 안내",
-    "url": "https://resources.jnu.ac.kr/bbs/resources/1194/1051101/artclView.do",
-    "author": "최미진",
-    "date": "2026-08-05",
-    "views": 182,
-    "sourceType": "department",
-    "sourceName": "에너지자원공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -17205,7 +17205,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=991&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-04",
-    "views": 4562,
+    "views": 4577,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -17241,7 +17241,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=990&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-04",
-    "views": 827,
+    "views": 828,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -18305,7 +18305,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=989&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-03",
-    "views": 4787,
+    "views": 4802,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -19869,7 +19869,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=988&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-08-01",
-    "views": 5263,
+    "views": 5278,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -21569,7 +21569,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69876",
     "author": "학생과",
     "date": "2026-07-30",
-    "views": 5084,
+    "views": 5085,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "장학안내",
@@ -21617,7 +21617,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=987&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-30",
-    "views": 6310,
+    "views": 6325,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -21785,7 +21785,7 @@
     "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1050675/artclView.do",
     "author": "홍은서",
     "date": "2026-07-30",
-    "views": 320,
+    "views": 321,
     "sourceType": "department",
     "sourceName": "산업공학과",
     "category": "공지사항",
@@ -22903,7 +22903,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=986&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-29",
-    "views": 5363,
+    "views": 5378,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -23011,7 +23011,7 @@
     "url": "https://engc.jnu.ac.kr/bbs/engc/280/1050619/artclView.do",
     "author": "김진범",
     "date": "2026-07-29",
-    "views": 477,
+    "views": 478,
     "sourceType": "college",
     "sourceName": "공학대학(여수)",
     "category": "공지사항",
@@ -23935,7 +23935,7 @@
     "url": "https://eng.jnu.ac.kr/bbs/eng/993/1050522/artclView.do",
     "author": "조은혜",
     "date": "2026-07-28",
-    "views": 4189,
+    "views": 4190,
     "sourceType": "college",
     "sourceName": "공과대학",
     "category": "공지사항",
@@ -23983,7 +23983,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=985&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-28",
-    "views": 1051,
+    "views": 1052,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -24999,7 +24999,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=983&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-27",
-    "views": 6146,
+    "views": 6161,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -26935,7 +26935,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=982&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-24",
-    "views": 1987,
+    "views": 1989,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -27777,7 +27777,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=981&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-23",
-    "views": 1157,
+    "views": 1159,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -27849,7 +27849,7 @@
     "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=65055",
     "author": "2026년 8월 모의토익/모의 토익스피킹 접수 안내",
     "date": "2026-07-23",
-    "views": 780,
+    "views": 781,
     "sourceType": "center",
     "sourceName": "언어교육원",
     "category": "기관 공지",
@@ -28803,7 +28803,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=980&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-22",
-    "views": 1140,
+    "views": 1141,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -29427,7 +29427,7 @@
     "url": "https://design.jnu.ac.kr/bbs/design/1007/1050224/artclView.do",
     "author": "디자인학과",
     "date": "2026-07-22",
-    "views": 90,
+    "views": 91,
     "sourceType": "department",
     "sourceName": "디자인학과",
     "category": "공지사항",
@@ -34735,7 +34735,7 @@
     "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1049785/artclView.do",
     "author": "관리자",
     "date": "2026-07-15",
-    "views": 875,
+    "views": 876,
     "sourceType": "department",
     "sourceName": "신소재공학부",
     "category": "공지사항",
@@ -40413,7 +40413,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=958&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-09",
-    "views": 8808,
+    "views": 8824,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -40689,7 +40689,7 @@
     "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1049391/artclView.do",
     "author": "영어교육과",
     "date": "2026-07-09",
-    "views": 439,
+    "views": 440,
     "sourceType": "department",
     "sourceName": "영어교육과",
     "category": "공지사항",
@@ -40876,18 +40876,6 @@
     "isPinned": false
   },
   {
-    "id": "1861",
-    "title": "(~7/17) 2027학년도 1학기 해외 파견 교환학생 1차 선발 안내",
-    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049440/artclView.do",
-    "author": "오승하",
-    "date": "2026-07-09",
-    "views": 288,
-    "sourceType": "department",
-    "sourceName": "소프트웨어공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2807",
     "title": "[장학] 2026-2학기 법정장학 및 복지 장학 등 제출 안내(수정)",
     "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1049386/artclView.do",
@@ -40896,6 +40884,18 @@
     "views": 288,
     "sourceType": "department",
     "sourceName": "자율전공학부",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1861",
+    "title": "(~7/17) 2027학년도 1학기 해외 파견 교환학생 1차 선발 안내",
+    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1049440/artclView.do",
+    "author": "오승하",
+    "date": "2026-07-09",
+    "views": 288,
+    "sourceType": "department",
+    "sourceName": "소프트웨어공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -42425,7 +42425,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=957&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-08",
-    "views": 8999,
+    "views": 9014,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -47753,7 +47753,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=943&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-03",
-    "views": 3100,
+    "views": 3101,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -49559,7 +49559,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=939&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-07-01",
-    "views": 9769,
+    "views": 9784,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -50063,7 +50063,7 @@
     "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1048554/artclView.do",
     "author": "관리자",
     "date": "2026-07-01",
-    "views": 312,
+    "views": 313,
     "sourceType": "department",
     "sourceName": "전자컴퓨터공학부",
     "category": "공지사항",
@@ -51163,7 +51163,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69545",
     "author": "실험실특화형창업선도대학사업단",
     "date": "2026-06-30",
-    "views": 1797,
+    "views": 1798,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "모집공고",
@@ -52397,7 +52397,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=938&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-06-29",
-    "views": 9947,
+    "views": 9962,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -53124,18 +53124,6 @@
     "isPinned": false
   },
   {
-    "id": "1955",
-    "title": "[학부] 2026 하계방학 공과대학 학년별 맞춤형 프로그램 안내",
-    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1048255/artclView.do",
-    "author": "김선경",
-    "date": "2026-06-29",
-    "views": 113,
-    "sourceType": "department",
-    "sourceName": "환경에너지공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "556",
     "title": "2026학년도 장애학생 여름방학 방학학교 교육봉사자(자원봉사자) 모집",
     "url": "https://agrochem.jnu.ac.kr/bbs/agrochem/555/1048275/artclView.do",
@@ -53144,6 +53132,18 @@
     "views": 113,
     "sourceType": "department",
     "sourceName": "농생명화학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1955",
+    "title": "[학부] 2026 하계방학 공과대학 학년별 맞춤형 프로그램 안내",
+    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1048255/artclView.do",
+    "author": "김선경",
+    "date": "2026-06-29",
+    "views": 113,
+    "sourceType": "department",
+    "sourceName": "환경에너지공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -53184,18 +53184,6 @@
     "isPinned": false
   },
   {
-    "id": "780",
-    "title": "2026학년도 2학기 모집단위간이동(전과) 실시 안내",
-    "url": "https://agro.jnu.ac.kr/bbs/agro/444/1048290/artclView.do",
-    "author": "응용식물학과",
-    "date": "2026-06-29",
-    "views": 105,
-    "sourceType": "department",
-    "sourceName": "응용식물학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2342",
     "title": "2026학년도 2학기 모집단위간이동(전과) 실시 안내",
     "url": "https://math.jnu.ac.kr/bbs/math/2076/1048218/artclView.do",
@@ -53204,6 +53192,18 @@
     "views": 105,
     "sourceType": "department",
     "sourceName": "수학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "780",
+    "title": "2026학년도 2학기 모집단위간이동(전과) 실시 안내",
+    "url": "https://agro.jnu.ac.kr/bbs/agro/444/1048290/artclView.do",
+    "author": "응용식물학과",
+    "date": "2026-06-29",
+    "views": 105,
+    "sourceType": "department",
+    "sourceName": "응용식물학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -53244,18 +53244,6 @@
     "isPinned": false
   },
   {
-    "id": "1954",
-    "title": "[학부] 정하주식회사 취업연계 국가근로장학생 모집 안내",
-    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1048225/artclView.do",
-    "author": "김선경",
-    "date": "2026-06-29",
-    "views": 72,
-    "sourceType": "department",
-    "sourceName": "환경에너지공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "1486",
     "title": "2026학년도 2학기 모집단위간이동(전과) 실시 안내",
     "url": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/1048272/artclView.do",
@@ -53264,6 +53252,18 @@
     "views": 72,
     "sourceType": "department",
     "sourceName": "화학교육과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1954",
+    "title": "[학부] 정하주식회사 취업연계 국가근로장학생 모집 안내",
+    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1048225/artclView.do",
+    "author": "김선경",
+    "date": "2026-06-29",
+    "views": 72,
+    "sourceType": "department",
+    "sourceName": "환경에너지공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -55037,7 +55037,7 @@
     "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1048197/artclView.do",
     "author": "lee3533@jnu.ac.kr",
     "date": "2026-06-26",
-    "views": 279,
+    "views": 280,
     "sourceType": "department",
     "sourceName": "응용생물학과",
     "category": "공지사항",
@@ -55392,18 +55392,6 @@
     "isPinned": false
   },
   {
-    "id": "342",
-    "title": "2026년 G-RISE 공유대학 콘텐츠 수요조사 실시 안내",
-    "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1048124/artclView.do",
-    "author": "엄재찬",
-    "date": "2026-06-26",
-    "views": 98,
-    "sourceType": "college",
-    "sourceName": "예술대학",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "833",
     "title": "2025학년도 후기(2026년 8월) 교원자격무시험검정 신청 안내",
     "url": "https://ethicsedu.jnu.ac.kr/bbs/ethicsedu/2304/1048119/artclView.do",
@@ -55412,6 +55400,18 @@
     "views": 98,
     "sourceType": "department",
     "sourceName": "윤리교육과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "342",
+    "title": "2026년 G-RISE 공유대학 콘텐츠 수요조사 실시 안내",
+    "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1048124/artclView.do",
+    "author": "엄재찬",
+    "date": "2026-06-26",
+    "views": 98,
+    "sourceType": "college",
+    "sourceName": "예술대학",
     "category": "공지사항",
     "isPinned": false
   },
@@ -56045,7 +56045,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=937&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-06-25",
-    "views": 1727,
+    "views": 1728,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -56489,7 +56489,7 @@
     "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1048072/artclView.do",
     "author": "자율전공학부",
     "date": "2026-06-25",
-    "views": 296,
+    "views": 297,
     "sourceType": "college",
     "sourceName": "자율전공학부",
     "category": "공지사항",
@@ -56501,7 +56501,7 @@
     "url": "https://sdis.jnu.ac.kr/bbs/sdis/247/1048072/artclView.do",
     "author": "자율전공학부",
     "date": "2026-06-25",
-    "views": 296,
+    "views": 297,
     "sourceType": "department",
     "sourceName": "자율전공학부",
     "category": "공지사항",
@@ -57509,7 +57509,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=932&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-06-24",
-    "views": 10797,
+    "views": 10812,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -57533,7 +57533,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=934&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-06-24",
-    "views": 2361,
+    "views": 2362,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -57557,7 +57557,7 @@
     "url": "https://sojoong.kr/notice/notice-board/?uid=933&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-06-24",
-    "views": 1714,
+    "views": 1715,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -58092,18 +58092,6 @@
     "isPinned": false
   },
   {
-    "id": "1851",
-    "title": "(7/1~3) 2026년 「CNU나눔-전공연계 국내봉사」 참여팀 추가 모집 안내",
-    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1047884/artclView.do",
-    "author": "오승하",
-    "date": "2026-06-24",
-    "views": 198,
-    "sourceType": "department",
-    "sourceName": "소프트웨어공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "303",
     "title": "<2025학년도 후기(2026년8월 졸업) 학부 학사 졸업 논문 제출 일자 공지>",
     "url": "https://ae.jnu.ac.kr/bbs/ae/430/1047893/artclView.do",
@@ -58112,6 +58100,18 @@
     "views": 198,
     "sourceType": "department",
     "sourceName": "농업경제학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1851",
+    "title": "(7/1~3) 2026년 「CNU나눔-전공연계 국내봉사」 참여팀 추가 모집 안내",
+    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1047884/artclView.do",
+    "author": "오승하",
+    "date": "2026-06-24",
+    "views": 198,
+    "sourceType": "department",
+    "sourceName": "소프트웨어공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -58862,6 +58862,18 @@
     "isPinned": false
   },
   {
+    "id": "931",
+    "title": "[일정변경] 창업교육 프로그램_2단계 SW창업캠프 일정 연기 안내",
+    "url": "https://sojoong.kr/notice/notice-board/?uid=931&mod=document",
+    "author": "소프트웨어중심사업단",
+    "date": "2026-06-23",
+    "views": 1721,
+    "sourceType": "center",
+    "sourceName": "소프트웨어중심사업단",
+    "category": "사업단 공지",
+    "isPinned": false
+  },
+  {
     "id": "65",
     "title": "일경험 프로젝트 참여 학생 모집",
     "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/1047647/artclView.do",
@@ -59198,18 +59210,6 @@
     "isPinned": false
   },
   {
-    "id": "790",
-    "title": "2026학년도 하계 인문대 취업동아리 H-Union 참가팀 모집(~7.1.)(모집기간 연장",
-    "url": "https://human.jnu.ac.kr/bbs/human/1819/1047763/artclView.do",
-    "author": "이선헌",
-    "date": "2026-06-23",
-    "views": 298,
-    "sourceType": "college",
-    "sourceName": "인문대학",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2295",
     "title": "맞춤형 교육과정 운영을 위한 교육수요자 설문조사 실시 안내",
     "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1047733/artclView.do",
@@ -59218,6 +59218,18 @@
     "views": 298,
     "sourceType": "department",
     "sourceName": "신소재공학부",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "790",
+    "title": "2026학년도 하계 인문대 취업동아리 H-Union 참가팀 모집(~7.1.)(모집기간 연장",
+    "url": "https://human.jnu.ac.kr/bbs/human/1819/1047763/artclView.do",
+    "author": "이선헌",
+    "date": "2026-06-23",
+    "views": 298,
+    "sourceType": "college",
+    "sourceName": "인문대학",
     "category": "공지사항",
     "isPinned": false
   },
@@ -59774,18 +59786,6 @@
     "isPinned": false
   },
   {
-    "id": "1756",
-    "title": "2026학년도 하계 「피지컬 AI를 위한 입문」교육 프로그램 신청 안내(~6/30 18:00)",
-    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1047793/artclView.do",
-    "author": "관리자",
-    "date": "2026-06-23",
-    "views": 107,
-    "sourceType": "department",
-    "sourceName": "컴퓨터정보통신공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "402",
     "title": "2026학년도 하계 「피지컬 AI를 위한 입문」교육 프로그램 안내",
     "url": "https://mathedu.jnu.ac.kr/bbs/mathedu/2306/1047775/artclView.do",
@@ -59794,6 +59794,18 @@
     "views": 107,
     "sourceType": "department",
     "sourceName": "수학교육과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1756",
+    "title": "2026학년도 하계 「피지컬 AI를 위한 입문」교육 프로그램 신청 안내(~6/30 18:00)",
+    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1047793/artclView.do",
+    "author": "관리자",
+    "date": "2026-06-23",
+    "views": 107,
+    "sourceType": "department",
+    "sourceName": "컴퓨터정보통신공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -60119,18 +60131,6 @@
     "sourceType": "college",
     "sourceName": "예술대학",
     "category": "공지사항",
-    "isPinned": false
-  },
-  {
-    "id": "931",
-    "title": "[일정변경] 창업교육 프로그램_2단계 SW창업캠프 일정 연기 안내",
-    "url": "https://sojoong.kr/notice/notice-board/?uid=931&mod=document",
-    "author": "소프트웨어중심사업단",
-    "date": "2026-06-23",
-    "views": 0,
-    "sourceType": "center",
-    "sourceName": "소프트웨어중심사업단",
-    "category": "사업단 공지",
     "isPinned": false
   },
   {
@@ -60565,6 +60565,18 @@
     "sourceType": "center",
     "sourceName": "비교과 통합 플랫폼 성장마루",
     "category": "Program",
+    "isPinned": false
+  },
+  {
+    "id": "929",
+    "title": "[모집홍보] 2026년 코디세이 AI 올인원 과정 제2기 교육생 모집",
+    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=929",
+    "author": "소프트웨어중심사업단",
+    "date": "2026-06-22",
+    "views": 1814,
+    "sourceType": "center",
+    "sourceName": "소프트웨어중심사업단",
+    "category": "사업단 공지",
     "isPinned": false
   },
   {
@@ -61272,18 +61284,6 @@
     "views": 5,
     "sourceType": "center",
     "sourceName": "인공지능혁신융합대학사업단",
-    "category": "사업단 공지",
-    "isPinned": false
-  },
-  {
-    "id": "929",
-    "title": "[모집홍보] 2026년 코디세이 AI 올인원 과정 제2기 교육생 모집",
-    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=929",
-    "author": "소프트웨어중심사업단",
-    "date": "2026-06-22",
-    "views": 0,
-    "sourceType": "center",
-    "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
     "isPinned": false
   },
@@ -63056,18 +63056,6 @@
     "isPinned": false
   },
   {
-    "id": "777",
-    "title": "[식물생명공학부 응용식물학전공]2025학년도 후기(2026년 8월 졸업예정) 졸업시험 실시",
-    "url": "https://agro.jnu.ac.kr/bbs/agro/444/1047429/artclView.do",
-    "author": "응용식물학과",
-    "date": "2026-06-19",
-    "views": 180,
-    "sourceType": "department",
-    "sourceName": "응용식물학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "861",
     "title": "2026학년도 1학기 도전장학생(비상) 선발 계획 안내",
     "url": "https://jnula.jnu.ac.kr/bbs/jnula/655/1047404/artclView.do",
@@ -63076,6 +63064,18 @@
     "views": 180,
     "sourceType": "department",
     "sourceName": "조경학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "777",
+    "title": "[식물생명공학부 응용식물학전공]2025학년도 후기(2026년 8월 졸업예정) 졸업시험 실시",
+    "url": "https://agro.jnu.ac.kr/bbs/agro/444/1047429/artclView.do",
+    "author": "응용식물학과",
+    "date": "2026-06-19",
+    "views": 180,
+    "sourceType": "department",
+    "sourceName": "응용식물학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -63916,12 +63916,24 @@
     "isPinned": true
   },
   {
+    "id": "922",
+    "title": "[모집홍보] 2026 오픈소스 개발자대회 모집 안내",
+    "url": "https://sojoong.kr/notice/notice-board/?uid=922&mod=document",
+    "author": "소프트웨어중심사업단",
+    "date": "2026-06-18",
+    "views": 11121,
+    "sourceType": "center",
+    "sourceName": "소프트웨어중심사업단",
+    "category": "사업단 공지",
+    "isPinned": false
+  },
+  {
     "id": "925",
     "title": "[모집홍보] CODEGATE AI START-UP 해커톤[HANCOM]",
     "url": "https://sojoong.kr/notice/notice-board/?uid=925&mod=document",
     "author": "소프트웨어중심사업단",
     "date": "2026-06-18",
-    "views": 11102,
+    "views": 11117,
     "sourceType": "center",
     "sourceName": "소프트웨어중심사업단",
     "category": "사업단 공지",
@@ -64816,18 +64828,6 @@
     "isPinned": false
   },
   {
-    "id": "1843",
-    "title": "(~6/19, 18:00) 2026학년도 동원장학재단 섬김의 리더십 장학생 선발 안내(수정",
-    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1047356/artclView.do",
-    "author": "오승하",
-    "date": "2026-06-18",
-    "views": 221,
-    "sourceType": "department",
-    "sourceName": "소프트웨어공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2338",
     "title": "2026학년도 수학과 교직과정 이수예정자 선발",
     "url": "https://math.jnu.ac.kr/bbs/math/2076/1047189/artclView.do",
@@ -64836,6 +64836,18 @@
     "views": 221,
     "sourceType": "department",
     "sourceName": "수학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1843",
+    "title": "(~6/19, 18:00) 2026학년도 동원장학재단 섬김의 리더십 장학생 선발 안내(수정",
+    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1047356/artclView.do",
+    "author": "오승하",
+    "date": "2026-06-18",
+    "views": 221,
+    "sourceType": "department",
+    "sourceName": "소프트웨어공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -64924,18 +64936,6 @@
     "isPinned": false
   },
   {
-    "id": "1839",
-    "title": "(~6/25, 11:00) [현대모비스] 26년 6월 신입 채용",
-    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1047324/artclView.do",
-    "author": "오승하",
-    "date": "2026-06-18",
-    "views": 186,
-    "sourceType": "department",
-    "sourceName": "소프트웨어공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "1106",
     "title": "[장학안내]2026학년도 1학기 도전장학생(비상) 선발 공고 [2026.6.22(월)09:",
     "url": "https://design.jnu.ac.kr/bbs/design/1007/1047278/artclView.do",
@@ -64944,6 +64944,18 @@
     "views": 186,
     "sourceType": "department",
     "sourceName": "디자인학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1839",
+    "title": "(~6/25, 11:00) [현대모비스] 26년 6월 신입 채용",
+    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1047324/artclView.do",
+    "author": "오승하",
+    "date": "2026-06-18",
+    "views": 186,
+    "sourceType": "department",
+    "sourceName": "소프트웨어공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -65577,7 +65589,7 @@
     "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1047211/artclView.do",
     "author": "식품공학과",
     "date": "2026-06-18",
-    "views": 48,
+    "views": 49,
     "sourceType": "department",
     "sourceName": "식품공학과",
     "category": "공지사항",
@@ -65677,18 +65689,6 @@
     "sourceType": "center",
     "sourceName": "교육혁신본부",
     "category": "기관 공지",
-    "isPinned": false
-  },
-  {
-    "id": "922",
-    "title": "[모집홍보] 2026 오픈소스 개발자대회 모집 안내",
-    "url": "https://sojoong.kr/notice/notice-board/?uid=922&mod=document",
-    "author": "소프트웨어중심사업단",
-    "date": "2026-06-18",
-    "views": 0,
-    "sourceType": "center",
-    "sourceName": "소프트웨어중심사업단",
-    "category": "사업단 공지",
     "isPinned": false
   },
   {
@@ -66242,6 +66242,30 @@
     "isPinned": false
   },
   {
+    "id": "919",
+    "title": "[모집홍보] 인공지능부트캠프사업단- 피지컬 AI를 위한 입문",
+    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=919",
+    "author": "소프트웨어중심사업단",
+    "date": "2026-06-17",
+    "views": 2050,
+    "sourceType": "center",
+    "sourceName": "소프트웨어중심사업단",
+    "category": "사업단 공지",
+    "isPinned": false
+  },
+  {
+    "id": "917",
+    "title": "[모집홍보] HL FMA 2026 자율주행 경진대회 모집 안내-한라대학교",
+    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=917",
+    "author": "소프트웨어중심사업단",
+    "date": "2026-06-17",
+    "views": 1910,
+    "sourceType": "center",
+    "sourceName": "소프트웨어중심사업단",
+    "category": "사업단 공지",
+    "isPinned": false
+  },
+  {
     "id": "1047112",
     "title": "산정초 도서관 하계 대학생 교육봉사자 모집 안내",
     "url": "https://education.jnu.ac.kr/bbs/education/2350/1047112/artclView.do",
@@ -66710,18 +66734,6 @@
     "isPinned": false
   },
   {
-    "id": "1834",
-    "title": "(6/18~19) 2026학년도 하계 계절학기 수강취소 기간 및 방법 안내",
-    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1047156/artclView.do",
-    "author": "오승하",
-    "date": "2026-06-17",
-    "views": 266,
-    "sourceType": "department",
-    "sourceName": "소프트웨어공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "762",
     "title": "2026학년도 2학기 학·석사학위연계과정 진학예정자 모집",
     "url": "https://sociology.jnu.ac.kr/bbs/sociology/1001/1047075/artclView.do",
@@ -66730,6 +66742,18 @@
     "views": 266,
     "sourceType": "department",
     "sourceName": "사회학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1834",
+    "title": "(6/18~19) 2026학년도 하계 계절학기 수강취소 기간 및 방법 안내",
+    "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1047156/artclView.do",
+    "author": "오승하",
+    "date": "2026-06-17",
+    "views": 266,
+    "sourceType": "department",
+    "sourceName": "소프트웨어공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -66818,18 +66842,6 @@
     "isPinned": false
   },
   {
-    "id": "1948",
-    "title": "[학부] 2026학년도 2학기 학·석사학위연계과정 및 학·석박사학위통합연계과정 진학예정자",
-    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1047038/artclView.do",
-    "author": "김선경",
-    "date": "2026-06-17",
-    "views": 240,
-    "sourceType": "department",
-    "sourceName": "환경에너지공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2120",
     "title": "[학사] 2026학년도 1학기 응원장학생 선발 안내",
     "url": "https://fn.jnu.ac.kr/bbs/fn/1139/1047153/artclView.do",
@@ -66838,6 +66850,18 @@
     "views": 240,
     "sourceType": "department",
     "sourceName": "식품영양과학부",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1948",
+    "title": "[학부] 2026학년도 2학기 학·석사학위연계과정 및 학·석박사학위통합연계과정 진학예정자",
+    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1047038/artclView.do",
+    "author": "김선경",
+    "date": "2026-06-17",
+    "views": 240,
+    "sourceType": "department",
+    "sourceName": "환경에너지공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -67466,18 +67490,6 @@
     "isPinned": false
   },
   {
-    "id": "1749",
-    "title": "[선발 분야 수정]2026학년도 동원장학재단 섬김의 리더십 장학생 선발(6/16~18)",
-    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1047121/artclView.do",
-    "author": "관리자",
-    "date": "2026-06-17",
-    "views": 102,
-    "sourceType": "department",
-    "sourceName": "컴퓨터정보통신공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2384",
     "title": "2026학년도 하계 계절학기 수강취소 기간 및 방법 안내",
     "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1047082/artclView.do",
@@ -67486,6 +67498,18 @@
     "views": 102,
     "sourceType": "department",
     "sourceName": "영어영문학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1749",
+    "title": "[선발 분야 수정]2026학년도 동원장학재단 섬김의 리더십 장학생 선발(6/16~18)",
+    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1047121/artclView.do",
+    "author": "관리자",
+    "date": "2026-06-17",
+    "views": 102,
+    "sourceType": "department",
+    "sourceName": "컴퓨터정보통신공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -67895,30 +67919,6 @@
     "sourceType": "department",
     "sourceName": "전자컴퓨터공학부",
     "category": "공지사항",
-    "isPinned": false
-  },
-  {
-    "id": "919",
-    "title": "[모집홍보] 인공지능부트캠프사업단- 피지컬 AI를 위한 입문",
-    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=919",
-    "author": "소프트웨어중심사업단",
-    "date": "2026-06-17",
-    "views": 0,
-    "sourceType": "center",
-    "sourceName": "소프트웨어중심사업단",
-    "category": "사업단 공지",
-    "isPinned": false
-  },
-  {
-    "id": "917",
-    "title": "[모집홍보] HL FMA 2026 자율주행 경진대회 모집 안내-한라대학교",
-    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=917",
-    "author": "소프트웨어중심사업단",
-    "date": "2026-06-17",
-    "views": 0,
-    "sourceType": "center",
-    "sourceName": "소프트웨어중심사업단",
-    "category": "사업단 공지",
     "isPinned": false
   },
   {
@@ -69703,7 +69703,7 @@
     "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=3&Key=&Value=&Cate=&Seq=95786",
     "author": "생활안내 2026학년도 하계 BTL식당 선택적 식사 신청 안내",
     "date": "2026-06-15",
-    "views": 1529,
+    "views": 1530,
     "sourceType": "center",
     "sourceName": "광주생활관",
     "category": "기관 공지",
@@ -72062,6 +72062,18 @@
     "isPinned": true
   },
   {
+    "id": "915",
+    "title": "[모집홍보] 소프트웨어중심대학사업단 하계 운영보조학생 모집 안내 (~6.24.(수)까지)",
+    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=915",
+    "author": "소프트웨어중심사업단",
+    "date": "2026-06-12",
+    "views": 3217,
+    "sourceType": "center",
+    "sourceName": "소프트웨어중심사업단",
+    "category": "사업단 공지",
+    "isPinned": false
+  },
+  {
     "id": "137",
     "title": "2026학년도 글로컬 AI융합대학 재학생 해외 연수 프로그램 선발 결과 공고",
     "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/1046565/artclView.do",
@@ -72734,18 +72746,6 @@
     "isPinned": false
   },
   {
-    "id": "1116",
-    "title": "2026학년도 2학기 학부 및 대학원 재입학 실시 안내",
-    "url": "https://civil.jnu.ac.kr/bbs/civil/1829/1046608/artclView.do",
-    "author": "토목공학과",
-    "date": "2026-06-12",
-    "views": 169,
-    "sourceType": "department",
-    "sourceName": "토목공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "1442",
     "title": "[공통]2026학년도 하계방학 셔틀버스(광주↔여수캠퍼스) 운행 계획 안내",
     "url": "https://ecedu.jnu.ac.kr/bbs/ecedu/2303/1046456/artclView.do",
@@ -72754,6 +72754,18 @@
     "views": 169,
     "sourceType": "department",
     "sourceName": "유아교육과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1116",
+    "title": "2026학년도 2학기 학부 및 대학원 재입학 실시 안내",
+    "url": "https://civil.jnu.ac.kr/bbs/civil/1829/1046608/artclView.do",
+    "author": "토목공학과",
+    "date": "2026-06-12",
+    "views": 169,
+    "sourceType": "department",
+    "sourceName": "토목공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -72974,18 +72986,6 @@
     "isPinned": false
   },
   {
-    "id": "1744",
-    "title": "2026학년도 하계방학 셔틀버스(광주↔여수캠퍼스) 운행 안내(6/24~8/31)",
-    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1046492/artclView.do",
-    "author": "관리자",
-    "date": "2026-06-12",
-    "views": 121,
-    "sourceType": "department",
-    "sourceName": "컴퓨터정보통신공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2128",
     "title": "2026학년도 제2학기 휴학·복학 신청 안내",
     "url": "https://china.jnu.ac.kr/bbs/china/1570/1046600/artclView.do",
@@ -72994,6 +72994,18 @@
     "views": 121,
     "sourceType": "department",
     "sourceName": "중어중문학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1744",
+    "title": "2026학년도 하계방학 셔틀버스(광주↔여수캠퍼스) 운행 안내(6/24~8/31)",
+    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1046492/artclView.do",
+    "author": "관리자",
+    "date": "2026-06-12",
+    "views": 121,
+    "sourceType": "department",
+    "sourceName": "컴퓨터정보통신공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -73391,18 +73403,6 @@
     "sourceType": "center",
     "sourceName": "교육혁신본부",
     "category": "기관 공지",
-    "isPinned": false
-  },
-  {
-    "id": "915",
-    "title": "[모집홍보] 소프트웨어중심대학사업단 하계 운영보조학생 모집 안내 (~6.24.(수)까지)",
-    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=915",
-    "author": "소프트웨어중심사업단",
-    "date": "2026-06-12",
-    "views": 0,
-    "sourceType": "center",
-    "sourceName": "소프트웨어중심사업단",
-    "category": "사업단 공지",
     "isPinned": false
   },
   {
@@ -74901,7 +74901,7 @@
     "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1046203/artclView.do",
     "author": "고병승",
     "date": "2026-06-10",
-    "views": 786,
+    "views": 787,
     "sourceType": "department",
     "sourceName": "기계공학부",
     "category": "공지사항",
@@ -74941,6 +74941,18 @@
     "sourceType": "center",
     "sourceName": "광주생활관",
     "category": "기관 공지",
+    "isPinned": false
+  },
+  {
+    "id": "903",
+    "title": "[모집홍보] 제5회 대학 연합 아주 소중한 딥러닝 챌린지 참가자 모집 [~6.28.(일)까지]",
+    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=903",
+    "author": "소프트웨어중심사업단",
+    "date": "2026-06-10",
+    "views": 2353,
+    "sourceType": "center",
+    "sourceName": "소프트웨어중심사업단",
+    "category": "사업단 공지",
     "isPinned": false
   },
   {
@@ -75628,18 +75640,6 @@
     "isPinned": false
   },
   {
-    "id": "1741",
-    "title": "「전국 지역인재 7급 수습직원 선발시험 제도」안내",
-    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1046187/artclView.do",
-    "author": "관리자",
-    "date": "2026-06-10",
-    "views": 87,
-    "sourceType": "department",
-    "sourceName": "컴퓨터정보통신공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "882",
     "title": "[학부, 대학원] 기말고사 응원 이천원의 저녁밥 제공 안내",
     "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1046221/artclView.do",
@@ -75648,6 +75648,18 @@
     "views": 87,
     "sourceType": "department",
     "sourceName": "응용생물학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1741",
+    "title": "「전국 지역인재 7급 수습직원 선발시험 제도」안내",
+    "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1046187/artclView.do",
+    "author": "관리자",
+    "date": "2026-06-10",
+    "views": 87,
+    "sourceType": "department",
+    "sourceName": "컴퓨터정보통신공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -75853,18 +75865,6 @@
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "모집공고",
-    "isPinned": false
-  },
-  {
-    "id": "903",
-    "title": "[모집홍보] 제5회 대학 연합 아주 소중한 딥러닝 챌린지 참가자 모집 [~6.28.(일)까지]",
-    "url": "https://sojoong.kr/notice/notice-board/?mod=document&pageid=2&uid=903",
-    "author": "소프트웨어중심사업단",
-    "date": "2026-06-10",
-    "views": 0,
-    "sourceType": "center",
-    "sourceName": "소프트웨어중심사업단",
-    "category": "사업단 공지",
     "isPinned": false
   },
   {
@@ -79027,7 +79027,7 @@
     "url": "https://www.aicoss.kr/www/notice/view/4016?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
     "author": "인공지능혁신융합대학사업단",
     "date": "2026-06-05",
-    "views": 625,
+    "views": 626,
     "sourceType": "center",
     "sourceName": "인공지능혁신융합대학사업단",
     "category": "사업단 공지",
@@ -82147,7 +82147,7 @@
     "url": "https://agrochem.jnu.ac.kr/bbs/agrochem/555/1045540/artclView.do",
     "author": "농생명화학과",
     "date": "2026-06-02",
-    "views": 426,
+    "views": 427,
     "sourceType": "department",
     "sourceName": "농생명화학과",
     "category": "공지사항",
@@ -93813,7 +93813,7 @@
     "url": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/1044640/artclView.do",
     "author": "화학교육과",
     "date": "2026-05-21",
-    "views": 116,
+    "views": 117,
     "sourceType": "department",
     "sourceName": "화학교육과",
     "category": "공지사항",
@@ -98542,18 +98542,6 @@
     "isPinned": false
   },
   {
-    "id": "1933",
-    "title": "[대학원] 2026년도 광주전남발전협의회 박사과정 장학생 선발 안내",
-    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1044129/artclView.do",
-    "author": "김선경",
-    "date": "2026-05-18",
-    "views": 187,
-    "sourceType": "department",
-    "sourceName": "환경에너지공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "853",
     "title": "2026년 「CNU 반올림 클래스」 참여학생 모집 안내",
     "url": "https://jnula.jnu.ac.kr/bbs/jnula/655/1044123/artclView.do",
@@ -98562,6 +98550,18 @@
     "views": 187,
     "sourceType": "department",
     "sourceName": "조경학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1933",
+    "title": "[대학원] 2026년도 광주전남발전협의회 박사과정 장학생 선발 안내",
+    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1044129/artclView.do",
+    "author": "김선경",
+    "date": "2026-05-18",
+    "views": 187,
+    "sourceType": "department",
+    "sourceName": "환경에너지공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -104214,18 +104214,6 @@
     "isPinned": false
   },
   {
-    "id": "1929",
-    "title": "2026학년도 1학기 온라인 학습법 특강 운영 안내",
-    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1043545/artclView.do",
-    "author": "김선경",
-    "date": "2026-05-12",
-    "views": 138,
-    "sourceType": "department",
-    "sourceName": "환경에너지공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2147",
     "title": "2025학년도 후기(2026년 8월) 졸업(수료) 예비사정 실시 안내",
     "url": "https://hisedu.jnu.ac.kr/bbs/hisedu/2296/1043625/artclView.do",
@@ -104234,6 +104222,18 @@
     "views": 138,
     "sourceType": "department",
     "sourceName": "역사교육과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1929",
+    "title": "2026학년도 1학기 온라인 학습법 특강 운영 안내",
+    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/1043545/artclView.do",
+    "author": "김선경",
+    "date": "2026-05-12",
+    "views": 138,
+    "sourceType": "department",
+    "sourceName": "환경에너지공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -107313,7 +107313,7 @@
     "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=69090",
     "author": "산학협력단",
     "date": "2026-05-08",
-    "views": 3889,
+    "views": 3890,
     "sourceType": "school",
     "sourceName": "전남대학교 본부",
     "category": "대학생활",
@@ -107409,7 +107409,7 @@
     "url": "https://jnu.nccoss.kr/www/notice/view/355?bd=notice&page=1",
     "author": "차세대통신혁신융합대학사업단",
     "date": "2026-05-08",
-    "views": 2683,
+    "views": 2684,
     "sourceType": "center",
     "sourceName": "차세대통신혁신융합대학사업단",
     "category": "사업단 공지",
@@ -108931,7 +108931,7 @@
     "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1043053/artclView.do",
     "author": "관리자",
     "date": "2026-05-07",
-    "views": 361,
+    "views": 362,
     "sourceType": "department",
     "sourceName": "신소재공학부",
     "category": "공지사항",
@@ -112371,7 +112371,7 @@
     "url": "https://mobility.jnu.ac.kr/bbs/imob/69/1042770/artclView.do",
     "author": "미래모빌리티학과",
     "date": "2026-05-05",
-    "views": 579,
+    "views": 580,
     "sourceType": "department",
     "sourceName": "미래모빌리티학과",
     "category": "공지사항",
@@ -127415,7 +127415,7 @@
     "url": "https://sea.jnu.ac.kr/bbs/sea/291/1006752/artclView.do",
     "author": "김영신",
     "date": "2026-04-10",
-    "views": 205,
+    "views": 206,
     "sourceType": "college",
     "sourceName": "수산해양대학(여수)",
     "category": "공지사항",
@@ -133079,7 +133079,7 @@
     "url": "https://yculture.jnu.ac.kr/bbs/yculture/284/982404/artclView.do",
     "author": "관리자",
     "date": "2026-03-30",
-    "views": 347,
+    "views": 348,
     "sourceType": "college",
     "sourceName": "문화사회과학대학(여수)",
     "category": "공지사항",
@@ -137375,7 +137375,7 @@
     "url": "https://eng.jnu.ac.kr/bbs/eng/993/976626/artclView.do",
     "author": "김송희",
     "date": "2026-03-18",
-    "views": 2215,
+    "views": 2216,
     "sourceType": "college",
     "sourceName": "공과대학",
     "category": "공지사항",
@@ -139206,18 +139206,6 @@
     "isPinned": false
   },
   {
-    "id": "1912",
-    "title": "2026학년도 하계 해외 단기파견 프로그램 모집 안내",
-    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/976342/artclView.do",
-    "author": "김선경",
-    "date": "2026-03-17",
-    "views": 215,
-    "sourceType": "department",
-    "sourceName": "환경에너지공학과",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2436",
     "title": "2026학년도 하계 계절학기 개설교과목에 대한 학생 수요조사 안내",
     "url": "http://philos.jnu.ac.kr/bbs/philos/2261/976348/artclView.do",
@@ -139226,6 +139214,18 @@
     "views": 215,
     "sourceType": "department",
     "sourceName": "철학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "1912",
+    "title": "2026학년도 하계 해외 단기파견 프로그램 모집 안내",
+    "url": "https://eee.jnu.ac.kr/bbs/eee/1834/976342/artclView.do",
+    "author": "김선경",
+    "date": "2026-03-17",
+    "views": 215,
+    "sourceType": "department",
+    "sourceName": "환경에너지공학과",
     "category": "공지사항",
     "isPinned": false
   },
@@ -143387,7 +143387,7 @@
     "url": "https://aisw.jnu.ac.kr/bbs/aisw/64/974610/artclView.do",
     "author": "인공지능학부",
     "date": "2026-03-10",
-    "views": 1299,
+    "views": 1300,
     "sourceType": "department",
     "sourceName": "인공지능학부",
     "category": "공지사항",
@@ -144174,18 +144174,6 @@
     "isPinned": false
   },
   {
-    "id": "306",
-    "title": "2026학년도 전기(2027년 2월) 석·박사학위수여예정자 논문작성계획서 접수 안내",
-    "url": "https://arts.jnu.ac.kr/bbs/arts/2215/974415/artclView.do",
-    "author": "엄재찬",
-    "date": "2026-03-10",
-    "views": 166,
-    "sourceType": "college",
-    "sourceName": "예술대학",
-    "category": "공지사항",
-    "isPinned": false
-  },
-  {
     "id": "2323",
     "title": "2026학년도 1학기 CNU 학습공동체 공모",
     "url": "https://math.jnu.ac.kr/bbs/math/2076/974484/artclView.do",
@@ -144194,6 +144182,18 @@
     "views": 166,
     "sourceType": "department",
     "sourceName": "수학과",
+    "category": "공지사항",
+    "isPinned": false
+  },
+  {
+    "id": "306",
+    "title": "2026학년도 전기(2027년 2월) 석·박사학위수여예정자 논문작성계획서 접수 안내",
+    "url": "https://arts.jnu.ac.kr/bbs/arts/2215/974415/artclView.do",
+    "author": "엄재찬",
+    "date": "2026-03-10",
+    "views": 166,
+    "sourceType": "college",
+    "sourceName": "예술대학",
     "category": "공지사항",
     "isPinned": false
   },
@@ -149315,7 +149315,7 @@
     "url": "https://korean.jnu.ac.kr/bbs/korean/1637/973195/artclView.do",
     "author": "국어국문학과",
     "date": "2026-03-02",
-    "views": 1437,
+    "views": 1438,
     "sourceType": "department",
     "sourceName": "국어국문학과",
     "category": "공지사항",
@@ -151103,7 +151103,7 @@
     "url": "https://eng.jnu.ac.kr/bbs/eng/993/971127/artclView.do",
     "author": "조은혜",
     "date": "2026-02-24",
-    "views": 3232,
+    "views": 3233,
     "sourceType": "college",
     "sourceName": "공과대학",
     "category": "공지사항",
@@ -158999,7 +158999,7 @@
     "url": "https://korean.jnu.ac.kr/bbs/korean/1637/946434/artclView.do",
     "author": "국어국문학과",
     "date": "2026-01-21",
-    "views": 1366,
+    "views": 1367,
     "sourceType": "department",
     "sourceName": "국어국문학과",
     "category": "공지사항",
@@ -165107,7 +165107,7 @@
     "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/943873/artclView.do",
     "author": "국어교육과",
     "date": "2025-12-29",
-    "views": 521,
+    "views": 522,
     "sourceType": "department",
     "sourceName": "국어교육과",
     "category": "공지사항",
@@ -170075,7 +170075,7 @@
     "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=3&Key=&Value=&Cate=&Seq=63900",
     "author": "2026년도 상반기 일반대학원 외국어(영어)시험 대비반 모집",
     "date": "2025-12-03",
-    "views": 690,
+    "views": 691,
     "sourceType": "center",
     "sourceName": "언어교육원",
     "category": "기관 공지",
@@ -175259,7 +175259,7 @@
     "url": "https://fn.jnu.ac.kr/bbs/fn/1139/938986/artclView.do",
     "author": "식품영양학과",
     "date": "2025-11-04",
-    "views": 358,
+    "views": 359,
     "sourceType": "department",
     "sourceName": "식품영양과학부",
     "category": "공지사항",
@@ -176615,7 +176615,7 @@
     "url": "https://lec.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=3&Key=&Value=&Cate=&Seq=63837",
     "author": "2025년 11월 모의토익/모의 토익스피킹 접수 안내",
     "date": "2025-10-28",
-    "views": 843,
+    "views": 844,
     "sourceType": "center",
     "sourceName": "언어교육원",
     "category": "기관 공지",
@@ -199379,7 +199379,7 @@
     "url": "https://korean.jnu.ac.kr/bbs/korean/1637/892090/artclView.do",
     "author": "국어국문학과",
     "date": "2024-08-12",
-    "views": 315,
+    "views": 316,
     "sourceType": "department",
     "sourceName": "국어국문학과",
     "category": "공지사항",
@@ -204479,7 +204479,7 @@
     "url": "https://engc.jnu.ac.kr/bbs/engc/280/847031/artclView.do",
     "author": "박주영",
     "date": "2023-05-22",
-    "views": 2803,
+    "views": 2804,
     "sourceType": "college",
     "sourceName": "공학대학(여수)",
     "category": "공지사항",
@@ -210587,7 +210587,7 @@
     "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/780300/artclView.do",
     "author": "영어교육과",
     "date": "2020-03-13",
-    "views": 18211,
+    "views": 18213,
     "sourceType": "department",
     "sourceName": "영어교육과",
     "category": "공지사항",
@@ -213402,9 +213402,9 @@
     "isPinned": true
   },
   {
-    "id": "bbs-content-1_33123;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_33123;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "AI 생성 검사(GPT킬러) 서비스 도입 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_33123;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_33123;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213414,9 +213414,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_33081;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_33081;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "광복절 도서관 휴관 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_33081;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_33081;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213426,9 +213426,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_33040;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_33040;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "[8월 주제별 교육] 학술 DB 온라인 교육 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_33040;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_33040;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213438,9 +213438,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_33028;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_33028;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "2026년 8월 졸업·수료 예정자 도서 대출 중지 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_33028;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_33028;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213450,9 +213450,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32981;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32981;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "도서관 별관 휴게실 및 그룹 스터디룸 운영 변경 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32981;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32981;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213462,9 +213462,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32980;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32980;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "도서관 별관 열람실 3층 휴실 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32980;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32980;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213474,9 +213474,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32964;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32964;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "하계방학 도서관 운영시간 조정 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32964;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32964;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213486,9 +213486,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32962;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32962;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "'도·토·리’- 도서관 토끼풀 찾기 리얼 행운 이벤트 운영 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32962;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32962;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213498,9 +213498,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32943;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32943;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "2026 전남대학교 도서관 영상 공모전 개최_공모내용 수정",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32943;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32943;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213510,9 +213510,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32860;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32860;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "Bentham Science Publishers OA APC Short-Term Support Event",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32860;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32860;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213522,9 +213522,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32844;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32844;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "도서관 학과가이드 개편 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32844;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32844;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213534,9 +213534,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32643;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32643;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "「무인야간대출 서비스」 확대 운영 안내(명칭 변경 및 확대 운영)",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32643;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32643;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213546,9 +213546,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32605;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32605;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "2026학년도 구독형 전자책 서비스 운영 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32605;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32605;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213558,9 +213558,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32602;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32602;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "2026학년도 상호대차·원문복사 비용지원 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32602;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32602;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213570,9 +213570,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32462;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32462;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "홈페이지 개편에 따른 일반회원 로그인 방식 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32462;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32462;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213582,9 +213582,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32162;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_32162;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "☆소중한 책 함께 지켜주세요☆",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32162;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32162;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213594,9 +213594,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_30782;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_30782;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "도서관장 날인 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_30782;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_30782;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213606,9 +213606,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_29711;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_29711;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "도서관 일반회원 이용증 연장 및 해지 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_29711;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_29711;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213618,9 +213618,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_28982;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_28982;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "[공지] 별관(백도) 열람실 이용 안내!!!",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_28982;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_28982;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213630,9 +213630,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_26714;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "id": "bbs-content-1_26714;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "title": "도서관 정보마루 예약 시스템 이용 안내 (★캐럴 이용 방법 변경 6/15~)",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_26714;jsessionid=724FEFC8D8251D833BDD2E2E8D791437",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_26714;jsessionid=15116E4C852A6396C73A7B1882C0EF99",
     "author": "도서관",
     "date": "공지",
     "views": 0,
@@ -213642,9 +213642,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_33024;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_33024;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "도서관 별관(백도) 휴관 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_33024;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_33024;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "21",
     "views": 0,
@@ -213654,9 +213654,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_33023;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_33023;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "한 책 N행시 공모전 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_33023;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_33023;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "22",
     "views": 0,
@@ -213666,9 +213666,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32985;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32985;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "7월 도서관 휴관일 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32985;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32985;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "23",
     "views": 0,
@@ -213678,9 +213678,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32983;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32983;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "[7월 주제별 교육] 학술 DB 온라인 교육 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32983;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32983;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "24",
     "views": 0,
@@ -213690,9 +213690,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32982;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32982;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "[7월 개설교육] S2Journal Plus 이용교육",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32982;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32982;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "25",
     "views": 0,
@@ -213702,9 +213702,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32960;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32960;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "여름방학 대출권수 확대 이벤트 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32960;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32960;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "27",
     "views": 0,
@@ -213714,9 +213714,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32941;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32941;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "한 책 선포식 및 독서클럽 OT 행사 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32941;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32941;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "28",
     "views": 0,
@@ -213726,9 +213726,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32923;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32923;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "한 책 선호도 조사 이벤트 당첨 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32923;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32923;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "29",
     "views": 0,
@@ -213738,9 +213738,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32921;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32921;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "통합검색(전자책/전자저널) 및 EBSCOhost 학술DB/전자책 접속오류 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32921;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32921;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "30",
     "views": 0,
@@ -213750,9 +213750,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32920;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32920;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "'2026 광주·전남이 읽고 톡 하다' 독서클럽 선정 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32920;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32920;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "31",
     "views": 0,
@@ -213762,9 +213762,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32905;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32905;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "『갓, 선비의 품격』 라키비움: 이음 제20회 전시 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32905;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32905;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "32",
     "views": 0,
@@ -213774,9 +213774,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32903;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32903;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "정보마루 DVD전시 ｢클래식 음악의 계보｣ 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32903;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32903;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "33",
     "views": 0,
@@ -213786,9 +213786,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32901;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32901;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "도서관 별관(백도) 열람실 24시간 운영 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32901;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32901;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "34",
     "views": 0,
@@ -213798,9 +213798,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32887;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32887;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "[6월 주제별 교육] 학술 DB 온라인 교육 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32887;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32887;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "35",
     "views": 0,
@@ -213810,9 +213810,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32886;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32886;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "[6월 개설교육] Web of Science & JCR 이용교육",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32886;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32886;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "36",
     "views": 0,
@@ -213822,9 +213822,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32885;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32885;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "[전시] 세종도서展 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32885;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32885;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "37",
     "views": 0,
@@ -213834,9 +213834,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32880;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32880;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "6월 도서관 휴관일 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32880;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32880;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "38",
     "views": 0,
@@ -213846,9 +213846,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32822;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32822;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "[5월 주제별 교육] 학술 DB 온라인 교육 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32822;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32822;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "39",
     "views": 0,
@@ -213858,9 +213858,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32821;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3",
+    "id": "bbs-content-1_32821;jsessionid=4D05C87C264B1A5748C89D2C10845BDF",
     "title": "[5월 개설교육] Turnitin 이용교육",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32821;jsessionid=AE3F5A8239C7BB7708C6CB397A397FA3?listParam=pn%3d2%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32821;jsessionid=4D05C87C264B1A5748C89D2C10845BDF?listParam=pn%3d2%26amp%3b",
     "author": "도서관",
     "date": "40",
     "views": 0,
@@ -213870,9 +213870,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32801;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32801;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "5월 도서관 휴관일 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32801;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32801;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "41",
     "views": 0,
@@ -213882,9 +213882,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32762;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32762;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "💙💛 2026학년도 온·오프 학술전자정보박람회 개최 안내💚🧡",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32762;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32762;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "44",
     "views": 0,
@@ -213894,9 +213894,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32740;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32740;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "정보마루 북큐레이션 ｢시로 잇는 하루｣ 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32740;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32740;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "45",
     "views": 0,
@@ -213906,9 +213906,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32728;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32728;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "[4월 주제별 교육] 학술 DB 온라인 교육 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32728;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32728;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "46",
     "views": 0,
@@ -213918,9 +213918,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32727;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32727;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "[4월 개설교육] TS2000 이용교육",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32727;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32727;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "47",
     "views": 0,
@@ -213930,9 +213930,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32726;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32726;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "[4월 개설교육] EndNote 이용교육",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32726;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32726;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "48",
     "views": 0,
@@ -213942,9 +213942,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32721;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32721;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "국내외 문학상 수상작 「THE PRIZE : 영광의 기록」 전시 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32721;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32721;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "49",
     "views": 0,
@@ -213954,9 +213954,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32642;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32642;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "RISS 및 대학라이선스 DB 이용 교육",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32642;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32642;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "51",
     "views": 0,
@@ -213966,9 +213966,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32621;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32621;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "2026년 고문헌 기획전시 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32621;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32621;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "52",
     "views": 0,
@@ -213978,9 +213978,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32601;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32601;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "[3월 주제별 교육] 학술 DB 온라인 교육 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32601;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32601;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "53",
     "views": 0,
@@ -213990,9 +213990,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32600;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32600;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "[3월 개설교육] 도서관 이용 및 학술정보활용 교육",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32600;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32600;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "54",
     "views": 0,
@@ -214002,9 +214002,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32593;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32593;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "도서관 별관 이용 방법 변경 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32593;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32593;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "55",
     "views": 0,
@@ -214014,9 +214014,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32590;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32590;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "삼일절 도서관 휴관 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32590;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32590;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "56",
     "views": 0,
@@ -214026,9 +214026,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32481;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32481;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "설 연휴 도서관 휴관 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32481;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32481;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "57",
     "views": 0,
@@ -214038,9 +214038,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32444;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32444;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "2026년 2월 졸업·수료 예정자 도서 대출 중지 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32444;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32444;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "58",
     "views": 0,
@@ -214050,9 +214050,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32393;jsessionid=254F76FE2AB836CC56F85939E429C2B5",
+    "id": "bbs-content-1_32393;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC",
     "title": "2025학년도 국내외 단행본 구입 마감 안내(~'26.02.06.)",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32393;jsessionid=254F76FE2AB836CC56F85939E429C2B5?listParam=pn%3d3%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32393;jsessionid=E2B6E173A4271980BA80805AE5BC2AAC?listParam=pn%3d3%26amp%3b",
     "author": "도서관",
     "date": "60",
     "views": 0,
@@ -214062,9 +214062,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32385;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32385;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "학위논문 제출안내(2026년 2월 졸업예정자)",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32385;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32385;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "61",
     "views": 0,
@@ -214074,9 +214074,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32342;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32342;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "성탄절&신정 도서관 휴관 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32342;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32342;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "62",
     "views": 0,
@@ -214086,9 +214086,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32340;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32340;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "도서관 운영시간 조정 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32340;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32340;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "63",
     "views": 0,
@@ -214098,9 +214098,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32281;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32281;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "⛄겨울방학 대출 권수 확대 이벤트",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32281;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32281;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "66",
     "views": 0,
@@ -214110,9 +214110,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32205;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32205;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "🎅(도서대출이벤트) 오늘의 럭키잖아! 2탄🎄",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32205;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32205;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "67",
     "views": 0,
@@ -214122,9 +214122,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32181;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32181;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "학위논문 검색서비스(dCollection) 일시 중단 안내 (12.1.)",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32181;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32181;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "68",
     "views": 0,
@@ -214134,9 +214134,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32126;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32126;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "대학수학능력시험 시행일 도서관 운영시간 조정 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32126;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32126;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "69",
     "views": 0,
@@ -214146,9 +214146,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32120;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32120;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "캠퍼스 정전에 따른 무인예약대출서비스 변경 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32120;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32120;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "70",
     "views": 0,
@@ -214158,9 +214158,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32108;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32108;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "2025 테마도서전시회 『손 필사 인증 이벤트』 경품 당첨자 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32108;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32108;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "71",
     "views": 0,
@@ -214170,9 +214170,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_32001;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_32001;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "2025년 10월 도서관 휴관일 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_32001;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_32001;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "74",
     "views": 0,
@@ -214182,9 +214182,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31969;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_31969;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "2025 테마도서 전시회 [모든 순간 성장한다] 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31969;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31969;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "75",
     "views": 0,
@@ -214194,9 +214194,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31961;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_31961;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "🎁 (도서대출이벤트) 오늘의 럭키잖아!",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31961;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31961;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "76",
     "views": 0,
@@ -214206,9 +214206,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31904;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_31904;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "치의학전문대학원 2025학년도 전기(2026.2.졸업예정) 학위논문 온라인 제출 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31904;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31904;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "77",
     "views": 0,
@@ -214218,9 +214218,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31902;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_31902;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "2025년 세종도서 전시 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31902;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31902;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "78",
     "views": 0,
@@ -214230,9 +214230,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31876;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85",
+    "id": "bbs-content-1_31876;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB",
     "title": "😃대출 정지 해제 이벤트 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31876;jsessionid=40E90B7CA8D03FE71A4E7663A3F87F85?listParam=pn%3d4%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31876;jsessionid=F0A4F73DC26451EE5FD8C45EC8457EDB?listParam=pn%3d4%26amp%3b",
     "author": "도서관",
     "date": "79",
     "views": 0,
@@ -214242,9 +214242,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31829;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31829;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "도서관 본관(홍도) 서비스 개시 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31829;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31829;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "82",
     "views": 0,
@@ -214254,9 +214254,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31801;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31801;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "광복절 휴관 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31801;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31801;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "83",
     "views": 0,
@@ -214266,9 +214266,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31783;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31783;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "2025년 8월 졸업·수료 예정자 도서 대출 중지 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31783;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31783;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "84",
     "views": 0,
@@ -214278,9 +214278,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31726;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31726;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "도서관 본관 건물 정전에 따른 본관 서비스 중단 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31726;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31726;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "86",
     "views": 0,
@@ -214290,9 +214290,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31725;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31725;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "dCollection (학위논문 원문 서비스) 복구 완료 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31725;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31725;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "87",
     "views": 0,
@@ -214302,9 +214302,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31680;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31680;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "층별 공사 일정에 따른 본관 자료 이용 제한 기간 변경",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31680;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31680;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "88",
     "views": 0,
@@ -214314,9 +214314,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31660;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31660;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "냉난방기 공사에 따른 도서관 본관 자료 및 서비스 이용 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31660;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31660;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "89",
     "views": 0,
@@ -214326,9 +214326,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31632;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31632;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "도서관 운영시간 조정 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31632;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31632;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "90",
     "views": 0,
@@ -214338,9 +214338,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31622;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31622;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "'24학년도 후기('25.8.졸업예정) 학위논문 온라인 제출 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31622;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31622;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "91",
     "views": 0,
@@ -214350,9 +214350,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31585;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31585;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "도서관 대출권수 및 기간 확대 이벤트 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31585;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31585;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "93",
     "views": 0,
@@ -214362,9 +214362,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31542;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31542;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "★2025년 6월 도서관 휴관일 안내★",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31542;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31542;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "95",
     "views": 0,
@@ -214374,9 +214374,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31524;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31524;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "'2025 광주·전남이 읽고 톡 하다' 독서클럽 선정 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31524;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31524;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "96",
     "views": 0,
@@ -214386,9 +214386,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31484;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31484;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "2025년 6월 도서관 휴관일 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31484;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31484;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "97",
     "views": 0,
@@ -214398,9 +214398,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31323;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31323;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "2025년 5월 도서관 휴관일 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31323;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31323;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "98",
     "views": 0,
@@ -214410,9 +214410,9 @@
     "isPinned": false
   },
   {
-    "id": "bbs-content-1_31320;jsessionid=DDC8CC7129ECFC772D958E6512157A66",
+    "id": "bbs-content-1_31320;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C",
     "title": "2025 독서클럽 모집 안내",
-    "url": "https://lib.jnu.ac.kr/bbs/content/1_31320;jsessionid=DDC8CC7129ECFC772D958E6512157A66?listParam=pn%3d5%26amp%3b",
+    "url": "https://lib.jnu.ac.kr/bbs/content/1_31320;jsessionid=C034B3E46A5EB200C692ECAA0515ED3C?listParam=pn%3d5%26amp%3b",
     "author": "도서관",
     "date": "99",
     "views": 0,
