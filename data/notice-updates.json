@@ -1,5 +1,24 @@
 [
   {
+    "checkedAt": "2026-08-21T10:45:54.649Z",
+    "notices": [
+      {
+        "id": "software-1",
+        "title": "(8/24~8/28) 공과대학 「두근두근 엔지니어링 프로젝트 21기」 참가자 모집",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1052515/artclView.do",
+        "author": "오승하",
+        "date": "2026-08-21",
+        "views": 21,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      }
+    ],
+    "newNoticeCount": 1,
+    "totalNoticeCount": 8200
+  },
+  {
     "checkedAt": "2026-08-21T09:51:40.573Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -5387,11 +5406,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7531
-  },
-  {
-    "checkedAt": "2026-08-17T08:24:46.807Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7364
   }
 ]
