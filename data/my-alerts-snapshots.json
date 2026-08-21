@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-21T11:38:56.569Z",
+  "checkedAt": "2026-08-21T12:01:06.773Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,7 +9,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70081",
           "author": "학사과",
           "date": "2026-08-21",
-          "views": 144,
+          "views": 146,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -81,7 +81,7 @@
           "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97045",
           "author": "입퇴관안내 2026학년도 2학기 생활관 입주 안내 2026 Fall Semester Move-In Guidelines...",
           "date": "2026-08-21",
-          "views": 985,
+          "views": 1008,
           "sourceType": "center",
           "sourceName": "광주생활관",
           "category": "기관 공지",
@@ -93,7 +93,7 @@
           "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97046",
           "author": "생활안내 2026학년도 2학기 입주자 건강검진 안내(검진항목: 결핵 검사) Health Cert....",
           "date": "2026-08-21",
-          "views": 756,
+          "views": 774,
           "sourceType": "center",
           "sourceName": "광주생활관",
           "category": "기관 공지",
@@ -105,7 +105,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70083",
           "author": "학생과",
           "date": "2026-08-21",
-          "views": 11,
+          "views": 12,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
@@ -250,7 +250,7 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-08-21T11:38:56.569Z",
+      "fetchedAt": "2026-08-21T12:01:06.773Z",
       "totalCount": 19,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-07-29T12:31:12.831Z"
@@ -263,7 +263,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70081",
           "author": "학사과",
           "date": "2026-08-21",
-          "views": 144,
+          "views": 146,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "학사안내",
@@ -275,7 +275,7 @@
           "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1052465/artclView.do",
           "author": "고병승",
           "date": "2026-08-21",
-          "views": 81,
+          "views": 82,
           "sourceType": "department",
           "sourceName": "기계공학부",
           "category": "공지사항",
@@ -287,7 +287,7 @@
           "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1052421/artclView.do",
           "author": "고병승",
           "date": "2026-08-21",
-          "views": 68,
+          "views": 69,
           "sourceType": "department",
           "sourceName": "기계공학부",
           "category": "공지사항",
@@ -323,7 +323,7 @@
           "url": "https://mobility.jnu.ac.kr/bbs/imob/69/1052493/artclView.do",
           "author": "미래모빌리티학",
           "date": "2026-08-21",
-          "views": 12,
+          "views": 14,
           "sourceType": "department",
           "sourceName": "미래모빌리티학과",
           "category": "공지사항",
@@ -335,9 +335,21 @@
           "url": "https://mobility.jnu.ac.kr/bbs/imob/69/1052491/artclView.do",
           "author": "미래모빌리티학과",
           "date": "2026-08-21",
-          "views": 10,
+          "views": 13,
           "sourceType": "department",
           "sourceName": "미래모빌리티학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "applied-biology-1",
+          "title": "[대학원] 2026년 하반기 외국어·종합시험 추가 면제처리 시행 계획 알림",
+          "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1052495/artclView.do",
+          "author": "lee3533@jnu.ac.kr",
+          "date": "2026-08-21",
+          "views": 4,
+          "sourceType": "department",
+          "sourceName": "응용생물학과",
           "category": "공지사항",
           "isPinned": true
         },
@@ -350,18 +362,6 @@
           "views": 4,
           "sourceType": "department",
           "sourceName": "수학과",
-          "category": "공지사항",
-          "isPinned": true
-        },
-        {
-          "id": "applied-biology-1",
-          "title": "[대학원] 2026년 하반기 외국어·종합시험 추가 면제처리 시행 계획 알림",
-          "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1052495/artclView.do",
-          "author": "lee3533@jnu.ac.kr",
-          "date": "2026-08-21",
-          "views": 3,
-          "sourceType": "department",
-          "sourceName": "응용생물학과",
           "category": "공지사항",
           "isPinned": true
         },
@@ -419,7 +419,7 @@
           "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97045",
           "author": "입퇴관안내 2026학년도 2학기 생활관 입주 안내 2026 Fall Semester Move-In Guidelines...",
           "date": "2026-08-21",
-          "views": 985,
+          "views": 1008,
           "sourceType": "center",
           "sourceName": "광주생활관",
           "category": "기관 공지",
@@ -431,7 +431,7 @@
           "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97046",
           "author": "생활안내 2026학년도 2학기 입주자 건강검진 안내(검진항목: 결핵 검사) Health Cert....",
           "date": "2026-08-21",
-          "views": 756,
+          "views": 774,
           "sourceType": "center",
           "sourceName": "광주생활관",
           "category": "기관 공지",
@@ -443,7 +443,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70074",
           "author": "학생과",
           "date": "2026-08-21",
-          "views": 352,
+          "views": 357,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "장학안내",
@@ -455,7 +455,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70062",
           "author": "창업중심대학사업단",
           "date": "2026-08-21",
-          "views": 126,
+          "views": 128,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "채용공고",
@@ -467,7 +467,7 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70077",
           "author": "글로컬랩",
           "date": "2026-08-21",
-          "views": 94,
+          "views": 97,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "채용공고",
@@ -503,7 +503,7 @@
           "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1052479/artclView.do",
           "author": "관리자",
           "date": "2026-08-21",
-          "views": 46,
+          "views": 49,
           "sourceType": "department",
           "sourceName": "신소재공학부",
           "category": "공지사항",
@@ -515,9 +515,21 @@
           "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1052470/artclView.do",
           "author": "약학부",
           "date": "2026-08-21",
-          "views": 36,
+          "views": 37,
           "sourceType": "college",
           "sourceName": "약학대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "922",
+          "title": "2026학년도 2학기 학생건강검진 실시 안내",
+          "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1052470/artclView.do",
+          "author": "약학부",
+          "date": "2026-08-21",
+          "views": 37,
+          "sourceType": "department",
+          "sourceName": "약학부",
           "category": "공지사항",
           "isPinned": false
         },
@@ -530,18 +542,6 @@
           "views": 36,
           "sourceType": "college",
           "sourceName": "인문대학",
-          "category": "공지사항",
-          "isPinned": false
-        },
-        {
-          "id": "922",
-          "title": "2026학년도 2학기 학생건강검진 실시 안내",
-          "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1052470/artclView.do",
-          "author": "약학부",
-          "date": "2026-08-21",
-          "views": 36,
-          "sourceType": "department",
-          "sourceName": "약학부",
           "category": "공지사항",
           "isPinned": false
         },
@@ -563,7 +563,7 @@
           "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1052478/artclView.do",
           "author": "관리자",
           "date": "2026-08-21",
-          "views": 30,
+          "views": 31,
           "sourceType": "department",
           "sourceName": "신소재공학부",
           "category": "공지사항",
@@ -587,7 +587,7 @@
           "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1052463/artclView.do",
           "author": "관리자",
           "date": "2026-08-21",
-          "views": 26,
+          "views": 27,
           "sourceType": "department",
           "sourceName": "전자컴퓨터공학부",
           "category": "공지사항",
@@ -615,6 +615,18 @@
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "499",
+          "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내",
+          "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1052461/artclView.do",
+          "author": "관리자",
+          "date": "2026-08-21",
+          "views": 22,
+          "sourceType": "department",
+          "sourceName": "전자컴퓨터공학부",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -654,27 +666,27 @@
           "isPinned": false
         },
         {
-          "id": "499",
-          "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내",
-          "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1052461/artclView.do",
-          "author": "관리자",
-          "date": "2026-08-21",
-          "views": 21,
-          "sourceType": "department",
-          "sourceName": "전자컴퓨터공학부",
-          "category": "공지사항",
-          "isPinned": false
-        },
-        {
           "id": "70063",
           "title": "[삼성전자] 삼성전자DS부문 신입사원 채용설명회",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70063",
           "author": "취업지원실",
           "date": "2026-08-21",
-          "views": 19,
+          "views": 20,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "2972",
+          "title": "[홍보] 중마고등학교 역사 시간강사 모집 안내",
+          "url": "https://history.jnu.ac.kr/bbs/history/1604/1052490/artclView.do",
+          "author": "이지민",
+          "date": "2026-08-21",
+          "views": 19,
+          "sourceType": "department",
+          "sourceName": "사학과",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -690,18 +702,6 @@
           "isPinned": false
         },
         {
-          "id": "2972",
-          "title": "[홍보] 중마고등학교 역사 시간강사 모집 안내",
-          "url": "https://history.jnu.ac.kr/bbs/history/1604/1052490/artclView.do",
-          "author": "이지민",
-          "date": "2026-08-21",
-          "views": 17,
-          "sourceType": "department",
-          "sourceName": "사학과",
-          "category": "공지사항",
-          "isPinned": false
-        },
-        {
           "id": "70072",
           "title": "[한화손해보험] 신입사원 채용상담회",
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70072",
@@ -711,6 +711,42 @@
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "6100",
+          "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내",
+          "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052469/artclView.do",
+          "author": "건축학부",
+          "date": "2026-08-21",
+          "views": 16,
+          "sourceType": "department",
+          "sourceName": "건축학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "6099",
+          "title": "2026학년도 2학기 셔틀버스(광주↔여수캠퍼스) 운행 계획 안내",
+          "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052467/artclView.do",
+          "author": "건축학부",
+          "date": "2026-08-21",
+          "views": 16,
+          "sourceType": "department",
+          "sourceName": "건축학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2334",
+          "title": "2027학년도 1학기 해외 파견 교환학생 2차 선발",
+          "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1052487/artclView.do",
+          "author": "관리자",
+          "date": "2026-08-21",
+          "views": 16,
+          "sourceType": "department",
+          "sourceName": "신소재공학부",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -738,26 +774,14 @@
           "isPinned": false
         },
         {
-          "id": "6099",
-          "title": "2026학년도 2학기 셔틀버스(광주↔여수캠퍼스) 운행 계획 안내",
-          "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052467/artclView.do",
-          "author": "건축학부",
+          "id": "2151",
+          "title": "2026년도 법무부 출입국관리직 국가공무원 경력경쟁 채용시험 공고 안내",
+          "url": "https://china.jnu.ac.kr/bbs/china/1570/1052466/artclView.do",
+          "author": "중어중문학과",
           "date": "2026-08-21",
           "views": 15,
           "sourceType": "department",
-          "sourceName": "건축학부",
-          "category": "공지사항",
-          "isPinned": false
-        },
-        {
-          "id": "6100",
-          "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내",
-          "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052469/artclView.do",
-          "author": "건축학부",
-          "date": "2026-08-21",
-          "views": 14,
-          "sourceType": "department",
-          "sourceName": "건축학부",
+          "sourceName": "중어중문학과",
           "category": "공지사항",
           "isPinned": false
         },
@@ -786,27 +810,39 @@
           "isPinned": false
         },
         {
-          "id": "2334",
-          "title": "2027학년도 1학기 해외 파견 교환학생 2차 선발",
-          "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1052487/artclView.do",
-          "author": "관리자",
+          "id": "70064",
+          "title": "[롯데백화점] 신입사원 채용설명회/상담회",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70064",
+          "author": "취업지원실",
+          "date": "2026-08-21",
+          "views": 13,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "6101",
+          "title": "2026학년도 2학기 학생건강검진 실시 안내",
+          "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052471/artclView.do",
+          "author": "건축학부",
           "date": "2026-08-21",
           "views": 13,
           "sourceType": "department",
-          "sourceName": "신소재공학부",
+          "sourceName": "건축학부",
           "category": "공지사항",
           "isPinned": false
         },
         {
-          "id": "2151",
-          "title": "2026년도 법무부 출입국관리직 국가공무원 경력경쟁 채용시험 공고 안내",
-          "url": "https://china.jnu.ac.kr/bbs/china/1570/1052466/artclView.do",
-          "author": "중어중문학과",
+          "id": "70083",
+          "title": "[(재)광주정보문화산업진흥원] 2026 GES 전국 아마추어 ...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70083",
+          "author": "학생과",
           "date": "2026-08-21",
-          "views": 13,
-          "sourceType": "department",
-          "sourceName": "중어중문학과",
-          "category": "공지사항",
+          "views": 12,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -819,30 +855,6 @@
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "취업정보",
-          "isPinned": false
-        },
-        {
-          "id": "70064",
-          "title": "[롯데백화점] 신입사원 채용설명회/상담회",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70064",
-          "author": "취업지원실",
-          "date": "2026-08-21",
-          "views": 12,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "취업정보",
-          "isPinned": false
-        },
-        {
-          "id": "70083",
-          "title": "[(재)광주정보문화산업진흥원] 2026 GES 전국 아마추어 ...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70083",
-          "author": "학생과",
-          "date": "2026-08-21",
-          "views": 11,
-          "sourceType": "school",
-          "sourceName": "전남대학교 본부",
-          "category": "대학생활",
           "isPinned": false
         },
         {
@@ -870,18 +882,6 @@
           "isPinned": false
         },
         {
-          "id": "6101",
-          "title": "2026학년도 2학기 학생건강검진 실시 안내",
-          "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052471/artclView.do",
-          "author": "건축학부",
-          "date": "2026-08-21",
-          "views": 11,
-          "sourceType": "department",
-          "sourceName": "건축학부",
-          "category": "공지사항",
-          "isPinned": false
-        },
-        {
           "id": "2970",
           "title": "[홍보]2026학년도 2학기 학생건강검진 실시 안내",
           "url": "https://history.jnu.ac.kr/bbs/history/1604/1052444/artclView.do",
@@ -906,6 +906,18 @@
           "isPinned": false
         },
         {
+          "id": "1131",
+          "title": "[학사안내]제74회 2025학년도 후기(2026년 8월) 학위수여식 안내",
+          "url": "https://design.jnu.ac.kr/bbs/design/1007/1052438/artclView.do",
+          "author": "디자인학과",
+          "date": "2026-08-21",
+          "views": 10,
+          "sourceType": "department",
+          "sourceName": "디자인학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
           "id": "2420",
           "title": "2027학년도 1학기 해외 파견 교환학생 2차 선발 안내",
           "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1052441/artclView.do",
@@ -926,18 +938,6 @@
           "views": 9,
           "sourceType": "department",
           "sourceName": "의류학과",
-          "category": "공지사항",
-          "isPinned": false
-        },
-        {
-          "id": "1131",
-          "title": "[학사안내]제74회 2025학년도 후기(2026년 8월) 학위수여식 안내",
-          "url": "https://design.jnu.ac.kr/bbs/design/1007/1052438/artclView.do",
-          "author": "디자인학과",
-          "date": "2026-08-21",
-          "views": 9,
-          "sourceType": "department",
-          "sourceName": "디자인학과",
           "category": "공지사항",
           "isPinned": false
         },
@@ -1400,7 +1400,7 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-08-21T11:38:56.569Z",
+      "fetchedAt": "2026-08-21T12:01:06.773Z",
       "totalCount": 92,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
