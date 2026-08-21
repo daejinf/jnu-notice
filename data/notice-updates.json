@@ -1,5 +1,48 @@
 [
   {
+    "checkedAt": "2026-08-21T13:58:25.473Z",
+    "notices": [
+      {
+        "id": "software-3",
+        "title": "(8/31~9/4) 2026학년도 2학기 학생건강검진 실시 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1052517/artclView.do",
+        "author": "오승하",
+        "date": "2026-08-21",
+        "views": 4,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "software-1",
+        "title": "(9/1~12/21) 2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1052519/artclView.do",
+        "author": "오승하",
+        "date": "2026-08-21",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "software-2",
+        "title": "2026학년도 2학기 셔틀버스(광주↔여수캠퍼스) 운행 계획 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1052518/artclView.do",
+        "author": "오승하",
+        "date": "2026-08-21",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      }
+    ],
+    "newNoticeCount": 3,
+    "totalNoticeCount": 7530
+  },
+  {
     "checkedAt": "2026-08-21T13:09:52.390Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -5400,11 +5443,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7541
-  },
-  {
-    "checkedAt": "2026-08-17T11:38:54.149Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 6404
   }
 ]
