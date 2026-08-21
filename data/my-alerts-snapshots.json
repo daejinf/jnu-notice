@@ -1,8 +1,32 @@
 {
-  "checkedAt": "2026-08-20T23:59:06.398Z",
+  "checkedAt": "2026-08-21T01:56:39.439Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "3663",
+          "title": "[에코나우] 대학생 기후환경리더 양성과정 9기 모집",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3663",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "3662",
+          "title": "[남도장터] 26년 (재)남도장터 계약직 직원(일반직, 소담스퀘어) 채용 재공고(3차)",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3662",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": false
+        },
         {
           "id": "3732",
           "title": "[여수] 2026학년도 졸업생 진로잡담 브런치 특강 [14회 타타대우모빌리티 정비기술 2026. 11. 17.(화) 11:30~13:30]",
@@ -130,20 +154,44 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-08-20T23:59:06.398Z",
-      "totalCount": 9,
+      "fetchedAt": "2026-08-21T01:56:39.439Z",
+      "totalCount": 11,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-07-29T12:31:12.831Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
         {
+          "id": "mechanical-1",
+          "title": "공과대학 「두근두근 엔지니어링 프로젝트 21기」 참가자 모집(~8.28.(금))",
+          "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1052421/artclView.do",
+          "author": "고병승",
+          "date": "2026-08-21",
+          "views": 19,
+          "sourceType": "department",
+          "sourceName": "기계공학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "70062",
+          "title": "2026년 제9회 전남대학교 창업중심대학사업단 전담직원 채용 공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70062",
+          "author": "창업중심대학사업단",
+          "date": "2026-08-21",
+          "views": 40,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "채용공고",
+          "isPinned": false
+        },
+        {
           "id": "804",
           "title": "2026학년도 2학기 학생건강검진 새글",
           "url": "https://human.jnu.ac.kr/bbs/human/1819/1052420/artclView.do",
           "author": "김성영",
           "date": "2026-08-21",
-          "views": 0,
+          "views": 13,
           "sourceType": "college",
           "sourceName": "인문대학",
           "category": "공지사항",
@@ -155,10 +203,118 @@
           "url": "https://human.jnu.ac.kr/bbs/human/1819/1052419/artclView.do",
           "author": "김성영",
           "date": "2026-08-21",
-          "views": 0,
+          "views": 8,
           "sourceType": "college",
           "sourceName": "인문대학",
           "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "70063",
+          "title": "[삼성전자] 삼성전자DS부문 신입사원 채용설명회",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70063",
+          "author": "취업지원실",
+          "date": "2026-08-21",
+          "views": 4,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "2150",
+          "title": "2027학년도 1학기 2차 해외 파견 교환학생 선발 안내",
+          "url": "https://china.jnu.ac.kr/bbs/china/1570/1052431/artclView.do",
+          "author": "중어중문학과",
+          "date": "2026-08-21",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "중어중문학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "70066",
+          "title": "[한국전력공사] 신입사원 채용설명회",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70066",
+          "author": "취업지원실",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "70065",
+          "title": "[한국토지주택공사] 신입사원 채용설명회",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70065",
+          "author": "취업지원실",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "70064",
+          "title": "[롯데백화점] 신입사원 채용설명회/상담회",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70064",
+          "author": "취업지원실",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "818",
+          "title": "AIEDAP 호남권역 AI디지털 융합수업 현장 사례나눔회(9월) 개최 안내",
+          "url": "https://homeedu.jnu.ac.kr/bbs/homeedu/2318/1052435/artclView.do",
+          "author": "김초영",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "가정교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1131",
+          "title": "[학사안내]제74회 2025학년도 후기(2026년 8월) 학위수여식 안내",
+          "url": "https://design.jnu.ac.kr/bbs/design/1007/1052438/artclView.do",
+          "author": "디자인학과",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "디자인학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "3663",
+          "title": "[에코나우] 대학생 기후환경리더 양성과정 9기 모집",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3663",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "3662",
+          "title": "[남도장터] 26년 (재)남도장터 계약직 직원(일반직, 소담스퀘어) 채용 재공고(3차)",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3662",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
           "isPinned": false
         },
         {
@@ -302,6 +458,62 @@
           "statusKind": "deadline"
         },
         {
+          "id": "53698",
+          "title": "[삼성전자] 삼성전자DS부문 신입사원 채용설명회",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53698",
+          "author": "취업진로포털 채용설명회",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 채용설명회",
+          "category": "채용설명회",
+          "isPinned": false,
+          "statusLabel": "D-13",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "53699",
+          "title": "[롯데백화점] 신입사원 채용설명회/상담회",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53699",
+          "author": "취업진로포털 채용설명회",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 채용설명회",
+          "category": "채용설명회",
+          "isPinned": false,
+          "statusLabel": "D-13",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "53700",
+          "title": "[한국토지주택공사] 신입사원 채용설명회",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53700",
+          "author": "취업진로포털 채용설명회",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 채용설명회",
+          "category": "채용설명회",
+          "isPinned": false,
+          "statusLabel": "D-13",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "53701",
+          "title": "[한국전력공사] 신입사원 채용설명회",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53701",
+          "author": "취업진로포털 채용설명회",
+          "date": "2026-08-21",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 채용설명회",
+          "category": "채용설명회",
+          "isPinned": false,
+          "statusLabel": "D-14",
+          "statusKind": "deadline"
+        },
+        {
           "id": "53688",
           "title": "[대한무역투자진흥공사(KOTRA)] 2026년 통상직 신입사원 채용설명회(채용직무: 통상직)",
           "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53688",
@@ -353,62 +565,6 @@
           "category": "채용설명회",
           "isPinned": false,
           "statusLabel": "D-20",
-          "statusKind": "deadline"
-        },
-        {
-          "id": "53694",
-          "title": "[삼성생명] 2026 하반기 신입사원 채용상담회(채용직무: 영업관리, 상품계리, 자산운용, 투자자산관리, 디지털 서비스 기획/운영, IT 서비스 기획/운영, 보험지원, 경영지원 등 )",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53694",
-          "author": "취업진로포털 채용설명회",
-          "date": "2026-08-21",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 채용설명회",
-          "category": "채용설명회",
-          "isPinned": false,
-          "statusLabel": "D-21",
-          "statusKind": "deadline"
-        },
-        {
-          "id": "53696",
-          "title": "[파소나코리아] 일본 현지 취업 12개 기업 신입사원 채용설명회(* 채용직무: 연구, 개발, 엔지니어, IT, AI 등)",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53696",
-          "author": "취업진로포털 채용설명회",
-          "date": "2026-08-21",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 채용설명회",
-          "category": "채용설명회",
-          "isPinned": false,
-          "statusLabel": "D-24",
-          "statusKind": "deadline"
-        },
-        {
-          "id": "53689",
-          "title": "[현대해상] 2026년 대졸 신입사원 채용설명회(채용직무: 점포 영업관리, 손해사정 등 총 7개 직무)",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53689",
-          "author": "취업진로포털 채용설명회",
-          "date": "2026-08-21",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 채용설명회",
-          "category": "채용설명회",
-          "isPinned": false,
-          "statusLabel": "D-25",
-          "statusKind": "deadline"
-        },
-        {
-          "id": "53695",
-          "title": "[신세계] 2026 하반기 신입사원 채용설명회/상담회",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53695",
-          "author": "취업진로포털 채용설명회",
-          "date": "2026-08-21",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 채용설명회",
-          "category": "채용설명회",
-          "isPinned": false,
-          "statusLabel": "D-27",
           "statusKind": "deadline"
         },
         {
@@ -522,8 +678,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-08-20T23:59:06.398Z",
-      "totalCount": 29,
+      "fetchedAt": "2026-08-21T01:56:39.439Z",
+      "totalCount": 40,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
