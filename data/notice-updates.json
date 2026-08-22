@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-22T23:34:31.741Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8199
+  },
+  {
     "checkedAt": "2026-08-22T22:58:05.805Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -4506,36 +4512,5 @@
     ],
     "newNoticeCount": 22,
     "totalNoticeCount": 7686
-  },
-  {
-    "checkedAt": "2026-08-18T23:57:30.617Z",
-    "notices": [
-      {
-        "id": "70030",
-        "title": "[기아] 2026 기아 엔지니어(생산직) 채용 (~8.21.(...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70030",
-        "author": "취업지원실",
-        "date": "2026-08-19",
-        "views": 0,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "70028",
-        "title": "2026 모두의 창업, 대학리그 참가팀 모집 안내",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70028",
-        "author": "창업중심대학사업단",
-        "date": "2026-08-18",
-        "views": 52,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "모집공고",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8200
   }
 ]
