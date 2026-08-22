@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-22T04:48:32.698Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 6725
+  },
+  {
     "checkedAt": "2026-08-22T03:55:15.038Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -5412,36 +5418,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8200
-  },
-  {
-    "checkedAt": "2026-08-17T23:35:42.289Z",
-    "notices": [
-      {
-        "id": "70011",
-        "title": "[한국마사회] 2026년 하반기 한국마사회 힐링승마 지원사업 ...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70011",
-        "author": "학생과",
-        "date": "2026-08-18",
-        "views": 6,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "모집공고",
-        "isPinned": false
-      },
-      {
-        "id": "70012",
-        "title": "2026 현직자 멘토링_kotra",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70012",
-        "author": "취업지원실",
-        "date": "2026-08-18",
-        "views": 5,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 7499
   }
 ]
