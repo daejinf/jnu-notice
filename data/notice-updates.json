@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-23T03:14:29.234Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7683
+  },
+  {
     "checkedAt": "2026-08-23T01:59:12.240Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -4095,72 +4101,5 @@
     ],
     "newNoticeCount": 7,
     "totalNoticeCount": 8201
-  },
-  {
-    "checkedAt": "2026-08-19T03:58:28.421Z",
-    "notices": [
-      {
-        "id": "ko-program-intro-view-786",
-        "title": "[여수캠] 26학년도 2학기 교수법 프로그램 사제동행",
-        "url": "https://grow.jnu.ac.kr/ko/program/intro/view/786",
-        "author": "부속시설 글로벌교육원",
-        "date": "2026-08-19",
-        "views": 12,
-        "sourceType": "center",
-        "sourceName": "비교과 통합 플랫폼 성장마루",
-        "category": "Program",
-        "isPinned": true
-      },
-      {
-        "id": "96999",
-        "title": "2026학년도 2학기 생활관 입주 일정 안내",
-        "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=96999",
-        "author": "입주신청 2026학년도 2학기 생활관 입주 일정 안내",
-        "date": "2026-08-19",
-        "views": 6,
-        "sourceType": "center",
-        "sourceName": "광주생활관",
-        "category": "기관 공지",
-        "isPinned": false
-      },
-      {
-        "id": "814",
-        "title": "2026학년도 2학기 광주시내 통학버스 운행 계획 안내",
-        "url": "https://homeedu.jnu.ac.kr/bbs/homeedu/2318/1052160/artclView.do",
-        "author": "김초영",
-        "date": "2026-08-19",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "가정교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1209",
-        "title": "2026학년도 2학기 셔틀버스(광주↔여수캠퍼스) 운행 계획",
-        "url": "https://spededu.jnu.ac.kr/bbs/spededu/2321/1052162/artclView.do",
-        "author": "특수교육학부",
-        "date": "2026-08-19",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "특수교육학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "815",
-        "title": "2026학년도 2학기 광주↔여수캠퍼스 셔틀버스 운행 계획 안내",
-        "url": "https://homeedu.jnu.ac.kr/bbs/homeedu/2318/1052161/artclView.do",
-        "author": "김초영",
-        "date": "2026-08-19",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "가정교육과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 5,
-    "totalNoticeCount": 7958
   }
 ]
