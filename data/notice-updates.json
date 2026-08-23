@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-23T08:47:44.957Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7523
+  },
+  {
     "checkedAt": "2026-08-23T07:46:37.049Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -3172,60 +3178,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7608
-  },
-  {
-    "checkedAt": "2026-08-19T09:48:32.210Z",
-    "notices": [
-      {
-        "id": "software-1",
-        "title": "(9/1, 10:00~16:30) 지역 내 혈액 확보를 위한 헌혈 행사 협조 요청",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1052254/artclView.do",
-        "author": "오승하",
-        "date": "2026-08-19",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "544",
-        "title": "(학부, 교육대학원) 2026학년도 2학기 학생건강검진 실시 안내",
-        "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1052255/artclView.do",
-        "author": "음악교육과",
-        "date": "2026-08-19",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "음악교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "901",
-        "title": "2027학년도 1학기 해외 파견 교환학생 2차 선발 안내",
-        "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1052264/artclView.do",
-        "author": "바이오에너지공학과",
-        "date": "2026-08-19",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "바이오에너지공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1528",
-        "title": "2026학년도 2학기 학생건강검진 실시 안내",
-        "url": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/1052257/artclView.do",
-        "author": "화학교육과",
-        "date": "2026-08-19",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "화학교육과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 4,
-    "totalNoticeCount": 8203
   }
 ]
