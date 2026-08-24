@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-24T22:43:36.471Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7545
+  },
+  {
     "checkedAt": "2026-08-24T22:08:55.038Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -2197,74 +2203,5 @@
     ],
     "newNoticeCount": 12,
     "totalNoticeCount": 7747
-  },
-  {
-    "checkedAt": "2026-08-21T06:04:18.738Z",
-    "notices": [
-      {
-        "id": "economics-1",
-        "title": "2026학년도 2학기 학생건강검진 실시 안내",
-        "url": "https://eco.jnu.ac.kr/bbs/eco/1845/1052472/artclView.do",
-        "author": "경제학부",
-        "date": "2026-08-21",
-        "views": 3,
-        "sourceType": "department",
-        "sourceName": "경제학부",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "6100",
-        "title": "2026학년도 2학기 중 광주시내 통학버스 운행 계획 안내",
-        "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052469/artclView.do",
-        "author": "건축학부",
-        "date": "2026-08-21",
-        "views": 4,
-        "sourceType": "department",
-        "sourceName": "건축학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "922",
-        "title": "2026학년도 2학기 학생건강검진 실시 안내 새글",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1052470/artclView.do",
-        "author": "약학부",
-        "date": "2026-08-21",
-        "views": 3,
-        "sourceType": "college",
-        "sourceName": "약학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "6101",
-        "title": "2026학년도 2학기 학생건강검진 실시 안내",
-        "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1052471/artclView.do",
-        "author": "건축학부",
-        "date": "2026-08-21",
-        "views": 2,
-        "sourceType": "department",
-        "sourceName": "건축학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "53704",
-        "title": "[삼성에스원]신입사원 채용상담회",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53704",
-        "author": "취업진로포털 채용설명회",
-        "date": "2026-08-21",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 채용설명회",
-        "category": "채용설명회",
-        "isPinned": false,
-        "statusLabel": "D-18",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 5,
-    "totalNoticeCount": 7263
   }
 ]
