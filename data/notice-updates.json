@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-24T21:43:05.908Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8197
+  },
+  {
     "checkedAt": "2026-08-24T20:47:26.725Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -2429,60 +2435,5 @@
     ],
     "newNoticeCount": 14,
     "totalNoticeCount": 7496
-  },
-  {
-    "checkedAt": "2026-08-21T04:23:03.642Z",
-    "notices": [
-      {
-        "id": "70073",
-        "title": "[한미약품] 신입사원 채용설명회",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70073",
-        "author": "취업지원실",
-        "date": "2026-08-21",
-        "views": 9,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "97045",
-        "title": "2026학년도 2학기 생활관 입주 안내 2026 Fall Semester Move-In Guidelines...",
-        "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97045",
-        "author": "입퇴관안내 2026학년도 2학기 생활관 입주 안내 2026 Fall Semester Move-In Guidelines...",
-        "date": "2026-08-21",
-        "views": 9,
-        "sourceType": "center",
-        "sourceName": "광주생활관",
-        "category": "기관 공지",
-        "isPinned": false
-      },
-      {
-        "id": "70074",
-        "title": "[(재)광산장학회] 2026년도 장학생 선발공고",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70074",
-        "author": "학생과",
-        "date": "2026-08-21",
-        "views": 3,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "장학안내",
-        "isPinned": false
-      },
-      {
-        "id": "70051",
-        "title": "2026 기후산업국제박람회(WCE) 개최 안내",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=70051",
-        "author": "대외협력과",
-        "date": "2026-08-20",
-        "views": 47,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "모집공고",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 4,
-    "totalNoticeCount": 8202
   }
 ]
