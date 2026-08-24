@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-24T19:43:29.938Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7101
+  },
+  {
     "checkedAt": "2026-08-24T18:58:28.180Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -2900,36 +2906,5 @@
     ],
     "newNoticeCount": 16,
     "totalNoticeCount": 8202
-  },
-  {
-    "checkedAt": "2026-08-20T23:59:07.645Z",
-    "notices": [
-      {
-        "id": "804",
-        "title": "2026학년도 2학기 학생건강검진 새글",
-        "url": "https://human.jnu.ac.kr/bbs/human/1819/1052420/artclView.do",
-        "author": "김성영",
-        "date": "2026-08-21",
-        "views": 0,
-        "sourceType": "college",
-        "sourceName": "인문대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "803",
-        "title": "2027학년도 1학기 2차 해외 파견 교환학생 새글",
-        "url": "https://human.jnu.ac.kr/bbs/human/1819/1052419/artclView.do",
-        "author": "김성영",
-        "date": "2026-08-21",
-        "views": 0,
-        "sourceType": "college",
-        "sourceName": "인문대학",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8203
   }
 ]
