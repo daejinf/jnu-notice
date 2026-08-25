@@ -1,5 +1,124 @@
 [
   {
+    "checkedAt": "2026-08-25T08:58:43.013Z",
+    "notices": [
+      {
+        "id": "software-1",
+        "title": "2026 세계신안보포럼 포스터 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1052841/artclView.do",
+        "author": "오승하",
+        "date": "2026-08-25",
+        "views": 3,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "200",
+        "title": "[학사] 2026학년도 2학기 CNU 학습공동체 공모(9/4금~9/14월16:00)",
+        "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1052840/artclView.do",
+        "author": "김소윤",
+        "date": "2026-08-25",
+        "views": 21,
+        "sourceType": "department",
+        "sourceName": "산업공학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "70112",
+        "title": "[신한라이프] 2026 하반기 신입채용 설명회/상담회",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70112",
+        "author": "취업지원실",
+        "date": "2026-08-25",
+        "views": 12,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "취업정보",
+        "isPinned": false
+      },
+      {
+        "id": "97131",
+        "title": "2026학년도 2학기 생활관(여수) 4차 선발 안내 및 추가 접수 안내",
+        "url": "https://house.jnu.ac.kr/Board/Board.aspx?BoardID=29&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97131",
+        "author": "입주신청 2026학년도 2학기 생활관(여수) 4차 선발 안내 및 추가 접수 안내",
+        "date": "2026-08-25",
+        "views": 9,
+        "sourceType": "center",
+        "sourceName": "여수생활관",
+        "category": "기관 공지",
+        "isPinned": false
+      },
+      {
+        "id": "1435",
+        "title": "2026학년도 교직과정 복수전공 이수예정자 선발 안내",
+        "url": "https://psyche.jnu.ac.kr/bbs/psyche/1004/1052834/artclView.do",
+        "author": "심리학과",
+        "date": "2026-08-25",
+        "views": 2,
+        "sourceType": "department",
+        "sourceName": "심리학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "771",
+        "title": "2026학년도 교직 복수(연계)전공 이수예정자 선발 안내",
+        "url": "https://sociology.jnu.ac.kr/bbs/sociology/1001/1052833/artclView.do",
+        "author": "김장승혁",
+        "date": "2026-08-25",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "사회학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "53723",
+        "title": "[신한라이프] 2026 하반기 신입채용 설명회/상담회(* 채용직무: 영업전략, 상품, 계리, 자산운용, DX, 기타)",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53723",
+        "author": "취업진로포털 채용설명회",
+        "date": "2026-08-25",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 채용설명회",
+        "category": "채용설명회",
+        "isPinned": false,
+        "statusLabel": "D-13",
+        "statusKind": "deadline"
+      },
+      {
+        "id": "53722",
+        "title": "[BS한양]9월 기술직(건축, 기계, 전기)신입사원★학교 추천채용(~9.4.(금)까지)",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53722",
+        "author": "취업진로포털 추천채용",
+        "date": "2026-08-25",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 추천채용",
+        "category": "추천채용",
+        "isPinned": false,
+        "statusLabel": "D-10",
+        "statusKind": "deadline"
+      },
+      {
+        "id": "70092",
+        "title": "전남대학교 만들마루사업단 지역기반 보조기기R&SD 행정직원 채...",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=70092",
+        "author": "만들마루사업단",
+        "date": "2026-08-24",
+        "views": 173,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "채용공고",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 9,
+    "totalNoticeCount": 8197
+  },
+  {
     "checkedAt": "2026-08-25T07:57:24.878Z",
     "notices": [
       {
@@ -77,18 +196,6 @@
       {
         "id": "1052824",
         "title": "[장학안내] 전남광주통합특별시(구 전남권) 대학생 학자금대출 이자지원 사업 안내",
-        "url": "https://yculture.jnu.ac.kr/bbs/yculture/284/1052824/artclView.do",
-        "author": "관리자",
-        "date": "2026-08-25",
-        "views": 2,
-        "sourceType": "college",
-        "sourceName": "문화사회과학대학(여수)",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2122",
-        "title": "[장학안내] 전남광주통합특별시(구 전남권) 대학생 학자금대출 이자지원 사업 안내 새글",
         "url": "https://yculture.jnu.ac.kr/bbs/yculture/284/1052824/artclView.do",
         "author": "관리자",
         "date": "2026-08-25",
@@ -207,7 +314,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 17,
+    "newNoticeCount": 16,
     "totalNoticeCount": 8197
   },
   {
@@ -2513,11 +2620,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8112
-  },
-  {
-    "checkedAt": "2026-08-21T15:47:10.330Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 8197
   }
 ]
