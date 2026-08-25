@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-25T23:41:51.433Z",
+  "checkedAt": "2026-08-25T23:59:07.819Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -130,7 +130,7 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-08-25T23:41:51.433Z",
+      "fetchedAt": "2026-08-25T23:59:07.819Z",
       "totalCount": 9,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-07-29T12:31:12.831Z"
@@ -138,27 +138,51 @@
     "passionate1114@gmail.com": {
       "notices": [
         {
-          "id": "70114",
-          "title": "2026년 전남대학교 G-LAMP사업단 제5회 박사후연구원(포...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70114",
+          "id": "70113",
+          "title": "2026년 제4회 전남대학교 G-램프(LAMP)사업단 행정연구...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70113",
           "author": "G-램프(LAMP)사업단",
           "date": "2026-08-26",
-          "views": 23,
+          "views": 27,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "채용공고",
           "isPinned": false
         },
         {
-          "id": "70113",
-          "title": "2026년 제4회 전남대학교 G-램프(LAMP)사업단 행정연구...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70113",
+          "id": "70114",
+          "title": "2026년 전남대학교 G-LAMP사업단 제5회 박사후연구원(포...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70114",
           "author": "G-램프(LAMP)사업단",
           "date": "2026-08-26",
-          "views": 22,
+          "views": 25,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "채용공고",
+          "isPinned": false
+        },
+        {
+          "id": "70115",
+          "title": "[한국선원복지고용센터] 2026년 2학기 선원가족장학사업 안내",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70115",
+          "author": "학생과",
+          "date": "2026-08-26",
+          "views": 1,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "장학안내",
+          "isPinned": false
+        },
+        {
+          "id": "13",
+          "title": "2025학년도 후기(2026.08.26.) 학위수여식 인생네컷 및 포토존 이벤트 새글",
+          "url": "https://socsci.jnu.ac.kr/bbs/socsci/1044/1052856/artclView.do",
+          "author": "양준성",
+          "date": "2026-08-26",
+          "views": 1,
+          "sourceType": "college",
+          "sourceName": "사회과학대학",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -528,8 +552,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-08-25T23:41:51.433Z",
-      "totalCount": 29,
+      "fetchedAt": "2026-08-25T23:59:07.819Z",
+      "totalCount": 31,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
