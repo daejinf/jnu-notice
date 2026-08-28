@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-28T22:38:49.474Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8113
+  },
+  {
     "checkedAt": "2026-08-28T12:14:21.569Z",
     "notices": [
       {
@@ -339,18 +345,6 @@
         "isPinned": false
       },
       {
-        "id": "925",
-        "title": "2026학년도 2학기 '천원의 아침밥' 제공 안내",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1053242/artclView.do",
-        "author": "약학부",
-        "date": "2026-08-28",
-        "views": 22,
-        "sourceType": "department",
-        "sourceName": "약학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "503",
         "title": "2026년 하반기 동아리 알림아리 행사 개최 안내(9/2 10:00~22:00)",
         "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1053170/artclView.do",
@@ -491,18 +485,6 @@
         "views": 13,
         "sourceType": "department",
         "sourceName": "물리교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "926",
-        "title": "2026학년도 2학기 「이뭣고-교학상장」 공모 안내",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1053277/artclView.do",
-        "author": "약학부",
-        "date": "2026-08-28",
-        "views": 13,
-        "sourceType": "department",
-        "sourceName": "약학부",
         "category": "공지사항",
         "isPinned": false
       },
@@ -1025,7 +1007,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 85,
+    "newNoticeCount": 83,
     "totalNoticeCount": 8197
   },
   {
@@ -6528,11 +6510,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8199
-  },
-  {
-    "checkedAt": "2026-08-22T19:34:05.597Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7563
   }
 ]
