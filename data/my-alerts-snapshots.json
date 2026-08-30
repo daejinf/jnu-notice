@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-30T00:18:54.064Z",
+  "checkedAt": "2026-08-30T05:49:47.561Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -130,13 +130,25 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-08-30T00:18:54.064Z",
+      "fetchedAt": "2026-08-30T05:49:47.561Z",
       "totalCount": 9,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-07-29T12:31:12.831Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "789",
+          "title": "2026 Marine Leaders Camp 파견 합격자 발표 및 오리엔테이션 공지 새글",
+          "url": "https://sea.jnu.ac.kr/bbs/sea/291/1053309/artclView.do",
+          "author": "이명희",
+          "date": "2026-08-30",
+          "views": 38,
+          "sourceType": "college",
+          "sourceName": "수산해양대학(여수)",
+          "category": "공지사항",
+          "isPinned": false
+        },
         {
           "id": "3732",
           "title": "[여수] 2026학년도 졸업생 진로잡담 브런치 특강 [14회 타타대우모빌리티 자동차.기술 분야 2026. 11. 17.(화) 11:30~13:30]",
@@ -504,8 +516,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-08-30T00:18:54.064Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-08-30T05:49:47.561Z",
+      "totalCount": 28,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
