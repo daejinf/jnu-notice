@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-08-31T20:02:20.797Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8184
+  },
+  {
     "checkedAt": "2026-08-31T13:49:56.317Z",
     "notices": [
       {
@@ -219,18 +225,6 @@
         "isPinned": false
       },
       {
-        "id": "1811",
-        "title": "2026학년도 2학기 '천원의 아침밥' 제공 및 지원 확대 안내",
-        "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1053438/artclView.do",
-        "author": "간호학과(간호대)",
-        "date": "2026-08-31",
-        "views": 22,
-        "sourceType": "department",
-        "sourceName": "간호학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "1810",
         "title": "2026년 전남금연지원센터 교육환경 금연 프로그램 홍보 새글",
         "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1053437/artclView.do",
@@ -239,18 +233,6 @@
         "views": 18,
         "sourceType": "college",
         "sourceName": "간호대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1810",
-        "title": "2026년 전남금연지원센터 교육환경 금연 프로그램 홍보",
-        "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1053437/artclView.do",
-        "author": "간호학과(간호대)",
-        "date": "2026-08-31",
-        "views": 18,
-        "sourceType": "department",
-        "sourceName": "간호학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -279,18 +261,6 @@
         "isPinned": false
       },
       {
-        "id": "1809",
-        "title": "2026학년도 2학기 CNU 학습공동체 공모 안내",
-        "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1053435/artclView.do",
-        "author": "간호학과(간호대)",
-        "date": "2026-08-31",
-        "views": 17,
-        "sourceType": "department",
-        "sourceName": "간호학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "2423",
         "title": "2026년도 2학기(9~12월) 전남대학교 리걸클리닉 법률지원단 운영 일정 안내",
         "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1053440/artclView.do",
@@ -311,18 +281,6 @@
         "views": 15,
         "sourceType": "college",
         "sourceName": "간호대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1808",
-        "title": "2026년 하반기 동아리 알림아리 행사 개최 안내",
-        "url": "https://nursing.jnu.ac.kr/bbs/nursing/553/1053432/artclView.do",
-        "author": "간호학과(간호대)",
-        "date": "2026-08-31",
-        "views": 15,
-        "sourceType": "department",
-        "sourceName": "간호학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -461,7 +419,7 @@
         "statusKind": "deadline"
       }
     ],
-    "newNoticeCount": 38,
+    "newNoticeCount": 34,
     "totalNoticeCount": 7569
   },
   {
@@ -7842,11 +7800,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8199
-  },
-  {
-    "checkedAt": "2026-08-23T06:59:49.385Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7176
   }
 ]
