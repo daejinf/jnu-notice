@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-09-05T23:22:39.688Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7590
+  },
+  {
     "checkedAt": "2026-09-05T21:43:19.729Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -12528,72 +12534,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8111
-  },
-  {
-    "checkedAt": "2026-08-24T09:03:28.422Z",
-    "notices": [
-      {
-        "id": "french-1",
-        "title": "2026 프랑스 문화예술 답사 실시 및 신청 안내",
-        "url": "https://french.jnu.ac.kr/bbs/french/2189/1052694/artclView.do",
-        "author": "불어불문학과",
-        "date": "2026-08-24",
-        "views": 159,
-        "sourceType": "department",
-        "sourceName": "불어불문학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-1",
-        "title": "(~9/7, 17:00) [광주정보문화산업진흥원] 8주 완성 콘텐츠 테크하이어 QA교육과정",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1052656/artclView.do",
-        "author": "오승하",
-        "date": "2026-08-24",
-        "views": 42,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "70095",
-        "title": "[LG전자]26년 하반기 신입사원 채용(~9.13.(일)23시...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70095",
-        "author": "취업지원실",
-        "date": "2026-08-24",
-        "views": 12,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "70096",
-        "title": "[한국서부발전(주)]2026년도 2차 체험형 인턴 모집공고(~...",
-        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70096",
-        "author": "취업지원실",
-        "date": "2026-08-24",
-        "views": 11,
-        "sourceType": "school",
-        "sourceName": "전남대학교 본부",
-        "category": "취업정보",
-        "isPinned": false
-      },
-      {
-        "id": "1052701",
-        "title": "2026학년도 2학기 여수캠퍼스 학교버스 운행 계획 안내",
-        "url": "https://yculture.jnu.ac.kr/bbs/yculture/284/1052701/artclView.do",
-        "author": "관리자",
-        "date": "2026-08-24",
-        "views": 6,
-        "sourceType": "college",
-        "sourceName": "문화사회과학대학(여수)",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 5,
-    "totalNoticeCount": 8197
   }
 ]
