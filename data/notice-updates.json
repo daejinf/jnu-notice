@@ -1,5 +1,92 @@
 [
   {
+    "checkedAt": "2026-09-07T15:50:19.688Z",
+    "notices": [
+      {
+        "id": "3744",
+        "title": "[재학생 및 졸업생]취업전략 Ready to Boost 프로젝트_2회차 인문/상경계열 직무 특강",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3744",
+        "author": "취업진로포털 취업프로그램",
+        "date": "2026-09-08",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 취업프로그램",
+        "category": "취업프로그램",
+        "isPinned": false,
+        "statusLabel": "D-DAY",
+        "statusKind": "deadline"
+      },
+      {
+        "id": "3745",
+        "title": "[재학생 및 졸업생]취업전략 Ready to Boost 프로젝트_3회차 자연/이공계열 직무 특강",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3745",
+        "author": "취업진로포털 취업프로그램",
+        "date": "2026-09-08",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 취업프로그램",
+        "category": "취업프로그램",
+        "isPinned": false,
+        "statusLabel": "D-DAY",
+        "statusKind": "deadline"
+      },
+      {
+        "id": "53797",
+        "title": "​​​​​​​[대우건설] 2026 하반기 신입사원 채용상담회( * 채용직무: 경영지원(HR, 법무, 재무), 건축, 토목, 기계, 전기, 원자력, 안전/보건, 중기, 사업 등)(* 커피 쿠폰 발송 예정)",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53797",
+        "author": "취업진로포털 채용설명회",
+        "date": "2026-09-08",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 채용설명회",
+        "category": "채용설명회",
+        "isPinned": false,
+        "statusLabel": "D-7",
+        "statusKind": "deadline"
+      },
+      {
+        "id": "53812",
+        "title": "[HD현대삼호] 온라인 채용설명회 (* 직무: 설계 / 생산관리 / 안전관리 / 환경·에너지 / 계약관리 / 산업설비 / ICT·DT / 인사노무 / 동반성장)",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53812",
+        "author": "취업진로포털 채용설명회",
+        "date": "2026-09-08",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 채용설명회",
+        "category": "채용설명회",
+        "isPinned": false,
+        "statusLabel": "D-9",
+        "statusKind": "deadline"
+      },
+      {
+        "id": "software-1",
+        "title": "(~10/5)『2026 English Essay Contest』 개최 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1054335/artclView.do",
+        "author": "오승하",
+        "date": "2026-09-07",
+        "views": 12,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "2570",
+        "title": "조기취업자 출석인정 처리 방법 안내",
+        "url": "https://korean.jnu.ac.kr/bbs/korean/1637/1054336/artclView.do",
+        "author": "국어국문학",
+        "date": "2026-09-07",
+        "views": 10,
+        "sourceType": "department",
+        "sourceName": "국어국문학과",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 6,
+    "totalNoticeCount": 8190
+  },
+  {
     "checkedAt": "2026-09-07T09:44:11.181Z",
     "notices": [
       {
@@ -447,18 +534,6 @@
         "isPinned": false
       },
       {
-        "id": "929",
-        "title": "『2026 English Essay Contest』 개최 안내 (신청: 2026. 9. 1",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1054317/artclView.do",
-        "author": "약학부",
-        "date": "2026-09-07",
-        "views": 11,
-        "sourceType": "department",
-        "sourceName": "약학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "70281",
         "title": "[서울대학교 공익인권법센터] 2026년 제18회 국제인권강좌 안내",
         "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70281",
@@ -679,7 +754,7 @@
         "statusKind": "deadline"
       }
     ],
-    "newNoticeCount": 56,
+    "newNoticeCount": 55,
     "totalNoticeCount": 8193
   },
   {
@@ -13629,11 +13704,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7101
-  },
-  {
-    "checkedAt": "2026-08-24T18:58:28.180Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7561
   }
 ]
