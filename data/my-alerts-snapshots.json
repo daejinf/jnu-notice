@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-13T23:35:35.492Z",
+  "checkedAt": "2026-09-14T01:39:52.136Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,10 +9,34 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70354",
           "author": "학생과",
           "date": "2026-09-14",
-          "views": 11,
+          "views": 66,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
+          "isPinned": true
+        },
+        {
+          "id": "97976",
+          "title": "7, 8동 소방점검 안내 Fire Extinguishing Equipment Inspection for buildi...",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97976",
+          "author": "점검안내 7, 8동 소방점검 안내 Fire Extinguishing Equipment Inspection for buildi...",
+          "date": "2026-09-14",
+          "views": 15,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "70357",
+          "title": "2026학년도 2학기 재학생 분할납부 2회차 고지서 출력",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70357",
+          "author": "재무과",
+          "date": "2026-09-14",
+          "views": 11,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
           "isPinned": false
         },
         {
@@ -142,8 +166,8 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-09-13T23:35:35.492Z",
-      "totalCount": 10,
+      "fetchedAt": "2026-09-14T01:39:52.136Z",
+      "totalCount": 12,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-09-03T05:03:03.060Z"
     },
@@ -155,22 +179,238 @@
           "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70354",
           "author": "학생과",
           "date": "2026-09-14",
-          "views": 11,
+          "views": 66,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "대학생활",
+          "isPinned": true
+        },
+        {
+          "id": "sbst-1",
+          "title": "2026학년도 2학기 교과구분 정정 실시 안내",
+          "url": "https://sbst.jnu.ac.kr/bbs/sbst/1522/1054906/artclView.do",
+          "author": "생명과학기술학부",
+          "date": "2026-09-14",
+          "views": 9,
+          "sourceType": "department",
+          "sourceName": "생명과학기술학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "horticulture-1",
+          "title": "[대학원] 2026학년도 전기(2027년 2월 졸업예정) 청구논문 심사일정 및 서류접수 안",
+          "url": "https://hort.jnu.ac.kr/bbs/hort/441/1054934/artclView.do",
+          "author": "대학원",
+          "date": "2026-09-14",
+          "views": 8,
+          "sourceType": "department",
+          "sourceName": "원예생명공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "chemical-1",
+          "title": "2026학년도 2학기 에너지 분야 이러닝 특강 안내",
+          "url": "https://ace.jnu.ac.kr/bbs/ace/1860/1054924/artclView.do",
+          "author": "나현정",
+          "date": "2026-09-14",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "화학공학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "chemical-2",
+          "title": "2026학년도 2학기 수강취소 안내",
+          "url": "https://ace.jnu.ac.kr/bbs/ace/1860/1054923/artclView.do",
+          "author": "나현정",
+          "date": "2026-09-14",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "화학공학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "history-edu-1",
+          "title": "2026학년도 2학기 교과구분 정정 실시 안내",
+          "url": "https://hisedu.jnu.ac.kr/bbs/hisedu/2296/1054938/artclView.do",
+          "author": "역사교육과",
+          "date": "2026-09-14",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "역사교육과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "70356",
+          "title": "전남대학교 입학처 입시업무보조원 채용 연장 공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70356",
+          "author": "입학과",
+          "date": "2026-09-14",
+          "views": 37,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "채용공고",
           "isPinned": false
         },
         {
           "id": "70355",
           "title": "2026년 글로컬대학사업 「AI 기반 입사지원 라이팅 특강&컨...",
-          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70355",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70355",
           "author": "취업지원실",
           "date": "2026-09-14",
-          "views": 0,
+          "views": 21,
           "sourceType": "school",
           "sourceName": "전남대학교 본부",
           "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "97976",
+          "title": "7, 8동 소방점검 안내 Fire Extinguishing Equipment Inspection for buildi...",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=97976",
+          "author": "점검안내 7, 8동 소방점검 안내 Fire Extinguishing Equipment Inspection for buildi...",
+          "date": "2026-09-14",
+          "views": 15,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "70357",
+          "title": "2026학년도 2학기 재학생 분할납부 2회차 고지서 출력",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70357",
+          "author": "재무과",
+          "date": "2026-09-14",
+          "views": 11,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "학사안내",
+          "isPinned": false
+        },
+        {
+          "id": "2153",
+          "title": "[학사] 2026학년도 2학기 교과구분 정정 실시 안내",
+          "url": "https://fn.jnu.ac.kr/bbs/fn/1139/1054911/artclView.do",
+          "author": "식품영양과학부",
+          "date": "2026-09-14",
+          "views": 6,
+          "sourceType": "department",
+          "sourceName": "식품영양과학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2432",
+          "title": "2026학년도 2학기 수강취소 안내",
+          "url": "https://ell.jnu.ac.kr/bbs/ell/1592/1054917/artclView.do",
+          "author": "영어영문학과",
+          "date": "2026-09-14",
+          "views": 4,
+          "sourceType": "department",
+          "sourceName": "영어영문학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "579",
+          "title": "2026학년도 2학기 교과구분 정정 실시 안내",
+          "url": "https://chem.jnu.ac.kr/bbs/chem/1013/1054913/artclView.do",
+          "author": "이은희",
+          "date": "2026-09-14",
+          "views": 4,
+          "sourceType": "department",
+          "sourceName": "화학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2154",
+          "title": "2026학년도 2학기 교과구분 정정 실시 안내",
+          "url": "https://china.jnu.ac.kr/bbs/china/1570/1054914/artclView.do",
+          "author": "중어중문학과",
+          "date": "2026-09-14",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "중어중문학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "70",
+          "title": "[학사안내] 2026학년도 2학기 교과구분 정정 실시 안내",
+          "url": "https://bioedu.jnu.ac.kr/bbs/bioedu/2311/1054909/artclView.do",
+          "author": "생물교육과",
+          "date": "2026-09-14",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "생물교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "549",
+          "title": "(학부, 교육대학원) 2026학년도 2학기 수강취소 안내",
+          "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1054939/artclView.do",
+          "author": "음악교육과",
+          "date": "2026-09-14",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "음악교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1383",
+          "title": "2026학년도 2학기 교과구분 정정 실시 안내 (~10.2까지)",
+          "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1054921/artclView.do",
+          "author": "통계학과",
+          "date": "2026-09-14",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "통계학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2892",
+          "title": "2027학년도 전기(1차)일반대학원 입학전형 모집요강",
+          "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1054927/artclView.do",
+          "author": "영어교육과",
+          "date": "2026-09-14",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "영어교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2154",
+          "title": "[홍보] [한국양봉협회] 제 6회 양봉요리경연대회",
+          "url": "https://fn.jnu.ac.kr/bbs/fn/1139/1054928/artclView.do",
+          "author": "식품영양과학부",
+          "date": "2026-09-14",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "식품영양과학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "733",
+          "title": "2026학년도 2학기 교과구분 정정 실시 안내 (~10.2까지)",
+          "url": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/1054922/artclView.do",
+          "author": "빅데이터융합학과",
+          "date": "2026-09-14",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "빅데이터융합학과",
+          "category": "공지사항",
           "isPinned": false
         },
         {
@@ -301,7 +541,7 @@
         },
         {
           "id": "53837",
-          "title": "[현대자동차그룹] HINT 2기 교육생 모집 설명회(*포스터 내 QR 사전 신청~9.14.오전 10시까지)",
+          "title": "[현대자동차그룹］HINT 2기 교육생 모집 설명회(*포스터 내 QR 사전 신청~9.14.오전 10시까지)",
           "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53837",
           "author": "취업진로포털 채용설명회",
           "date": "2026-09-14",
@@ -329,7 +569,7 @@
         },
         {
           "id": "53689",
-          "title": "[현대해상] 2026년 대졸 신입사원 채용설명회 ( * 포스터내 사전신청 QR로 반드시 신청!!) (채용직무: 점포 영업관리, 손해사정 등 총 7개 직무)(전남대학교 출신 현직자 방문 예정)",
+          "title": "[현대해상] 2026년 대졸 신입사원 채용설명회 ( * 포스터내 사전신청 QR로 반드시 신청!!) (채용직무: 디지털/데이터분석, IT/정보보호, 보험계리/수리, 자산운용, 기업보험, 점포영업관리, 손해사정 등)(전남대학교 출신 현직자 방문 예정)",
           "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53689",
           "author": "취업진로포털 채용설명회",
           "date": "2026-09-14",
@@ -552,8 +792,8 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-09-13T23:35:35.492Z",
-      "totalCount": 29,
+      "fetchedAt": "2026-09-14T01:39:52.136Z",
+      "totalCount": 47,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
