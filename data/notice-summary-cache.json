@@ -1967,5 +1967,56 @@
       "attachmentAnalysisState": "pending"
     },
     "expiresAt": 1790208903777
+  },
+  "https://aisw.jnu.ac.kr/bbs/aisw/64/1054278/artclView.do::v10": {
+    "value": {
+      "summary": "전남대학교 인공지능학부 유동현 교수님의 암호 및 보안 프로토콜 연구실에서 학부연구생을 모집합니다. 양자내성암호, 속성 기반 암호, 전자서명, 연합학습 및 AI 보안 등을 연구하며, 암호학과 정보보호에 관심 있는 학부 3학년 이상 학생을 우대합니다. 자기소개, 지원동기, 관심 연구분야, 면담 가능 요일을 이메일로 제출하면 됩니다.",
+      "bullets": [
+        "양자내성암호, 속성 기반 암호, 전자서명, 연합학습 및 AI 보안 연구",
+        "학부 3학년 이상 우대, 학·석사 연계 및 대학원 진학 관심자 우대",
+        "연구 인건비, 학술대회 참가 및 해외 출장, 국가 R&D 참여 기회 제공",
+        "석사과정 진학 시 영국 협력대학 6개월 연구파견 기회"
+      ],
+      "targetAudience": "암호학 및 정보보호 분야에 관심 있는 학부 3학년 이상 학생(학·석사 연계 또는 대학원 진학 관심자 우대)",
+      "deadline": "명시되지 않음",
+      "actionItems": [
+        "자기소개 작성",
+        "지원동기 작성",
+        "관심 연구분야 정리",
+        "면담 가능 요일 확인",
+        "donghyun.yu@jnu.ac.kr로 이메일 제출"
+      ],
+      "benefits": [
+        "연구 인건비 지원",
+        "국내·외 학술대회 참가 및 해외 출장 지원",
+        "국가 R&D 및 국제공동연구 참여 기회",
+        "석사과정 진학 시 영국 협력대학 6개월 연구파견 기회 제공"
+      ],
+      "requiredDocuments": [
+        "자기소개",
+        "지원동기",
+        "관심 연구분야",
+        "면담 가능 요일"
+      ],
+      "contact": "이메일: donghyun.yu@jnu.ac.kr",
+      "caution": "지원 마감일이 명시되지 않았으므로 이메일로 일정을 문의해야 합니다.",
+      "calendarItems": [
+        {
+          "label": "학부연구생 모집 지원",
+          "eventType": "apply_deadline",
+          "eventDate": "명시되지 않음",
+          "startAt": "명시되지 않음",
+          "endAt": "명시되지 않음",
+          "when": "명시되지 않음",
+          "note": "이메일 지원 마감일이 공지에 없어 문의 필요"
+        }
+      ],
+      "actionLinks": [],
+      "attachments": [],
+      "sourceTitle": "K2Web Wizard",
+      "extractedAt": "2026-09-17T00:15:37.335Z",
+      "attachmentAnalysisState": "complete"
+    },
+    "expiresAt": 1790208937451
   }
 }
