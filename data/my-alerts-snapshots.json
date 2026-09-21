@@ -1,15 +1,124 @@
 {
-  "checkedAt": "2026-09-20T22:26:00.310Z",
+  "checkedAt": "2026-09-21T00:30:52.453Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-09-20T22:26:00.310Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "4114",
+          "title": "2026 AIM챌린지 본선 진출팀 발표",
+          "url": "https://www.aicoss.kr/www/notice/view/4114?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-09-21",
+          "views": 7,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "70437",
+          "title": "2026년 정신건강 문화행사「12:32(일이삼이), 우리가 마...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70437",
+          "author": "학생생활상담센터",
+          "date": "2026-09-21",
+          "views": 13,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-09-21T00:30:52.453Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-09-03T05:03:03.060Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "4114",
+          "title": "2026 AIM챌린지 본선 진출팀 발표",
+          "url": "https://www.aicoss.kr/www/notice/view/4114?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-09-21",
+          "views": 7,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
+          "id": "mechanical-1",
+          "title": "[반도체특성화대학사업단] 2026학년도 하반기 반도체 특강 안내",
+          "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1055814/artclView.do",
+          "author": "고병승",
+          "date": "2026-09-21",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "기계공학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "70438",
+          "title": "국제처 국제협력과 교육공무원(조교) 공개채용 공고",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70438",
+          "author": "교무과",
+          "date": "2026-09-21",
+          "views": 19,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "채용공고",
+          "isPinned": false
+        },
+        {
+          "id": "70437",
+          "title": "2026년 정신건강 문화행사「12:32(일이삼이), 우리가 마...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70437",
+          "author": "학생생활상담센터",
+          "date": "2026-09-21",
+          "views": 13,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "대학생활",
+          "isPinned": false
+        },
+        {
+          "id": "70436",
+          "title": "2026년 글로컬대학사업 「AI 기반 입사지원 라이팅 특강&컨...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70436",
+          "author": "취업지원실",
+          "date": "2026-09-21",
+          "views": 12,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "1146",
+          "title": "[공지]남호정교수님 9월 21일~9월 23일 휴강 안내",
+          "url": "https://design.jnu.ac.kr/bbs/design/1007/1055809/artclView.do",
+          "author": "디자인학과",
+          "date": "2026-09-21",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "디자인학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1505",
+          "title": "[학부]2026 전남대학교 JOB FESTA 참여 희망 수요조사",
+          "url": "https://ecedu.jnu.ac.kr/bbs/ecedu/2303/1055815/artclView.do",
+          "author": "노이지",
+          "date": "2026-09-21",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "유아교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
         {
           "id": "53707",
           "title": "[한화손보] 신입사원 채용상담회(*채용직무: 영업관리, 상품개발, 경영지원 등)",
@@ -245,8 +354,8 @@
           "statusKind": "deadline"
         }
       ],
-      "fetchedAt": "2026-09-20T22:26:00.310Z",
-      "totalCount": 18,
+      "fetchedAt": "2026-09-21T00:30:52.453Z",
+      "totalCount": 25,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
