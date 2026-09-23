@@ -1,5 +1,26 @@
 [
   {
+    "checkedAt": "2026-09-23T19:03:17.497Z",
+    "notices": [
+      {
+        "id": "53917",
+        "title": "[한솔그룹] 신입사원 모집(10.11.(일)자정까지)",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram2.aspx?Mode=View&Seq=53917",
+        "author": "취업진로포털 추천채용",
+        "date": "2026-09-24",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 추천채용",
+        "category": "추천채용",
+        "isPinned": false,
+        "statusLabel": "D-17",
+        "statusKind": "deadline"
+      }
+    ],
+    "newNoticeCount": 1,
+    "totalNoticeCount": 8201
+  },
+  {
     "checkedAt": "2026-09-23T15:00:36.349Z",
     "notices": [
       {
@@ -15166,36 +15187,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7680
-  },
-  {
-    "checkedAt": "2026-09-05T09:02:43.686Z",
-    "notices": [
-      {
-        "id": "software-1",
-        "title": "(선착순 신청) 호남 ICT 성장 프로젝트 -ALL IN ONE- 챌린지 워크숍 신청 안내",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1054140/artclView.do",
-        "author": "오승하",
-        "date": "2026-09-04",
-        "views": 50,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      },
-      {
-        "id": "software-2",
-        "title": "(9/7, 10:00~16:30) 지역 내 혈액 확보를 위한 헌혈 행사 안내",
-        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1054108/artclView.do",
-        "author": "오승하",
-        "date": "2026-09-04",
-        "views": 39,
-        "sourceType": "department",
-        "sourceName": "소프트웨어공학과",
-        "category": "공지사항",
-        "isPinned": true
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8194
   }
 ]
