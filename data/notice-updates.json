@@ -1,5 +1,120 @@
 [
   {
+    "checkedAt": "2026-09-28T01:12:01.234Z",
+    "notices": [
+      {
+        "id": "chem-edu-1",
+        "title": "지역 내 혈액 확보를 위한 헌혈 행사",
+        "url": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/1056234/artclView.do",
+        "author": "화학교육과",
+        "date": "2026-09-28",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "화학교육과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "70493",
+        "title": "2026년 제2회 전남대학교 산학연협력단지조성지원사업 전담직원...",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70493",
+        "author": "산학연협력단지조성지원사업단",
+        "date": "2026-09-28",
+        "views": 20,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "채용공고",
+        "isPinned": false
+      },
+      {
+        "id": "70488",
+        "title": "2026년 글로컬대학사업 「AI, 역량검사부터 면접까지」",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=2&key=70488",
+        "author": "취업지원실",
+        "date": "2026-09-28",
+        "views": 20,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "취업정보",
+        "isPinned": false
+      },
+      {
+        "id": "70489",
+        "title": "제24회 2026 전남대학교 창업 아이템 경진대회",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70489",
+        "author": "실험실특화형창업선도대학사업단",
+        "date": "2026-09-28",
+        "views": 17,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "모집공고",
+        "isPinned": false
+      },
+      {
+        "id": "226",
+        "title": "[교내] 제24회 2026 전남대학교 창업 아이템 경진대회(~10/28수17:00)",
+        "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1056243/artclView.do",
+        "author": "명재민",
+        "date": "2026-09-28",
+        "views": 17,
+        "sourceType": "department",
+        "sourceName": "산업공학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "70490",
+        "title": "「현대자동차그룹 K-뉴딜 아카데미 HINT(HMG Incuba...",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70490",
+        "author": "취업지원실",
+        "date": "2026-09-28",
+        "views": 11,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "취업정보",
+        "isPinned": false
+      },
+      {
+        "id": "70492",
+        "title": "[HS효성그룹]2026년 하반기 신입공채(~10.11.(일)까지)",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70492",
+        "author": "취업지원실",
+        "date": "2026-09-28",
+        "views": 8,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "취업정보",
+        "isPinned": false
+      },
+      {
+        "id": "738",
+        "title": "2차년도 특성화지방대학(글로컬대학)사업 AX Career Journey 프로그램 운영을 위",
+        "url": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/1056236/artclView.do",
+        "author": "빅데이터융합학과",
+        "date": "2026-09-28",
+        "views": 8,
+        "sourceType": "department",
+        "sourceName": "빅데이터융합학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "70491",
+        "title": "[한미그룹]2026 하반기 공개채용(~10.18.(일)까지)",
+        "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70491",
+        "author": "취업지원실",
+        "date": "2026-09-28",
+        "views": 7,
+        "sourceType": "school",
+        "sourceName": "전남대학교 본부",
+        "category": "취업정보",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 9,
+    "totalNoticeCount": 6364
+  },
+  {
     "checkedAt": "2026-09-27T22:33:54.916Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -13020,11 +13135,5 @@
     ],
     "newNoticeCount": 3,
     "totalNoticeCount": 8192
-  },
-  {
-    "checkedAt": "2026-09-08T21:50:36.172Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7642
   }
 ]
