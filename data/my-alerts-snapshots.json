@@ -1,15 +1,40 @@
 {
-  "checkedAt": "2026-09-29T19:39:22.350Z",
+  "checkedAt": "2026-09-29T23:12:43.205Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-09-29T19:39:22.350Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "ko-program-intro-view-809",
+          "title": "2026 전대愛서52 독서 에세이 공모전",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/809",
+          "author": "교육혁신본부",
+          "date": "2026-09-30",
+          "views": 29,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-09-29T23:12:43.205Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-09-28T05:58:01.844Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "ko-program-intro-view-809",
+          "title": "2026 전대愛서52 독서 에세이 공모전",
+          "url": "https://grow.jnu.ac.kr/ko/program/intro/view/809",
+          "author": "교육혁신본부",
+          "date": "2026-09-30",
+          "views": 29,
+          "sourceType": "center",
+          "sourceName": "비교과 통합 플랫폼 성장마루",
+          "category": "Program",
+          "isPinned": false
+        },
         {
           "id": "3760",
           "title": "(모집연장) 내 손안의 직무체험 '인턴IN메타'<광고홍보마케팅>",
@@ -373,8 +398,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-09-29T19:39:22.350Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-09-29T23:12:43.205Z",
+      "totalCount": 28,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
