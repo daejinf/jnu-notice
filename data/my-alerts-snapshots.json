@@ -1,38 +1,266 @@
 {
-  "checkedAt": "2026-09-29T23:12:43.205Z",
+  "checkedAt": "2026-09-30T02:09:34.001Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
+        {
+          "id": "4117",
+          "title": "2026 AICOSS-UTAS 글로벌 학생프로그램 학생 선발 안내",
+          "url": "https://www.aicoss.kr/www/notice/view/4117?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-09-30",
+          "views": 98,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
         {
           "id": "ko-program-intro-view-809",
           "title": "2026 전대愛서52 독서 에세이 공모전",
           "url": "https://grow.jnu.ac.kr/ko/program/intro/view/809",
           "author": "교육혁신본부",
           "date": "2026-09-30",
-          "views": 29,
+          "views": 69,
           "sourceType": "center",
           "sourceName": "비교과 통합 플랫폼 성장마루",
           "category": "Program",
+          "isPinned": true
+        },
+        {
+          "id": "98539",
+          "title": "제31회 생활관 \"반디제\" 개최 안내",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=98539",
+          "author": "생활안내 제31회 생활관 \"반디제\" 개최 안내",
+          "date": "2026-09-30",
+          "views": 26,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "70521",
+          "title": "생성형AI, 실습까지 하루에 끝내기!!",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70521",
+          "author": "광주지역 여성과학기술센터",
+          "date": "2026-09-30",
+          "views": 9,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "모집공고",
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-09-29T23:12:43.205Z",
-      "totalCount": 1,
+      "fetchedAt": "2026-09-30T02:09:34.001Z",
+      "totalCount": 4,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-09-28T05:58:01.844Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
         {
+          "id": "4117",
+          "title": "2026 AICOSS-UTAS 글로벌 학생프로그램 학생 선발 안내",
+          "url": "https://www.aicoss.kr/www/notice/view/4117?bd=notice&page=1&cate=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90",
+          "author": "인공지능혁신융합대학사업단",
+          "date": "2026-09-30",
+          "views": 98,
+          "sourceType": "center",
+          "sourceName": "인공지능혁신융합대학사업단",
+          "category": "사업단 공지",
+          "isPinned": true
+        },
+        {
           "id": "ko-program-intro-view-809",
           "title": "2026 전대愛서52 독서 에세이 공모전",
           "url": "https://grow.jnu.ac.kr/ko/program/intro/view/809",
           "author": "교육혁신본부",
           "date": "2026-09-30",
-          "views": 29,
+          "views": 69,
           "sourceType": "center",
           "sourceName": "비교과 통합 플랫폼 성장마루",
           "category": "Program",
+          "isPinned": true
+        },
+        {
+          "id": "98539",
+          "title": "제31회 생활관 \"반디제\" 개최 안내",
+          "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=98539",
+          "author": "생활안내 제31회 생활관 \"반디제\" 개최 안내",
+          "date": "2026-09-30",
+          "views": 26,
+          "sourceType": "center",
+          "sourceName": "광주생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "774",
+          "title": "2026학년도 동계 베를린자유대학 해외파견 참가자 모집 안내",
+          "url": "https://sociology.jnu.ac.kr/bbs/sociology/1001/1056465/artclView.do",
+          "author": "김장승혁",
+          "date": "2026-09-30",
+          "views": 18,
+          "sourceType": "department",
+          "sourceName": "사회학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1131",
+          "title": "2026년 토목공학과 정독실(216호) 실원 모집",
+          "url": "https://civil.jnu.ac.kr/bbs/civil/1829/1056460/artclView.do",
+          "author": "토목공학과",
+          "date": "2026-09-30",
+          "views": 12,
+          "sourceType": "department",
+          "sourceName": "토목공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "883",
+          "title": "2026학년도 2학기 HAI-UP 학생 AI 역량 강화 프로그램 제3차 참여자 모집 안내",
+          "url": "https://jnula.jnu.ac.kr/bbs/jnula/655/1056468/artclView.do",
+          "author": "김보경",
+          "date": "2026-09-30",
+          "views": 11,
+          "sourceType": "department",
+          "sourceName": "조경학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "70522",
+          "title": "2026년 제8회 전남대학교 산학협력단 기간제 계약직(안전관리...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70522",
+          "author": "전남대학교산학협력단",
+          "date": "2026-09-30",
+          "views": 9,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "채용공고",
+          "isPinned": false
+        },
+        {
+          "id": "70521",
+          "title": "생성형AI, 실습까지 하루에 끝내기!!",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70521",
+          "author": "광주지역 여성과학기술센터",
+          "date": "2026-09-30",
+          "views": 9,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "모집공고",
+          "isPinned": false
+        },
+        {
+          "id": "2540",
+          "title": "[채용공고] 한국식품연구원 2026년 제2차 정규직 및 무기계약직 채용 공고",
+          "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1056466/artclView.do",
+          "author": "식품공학과",
+          "date": "2026-09-30",
+          "views": 8,
+          "sourceType": "department",
+          "sourceName": "식품공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2539",
+          "title": "2026년 국립대학육성사업 [농생대 학술 심포지엄] 추진에 따른 포스터 모집 안내",
+          "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1056464/artclView.do",
+          "author": "식품공학과",
+          "date": "2026-09-30",
+          "views": 4,
+          "sourceType": "department",
+          "sourceName": "식품공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "70523",
+          "title": "2026년도 진로설정을 위한 대외활동 가이드 특강",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70523",
+          "author": "취업지원실",
+          "date": "2026-09-30",
+          "views": 2,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "2385",
+          "title": "지역 내 혈액 확보를 위한 헌혈 행사 협조 요청 10.1",
+          "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1056458/artclView.do",
+          "author": "송혜종",
+          "date": "2026-09-30",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "국어교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1039",
+          "title": "2026년 국립대학육성사업 『학술 심포지엄』 추진에 따른 포스터 모집",
+          "url": "https://forestry.jnu.ac.kr/bbs/forestry/436/1056456/artclView.do",
+          "author": "이은도",
+          "date": "2026-09-30",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "산림자원학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "624",
+          "title": "[대학원]2026학년도 [모두의 대학원] 콘텐츠 공모전 안내",
+          "url": "https://rbe.jnu.ac.kr/bbs/rbe/447/1056461/artclView.do",
+          "author": "지역.바이오시스템공학과",
+          "date": "2026-09-30",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "지역·바이오시스템공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1512",
+          "title": "[공통]2026 제5회 무등산권 지오마라톤 모집 공고",
+          "url": "https://ecedu.jnu.ac.kr/bbs/ecedu/2303/1056469/artclView.do",
+          "author": "노이지",
+          "date": "2026-09-30",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "유아교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "3841",
+          "title": "[서울시립대학교] 2027학년도 서울시립대학교 디자인전문대학원 신입생 모집",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3841",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-09-30",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "3840",
+          "title": "[구로구] 「2026년 구로구 일자리박람회」",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3840",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-09-30",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
           "isPinned": false
         },
         {
@@ -398,8 +626,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-09-29T23:12:43.205Z",
-      "totalCount": 28,
+      "fetchedAt": "2026-09-30T02:09:34.001Z",
+      "totalCount": 44,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
