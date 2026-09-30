@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-09-30T20:19:06.336Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7568
+  },
+  {
     "checkedAt": "2026-09-30T15:18:36.373Z",
     "notices": [
       {
@@ -53,21 +59,9 @@
         "sourceName": "인문대학",
         "category": "공지사항",
         "isPinned": false
-      },
-      {
-        "id": "806",
-        "title": "2026년 2학기 인문대 취업동아리 H-Union 선발(예정)팀 공지 및 오리엔테이션 참 새글",
-        "url": "https://human.jnu.ac.kr/bbs/human/1819/1056488/artclView.do",
-        "author": "이선헌",
-        "date": "2026-09-30",
-        "views": 44,
-        "sourceType": "college",
-        "sourceName": "인문대학",
-        "category": "공지사항",
-        "isPinned": false
       }
     ],
-    "newNoticeCount": 5,
+    "newNoticeCount": 4,
     "totalNoticeCount": 7729
   },
   {
@@ -13724,11 +13718,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8203
-  },
-  {
-    "checkedAt": "2026-09-10T19:17:05.952Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 6480
   }
 ]
