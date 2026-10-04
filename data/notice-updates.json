@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-10-04T20:26:56.040Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7799
+  },
+  {
     "checkedAt": "2026-10-04T17:34:49.323Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -14290,24 +14296,5 @@
     ],
     "newNoticeCount": 1,
     "totalNoticeCount": 8200
-  },
-  {
-    "checkedAt": "2026-09-13T12:44:06.896Z",
-    "notices": [
-      {
-        "id": "414",
-        "title": "2026학년도 수강취소 안내",
-        "url": "https://mathedu.jnu.ac.kr/bbs/mathedu/2306/1054886/artclView.do",
-        "author": "수학교육과",
-        "date": "2026-09-13",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "수학교육과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 1,
-    "totalNoticeCount": 7592
   }
 ]
