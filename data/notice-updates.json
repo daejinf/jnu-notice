@@ -1,5 +1,60 @@
 [
   {
+    "checkedAt": "2026-10-13T17:08:49.436Z",
+    "notices": [
+      {
+        "id": "horticulture-1",
+        "title": "[대학] 2026년도 원예생명공학과 실험실배정 설명회 (10.26 월 15:00~)",
+        "url": "https://hort.jnu.ac.kr/bbs/hort/441/1057478/artclView.do",
+        "author": "대학",
+        "date": "2026-10-13",
+        "views": 13,
+        "sourceType": "department",
+        "sourceName": "원예생명공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "544",
+        "title": "[광주정보문화산업진흥원] GGDC(글로벌게임개발자컨퍼런스) 안내(10/22~23)",
+        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1057476/artclView.do",
+        "author": "관리자",
+        "date": "2026-10-13",
+        "views": 10,
+        "sourceType": "department",
+        "sourceName": "전자컴퓨터공학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "1829",
+        "title": "[광주정보문화산업진흥원] GGDC(글로벌게임개발자컨퍼런스) 안내(10/22~23)",
+        "url": "https://ce.jnu.ac.kr/bbs/ce/2114/1057477/artclView.do",
+        "author": "관리자",
+        "date": "2026-10-13",
+        "views": 7,
+        "sourceType": "department",
+        "sourceName": "컴퓨터정보통신공학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "979",
+        "title": "[국립장성숲체원] 대학생·청년 대상 진로취업캠프 운영 안내",
+        "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1057472/artclView.do",
+        "author": "바이오에너지공학과",
+        "date": "2026-10-13",
+        "views": 6,
+        "sourceType": "department",
+        "sourceName": "바이오에너지공학과",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 4,
+    "totalNoticeCount": 8202
+  },
+  {
     "checkedAt": "2026-10-13T09:22:36.045Z",
     "notices": [
       {
@@ -192,30 +247,6 @@
         "sourceType": "center",
         "sourceName": "국제협력과",
         "category": "기관 공지",
-        "isPinned": false
-      },
-      {
-        "id": "1057405",
-        "title": "[공지] 중간고사 시험기간 302호, 402호 강의실, 스튜던트라운지 룸 1,2 열람 공지",
-        "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/1057405/artclView.do",
-        "author": "AI융합대학",
-        "date": "2026-10-13",
-        "views": 44,
-        "sourceType": "college",
-        "sourceName": "AI융합대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "142",
-        "title": "[공지] 중간고사 시험기간 302호, 402호 강의실, 스튜던트라운지 룸 1,2 열람 공지 새글",
-        "url": "https://cvg.jnu.ac.kr/bbs/cvg/405/1057405/artclView.do",
-        "author": "AI융합대학",
-        "date": "2026-10-13",
-        "views": 44,
-        "sourceType": "college",
-        "sourceName": "AI융합대학",
-        "category": "공지사항",
         "isPinned": false
       },
       {
@@ -675,7 +706,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 56,
+    "newNoticeCount": 54,
     "totalNoticeCount": 8203
   },
   {
@@ -13379,11 +13410,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8202
-  },
-  {
-    "checkedAt": "2026-09-19T11:32:50.621Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7536
   }
 ]
