@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-10-17T08:49:07.638Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7624
+  },
+  {
     "checkedAt": "2026-10-17T04:20:57.818Z",
     "notices": [],
     "newNoticeCount": 0,
@@ -13726,40 +13732,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8201
-  },
-  {
-    "checkedAt": "2026-09-22T18:52:20.276Z",
-    "notices": [
-      {
-        "id": "3759",
-        "title": "내 손안의 직무체험 '인턴IN메타'<경영기획사무>",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3759",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-09-23",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      },
-      {
-        "id": "3760",
-        "title": "내 손안의 직무체험 '인턴IN메타'<광고홍보마케팅>",
-        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram.aspx?Mode=View&Seq=3760",
-        "author": "취업진로포털 취업프로그램",
-        "date": "2026-09-23",
-        "views": 0,
-        "sourceType": "center",
-        "sourceName": "취업진로포털 취업프로그램",
-        "category": "취업프로그램",
-        "isPinned": false,
-        "statusLabel": "D-DAY",
-        "statusKind": "deadline"
-      }
-    ],
-    "newNoticeCount": 2,
-    "totalNoticeCount": 8200
   }
 ]
