@@ -1,15 +1,76 @@
 {
-  "checkedAt": "2026-10-18T22:36:42.887Z",
+  "checkedAt": "2026-10-19T00:30:11.013Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-10-18T22:36:42.887Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "70705",
+          "title": "[포스코퓨처엠] 「2026 포스코퓨처엠배 Future's Le...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70705",
+          "author": "학생과",
+          "date": "2026-10-19",
+          "views": 16,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "모집공고",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-10-19T00:30:11.013Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-09-28T05:58:01.844Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "70706",
+          "title": "[거창군] 2026학년도 2학기 거창군 지역출신 대학생 등록금...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70706",
+          "author": "학생과",
+          "date": "2026-10-19",
+          "views": 20,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "장학안내",
+          "isPinned": false
+        },
+        {
+          "id": "70705",
+          "title": "[포스코퓨처엠] 「2026 포스코퓨처엠배 Future's Le...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70705",
+          "author": "학생과",
+          "date": "2026-10-19",
+          "views": 16,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "모집공고",
+          "isPinned": false
+        },
+        {
+          "id": "70707",
+          "title": "2026년 글로컬대학사업 「(특강) 현직자와의 AI 토크토크(...",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=1&key=70707",
+          "author": "취업지원실",
+          "date": "2026-10-19",
+          "views": 2,
+          "sourceType": "school",
+          "sourceName": "전남대학교 본부",
+          "category": "취업정보",
+          "isPinned": false
+        },
+        {
+          "id": "366",
+          "title": "2026학년도 2학기 교양 맛보기 특강 안내 새글",
+          "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1057768/artclView.do",
+          "author": "김영준",
+          "date": "2026-10-19",
+          "views": 0,
+          "sourceType": "college",
+          "sourceName": "예술대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
         {
           "id": "3808",
           "title": "[여수][11.26.(목)] 취업 역량 강화 브런치 특강(4회차-자기소개서 완성)",
@@ -367,8 +428,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-10-18T22:36:42.887Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-10-19T00:30:11.013Z",
+      "totalCount": 31,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
