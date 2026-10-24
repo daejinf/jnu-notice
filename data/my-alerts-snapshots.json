@@ -1,29 +1,15 @@
 {
-  "checkedAt": "2026-10-24T01:58:48.426Z",
+  "checkedAt": "2026-10-24T07:16:02.810Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [],
-      "fetchedAt": "2026-10-24T01:58:48.426Z",
+      "fetchedAt": "2026-10-24T07:16:02.810Z",
       "totalCount": 0,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-09-28T05:58:01.844Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
-        {
-          "id": "3808",
-          "title": "[#여수#][11.26.(목)] 취업 역량 강화 브런치 특강(4회차-자기소개서 완성)",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3808",
-          "author": "취업진로포털 취업프로그램",
-          "date": "2026-10-24",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 취업프로그램",
-          "category": "취업프로그램",
-          "isPinned": false,
-          "statusLabel": "D-27",
-          "statusKind": "deadline"
-        },
         {
           "id": "3734",
           "title": "[여수] 2026학년도 졸업생 진로잡담 브런치 특강 [16회 한국철도공사 공기업.전기분야 2026. 12. 1.(화) 11:30~13:30]",
@@ -50,6 +36,20 @@
           "category": "취업프로그램",
           "isPinned": false,
           "statusLabel": "D-34",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3779",
+          "title": "[추가모집_213명] 2026학년도 공기업·공공기관 및 대기업 취업 E-러닝 수강생 모집[해커스 강의 지원]",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3779",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-10-24",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-38",
           "statusKind": "deadline"
         },
         {
@@ -371,7 +371,7 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-10-24T01:58:48.426Z",
+      "fetchedAt": "2026-10-24T07:16:02.810Z",
       "totalCount": 27,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
