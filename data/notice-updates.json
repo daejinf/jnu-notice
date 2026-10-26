@@ -1,5 +1,456 @@
 [
   {
+    "checkedAt": "2026-10-26T11:33:03.121Z",
+    "notices": [
+      {
+        "id": "food-nutrition-1",
+        "title": "[앵커사업단] 전문가 초청 특강 안내",
+        "url": "https://fn.jnu.ac.kr/bbs/fn/2544/1058664/artclView.do",
+        "author": "식품영양학과",
+        "date": "2026-10-26",
+        "views": 17,
+        "sourceType": "department",
+        "sourceName": "식품영양과학부",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "388",
+        "title": "2026학년도 서울시립대학교 차세대통신혁신융합대학사업단 동계 계절학기 학점교류(~ 11.06.(금))",
+        "url": "https://jnu.nccoss.kr/www/notice/view/388?bd=notice&page=1",
+        "author": "차세대통신혁신융합대학사업단",
+        "date": "2026-10-26",
+        "views": 16,
+        "sourceType": "center",
+        "sourceName": "차세대통신혁신융합대학사업단",
+        "category": "사업단 공지",
+        "isPinned": true
+      },
+      {
+        "id": "software-1",
+        "title": "(10/30, 16:00~18:30)『2026 대학 혁신창업 포럼』 안내",
+        "url": "https://sw.jnu.ac.kr/bbs/sw/1038/1058819/artclView.do",
+        "author": "오승하",
+        "date": "2026-10-26",
+        "views": 3,
+        "sourceType": "department",
+        "sourceName": "소프트웨어공학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "applied-biology-1",
+        "title": "[대학원] 2026학년도 전기(2027년 2월 졸업예정) 석‧박사학위청구논문 심사 안내",
+        "url": "https://agribio.jnu.ac.kr/bbs/agribio/640/1058730/artclView.do",
+        "author": "lee3533@jnu.ac.kr",
+        "date": "2026-10-26",
+        "views": 2,
+        "sourceType": "department",
+        "sourceName": "응용생물학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "agricultural-econ-2",
+        "title": "『2026 농업생명과학대학 JOB FESTIVAL 채용박람회』 홍보 및 행사",
+        "url": "https://ae.jnu.ac.kr/bbs/ae/430/1058768/artclView.do",
+        "author": "농업경제학과",
+        "date": "2026-10-26",
+        "views": 2,
+        "sourceType": "department",
+        "sourceName": "농업경제학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "agricultural-econ-5",
+        "title": "2026 동계 GRC(Global Residential College) 선발 홍보",
+        "url": "https://ae.jnu.ac.kr/bbs/ae/430/1058761/artclView.do",
+        "author": "농업경제학과",
+        "date": "2026-10-26",
+        "views": 2,
+        "sourceType": "department",
+        "sourceName": "농업경제학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "agricultural-econ-1",
+        "title": "2027년 전남대학교 광주캠퍼스 학생회 선거에 따른 개인정보 현행화 협조 요청",
+        "url": "https://ae.jnu.ac.kr/bbs/ae/430/1058771/artclView.do",
+        "author": "농업경제학과",
+        "date": "2026-10-26",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "농업경제학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "history-edu-1",
+        "title": "졸업자 및 제적자 중 신입학 학생 학점인정 신청 안내",
+        "url": "https://hisedu.jnu.ac.kr/bbs/hisedu/2296/1058803/artclView.do",
+        "author": "역사교육과",
+        "date": "2026-10-26",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "역사교육과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "philosophy-1",
+        "title": "(장학) 2026학년도 2학기 도전장학생(비상) 선발 계획 안내",
+        "url": "http://philos.jnu.ac.kr/bbs/philos/2261/1058823/artclView.do",
+        "author": "철학과",
+        "date": "2026-10-26",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "철학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "agricultural-econ-3",
+        "title": "2026년 지역민과 함께하는 「전남대학교 농업생명과학대학 농업 페스티벌」 개최 안내",
+        "url": "https://ae.jnu.ac.kr/bbs/ae/430/1058766/artclView.do",
+        "author": "농업경제학과",
+        "date": "2026-10-26",
+        "views": 0,
+        "sourceType": "department",
+        "sourceName": "농업경제학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "agricultural-econ-4",
+        "title": "2026학년도 2학기 도전장학생(비상) 선발 계획 안내",
+        "url": "https://ae.jnu.ac.kr/bbs/ae/430/1058763/artclView.do",
+        "author": "농업경제학과",
+        "date": "2026-10-26",
+        "views": 0,
+        "sourceType": "department",
+        "sourceName": "농업경제학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "agricultural-econ-6",
+        "title": "2026 용봉학술제 학문후속세대 Meet-Up 안내",
+        "url": "https://ae.jnu.ac.kr/bbs/ae/430/1058760/artclView.do",
+        "author": "농업경제학과",
+        "date": "2026-10-26",
+        "views": 0,
+        "sourceType": "department",
+        "sourceName": "농업경제학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "agricultural-econ-7",
+        "title": "2026 용봉학술제(G-Fair) 프로그램 안내",
+        "url": "https://ae.jnu.ac.kr/bbs/ae/430/1058758/artclView.do",
+        "author": "농업경제학과",
+        "date": "2026-10-26",
+        "views": 0,
+        "sourceType": "department",
+        "sourceName": "농업경제학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "agricultural-econ-8",
+        "title": "2027년도 한국지도자육성장학재단 장학생 선발 안내",
+        "url": "https://ae.jnu.ac.kr/bbs/ae/430/1058754/artclView.do",
+        "author": "농업경제학과",
+        "date": "2026-10-26",
+        "views": 0,
+        "sourceType": "department",
+        "sourceName": "농업경제학과",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "98819",
+        "title": "2026학년도 동계 생활관 입주생 모집 공고 Notice of Winter Dormitory Resi...",
+        "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=98819",
+        "author": "입주신청 2026학년도 동계 생활관 입주생 모집 공고 Notice of Winter Dormitory Resi...",
+        "date": "2026-10-26",
+        "views": 56,
+        "sourceType": "center",
+        "sourceName": "광주생활관",
+        "category": "기관 공지",
+        "isPinned": false
+      },
+      {
+        "id": "387",
+        "title": "2026 동계 NCCOSS 경진대회 개최(신청: 10/26(월)~11/13(금) 15:00)",
+        "url": "https://jnu.nccoss.kr/www/notice/view/387?bd=notice&page=1",
+        "author": "차세대통신혁신융합대학사업단",
+        "date": "2026-10-26",
+        "views": 51,
+        "sourceType": "center",
+        "sourceName": "차세대통신혁신융합대학사업단",
+        "category": "사업단 공지",
+        "isPinned": false
+      },
+      {
+        "id": "902",
+        "title": "한국전력공사 & 한전KDN 기업 탐방",
+        "url": "https://physics.jnu.ac.kr/bbs/physics/2140/1058795/artclView.do",
+        "author": "물리학과",
+        "date": "2026-10-26",
+        "views": 29,
+        "sourceType": "department",
+        "sourceName": "물리학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "98816",
+        "title": "청아관 방역 소독 안내",
+        "url": "https://dormitory.jnu.ac.kr/Board/Board.aspx?BoardID=1&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=98816",
+        "author": "생활안내 청아관 방역 소독 안내",
+        "date": "2026-10-26",
+        "views": 28,
+        "sourceType": "center",
+        "sourceName": "광주생활관",
+        "category": "기관 공지",
+        "isPinned": false
+      },
+      {
+        "id": "2407",
+        "title": "졸업자 및 제적자 중 신입학 학생 학점 인정 신청 안내",
+        "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1058743/artclView.do",
+        "author": "관리자",
+        "date": "2026-10-26",
+        "views": 25,
+        "sourceType": "department",
+        "sourceName": "신소재공학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "3384",
+        "title": "졸업자 및 제적자 중 신입학 학생 학점 인정 신청 안내",
+        "url": "https://elec.jnu.ac.kr/bbs/elec/1204/1058719/artclView.do",
+        "author": "관리자",
+        "date": "2026-10-26",
+        "views": 23,
+        "sourceType": "department",
+        "sourceName": "전기공학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "27876",
+        "title": "[Notice Study Abroad-단기파견] 2026학년도 동계 Medical English 프로그램 추가 합격자 공고",
+        "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=3&Mode=View&PageNum=1&Key=&Value=&Cate=%EB%8B%A8%EA%B8%B0%ED%8C%8C%EA%B2%AC&Seq=27876",
+        "author": "국제협력과",
+        "date": "2026-10-26",
+        "views": 21,
+        "sourceType": "center",
+        "sourceName": "국제협력과",
+        "category": "기관 공지",
+        "isPinned": false
+      },
+      {
+        "id": "2408",
+        "title": "2027년 전남대학교 광주캠퍼스 학생회 선거에 따른 개인정보 현행화 안내",
+        "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1058780/artclView.do",
+        "author": "관리자",
+        "date": "2026-10-26",
+        "views": 16,
+        "sourceType": "department",
+        "sourceName": "신소재공학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "2733",
+        "title": "졸업자 및 제적자 중 신입학 학생 학점 인정 신청 안내",
+        "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1058739/artclView.do",
+        "author": "영어교육과",
+        "date": "2026-10-26",
+        "views": 14,
+        "sourceType": "department",
+        "sourceName": "영어교육과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "2176",
+        "title": "[홍보] 2027 시립문래청소년센터 동계 해외봉사단 6기 모집 (인도네시아편)",
+        "url": "https://fn.jnu.ac.kr/bbs/fn/1139/1058797/artclView.do",
+        "author": "식품영양과학부",
+        "date": "2026-10-26",
+        "views": 13,
+        "sourceType": "department",
+        "sourceName": "식품영양과학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "2563",
+        "title": "2027년 전남대학교 광주캠퍼스 학생회 선거에 따른 개인정보 현행화 협조 요청",
+        "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1058726/artclView.do",
+        "author": "식품공학과",
+        "date": "2026-10-26",
+        "views": 12,
+        "sourceType": "department",
+        "sourceName": "식품공학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "1049",
+        "title": "[대학원]「2026년 전남대학교 노벨 위크 견학 프로그램」 참가자 모집 공고 안내",
+        "url": "https://forestry.jnu.ac.kr/bbs/forestry/436/1058814/artclView.do",
+        "author": "이은도",
+        "date": "2026-10-26",
+        "views": 11,
+        "sourceType": "department",
+        "sourceName": "산림자원학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "1058798",
+        "title": "[상담] 예술대학 재학생 및 졸업생 진로·취업 상담",
+        "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1058798/artclView.do",
+        "author": "김영준",
+        "date": "2026-10-26",
+        "views": 6,
+        "sourceType": "college",
+        "sourceName": "예술대학",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "387",
+        "title": "[상담] 예술대학 재학생 및 졸업생 진로·취업 상담 새글",
+        "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1058798/artclView.do",
+        "author": "김영준",
+        "date": "2026-10-26",
+        "views": 6,
+        "sourceType": "college",
+        "sourceName": "예술대학",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "564",
+        "title": "(학부, 교육대학원) 지역 내 혈액 확보를 위한 헌혈 행사 안내",
+        "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1058721/artclView.do",
+        "author": "음악교육과",
+        "date": "2026-10-26",
+        "views": 5,
+        "sourceType": "department",
+        "sourceName": "음악교육과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "6140",
+        "title": "2027년 전남대학교 광주캠퍼스 학생회 선거에 따른 개인정보 현행화 협조 요청",
+        "url": "https://archi.jnu.ac.kr/bbs/archi/1035/1058809/artclView.do",
+        "author": "건축학부",
+        "date": "2026-10-26",
+        "views": 4,
+        "sourceType": "department",
+        "sourceName": "건축학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "2397",
+        "title": "[안내]2026년도 하반기 전남광주통합특별시교육청(광주) 중등학교 기간제교사 인력풀 등록",
+        "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1058811/artclView.do",
+        "author": "송혜종",
+        "date": "2026-10-26",
+        "views": 3,
+        "sourceType": "department",
+        "sourceName": "국어교육과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "2398",
+        "title": "2026학년도 동계 계절학기 타 대학교(부산대) 수학 추천 안내(추천기한 연장)",
+        "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1058812/artclView.do",
+        "author": "송혜종",
+        "date": "2026-10-26",
+        "views": 2,
+        "sourceType": "department",
+        "sourceName": "국어교육과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "1251",
+        "title": "『2026 대학 혁신창업 포럼』 안내 새글",
+        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1058815/artclView.do",
+        "author": "김은자",
+        "date": "2026-10-26",
+        "views": 1,
+        "sourceType": "college",
+        "sourceName": "수의과대학",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "2396",
+        "title": "2026 동계 GRC(Global Residential College) 선발 안내",
+        "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1058810/artclView.do",
+        "author": "송혜종",
+        "date": "2026-10-26",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "국어교육과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "1251",
+        "title": "『2026 대학 혁신창업 포럼』 안내",
+        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1058815/artclView.do",
+        "author": "김은자",
+        "date": "2026-10-26",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "수의예과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "1251",
+        "title": "『2026 대학 혁신창업 포럼』 안내",
+        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1058815/artclView.do",
+        "author": "김은자",
+        "date": "2026-10-26",
+        "views": 1,
+        "sourceType": "department",
+        "sourceName": "수의학과",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "3945",
+        "title": "[구미대학교] 2026년 구미대학교 행정직원 채용 공고",
+        "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3945",
+        "author": "취업진로포털 공지사항",
+        "date": "2026-10-26",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 공지사항",
+        "category": "기관 공지",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 37,
+    "totalNoticeCount": 8113
+  },
+  {
     "checkedAt": "2026-10-26T05:18:06.342Z",
     "notices": [
       {
@@ -315,18 +766,6 @@
         "isPinned": false
       },
       {
-        "id": "1",
-        "title": "N[광주전남 공동교육혁신센터] 2026학년도 아이디어 경진대회 개최",
-        "url": "https://ile.jnu.ac.kr/ko/community/notice/view/11165?p=1",
-        "author": "강미영",
-        "date": "2026-10-26",
-        "views": 5,
-        "sourceType": "center",
-        "sourceName": "교육혁신본부",
-        "category": "기관 공지",
-        "isPinned": false
-      },
-      {
         "id": "354",
         "title": "졸업자 및 제적자 중 신입학 학생 학점 인정 신청 안내",
         "url": "https://geology.jnu.ac.kr/bbs/geology/1519/1058615/artclView.do",
@@ -347,30 +786,6 @@
         "views": 3,
         "sourceType": "college",
         "sourceName": "수의과대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1250",
-        "title": "2026 전남대학교 수의과대학 반려동물한마당 행사 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1058668/artclView.do",
-        "author": "이지원",
-        "date": "2026-10-26",
-        "views": 3,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1250",
-        "title": "2026 전남대학교 수의과대학 반려동물한마당 행사 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1058668/artclView.do",
-        "author": "이지원",
-        "date": "2026-10-26",
-        "views": 3,
-        "sourceType": "department",
-        "sourceName": "수의학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -497,7 +912,7 @@
         "statusKind": "deadline"
       }
     ],
-    "newNoticeCount": 41,
+    "newNoticeCount": 38,
     "totalNoticeCount": 8110
   },
   {
@@ -13970,11 +14385,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7685
-  },
-  {
-    "checkedAt": "2026-10-03T14:55:35.997Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7510
   }
 ]
