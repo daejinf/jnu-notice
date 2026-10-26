@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-10-26T17:39:50.387Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8112
+  },
+  {
     "checkedAt": "2026-10-26T11:33:03.121Z",
     "notices": [
       {
@@ -327,18 +333,6 @@
         "isPinned": false
       },
       {
-        "id": "387",
-        "title": "[상담] 예술대학 재학생 및 졸업생 진로·취업 상담 새글",
-        "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1058798/artclView.do",
-        "author": "김영준",
-        "date": "2026-10-26",
-        "views": 6,
-        "sourceType": "college",
-        "sourceName": "예술대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "564",
         "title": "(학부, 교육대학원) 지역 내 혈액 확보를 위한 헌혈 행사 안내",
         "url": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/1058721/artclView.do",
@@ -411,30 +405,6 @@
         "isPinned": false
       },
       {
-        "id": "1251",
-        "title": "『2026 대학 혁신창업 포럼』 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1058815/artclView.do",
-        "author": "김은자",
-        "date": "2026-10-26",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1251",
-        "title": "『2026 대학 혁신창업 포럼』 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1058815/artclView.do",
-        "author": "김은자",
-        "date": "2026-10-26",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "수의학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "3945",
         "title": "[구미대학교] 2026년 구미대학교 행정직원 채용 공고",
         "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3945",
@@ -447,7 +417,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 37,
+    "newNoticeCount": 34,
     "totalNoticeCount": 8113
   },
   {
@@ -14379,11 +14349,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 5176
-  },
-  {
-    "checkedAt": "2026-10-03T18:41:24.058Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7685
   }
 ]
