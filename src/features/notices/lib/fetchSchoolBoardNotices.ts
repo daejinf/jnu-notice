@@ -1,6 +1,7 @@
 ﻿import { load } from "cheerio";
 import type { Notice } from "@/types/notice";
 import type { SchoolBoardCategory } from "@/features/notices/config/schoolBoardCategories";
+import { mapWithConcurrency } from "@/features/notices/lib/concurrency";
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
 
 const SCHOOL_BOARD_BASE_URL =
@@ -173,9 +174,14 @@ export async function fetchMultipleSchoolBoardNotices(
   categories: SchoolBoardCategory[],
   options: FetchSchoolBoardNoticesOptions = {},
 ) {
-  const noticeGroups = await Promise.all(
-    categories.map((category) => fetchSchoolBoardNotices(category, options)),
-  );
+  const noticeGroups = await mapWithConcurrency(categories, 4, async (category) => {
+    try {
+      return await fetchSchoolBoardNotices(category, options);
+    } catch (error) {
+      console.error(`[notice-fetch] ${category.sourceName}`, error);
+      return [] as Notice[];
+    }
+  });
 
   return sortNoticesByDate(dedupeNotices(noticeGroups.flat()));
 }
