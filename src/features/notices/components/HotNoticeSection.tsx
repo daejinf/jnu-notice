@@ -5,10 +5,8 @@ import {
   AppEmptyState,
   AppHeroSection,
   AppPageContainer,
-  AppPanel,
-  AppSelectorCard,
-  AppSelectorSection,
 } from "@/components/ui/AppSurfaces";
+import { NoticeDetailReader, NoticeRow, NoticeSplitShell, useResolvedNoticeTitles, useScopedNoticeState } from "@/features/notices/components/NoticeExplorer";
 import { selectableCenters, selectableCenterKeys } from "@/data/selectableCenters";
 import { selectableColleges, selectableCollegeKeys } from "@/data/selectableColleges";
 import { selectableDepartments, selectableDepartmentKeys } from "@/data/selectableDepartments";
@@ -51,6 +49,7 @@ const HOT_PERIOD_OPTIONS: { key: HotNoticePeriodKey; label: string; description:
 const DEFAULT_HOT_PERIOD: HotNoticePeriodKey = "7";
 const DAY_MS = 24 * 60 * 60 * 1000;
 const HOT_PAGE_SIZE = 30;
+const EMPTY_SELECTION: string[] = [];
 
 type NoticeApiResponse = {
   notices: Notice[];
@@ -164,14 +163,14 @@ function buildHotNotices(notices: Notice[], periodKey: HotNoticePeriodKey = DEFA
 
 function HotNoticeCardList({ notices, rankOffset = 0 }: { notices: Notice[]; rankOffset?: number }) {
   return (
-    <div className="mt-5 grid min-w-0 gap-4">
+    <div className="mt-2 min-w-0 divide-y divide-slate-100">
       {notices.map((notice, index) => (
         <article
-          key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}`}
-          className="min-w-0 rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4 transition hover:border-slate-300 hover:bg-white hover:shadow-[0_12px_28px_rgba(15,23,42,0.06)] sm:p-5"
+          key={`${notice.sourceType}-${notice.sourceName}-${notice.id}-${notice.date}-${rankOffset + index}`}
+          className="min-w-0 px-1 py-4 transition hover:bg-slate-50 sm:px-3"
         >
           <div className="flex min-w-0 flex-wrap items-center gap-2">
-            <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-bold text-rose-700">
+            <span className="min-w-8 text-center text-lg font-black text-rose-600">
               #{rankOffset + index + 1}
             </span>
             <span
@@ -191,7 +190,7 @@ function HotNoticeCardList({ notices, rankOffset = 0 }: { notices: Notice[]; ran
             href={notice.url}
             target="_blank"
             rel="noreferrer"
-            className="mt-4 block max-w-full whitespace-normal break-words pr-0 text-[17px] font-bold leading-7 tracking-tight text-slate-950 [overflow-wrap:anywhere] hover:text-[#1B64DA] sm:pr-2 sm:text-lg"
+            className="mt-3 line-clamp-3 max-w-full break-words pr-0 text-[16px] font-bold leading-7 tracking-tight text-slate-950 hover:text-blue-700 sm:pr-2"
           >
             {notice.title}
           </a>
@@ -263,30 +262,39 @@ function HotPagination({
 
 export function HotNoticeSection({
   storageScope,
+  authenticated,
   globalHotRankings,
 }: {
   storageScope: string;
+  authenticated: boolean;
   globalHotRankings: HotNoticeRankings;
 }) {
   const schoolSelection = useSelectedCategories(selectableSchoolCategoryKeys, {
     storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: selectableSchoolCategoryKeys,
   });
   const collegeSelection = useSelectedCategories(selectableCollegeKeys, {
     storageKey: buildScopedStorageKey(COLLEGE_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
   });
   const departmentSelection = useSelectedCategories(selectableDepartmentKeys, {
     storageKey: buildScopedStorageKey(DEPARTMENT_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
   });
   const centerSelection = useSelectedCategories(selectableCenterKeys, {
     storageKey: buildScopedStorageKey(CENTER_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
   });
 
   const [notices, setNotices] = useState<Notice[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [viewMode, setViewMode] = useState<HotViewMode>("personal");
+  const [viewMode, setViewMode] = useState<HotViewMode>(authenticated ? "personal" : "global");
   const [globalPeriod, setGlobalPeriod] = useState<HotNoticePeriodKey>(DEFAULT_HOT_PERIOD);
   const [hotPage, setHotPage] = useState(1);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [mobileDetailOpen, setMobileDetailOpen] = useState(false);
+  const noticeState = useScopedNoticeState({ authenticated, storageScope });
 
   const isReady =
     schoolSelection.isReady &&
@@ -354,7 +362,10 @@ export function HotNoticeSection({
   ]);
 
   const personalHotNotices = useMemo(() => buildHotNotices(notices), [notices]);
-  const selectedGlobalHotNotices = globalHotRankings[globalPeriod] ?? [];
+  const selectedGlobalHotNotices = useMemo(
+    () => dedupeHotNotices(globalHotRankings[globalPeriod] ?? []),
+    [globalHotRankings, globalPeriod],
+  );
   const selectedGlobalPeriodLabel =
     HOT_PERIOD_OPTIONS.find((option) => option.key === globalPeriod)?.label ?? HOT_PERIOD_OPTIONS[1].label;
   const activeHotNotices = viewMode === "personal" ? personalHotNotices : selectedGlobalHotNotices;
@@ -362,10 +373,19 @@ export function HotNoticeSection({
   const currentHotPage = Math.min(hotPage, totalHotPages);
   const currentHotPageStart = (currentHotPage - 1) * HOT_PAGE_SIZE;
   const pagedHotNotices = activeHotNotices.slice(currentHotPageStart, currentHotPageStart + HOT_PAGE_SIZE);
+  const getDisplayTitle = useResolvedNoticeTitles(pagedHotNotices);
+  const selectedNotice = pagedHotNotices.find((notice) => getNoticeClientId(notice) === selectedId) ?? null;
 
   useEffect(() => {
     setHotPage(1);
   }, [globalPeriod, personalHotNotices.length, selectedGlobalHotNotices.length, viewMode]);
+
+  useEffect(() => {
+    if (!pagedHotNotices.length) { setSelectedId(null); return; }
+    if (!selectedId || !pagedHotNotices.some((notice) => getNoticeClientId(notice) === selectedId)) {
+      setSelectedId(getNoticeClientId(pagedHotNotices[0]));
+    }
+  }, [pagedHotNotices, selectedId]);
 
   const handleHotPageChange = (page: number) => {
     setHotPage(Math.min(Math.max(page, 1), totalHotPages));
@@ -387,95 +407,30 @@ export function HotNoticeSection({
           </section>
         ) : null}
 
-        <AppSelectorSection>
-          <AppSelectorCard
-            active={viewMode === "personal"}
-            label="맞춤"
-            title="내 랭킹"
-            description="켜둔 소스 안에서만 추려 보여줍니다."
-            badge={`${formatViews(personalHotNotices.length)}건`}
-            onClick={() => setViewMode("personal")}
-          />
-          <AppSelectorCard
-            active={viewMode === "global"}
-            label="전체"
-            title="전체 랭킹"
-            description="관리 대상 전체 소스를 묶어 계산합니다."
-            badge={`${formatViews(selectedGlobalHotNotices.length)}건`}
-            onClick={() => setViewMode("global")}
-          />
-        </AppSelectorSection>
+        {isLoading && viewMode === "personal" ? <AppEmptyState>랭킹을 불러오는 중입니다.</AppEmptyState> : null}
+        {!isLoading && pagedHotNotices.length === 0 ? <AppEmptyState>{viewMode === "personal" ? "켜둔 소스 기준으로 아직 눈에 띄는 공지가 없습니다." : "전체 랭킹을 준비 중입니다."}</AppEmptyState> : null}
 
-        {viewMode === "personal" ? (
-          isLoading ? (
-            <AppEmptyState>랭킹을 불러오는 중입니다.</AppEmptyState>
-          ) : personalHotNotices.length === 0 ? (
-            <AppEmptyState>켜둔 소스 기준으로 아직 눈에 띄는 공지가 없습니다.</AppEmptyState>
-          ) : (
-            <AppPanel className="p-5 sm:rounded-[36px] sm:p-6">
-              <div className="flex flex-col gap-2 border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <h2 className="text-xl font-bold tracking-tight text-slate-950">내 랭킹</h2>
-                  <p className="mt-1 text-sm text-slate-500">최근 7일 안에서 켜둔 소스만 다시 추렸습니다.</p>
-                </div>
-                <span className="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700">
-                  {`${formatViews(personalHotNotices.length)}건`}
-                </span>
+        {pagedHotNotices.length ? <NoticeSplitShell
+          mobileDetailOpen={mobileDetailOpen}
+          list={<>
+            <div className="border-b border-slate-200 p-4 sm:p-5">
+              <div className="flex gap-1 rounded-xl bg-slate-100 p-1">
+                <button type="button" onClick={() => setViewMode("personal")} className={`flex-1 rounded-lg px-3 py-2 text-xs font-semibold transition ${viewMode === "personal" ? "bg-white text-slate-950 shadow-sm" : "text-slate-500"}`}>내 랭킹 · {formatViews(personalHotNotices.length)}</button>
+                <button type="button" onClick={() => setViewMode("global")} className={`flex-1 rounded-lg px-3 py-2 text-xs font-semibold transition ${viewMode === "global" ? "bg-white text-slate-950 shadow-sm" : "text-slate-500"}`}>전체 랭킹 · {formatViews(selectedGlobalHotNotices.length)}</button>
               </div>
-              <HotNoticeCardList notices={pagedHotNotices} rankOffset={currentHotPageStart} />
-              <HotPagination
-                currentPage={currentHotPage}
-                totalCount={personalHotNotices.length}
-                totalPages={totalHotPages}
-                onPageChange={handleHotPageChange}
-              />
-            </AppPanel>
-          )
-        ) : selectedGlobalHotNotices.length === 0 ? (
-          <AppEmptyState>전체 랭킹을 준비 중입니다.</AppEmptyState>
-        ) : (
-          <AppPanel className="p-5 sm:rounded-[36px] sm:p-6">
-            <div className="flex flex-col gap-3 border-b border-slate-100 pb-4">
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <h2 className="text-xl font-bold tracking-tight text-slate-950">전체 랭킹</h2>
-                  <p className="mt-1 text-sm text-slate-500">
-                    {`${selectedGlobalPeriodLabel} 기준으로 전체 공지를 다시 정렬했습니다.`}
-                  </p>
-                </div>
-                <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600">
-                  {`${formatViews(selectedGlobalHotNotices.length)}건`}
-                </span>
-              </div>
-
-              <div className="grid gap-2 sm:grid-cols-4">
-                {HOT_PERIOD_OPTIONS.map((option) => (
-                  <button
-                    key={option.key}
-                    type="button"
-                    onClick={() => setGlobalPeriod(option.key)}
-                    className={`rounded-[24px] border px-4 py-4 text-left transition ${
-                      globalPeriod === option.key
-                        ? "border-[#1B64DA] bg-[#F5F9FF] shadow-[0_10px_20px_rgba(27,100,218,0.08)]"
-                        : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
-                    }`}
-                  >
-                    <div className="text-lg font-bold tracking-tight text-slate-950">{option.label}</div>
-                    <p className="mt-1 text-sm text-slate-500">{option.description}</p>
-                  </button>
-                ))}
-              </div>
+              {viewMode === "global" ? <div className="mt-3 flex flex-wrap gap-2">{HOT_PERIOD_OPTIONS.map((option) => <button key={option.key} type="button" onClick={() => setGlobalPeriod(option.key)} className={`rounded-lg border px-3 py-2 text-xs font-semibold transition ${globalPeriod === option.key ? "border-slate-900 bg-slate-900 text-white" : "border-slate-200 bg-white text-slate-600"}`}>{option.label}</button>)}</div> : <p className="mt-3 text-xs text-slate-500">최근 7일 · 관심 소스 기준</p>}
+              <div className="mt-3 flex items-center justify-between text-xs text-slate-500"><span>{viewMode === "global" ? selectedGlobalPeriodLabel : "맞춤 순위"}</span><span>{formatViews(activeHotNotices.length)}건</span></div>
             </div>
-
-            <HotNoticeCardList notices={pagedHotNotices} rankOffset={currentHotPageStart} />
-            <HotPagination
-              currentPage={currentHotPage}
-              totalCount={selectedGlobalHotNotices.length}
-              totalPages={totalHotPages}
-              onPageChange={handleHotPageChange}
-            />
-          </AppPanel>
-        )}
+            <div className="max-h-[calc(100vh-380px)] min-h-[500px] overflow-y-auto">
+              {pagedHotNotices.map((notice, index) => {
+                const id = getNoticeClientId(notice);
+                return <NoticeRow key={id} notice={notice} title={getDisplayTitle(notice)} rank={currentHotPageStart + index + 1} selected={id === selectedId} read={noticeState.readSet.has(id)} bookmarked={noticeState.bookmarkSet.has(id)} onSelect={() => { setSelectedId(id); setMobileDetailOpen(true); noticeState.markRead(notice); }} onToggleBookmark={() => noticeState.toggleBookmark(notice)} />;
+              })}
+            </div>
+            {totalHotPages > 1 ? <div className="flex items-center justify-between border-t border-slate-200 px-4 py-3"><button type="button" disabled={currentHotPage === 1} onClick={() => handleHotPageChange(currentHotPage - 1)} className="rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 disabled:opacity-30">이전</button><span className="text-xs font-semibold text-slate-500">{currentHotPage} / {totalHotPages}</span><button type="button" disabled={currentHotPage === totalHotPages} onClick={() => handleHotPageChange(currentHotPage + 1)} className="rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 disabled:opacity-30">다음</button></div> : null}
+          </>}
+          detail={<NoticeDetailReader notice={selectedNotice} title={selectedNotice ? getDisplayTitle(selectedNotice) : undefined} bookmarked={selectedNotice ? noticeState.bookmarkSet.has(getNoticeClientId(selectedNotice)) : false} onToggleBookmark={selectedNotice ? () => noticeState.toggleBookmark(selectedNotice) : undefined} onClose={() => setMobileDetailOpen(false)} />}
+        /> : null}
       </AppPageContainer>
     </main>
   );

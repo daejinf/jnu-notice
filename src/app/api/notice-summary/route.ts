@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/auth";
 import { generateNoticeSummary } from "@/features/notices/server/noticeSummary";
+import { isAllowedNoticeUrl } from "@/features/notices/server/noticeUrlPolicy";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -14,12 +14,6 @@ type NoticeSummaryRequestBody = {
 };
 
 export async function POST(request: Request) {
-  const session = await auth();
-
-  if (!session) {
-    return NextResponse.json({ summary: null, error: "로그인이 필요합니다." }, { status: 401 });
-  }
-
   let body: NoticeSummaryRequestBody;
 
   try {
@@ -36,6 +30,13 @@ export async function POST(request: Request) {
   if (!url || !title || !sourceName) {
     return NextResponse.json(
       { summary: null, error: "요약에 필요한 공지 정보가 부족합니다." },
+      { status: 400 },
+    );
+  }
+
+  if (!isAllowedNoticeUrl(url)) {
+    return NextResponse.json(
+      { summary: null, error: "등록된 전남대 공지 주소만 요약할 수 있습니다." },
       { status: 400 },
     );
   }

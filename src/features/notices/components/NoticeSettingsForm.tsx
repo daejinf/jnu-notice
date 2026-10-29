@@ -18,6 +18,9 @@ import {
 } from "@/features/notices/constants/storageKeys";
 import { useSelectedCategories } from "@/features/notices/hooks/useSelectedCategories";
 import type { NoticePreferences } from "@/types/notice";
+import { mergeGuestStateIntoAccount, readStoredArray } from "@/features/notices/utils/guestState";
+
+const EMPTY_SELECTION: string[] = [];
 
 const PROJECT_CENTER_KEYS = [
   "greenbio",
@@ -78,6 +81,8 @@ type SelectionItem = {
   subtitle: string;
 };
 
+type SettingsGroup = "school" | "college" | "department" | "institution" | "project";
+
 function StatusChip({
   children,
   tone = "neutral",
@@ -100,9 +105,9 @@ function StatusChip({
 function SelectionSection({
   title,
   description,
-  sectionTone,
-  accentClass,
-  buttonClass,
+  sectionTone: _sectionTone,
+  accentClass: _accentClass,
+  buttonClass: _buttonClass,
   items,
   selectedKeys,
   onToggle,
@@ -120,8 +125,11 @@ function SelectionSection({
   onSelectAll: () => void;
   onClear: () => void;
 }) {
+  const [searchKeyword, setSearchKeyword] = useState("");
+  const filteredItems = items.filter((item) => `${item.title} ${item.subtitle}`.toLowerCase().includes(searchKeyword.trim().toLowerCase()));
+
   return (
-    <AppPanel className={`p-5 sm:rounded-[32px] sm:p-6 ${sectionTone}`}>
+    <AppPanel className="p-5 sm:p-6">
       <div className="flex flex-col gap-4 border-b border-black/5 pb-4">
         <div>
           <h2 className="text-xl font-bold tracking-tight text-slate-950">{title}</h2>
@@ -131,29 +139,34 @@ function SelectionSection({
           <button
             type="button"
             onClick={onSelectAll}
-            className={`rounded-full px-4 py-2 text-sm font-semibold text-white transition ${buttonClass}`}
+            className="rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
           >
             {TEXT.selectAll}
           </button>
           <button
             type="button"
             onClick={onClear}
-            className="rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+            className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
           >
             {TEXT.clear}
           </button>
         </div>
       </div>
 
+      <label className="mt-4 block">
+        <span className="sr-only">{title} 검색</span>
+        <input value={searchKeyword} onChange={(event) => setSearchKeyword(event.target.value)} type="search" placeholder={`${title} 검색`} className="h-11 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100" />
+      </label>
+
       <div className="mt-4 grid gap-3">
-        {items.map((item) => {
+        {filteredItems.map((item) => {
           const checked = selectedKeys.includes(item.key);
 
           return (
             <label
               key={item.key}
-              className={`flex cursor-pointer items-start gap-3 rounded-[24px] border px-4 py-4 transition shadow-[0_6px_16px_rgba(15,23,42,0.03)] ${
-                checked ? accentClass : "border-slate-200 bg-white/88 hover:bg-white"
+              className={`flex cursor-pointer items-start gap-3 rounded-xl border px-4 py-3 transition ${
+                checked ? "border-blue-200 bg-blue-50" : "border-slate-200 bg-white hover:bg-slate-50"
               }`}
             >
               <input
@@ -213,7 +226,7 @@ function DepartmentSelectionSection({
   }, [searchKeyword]);
 
   return (
-    <AppPanel className="p-5 sm:rounded-[32px] sm:p-6">
+    <AppPanel className="p-5 sm:p-6">
       <div className="flex flex-col gap-4 border-b border-violet-200/70 pb-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <h2 className="text-xl font-bold tracking-tight text-slate-950">{TEXT.departmentTitle}</h2>
@@ -244,13 +257,13 @@ function DepartmentSelectionSection({
           value={searchKeyword}
           onChange={(event) => setSearchKeyword(event.target.value)}
           placeholder={TEXT.departmentSearchPlaceholder}
-          className="mt-2 h-13 w-full rounded-[20px] border border-slate-200 bg-white px-4 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-[#3182F6]"
+          className="mt-2 h-13 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-[#3182F6]"
         />
       </div>
 
       <div className="mt-5 grid gap-4 xl:grid-cols-2">
         {filteredGroups.map((group) => (
-          <div key={group.college} className="rounded-[28px] border border-slate-200 bg-[#FBFCFD] p-4">
+          <div key={group.college} className="rounded-xl border border-slate-200 bg-[#FBFCFD] p-4">
             <div className="border-b border-violet-100 pb-3">
               <p className="text-base font-bold text-slate-950">{group.college}</p>
               <p className="mt-1 text-xs font-medium text-slate-500">
@@ -296,23 +309,28 @@ function DepartmentSelectionSection({
   );
 }
 
-export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
+export function NoticeSettingsForm({ storageScope, authenticated }: { storageScope: string; authenticated: boolean }) {
   const schoolSelection = useSelectedCategories(selectableSchoolCategoryKeys, {
     storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: selectableSchoolCategoryKeys,
   });
   const collegeSelection = useSelectedCategories(selectableCollegeKeys, {
     storageKey: buildScopedStorageKey(COLLEGE_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
   });
   const departmentSelection = useSelectedCategories(selectableDepartmentKeys, {
     storageKey: buildScopedStorageKey(DEPARTMENT_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
   });
   const centerSelection = useSelectedCategories(selectableCenterKeys, {
     storageKey: buildScopedStorageKey(CENTER_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
   });
 
   const [isHydratingServer, setIsHydratingServer] = useState(true);
   const [syncStatus, setSyncStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [syncMessage, setSyncMessage] = useState<string | null>(null);
+  const [activeGroup, setActiveGroup] = useState<SettingsGroup>("school");
   const hasFetchedServerPreferences = useRef(false);
 
   const isReady =
@@ -324,6 +342,21 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
   useEffect(() => {
     if (!isReady || hasFetchedServerPreferences.current) {
       return;
+    }
+
+    if (!authenticated) {
+      hasFetchedServerPreferences.current = true;
+      setIsHydratingServer(false);
+      setSyncStatus("saved");
+      setSyncMessage("이 브라우저에 저장됨");
+      return;
+    }
+
+    if (mergeGuestStateIntoAccount(storageScope)) {
+      schoolSelection.setSelectedCategories(readStoredArray(buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope)));
+      collegeSelection.setSelectedCategories(readStoredArray(buildScopedStorageKey(COLLEGE_STORAGE_KEY, storageScope)));
+      departmentSelection.setSelectedCategories(readStoredArray(buildScopedStorageKey(DEPARTMENT_STORAGE_KEY, storageScope)));
+      centerSelection.setSelectedCategories(readStoredArray(buildScopedStorageKey(CENTER_STORAGE_KEY, storageScope)));
     }
 
     const controller = new AbortController();
@@ -342,22 +375,10 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
         }
 
         if (data.preferences) {
-          schoolSelection.setSelectedCategories(
-            data.preferences.schoolCategoryKeys.filter((value) =>
-              selectableSchoolCategoryKeys.includes(value),
-            ),
-          );
-          collegeSelection.setSelectedCategories(
-            data.preferences.collegeKeys.filter((value) => selectableCollegeKeys.includes(value)),
-          );
-          departmentSelection.setSelectedCategories(
-            data.preferences.departmentKeys.filter((value) =>
-              selectableDepartmentKeys.includes(value),
-            ),
-          );
-          centerSelection.setSelectedCategories(
-            data.preferences.centerKeys.filter((value) => selectableCenterKeys.includes(value)),
-          );
+          schoolSelection.setSelectedCategories((current) => Array.from(new Set([...current, ...data.preferences!.schoolCategoryKeys.filter((value) => selectableSchoolCategoryKeys.includes(value))])));
+          collegeSelection.setSelectedCategories((current) => Array.from(new Set([...current, ...data.preferences!.collegeKeys.filter((value) => selectableCollegeKeys.includes(value))])));
+          departmentSelection.setSelectedCategories((current) => Array.from(new Set([...current, ...data.preferences!.departmentKeys.filter((value) => selectableDepartmentKeys.includes(value))])));
+          centerSelection.setSelectedCategories((current) => Array.from(new Set([...current, ...data.preferences!.centerKeys.filter((value) => selectableCenterKeys.includes(value))])));
         }
       } catch (error) {
         if (error instanceof Error && error.name === "AbortError") {
@@ -375,6 +396,7 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
 
     return () => controller.abort();
   }, [
+    authenticated,
     centerSelection,
     centerSelection.setSelectedCategories,
     collegeSelection,
@@ -384,10 +406,17 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
     isReady,
     schoolSelection,
     schoolSelection.setSelectedCategories,
+    storageScope,
   ]);
 
   useEffect(() => {
     if (!isReady || isHydratingServer) {
+      return;
+    }
+
+    if (!authenticated) {
+      setSyncStatus("saved");
+      setSyncMessage("이 브라우저에 저장됨");
       return;
     }
 
@@ -431,6 +460,7 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
       window.clearTimeout(timer);
     };
   }, [
+    authenticated,
     centerSelection.selectedCategories,
     collegeSelection.selectedCategories,
     departmentSelection.selectedCategories,
@@ -453,6 +483,14 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
 
   const syncTone =
     syncStatus === "error" ? "error" : syncStatus === "saved" ? "success" : "progress";
+  const groupOptions: Array<{ key: SettingsGroup; label: string; count: number }> = [
+    { key: "school", label: "본부", count: schoolSelection.selectedCategories.length },
+    { key: "college", label: "단과대", count: collegeSelection.selectedCategories.length },
+    { key: "department", label: "학과", count: departmentSelection.selectedCategories.length },
+    { key: "institution", label: "기관", count: centerSelection.selectedCategories.filter((key) => institutionCenters.some((item) => item.key === key)).length },
+    { key: "project", label: "사업단", count: centerSelection.selectedCategories.filter((key) => projectCenters.some((item) => item.key === key)).length },
+  ];
+  const totalSelected = groupOptions.reduce((sum, option) => sum + option.count, 0);
 
   return (
     <AppPageContainer>
@@ -462,13 +500,21 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
         description={TEXT.settingsDescription}
       >
         <div className="mt-4 flex flex-wrap gap-2 text-sm">
-          <StatusChip>{isHydratingServer ? TEXT.hydrating : TEXT.synced}</StatusChip>
+          <StatusChip>{isHydratingServer ? TEXT.hydrating : authenticated ? TEXT.synced : "브라우저 저장"}</StatusChip>
           {syncMessage ? <StatusChip tone={syncTone}>{syncMessage}</StatusChip> : null}
         </div>
       </AppHeroSection>
 
-      <div className="grid gap-5 xl:grid-cols-2">
-        <SelectionSection
+      <div className="grid items-start gap-4 xl:grid-cols-[200px_minmax(0,1fr)_240px]">
+        <AppPanel className="p-2 xl:sticky xl:top-20">
+          <p className="px-3 py-2 text-xs font-bold text-slate-400">소스 그룹</p>
+          <div className="grid grid-cols-2 gap-1 sm:grid-cols-5 xl:grid-cols-1">
+            {groupOptions.map((option) => <button key={option.key} type="button" onClick={() => setActiveGroup(option.key)} className={`flex items-center justify-between rounded-xl px-3 py-3 text-left text-sm font-semibold transition ${activeGroup === option.key ? "bg-blue-50 text-blue-800 ring-1 ring-blue-100" : "text-slate-600 hover:bg-slate-50"}`}><span>{option.label}</span><span className="rounded-lg bg-white px-2 py-0.5 text-xs text-slate-500 ring-1 ring-slate-100">{option.count}</span></button>)}
+          </div>
+        </AppPanel>
+
+        <div className="min-w-0">
+        {activeGroup === "school" ? <SelectionSection
           title={TEXT.schoolTitle}
           description={TEXT.schoolDescription}
           sectionTone="border-sky-200 bg-sky-50/70"
@@ -483,9 +529,9 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
           onToggle={schoolSelection.toggleCategory}
           onSelectAll={schoolSelection.selectAllCategories}
           onClear={schoolSelection.clearCategories}
-        />
+        /> : null}
 
-        <SelectionSection
+        {activeGroup === "college" ? <SelectionSection
           title={TEXT.collegeTitle}
           description={TEXT.collegeDescription}
           sectionTone="border-emerald-200 bg-emerald-50/70"
@@ -500,9 +546,9 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
           onToggle={collegeSelection.toggleCategory}
           onSelectAll={collegeSelection.selectAllCategories}
           onClear={collegeSelection.clearCategories}
-        />
+        /> : null}
 
-        <SelectionSection
+        {activeGroup === "institution" ? <SelectionSection
           title={TEXT.centerTitle}
           description={TEXT.centerDescription}
           sectionTone="border-amber-200 bg-amber-50/75"
@@ -517,9 +563,9 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
           onToggle={centerSelection.toggleCategory}
           onSelectAll={() => selectCenterGroup(institutionCenters.map((center) => center.key))}
           onClear={() => clearCenterGroup(institutionCenters.map((center) => center.key))}
-        />
+        /> : null}
 
-        <SelectionSection
+        {activeGroup === "project" ? <SelectionSection
           title={TEXT.projectTitle}
           description={TEXT.projectDescription}
           sectionTone="border-orange-200 bg-orange-50/75"
@@ -534,15 +580,25 @@ export function NoticeSettingsForm({ storageScope }: { storageScope: string }) {
           onToggle={centerSelection.toggleCategory}
           onSelectAll={() => selectCenterGroup(projectCenters.map((center) => center.key))}
           onClear={() => clearCenterGroup(projectCenters.map((center) => center.key))}
-        />
-      </div>
+        /> : null}
+        {activeGroup === "department" ? <DepartmentSelectionSection
+          selectedKeys={departmentSelection.selectedCategories}
+          onToggle={departmentSelection.toggleCategory}
+          onSelectAll={departmentSelection.selectAllCategories}
+          onClear={departmentSelection.clearCategories}
+        /> : null}
+        </div>
 
-      <DepartmentSelectionSection
-        selectedKeys={departmentSelection.selectedCategories}
-        onToggle={departmentSelection.toggleCategory}
-        onSelectAll={departmentSelection.selectAllCategories}
-        onClear={departmentSelection.clearCategories}
-      />
+        <AppPanel className="p-5 xl:sticky xl:top-20">
+          <p className="text-xs font-bold text-slate-400">선택 요약</p>
+          <p className="mt-2 text-3xl font-black tracking-tight text-slate-950">{totalSelected}<span className="ml-1 text-sm font-semibold text-slate-400">개</span></p>
+          <div className="mt-4 divide-y divide-slate-100 border-y border-slate-100">
+            {groupOptions.map((option) => <div key={option.key} className="flex items-center justify-between py-3 text-sm"><span className="text-slate-500">{option.label}</span><span className="font-bold text-slate-900">{option.count}</span></div>)}
+          </div>
+          <p className="mt-4 text-xs leading-5 text-slate-500">선택 내용은 피드, 인기 공지와 내 알림에 함께 반영됩니다.</p>
+          {syncMessage ? <div className="mt-4"><StatusChip tone={syncTone}>{syncMessage}</StatusChip></div> : null}
+        </AppPanel>
+      </div>
     </AppPageContainer>
   );
 }

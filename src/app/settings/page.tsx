@@ -1,19 +1,16 @@
 ﻿import { auth } from "@/auth";
-import { AuthLanding } from "@/features/auth/components/AuthLanding";
 import { NoticeSettingsForm } from "@/features/notices/components/NoticeSettingsForm";
+import { GUEST_STORAGE_SCOPE } from "@/features/notices/utils/guestState";
 
 export default async function SettingsPage() {
   const session = await auth();
 
-  if (!session) {
-    return <AuthLanding />;
-  }
-
-  const storageScope = session.user?.email ?? session.user?.name ?? "default";
+  const authenticated = Boolean(session?.user);
+  const storageScope = session?.user?.email ?? session?.user?.name ?? GUEST_STORAGE_SCOPE;
 
   return (
     <main className="min-h-screen bg-transparent">
-      <NoticeSettingsForm storageScope={storageScope} />
+      <NoticeSettingsForm storageScope={storageScope} authenticated={authenticated} />
     </main>
   );
 }

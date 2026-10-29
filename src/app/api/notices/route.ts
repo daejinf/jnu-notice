@@ -22,19 +22,6 @@ export const dynamic = "force-dynamic";
 const PREVIEW_MAX_PAGES = 2;
 
 export async function GET(request: Request) {
-  const session = await auth();
-
-  if (!session) {
-    return NextResponse.json(
-      {
-        notices: [],
-        fetchedAt: new Date().toISOString(),
-        error: "로그인이 필요합니다.",
-      },
-      { status: 401 },
-    );
-  }
-
   const { searchParams } = new URL(request.url);
   const requestedCategoryKeys = searchParams.get("categories")?.split(",").filter(Boolean) ?? [];
   const requestedCollegeKeys = searchParams.get("colleges")?.split(",").filter(Boolean) ?? [];

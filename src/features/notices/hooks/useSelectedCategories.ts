@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 type UseSelectedCategoriesOptions = {
   storageKey: string;
+  defaultSelectedKeys?: string[];
 };
 
 function getLegacyStorageKey(storageKey: string) {
@@ -15,7 +16,8 @@ export function useSelectedCategories(
   allCategoryKeys: string[],
   options: UseSelectedCategoriesOptions,
 ) {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>(allCategoryKeys);
+  const defaultSelectedKeys = options.defaultSelectedKeys ?? allCategoryKeys;
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(defaultSelectedKeys);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -28,6 +30,7 @@ export function useSelectedCategories(
     const valueToLoad = savedValue ?? fallbackValue;
 
     if (!valueToLoad) {
+      setSelectedCategories(defaultSelectedKeys);
       setIsReady(true);
       return;
     }
@@ -44,11 +47,11 @@ export function useSelectedCategories(
         window.localStorage.setItem(currentStorageKey, JSON.stringify(nextValues));
       }
     } catch {
-      setSelectedCategories(allCategoryKeys);
+      setSelectedCategories(defaultSelectedKeys);
     } finally {
       setIsReady(true);
     }
-  }, [allCategoryKeys, options.storageKey]);
+  }, [allCategoryKeys, defaultSelectedKeys, options.storageKey]);
 
   useEffect(() => {
     if (!isReady) {

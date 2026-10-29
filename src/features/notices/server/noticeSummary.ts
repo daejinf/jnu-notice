@@ -7,9 +7,11 @@ import {
   type NoticeSummaryCacheEntry,
   type NoticeSummaryCacheMap,
 } from "@/features/notices/server/noticeSummaryCache";
+import { extractNoticeTitle } from "@/features/notices/server/noticeTitle";
 
 const REQUEST_TIMEOUT_MS = 15000;
 const SUMMARY_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
+const NOTICE_CONTENT_CACHE_TTL_MS = 1000 * 60 * 60 * 6;
 const MAX_FAST_CONTENT_CHARS = 4500;
 const MAX_DEEP_CONTENT_CHARS = 12000;
 const SUMMARY_CACHE_VERSION = "v10";
@@ -47,6 +49,23 @@ const CONTENT_SELECTOR_CANDIDATES = [
   "#jwxe_main_content",
   "#content",
   "#contents",
+  "#bbs_content",
+];
+
+const READER_SELECTOR_CANDIDATES = [
+  ".view_body",
+  ".view-content",
+  ".view_cont",
+  ".view-con",
+  ".detail-content",
+  ".fr-view",
+  ".xe_content",
+  ".read_body",
+  ".bo_v_con",
+  ".substance",
+  "article",
+  ".article",
+  ".con",
   "#bbs_content",
 ];
 
@@ -91,9 +110,24 @@ export type NoticeSummaryResult = {
   fromCache: boolean;
 };
 
+export type NoticeContentDocument = {
+  sourceTitle: string;
+  html: string;
+  attachments: NoticeResourceLink[];
+  actionLinks: NoticeResourceLink[];
+  fetchedAt: string;
+  fromCache: boolean;
+};
+
 type InMemoryCacheEntry = {
   value: Omit<NoticeSummaryResult, "fromCache">;
   expiresAt: number;
+};
+
+type RawNoticeCacheEntry = {
+  html: string;
+  expiresAt: number;
+  fetchedAt: string;
 };
 
 type DeepSeekChoiceMessage = {
@@ -124,6 +158,7 @@ type RawSummaryPayload = {
 
 type ExtractedNoticeDocument = {
   sourceTitle: string;
+  html: string;
   content: string;
   attachments: NoticeResourceLink[];
   actionCandidates: NoticeResourceLink[];
@@ -229,6 +264,18 @@ function getSummaryCache() {
   }
 
   return globalCache.__noticeSummaryCache;
+}
+
+function getRawNoticeCache() {
+  const globalCache = globalThis as typeof globalThis & {
+    __rawNoticeCache?: Map<string, RawNoticeCacheEntry>;
+  };
+
+  if (!globalCache.__rawNoticeCache) {
+    globalCache.__rawNoticeCache = new Map<string, RawNoticeCacheEntry>();
+  }
+
+  return globalCache.__rawNoticeCache;
 }
 
 function normalizeCharset(charset: string | null | undefined) {
@@ -339,6 +386,77 @@ function extractStructuredText(rootHtml: string) {
     .trim();
 }
 
+const NOTICE_CONTENT_ALLOWED_TAGS = new Set([
+  "a", "article", "b", "blockquote", "br", "div", "em", "figcaption", "figure",
+  "h1", "h2", "h3", "h4", "h5", "h6", "hr", "i", "img", "li", "ol", "p",
+  "section", "span", "strong", "table", "tbody", "td", "tfoot", "th", "thead", "tr",
+  "u", "ul",
+]);
+
+function toSafeAbsoluteUrl(value: string | undefined, baseUrl: string, allowContact = false) {
+  if (!value) return null;
+  const trimmed = value.trim();
+  if (!trimmed || trimmed.startsWith("#")) return null;
+  if (allowContact && /^(mailto:|tel:)/i.test(trimmed)) return trimmed;
+
+  try {
+    const absoluteUrl = new URL(trimmed, baseUrl);
+    return ["http:", "https:"].includes(absoluteUrl.protocol) ? absoluteUrl.toString() : null;
+  } catch {
+    return null;
+  }
+}
+
+function sanitizeNoticeHtml(rootHtml: string, baseUrl: string) {
+  type ReaderNode = {
+    type?: string;
+    data?: string;
+    name?: string;
+    tagName?: string;
+    attribs?: Record<string, string>;
+    children?: ReaderNode[];
+  };
+
+  const dangerousTags = new Set(["script", "style", "noscript", "iframe", "object", "embed", "form", "button", "input", "select", "textarea", "svg", "canvas", "video", "audio"]);
+  const voidTags = new Set(["br", "hr", "img"]);
+
+  function renderNode(node: ReaderNode): string {
+    if (node.type === "text") return escapeHtml(node.data ?? "");
+    if (node.type === "comment") return "";
+
+    const tagName = (node.tagName || node.name || "").toLowerCase();
+    const children = (node.children ?? []).map(renderNode).join("");
+    if (!tagName) return children;
+    if (dangerousTags.has(tagName)) return "";
+    if (!NOTICE_CONTENT_ALLOWED_TAGS.has(tagName)) return children;
+
+    if (tagName === "a") {
+      const href = toSafeAbsoluteUrl(node.attribs?.href, baseUrl, true);
+      return href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${children}</a>` : children;
+    }
+
+    if (tagName === "img") {
+      const src = toSafeAbsoluteUrl(node.attribs?.src, baseUrl);
+      if (!src) return "";
+      const alt = cleanText(node.attribs?.alt ?? "공지 이미지");
+      return `<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" referrerpolicy="no-referrer">`;
+    }
+
+    const cellAttributes = ["td", "th"].includes(tagName)
+      ? ["colspan", "rowspan"].flatMap((attribute) => {
+          const value = node.attribs?.[attribute];
+          return value && /^\d{1,2}$/.test(value) ? [` ${attribute}="${value}"`] : [];
+        }).join("")
+      : "";
+
+    if (voidTags.has(tagName)) return `<${tagName}>`;
+    return `<${tagName}${cellAttributes}>${children}</${tagName}>`;
+  }
+
+  const $ = load(rootHtml, null, false);
+  return $.root().contents().toArray().map((node) => renderNode(node as ReaderNode)).join("").trim();
+}
+
 async function requestHtmlViaNode(url: string, redirectCount = 0): Promise<{ html: string; contentType: string | null }> {
   return new Promise((resolve, reject) => {
     const target = new URL(url);
@@ -447,6 +565,23 @@ async function fetchNoticeDetailHtml(url: string) {
     const fallback = await requestHtmlViaNode(url);
     return fallback;
   }
+}
+
+async function loadNoticeDetailHtml(url: string) {
+  const cached = getRawNoticeCache().get(url);
+  if (cached && cached.expiresAt > Date.now()) {
+    return { html: cached.html, fetchedAt: cached.fetchedAt, fromCache: true };
+  }
+
+  const { html } = await fetchNoticeDetailHtml(url);
+  const fetchedAt = new Date().toISOString();
+  getRawNoticeCache().set(url, {
+    html,
+    fetchedAt,
+    expiresAt: Date.now() + NOTICE_CONTENT_CACHE_TTL_MS,
+  });
+
+  return { html, fetchedAt, fromCache: false };
 }
 
 async function fetchBinaryResource(url: string) {
@@ -630,20 +765,31 @@ async function pickBestContentBlock(
   $("script, style, noscript, iframe, svg, nav, footer, header, button, input, select, textarea").remove();
 
   const orderedCandidates = CONTENT_SELECTOR_CANDIDATES
-    .map((selector) => ({
-      selector,
-      text: extractStructuredText($.html($(selector).first()) || ""),
-    }))
+    .map((selector) => {
+      const candidateHtml = $.html($(selector).first()) || "";
+      return { selector, html: candidateHtml, text: extractStructuredText(candidateHtml) };
+    })
     .filter((candidate) => candidate.text.length > 0);
 
-  const prioritizedCandidate =
-    orderedCandidates.find((candidate) => candidate.text.length >= 120)?.text ?? "";
-  const longestCandidate =
-    orderedCandidates.sort((left, right) => right.text.length - left.text.length)[0]?.text ?? "";
-  const bodyText = extractStructuredText($.html($("body")) || "");
-  const title = cleanText($("title").first().text());
+  const prioritizedCandidate = orderedCandidates.find((candidate) => candidate.text.length >= 120);
+  const longestCandidate = [...orderedCandidates].sort((left, right) => right.text.length - left.text.length)[0];
+  const bodyHtml = $.html($("body")) || "";
+  const bodyText = extractStructuredText(bodyHtml);
+  const selectedCandidate = prioritizedCandidate || longestCandidate;
+  const readerHtml = READER_SELECTOR_CANDIDATES
+    .map((selector) => {
+      const element = $(selector).first();
+      const candidateHtml = $.html(element) || "";
+      return {
+        html: candidateHtml,
+        textLength: extractStructuredText(candidateHtml).length,
+        mediaCount: element.find("img, table").length,
+      };
+    })
+    .find((candidate) => candidate.html && (candidate.textLength >= 20 || candidate.mediaCount > 0))?.html;
+  const title = extractNoticeTitle(html) ?? cleanText($("title").first().text());
   const inlineImageHints = extractInlineImageHints(html);
-  const contentWithHints = [prioritizedCandidate || longestCandidate || bodyText, ...inlineImageHints.map((hint) => `[이미지 설명] ${hint}`)]
+  const contentWithHints = [selectedCandidate?.text || bodyText, ...inlineImageHints.map((hint) => `[이미지 설명] ${hint}`)]
     .filter(Boolean)
     .join("\n");
   const maxContentChars = options.includeAttachmentAnalysis ? MAX_DEEP_CONTENT_CHARS : MAX_FAST_CONTENT_CHARS;
@@ -704,6 +850,7 @@ async function pickBestContentBlock(
 
   return {
     sourceTitle: title,
+    html: sanitizeNoticeHtml(readerHtml || selectedCandidate?.html || bodyHtml, baseUrl),
     content,
     attachments: dedupedAttachments,
     actionCandidates: dedupedActions,
@@ -1118,6 +1265,20 @@ async function requestDeepSeekSummary(
     clearTimeout(timeoutHandle);
   }
 }
+export async function getNoticeContentDocument(url: string): Promise<NoticeContentDocument> {
+  const raw = await loadNoticeDetailHtml(url);
+  const extracted = await pickBestContentBlock(raw.html, url);
+
+  return {
+    sourceTitle: extracted.sourceTitle,
+    html: extracted.html,
+    attachments: extracted.attachments,
+    actionLinks: extracted.actionCandidates,
+    fetchedAt: raw.fetchedAt,
+    fromCache: raw.fromCache,
+  };
+}
+
 export async function generateNoticeSummary(
   input: NoticeSummaryInput,
   options: GenerateNoticeSummaryOptions = {},
@@ -1145,7 +1306,7 @@ export async function generateNoticeSummary(
     };
   }
 
-  const { html } = await fetchNoticeDetailHtml(input.url);
+  const { html } = await loadNoticeDetailHtml(input.url);
   const extracted = await pickBestContentBlock(html, input.url, options);
   const summarized = await requestDeepSeekSummary(
     input,
