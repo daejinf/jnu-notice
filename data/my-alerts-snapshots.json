@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-29T23:35:42.922Z",
+  "checkedAt": "2026-10-30T02:58:20.288Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [
@@ -9,45 +9,163 @@
           "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=34&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27849",
           "author": "국제협력과",
           "date": "2026-10-30",
-          "views": 382,
-          "sourceType": "center",
-          "sourceName": "국제협력과",
-          "category": "기관 공지",
-          "isPinned": false
-        }
-      ],
-      "fetchedAt": "2026-10-29T23:35:42.922Z",
-      "totalCount": 1,
-      "hasPreferences": true,
-      "preferencesUpdatedAt": "2026-10-29T07:41:21.327Z"
-    },
-    "passionate1114@gmail.com": {
-      "notices": [
-        {
-          "id": "27849",
-          "title": "2026 찾아가는 GKS 장학상담(On-Campus GKS Consultation)_2026.10.30.",
-          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=34&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27849",
-          "author": "국제협력과",
-          "date": "2026-10-30",
-          "views": 382,
+          "views": 384,
           "sourceType": "center",
           "sourceName": "국제협력과",
           "category": "기관 공지",
           "isPinned": false
         },
         {
-          "id": "3801",
-          "title": "2026 전남대학교 대학일자리플러스센터 만족도 조사",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3801",
-          "author": "취업진로포털 취업프로그램",
+          "id": "858",
+          "title": "대학원 AI 연구역량 강화 실무 교육 계획 안내 새글",
+          "url": "https://eng.jnu.ac.kr/bbs/eng/993/1059323/artclView.do",
+          "author": "김현희",
           "date": "2026-10-30",
-          "views": 0,
+          "views": 20,
+          "sourceType": "college",
+          "sourceName": "공과대학",
+          "category": "공지사항",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-10-30T02:58:20.288Z",
+      "totalCount": 2,
+      "hasPreferences": true,
+      "preferencesUpdatedAt": "2026-10-29T07:41:21.327Z"
+    },
+    "passionate1114@gmail.com": {
+      "notices": [
+        {
+          "id": "english-edu-1",
+          "title": "2027학년도 학사일정",
+          "url": "https://engedu.jnu.ac.kr/bbs/engedu/2295/1059301/artclView.do",
+          "author": "영어교육과",
+          "date": "2026-10-30",
+          "views": 12,
+          "sourceType": "department",
+          "sourceName": "영어교육과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "biotech-1",
+          "title": "졸업 관련 제출 서류 서식",
+          "url": "https://bte.jnu.ac.kr/bbs/bte/1824/1059330/artclView.do",
+          "author": "조교",
+          "date": "2026-10-30",
+          "views": 5,
+          "sourceType": "department",
+          "sourceName": "생물공학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "economics-1",
+          "title": "대학생의 개인적 요인 및 진로결정 자기효능감에 관한 연구 설문조사 안내",
+          "url": "https://eco.jnu.ac.kr/bbs/eco/1845/1059309/artclView.do",
+          "author": "경제학부",
+          "date": "2026-10-30",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "경제학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "27849",
+          "title": "2026 찾아가는 GKS 장학상담(On-Campus GKS Consultation)_2026.10.30.",
+          "url": "https://international.jnu.ac.kr/Board/Board.aspx?BoardID=34&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=27849",
+          "author": "국제협력과",
+          "date": "2026-10-30",
+          "views": 384,
           "sourceType": "center",
-          "sourceName": "취업진로포털 취업프로그램",
-          "category": "취업프로그램",
-          "isPinned": false,
-          "statusLabel": "D-DAY",
-          "statusKind": "deadline"
+          "sourceName": "국제협력과",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "2415",
+          "title": "[설문] 신소재공학부 비교과 프로그램 개설 수요조사 참여 안내",
+          "url": "https://mse.jnu.ac.kr/bbs/mse/2060/1059325/artclView.do",
+          "author": "관리자",
+          "date": "2026-10-30",
+          "views": 25,
+          "sourceType": "department",
+          "sourceName": "신소재공학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "858",
+          "title": "대학원 AI 연구역량 강화 실무 교육 계획 안내 새글",
+          "url": "https://eng.jnu.ac.kr/bbs/eng/993/1059323/artclView.do",
+          "author": "김현희",
+          "date": "2026-10-30",
+          "views": 20,
+          "sourceType": "college",
+          "sourceName": "공과대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1496",
+          "title": "2027학년도 학사일정 안내",
+          "url": "https://clothing.jnu.ac.kr/bbs/clothing/1006/1059306/artclView.do",
+          "author": "김하영",
+          "date": "2026-10-30",
+          "views": 5,
+          "sourceType": "department",
+          "sourceName": "의류학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2403",
+          "title": "2026학년도 전기(2027년 2월) 학부 졸업(수료) 예비사정 실시",
+          "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1059313/artclView.do",
+          "author": "송혜종",
+          "date": "2026-10-30",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "국어교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "692",
+          "title": "2026 전국 예비교원 AI 융합교육 해커톤 대회",
+          "url": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/1059319/artclView.do",
+          "author": "김진성",
+          "date": "2026-10-30",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "물리교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1151",
+          "title": "2026년 2학기 연구활동종사자 안전교육 이수 요청",
+          "url": "https://design.jnu.ac.kr/bbs/design/1007/1059321/artclView.do",
+          "author": "디자인학과",
+          "date": "2026-10-30",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "디자인학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "966",
+          "title": "대학원 AI 연구역량 강화 실무 교육 안내 새글",
+          "url": "https://natural.jnu.ac.kr/bbs/natural/1560/1059329/artclView.do",
+          "author": "행정실",
+          "date": "2026-10-30",
+          "views": 1,
+          "sourceType": "college",
+          "sourceName": "자연과학대학",
+          "category": "공지사항",
+          "isPinned": false
         },
         {
           "id": "3805",
@@ -75,6 +193,20 @@
           "category": "취업프로그램",
           "isPinned": false,
           "statusLabel": "D-DAY",
+          "statusKind": "deadline"
+        },
+        {
+          "id": "3779",
+          "title": "[추가모집_213명] 2026학년도 공기업·공공기관 및 대기업 취업 E-러닝 수강생 모집[해커스 강의 지원]",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3779",
+          "author": "취업진로포털 취업프로그램",
+          "date": "2026-10-30",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 취업프로그램",
+          "category": "취업프로그램",
+          "isPinned": false,
+          "statusLabel": "D-32",
           "statusKind": "deadline"
         },
         {
@@ -176,6 +308,20 @@
           "statusKind": "deadline"
         },
         {
+          "id": "54114",
+          "title": "[동성케미컬(중견기업)] 채용설명회/ 채용상담회",
+          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=54114",
+          "author": "취업진로포털 채용설명회",
+          "date": "2026-10-30",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 채용설명회",
+          "category": "채용설명회",
+          "isPinned": false,
+          "statusLabel": "D-18",
+          "statusKind": "deadline"
+        },
+        {
           "id": "54038",
           "title": "[국가정보원] 2026년 채용설명회(*대한민국 국적자만 참여가능, 외국 국적 참여제한*)",
           "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=54038",
@@ -251,18 +397,6 @@
           "id": "53916",
           "title": "[글로벌 세아그룹_전주페이퍼(중견기업).전주원파워] 2026년 하반기 대졸 신입사원 채용설명회(* 신입초봉: 4900만원, 성과금 별도, 채용직무:R&D, 생산혁신, 원료기획, 생산기획,전략기획, 인사기획, 에너지기획, 구매)",
           "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53916",
-          "author": "취업진로포털 채용설명회",
-          "date": "2026-10-30",
-          "views": 0,
-          "sourceType": "center",
-          "sourceName": "취업진로포털 채용설명회",
-          "category": "채용설명회",
-          "isPinned": false
-        },
-        {
-          "id": "53943",
-          "title": "​​​​​​​[SK그룹] Pre-SKALA 모집 상담회(*Pre-SKALA 신청기간: ~ 10.14.09:00까지, *해커톤 총 상금 규모 2,000만원)",
-          "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram5.aspx?Mode=View&Seq=53943",
           "author": "취업진로포털 채용설명회",
           "date": "2026-10-30",
           "views": 0,
@@ -396,8 +530,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-10-29T23:35:42.922Z",
-      "totalCount": 28,
+      "fetchedAt": "2026-10-30T02:58:20.288Z",
+      "totalCount": 38,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
