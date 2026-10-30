@@ -1,5 +1,26 @@
 [
   {
+    "checkedAt": "2026-10-30T16:42:30.788Z",
+    "notices": [
+      {
+        "id": "3817",
+        "title": "2026학년도 2학기 「CNU 동계 취업에이스+」 취업스터디 모집[개인별 신청 후 추후 팀 구성]",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3817",
+        "author": "취업진로포털 취업프로그램",
+        "date": "2026-10-31",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 취업프로그램",
+        "category": "취업프로그램",
+        "isPinned": false,
+        "statusLabel": "D-30",
+        "statusKind": "deadline"
+      }
+    ],
+    "newNoticeCount": 1,
+    "totalNoticeCount": 8107
+  },
+  {
     "checkedAt": "2026-10-30T09:56:55.979Z",
     "notices": [
       {
@@ -183,30 +204,6 @@
         "isPinned": false
       },
       {
-        "id": "1259",
-        "title": "국제학생증 ISIC 무료발급 행사 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1059366/artclView.do",
-        "author": "김은자",
-        "date": "2026-10-30",
-        "views": 8,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1259",
-        "title": "국제학생증 ISIC 무료발급 행사 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1059366/artclView.do",
-        "author": "김은자",
-        "date": "2026-10-30",
-        "views": 8,
-        "sourceType": "department",
-        "sourceName": "수의학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "635",
         "title": "[학부,대학원] 2026 용봉학술제(G-Fair)프로그램 안내",
         "url": "https://rbe.jnu.ac.kr/bbs/rbe/447/1059356/artclView.do",
@@ -257,18 +254,6 @@
       {
         "id": "1059382",
         "title": "[졸업] ★2026학년도 2학기 졸업 예비사정 실시(사정 대상자 확인 및 면담 필수)",
-        "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1059382/artclView.do",
-        "author": "자율전공학부",
-        "date": "2026-10-30",
-        "views": 3,
-        "sourceType": "college",
-        "sourceName": "자율전공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2835",
-        "title": "[졸업] ★2026학년도 2학기 졸업 예비사정 실시(사정 대상자 확인 및 면담 필수) 새글",
         "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1059382/artclView.do",
         "author": "자율전공학부",
         "date": "2026-10-30",
@@ -363,7 +348,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 30,
+    "newNoticeCount": 27,
     "totalNoticeCount": 8111
   },
   {
@@ -14677,11 +14662,5 @@
     ],
     "newNoticeCount": 57,
     "totalNoticeCount": 8201
-  },
-  {
-    "checkedAt": "2026-10-07T23:50:07.239Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7496
   }
 ]
