@@ -1,5 +1,36 @@
 [
   {
+    "checkedAt": "2026-11-02T20:20:49.655Z",
+    "notices": [
+      {
+        "id": "mechanical-1",
+        "title": "[졸업유보] 2026학년도 전기(2027년 2월) 학부 졸업(수료) 대상자 유보 신청 안내",
+        "url": "https://mech.jnu.ac.kr/bbs/mech/2038/1059654/artclView.do",
+        "author": "신혜경",
+        "date": "2026-11-02",
+        "views": 16,
+        "sourceType": "department",
+        "sourceName": "기계공학부",
+        "category": "공지사항",
+        "isPinned": true
+      },
+      {
+        "id": "990",
+        "title": "서민금융진흥원장 특강] 똑똑한 금융생활 핵심 전략 새글",
+        "url": "https://cba.jnu.ac.kr/bbs/cba/1615/1059656/artclView.do",
+        "author": "관리자",
+        "date": "2026-11-02",
+        "views": 15,
+        "sourceType": "college",
+        "sourceName": "경영대학",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 2,
+    "totalNoticeCount": 8114
+  },
+  {
     "checkedAt": "2026-11-02T09:57:40.333Z",
     "notices": [
       {
@@ -185,18 +216,6 @@
       {
         "id": "1059567",
         "title": "[비교과] 2026학년 국립대학육성사업 자기설계전공 공모전 참가 안내",
-        "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1059567/artclView.do",
-        "author": "자율전공학부",
-        "date": "2026-11-02",
-        "views": 59,
-        "sourceType": "college",
-        "sourceName": "자율전공학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "2836",
-        "title": "[비교과] 2026학년 국립대학육성사업 자기설계전공 공모전 참가 안내 새글",
         "url": "http://sdis.jnu.ac.kr/bbs/sdis/247/1059567/artclView.do",
         "author": "자율전공학부",
         "date": "2026-11-02",
@@ -431,18 +450,6 @@
         "views": 12,
         "sourceType": "department",
         "sourceName": "에너지자원공학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "942",
-        "title": "2026학년도 전기(2027년 2월) 학부 졸업(수료)대상자 유보 신청 안내",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1059516/artclView.do",
-        "author": "약학부",
-        "date": "2026-11-02",
-        "views": 12,
-        "sourceType": "department",
-        "sourceName": "약학부",
         "category": "공지사항",
         "isPinned": false
       },
@@ -771,30 +778,6 @@
         "isPinned": false
       },
       {
-        "id": "1262",
-        "title": "2026학년도 해외 파견 프로그램 개선을 위한 재학생 설문조사 실시 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1059505/artclView.do",
-        "author": "김은자",
-        "date": "2026-11-02",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1262",
-        "title": "2026학년도 해외 파견 프로그램 개선을 위한 재학생 설문조사 실시 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1059505/artclView.do",
-        "author": "김은자",
-        "date": "2026-11-02",
-        "views": 6,
-        "sourceType": "department",
-        "sourceName": "수의학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "1402",
         "title": "2026학년도 나의 원픽 수업 영상 콘텐츠 공모전 안내(2차) (~12.15까지)",
         "url": "https://stat.jnu.ac.kr/bbs/stat/1511/1059475/artclView.do",
@@ -999,7 +982,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 83,
+    "newNoticeCount": 79,
     "totalNoticeCount": 8114
   },
   {
@@ -14725,11 +14708,5 @@
     ],
     "newNoticeCount": 2,
     "totalNoticeCount": 8204
-  },
-  {
-    "checkedAt": "2026-10-11T02:12:07.891Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7864
   }
 ]
