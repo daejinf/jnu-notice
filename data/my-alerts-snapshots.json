@@ -1,15 +1,135 @@
 {
-  "checkedAt": "2026-11-05T21:59:19.033Z",
+  "checkedAt": "2026-11-06T02:23:33.376Z",
   "scopes": {
     "lightsailk@gmail.com": {
       "notices": [],
-      "fetchedAt": "2026-11-05T21:59:19.033Z",
+      "fetchedAt": "2026-11-06T02:23:33.376Z",
       "totalCount": 0,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-10-29T07:41:21.327Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "chemical-1",
+          "title": "[11.25] 전공설명회 신청 안내(~11.18)",
+          "url": "https://ace.jnu.ac.kr/bbs/ace/1860/1060128/artclView.do",
+          "author": "나현정",
+          "date": "2026-11-06",
+          "views": 50,
+          "sourceType": "department",
+          "sourceName": "화학공학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "1056",
+          "title": "2026학년도 『공인 외국어 응시료 지원 사업』 시행 안내(2차)",
+          "url": "https://forestry.jnu.ac.kr/bbs/forestry/436/1060118/artclView.do",
+          "author": "이은도",
+          "date": "2026-11-06",
+          "views": 22,
+          "sourceType": "department",
+          "sourceName": "산림자원학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "699",
+          "title": "제4회 스마트축산 AI 경진대회 안내 새글",
+          "url": "https://agric.jnu.ac.kr/bbs/agric/420/1060119/artclView.do",
+          "author": "주현우",
+          "date": "2026-11-06",
+          "views": 11,
+          "sourceType": "college",
+          "sourceName": "농업생명과학대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2571",
+          "title": "[오뚜기함태호재단] 제2회 Next-Gen Food Tech&Nutririon Sympos",
+          "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1060126/artclView.do",
+          "author": "식품공학과",
+          "date": "2026-11-06",
+          "views": 11,
+          "sourceType": "department",
+          "sourceName": "식품공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2572",
+          "title": "2026학년도 [공인 외국어 응시료 지원 사업] 시행 안내(2차)",
+          "url": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/1060127/artclView.do",
+          "author": "식품공학과",
+          "date": "2026-11-06",
+          "views": 6,
+          "sourceType": "department",
+          "sourceName": "식품공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "227",
+          "title": "2026학년도 공인 외국어 응시료 지원 사업 안내",
+          "url": "https://bse.jnu.ac.kr/bbs/bse/2568/1060125/artclView.do",
+          "author": "융합바이오시스템기계공학과",
+          "date": "2026-11-06",
+          "views": 4,
+          "sourceType": "department",
+          "sourceName": "융합바이오시스템기계공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "570",
+          "title": "2026학년도 공인 외국어 응시료 지원 사업 시행 안내(2차)",
+          "url": "https://agrochem.jnu.ac.kr/bbs/agrochem/555/1060123/artclView.do",
+          "author": "농생명화학과",
+          "date": "2026-11-06",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "농생명화학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "708",
+          "title": "2026학년도 『공인 외국어 응시료 지원 사업』 시행 안내(2차)",
+          "url": "https://animalscience.jnu.ac.kr/bbs/animalscience/435/1060124/artclView.do",
+          "author": "동물자원학부",
+          "date": "2026-11-06",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "동물자원학부",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "3979",
+          "title": "[전남광주통합특별시의회] 2026년 전남광주통합특별시의회 대학생 인턴 모집 공고",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3979",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-11-06",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "3978",
+          "title": "[전남대학교] 2026 프랑코포니 문화제 「프랑스어 말하기 대회」",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=3978",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-11-06",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": false
+        },
         {
           "id": "3828",
           "title": "[여수]「여수국가산단 ★GS칼텍스(11/16(월) 10시★ 현장견학」 참여학생 모집",
@@ -363,8 +483,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-11-05T21:59:19.033Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-11-06T02:23:33.376Z",
+      "totalCount": 37,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
