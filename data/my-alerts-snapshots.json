@@ -1,15 +1,88 @@
 {
-  "checkedAt": "2026-11-08T21:07:48.889Z",
+  "checkedAt": "2026-11-09T00:50:43.563Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-11-08T21:07:48.889Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "863",
+          "title": "[2026.11.30. 19:00~21:00] 코멘토 직무부트캠프 수료자 취업 준비 특강(~11/24) 새글",
+          "url": "https://eng.jnu.ac.kr/bbs/eng/993/1060223/artclView.do",
+          "author": "조은혜",
+          "date": "2026-11-09",
+          "views": 6,
+          "sourceType": "college",
+          "sourceName": "공과대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1060",
+          "title": "New [모집홍보] 2026년도 공동 SW산업세미나 특강 안내",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=1060&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-11-09",
+          "views": 5,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        }
+      ],
+      "fetchedAt": "2026-11-09T00:50:43.563Z",
+      "totalCount": 2,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-10-29T07:41:21.327Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "physics-1",
+          "title": "(접수:~11.16까지)광자기술 학술회의(PC 2026) 운영요원 모집 안내",
+          "url": "https://physics.jnu.ac.kr/bbs/physics/2142/1060219/artclView.do",
+          "author": "물리학과",
+          "date": "2026-11-09",
+          "views": 11,
+          "sourceType": "department",
+          "sourceName": "물리학과",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "863",
+          "title": "[2026.11.30. 19:00~21:00] 코멘토 직무부트캠프 수료자 취업 준비 특강(~11/24) 새글",
+          "url": "https://eng.jnu.ac.kr/bbs/eng/993/1060223/artclView.do",
+          "author": "조은혜",
+          "date": "2026-11-09",
+          "views": 6,
+          "sourceType": "college",
+          "sourceName": "공과대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1060",
+          "title": "New [모집홍보] 2026년도 공동 SW산업세미나 특강 안내",
+          "url": "https://sojoong.kr/notice/notice-board/?uid=1060&mod=document",
+          "author": "소프트웨어중심사업단",
+          "date": "2026-11-09",
+          "views": 5,
+          "sourceType": "center",
+          "sourceName": "소프트웨어중심사업단",
+          "category": "사업단 공지",
+          "isPinned": false
+        },
+        {
+          "id": "592",
+          "title": "[시민과 함께하는] 2026 전남광주통합특별시 과학기술인 소통의 밤 행사 안내",
+          "url": "https://chem.jnu.ac.kr/bbs/chem/1013/1060225/artclView.do",
+          "author": "이은희",
+          "date": "2026-11-09",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "화학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
         {
           "id": "3812",
           "title": "2026 거점형 특화프로그램 BUILD WITH AI 자격취득 과정",
@@ -361,8 +434,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-11-08T21:07:48.889Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-11-09T00:50:43.563Z",
+      "totalCount": 31,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
