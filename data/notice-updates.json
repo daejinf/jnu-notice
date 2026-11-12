@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-11-12T22:43:44.473Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 8116
+  },
+  {
     "checkedAt": "2026-11-12T17:04:42.854Z",
     "notices": [
       {
@@ -47,30 +53,6 @@
         "views": 13,
         "sourceType": "college",
         "sourceName": "수의과대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1270",
-        "title": "24시수동물메디컬센터(서울 소재) 2027년 인턴수의사 채용 공고",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1060763/artclView.do",
-        "author": "김은자",
-        "date": "2026-11-12",
-        "views": 13,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1270",
-        "title": "24시수동물메디컬센터(서울 소재) 2027년 인턴수의사 채용 공고",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1060763/artclView.do",
-        "author": "김은자",
-        "date": "2026-11-12",
-        "views": 13,
-        "sourceType": "department",
-        "sourceName": "수의학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -207,7 +189,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 17,
+    "newNoticeCount": 15,
     "totalNoticeCount": 8056
   },
   {
@@ -16713,11 +16695,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7804
-  },
-  {
-    "checkedAt": "2026-10-18T06:35:47.922Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 8148
   }
 ]
