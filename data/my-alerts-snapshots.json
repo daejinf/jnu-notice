@@ -1,15 +1,232 @@
 {
-  "checkedAt": "2026-11-11T18:40:25.096Z",
+  "checkedAt": "2026-11-12T01:00:54.659Z",
   "scopes": {
     "lightsailk@gmail.com": {
-      "notices": [],
-      "fetchedAt": "2026-11-11T18:40:25.096Z",
-      "totalCount": 0,
+      "notices": [
+        {
+          "id": "1",
+          "title": "[광주전남 공동교육혁신센터] 2026 오지다 축제 참여자 모집",
+          "url": "https://ile.jnu.ac.kr/ko/community/notice/view/11271?p=1",
+          "author": "강미영",
+          "date": "2026-11-12",
+          "views": 3,
+          "sourceType": "center",
+          "sourceName": "교육혁신본부",
+          "category": "기관 공지",
+          "isPinned": true
+        }
+      ],
+      "fetchedAt": "2026-11-12T01:00:54.659Z",
+      "totalCount": 1,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-10-29T07:41:21.327Z"
     },
     "passionate1114@gmail.com": {
       "notices": [
+        {
+          "id": "1",
+          "title": "[광주전남 공동교육혁신센터] 2026 오지다 축제 참여자 모집",
+          "url": "https://ile.jnu.ac.kr/ko/community/notice/view/11271?p=1",
+          "author": "강미영",
+          "date": "2026-11-12",
+          "views": 3,
+          "sourceType": "center",
+          "sourceName": "교육혁신본부",
+          "category": "기관 공지",
+          "isPinned": true
+        },
+        {
+          "id": "sbst-1",
+          "title": "2026학년도 동계 계절학기 자유학기제 운영 계획 안내",
+          "url": "https://sbst.jnu.ac.kr/bbs/sbst/1522/1060637/artclView.do",
+          "author": "생명과학기술학부",
+          "date": "2026-11-12",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "생명과학기술학부",
+          "category": "공지사항",
+          "isPinned": true
+        },
+        {
+          "id": "2504",
+          "title": "2027년도 관정재단 국내대학 장학생 선발 안내",
+          "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1060647/artclView.do",
+          "author": "윤이현",
+          "date": "2026-11-12",
+          "views": 9,
+          "sourceType": "department",
+          "sourceName": "지리학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "247",
+          "title": "[교내] [★일정변경] 2026년 글로컬대학사업 「(직무부트캠프) 현직자와의 AI 토크토크(2차) (~11/24화)",
+          "url": "https://ie.jnu.ac.kr/bbs/ie/3746/1060638/artclView.do",
+          "author": "홍민아",
+          "date": "2026-11-12",
+          "views": 8,
+          "sourceType": "department",
+          "sourceName": "산업공학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2503",
+          "title": "2026학년도 전남대학교 종합만족도조사에 참여해 주세요! (11.9.~12.18.)",
+          "url": "https://geo.jnu.ac.kr/bbs/geo/1868/1060643/artclView.do",
+          "author": "윤이현",
+          "date": "2026-11-12",
+          "views": 7,
+          "sourceType": "department",
+          "sourceName": "지리학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "838",
+          "title": "「2026년 전남대학교 진로취업지원 현황조사」안내 새글",
+          "url": "https://sea.jnu.ac.kr/bbs/sea/291/1060632/artclView.do",
+          "author": "김영신",
+          "date": "2026-11-12",
+          "views": 5,
+          "sourceType": "college",
+          "sourceName": "수산해양대학(여수)",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "837",
+          "title": "「2026학년도 동계방학 취업학습지원금」 지원 프로그램 운영 안내 새글",
+          "url": "https://sea.jnu.ac.kr/bbs/sea/291/1060627/artclView.do",
+          "author": "김영신",
+          "date": "2026-11-12",
+          "views": 5,
+          "sourceType": "college",
+          "sourceName": "수산해양대학(여수)",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "594",
+          "title": "2026학년도 동계 계절학기 자유학기제 운영 계획 안내",
+          "url": "https://chem.jnu.ac.kr/bbs/chem/1013/1060650/artclView.do",
+          "author": "이은희",
+          "date": "2026-11-12",
+          "views": 3,
+          "sourceType": "department",
+          "sourceName": "화학과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "427",
+          "title": "[취업정보] [전남광주통합특별시의회] 2026년 대학생 인턴 모집 새글",
+          "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1060642/artclView.do",
+          "author": "김영준",
+          "date": "2026-11-12",
+          "views": 2,
+          "sourceType": "college",
+          "sourceName": "예술대학",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "1545",
+          "title": "[학부]2026년 전남대학교 진로취업 현황조사 참여 요청",
+          "url": "https://ecedu.jnu.ac.kr/bbs/ecedu/2303/1060629/artclView.do",
+          "author": "노이지",
+          "date": "2026-11-12",
+          "views": 2,
+          "sourceType": "department",
+          "sourceName": "유아교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "700",
+          "title": "2026년 전남대학교 진로취업지원 현황조사",
+          "url": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/1060639/artclView.do",
+          "author": "김진성",
+          "date": "2026-11-12",
+          "views": 1,
+          "sourceType": "department",
+          "sourceName": "물리교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "99103",
+          "title": "2026학년도 동계 방학 중 생활관(여수) 입주생 모집 공고(안)",
+          "url": "https://house.jnu.ac.kr/Board/Board.aspx?BoardID=29&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=99103",
+          "author": "입주신청 2026학년도 동계 방학 중 생활관(여수) 입주생 모집 공고(안)",
+          "date": "2026-11-12",
+          "views": 1,
+          "sourceType": "center",
+          "sourceName": "여수생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "99102",
+          "title": "Recruitment Notice for Residence Hall Residents during 2026 Winter Vaca...",
+          "url": "https://house.jnu.ac.kr/Board/Board.aspx?BoardID=29&Mode=View&PageNum=1&Key=&Value=&Cate=&Seq=99102",
+          "author": "입주신청 Recruitment Notice for Residence Hall Residents during 2026 Winter Vaca...",
+          "date": "2026-11-12",
+          "views": 1,
+          "sourceType": "center",
+          "sourceName": "여수생활관",
+          "category": "기관 공지",
+          "isPinned": false
+        },
+        {
+          "id": "2411",
+          "title": "「2026년 전남대학교 진로취업 현황조사」 참여 협조 요청",
+          "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1060648/artclView.do",
+          "author": "송혜종",
+          "date": "2026-11-12",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "국어교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2410",
+          "title": "2026학년도 동계 계절학기 자유학기제 운영 계획 안내",
+          "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1060646/artclView.do",
+          "author": "송혜종",
+          "date": "2026-11-12",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "국어교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "2409",
+          "title": "[재단법인 관정재단] 2027년도 국내대학 장학생 선발 안내",
+          "url": "https://koredu.jnu.ac.kr/bbs/koredu/2290/1060645/artclView.do",
+          "author": "송혜종",
+          "date": "2026-11-12",
+          "views": 0,
+          "sourceType": "department",
+          "sourceName": "국어교육과",
+          "category": "공지사항",
+          "isPinned": false
+        },
+        {
+          "id": "4004",
+          "title": "[한국중소벤처기업유통원] 2026년 직접생산확인제도 실태조사원 모집",
+          "url": "https://capd.jnu.ac.kr/Board/Board.aspx?BoardID=2&Mode=View&Seq=4004",
+          "author": "취업진로포털 공지사항",
+          "date": "2026-11-12",
+          "views": 0,
+          "sourceType": "center",
+          "sourceName": "취업진로포털 공지사항",
+          "category": "기관 공지",
+          "isPinned": false
+        },
         {
           "id": "3814",
           "title": "[재맞고] 2026년 빌드업 프로젝트 『커리어업 톡톡(Talk-Talk)』 참여자 모집!",
@@ -361,8 +578,8 @@
           "isPinned": false
         }
       ],
-      "fetchedAt": "2026-11-11T18:40:25.096Z",
-      "totalCount": 27,
+      "fetchedAt": "2026-11-12T01:00:54.659Z",
+      "totalCount": 44,
       "hasPreferences": true,
       "preferencesUpdatedAt": "2026-05-24T06:27:01.584Z"
     }
