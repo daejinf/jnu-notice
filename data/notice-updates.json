@@ -1,5 +1,48 @@
 [
   {
+    "checkedAt": "2026-11-16T19:52:32.099Z",
+    "notices": [
+      {
+        "id": "576",
+        "title": "[11.25(수)] 전자컴퓨터공학부 전공 배정 설명회",
+        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1060988/artclView.do",
+        "author": "관리자",
+        "date": "2026-11-16",
+        "views": 38,
+        "sourceType": "department",
+        "sourceName": "전자컴퓨터공학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "577",
+        "title": "제3기 아우모비오(구 콘티넨탈 오토모티브 코리아) 스타 인턴십 프로그램 안내",
+        "url": "https://eceng.jnu.ac.kr/bbs/eceng/3287/1060989/artclView.do",
+        "author": "관리자",
+        "date": "2026-11-16",
+        "views": 26,
+        "sourceType": "department",
+        "sourceName": "전자컴퓨터공학부",
+        "category": "공지사항",
+        "isPinned": false
+      },
+      {
+        "id": "1030",
+        "title": "지역 내 혈액 확보를 위한 헌혈 행사 안내(11/18)",
+        "url": "https://bioenergy.jnu.ac.kr/bbs/bioenergy/3088/1060992/artclView.do",
+        "author": "바이오에너지공학과",
+        "date": "2026-11-16",
+        "views": 6,
+        "sourceType": "department",
+        "sourceName": "바이오에너지공학과",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 3,
+    "totalNoticeCount": 8118
+  },
+  {
     "checkedAt": "2026-11-16T09:34:40.768Z",
     "notices": [
       {
@@ -183,32 +226,8 @@
         "isPinned": false
       },
       {
-        "id": "1124",
-        "title": "[교내활동] 2026년 11월 3주차 취업서포터즈 교내홍보자료 새글",
-        "url": "https://humanecology.jnu.ac.kr/bbs/humanecology/1870/1060972/artclView.do",
-        "author": "성수행",
-        "date": "2026-11-16",
-        "views": 7,
-        "sourceType": "college",
-        "sourceName": "생활과학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "1060966",
         "title": "[공통] 2027년 지방 국립대학 전액 장학금 안내",
-        "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1060966/artclView.do",
-        "author": "김영준",
-        "date": "2026-11-16",
-        "views": 6,
-        "sourceType": "college",
-        "sourceName": "예술대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "437",
-        "title": "[공통] 2027년 지방 국립대학 전액 장학금 안내 새글",
         "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1060966/artclView.do",
         "author": "김영준",
         "date": "2026-11-16",
@@ -245,18 +264,6 @@
       {
         "id": "1060965",
         "title": "[대학생활] 2026학년도 대학생활 안내",
-        "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1060965/artclView.do",
-        "author": "김영준",
-        "date": "2026-11-16",
-        "views": 4,
-        "sourceType": "college",
-        "sourceName": "예술대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "436",
-        "title": "[대학생활] 2026학년도 대학생활 안내 새글",
         "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1060965/artclView.do",
         "author": "김영준",
         "date": "2026-11-16",
@@ -343,7 +350,7 @@
         "statusKind": "deadline"
       }
     ],
-    "newNoticeCount": 28,
+    "newNoticeCount": 25,
     "totalNoticeCount": 8120
   },
   {
@@ -15272,11 +15279,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8126
-  },
-  {
-    "checkedAt": "2026-10-20T20:34:29.045Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7519
   }
 ]
