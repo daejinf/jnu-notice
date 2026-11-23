@@ -1183,7 +1183,7 @@ async function requestDeepSeekSummary(
   options: GenerateNoticeSummaryOptions = {},
 ) {
   const apiKey = process.env.DEEPSEEK_API_KEY?.trim();
-  const model = process.env.DEEPSEEK_MODEL?.trim() || "deepseek-v4-flash";
+  const model = process.env.DEEPSEEK_MODEL?.trim() || "deepseek-flash";
   const isDeepAnalysis = !!options.includeAttachmentAnalysis;
   const controller = new AbortController();
   const timeoutHandle = setTimeout(
@@ -1227,7 +1227,7 @@ async function requestDeepSeekSummary(
           type: "json_object",
         },
         temperature: 0.1,
-        max_tokens: isDeepAnalysis ? 1700 : 1000,
+        max_tokens: isDeepAnalysis ? 2600 : 2000,
       }),
       signal: controller.signal,
     });
