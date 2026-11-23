@@ -1,5 +1,38 @@
 [
   {
+    "checkedAt": "2026-11-23T22:15:55.186Z",
+    "notices": [
+      {
+        "id": "3819",
+        "title": "[★일정변경] 2026년 글로컬대학사업 「(직무부트캠프) 현직자와의 AI 토크토크(2차)」",
+        "url": "https://capd.jnu.ac.kr/RecrProgram/RegProgram6.aspx?Mode=View&Seq=3819",
+        "author": "취업진로포털 취업프로그램",
+        "date": "2026-11-24",
+        "views": 0,
+        "sourceType": "center",
+        "sourceName": "취업진로포털 취업프로그램",
+        "category": "취업프로그램",
+        "isPinned": false,
+        "statusLabel": "D-DAY",
+        "statusKind": "deadline"
+      },
+      {
+        "id": "1000",
+        "title": "세종/대전 연구기관 현장탐방 프로그램 참가자 모집(전공무관, 12월 3일 ~ 4일) 새글",
+        "url": "https://cba.jnu.ac.kr/bbs/cba/1615/1061733/artclView.do",
+        "author": "관리자",
+        "date": "2026-11-23",
+        "views": 23,
+        "sourceType": "college",
+        "sourceName": "경영대학",
+        "category": "공지사항",
+        "isPinned": false
+      }
+    ],
+    "newNoticeCount": 2,
+    "totalNoticeCount": 8120
+  },
+  {
     "checkedAt": "2026-11-23T10:42:49.977Z",
     "notices": [
       {
@@ -243,18 +276,6 @@
         "isPinned": false
       },
       {
-        "id": "971",
-        "title": "2027학년도 1학기 국가장학금 1차 신청 안내 새글",
-        "url": "https://natural.jnu.ac.kr/bbs/natural/1560/1061625/artclView.do",
-        "author": "행정실",
-        "date": "2026-11-23",
-        "views": 28,
-        "sourceType": "college",
-        "sourceName": "자연과학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "822",
         "title": "2027년 1학기 1차 국가근로장학금 학생 신청기간 안내 새글",
         "url": "https://human.jnu.ac.kr/bbs/human/1819/1061619/artclView.do",
@@ -287,18 +308,6 @@
         "views": 21,
         "sourceType": "college",
         "sourceName": "약학대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "950",
-        "title": "2026학년도 대학생 대학 핵심역량 진단 실시 안내(~12.11)",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1061626/artclView.do",
-        "author": "약학부",
-        "date": "2026-11-23",
-        "views": 21,
-        "sourceType": "department",
-        "sourceName": "약학부",
         "category": "공지사항",
         "isPinned": false
       },
@@ -347,18 +356,6 @@
         "views": 17,
         "sourceType": "department",
         "sourceName": "국어교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "948",
-        "title": "2027학년도 1학기 국가장학금 1차 신청 안내(11.24.~27.1.7.)",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1061603/artclView.do",
-        "author": "약학부",
-        "date": "2026-11-23",
-        "views": 17,
-        "sourceType": "department",
-        "sourceName": "약학부",
         "category": "공지사항",
         "isPinned": false
       },
@@ -459,18 +456,6 @@
         "isPinned": false
       },
       {
-        "id": "949",
-        "title": "2027학년도 1학기 1차 국가근로장학금 학생 신청 기간 안내 (11.24.~27.1.7.",
-        "url": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/1061622/artclView.do",
-        "author": "약학부",
-        "date": "2026-11-23",
-        "views": 11,
-        "sourceType": "department",
-        "sourceName": "약학부",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "1277",
         "title": "2027학년도 1학기 1차 국가근로장학금 학생 신청 기간 안내 새글",
         "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1061623/artclView.do",
@@ -527,30 +512,6 @@
         "views": 10,
         "sourceType": "department",
         "sourceName": "영어교육과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1277",
-        "title": "2027학년도 1학기 1차 국가근로장학금 학생 신청 기간 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1061623/artclView.do",
-        "author": "김은자",
-        "date": "2026-11-23",
-        "views": 10,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1277",
-        "title": "2027학년도 1학기 1차 국가근로장학금 학생 신청 기간 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1061623/artclView.do",
-        "author": "김은자",
-        "date": "2026-11-23",
-        "views": 10,
-        "sourceType": "department",
-        "sourceName": "수의학과",
         "category": "공지사항",
         "isPinned": false
       },
@@ -699,30 +660,6 @@
         "isPinned": false
       },
       {
-        "id": "1278",
-        "title": "2026학년도 동계 계절학기 타 대학교(세한대) 수학 추천 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1061691/artclView.do",
-        "author": "김은자",
-        "date": "2026-11-23",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "수의예과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
-        "id": "1278",
-        "title": "2026학년도 동계 계절학기 타 대학교(세한대) 수학 추천 안내",
-        "url": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/1061691/artclView.do",
-        "author": "김은자",
-        "date": "2026-11-23",
-        "views": 1,
-        "sourceType": "department",
-        "sourceName": "수의학과",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "806",
         "title": "2027학년도 1학기 1차 국가근로장학금 학생 신청 기간 안내",
         "url": "https://agro.jnu.ac.kr/bbs/agro/444/1061729/artclView.do",
@@ -833,7 +770,7 @@
         "statusKind": "deadline"
       }
     ],
-    "newNoticeCount": 69,
+    "newNoticeCount": 61,
     "totalNoticeCount": 8120
   },
   {
@@ -16164,11 +16101,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 8110
-  },
-  {
-    "checkedAt": "2026-10-24T16:15:36.845Z",
-    "notices": [],
-    "newNoticeCount": 0,
-    "totalNoticeCount": 7837
   }
 ]
