@@ -2281,5 +2281,50 @@
       "attachmentAnalysisState": "complete"
     },
     "expiresAt": 1796052981284
+  },
+  "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=view&page=3&key=70698::v10": {
+    "value": {
+      "summary": "한국고등교육재단이 인재림 제7기 장학생을 선발한다는 안내가 전남대학교 홈페이지에 게시되었다. 모집 요강은 첨부된 docx 파일로 제공되며, 관련 링크는 재단 홈페이지(www.kfas.or.kr)이다. 공지 본문에는 선발 인원, 지원 자격, 신청 기간, 제출서류 등 세부 내용이 담겨 있지 않아 첨부된 모집 요강을 직접 확인해야 한다.",
+      "bullets": [
+        "한국고등교육재단 인재림 제7기 장학생 선발 안내",
+        "모집 요강은 첨부파일([한국고등교육재단] 인재림 제7기 장학생 선발 모집 요강.docx)로 제공",
+        "관련 링크는 한국고등교육재단 홈페이지(www.kfas.or.kr)",
+        "문의전화 02-6310-7882, 작성 부서는 학생과"
+      ],
+      "targetAudience": "명시되지 않음",
+      "deadline": "명시되지 않음",
+      "actionItems": [
+        "첨부된 모집 요강 docx 파일을 내려받아 지원 자격과 일정 확인",
+        "한국고등교육재단 홈페이지(www.kfas.or.kr)에서 선발 공고 확인",
+        "문의전화 02-6310-7882로 세부 사항 문의"
+      ],
+      "benefits": [
+        "명시되지 않음"
+      ],
+      "requiredDocuments": [
+        "명시되지 않음"
+      ],
+      "contact": "전화 02-6310-7882 / 부서 학생과",
+      "caution": "공지 본문에는 지원 기간, 자격 요건, 제출서류 등 핵심 정보가 없으므로 반드시 첨부된 모집 요강과 재단 홈페이지를 확인해야 한다.",
+      "calendarItems": [],
+      "actionLinks": [
+        {
+          "label": "한국고등교육재단 홈페이지",
+          "url": "https://www.kfas.or.kr",
+          "note": "선발 공고 및 모집 요강 확인"
+        }
+      ],
+      "attachments": [
+        {
+          "label": "[한국고등교육재단] 인재림 제7기 장학생 선발 모집 요강.docx",
+          "url": "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=5&bbsMode=download&fileCode=2587183",
+          "note": "ASPX"
+        }
+      ],
+      "sourceTitle": "[장학안내][한국고등교육재단] 인재림 제7기 장학생 선발 안내",
+      "extractedAt": "2026-11-23T16:31:42.060Z",
+      "attachmentAnalysisState": "pending"
+    },
+    "expiresAt": 1796056302241
   }
 }
