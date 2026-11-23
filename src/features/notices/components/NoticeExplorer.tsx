@@ -24,6 +24,7 @@ import { formatNoticeDate, formatViewsLabel } from "@/features/notices/utils/for
 import { mergeGuestStateIntoAccount, readStoredArray } from "@/features/notices/utils/guestState";
 import { getNoticeClientId } from "@/features/notices/utils/noticeClientState";
 import { isLikelyTruncatedTitle, selectBestNoticeTitle } from "@/features/notices/utils/noticeTitle";
+import { findRelatedNotices } from "@/features/notices/utils/relatedNotices";
 import type { Notice, NoticeState } from "@/types/notice";
 
 export type NoticeViewer = { authenticated: boolean; storageScope: string };
@@ -227,12 +228,16 @@ export function NoticeDetailReader({
   bookmarked,
   onToggleBookmark,
   onClose,
+  recommendationPool = [],
+  onSelectRecommendation,
 }: {
   notice: Notice | null;
   title?: ResolvedNoticeTitle;
   bookmarked?: boolean;
   onToggleBookmark?: () => void;
   onClose?: () => void;
+  recommendationPool?: Notice[];
+  onSelectRecommendation?: (notice: Notice) => void;
 }) {
   const [contentById, setContentById] = useState<Record<string, AsyncEntry<NoticeContentDocument>>>({});
   const [summaryById, setSummaryById] = useState<Record<string, AsyncEntry<NoticeSummary>>>({});
@@ -246,6 +251,10 @@ export function NoticeDetailReader({
     : "";
   const titleStillLoading = !!notice && isLikelyTruncatedTitle(notice.title) && title?.state === "loading" && contentEntry?.status !== "success";
   const titleFallback = !!notice && isLikelyTruncatedTitle(displayTitle) && title?.state === "fallback" && contentEntry?.status === "error";
+  const relatedNotices = useMemo(
+    () => notice ? findRelatedNotices(notice, recommendationPool) : [],
+    [notice, recommendationPool],
+  );
 
   useEffect(() => {
     setSummaryOpen(false);
@@ -324,6 +333,35 @@ export function NoticeDetailReader({
             {summaryEntry.data.attachmentAnalysisState === "pending" ? <button type="button" onClick={() => void loadSummary(true)} className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">첨부파일까지 자세히 분석</button> : null}
           </div> : null}
         </div> : null}
+      </section>
+
+      <section className="mt-5 overflow-hidden rounded-2xl border border-violet-200 bg-violet-50/60">
+        <div className="flex items-start gap-3 px-5 py-4">
+          <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-violet-600" />
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-2">
+              <h3 className="text-sm font-bold text-violet-950">AI 관련 공지</h3>
+              <span className="rounded-full bg-violet-100 px-2 py-0.5 text-[10px] font-bold text-violet-700">즉시 분석</span>
+            </div>
+            <p className="mt-1 text-xs leading-5 text-violet-700">저장된 공지의 제목·카테고리·발행처를 빠르게 비교했어요.</p>
+          </div>
+        </div>
+        <div className="border-t border-violet-100 bg-white">
+          {relatedNotices.length > 0 ? relatedNotices.map(({ notice: related, reason }) => (
+            <button
+              key={`${related.sourceType}:${related.id}:${related.url}`}
+              type="button"
+              onClick={() => onSelectRecommendation?.(related)}
+              className="block w-full border-b border-slate-100 px-5 py-3.5 text-left last:border-b-0 hover:bg-violet-50/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-violet-500"
+            >
+              <div className="flex items-center gap-2">
+                <span className={`rounded-md px-2 py-0.5 text-[10px] font-bold ${noticeSourceTone(related)}`}>{related.category}</span>
+                <span className="truncate text-[11px] font-medium text-violet-600">{reason}</span>
+              </div>
+              <p className="mt-1.5 line-clamp-2 text-sm font-semibold leading-5 text-slate-800">{related.title}</p>
+            </button>
+          )) : <p className="px-5 py-5 text-sm text-slate-500">지금 목록에서는 충분히 비슷한 공지를 찾지 못했어요.</p>}
+        </div>
       </section>
 
       <div className="mt-7 flex items-center justify-between gap-4 border-b border-slate-200 pb-3">

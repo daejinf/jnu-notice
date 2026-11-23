@@ -1,156 +1,70 @@
-﻿import { auth } from "@/auth";
 import { NextResponse } from "next/server";
 import { enabledCenterBoardConfigs } from "@/features/notices/config/centerBoards";
 import { enabledCollegeBoardConfigs } from "@/features/notices/config/collegeBoards";
 import { enabledDepartmentConfigs } from "@/features/notices/config/departments";
-import {
-  schoolBoardAllCategory,
-  schoolBoardCategories,
-} from "@/features/notices/config/schoolBoardCategories";
-import { fetchCenterBoardNotices, fetchMultipleCenterBoardNotices } from "@/features/notices/lib/fetchCenterBoardNotices";
-import { fetchMultipleCollegeBoardNotices } from "@/features/notices/lib/fetchCollegeBoardNotices";
-import { fetchMultipleDepartmentNotices } from "@/features/notices/lib/fetchDepartmentNotices";
-import {
-  fetchMultipleSchoolBoardNotices,
-  fetchSchoolBoardNotices,
-} from "@/features/notices/lib/fetchSchoolBoardNotices";
-import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
+import { schoolBoardCategories } from "@/features/notices/config/schoolBoardCategories";
+import { loadNoticeCheckSnapshot } from "@/features/notices/server/noticeCheckSnapshot";
+import { loadFeedNotices, loadStoredNotices } from "@/features/notices/server/noticeStorage";
+import type { Notice } from "@/types/notice";
 
-export const revalidate = 1800;
 export const dynamic = "force-dynamic";
 
-const PREVIEW_MAX_PAGES = 2;
+const CACHE_CONTROL = "public, s-maxage=1800, stale-while-revalidate=300";
+
+function parseKeys(searchParams: URLSearchParams, name: string) {
+  return searchParams.get(name)?.split(",").filter(Boolean) ?? [];
+}
+
+function filterNotices(
+  notices: Notice[],
+  schoolKeys: string[],
+  collegeKeys: string[],
+  departmentKeys: string[],
+  centerKeys: string[],
+) {
+  const schoolNames = new Set(schoolBoardCategories.filter(({ key }) => schoolKeys.includes(key)).map(({ name }) => name));
+  const collegeNames = new Set(enabledCollegeBoardConfigs.filter(({ key }) => collegeKeys.includes(key)).map(({ sourceName }) => sourceName));
+  const departmentNames = new Set(enabledDepartmentConfigs.filter(({ key }) => departmentKeys.includes(key)).map(({ department }) => department));
+  const centerNames = new Set(enabledCenterBoardConfigs.filter(({ key }) => centerKeys.includes(key)).map(({ sourceName }) => sourceName));
+
+  return notices.filter((notice) => {
+    if (notice.sourceType === "school") return schoolNames.has(notice.category);
+    if (notice.sourceType === "college") return collegeNames.has(notice.sourceName);
+    if (notice.sourceType === "department") return departmentNames.has(notice.sourceName);
+    if (notice.sourceType === "center") return centerNames.has(notice.sourceName);
+    return false;
+  });
+}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const requestedCategoryKeys = searchParams.get("categories")?.split(",").filter(Boolean) ?? [];
-  const requestedCollegeKeys = searchParams.get("colleges")?.split(",").filter(Boolean) ?? [];
-  const requestedDepartmentKeys = searchParams.get("departments")?.split(",").filter(Boolean) ?? [];
-  const requestedCenterKeys = searchParams.get("centers")?.split(",").filter(Boolean) ?? [];
-  const mode = searchParams.get("mode");
-  const scope = searchParams.get("scope");
-  const debug = searchParams.get("debug") === "1";
-  const isPreview = scope === "preview";
+  const schoolKeys = parseKeys(searchParams, "categories");
+  const collegeKeys = parseKeys(searchParams, "colleges");
+  const departmentKeys = parseKeys(searchParams, "departments");
+  const centerKeys = parseKeys(searchParams, "centers");
 
   try {
-    if (mode === "all") {
-      const notices = await fetchSchoolBoardNotices(schoolBoardAllCategory, {
-        maxPages: isPreview ? PREVIEW_MAX_PAGES : undefined,
-      });
-
-      return NextResponse.json({
-        notices,
-        fetchedAt: new Date().toISOString(),
-      });
-    }
-
-    const targetCategories =
-      requestedCategoryKeys.length > 0
-        ? schoolBoardCategories.filter((category) => requestedCategoryKeys.includes(category.key))
-        : [];
-
-    const targetColleges =
-      requestedCollegeKeys.length > 0
-        ? enabledCollegeBoardConfigs.filter((college) => requestedCollegeKeys.includes(college.key))
-        : [];
-
-    const targetDepartments =
-      requestedDepartmentKeys.length > 0
-        ? enabledDepartmentConfigs.filter((department) => requestedDepartmentKeys.includes(department.key))
-        : [];
-
-    const targetCenters =
-      requestedCenterKeys.length > 0
-        ? enabledCenterBoardConfigs.filter((center) => requestedCenterKeys.includes(center.key))
-        : [];
-
-    const [schoolNotices, collegeNotices, departmentNotices, centerNotices] = await Promise.all([
-      targetCategories.length > 0
-        ? fetchMultipleSchoolBoardNotices(targetCategories, {
-            maxPages: isPreview ? PREVIEW_MAX_PAGES : undefined,
-          })
-        : Promise.resolve([]),
-      targetColleges.length > 0
-        ? fetchMultipleCollegeBoardNotices(targetColleges, {
-            maxPages: isPreview ? PREVIEW_MAX_PAGES : undefined,
-          })
-        : Promise.resolve([]),
-      targetDepartments.length > 0
-        ? fetchMultipleDepartmentNotices(targetDepartments, {
-            maxPages: isPreview ? PREVIEW_MAX_PAGES : undefined,
-          })
-        : Promise.resolve([]),
-      targetCenters.length > 0
-        ? fetchMultipleCenterBoardNotices(targetCenters, {
-            maxPages: isPreview ? PREVIEW_MAX_PAGES : undefined,
-          })
-        : Promise.resolve([]),
+    const [feedSnapshot, latestCheck] = await Promise.all([
+      loadFeedNotices(),
+      loadNoticeCheckSnapshot(),
     ]);
-
-    const mergedNotices = sortNoticesByDate(
-      dedupeNotices([
-        ...schoolNotices,
-        ...collegeNotices,
-        ...departmentNotices,
-        ...centerNotices,
-      ]),
-    );
-
-    if (debug) {
-      const centerDebug = await Promise.all(
-        targetCenters.map(async (center) => {
-          try {
-            const notices = await fetchCenterBoardNotices(center, {
-              maxPages: isPreview ? PREVIEW_MAX_PAGES : undefined,
-            });
-
-            return {
-              key: center.key,
-              name: center.name,
-              engine: center.engine,
-              listUrl: center.listUrl,
-              count: notices.length,
-              sampleTitles: notices.slice(0, 5).map((notice) => notice.title),
-            };
-          } catch (error) {
-            return {
-              key: center.key,
-              name: center.name,
-              engine: center.engine,
-              listUrl: center.listUrl,
-              count: 0,
-              error: error instanceof Error ? error.message : "unknown error",
-            };
-          }
-        }),
-      );
-
-      return NextResponse.json({
-        notices: mergedNotices,
-        fetchedAt: new Date().toISOString(),
-        debug: {
-          requestedCenterKeys,
-          matchedCenterKeys: targetCenters.map((center) => center.key),
-          centerDebug,
-          centerNoticeCount: centerNotices.length,
-          totalNoticeCount: mergedNotices.length,
-        },
-      });
-    }
-
-    return NextResponse.json({
-      notices: mergedNotices,
-      fetchedAt: new Date().toISOString(),
-    });
-  } catch (error) {
-    console.error(error);
+    // Compatibility fallback until the first scheduled collection creates the feed snapshot.
+    const sourceNotices = feedSnapshot?.notices ?? await loadStoredNotices();
+    const notices = searchParams.get("mode") === "all"
+      ? sourceNotices
+      : filterNotices(sourceNotices, schoolKeys, collegeKeys, departmentKeys, centerKeys);
 
     return NextResponse.json(
       {
-        notices: [],
-        fetchedAt: new Date().toISOString(),
-        error: "공지 수집 중 오류가 발생했습니다.",
+        notices,
+        fetchedAt: feedSnapshot?.checkedAt ?? latestCheck?.checkedAt ?? null,
       },
+      { headers: { "Cache-Control": CACHE_CONTROL } },
+    );
+  } catch (error) {
+    console.error("[notices] failed to load feed snapshot", error);
+    return NextResponse.json(
+      { notices: [], fetchedAt: null, error: "저장된 공지 피드를 불러오지 못했습니다." },
       { status: 500 },
     );
   }

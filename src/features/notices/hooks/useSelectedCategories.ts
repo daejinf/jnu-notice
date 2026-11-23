@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 type UseSelectedCategoriesOptions = {
   storageKey: string;
   defaultSelectedKeys?: string[];
+  legacyDefaultSelectedKeys?: string[];
 };
 
 function getLegacyStorageKey(storageKey: string) {
@@ -16,7 +17,7 @@ export function useSelectedCategories(
   allCategoryKeys: string[],
   options: UseSelectedCategoriesOptions,
 ) {
-  const defaultSelectedKeys = options.defaultSelectedKeys ?? allCategoryKeys;
+  const defaultSelectedKeys = options.defaultSelectedKeys ?? [];
   const [selectedCategories, setSelectedCategories] = useState<string[]>(defaultSelectedKeys);
   const [isReady, setIsReady] = useState(false);
 
@@ -28,9 +29,11 @@ export function useSelectedCategories(
       ? window.localStorage.getItem(legacyStorageKey)
       : null;
     const valueToLoad = savedValue ?? fallbackValue;
+    const migrationKey = `${currentStorageKey}::legacy-default-migrated`;
 
     if (!valueToLoad) {
       setSelectedCategories(defaultSelectedKeys);
+      window.localStorage.setItem(migrationKey, "1");
       setIsReady(true);
       return;
     }
@@ -38,9 +41,16 @@ export function useSelectedCategories(
     try {
       const parsedValue = JSON.parse(valueToLoad) as string[];
       const validValues = parsedValue.filter((value) => allCategoryKeys.includes(value));
-      const nextValues = validValues.length > 0 ? validValues : [];
+      const legacyDefaultKeys = options.legacyDefaultSelectedKeys ?? [];
+      const isUnmigratedLegacyDefault =
+        window.localStorage.getItem(migrationKey) !== "1" &&
+        legacyDefaultKeys.length > 0 &&
+        validValues.length === legacyDefaultKeys.length &&
+        legacyDefaultKeys.every((value) => validValues.includes(value));
+      const nextValues = isUnmigratedLegacyDefault ? [] : validValues;
 
       setSelectedCategories(nextValues);
+      window.localStorage.setItem(migrationKey, "1");
 
       // One-time migration from the old shared key to the per-account scoped key.
       if (!savedValue && fallbackValue) {
@@ -51,7 +61,7 @@ export function useSelectedCategories(
     } finally {
       setIsReady(true);
     }
-  }, [allCategoryKeys, defaultSelectedKeys, options.storageKey]);
+  }, [allCategoryKeys, defaultSelectedKeys, options.legacyDefaultSelectedKeys, options.storageKey]);
 
   useEffect(() => {
     if (!isReady) {

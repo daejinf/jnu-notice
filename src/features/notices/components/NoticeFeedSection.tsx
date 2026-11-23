@@ -40,6 +40,7 @@ const PROJECT_CENTER_NAME_SET = new Set(
     .map((center) => center.name),
 );
 const NOTICES_PER_PAGE = 30;
+const EMPTY_SELECTION: string[] = [];
 const SCHOOL_BOARD_BASE_URL = "https://www.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx";
 
 function buildSchoolCategoryLink(category: Pick<SchoolBoardCategory, "cate">) {
@@ -444,15 +445,23 @@ function PageArrowButton({
 export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
   const schoolSelection = useSelectedCategories(selectableSchoolCategoryKeys, {
     storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableSchoolCategoryKeys,
   });
   const collegeSelection = useSelectedCategories(selectableCollegeKeys, {
     storageKey: buildScopedStorageKey(COLLEGE_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableCollegeKeys,
   });
   const departmentSelection = useSelectedCategories(selectableDepartmentKeys, {
     storageKey: buildScopedStorageKey(DEPARTMENT_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableDepartmentKeys,
   });
   const centerSelection = useSelectedCategories(selectableCenterKeys, {
     storageKey: buildScopedStorageKey(CENTER_STORAGE_KEY, storageScope),
+    defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableCenterKeys,
   });
 
   const [notices, setNotices] = useState<Notice[]>([]);
@@ -629,7 +638,7 @@ export function NoticeFeedSection({ storageScope }: { storageScope: string }) {
 
         const response = await fetch(
           `/api/notices?categories=${schoolQuery}&colleges=${collegeQuery}&departments=${departmentQuery}&centers=${centerQuery}&scope=preview`,
-          { signal: controller.signal, cache: "no-store" },
+          { signal: controller.signal },
         );
         const data = (await response.json()) as NoticeApiResponse;
 

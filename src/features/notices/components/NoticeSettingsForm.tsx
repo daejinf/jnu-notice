@@ -312,19 +312,23 @@ function DepartmentSelectionSection({
 export function NoticeSettingsForm({ storageScope, authenticated }: { storageScope: string; authenticated: boolean }) {
   const schoolSelection = useSelectedCategories(selectableSchoolCategoryKeys, {
     storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope),
-    defaultSelectedKeys: selectableSchoolCategoryKeys,
+    defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableSchoolCategoryKeys,
   });
   const collegeSelection = useSelectedCategories(selectableCollegeKeys, {
     storageKey: buildScopedStorageKey(COLLEGE_STORAGE_KEY, storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableCollegeKeys,
   });
   const departmentSelection = useSelectedCategories(selectableDepartmentKeys, {
     storageKey: buildScopedStorageKey(DEPARTMENT_STORAGE_KEY, storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableDepartmentKeys,
   });
   const centerSelection = useSelectedCategories(selectableCenterKeys, {
     storageKey: buildScopedStorageKey(CENTER_STORAGE_KEY, storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableCenterKeys,
   });
 
   const [isHydratingServer, setIsHydratingServer] = useState(true);

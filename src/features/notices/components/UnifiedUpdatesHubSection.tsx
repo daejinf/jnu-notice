@@ -58,19 +58,20 @@ export function UnifiedUpdatesHubSection({
   const activeItems = useMemo<UpdateListItem[]>(() => tab === "updates"
     ? updateItems
     : myAlerts.notices.map((notice) => ({ notice, collectedAt: myAlerts.fetchedAt })), [myAlerts.fetchedAt, myAlerts.notices, tab, updateItems]);
+  const activeNotices = useMemo(() => activeItems.map((item) => item.notice), [activeItems]);
   const totalPages = Math.max(1, Math.ceil(activeItems.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
   const visibleItems = activeItems.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
   const visibleNotices = visibleItems.map((item) => item.notice);
   const getDisplayTitle = useResolvedNoticeTitles(visibleNotices);
-  const selectedItem = visibleItems.find((item) => getNoticeClientId(item.notice) === selectedId) ?? null;
+  const selectedItem = activeItems.find((item) => getNoticeClientId(item.notice) === selectedId) ?? null;
   const selectedNotice = selectedItem?.notice ?? null;
 
   useEffect(() => { setPage(1); }, [tab]);
   useEffect(() => {
     if (!visibleItems.length) { setSelectedId(null); return; }
-    if (!selectedId || !visibleItems.some((item) => getNoticeClientId(item.notice) === selectedId)) setSelectedId(getNoticeClientId(visibleItems[0].notice));
-  }, [selectedId, visibleItems]);
+    if (!selectedId || !activeItems.some((item) => getNoticeClientId(item.notice) === selectedId)) setSelectedId(getNoticeClientId(visibleItems[0].notice));
+  }, [activeItems, selectedId, visibleItems]);
 
   const tabControl = (
     <div className="flex gap-1 rounded-xl bg-slate-100 p-1">
@@ -99,7 +100,7 @@ export function UnifiedUpdatesHubSection({
             </div>
             {totalPages > 1 ? <div className="flex items-center justify-between border-t border-slate-200 px-4 py-3"><button type="button" disabled={safePage === 1} onClick={() => setPage((current) => Math.max(1, current - 1))} className="rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 disabled:opacity-30">이전</button><span className="text-xs font-semibold text-slate-500">{safePage} / {totalPages}</span><button type="button" disabled={safePage === totalPages} onClick={() => setPage((current) => Math.min(totalPages, current + 1))} className="rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 disabled:opacity-30">다음</button></div> : null}
           </>}
-          detail={<NoticeDetailReader notice={selectedNotice} title={selectedNotice ? getDisplayTitle(selectedNotice) : undefined} bookmarked={selectedNotice ? noticeState.bookmarkSet.has(getNoticeClientId(selectedNotice)) : false} onToggleBookmark={selectedNotice ? () => noticeState.toggleBookmark(selectedNotice) : undefined} onClose={() => setMobileDetailOpen(false)} />}
+          detail={<NoticeDetailReader notice={selectedNotice} title={selectedNotice ? getDisplayTitle(selectedNotice) : undefined} bookmarked={selectedNotice ? noticeState.bookmarkSet.has(getNoticeClientId(selectedNotice)) : false} onToggleBookmark={selectedNotice ? () => noticeState.toggleBookmark(selectedNotice) : undefined} onClose={() => setMobileDetailOpen(false)} recommendationPool={activeNotices} onSelectRecommendation={(related) => { const index = activeItems.findIndex((item) => getNoticeClientId(item.notice) === getNoticeClientId(related)); if (index >= 0) setPage(Math.floor(index / PAGE_SIZE) + 1); setSelectedId(getNoticeClientId(related)); noticeState.markRead(related); }} />}
         />}
       </AppPageContainer>
     </main>

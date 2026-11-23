@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   ChevronDown,
@@ -34,6 +35,19 @@ import type { Notice, NoticePreferences, NoticeSourceType, NoticeState } from "@
 const EMPTY_SELECTION: string[] = [];
 const PAGE_SIZE = 30;
 
+function formatFetchedAt(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    month: "numeric",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+  }).format(date);
+}
+
 type Viewer = { authenticated: boolean; storageScope: string };
 type ViewMode = "all" | "unread" | "bookmarks";
 const SOURCE_OPTIONS: Array<{ key: NoticeSourceType; label: string }> = [
@@ -58,22 +72,27 @@ export function NoticeWorkspace({ viewer }: { viewer: Viewer }) {
   const searchQueryParam = searchParams.get("q") ?? "";
   const school = useSelectedCategories(selectableSchoolCategoryKeys, {
     storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, viewer.storageScope),
-    defaultSelectedKeys: selectableSchoolCategoryKeys,
+    defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableSchoolCategoryKeys,
   });
   const college = useSelectedCategories(selectableCollegeKeys, {
     storageKey: buildScopedStorageKey(COLLEGE_STORAGE_KEY, viewer.storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableCollegeKeys,
   });
   const department = useSelectedCategories(selectableDepartmentKeys, {
     storageKey: buildScopedStorageKey(DEPARTMENT_STORAGE_KEY, viewer.storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableDepartmentKeys,
   });
   const center = useSelectedCategories(selectableCenterKeys, {
     storageKey: buildScopedStorageKey(CENTER_STORAGE_KEY, viewer.storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableCenterKeys,
   });
 
   const [notices, setNotices] = useState<Notice[]>([]);
+  const [fetchedAt, setFetchedAt] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState(searchQueryParam);
@@ -193,6 +212,14 @@ export function NoticeWorkspace({ viewer }: { viewer: Viewer }) {
 
   useEffect(() => {
     if (!selectionsReady || !clientReady || !accountHydrated) return;
+    const hasSelection = school.selectedCategories.length + college.selectedCategories.length + department.selectedCategories.length + center.selectedCategories.length > 0;
+    if (!hasSelection) {
+      setNotices([]);
+      setFetchedAt(null);
+      setError(null);
+      setLoading(false);
+      return;
+    }
     const controller = new AbortController();
     const load = async () => {
       setLoading(true);
@@ -205,10 +232,11 @@ export function NoticeWorkspace({ viewer }: { viewer: Viewer }) {
           centers: joinCategoryQuery(center.selectedCategories),
           scope: "preview",
         });
-        const response = await fetch(`/api/notices?${params}`, { cache: "no-store", signal: controller.signal });
-        const data = (await response.json()) as { notices: Notice[]; error?: string };
+        const response = await fetch(`/api/notices?${params}`, { signal: controller.signal });
+        const data = (await response.json()) as { notices: Notice[]; fetchedAt: string | null; error?: string };
         if (!response.ok) throw new Error(data.error ?? "공지를 불러오지 못했습니다.");
         setNotices(data.notices);
+        setFetchedAt(data.fetchedAt);
       } catch (caught) {
         if (caught instanceof Error && caught.name === "AbortError") return;
         setError(caught instanceof Error ? caught.message : "공지를 불러오지 못했습니다.");
@@ -239,12 +267,12 @@ export function NoticeWorkspace({ viewer }: { viewer: Viewer }) {
 
   useEffect(() => {
     if (!visibleNotices.length) { setSelectedId(null); return; }
-    if (!selectedId || !visibleNotices.some((notice) => getNoticeClientId(notice) === selectedId)) {
+    if (!selectedId || !filtered.some((notice) => getNoticeClientId(notice) === selectedId)) {
       setSelectedId(getNoticeClientId(visibleNotices[0]));
     }
-  }, [selectedId, visibleNotices]);
+  }, [filtered, selectedId, visibleNotices]);
 
-  const selectedNotice = visibleNotices.find((notice) => getNoticeClientId(notice) === selectedId) ?? null;
+  const selectedNotice = filtered.find((notice) => getNoticeClientId(notice) === selectedId) ?? null;
   const sourceCount = school.selectedCategories.length + college.selectedCategories.length + department.selectedCategories.length + center.selectedCategories.length;
   const activeFilterCount = (viewMode === "all" ? 0 : 1) + selectedSourceTypes.length + selectedFeedCategories.length + (deferredSearch ? 1 : 0);
   const displayCategories = showAllCategories ? availableCategories : availableCategories.slice(0, 8);
@@ -271,6 +299,12 @@ export function NoticeWorkspace({ viewer }: { viewer: Viewer }) {
     setReadIds((current) => current.includes(id) ? current : [...current, id]);
   }
 
+  function selectRecommendation(notice: Notice) {
+    const index = filtered.findIndex((item) => getNoticeClientId(item) === getNoticeClientId(notice));
+    if (index >= 0) updateQuery({ page: String(Math.floor(index / PAGE_SIZE) + 1) });
+    selectNotice(notice);
+  }
+
   function toggleBookmark(notice: Notice) {
     const id = getNoticeClientId(notice);
     setBookmarkIds((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
@@ -283,7 +317,7 @@ export function NoticeWorkspace({ viewer }: { viewer: Viewer }) {
           <div>
             <p className="text-sm font-semibold text-blue-600">피드</p>
             <h1 className="mt-1 text-3xl font-black tracking-tight text-slate-950">지금 필요한 공지</h1>
-            <p className="mt-2 text-sm text-slate-500">선택한 {sourceCount}개 소스에서 최신 공지를 모았습니다.</p>
+            <p className="mt-2 text-sm text-slate-500">선택한 {sourceCount}개 소스에서 최신 공지를 모았습니다.{fetchedAt ? ` · 최근 수집 ${formatFetchedAt(fetchedAt)}` : ""}</p>
           </div>
           <label className="relative block w-full xl:max-w-xl">
             <Search aria-hidden="true" className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
@@ -341,7 +375,12 @@ export function NoticeWorkspace({ viewer }: { viewer: Viewer }) {
             <div className="max-h-[calc(100vh-300px)] min-h-[560px] overflow-y-auto">
               {loading ? <div className="flex h-56 items-center justify-center gap-2 text-sm text-slate-500"><LoaderCircle className="h-5 w-5 animate-spin" />공지를 불러오는 중</div> : null}
               {error ? <div className="m-4 rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700">{error}</div> : null}
-              {!loading && !error && visibleNotices.length === 0 ? <div className="flex h-56 items-center justify-center text-sm text-slate-500">조건에 맞는 공지가 없습니다.</div> : null}
+              {!loading && !error && visibleNotices.length === 0 ? (
+                <div className="flex h-56 flex-col items-center justify-center gap-3 px-6 text-center text-sm text-slate-500">
+                  <span>{sourceCount === 0 ? "아직 선택한 관심 소스가 없습니다." : "조건에 맞는 공지가 없습니다."}</span>
+                  {sourceCount === 0 ? <Link href="/settings" className="font-semibold text-blue-600 hover:text-blue-800">관심 소스 선택하기</Link> : null}
+                </div>
+              ) : null}
               {visibleNotices.map((notice) => {
                 const id = getNoticeClientId(notice);
                 return (
@@ -375,6 +414,8 @@ export function NoticeWorkspace({ viewer }: { viewer: Viewer }) {
               bookmarked={selectedNotice ? bookmarkSet.has(getNoticeClientId(selectedNotice)) : false}
               onToggleBookmark={selectedNotice ? () => toggleBookmark(selectedNotice) : undefined}
               onClose={() => setMobileDetailOpen(false)}
+              recommendationPool={filtered}
+              onSelectRecommendation={selectRecommendation}
             />
           </div>
         </section>

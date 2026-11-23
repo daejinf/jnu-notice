@@ -10,7 +10,7 @@ import { fetchSchoolBoardNotices } from "@/features/notices/lib/fetchSchoolBoard
 import { dedupeNotices, sortNoticesByDate } from "@/features/notices/lib/sortNotices";
 import { findNewNotices } from "@/features/notices/server/noticeDiff";
 import { saveNoticeCheckSnapshot } from "@/features/notices/server/noticeCheckSnapshot";
-import { loadStoredNotices, saveNotices } from "@/features/notices/server/noticeStorage";
+import { loadStoredNotices, saveFeedNotices, saveNotices } from "@/features/notices/server/noticeStorage";
 import { appendNoticeUpdateSnapshot, filterFreshNotices } from "@/features/notices/server/noticeUpdateHistory";
 import { notifyNewNotices } from "@/features/notices/server/notifications";
 import { saveRecentHotNotices } from "@/features/notices/server/fetchTodayHotNotices";
@@ -46,6 +46,7 @@ export async function runNoticeCheck() {
   const newNotices = filterFreshNotices(discoveredNotices, checkedAt);
 
   await saveNotices(allKnownNotices);
+  await saveFeedNotices({ checkedAt, notices: currentNotices });
   await saveRecentHotNotices(allKnownNotices);
   await saveNoticeCheckSnapshot({
     checkedAt,

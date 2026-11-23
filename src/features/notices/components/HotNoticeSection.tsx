@@ -271,19 +271,23 @@ export function HotNoticeSection({
 }) {
   const schoolSelection = useSelectedCategories(selectableSchoolCategoryKeys, {
     storageKey: buildScopedStorageKey(SCHOOL_STORAGE_KEY, storageScope),
-    defaultSelectedKeys: selectableSchoolCategoryKeys,
+    defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableSchoolCategoryKeys,
   });
   const collegeSelection = useSelectedCategories(selectableCollegeKeys, {
     storageKey: buildScopedStorageKey(COLLEGE_STORAGE_KEY, storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableCollegeKeys,
   });
   const departmentSelection = useSelectedCategories(selectableDepartmentKeys, {
     storageKey: buildScopedStorageKey(DEPARTMENT_STORAGE_KEY, storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableDepartmentKeys,
   });
   const centerSelection = useSelectedCategories(selectableCenterKeys, {
     storageKey: buildScopedStorageKey(CENTER_STORAGE_KEY, storageScope),
     defaultSelectedKeys: EMPTY_SELECTION,
+    legacyDefaultSelectedKeys: selectableCenterKeys,
   });
 
   const [notices, setNotices] = useState<Notice[]>([]);
@@ -332,7 +336,7 @@ export function HotNoticeSection({
 
         const response = await fetch(
           `/api/notices?categories=${schoolQuery}&colleges=${collegeQuery}&departments=${departmentQuery}&centers=${centerQuery}&scope=preview`,
-          { signal: controller.signal, cache: "no-store" },
+          { signal: controller.signal },
         );
         const data = (await response.json()) as NoticeApiResponse;
 
@@ -374,7 +378,7 @@ export function HotNoticeSection({
   const currentHotPageStart = (currentHotPage - 1) * HOT_PAGE_SIZE;
   const pagedHotNotices = activeHotNotices.slice(currentHotPageStart, currentHotPageStart + HOT_PAGE_SIZE);
   const getDisplayTitle = useResolvedNoticeTitles(pagedHotNotices);
-  const selectedNotice = pagedHotNotices.find((notice) => getNoticeClientId(notice) === selectedId) ?? null;
+  const selectedNotice = activeHotNotices.find((notice) => getNoticeClientId(notice) === selectedId) ?? null;
 
   useEffect(() => {
     setHotPage(1);
@@ -382,10 +386,10 @@ export function HotNoticeSection({
 
   useEffect(() => {
     if (!pagedHotNotices.length) { setSelectedId(null); return; }
-    if (!selectedId || !pagedHotNotices.some((notice) => getNoticeClientId(notice) === selectedId)) {
+    if (!selectedId || !activeHotNotices.some((notice) => getNoticeClientId(notice) === selectedId)) {
       setSelectedId(getNoticeClientId(pagedHotNotices[0]));
     }
-  }, [pagedHotNotices, selectedId]);
+  }, [activeHotNotices, pagedHotNotices, selectedId]);
 
   const handleHotPageChange = (page: number) => {
     setHotPage(Math.min(Math.max(page, 1), totalHotPages));
@@ -429,7 +433,7 @@ export function HotNoticeSection({
             </div>
             {totalHotPages > 1 ? <div className="flex items-center justify-between border-t border-slate-200 px-4 py-3"><button type="button" disabled={currentHotPage === 1} onClick={() => handleHotPageChange(currentHotPage - 1)} className="rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 disabled:opacity-30">이전</button><span className="text-xs font-semibold text-slate-500">{currentHotPage} / {totalHotPages}</span><button type="button" disabled={currentHotPage === totalHotPages} onClick={() => handleHotPageChange(currentHotPage + 1)} className="rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 disabled:opacity-30">다음</button></div> : null}
           </>}
-          detail={<NoticeDetailReader notice={selectedNotice} title={selectedNotice ? getDisplayTitle(selectedNotice) : undefined} bookmarked={selectedNotice ? noticeState.bookmarkSet.has(getNoticeClientId(selectedNotice)) : false} onToggleBookmark={selectedNotice ? () => noticeState.toggleBookmark(selectedNotice) : undefined} onClose={() => setMobileDetailOpen(false)} />}
+          detail={<NoticeDetailReader notice={selectedNotice} title={selectedNotice ? getDisplayTitle(selectedNotice) : undefined} bookmarked={selectedNotice ? noticeState.bookmarkSet.has(getNoticeClientId(selectedNotice)) : false} onToggleBookmark={selectedNotice ? () => noticeState.toggleBookmark(selectedNotice) : undefined} onClose={() => setMobileDetailOpen(false)} recommendationPool={activeHotNotices} onSelectRecommendation={(related) => { const index = activeHotNotices.findIndex((item) => getNoticeClientId(item) === getNoticeClientId(related)); if (index >= 0) setHotPage(Math.floor(index / HOT_PAGE_SIZE) + 1); setSelectedId(getNoticeClientId(related)); noticeState.markRead(related); }} />}
         /> : null}
       </AppPageContainer>
     </main>
