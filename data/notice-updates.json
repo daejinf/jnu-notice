@@ -1,5 +1,11 @@
 [
   {
+    "checkedAt": "2026-11-26T23:18:44.740Z",
+    "notices": [],
+    "newNoticeCount": 0,
+    "totalNoticeCount": 7746
+  },
+  {
     "checkedAt": "2026-11-26T14:28:28.528Z",
     "notices": [
       {
@@ -255,18 +261,6 @@
         "isPinned": false
       },
       {
-        "id": "466",
-        "title": "[공사안내] 북문 주변 정비공사 착공 및 차량 통제 협조 요청 새글",
-        "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1062014/artclView.do",
-        "author": "김영준",
-        "date": "2026-11-26",
-        "views": 3,
-        "sourceType": "college",
-        "sourceName": "예술대학",
-        "category": "공지사항",
-        "isPinned": false
-      },
-      {
         "id": "465",
         "title": "[학사안내] 2026학년도 동계 계절학기 수강료 납부 안내 새글",
         "url": "https://arts.jnu.ac.kr/bbs/arts/2215/1061996/artclView.do",
@@ -411,7 +405,7 @@
         "isPinned": false
       }
     ],
-    "newNoticeCount": 34,
+    "newNoticeCount": 33,
     "totalNoticeCount": 8125
   },
   {
@@ -17641,24 +17635,5 @@
     "notices": [],
     "newNoticeCount": 0,
     "totalNoticeCount": 7898
-  },
-  {
-    "checkedAt": "2026-10-25T19:36:10.128Z",
-    "notices": [
-      {
-        "id": "2308",
-        "title": "「2026년 삼양그룹 임원 초청 채용설명회」 개최 안내",
-        "url": "https://biology.jnu.ac.kr/bbs/biology/2113/1058599/artclView.do",
-        "author": "생물학과",
-        "date": "2026-10-26",
-        "views": 0,
-        "sourceType": "department",
-        "sourceName": "생물학과",
-        "category": "공지사항",
-        "isPinned": false
-      }
-    ],
-    "newNoticeCount": 1,
-    "totalNoticeCount": 7511
   }
 ]
